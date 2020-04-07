@@ -29,7 +29,7 @@
 	.type	_cbSendSystemDesc, %function
 _cbSendSystemDesc:
 .LFB200:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
 	.loc 1 97 37 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -2207,7 +2207,7 @@ SEGGER_SYSVIEW_Conf:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 44 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h"
+	.file 44 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h"
 	.byte	0x3
 	.uleb128 0x41
 	.uleb128 0x2c
@@ -2332,6 +2332,8 @@ SEGGER_SYSVIEW_Conf:
 	.ascii	"SEGGER_SYSVIEW_SetRAMBase\000"
 .LASF80:
 	.ascii	"__user_set_time_of_day\000"
+.LASF97:
+	.ascii	"stdout\000"
 .LASF64:
 	.ascii	"unsigned char\000"
 .LASF66:
@@ -2372,12 +2374,12 @@ SEGGER_SYSVIEW_Conf:
 	.ascii	"char\000"
 .LASF106:
 	.ascii	"SEGGER_SYSVIEW_Init\000"
-.LASF110:
-	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\systemView\\SEGGER_SYS"
-	.ascii	"VIEW_Config_FreeRTOS.c\000"
 .LASF87:
 	.ascii	"int32_t\000"
+.LASF110:
+	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
+	.ascii	"al\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTO"
+	.ascii	"S.c\000"
 .LASF4:
 	.ascii	"__cr_flag\000"
 .LASF60:
@@ -2446,14 +2448,11 @@ SEGGER_SYSVIEW_Conf:
 	.ascii	"abbrev_day_names\000"
 .LASF26:
 	.ascii	"__wctomb\000"
-.LASF97:
-	.ascii	"stdout\000"
+.LASF111:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF8:
 	.ascii	"next\000"
 .LASF12:
 	.ascii	"__locale_s\000"
-.LASF111:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

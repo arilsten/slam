@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c"
 
 
 
@@ -383,9 +383,9 @@ int wctomb_l(char *__s, wchar_t __wc, struct __locale_s *__loc);
 
 size_t wcstombs(char *__s, const wchar_t *__pwcs, size_t __n);
 size_t wcstombs_l(char *__s, const wchar_t *__pwcs, size_t __n, struct __locale_s *__loc);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.h" 1
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.h"
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.h" 1
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef signed char int8_t;
@@ -430,10 +430,10 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.h" 2
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.h"
+# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.h" 2
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.h"
 
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.h"
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.h"
 typedef enum
 {
     COBS_ENCODE_OK = 0x00,
@@ -462,11 +462,11 @@ typedef struct
     size_t out_len;
     cobs_decode_status status;
 } cobs_decode_result;
-# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.h"
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.h"
 cobs_encode_result cobs_encode(uint8_t *dst_buf_ptr, size_t dst_buf_len, const uint8_t * src_ptr, size_t src_len);
 cobs_decode_result cobs_decode(uint8_t *dst_buf_ptr, size_t dst_buf_len, const uint8_t * src_ptr, size_t src_len);
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c" 2
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c"
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c" 2
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c"
 cobs_encode_result cobs_encode(uint8_t *dst_buf_ptr, size_t dst_buf_len, const uint8_t * src_ptr, size_t src_len)
 {
     cobs_encode_result result = { 0, COBS_ENCODE_OK };
@@ -480,13 +480,13 @@ cobs_encode_result cobs_encode(uint8_t *dst_buf_ptr, size_t dst_buf_len, const u
 
 
     if ((dst_buf_ptr == 
-# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c" 3 4
+# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c" 3 4
                        0
-# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c"
+# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c"
                            ) || (src_ptr == 
-# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c" 3 4
+# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c" 3 4
                                             0
-# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c"
+# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c"
                                                 ))
     {
         result.status = COBS_ENCODE_NULL_POINTER;
@@ -575,13 +575,13 @@ cobs_decode_result cobs_decode(uint8_t *dst_buf_ptr, size_t dst_buf_len, const u
 
 
     if ((dst_buf_ptr == 
-# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c" 3 4
+# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c" 3 4
                        0
-# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c"
+# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c"
                            ) || (src_ptr == 
-# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c" 3 4
+# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c" 3 4
                                             0
-# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\cobs.c"
+# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\cobs.c"
                                                 ))
     {
         result.status = COBS_DECODE_NULL_POINTER;

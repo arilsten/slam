@@ -16276,6 +16276,9 @@ m_nrf_log_nrf_ble_gatt_logs_data_dynamic:
 	.ascii	"sd_ble_gap_data_length_update\000"
 .LASF157:
 	.ascii	"ble_gattc_service_t\000"
+.LASF554:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF392:
 	.ascii	"SD_BLE_GAP_PRIVACY_SET\000"
 .LASF324:
@@ -16718,10 +16721,6 @@ m_nrf_log_nrf_ble_gatt_logs_data_dynamic:
 	.ascii	"BLE_GAP_EVT_DATA_LENGTH_UPDATE\000"
 .LASF368:
 	.ascii	"BLE_GAP_EVT_SEC_INFO_REQUEST\000"
-.LASF554:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF356:
 	.ascii	"aux_phy\000"
 .LASF317:

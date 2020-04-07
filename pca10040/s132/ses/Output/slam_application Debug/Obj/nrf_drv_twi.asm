@@ -8309,10 +8309,6 @@ delay_bytecode.7993:
 	.ascii	"EVENTS_TXDSENT\000"
 .LASF132:
 	.ascii	"__iswctype\000"
-.LASF255:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF110:
 	.ascii	"TWIM_PSEL_Type\000"
 .LASF214:
@@ -8546,6 +8542,9 @@ delay_bytecode.7993:
 	.ascii	"event_handler\000"
 .LASF135:
 	.ascii	"__wctomb\000"
+.LASF255:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF95:
 	.ascii	"ENABLE\000"
 .LASF162:

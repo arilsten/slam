@@ -4282,10 +4282,8 @@ m_nrf_log_PRS_logs_data_dynamic:
 	.ascii	"uint16_t\000"
 .LASF118:
 	.ascii	"day_names\000"
-.LASF188:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF29:
+	.ascii	"TASKS_STARTTX\000"
 .LASF112:
 	.ascii	"int_p_cs_precedes\000"
 .LASF172:
@@ -4350,6 +4348,9 @@ m_nrf_log_PRS_logs_data_dynamic:
 	.ascii	"short unsigned int\000"
 .LASF80:
 	.ascii	"name\000"
+.LASF188:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF57:
 	.ascii	"ERRORSRC\000"
 .LASF35:
@@ -4378,8 +4379,6 @@ m_nrf_log_PRS_logs_data_dynamic:
 	.ascii	"ret_code_t\000"
 .LASF184:
 	.ascii	"app_util_critical_region_enter\000"
-.LASF29:
-	.ascii	"TASKS_STARTTX\000"
 .LASF138:
 	.ascii	"__RAL_ascii_ctype_map\000"
 .LASF175:

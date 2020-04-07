@@ -23642,6 +23642,8 @@ m_nrf_log_GPIOTE_logs_data_dynamic:
 	.ascii	"nrf_gpiote_int_disable\000"
 .LASF202:
 	.ascii	"decode\000"
+.LASF60:
+	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
 .LASF29:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF1:
@@ -23656,10 +23658,6 @@ m_nrf_log_GPIOTE_logs_data_dynamic:
 	.ascii	"nrfx_gpiote_out_clear\000"
 .LASF190:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF446:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF154:
 	.ascii	"STIR\000"
 .LASF300:
@@ -24118,8 +24116,9 @@ m_nrf_log_GPIOTE_logs_data_dynamic:
 	.ascii	"__wctomb\000"
 .LASF19:
 	.ascii	"initial_lvl\000"
-.LASF60:
-	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
+.LASF446:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF376:
 	.ascii	"pin_in_use_by_te\000"
 .LASF218:

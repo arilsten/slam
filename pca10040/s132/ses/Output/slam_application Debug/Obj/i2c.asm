@@ -27,7 +27,7 @@
 	.type	i2cInit, %function
 i2cInit:
 .LFB277:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\i2c.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
 	.loc 1 25 15 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -6657,7 +6657,7 @@ m_nrf_twi_mngr:
 	.byte	0x3
 	.uleb128 0
 	.uleb128 0x1
-	.file 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\i2c.h"
+	.file 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h"
 	.byte	0x3
 	.uleb128 0x1
 	.uleb128 0x18
@@ -7196,8 +7196,6 @@ m_nrf_twi_mngr:
 	.ascii	"nrf_twi_mngr_transfer_t\000"
 .LASF264:
 	.ascii	"nrf_log_frontend_std_0\000"
-.LASF89:
-	.ascii	"__irq_masks\000"
 .LASF100:
 	.ascii	"EVENTS_STOPPED\000"
 .LASF158:
@@ -7310,10 +7308,6 @@ m_nrf_twi_mngr:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF15:
 	.ascii	"p_transfers\000"
-.LASF269:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF73:
 	.ascii	"NRFX_TWI1_INST_IDX\000"
 .LASF133:
@@ -7521,6 +7515,9 @@ m_nrf_twi_mngr:
 	.ascii	"m_nrf_twi_mngr_queue_nrf_queue_cb\000"
 .LASF237:
 	.ascii	"TickType_t\000"
+.LASF268:
+	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
+	.ascii	"al\\slam\\drivers\\i2c.c\000"
 .LASF261:
 	.ascii	"xQueueSemaphoreTake\000"
 .LASF233:
@@ -7565,6 +7562,9 @@ m_nrf_twi_mngr:
 	.ascii	"__wctomb\000"
 .LASF46:
 	.ascii	"initial_lvl\000"
+.LASF269:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF118:
 	.ascii	"ENABLE\000"
 .LASF184:
@@ -7591,9 +7591,8 @@ m_nrf_twi_mngr:
 	.ascii	"FREQUENCY\000"
 .LASF21:
 	.ascii	"uint32_t\000"
-.LASF268:
-	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\drivers\\i2c.c\000"
+.LASF89:
+	.ascii	"__irq_masks\000"
 .LASF47:
 	.ascii	"nrf_log_severity_t\000"
 .LASF127:

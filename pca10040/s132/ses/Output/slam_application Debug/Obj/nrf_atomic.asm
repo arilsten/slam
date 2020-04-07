@@ -4883,10 +4883,6 @@ nrf_atomic_flag_clear:
 	.ascii	"int_curr_symbol\000"
 .LASF37:
 	.ascii	"n_cs_precedes\000"
-.LASF124:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF41:
 	.ascii	"int_p_cs_precedes\000"
 .LASF102:
@@ -4943,6 +4939,9 @@ nrf_atomic_flag_clear:
 	.ascii	"negative_sign\000"
 .LASF61:
 	.ascii	"short unsigned int\000"
+.LASF124:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF47:
 	.ascii	"day_names\000"
 .LASF123:

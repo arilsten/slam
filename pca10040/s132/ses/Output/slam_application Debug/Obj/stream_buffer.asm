@@ -12231,10 +12231,8 @@ ucStreamBufferGetStreamBufferType:
 	.ascii	"vTaskSetTimeOutState\000"
 .LASF20:
 	.ascii	"BaseType_t\000"
-.LASF206:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF179:
+	.ascii	"vStreamBufferDelete\000"
 .LASF158:
 	.ascii	"xOriginalTail\000"
 .LASF29:
@@ -12320,6 +12318,9 @@ ucStreamBufferGetStreamBufferType:
 	.ascii	"short unsigned int\000"
 .LASF39:
 	.ascii	"name\000"
+.LASF206:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF173:
 	.ascii	"xStreamBufferBytesAvailable\000"
 .LASF183:
@@ -12372,8 +12373,6 @@ ucStreamBufferGetStreamBufferType:
 	.ascii	"xMaxCount\000"
 .LASF189:
 	.ascii	"xTaskGenericNotifyFromISR\000"
-.LASF179:
-	.ascii	"vStreamBufferDelete\000"
 .LASF51:
 	.ascii	"__mbtowc\000"
 .LASF116:

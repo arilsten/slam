@@ -4076,10 +4076,8 @@ xStart:
 	.ascii	"n_cs_precedes\000"
 .LASF90:
 	.ascii	"uint16_t\000"
-.LASF137:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF21:
+	.ascii	"__isctype\000"
 .LASF48:
 	.ascii	"int_p_cs_precedes\000"
 .LASF5:
@@ -4136,6 +4134,9 @@ xStart:
 	.ascii	"short unsigned int\000"
 .LASF16:
 	.ascii	"name\000"
+.LASF137:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF54:
 	.ascii	"day_names\000"
 .LASF6:
@@ -4246,8 +4247,6 @@ xStart:
 	.ascii	"stderr\000"
 .LASF73:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF21:
-	.ascii	"__isctype\000"
 .LASF57:
 	.ascii	"abbrev_month_names\000"
 .LASF8:

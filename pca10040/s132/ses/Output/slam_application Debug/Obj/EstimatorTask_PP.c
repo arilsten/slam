@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
 
 
 
@@ -85,9 +85,9 @@ float fIMU_readFloatGyroY(void);
 float fIMU_readFloatGyroZ(void);
 IMU_reading_t IMU_getGyro(void);
 IMU_reading_t IMU_getAccel(void);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../drivers/defines.h" 1
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/freeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/freeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5295,7 +5295,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../drivers/functions.h" 1
 # 14 "../../../drivers/functions.h"
 void vFunc_Inf2pi(float *angle_in_radians);
@@ -5319,7 +5319,7 @@ void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
 
 
 void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../drivers/mag3110.h" 1
 
 
@@ -5354,7 +5354,7 @@ void mag_calibrate();
 
 float mag_heading();
 MAG_reading_t mag_read();
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -5755,7 +5755,7 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -6055,7 +6055,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 47 "../../../../../../external/freertos/source/include/queue.h"
 typedef void * QueueHandle_t;
@@ -6153,14 +6153,14 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/timers.h" 1
 # 39 "../../../../../../external/freertos/source/include/timers.h"
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
@@ -6521,7 +6521,7 @@ BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommand
 
  void vTimerSetTimerNumber( TimerHandle_t xTimer, UBaseType_t uxTimerNumber ) ;
  UBaseType_t uxTimerGetTimerNumber( TimerHandle_t xTimer ) ;
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../drivers/microsd.h" 1
 
 
@@ -6533,9 +6533,9 @@ typedef struct {
 # 18 "../../../drivers/microsd.h"
 void microsd_write(char* filename, char* data);
 void microsd_task();
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\kalmanFilter.h" 1
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\kalmanFilter.h"
+# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\kalmanFilter.h" 1
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\kalmanFilter.h"
 typedef struct{
 float x;
 float y;
@@ -6551,7 +6551,7 @@ state kalmanGetState();
 void kf_setGyroVar(float value);
 
 void kf_setEncoderVar(float value);
-# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../drivers/display.h" 1
 # 11 "../../../drivers/display.h"
 # 1 "../../../../../../components/libraries/gfx/nrf_lcd.h" 1
@@ -7132,7 +7132,7 @@ void display_log(const char* p_string);
 void display_clear(void);
 
 void display_task(void *arg);
-# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../communication/server_communication.h" 1
 # 25 "../../../communication/server_communication.h"
 typedef struct {
@@ -7189,15 +7189,15 @@ void send_idle(void);
 void send_ping_response(void);
 void server_receiver(uint8_t *data, uint16_t len);
 void debug(const char *fmt, ...);
-# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.h" 1
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.h"
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.h" 1
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.h"
 void vMainPoseEstimatorTask(void *pvParameters);
-# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 1
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h"
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 1
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h"
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 2
 
 
 extern TaskHandle_t handle_display_task,
@@ -7252,7 +7252,7 @@ struct sCartesian {
     float x;
     float y;
 };
-# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 2
+# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 
 int8_t gyroBiasGuard = 1;
 IMU_reading_t gyro;
@@ -7288,9 +7288,9 @@ void vMainPoseEstimatorTask(void *pvParameters) {
  kf_init(7,8);
 
  while (
-# 58 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 58 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
        1
-# 58 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 58 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
            ) {
   count++;
 
@@ -7307,13 +7307,13 @@ void vMainPoseEstimatorTask(void *pvParameters) {
   leftWheelTicks = gLeftWheelTicks;
   rightWheelTicks = gRightWheelTicks;
   xQueueGenericSend( ( QueueHandle_t ) ( xTickMutex ), 
-# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
  0
-# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
-  float dLeft = (float)(leftWheelTicks * (228)/272.0);
-  float dRight = (float)(rightWheelTicks * (228)/272.0);
+  float dLeft = (float)(leftWheelTicks * (228)/320.0);
+  float dRight = (float)(rightWheelTicks * (228)/320.0);
   dRobot = (dLeft + dRight) / 2;
   dRobot = dRobot;
   dTheta = (dRight - dLeft) / 172;
@@ -7327,7 +7327,7 @@ void vMainPoseEstimatorTask(void *pvParameters) {
    accel.y -= accelYoffset;
 
    gyrZ = gyro.z - gyroOffset;
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
    vTaskDelay(10);
 
    } else {
@@ -7355,9 +7355,9 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 
    Z[4]=dTheta*25.0;
    Z[5]=gyrZ*
-# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
             3.14159265358979323846 
-# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
             / 180.0;
    Z[6]=0;
 
@@ -7393,33 +7393,33 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 
     if(kf_state.heading < 0){
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_1(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "Hdn: -%i", (uint32_t)(kf_state.heading*-180.0 / 
-# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
     3.14159265358979323846
-# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
     )); } };
     }
     else{
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_1(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "Hdn: %i", (uint32_t)(kf_state.heading*180.0 / 
-# 199 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 199 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
     3.14159265358979323846
-# 199 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 199 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
     )); } };
     }
     count = 0;
    }
-# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
    vFunc_Inf2pi(&(kf_state.heading));
    xQueueSemaphoreTake( ( xPoseMutex ), ( 15 ) );
    gTheta_hat = kf_state.heading;
-# 248 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 248 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
    gX_hat = (int)(kf_state.x*1000);
    gY_hat = (int)(kf_state.y*1000);
    gLeft = dLeft;
    gRight = dRight;
    xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 252 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 252 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
   0
-# 252 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 252 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
   , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 
@@ -7429,9 +7429,9 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 
 
    xQueueGenericSend( ( QueueHandle_t ) ( xControllerBSem ), 
-# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
   0
-# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
   , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
    }else{
@@ -7478,9 +7478,9 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 
     if(!USEBLUETOOTH){
      gHandshook = 
-# 305 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c" 3 4
+# 305 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
                  1
-# 305 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\EstimatorTask.c"
+# 305 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
                      ;
     }
    }

@@ -34,7 +34,7 @@
 user_task:
 .LVL0:
 .LFB411:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\main.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
 	.loc 1 144 34 view -0
 	@ args = 0, pretend = 0, frame = 40
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -152,7 +152,7 @@ user_task:
 	.align	2
 .LC2:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\main.c\000"
+	.ascii	"al\\slam\\main.c\000"
 	.section	.text.log_init,"ax",%progbits
 	.align	1
 	.syntax unified
@@ -194,9 +194,9 @@ log_init:
 	movs	r1, #240
 	bl	app_error_handler
 .LVL23:
-	.loc 1 240 247 discriminator 1 view .LVU39
+	.loc 1 240 228 discriminator 1 view .LVU39
 .LBE3:
-	.loc 1 240 262 discriminator 1 view .LVU40
+	.loc 1 240 243 discriminator 1 view .LVU40
 	.loc 1 243 1 is_stmt 0 discriminator 1 view .LVU41
 	b	.L6
 .L11:
@@ -244,9 +244,9 @@ clock_init:
 	movs	r1, #129
 	bl	app_error_handler
 .LVL27:
-	.loc 1 129 247 discriminator 1 view .LVU53
+	.loc 1 129 228 discriminator 1 view .LVU53
 .LBE5:
-	.loc 1 129 262 discriminator 1 view .LVU54
+	.loc 1 129 243 discriminator 1 view .LVU54
 	.loc 1 130 1 is_stmt 0 discriminator 1 view .LVU55
 	b	.L12
 .L17:
@@ -447,7 +447,7 @@ main:
 	cmp	r0, #1
 	bne	.L31
 .L20:
-	.loc 1 319 162 is_stmt 1 discriminator 1 view .LVU98
+	.loc 1 319 143 is_stmt 1 discriminator 1 view .LVU98
 	.loc 1 321 5 discriminator 1 view .LVU99
 	.loc 1 321 37 is_stmt 0 discriminator 1 view .LVU100
 	ldr	r3, .L40+52
@@ -464,7 +464,7 @@ main:
 	cmp	r0, #1
 	bne	.L32
 .L21:
-	.loc 1 322 162 is_stmt 1 discriminator 1 view .LVU102
+	.loc 1 322 143 is_stmt 1 discriminator 1 view .LVU102
 	.loc 1 325 5 discriminator 1 view .LVU103
 	.loc 1 325 37 is_stmt 0 discriminator 1 view .LVU104
 	ldr	r3, .L40+64
@@ -481,7 +481,7 @@ main:
 	cmp	r0, #1
 	bne	.L33
 .L22:
-	.loc 1 326 162 is_stmt 1 discriminator 1 view .LVU106
+	.loc 1 326 143 is_stmt 1 discriminator 1 view .LVU106
 	.loc 1 328 5 discriminator 1 view .LVU107
 	.loc 1 328 37 is_stmt 0 discriminator 1 view .LVU108
 	ldr	r3, .L40+76
@@ -498,7 +498,7 @@ main:
 	cmp	r0, #1
 	bne	.L34
 .L23:
-	.loc 1 329 162 is_stmt 1 discriminator 1 view .LVU110
+	.loc 1 329 143 is_stmt 1 discriminator 1 view .LVU110
 	.loc 1 331 5 discriminator 1 view .LVU111
 	.loc 1 331 37 is_stmt 0 discriminator 1 view .LVU112
 	ldr	r3, .L40+88
@@ -515,7 +515,7 @@ main:
 	cmp	r0, #1
 	bne	.L35
 .L24:
-	.loc 1 332 162 is_stmt 1 discriminator 1 view .LVU114
+	.loc 1 332 143 is_stmt 1 discriminator 1 view .LVU114
 	.loc 1 334 5 discriminator 1 view .LVU115
 	.loc 1 334 37 is_stmt 0 discriminator 1 view .LVU116
 	ldr	r3, .L40+100
@@ -532,7 +532,7 @@ main:
 	cmp	r0, #1
 	bne	.L36
 .L25:
-	.loc 1 335 156 is_stmt 1 discriminator 1 view .LVU118
+	.loc 1 335 137 is_stmt 1 discriminator 1 view .LVU118
 	.loc 1 337 2 discriminator 1 view .LVU119
 	.loc 1 337 34 is_stmt 0 discriminator 1 view .LVU120
 	ldr	r3, .L40+112
@@ -549,7 +549,7 @@ main:
 	cmp	r0, #1
 	bne	.L37
 .L26:
-	.loc 1 338 166 is_stmt 1 discriminator 1 view .LVU122
+	.loc 1 338 147 is_stmt 1 discriminator 1 view .LVU122
 	.loc 1 341 5 discriminator 1 view .LVU123
 	.loc 1 341 9 is_stmt 0 discriminator 1 view .LVU124
 	ldr	r3, .L40+124
@@ -584,7 +584,7 @@ main:
 	movs	r0, #15
 	bl	app_error_handler
 .LVL52:
-	.loc 1 361 163 discriminator 1 view .LVU137
+	.loc 1 361 144 discriminator 1 view .LVU137
 	.loc 1 355 11 discriminator 1 view .LVU138
 	b	.L29
 .L31:
@@ -667,7 +667,7 @@ main:
 	cmp	r0, #1
 	bne	.L39
 .L28:
-	.loc 1 344 166 is_stmt 1 discriminator 1 view .LVU156
+	.loc 1 344 147 is_stmt 1 discriminator 1 view .LVU156
 	.loc 1 346 9 discriminator 1 view .LVU157
 	ldr	r3, .L40+140
 	ldr	r0, [r3]
@@ -6641,16 +6641,17 @@ RightMotorDirection:
 	.ascii	"NRF_LOG_SEVERITY_WARNING\000"
 .LASF13:
 	.ascii	"uint16_t\000"
+.LASF234:
+	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
+	.ascii	"al\\slam\\main.c\000"
 .LASF155:
 	.ascii	"double\000"
 .LASF232:
 	.ascii	"nrf_drv_clock_init\000"
 .LASF147:
 	.ascii	"BaseType_t\000"
-.LASF235:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF200:
+	.ascii	"str1\000"
 .LASF201:
 	.ascii	"str2\000"
 .LASF170:
@@ -6661,8 +6662,6 @@ RightMotorDirection:
 	.ascii	"abbrev_day_names\000"
 .LASF80:
 	.ascii	"negative_sign\000"
-.LASF200:
-	.ascii	"str1\000"
 .LASF105:
 	.ascii	"__wchar\000"
 .LASF4:
@@ -6753,8 +6752,9 @@ RightMotorDirection:
 	.ascii	"short unsigned int\000"
 .LASF58:
 	.ascii	"name\000"
-.LASF21:
-	.ascii	"lcd_display_invert\000"
+.LASF235:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF10:
 	.ascii	"FONT_CHAR_INFO\000"
 .LASF39:
@@ -6947,6 +6947,8 @@ RightMotorDirection:
 	.ascii	"__RAL_c_locale_month_names\000"
 .LASF163:
 	.ascii	"handle_display_task\000"
+.LASF21:
+	.ascii	"lcd_display_invert\000"
 .LASF50:
 	.ascii	"__RAL_error_decoder_s\000"
 .LASF123:
@@ -6961,9 +6963,8 @@ RightMotorDirection:
 	.ascii	"float\000"
 .LASF97:
 	.ascii	"month_names\000"
-.LASF234:
-	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\main.c\000"
+.LASF222:
+	.ascii	"motor_init\000"
 .LASF219:
 	.ascii	"nrf_sdh_freertos_init\000"
 .LASF175:
@@ -6982,8 +6983,6 @@ RightMotorDirection:
 	.ascii	"n_sep_by_space\000"
 .LASF138:
 	.ascii	"__RAL_FILE\000"
-.LASF222:
-	.ascii	"motor_init\000"
 .LASF158:
 	.ascii	"nrf_gfx_font_desc_t\000"
 .LASF118:

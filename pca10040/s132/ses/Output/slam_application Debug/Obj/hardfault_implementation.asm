@@ -3947,10 +3947,8 @@ cfsr_msgs.8521:
 	.ascii	"uint16_t\000"
 .LASF78:
 	.ascii	"n_cs_precedes\000"
-.LASF161:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF55:
+	.ascii	"__isctype\000"
 .LASF82:
 	.ascii	"int_p_cs_precedes\000"
 .LASF19:
@@ -4015,6 +4013,9 @@ cfsr_msgs.8521:
 	.ascii	"short unsigned int\000"
 .LASF50:
 	.ascii	"name\000"
+.LASF161:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF29:
 	.ascii	"ICSR\000"
 .LASF31:
@@ -4154,8 +4155,6 @@ cfsr_msgs.8521:
 	.ascii	"stderr\000"
 .LASF111:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF55:
-	.ascii	"__isctype\000"
 .LASF43:
 	.ascii	"__RAL_error_decoder_s\000"
 .LASF121:

@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
-# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 
@@ -50,7 +50,7 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 3 4
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 1 3 4
@@ -357,9 +357,9 @@ char *strerror(int __num);
 
 int strcoll(const char *__str1, const char *__str2);
 size_t strxfrm( char *__str1, const char *__str2, size_t __num);
-# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/libraries/util/nordic_common.h" 1
-# 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../modules/nrfx/mdk/nrf.h" 1
 # 84 "../../../../../../modules/nrfx/mdk/nrf.h"
 # 1 "../../../../../../modules/nrfx/mdk/nrf52.h" 1
@@ -3280,9 +3280,9 @@ typedef struct {
         return sp;
     }
 # 98 "../../../../../../modules/nrfx/mdk/nrf.h" 2
-# 27 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 27 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/softdevice/s132/headers/ble_hci.h" 1
-# 28 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 28 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/ble/common/ble_advdata.h" 1
 # 53 "../../../../../../components/ble/common/ble_advdata.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h" 1 3 4
@@ -6559,7 +6559,7 @@ _Bool
     ble_advdata_appearance_find(uint8_t const * p_encoded_data,
                                  uint16_t data_len,
                                  uint16_t const * p_target_appearance);
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/ble/ble_advertising/ble_advertising.h" 1
 # 62 "../../../../../../components/ble/ble_advertising/ble_advertising.h"
 # 1 "../../../../../../components/softdevice/s132/headers/ble_gattc.h" 1
@@ -6745,7 +6745,7 @@ uint32_t ble_advertising_restart_without_whitelist(ble_advertising_t * const p_a
 # 326 "../../../../../../components/ble/ble_advertising/ble_advertising.h"
 void ble_advertising_modes_config_set(ble_advertising_t * const p_advertising,
                                       ble_adv_modes_config_t const * const p_adv_modes_config);
-# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/ble/common/ble_conn_params.h" 1
 # 53 "../../../../../../components/ble/common/ble_conn_params.h"
 # 1 "../../../../../../components/ble/common/ble_srv_common.h" 1
@@ -7002,7 +7002,7 @@ ret_code_t ble_conn_params_stop(void);
 # 147 "../../../../../../components/ble/common/ble_conn_params.h"
 ret_code_t ble_conn_params_change_conn_params(uint16_t conn_handle,
                                               ble_gap_conn_params_t * p_new_params);
-# 31 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 31 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/softdevice/common/nrf_sdh.h" 1
 # 55 "../../../../../../components/softdevice/common/nrf_sdh.h"
 # 1 "../../../../../../components/libraries/experimental_section_vars/nrf_section_iter.h" 1
@@ -7142,7 +7142,7 @@ _Bool
     nrf_sdh_is_suspended(void);
 # 296 "../../../../../../components/softdevice/common/nrf_sdh.h"
 void nrf_sdh_evts_poll(void);
-# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/softdevice/common/nrf_sdh_soc.h" 1
 # 55 "../../../../../../components/softdevice/common/nrf_sdh_soc.h"
 # 1 "../../../../../../components/softdevice/s132/headers/nrf_soc.h" 1
@@ -8070,7 +8070,7 @@ typedef struct
     nrf_sdh_soc_evt_handler_t handler;
     void * p_context;
 } const nrf_sdh_soc_evt_observer_t;
-# 33 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 33 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/softdevice/common/nrf_sdh_ble.h" 1
 # 134 "../../../../../../components/softdevice/common/nrf_sdh_ble.h"
 typedef void (*nrf_sdh_ble_evt_handler_t)(ble_evt_t const * p_ble_evt, void * p_context);
@@ -8092,7 +8092,7 @@ ret_code_t nrf_sdh_ble_default_cfg_set(uint8_t conn_cfg_tag, uint32_t * p_ram_st
 
 
 ret_code_t nrf_sdh_ble_enable(uint32_t * p_app_ram_start);
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h" 1
 # 82 "../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h"
 typedef enum
@@ -8173,7 +8173,7 @@ ret_code_t nrf_ble_gatt_data_length_get(nrf_ble_gatt_t const * p_gatt,
 void nrf_ble_gatt_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context);
 # 233 "../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h"
 uint16_t nrf_ble_gatt_eff_mtu_get(nrf_ble_gatt_t const * p_gatt, uint16_t conn_handle);
-# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/ble/nrf_ble_qwr/nrf_ble_qwr.h" 1
 # 65 "../../../../../../components/ble/nrf_ble_qwr/nrf_ble_qwr.h"
 # 1 "../../../../../../components/ble/common/ble_srv_common.h" 1
@@ -8237,7 +8237,7 @@ ret_code_t nrf_ble_qwr_conn_handle_assign(nrf_ble_qwr_t * p_qwr,
                                           uint16_t conn_handle);
 # 197 "../../../../../../components/ble/nrf_ble_qwr/nrf_ble_qwr.h"
 void nrf_ble_qwr_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context);
-# 36 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 36 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/libraries/timer/app_timer.h" 1
 # 70 "../../../../../../components/libraries/timer/app_timer.h"
 # 1 "../../../../../../components/libraries/util/app_error.h" 1
@@ -8959,7 +8959,7 @@ void app_timer_pause(void);
 
 
 void app_timer_resume(void);
-# 37 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 37 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/ble/ble_services/ble_nus/ble_nus.h" 1
 # 72 "../../../../../../components/ble/ble_services/ble_nus/ble_nus.h"
 # 1 "../../../../../../components/ble/ble_link_ctx_manager/ble_link_ctx_manager.h" 1
@@ -9245,7 +9245,7 @@ uint32_t ble_nus_data_send(ble_nus_t * p_nus,
                            uint8_t * p_data,
                            uint16_t * p_length,
                            uint16_t conn_handle);
-# 38 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 38 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 
 
 
@@ -9443,7 +9443,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 44 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 44 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h" 1
 # 58 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
 # 1 "../../../../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h" 1
@@ -9901,22 +9901,22 @@ nrf_log_severity_t nrf_log_module_filter_get(uint32_t backend_id,
                                             _Bool 
 # 216 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
                                                      dynamic);
-# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_default_backends.h" 1
 # 73 "../../../../../../components/libraries/experimental_log/nrf_log_default_backends.h"
 void nrf_log_default_backends_init(void);
-# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
+# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
 
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h" 1
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h" 1
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h"
 void network_set_callback(uint8_t protocol, void (*cb)(uint8_t, uint8_t*, uint16_t));
 uint8_t network_send(uint8_t remote_address, uint8_t protocol, uint8_t *data, uint16_t len);
 uint8_t network_get_address(void);
 void network_receive( uint8_t* frame, uint8_t len);
 void network_ReciveFromBle(const uint8_t* data, uint8_t length);
 void network_getMessage();
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 2
-# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 2
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 _Static_assert(((1)) < (20), "unspecified message"); static uint32_t m_nus_link_ctx_storage_ctx_data_pool[((1))*(((sizeof(ble_nus_client_context_t)) + 3) >> 2)]; static blcm_link_ctx_storage_t m_nus_link_ctx_storage = { .p_ctx_data_pool = m_nus_link_ctx_storage_ctx_data_pool, .max_links_cnt = ((1)), .link_ctx_size = sizeof(m_nus_link_ctx_storage_ctx_data_pool)/((1)) }; static ble_nus_t m_nus = { .p_link_ctx_storage = &m_nus_link_ctx_storage }; _Static_assert(1, "NRF_SDH_BLE_ENABLED not set!"); _Static_assert(2 < 4, "Priority level unavailable."); static nrf_sdh_ble_evt_observer_t m_nus_obs __attribute__ ((section("." "sdh_ble_observers2"))) __attribute__((used)) = { .handler = ble_nus_on_ble_evt, .p_context = &m_nus };
 static nrf_ble_gatt_t m_gatt; _Static_assert(1, "NRF_SDH_BLE_ENABLED not set!"); _Static_assert(1 < 4, "Priority level unavailable."); static nrf_sdh_ble_evt_observer_t m_gatt_obs __attribute__ ((section("." "sdh_ble_observers1"))) __attribute__((used)) = { .handler = nrf_ble_gatt_on_ble_evt, .p_context = &m_gatt };
 static nrf_ble_qwr_t m_qwr; _Static_assert(1, "NRF_SDH_BLE_ENABLED not set!"); _Static_assert(2 < 4, "Priority level unavailable."); static nrf_sdh_ble_evt_observer_t m_qwr_obs __attribute__ ((section("." "sdh_ble_observers2"))) __attribute__((used)) = { .handler = nrf_ble_qwr_on_ble_evt, .p_context = &m_qwr };
@@ -9928,7 +9928,7 @@ static ble_uuid_t m_adv_uuids[] =
 {
     {0x0001, 0x02}
 };
-# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
 {
     app_error_handler(0xDEADBEEF, line_num, p_file_name);
@@ -9939,7 +9939,7 @@ void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
 static void timers_init(void)
 {
     ret_code_t err_code = app_timer_init();
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 106, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 106, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 }
 
 
@@ -9958,7 +9958,7 @@ static void gap_params_init(void)
     err_code = sd_ble_gap_device_name_set(&sec_mode,
                                           (const uint8_t *) "NRF",
                                           strlen("NRF"));
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 125, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 125, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
     memset(&gap_conn_params, 0, sizeof(gap_conn_params));
 
@@ -9968,14 +9968,14 @@ static void gap_params_init(void)
     gap_conn_params.conn_sup_timeout = (((4000) * 1000) / (UNIT_10_MS));
 
     err_code = sd_ble_gap_ppcp_set(&gap_conn_params);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 135, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 135, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 }
-# 146 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 146 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 static void nrf_qwr_error_handler(uint32_t nrf_error)
 {
-    do { app_error_handler((nrf_error), 148, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0);
+    do { app_error_handler((nrf_error), 148, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0);
 }
-# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 static void nus_data_handler(ble_nus_evt_t * p_evt)
 {
 
@@ -9987,7 +9987,7 @@ static void nus_data_handler(ble_nus_evt_t * p_evt)
 
 
        network_ReciveFromBle(p_evt->params.rx_data.p_data, p_evt->params.rx_data.length);
-# 184 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 184 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
     }
 }
 
@@ -10005,7 +10005,7 @@ static void services_init(void)
     qwr_init.error_handler = nrf_qwr_error_handler;
 
     err_code = nrf_ble_qwr_init(&m_qwr, &qwr_init);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 201, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 201, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
 
     memset(&nus_init, 0, sizeof(nus_init));
@@ -10013,9 +10013,9 @@ static void services_init(void)
     nus_init.data_handler = nus_data_handler;
 
     err_code = ble_nus_init(&m_nus, &nus_init);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 209, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 209, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 }
-# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 static void on_conn_params_evt(ble_conn_params_evt_t * p_evt)
 {
     uint32_t err_code;
@@ -10023,7 +10023,7 @@ static void on_conn_params_evt(ble_conn_params_evt_t * p_evt)
     if (p_evt->evt_type == BLE_CONN_PARAMS_EVT_FAILED)
     {
         err_code = sd_ble_gap_disconnect(m_conn_handle, 0x3B);
-        do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 231, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+        do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 231, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
     }
 }
 
@@ -10034,7 +10034,7 @@ static void on_conn_params_evt(ble_conn_params_evt_t * p_evt)
 
 static void conn_params_error_handler(uint32_t nrf_error)
 {
-    do { app_error_handler((nrf_error), 242, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0);
+    do { app_error_handler((nrf_error), 242, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0);
 }
 
 
@@ -10048,26 +10048,26 @@ static void conn_params_init(void)
     memset(&cp_init, 0, sizeof(cp_init));
 
     cp_init.p_conn_params = 
-# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                                             0
-# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                                                 ;
     cp_init.first_conn_params_update_delay = (uint32_t)((((5000)*1000) + ((1000) / 2)) / (1000));
     cp_init.next_conn_params_update_delay = (uint32_t)((((30000)*1000) + ((1000) / 2)) / (1000));
     cp_init.max_conn_params_update_count = 3;
     cp_init.start_on_notify_cccd_handle = 0x0000;
     cp_init.disconnect_on_fail = 
-# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                                             0
-# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                                                  ;
     cp_init.evt_handler = on_conn_params_evt;
     cp_init.error_handler = conn_params_error_handler;
 
     err_code = ble_conn_params_init(&cp_init);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 265, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 265, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 }
-# 276 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 276 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 static void on_adv_evt(ble_adv_evt_t ble_adv_evt)
 {
     uint32_t err_code;
@@ -10099,7 +10099,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "Connected"); } };
             m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
             err_code = nrf_ble_qwr_conn_handle_assign(&m_qwr, m_conn_handle);
-            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 307, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 307, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
             break;
 
         case BLE_GAP_EVT_DISCONNECTED:
@@ -10117,45 +10117,45 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                 .tx_phys = 0x00,
             };
             err_code = sd_ble_gap_phy_update(p_ble_evt->evt.gap_evt.conn_handle, &phys);
-            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 325, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 325, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
         } break;
 
         case BLE_GAP_EVT_SEC_PARAMS_REQUEST:
 
             err_code = sd_ble_gap_sec_params_reply(m_conn_handle, 0x85, 
-# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                                                                                                       0
-# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                                                                                                           , 
-# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                                                                                                             0
-# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                                                                                                                 );
-            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 331, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 331, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
             break;
 
         case BLE_GATTS_EVT_SYS_ATTR_MISSING:
 
             err_code = sd_ble_gatts_sys_attr_set(m_conn_handle, 
-# 336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                                                                0
-# 336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                                                                    , 0, 0);
-            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 337, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 337, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
             break;
 
         case BLE_GATTC_EVT_TIMEOUT:
 
             err_code = sd_ble_gap_disconnect(p_ble_evt->evt.gattc_evt.conn_handle,
                                              0x13);
-            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 344, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 344, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
             break;
 
         case BLE_GATTS_EVT_TIMEOUT:
 
             err_code = sd_ble_gap_disconnect(p_ble_evt->evt.gatts_evt.conn_handle,
                                              0x13);
-            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 351, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+            do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 351, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
             break;
 
         default:
@@ -10174,23 +10174,23 @@ static void ble_stack_init(void)
     ret_code_t err_code;
 
     err_code = nrf_sdh_enable_request();
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 370, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 370, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
 
 
     uint32_t ram_start = 0;
     err_code = nrf_sdh_ble_default_cfg_set(1, &ram_start);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 376, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 376, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
 
     err_code = nrf_sdh_ble_enable(&ram_start);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 380, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 380, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
 
     _Static_assert(1, "NRF_SDH_BLE_ENABLED not set!"); _Static_assert(3 < 4, "Priority level unavailable."); static nrf_sdh_ble_evt_observer_t m_ble_observer __attribute__ ((section("." "sdh_ble_observers3"))) __attribute__((used)) = { .handler = ble_evt_handler, .p_context = 
-# 383 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 383 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
    0 
-# 383 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 383 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
    };
 }
 
@@ -10215,12 +10215,12 @@ void gatt_init(void)
     ret_code_t err_code;
 
     err_code = nrf_ble_gatt_init(&m_gatt, gatt_evt_handler);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 407, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 407, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
     err_code = nrf_ble_gatt_att_mtu_periph_set(&m_gatt, 23);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 410, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 410, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 }
-# 432 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 432 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
 void ble_send(uint8_t* data, uint16_t len)
 {
     static uint8_t data_array[(23 - 1 - 2)];
@@ -10245,7 +10245,7 @@ void ble_send(uint8_t* data, uint16_t len)
                     if ( (err_code != ((0x0) + 8)) && (err_code != ((0x0) + 17)) &&
                          (err_code != ((0x0) + 5)) && (err_code != ((0x0) + 19)) )
                     {
-                        do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 456, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+                        do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 456, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
                     }
                 } while (err_code == ((0x0) + 17) || err_code == ((0x0) + 19));
 
@@ -10266,9 +10266,9 @@ static void advertising_init(void)
 
     init.advdata.name_type = BLE_ADVDATA_FULL_NAME;
     init.advdata.include_appearance = 
-# 476 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 476 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                                      0
-# 476 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 476 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                                           ;
     init.advdata.flags = ((0x01) | (0x04));
 
@@ -10276,16 +10276,16 @@ static void advertising_init(void)
     init.srdata.uuids_complete.p_uuids = m_adv_uuids;
 
     init.config.ble_adv_fast_enabled = 
-# 482 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 482 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                                        1
-# 482 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 482 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                                            ;
     init.config.ble_adv_fast_interval = 64;
     init.config.ble_adv_fast_timeout = 18000;
     init.evt_handler = on_adv_evt;
 
     err_code = ble_advertising_init(&m_advertising, &init);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 488, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 488, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
     ble_advertising_conn_cfg_tag_set(&m_advertising, 1);
 }
@@ -10296,11 +10296,11 @@ static void advertising_init(void)
 static void log_init(void)
 {
     ret_code_t err_code = nrf_log_init(
-# 498 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 498 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
                          0
-# 498 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 498 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
                          , 32768);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 499, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 499, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 
     nrf_log_default_backends_init();
 }
@@ -10313,7 +10313,7 @@ static void log_init(void)
 void advertising_start(void)
 {
     uint32_t err_code = ble_advertising_start(&m_advertising, BLE_ADV_MODE_FAST);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 512, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 512, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"); } while (0); } } while (0);
 }
 
 
@@ -10322,9 +10322,9 @@ void advertising_start(void)
 void BLE_init()
 {
     
-# 520 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c" 3 4
+# 520 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c" 3 4
    _Bool 
-# 520 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\bluetooth.c"
+# 520 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\bluetooth.c"
         erase_bonds;
 
 

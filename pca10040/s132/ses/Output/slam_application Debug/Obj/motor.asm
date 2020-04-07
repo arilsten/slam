@@ -24,7 +24,7 @@
 pwm_ready_callback:
 .LVL0:
 .LFB317:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\motor.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\motor.c"
 	.loc 1 23 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -37,7 +37,7 @@ pwm_ready_callback:
 	.align	2
 .LC1:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\drivers\\motor.c\000"
+	.ascii	"al\\slam\\drivers\\motor.c\000"
 	.section	.text.motor_init,"ax",%progbits
 	.align	1
 	.global	motor_init
@@ -73,9 +73,9 @@ motor_init:
 	cmp	r4, #0
 	bne	.L8
 .L4:
-	.loc 1 32 248 is_stmt 1 discriminator 3 view .LVU11
+	.loc 1 32 229 is_stmt 1 discriminator 3 view .LVU11
 .LBE14:
-	.loc 1 32 263 discriminator 3 view .LVU12
+	.loc 1 32 244 discriminator 3 view .LVU12
 	.loc 1 34 2 discriminator 3 view .LVU13
 	.loc 1 34 27 is_stmt 0 discriminator 3 view .LVU14
 	movs	r4, #0
@@ -138,9 +138,9 @@ motor_init:
 	cbnz	r0, .L9
 .LVL9:
 .L5:
-	.loc 1 45 248 is_stmt 1 discriminator 3 view .LVU34
+	.loc 1 45 229 is_stmt 1 discriminator 3 view .LVU34
 .LBE15:
-	.loc 1 45 263 discriminator 3 view .LVU35
+	.loc 1 45 244 discriminator 3 view .LVU35
 	.loc 1 46 2 discriminator 3 view .LVU36
 	ldr	r0, .L10+8
 	bl	app_pwm_enable
@@ -241,10 +241,10 @@ motor_forward:
 	blt	.L16
 	.loc 1 52 2 is_stmt 1 view .LVU58
 	.loc 1 52 5 is_stmt 0 view .LVU59
-	cmp	r5, #20
+	cmp	r5, #50
 	ble	.L14
 	.loc 1 53 8 view .LVU60
-	movs	r5, #20
+	movs	r5, #50
 .LVL23:
 	.loc 1 54 2 is_stmt 1 view .LVU61
 	.loc 1 54 2 is_stmt 0 view .LVU62
@@ -346,10 +346,10 @@ motor_right_forward:
 	blt	.L24
 	.loc 1 52 2 is_stmt 1 view .LVU89
 	.loc 1 52 5 is_stmt 0 view .LVU90
-	cmp	r4, #20
+	cmp	r4, #50
 	ble	.L23
 	.loc 1 53 8 view .LVU91
-	movs	r4, #20
+	movs	r4, #50
 .LVL32:
 	.loc 1 54 2 is_stmt 1 view .LVU92
 	.loc 1 54 2 is_stmt 0 view .LVU93
@@ -433,10 +433,10 @@ motor_left_forward:
 	blt	.L32
 	.loc 1 52 2 is_stmt 1 view .LVU114
 	.loc 1 52 5 is_stmt 0 view .LVU115
-	cmp	r4, #20
+	cmp	r4, #50
 	ble	.L31
 	.loc 1 53 8 view .LVU116
-	movs	r4, #20
+	movs	r4, #50
 .LVL40:
 	.loc 1 54 2 is_stmt 1 view .LVU117
 	.loc 1 54 2 is_stmt 0 view .LVU118
@@ -528,10 +528,10 @@ motor_backward:
 	blt	.L41
 	.loc 1 52 2 is_stmt 1 view .LVU141
 	.loc 1 52 5 is_stmt 0 view .LVU142
-	cmp	r5, #20
+	cmp	r5, #50
 	ble	.L39
 	.loc 1 53 8 view .LVU143
-	movs	r5, #20
+	movs	r5, #50
 .LVL50:
 	.loc 1 54 2 is_stmt 1 view .LVU144
 	.loc 1 54 2 is_stmt 0 view .LVU145
@@ -633,10 +633,10 @@ motor_right_backward:
 	blt	.L49
 	.loc 1 52 2 is_stmt 1 view .LVU172
 	.loc 1 52 5 is_stmt 0 view .LVU173
-	cmp	r4, #20
+	cmp	r4, #50
 	ble	.L48
 	.loc 1 53 8 view .LVU174
-	movs	r4, #20
+	movs	r4, #50
 .LVL59:
 	.loc 1 54 2 is_stmt 1 view .LVU175
 	.loc 1 54 2 is_stmt 0 view .LVU176
@@ -720,10 +720,10 @@ motor_left_backward:
 	blt	.L57
 	.loc 1 52 2 is_stmt 1 view .LVU197
 	.loc 1 52 5 is_stmt 0 view .LVU198
-	cmp	r4, #20
+	cmp	r4, #50
 	ble	.L56
 	.loc 1 53 8 view .LVU199
-	movs	r4, #20
+	movs	r4, #50
 .LVL67:
 	.loc 1 54 2 is_stmt 1 view .LVU200
 	.loc 1 54 2 is_stmt 0 view .LVU201
@@ -6541,7 +6541,7 @@ m_pwm_PWM1_timer:
 	.byte	0x3
 	.uleb128 0
 	.uleb128 0x1
-	.file 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\motor.h"
+	.file 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\motor.h"
 	.byte	0x3
 	.uleb128 0x1
 	.uleb128 0x14
@@ -6967,10 +6967,8 @@ m_pwm_PWM1_timer:
 	.ascii	"nrfx_gpiote_out_clear\000"
 .LASF143:
 	.ascii	"n_cs_precedes\000"
-.LASF246:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF120:
+	.ascii	"__isctype\000"
 .LASF147:
 	.ascii	"int_p_cs_precedes\000"
 .LASF82:
@@ -6995,9 +6993,6 @@ m_pwm_PWM1_timer:
 	.ascii	"app_pwm_init\000"
 .LASF71:
 	.ascii	"action\000"
-.LASF245:
-	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\drivers\\motor.c\000"
 .LASF136:
 	.ascii	"mon_grouping\000"
 .LASF123:
@@ -7064,6 +7059,9 @@ m_pwm_PWM1_timer:
 	.ascii	"name\000"
 .LASF59:
 	.ascii	"NRF_PPI_CHANNEL29\000"
+.LASF246:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF153:
 	.ascii	"day_names\000"
 .LASF209:
@@ -7236,6 +7234,9 @@ m_pwm_PWM1_timer:
 	.ascii	"cc_channel_count\000"
 .LASF5:
 	.ascii	"channels_cb\000"
+.LASF245:
+	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
+	.ascii	"al\\slam\\drivers\\motor.c\000"
 .LASF223:
 	.ascii	"duty\000"
 .LASF119:
@@ -7254,8 +7255,6 @@ m_pwm_PWM1_timer:
 	.ascii	"stderr\000"
 .LASF177:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF120:
-	.ascii	"__isctype\000"
 .LASF156:
 	.ascii	"abbrev_month_names\000"
 .LASF111:

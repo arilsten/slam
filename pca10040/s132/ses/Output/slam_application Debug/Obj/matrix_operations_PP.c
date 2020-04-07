@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\matrix_operations.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\matrix_operations.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\matrix_operations.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\matrix_operations.c"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -403,7 +403,7 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\matrix_operations.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\matrix_operations.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 3 4
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 1 3 4
@@ -775,7 +775,7 @@ int wctomb_l(char *__s, wchar_t __wc, struct __locale_s *__loc);
 
 size_t wcstombs(char *__s, const wchar_t *__pwcs, size_t __n);
 size_t wcstombs_l(char *__s, const wchar_t *__pwcs, size_t __n, struct __locale_s *__loc);
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\matrix_operations.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\matrix_operations.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h" 1 3 4
 # 78 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h" 3 4
 int putchar(int __c);
@@ -854,10 +854,10 @@ char *tmpnam(char *);
 int ungetc(int, FILE *);
 int vfprintf(FILE *, const char *, __va_list);
 int vfscanf(FILE *, const char *, __va_list);
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\matrix_operations.c" 2
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\matrix_operations.c"
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\matrix_operations.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\matrix_operations.c"
 
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\matrix_operations.c"
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\matrix_operations.c"
 int choldc1(float * a, float * p, int n) {
     int i,j,k;
     float sum;

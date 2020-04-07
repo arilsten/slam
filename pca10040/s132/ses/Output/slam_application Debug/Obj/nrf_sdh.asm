@@ -8150,10 +8150,6 @@ sdh_state_observers:
 	.ascii	"nrf_fault_handler_t\000"
 .LASF123:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF298:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF87:
 	.ascii	"STIR\000"
 .LASF215:
@@ -8446,6 +8442,9 @@ sdh_state_observers:
 	.ascii	"__wctomb\000"
 .LASF4:
 	.ascii	"initial_lvl\000"
+.LASF298:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF255:
 	.ascii	"iter\000"
 .LASF152:

@@ -12460,8 +12460,9 @@ ble_advdata_appearance_find:
 	.ascii	"strlen\000"
 .LASF45:
 	.ascii	"BLE_ADVDATA_ROLE_ONLY_PERIPH\000"
-.LASF217:
-	.ascii	"p_parsed_name\000"
+.LASF278:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF6:
 	.ascii	"uuids_complete\000"
 .LASF75:
@@ -12524,10 +12525,8 @@ ble_advdata_appearance_find:
 	.ascii	"__RAL_c_locale_abbrev_month_names\000"
 .LASF10:
 	.ascii	"p_service_data_array\000"
-.LASF278:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF105:
+	.ascii	"SD_BLE_GAP_QOS_CHANNEL_SURVEY_START\000"
 .LASF146:
 	.ascii	"p_sign_posn\000"
 .LASF130:
@@ -12631,6 +12630,8 @@ ble_advdata_appearance_find:
 	.ascii	"data_size\000"
 .LASF258:
 	.ascii	"ble_device_addr_encode\000"
+.LASF217:
+	.ascii	"p_parsed_name\000"
 .LASF85:
 	.ascii	"SD_BLE_GAP_DEVICE_NAME_GET\000"
 .LASF221:
@@ -12961,8 +12962,6 @@ ble_advdata_appearance_find:
 	.ascii	"memcpy\000"
 .LASF235:
 	.ascii	"p_conn_int\000"
-.LASF105:
-	.ascii	"SD_BLE_GAP_QOS_CHANNEL_SURVEY_START\000"
 .LASF194:
 	.ascii	"_vectors\000"
 .LASF144:

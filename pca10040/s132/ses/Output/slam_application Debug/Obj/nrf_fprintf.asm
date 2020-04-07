@@ -2783,6 +2783,8 @@ nrf_fprintf:
 	.ascii	"io_buffer_size\000"
 .LASF31:
 	.ascii	"__mbtowc\000"
+.LASF103:
+	.ascii	"_vectors\000"
 .LASF18:
 	.ascii	"__RAL_locale_t\000"
 .LASF88:
@@ -2811,14 +2813,11 @@ nrf_fprintf:
 	.ascii	"abbrev_day_names\000"
 .LASF30:
 	.ascii	"__wctomb\000"
-.LASF103:
-	.ascii	"_vectors\000"
+.LASF114:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF14:
 	.ascii	"next\000"
 .LASF16:
 	.ascii	"__locale_s\000"
-.LASF114:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

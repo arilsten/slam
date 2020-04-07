@@ -1,15 +1,15 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
 
 
 
 
 
 # 1 "../../../drivers/defines.h" 1
-# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../../../../external/freertos/source/include/freeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/freeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5268,7 +5268,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../drivers/ir.h" 1
 # 10 "../../../drivers/ir.h"
 typedef enum {
@@ -5309,7 +5309,7 @@ int16_t i16DistSens_readMM(IR_Sensor_t sensor);
 uint8_t IrAnalogToCM(uint16_t reading);
 
 int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -5710,7 +5710,7 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -6010,7 +6010,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 47 "../../../../../../external/freertos/source/include/queue.h"
 typedef void * QueueHandle_t;
@@ -6108,14 +6108,14 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../communication/server_communication.h" 1
 # 25 "../../../communication/server_communication.h"
 typedef struct {
@@ -6172,7 +6172,7 @@ void send_idle(void);
 void send_ping_response(void);
 void server_receiver(uint8_t *data, uint16_t len);
 void debug(const char *fmt, ...);
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../drivers/servo.h" 1
 
 
@@ -6183,7 +6183,7 @@ void debug(const char *fmt, ...);
 void servo_init();
 # 18 "../../../drivers/servo.h"
 void vServo_setAngle(int angle);
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../../../../external/freertos/source/include/timers.h" 1
 # 39 "../../../../../../external/freertos/source/include/timers.h"
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
@@ -6544,7 +6544,7 @@ BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommand
 
  void vTimerSetTimerNumber( TimerHandle_t xTimer, UBaseType_t uxTimerNumber ) ;
  UBaseType_t uxTimerGetTimerNumber( TimerHandle_t xTimer ) ;
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../drivers/microsd.h" 1
 
 
@@ -6556,7 +6556,7 @@ typedef struct {
 # 18 "../../../drivers/microsd.h"
 void microsd_write(char* filename, char* data);
 void microsd_task();
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 
 # 1 "../../../drivers/display.h" 1
 # 11 "../../../drivers/display.h"
@@ -7138,7 +7138,7 @@ void display_log(const char* p_string);
 void display_clear(void);
 
 void display_task(void *arg);
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../drivers/mag3110.h" 1
 
 
@@ -7173,9 +7173,9 @@ void mag_calibrate();
 
 float mag_heading();
 MAG_reading_t mag_read();
-# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
-# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 2
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 2
 
 extern int16_t gX_hat;
 extern int16_t gY_hat;
@@ -7215,7 +7215,7 @@ static void ir_task(void *arg) {
         vTaskDelay(100);
     }
 }
-# 70 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 70 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
 static void mag_task(void *arg) {
     mag_init(MAG_OS_128);
 
@@ -7254,18 +7254,18 @@ void vMainSensorCalibrationTask(void *pvParameters) {
     uint8_t scan= 0;
     uint8_t incr = 0;
     while (
-# 107 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 3 4
+# 107 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
           1
-# 107 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 107 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
               ) {
         if ((gHandshook == 
-# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 3 4
+# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
                           1
-# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
                               ) && (gPaused == 
-# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 3 4
+# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
                                                0
-# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
                                                     )) {
 
             xLastWakeTime = xTaskGetTickCount();
@@ -7276,9 +7276,9 @@ void vMainSensorCalibrationTask(void *pvParameters) {
                 switch (robotMovement) {
                 case 0:
                     scan = 
-# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 3 4
+# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
                           1
-# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
                               ;
                     break;
                 case 1:
@@ -7311,9 +7311,9 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             xhat = gX_hat;
             yhat = gY_hat;
             xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 3 4
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
            0
-# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
            , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
             microsd_write_operation_t write;
             sprintf(strLOG,"Ta:0,x:%d,y:%d,T:%d,F:%u,L:%u,B:%u,R:%u\n",xhat,yhat,(int)(gTheta_hat*1000),sensor16[0],sensor16[1],sensor16[2],sensor16[3]);
@@ -7336,9 +7336,9 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             xhat = gX_hat;
             yhat = gY_hat;
             xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 3 4
+# 169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
            0
-# 169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
            , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
             sprintf(strLOG,"Ta:90,x:%d,y:%d,T:%d,F:%u,L:%u,B:%u,R:%u\n",xhat,yhat,(int)(gTheta_hat*1000),sensor16[0],sensor16[1],sensor16[2],sensor16[3]);
             write.filename = "SC";
@@ -7350,9 +7350,9 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             vServo_setAngle(0);
             vTaskDelay(1000);
             scan = 
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c" 3 4
+# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
                   0
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\DebugFunctions.c"
+# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
                        ;
             }
         }

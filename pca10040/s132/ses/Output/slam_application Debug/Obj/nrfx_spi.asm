@@ -14220,6 +14220,8 @@ irq_handlers.8738:
 	.ascii	"nrf_nvic_state\000"
 .LASF190:
 	.ascii	"decode\000"
+.LASF50:
+	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
 .LASF30:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF205:
@@ -14230,10 +14232,6 @@ irq_handlers.8738:
 	.ascii	"SHCSR\000"
 .LASF177:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF375:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF141:
 	.ascii	"STIR\000"
 .LASF288:
@@ -14608,8 +14606,9 @@ irq_handlers.8738:
 	.ascii	"initial_lvl\000"
 .LASF341:
 	.ascii	"nrf_spi_configure\000"
-.LASF50:
-	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
+.LASF375:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF110:
 	.ascii	"ENABLE\000"
 .LASF106:

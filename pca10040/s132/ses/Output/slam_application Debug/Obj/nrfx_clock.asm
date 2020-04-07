@@ -9130,14 +9130,12 @@ m_nrf_log_CLOCK_logs_data_dynamic:
 	.ascii	"decode\000"
 .LASF26:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
+.LASF45:
+	.ascii	"NRF_CLOCK_INT_LF_STARTED_MASK\000"
 .LASF323:
 	.ascii	"nrf_clock_int_disable\000"
 .LASF166:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF338:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF130:
 	.ascii	"STIR\000"
 .LASF278:
@@ -9475,8 +9473,9 @@ m_nrf_log_CLOCK_logs_data_dynamic:
 	.ascii	"initial_lvl\000"
 .LASF69:
 	.ascii	"EVENTS_CTTO\000"
-.LASF45:
-	.ascii	"NRF_CLOCK_INT_LF_STARTED_MASK\000"
+.LASF338:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF43:
 	.ascii	"NRF_CLOCK_TASK_CTSTOP\000"
 .LASF224:

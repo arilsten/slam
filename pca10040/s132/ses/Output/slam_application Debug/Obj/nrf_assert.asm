@@ -2056,8 +2056,8 @@ assert_nrf_callback:
 	.ascii	"__category\000"
 .LASF31:
 	.ascii	"grouping\000"
-.LASF21:
-	.ascii	"__toupper\000"
+.LASF0:
+	.ascii	"line_num\000"
 .LASF28:
 	.ascii	"long int\000"
 .LASF35:
@@ -2078,8 +2078,8 @@ assert_nrf_callback:
 	.ascii	"__RAL_error_decoder_fn_t\000"
 .LASF87:
 	.ascii	"__user_set_time_of_day\000"
-.LASF0:
-	.ascii	"line_num\000"
+.LASF95:
+	.ascii	"stdout\000"
 .LASF5:
 	.ascii	"unsigned char\000"
 .LASF73:
@@ -2167,6 +2167,8 @@ assert_nrf_callback:
 	.ascii	"assert_nrf_callback\000"
 .LASF57:
 	.ascii	"am_pm_indicator\000"
+.LASF21:
+	.ascii	"__toupper\000"
 .LASF82:
 	.ascii	"__RAL_data_utf8_comma\000"
 .LASF88:
@@ -2189,14 +2191,11 @@ assert_nrf_callback:
 	.ascii	"abbrev_day_names\000"
 .LASF26:
 	.ascii	"__wctomb\000"
-.LASF95:
-	.ascii	"stdout\000"
+.LASF101:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF7:
 	.ascii	"next\000"
 .LASF11:
 	.ascii	"__locale_s\000"
-.LASF101:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

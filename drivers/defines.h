@@ -29,7 +29,7 @@
 #define SENSOR3_HEADING_DEG			180
 #define SENSOR4_HEADING_DEG			270
 #define WHEEL_CIRCUMFERENCE			228  // [mm] Updated 30.03.2020
-#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE)/272.0        /* Gearratio(34:1)*pulses pr rev(4) = 136.. Calculated, see above */ 
+#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE)/320.0        /* Gearratio(34:1)*pulses pr rev(4) = 136. 136*2 = 272. 300 Calculated, see above */ 
 
 
 /************************************************************************/

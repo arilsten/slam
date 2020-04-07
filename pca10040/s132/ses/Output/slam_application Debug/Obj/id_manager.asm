@@ -22259,6 +22259,9 @@ m_evt_handlers:
 	.ascii	"pm_peer_data_update_succeeded_evt_t\000"
 .LASF530:
 	.ascii	"__RAL_error_decoder_s\000"
+.LASF732:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF489:
 	.ascii	"SD_BLE_GAP_PRIVACY_SET\000"
 .LASF702:
@@ -22803,10 +22806,6 @@ m_evt_handlers:
 	.ascii	"BLE_GAP_EVT_DATA_LENGTH_UPDATE\000"
 .LASF465:
 	.ascii	"BLE_GAP_EVT_SEC_INFO_REQUEST\000"
-.LASF732:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF92:
 	.ascii	"PM_EVT_CONN_SEC_SUCCEEDED\000"
 .LASF453:

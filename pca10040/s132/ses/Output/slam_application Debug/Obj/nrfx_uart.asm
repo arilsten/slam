@@ -18939,6 +18939,8 @@ m_nrf_log_UART_logs_data_dynamic:
 	.ascii	"rx_buffer_length\000"
 .LASF240:
 	.ascii	"decode\000"
+.LASF55:
+	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
 .LASF35:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF418:
@@ -18953,10 +18955,6 @@ m_nrf_log_UART_logs_data_dynamic:
 	.ascii	"pseltxd\000"
 .LASF227:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF445:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF85:
 	.ascii	"NRF_UART_Type\000"
 .LASF191:
@@ -19392,8 +19390,9 @@ m_nrf_log_UART_logs_data_dynamic:
 	.ascii	"__wctomb\000"
 .LASF25:
 	.ascii	"initial_lvl\000"
-.LASF55:
-	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
+.LASF445:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF161:
 	.ascii	"ENABLE\000"
 .LASF364:

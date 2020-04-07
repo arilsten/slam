@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.h" 1
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.h" 1
 
 
 
@@ -11,10 +11,10 @@ typedef struct {
  char* filename;
  char* content;
 } microsd_write_operation_t;
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.h"
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.h"
 void microsd_write(char* filename, char* data);
 void microsd_task();
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 # 1 "../../../../../../external/fatfs/src/ff.h" 1
 # 28 "../../../../../../external/fatfs/src/ff.h"
 # 1 "../../../../../../external/fatfs/src/integer.h" 1
@@ -210,7 +210,7 @@ int f_putc (TCHAR c, FIL* fp);
 int f_puts (const TCHAR* str, FIL* cp);
 int f_printf (FIL* fp, const TCHAR* str, ...);
 TCHAR* f_gets (TCHAR* buff, int len, FIL* fp);
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 # 1 "../../../../../../external/fatfs/port/diskio_blkdev.h" 1
 # 44 "../../../../../../external/fatfs/port/diskio_blkdev.h"
 # 1 "../../../../../../external/fatfs/src/diskio.h" 1
@@ -4022,7 +4022,7 @@ DRESULT disk_write(BYTE drv, const BYTE* buff, DWORD sector, UINT count);
 DRESULT disk_ioctl(BYTE drv, BYTE cmd, void* buff);
 # 178 "../../../../../../external/fatfs/port/diskio_blkdev.h"
 void diskio_blockdev_register(diskio_blkdev_t * diskio_blkdevs, size_t count);
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 # 1 "../../../../../../components/libraries/block_dev/sdc/nrf_block_dev_sdc.h" 1
 # 57 "../../../../../../components/libraries/block_dev/sdc/nrf_block_dev_sdc.h"
 # 1 "../../../../../../components/libraries/sdcard/app_sdcard.h" 1
@@ -5496,7 +5496,7 @@ nrf_block_dev_sdc_ops_get(nrf_block_dev_sdc_t const * p_blk_sdc)
 {
     return &p_blk_sdc->block_dev;
 }
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 # 1 "../../../../../../external/freertos/source/include/freeRTOS.h" 1
 # 57 "../../../../../../external/freertos/source/include/freeRTOS.h"
 # 1 "../../../config/FreeRTOSConfig.h" 1
@@ -5928,7 +5928,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 47 "../../../../../../external/freertos/source/include/queue.h"
 typedef void * QueueHandle_t;
@@ -6026,14 +6026,14 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 53 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/experimental_section_vars/nrf_section.h" 1
@@ -6232,7 +6232,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
 
 # 1 "../../../software/globals.h" 1
 # 13 "../../../software/globals.h"
@@ -6596,8 +6596,8 @@ struct sCartesian {
     float x;
     float y;
 };
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 2
-# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c"
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
 static nrf_block_dev_sdc_work_t m_block_dev_sdc_work; static const nrf_block_dev_sdc_t m_block_dev_sdc = { .block_dev = { .p_ops = &nrf_block_device_sdc_ops }, .info_strings = { .p_vendor = "Nordic", .p_product = "SDC", .p_revision = "1.00", }, .sdc_bdev_config = { .block_size = (512), .sdc_config = { .mosi_pin = 19, .miso_pin = 17, .sck_pin = 20, .cs_pin = 23 } }, .p_work = &m_block_dev_sdc_work, }
 
 
@@ -6625,13 +6625,13 @@ void microsd_write(char* filename, char* data) {
      static diskio_blkdev_t drives[] =
     {
             { .config = { .p_block_device = (&(m_block_dev_sdc).block_dev), .wait_func = (
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 3 4
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
            0
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c"
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
            ), }, .last_result = NRF_BLOCK_DEV_RESULT_SUCCESS, .state = 0x01, .busy = 
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 3 4
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
            0 
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c"
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
            }
     };
 
@@ -6685,9 +6685,9 @@ void microsd_write(char* filename, char* data) {
     (void) f_close(&file);
 
  ff_result = f_mount(
-# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 3 4
+# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
                     0
-# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c"
+# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
                         , "", 1);
     if (ff_result)
     {
@@ -6709,9 +6709,9 @@ void microsd_task(void *arg) {
 
          microsd_write(write_operation.filename, write_operation.content);
         xQueueGenericSend( ( QueueHandle_t ) ( mutex_spi ), 
-# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c" 3 4
+# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
        0
-# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.c"
+# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     }
 }

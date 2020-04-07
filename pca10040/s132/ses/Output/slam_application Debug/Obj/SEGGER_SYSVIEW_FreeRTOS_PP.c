@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5262,7 +5262,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
+# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
 # 37 "../../../../../../external/freertos/source/include/task.h"
 # 1 "../../../../../../external/freertos/source/include/list.h" 1
@@ -5566,11 +5566,11 @@ void *pvTaskIncrementMutexHeldCount( void ) ;
 
 
 void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) ;
-# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h" 1
-# 67 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.h" 1
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
+# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h" 1
+# 67 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.h" 1
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 1 3 4
 # 90 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 3 4
 
@@ -5657,12 +5657,12 @@ char *strerror(int __num);
 
 int strcoll(const char *__str1, const char *__str2);
 size_t strxfrm( char *__str1, const char *__str2, size_t __num);
-# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
+# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c" 2
 
 
 
 
-# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 typedef struct SYSVIEW_FREERTOS_TASK_STATUS SYSVIEW_FREERTOS_TASK_STATUS;
 
 struct SYSVIEW_FREERTOS_TASK_STATUS {
@@ -5675,7 +5675,7 @@ struct SYSVIEW_FREERTOS_TASK_STATUS {
 
 static SYSVIEW_FREERTOS_TASK_STATUS _aTasks[8];
 static unsigned _NumTasks;
-# 94 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 94 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 static void _cbSendTaskList(void) {
   unsigned n;
 
@@ -5686,7 +5686,7 @@ static void _cbSendTaskList(void) {
     SYSVIEW_SendTaskInfo((unsigned long)_aTasks[n].xHandle, _aTasks[n].pcTaskName, (unsigned)_aTasks[n].uxCurrentPriority, (unsigned long)_aTasks[n].pxStack, (unsigned)_aTasks[n].uStackHighWaterMark);
   }
 }
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 static unsigned long long _cbGetTime(void) {
   unsigned long long Time;
 
@@ -5695,7 +5695,7 @@ static unsigned long long _cbGetTime(void) {
   Time *= 1000;
   return Time;
 }
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 void SYSVIEW_AddTask(unsigned long xHandle, const char* pcTaskName, unsigned uxCurrentPriority, unsigned long pxStack, unsigned uStackHighWaterMark) {
 
   if (memcmp(pcTaskName, "IDLE", 5) == 0) {
@@ -5718,7 +5718,7 @@ void SYSVIEW_AddTask(unsigned long xHandle, const char* pcTaskName, unsigned uxC
   SYSVIEW_SendTaskInfo(xHandle, pcTaskName,uxCurrentPriority, pxStack, uStackHighWaterMark);
 
 }
-# 166 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 166 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 void SYSVIEW_UpdateTask(unsigned long xHandle, const char* pcTaskName, unsigned uxCurrentPriority, unsigned long pxStack, unsigned uStackHighWaterMark) {
   unsigned n;
 
@@ -5742,7 +5742,7 @@ void SYSVIEW_UpdateTask(unsigned long xHandle, const char* pcTaskName, unsigned 
     SYSVIEW_AddTask(xHandle, pcTaskName, uxCurrentPriority, pxStack, uStackHighWaterMark);
   }
 }
-# 197 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 197 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 void SYSVIEW_DeleteTask(unsigned long xHandle) {
   unsigned n;
 
@@ -5776,7 +5776,7 @@ void SYSVIEW_DeleteTask(unsigned long xHandle) {
     _NumTasks--;
   }
 }
-# 238 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 238 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 void SYSVIEW_SendTaskInfo(unsigned long TaskID, const char* sName, unsigned Prio, unsigned long StackBase, unsigned StackSize) {
   SEGGER_SYSVIEW_TASKINFO TaskInfo;
 
@@ -5788,7 +5788,7 @@ void SYSVIEW_SendTaskInfo(unsigned long TaskID, const char* sName, unsigned Prio
   TaskInfo.StackSize = StackSize;
   SEGGER_SYSVIEW_SendTaskInfo(&TaskInfo);
 }
-# 257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
+# 257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_FreeRTOS.c"
 const SEGGER_SYSVIEW_OS_API SYSVIEW_X_OS_TraceAPI = {
   _cbGetTime,
   _cbSendTaskList,

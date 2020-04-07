@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
 
 
 
@@ -11,7 +11,7 @@
 
 
 # 1 "../../../drivers/defines.h" 1
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/freeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/freeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5270,7 +5270,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../drivers/ir.h" 1
 # 10 "../../../drivers/ir.h"
 typedef enum {
@@ -5311,7 +5311,7 @@ int16_t i16DistSens_readMM(IR_Sensor_t sensor);
 uint8_t IrAnalogToCM(uint16_t reading);
 
 int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor);
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -5712,7 +5712,7 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -6012,7 +6012,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 47 "../../../../../../external/freertos/source/include/queue.h"
 typedef void * QueueHandle_t;
@@ -6110,14 +6110,14 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../communication/server_communication.h" 1
 # 25 "../../../communication/server_communication.h"
 typedef struct {
@@ -6174,7 +6174,7 @@ void send_idle(void);
 void send_ping_response(void);
 void server_receiver(uint8_t *data, uint16_t len);
 void debug(const char *fmt, ...);
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../drivers/servo.h" 1
 
 
@@ -6185,7 +6185,7 @@ void debug(const char *fmt, ...);
 void servo_init();
 # 18 "../../../drivers/servo.h"
 void vServo_setAngle(int angle);
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/timers.h" 1
 # 39 "../../../../../../external/freertos/source/include/timers.h"
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
@@ -6546,7 +6546,7 @@ BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommand
 
  void vTimerSetTimerNumber( TimerHandle_t xTimer, UBaseType_t uxTimerNumber ) ;
  UBaseType_t uxTimerGetTimerNumber( TimerHandle_t xTimer ) ;
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../drivers/i2c.h" 1
 # 1 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h" 1
 # 44 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
@@ -8436,7 +8436,7 @@ void i2cSendNOADDR(uint8_t device,uint8_t* data,uint8_t len);
 void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len);
 const nrf_twi_mngr_t* getTWIManagerAddress();
 const nrf_drv_twi_config_t* getBusConfig();
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "../../../drivers/functions.h" 1
 # 14 "../../../drivers/functions.h"
 void vFunc_Inf2pi(float *angle_in_radians);
@@ -8460,17 +8460,17 @@ void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
 
 
 void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
-# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.h" 1
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.h"
+# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.h" 1
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.h"
 void vMainSensorTowerTask(void *pvParameters);
-# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 1
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h"
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 1
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h"
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 2
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 2
 
 
 extern TaskHandle_t handle_display_task,
@@ -8525,13 +8525,13 @@ struct sCartesian {
     float x;
     float y;
 };
-# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\MainComTask.h" 1
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\MainComTask.h"
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h" 1
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h"
 extern int8_t collisionAngles[4];
 
 void vMainCommunicationTask(void *pvParameters);
-# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 1 3 4
 # 106 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 3 4
 
@@ -8677,22 +8677,22 @@ int wctomb_l(char *__s, wchar_t __wc, struct __locale_s *__loc);
 
 size_t wcstombs(char *__s, const wchar_t *__pwcs, size_t __n);
 size_t wcstombs_l(char *__s, const wchar_t *__pwcs, size_t __n, struct __locale_s *__loc);
-# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 2
+# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 
 
-# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
 int newMsgCounter = 0;
 int time = 0;
 
 
 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
 _Bool 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
     newServer = 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
                 0
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                      ;
 
 void vMainSensorTowerTask(void *pvParameters) {
@@ -8714,18 +8714,18 @@ void vMainSensorTowerTask(void *pvParameters) {
     TickType_t xLastWakeTime;
 
     while (
-# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
           1
-# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
               ) {
         if ((gHandshook == 
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
                           1
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                               ) && (gPaused == 
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
                                                0
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                                                     )) {
 
             xLastWakeTime = xTaskGetTickCount();
@@ -8780,9 +8780,9 @@ void vMainSensorTowerTask(void *pvParameters) {
             xhat = gX_hat;
             yhat = gY_hat;
             xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
            0
-# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
            , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 
@@ -8799,9 +8799,9 @@ void vMainSensorTowerTask(void *pvParameters) {
 
             if(USEBLUETOOTH){
                 send_update(xhat/10, yhat/10, thetahat * 180.0 / 
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
                                                         3.14159265358979323846
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                                                                , servoStep * servoResolution, sensor[0], sensor[1], sensor[2], sensor[3]);
 
             }else{
@@ -8821,9 +8821,9 @@ void vMainSensorTowerTask(void *pvParameters) {
 
     if(dist < 200){
      angles[i] = atan2(yObject, xObject)*180.0 / 
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
                                         3.14159265358979323846
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                                                ;
 
 
@@ -8836,9 +8836,9 @@ void vMainSensorTowerTask(void *pvParameters) {
    xQueueSemaphoreTake( ( xCollisionMutex ), ( 20 ) );
    memcpy(&collisionAngles, &angles, sizeof(angles));
    xQueueGenericSend( ( QueueHandle_t ) ( xCollisionMutex ), 
-# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c" 3 4
+# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
   0
-# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\SensorTowerTask.c"
+# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
   , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 

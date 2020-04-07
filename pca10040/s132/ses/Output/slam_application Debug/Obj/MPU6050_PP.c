@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c"
 
 
 
@@ -10,8 +10,8 @@
 
 
 
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.h" 1
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.h" 1
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 
@@ -58,10 +58,10 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.h" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.h" 2
 
 
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.h"
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.h"
 typedef struct {
  float x;
  float y;
@@ -85,8 +85,8 @@ float fIMU_readFloatGyroY(void);
 float fIMU_readFloatGyroZ(void);
 IMU_reading_t IMU_getGyro(void);
 IMU_reading_t IMU_getAccel(void);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\i2c.h" 1
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 1
 # 1 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h" 1
 # 44 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_twi.h" 1
@@ -6913,7 +6913,7 @@ static inline
 # 330 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
                                                                            );
 }
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\i2c.h" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 2
 
 
 void i2cInit();
@@ -6923,7 +6923,7 @@ void i2cSendNOADDR(uint8_t device,uint8_t* data,uint8_t len);
 void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len);
 const nrf_twi_mngr_t* getTWIManagerAddress();
 const nrf_drv_twi_config_t* getBusConfig();
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c" 2
 
 
 
@@ -6981,15 +6981,15 @@ void IMU_init(void){
     MPU_write_bits(0x1B, 4, 2, 0x00);
 
     MPU_write_bit(0x38, 0, 
-# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c" 3 4
+# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c" 3 4
                                                                         1
-# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c"
+# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c"
                                                                             );
 
     MPU_write_bit(0x6B, 6,
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c" 3 4
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c" 3 4
                                                                0
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\MPU6050.c"
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\MPU6050.c"
                                                                     );
 
     MPU_write(0x19, 24);

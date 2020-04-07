@@ -1,5 +1,5 @@
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_uart.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_uart.c"

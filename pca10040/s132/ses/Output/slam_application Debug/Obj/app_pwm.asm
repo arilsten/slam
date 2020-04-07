@@ -13285,10 +13285,8 @@ m_use_ppi_delay_workaround:
 	.ascii	"decode\000"
 .LASF93:
 	.ascii	"NRF_TIMER_FREQ_4MHz\000"
-.LASF365:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF278:
+	.ascii	"m_instances\000"
 .LASF322:
 	.ascii	"pwm_calculate_timer_frequency\000"
 .LASF247:
@@ -13364,8 +13362,6 @@ m_use_ppi_delay_workaround:
 	.ascii	"mon_grouping\000"
 .LASF280:
 	.ascii	"channel\000"
-.LASF278:
-	.ascii	"m_instances\000"
 .LASF294:
 	.ascii	"activate_task_addr\000"
 .LASF7:
@@ -13625,6 +13621,9 @@ m_use_ppi_delay_workaround:
 	.ascii	"NRF_TIMER_BIT_WIDTH_8\000"
 .LASF184:
 	.ascii	"__wctomb\000"
+.LASF365:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF304:
 	.ascii	"pwm_dealloc\000"
 .LASF211:

@@ -5398,10 +5398,8 @@ _aV2C.7537:
 	.ascii	"n_cs_precedes\000"
 .LASF74:
 	.ascii	"uint16_t\000"
-.LASF127:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF1:
+	.ascii	"io_buffer_size\000"
 .LASF51:
 	.ascii	"int_p_cs_precedes\000"
 .LASF67:
@@ -5446,6 +5444,9 @@ _aV2C.7537:
 	.ascii	"negative_sign\000"
 .LASF75:
 	.ascii	"short unsigned int\000"
+.LASF127:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF124:
 	.ascii	"strlen\000"
 .LASF0:
@@ -5489,8 +5490,6 @@ _aV2C.7537:
 	.ascii	"int_print\000"
 .LASF123:
 	.ascii	"nrf_fprintf_buffer_flush\000"
-.LASF1:
-	.ascii	"io_buffer_size\000"
 .LASF95:
 	.ascii	"__user_set_time_of_day\000"
 .LASF52:

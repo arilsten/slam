@@ -9671,10 +9671,8 @@ m_nrf_log_PPI_logs_data_dynamic:
 	.ascii	"NRF_LOG_SEVERITY_WARNING\000"
 .LASF229:
 	.ascii	"nrfx_ppi_free_all\000"
-.LASF228:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF85:
+	.ascii	"__isctype\000"
 .LASF222:
 	.ascii	"nrf_ppi_channel_disable\000"
 .LASF57:
@@ -9749,14 +9747,17 @@ m_nrf_log_PPI_logs_data_dynamic:
 	.ascii	"name\000"
 .LASF54:
 	.ascii	"NRF_PPI_CHANNEL29\000"
-.LASF195:
-	.ascii	"nrfx_ppi_channel_assign\000"
+.LASF228:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF199:
 	.ascii	"p_channel\000"
 .LASF69:
 	.ascii	"FORK\000"
 .LASF155:
 	.ascii	"NRF_PPI_Type\000"
+.LASF195:
+	.ascii	"nrfx_ppi_channel_assign\000"
 .LASF118:
 	.ascii	"day_names\000"
 .LASF219:
@@ -9933,8 +9934,6 @@ m_nrf_log_PPI_logs_data_dynamic:
 	.ascii	"nrf_ppi_channel_group_t\000"
 .LASF141:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF85:
-	.ascii	"__isctype\000"
 .LASF121:
 	.ascii	"abbrev_month_names\000"
 .LASF76:

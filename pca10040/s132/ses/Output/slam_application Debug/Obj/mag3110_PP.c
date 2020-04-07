@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.h" 1
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.h" 1
 
 
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
@@ -52,9 +52,9 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.h" 2
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.h" 2
 
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.h"
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.h"
 typedef enum {
  MAG_OS_16,
  MAG_OS_32,
@@ -66,7 +66,7 @@ int16_t x;
 int16_t y;
 int16_t z;
 }MAG_reading_t;
-# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.h"
+# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.h"
 void mag_init(mag_oversampling_t os);
 
 
@@ -85,7 +85,7 @@ void mag_calibrate();
 
 float mag_heading();
 MAG_reading_t mag_read();
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -486,7 +486,7 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
 # 1 "../../../../../../components/libraries/delay/nrf_delay.h" 1
 # 44 "../../../../../../components/libraries/delay/nrf_delay.h"
 # 1 "../../../../../../modules/nrfx/nrfx.h" 1
@@ -5482,7 +5482,7 @@ static inline void nrf_delay_ms(uint32_t ms_time)
         nrfx_coredep_delay_us(1000);
     } while (--ms_time);
 }
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 2
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
 # 1 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h" 1
 # 44 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_twi.h" 1
@@ -7325,7 +7325,7 @@ static inline
 # 330 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
                                                                            );
 }
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -7473,7 +7473,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 2
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h" 1
 # 58 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
 # 1 "../../../../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h" 1
@@ -7931,8 +7931,8 @@ nrf_log_severity_t nrf_log_module_filter_get(uint32_t backend_id,
                                             _Bool 
 # 216 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
                                                      dynamic);
-# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\i2c.h" 1
+# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 1
 
 
 
@@ -7943,8 +7943,8 @@ void i2cSendNOADDR(uint8_t device,uint8_t* data,uint8_t len);
 void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len);
 const nrf_twi_mngr_t* getTWIManagerAddress();
 const nrf_drv_twi_config_t* getBusConfig();
-# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 2
-# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c"
+# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
+# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c"
 static int x_offset = -2953;
 static int y_offset = 3254;
 static float x_scale = 1.05096512;
@@ -8051,9 +8051,9 @@ float mag_heading() {
  float yf = (float) y * 1.0f;
 
  return (atan2f(yf*y_scale, xf*x_scale) * (180.0/
-# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c" 3 4
+# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 3 4
                                                 3.14159265358979323846
-# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\mag3110.c"
+# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c"
                                                     ));
 }
 

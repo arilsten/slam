@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
-# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
+# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 # 1 "../../../TraceRecorder/include/trcRecorder.h" 1
 # 52 "../../../TraceRecorder/include/trcRecorder.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 1 3 4
@@ -5517,7 +5517,7 @@ int prvIsValidCommand(TracealyzerCommandType* cmd);
 
 
 void prvProcessCommand(TracealyzerCommandType* cmd);
-# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 2
+# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 2
 
 
 
@@ -5564,7 +5564,7 @@ typedef struct{
   uint16_t objectDataSize;
   uint16_t objectDataCount;
 } PSFHeaderInfo;
-# 106 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 106 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 typedef struct{
   union
   {
@@ -5587,7 +5587,7 @@ typedef struct{
  uint16_t BytesRemaining;
  char* WritePointer;
 } PageType;
-# 142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 static SymbolTable symbolTable = { { { 0 } } };
 
 
@@ -5639,17 +5639,17 @@ uint32_t TotalBytesRemaining = 2 * 2500;
 PageType PageInfo[2];
 
 char* EventBuffer = 
-# 192 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 192 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                    0
-# 192 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 192 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                        ;
-# 207 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 207 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 volatile uint32_t NoRoomForSymbol = 0;
-# 219 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 219 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 volatile uint32_t NoRoomForObjectData = 0;
-# 228 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 228 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 volatile uint32_t LongestSymbolName = 0;
-# 239 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 239 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 volatile uint32_t MaxBytesTruncated = 0;
 
 uint16_t CurrentFilterMask = 0xFFFF;
@@ -5704,17 +5704,17 @@ void prvTraceError(int errCode);
 
 
 void prvTraceWarning(int errCode);
-# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTraceInstanceFinishedNow(void)
 {
  prvTraceStoreEvent0(0x3D);
 }
-# 317 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 317 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTraceInstanceFinishedNext(void)
 {
  prvTraceStoreEvent0(0x3C);
 }
-# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTraceStoreKernelObjectName(void* object, const char* name)
 {
 
@@ -5722,12 +5722,12 @@ void vTraceStoreKernelObjectName(void* object, const char* name)
 
  prvTraceStoreStringEvent(1, 0x03, name, (uint32_t)object);
 }
-# 349 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 349 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTraceSetFrequency(uint32_t frequency)
 {
  timestampFrequency = frequency;
 }
-# 361 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 361 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 traceString xTraceRegisterString(const char* name)
 {
  prvTraceSaveSymbol((const void*)name, name);
@@ -5737,12 +5737,12 @@ traceString xTraceRegisterString(const char* name)
 
  return (traceString)name;
 }
-# 396 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 396 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTracePrint(traceString chn, const char* str)
 {
  prvTraceStoreSimpleStringEventHelper(chn, str);
 }
-# 447 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 447 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTracePrintF(traceString chn, const char* fmt, ...)
 {
  va_list vl;
@@ -5765,23 +5765,23 @@ void vTracePrintF(traceString chn, const char* fmt, ...)
  }
 
  
-# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 __builtin_va_start((
-# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 vl
-# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 ),
-# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 fmt
-# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 )
-# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 468 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                  ;
 
  if (chn != 
-# 470 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 470 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
            0
-# 470 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 470 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                )
  {
   prvTraceStoreStringEventHelper(nArgs, (uint16_t)(0x90 + nArgs + 1), chn, fmt, &vl);
@@ -5791,16 +5791,16 @@ fmt
   prvTraceStoreStringEventHelper(nArgs, (uint16_t)(0x90 + nArgs), chn, fmt, &vl);
  }
  
-# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 __builtin_va_end(
-# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 vl
-# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 )
-# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 478 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
           ;
 }
-# 501 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 501 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 traceHandle xTraceSetISRProperties(const char* name, uint8_t priority)
 {
 
@@ -5814,7 +5814,7 @@ traceHandle xTraceSetISRProperties(const char* name, uint8_t priority)
 
  return (traceHandle)name;
 }
-# 534 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 534 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTraceStoreISRBegin(traceHandle handle)
 {
  uint32_t __irq_status;;
@@ -5841,7 +5841,7 @@ void vTraceStoreISRBegin(traceHandle handle)
   prvTraceError(2);
  }
 }
-# 584 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 584 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void vTraceStoreISREnd(int isTaskSwitchRequired)
 {
  uint32_t __irq_status;;
@@ -5916,7 +5916,7 @@ const char* xTraceGetLastError(void)
   return "Exceeded OBJECT_DATA_SLOTS (see xTraceGetLastError)";
 
  case 104:
-# 673 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 673 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
   return "String too long (see xTraceGetLastError)";
 
  case 105:
@@ -5968,9 +5968,9 @@ const char* xTraceGetLastError(void)
  }
 
  return 
-# 723 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 723 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
        0
-# 723 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 723 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
            ;
 }
 
@@ -5997,7 +5997,7 @@ void vTraceStop(void)
 {
  prvSetRecorderEnabled(0);
 }
-# 771 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 771 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 int xTraceIsRecordingEnabled(void)
 {
  return (int)RecorderEnabled;
@@ -6037,9 +6037,9 @@ static void prvSetRecorderEnabled(uint32_t isEnabled)
     RecorderEnabled = isEnabled;
 
     if (currentTask == 
-# 809 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 809 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                       0
-# 809 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 809 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                           )
     {
   currentTask = (void*)2;
@@ -6088,9 +6088,9 @@ static void prvTraceStoreSymbolTable(void)
   {
             uint32_t _tmpArray[(sizeof(uint32_t) + (((25)+(sizeof(uint32_t)-1))/sizeof(uint32_t))*sizeof(uint32_t)) / sizeof(uint32_t)]; uint32_t* data = _tmpArray;;
             if (data != 
-# 856 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 856 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                        0
-# 856 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 856 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                            )
             {
                 for (j = 0; j < ((sizeof(uint32_t) + (((25)+(sizeof(uint32_t)-1))/sizeof(uint32_t))*sizeof(uint32_t)) / sizeof(uint32_t)); j++)
@@ -6119,9 +6119,9 @@ static void prvTraceStoreObjectDataTable(void)
         {
             uint32_t _tmpArray[(sizeof(uint32_t) + sizeof(uint32_t)) / sizeof(uint32_t)]; uint32_t* data = _tmpArray;;
             if (data != 
-# 883 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 883 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                        0
-# 883 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 883 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                            )
             {
                 for (j = 0; j < ((sizeof(uint32_t) + sizeof(uint32_t)) / sizeof(uint32_t)); j++)
@@ -6146,9 +6146,9 @@ static void prvTraceStoreHeader(void)
  {
     PSFHeaderInfo _tmpArray[sizeof(PSFHeaderInfo) / sizeof(PSFHeaderInfo)]; PSFHeaderInfo* header = _tmpArray;;
   if (header != 
-# 906 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 906 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 906 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 906 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
   {
    header->psf = PSFEndianessIdentifier;
@@ -6175,9 +6175,9 @@ static void prvTraceStoreWarnings(void)
   const char* errStr = xTraceGetLastError();
 
   if (errStr != 
-# 931 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 931 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 931 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 931 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
   {
    vTracePrint(trcWarningChannel, errStr);
@@ -6201,9 +6201,9 @@ void prvTraceStoreEvent0(uint16_t eventID)
   {
    BaseEvent _tmpArray[sizeof(BaseEvent) / sizeof(BaseEvent)]; BaseEvent* event = _tmpArray;;
    if (event != 
-# 953 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 953 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 953 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 953 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
    {
     event->EventID = eventID | ((0 & 0xF) << 12);
@@ -6232,9 +6232,9 @@ void prvTraceStoreEvent1(uint16_t eventID, uint32_t param1)
   {
    EventWithParam_1 _tmpArray[sizeof(EventWithParam_1) / sizeof(EventWithParam_1)]; EventWithParam_1* event = _tmpArray;;
    if (event != 
-# 980 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 980 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 980 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 980 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
    {
     event->base.EventID = eventID | ((1 & 0xF) << 12);
@@ -6264,9 +6264,9 @@ void prvTraceStoreEvent2(uint16_t eventID, uint32_t param1, uint32_t param2)
   {
    EventWithParam_2 _tmpArray[sizeof(EventWithParam_2) / sizeof(EventWithParam_2)]; EventWithParam_2* event = _tmpArray;;
    if (event != 
-# 1008 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1008 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 1008 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1008 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
    {
     event->base.EventID = eventID | ((2 & 0xF) << 12);
@@ -6300,9 +6300,9 @@ void prvTraceStoreEvent3( uint16_t eventID,
   {
    EventWithParam_3 _tmpArray[sizeof(EventWithParam_3) / sizeof(EventWithParam_3)]; EventWithParam_3* event = _tmpArray;;
    if (event != 
-# 1040 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1040 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 1040 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1040 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
    {
     event->base.EventID = eventID | ((3 & 0xF) << 12);
@@ -6338,9 +6338,9 @@ void prvTraceStoreEvent(int nParam, uint16_t eventID, ...)
   {
    largestEventType _tmpArray[sizeof(largestEventType) / sizeof(largestEventType)]; largestEventType* event = _tmpArray;;
    if (event != 
-# 1074 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1074 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 1074 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1074 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
    {
     event->base.EventID = eventID | (uint16_t)((nParam & 0xF) << 12);
@@ -6348,35 +6348,35 @@ void prvTraceStoreEvent(int nParam, uint16_t eventID, ...)
     event->base.TS = prvGetTimestamp32();
 
     
-# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
    __builtin_va_start((
-# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
    vl
-# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
    ),
-# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
    eventID
-# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
    )
-# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1080 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                         ;
     for (i = 0; i < nParam; i++)
     {
      uint32_t* tmp = (uint32_t*) &(event->data[i]);
      *tmp = 
-# 1084 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1084 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
            __builtin_va_arg
-# 1084 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1084 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                  (vl, uint32_t);
     }
     
-# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
    __builtin_va_end(
-# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
    vl
-# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
    )
-# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1086 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
              ;
 
     { if (writeToRTT(event, (uint32_t)eventSize, 0) != 0) prvTraceWarning(106); };
@@ -6392,31 +6392,31 @@ void prvTraceStoreStringEvent(int nArgs, uint16_t eventID, const char* str, ...)
    va_list vl;
 
  
-# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 __builtin_va_start((
-# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 vl
-# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 ),
-# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 str
-# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 )
-# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                  ;
  prvTraceStoreStringEventHelper(nArgs, eventID, 
-# 1101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                                                0
-# 1101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                                                    , str, &vl);
  
-# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 __builtin_va_end(
-# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 vl
-# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
 )
-# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1102 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
           ;
 }
 
@@ -6478,9 +6478,9 @@ static void prvTraceStoreStringEventHelper( int nArgs,
   {
    largestEventType _tmpArray[sizeof(largestEventType) / sizeof(largestEventType)]; largestEventType* event = _tmpArray;;
    if (event != 
-# 1162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 1162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
    {
     uint32_t* data32;
@@ -6495,9 +6495,9 @@ static void prvTraceStoreStringEventHelper( int nArgs,
     for (i = 0; i < nArgs; i++)
     {
      if ((userEvtChannel != 
-# 1175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                            0
-# 1175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                                ) && (i == 0))
      {
 
@@ -6507,9 +6507,9 @@ static void prvTraceStoreStringEventHelper( int nArgs,
      {
 
       data32[i] = 
-# 1183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                  __builtin_va_arg
-# 1183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                        (*vl, uint32_t);
      }
     }
@@ -6590,9 +6590,9 @@ void prvTraceStoreSimpleStringEventHelper(traceString userEvtChannel,
   {
    largestEventType _tmpArray[sizeof(largestEventType) / sizeof(largestEventType)]; largestEventType* event = _tmpArray;;
    if (event != 
-# 1262 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1262 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                0
-# 1262 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1262 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                    )
    {
     uint32_t* data32;
@@ -6605,9 +6605,9 @@ void prvTraceStoreSimpleStringEventHelper(traceString userEvtChannel,
     data32 = (uint32_t*) &(event->data[0]);
 
     if (userEvtChannel != 
-# 1273 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1273 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
                          0
-# 1273 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1273 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
                              )
     {
 
@@ -6903,7 +6903,7 @@ void prvTraceInitCortexM()
 
   if ((*(volatile uint32_t*)0xE000EDFC) == 0)
   {
-# 1578 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1578 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
    prvTraceError(3);
    break;
   }
@@ -6911,7 +6911,7 @@ void prvTraceInitCortexM()
 
   if ((*(volatile uint32_t*)0xE0001000) & (1 << 25))
   {
-# 1595 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1595 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
    prvTraceError(4);
    break;
   }
@@ -6932,7 +6932,7 @@ static uint32_t prvGetTimestamp32(void)
 {
 
  return (*(volatile uint32_t*)0xE0001004);
-# 1625 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1625 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 }
 
 
@@ -6943,7 +6943,7 @@ static void prvTraceStoreTSConfig(void)
  {
   timestampFrequency = ( SystemCoreClock );
  }
-# 1648 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1648 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
  prvTraceStoreEvent(4,
       0x02,
       (uint32_t)timestampFrequency,
@@ -7012,7 +7012,7 @@ static int prvGetBufferPage(int32_t* bytesUsed)
 
  return -1;
 }
-# 1734 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1734 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 uint32_t prvPagedEventBufferTransfer(void)
 {
  int8_t pageToTransfer = -1;
@@ -7054,7 +7054,7 @@ uint32_t prvPagedEventBufferTransfer(void)
  }
  return 0;
 }
-# 1788 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1788 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void* prvPagedEventBufferGetWritePointer(int sizeOfEvent)
 {
  void* ret;
@@ -7067,9 +7067,9 @@ void* prvPagedEventBufferGetWritePointer(int sizeOfEvent)
   {
      DroppedEventCounter++;
    return 
-# 1799 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1799 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
          0
-# 1799 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1799 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
              ;
   }
  }
@@ -7088,9 +7088,9 @@ void* prvPagedEventBufferGetWritePointer(int sizeOfEvent)
   {
     DroppedEventCounter++;
     return 
-# 1816 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c" 3 4
+# 1816 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c" 3 4
           0
-# 1816 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1816 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
               ;
   }
  }
@@ -7105,7 +7105,7 @@ void* prvPagedEventBufferGetWritePointer(int sizeOfEvent)
 
  return ret;
 }
-# 1842 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+# 1842 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 void prvPagedEventBufferInit(char* buffer)
 {
    int i;

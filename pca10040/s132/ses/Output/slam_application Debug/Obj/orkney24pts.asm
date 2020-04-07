@@ -1773,10 +1773,6 @@ orkney_24ptFontInfo:
 	.section	.debug_str,"MS",%progbits,1
 .LASF21:
 	.ascii	"orkney_24ptFontInfo\000"
-.LASF24:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF5:
 	.ascii	"data\000"
 .LASF9:
@@ -1789,6 +1785,9 @@ orkney_24ptFontInfo:
 	.ascii	"height\000"
 .LASF20:
 	.ascii	"orkney_24ptDescriptors\000"
+.LASF24:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF2:
 	.ascii	"endChar\000"
 .LASF15:

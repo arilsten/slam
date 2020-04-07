@@ -4056,6 +4056,8 @@ nrf_atflags_find_and_clear_flag:
 	.ascii	"signed char\000"
 .LASF65:
 	.ascii	"long long unsigned int\000"
+.LASF98:
+	.ascii	"first_zero\000"
 .LASF63:
 	.ascii	"uint32_t\000"
 .LASF30:
@@ -4130,8 +4132,8 @@ nrf_atflags_find_and_clear_flag:
 	.ascii	"nrf_atflags_t\000"
 .LASF21:
 	.ascii	"__mbtowc\000"
-.LASF98:
-	.ascii	"first_zero\000"
+.LASF89:
+	.ascii	"_vectors\000"
 .LASF8:
 	.ascii	"__RAL_locale_t\000"
 .LASF76:
@@ -4158,14 +4160,11 @@ nrf_atflags_find_and_clear_flag:
 	.ascii	"abbrev_day_names\000"
 .LASF20:
 	.ascii	"__wctomb\000"
-.LASF89:
-	.ascii	"_vectors\000"
+.LASF117:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF1:
 	.ascii	"next\000"
 .LASF105:
 	.ascii	"nrf_atflags_fetch_clear\000"
-.LASF117:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

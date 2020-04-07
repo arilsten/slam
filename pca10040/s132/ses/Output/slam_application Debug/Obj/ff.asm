@@ -28029,8 +28029,8 @@ cst32.5681:
 	.ascii	"fatbase\000"
 .LASF101:
 	.ascii	"f_getfree\000"
-.LASF34:
-	.ascii	"DWORD\000"
+.LASF95:
+	.ascii	"path_old\000"
 .LASF163:
 	.ascii	"mem_set\000"
 .LASF87:
@@ -28065,10 +28065,8 @@ cst32.5681:
 	.ascii	"FR_EXIST\000"
 .LASF110:
 	.ascii	"f_lseek\000"
-.LASF176:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF34:
+	.ascii	"DWORD\000"
 .LASF0:
 	.ascii	"RES_OK\000"
 .LASF31:
@@ -28121,6 +28119,9 @@ cst32.5681:
 	.ascii	"short unsigned int\000"
 .LASF27:
 	.ascii	"fdate\000"
+.LASF176:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF94:
 	.ascii	"f_rename\000"
 .LASF105:
@@ -28297,8 +28298,6 @@ cst32.5681:
 	.ascii	"fattrib\000"
 .LASF46:
 	.ascii	"dir_sect\000"
-.LASF95:
-	.ascii	"path_old\000"
 .LASF160:
 	.ascii	"wsect\000"
 .LASF100:

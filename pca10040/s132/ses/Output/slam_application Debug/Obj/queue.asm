@@ -17720,10 +17720,6 @@ xQueueRegistry:
 	.ascii	"QUEUE_REGISTRY_ITEM\000"
 .LASF54:
 	.ascii	"SHCSR\000"
-.LASF270:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF122:
 	.ascii	"__RAL_codeset_ascii\000"
 .LASF13:
@@ -17999,6 +17995,9 @@ xQueueRegistry:
 	.ascii	"uxQueueSpacesAvailable\000"
 .LASF83:
 	.ascii	"__wctomb\000"
+.LASF270:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF109:
 	.ascii	"day_names\000"
 .LASF40:

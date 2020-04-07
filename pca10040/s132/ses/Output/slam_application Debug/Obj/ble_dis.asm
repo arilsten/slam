@@ -6987,10 +6987,8 @@ sys_id_handles:
 	.ascii	"uint16_t\000"
 .LASF16:
 	.ascii	"vendor_id\000"
-.LASF230:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF110:
+	.ascii	"__isctype\000"
 .LASF137:
 	.ascii	"int_p_cs_precedes\000"
 .LASF93:
@@ -7055,6 +7053,9 @@ sys_id_handles:
 	.ascii	"char_ext_props\000"
 .LASF22:
 	.ascii	"short unsigned int\000"
+.LASF230:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF96:
 	.ascii	"type\000"
 .LASF83:
@@ -7201,8 +7202,6 @@ sys_id_handles:
 	.ascii	"char\000"
 .LASF14:
 	.ascii	"ble_dis_pnp_id_t\000"
-.LASF110:
-	.ascii	"__isctype\000"
 .LASF0:
 	.ascii	"manufact_name_str\000"
 .LASF1:

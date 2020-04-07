@@ -1,5 +1,5 @@
 
-// Suspecting that this code is used for communication with the Java server over bluetooth
+
 
 
 #include <string.h>

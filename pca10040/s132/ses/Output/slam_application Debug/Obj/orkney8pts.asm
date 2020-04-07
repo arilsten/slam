@@ -989,10 +989,6 @@ orkney_8ptFontInfo:
 	.section	.debug_line,"",%progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",%progbits,1
-.LASF24:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF6:
 	.ascii	"uint8_t\000"
 .LASF5:
@@ -1011,6 +1007,9 @@ orkney_8ptFontInfo:
 	.ascii	"spacePixels\000"
 .LASF19:
 	.ascii	"orkney_8ptBitmaps\000"
+.LASF24:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF2:
 	.ascii	"endChar\000"
 .LASF15:

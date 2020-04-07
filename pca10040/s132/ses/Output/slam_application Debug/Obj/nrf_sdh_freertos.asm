@@ -3697,10 +3697,8 @@ m_nrf_log_nrf_sdh_freertos_logs_data_dynamic:
 	.ascii	"uint16_t\000"
 .LASF136:
 	.ascii	"BaseType_t\000"
-.LASF162:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF50:
+	.ascii	"__isctype\000"
 .LASF77:
 	.ascii	"int_p_cs_precedes\000"
 .LASF19:
@@ -3769,6 +3767,9 @@ m_nrf_log_nrf_sdh_freertos_logs_data_dynamic:
 	.ascii	"name\000"
 .LASF150:
 	.ascii	"xYieldRequired\000"
+.LASF162:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF24:
 	.ascii	"ICSR\000"
 .LASF26:
@@ -3897,8 +3898,6 @@ m_nrf_log_nrf_sdh_freertos_logs_data_dynamic:
 	.ascii	"vTaskSuspend\000"
 .LASF107:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF50:
-	.ascii	"__isctype\000"
 .LASF41:
 	.ascii	"__RAL_error_decoder_s\000"
 .LASF117:

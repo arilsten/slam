@@ -1,10 +1,10 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 1
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 1
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
 # 1 "../../../../../../components/libraries/gfx/nrf_lcd.h" 1
 # 44 "../../../../../../components/libraries/gfx/nrf_lcd.h"
 # 1 "../../../../../../modules/nrfx/nrfx.h" 1
@@ -5100,7 +5100,7 @@ typedef struct
 
     lcd_cb_t * p_lcd_cb;
 }nrf_lcd_t;
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 2
 # 1 "../../../../../../components/libraries/gfx/nrf_gfx.h" 1
 # 47 "../../../../../../components/libraries/gfx/nrf_gfx.h"
 # 1 "../../../../../../components/libraries/gfx/nrf_lcd.h" 1
@@ -5262,9 +5262,9 @@ uint16_t nrf_gfx_height_get(nrf_lcd_t const * p_instance);
 
 
 uint16_t nrf_gfx_width_get(nrf_lcd_t const * p_instance);
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h" 1
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h" 1
+# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 ret_code_t oled_init(void);
 
 
@@ -5273,9 +5273,9 @@ ret_code_t oled_init(void);
 
 
 void oled_uninit(void);
-# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_draw_pixel(uint16_t x, uint16_t y, uint32_t color);
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_draw_rectangle(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color);
 
 
@@ -5291,15 +5291,15 @@ void oled_display(void);
 
 
 void oled_clear(void);
-# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_dummy_rotation_set(nrf_lcd_rotation_t rotation);
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_invert(
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h" 3 4
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h" 3 4
                 _Bool 
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
                      invert);
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 2
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
 # 57 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 # 1 "../../../config/FreeRTOSConfig.h" 1
@@ -5728,7 +5728,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 2
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 47 "../../../../../../external/freertos/source/include/queue.h"
 typedef void * QueueHandle_t;
@@ -5826,7 +5826,7 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 2
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 2
 
 
 
@@ -5847,9 +5847,9 @@ typedef struct {
  nrf_gfx_point_t text_position;
  const char* p_string;
  
-# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 3 4
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 3 4
 _Bool 
-# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
      wrap;
 } display_element_text_t;
 
@@ -5864,9 +5864,9 @@ typedef struct {
 typedef struct {
  nrf_gfx_circle_t circle;
  
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 3 4
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 3 4
 _Bool 
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
      fill;
 } display_element_circle_t;
 
@@ -5874,9 +5874,9 @@ typedef struct {
  nrf_gfx_rect_t rectangle;
  uint16_t thickness;
  
-# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 3 4
+# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 3 4
 _Bool 
-# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
      fill;
         int color;
 } display_element_rectangle_t;
@@ -5910,7 +5910,7 @@ typedef struct {
 
 
 void display_init(void);
-# 95 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 95 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
 void display_text(int x, int y, const char* p_string);
 
 
@@ -5927,21 +5927,21 @@ void display_text_on_line(int line, char* p_string);
 
 
 void display_point(int x, int y);
-# 121 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 121 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
 void display_line(int x_start, int y_start, int x_end, int y_end, int thickness);
-# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
 void display_circle(int x, int y, int r, 
-# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 3 4
+# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 3 4
                                         _Bool 
-# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
                                              fill);
-# 145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
 void display_rectangle(int x, int y, int width, int height, int thickness, 
-# 145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h" 3 4
+# 145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h" 3 4
                                                                           _Bool 
-# 145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
                                                                                fill, int color);
-# 155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.h"
+# 155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.h"
 void display_log(const char* p_string);
 
 
@@ -5950,7 +5950,7 @@ void display_log(const char* p_string);
 void display_clear(void);
 
 void display_task(void *arg);
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 2
 # 1 "../../../../../../components/libraries/spi_mngr/nrf_spi_mngr.h" 1
 # 44 "../../../../../../components/libraries/spi_mngr/nrf_spi_mngr.h"
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_spi.h" 1
@@ -7545,13 +7545,13 @@ static inline
 # 298 "../../../../../../components/libraries/spi_mngr/nrf_spi_mngr.h"
                                                                            );
 }
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 2
 
 
 
 
 
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.h" 1
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.h" 1
 
 
 
@@ -7559,10 +7559,10 @@ typedef struct {
  char* filename;
  char* content;
 } microsd_write_operation_t;
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\microsd.h"
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.h"
 void microsd_write(char* filename, char* data);
 void microsd_task();
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 2
 # 1 "../../../software/globals.h" 1
 # 14 "../../../software/globals.h"
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
@@ -7929,7 +7929,7 @@ struct sCartesian {
     float x;
     float y;
 };
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -8077,7 +8077,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 2
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 2
 
 QueueHandle_t queue_display;
 
@@ -8098,7 +8098,7 @@ static inline void enqueue(display_operation_t* display_operation) {
 }
 
 void display_init(void) {
- do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_init(&m_nrf_lcd)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 31, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_init(&m_nrf_lcd)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 31, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0);
  nrf_gfx_screen_fill(&m_nrf_lcd, 0);
  nrf_gfx_display(&m_nrf_lcd);
 }
@@ -8156,9 +8156,9 @@ void display_line(int x_start, int y_start, int x_end, int y_end, int thickness)
 }
 
 void display_circle(int x, int y, int r, 
-# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 3 4
+# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
                                         _Bool 
-# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"
+# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
                                              fill) {
  display_operation_t display_operation;
  display_operation.operation = DISPLAY_CIRCLE;
@@ -8175,9 +8175,9 @@ void display_circle(int x, int y, int r,
 }
 
 void display_rectangle(int x, int y, int width, int height, int thickness, 
-# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 3 4
+# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
                                                                           _Bool 
-# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"
+# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
                                                                                fill, int color) {
  display_operation_t display_operation;
  display_operation.operation = DISPLAY_RECTANGLE;
@@ -8217,10 +8217,10 @@ void display_task(void *arg) {
         switch (display_operation.operation) {
         case DISPLAY_TEXT:
             do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_print(&m_nrf_lcd, &display_operation.element.text.text_position, 1, display_operation.element.text.p_string, &orkney_8ptFontInfo, 
-# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 3 4
+# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
            0
-# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"
-           )); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 141, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"); } while (0); } } while (0)
+# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
+           )); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 141, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
                                                                                         ;
             write.content = "Text drawn.";
             break;
@@ -8229,18 +8229,18 @@ void display_task(void *arg) {
             write.content = "Point drawn.";
             break;
         case DISPLAY_LINE:
-            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_line_draw( &m_nrf_lcd, &display_operation.element.line.line, 1)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 150, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"); } while (0); } } while (0)
+            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_line_draw( &m_nrf_lcd, &display_operation.element.line.line, 1)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 150, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
                                                                      ;
             write.content = "Line drawn.";
             break;
         case DISPLAY_CIRCLE:
-            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_circle_draw( &m_nrf_lcd, &display_operation.element.circle.circle, 1, display_operation.element.circle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 155, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"); } while (0); } } while (0)
+            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_circle_draw( &m_nrf_lcd, &display_operation.element.circle.circle, 1, display_operation.element.circle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 155, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
 
                                                           ;
             write.content = "Circle.";
             break;
         case DISPLAY_RECTANGLE:
-            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_rect_draw( &m_nrf_lcd, &display_operation.element.rectangle.rectangle, display_operation.element.rectangle.thickness, display_operation.element.rectangle.color, display_operation.element.rectangle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 161, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"); } while (0); } } while (0)
+            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_rect_draw( &m_nrf_lcd, &display_operation.element.rectangle.rectangle, display_operation.element.rectangle.thickness, display_operation.element.rectangle.color, display_operation.element.rectangle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 161, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
 
 
                                                           ;
@@ -8259,9 +8259,9 @@ void display_task(void *arg) {
         }
         nrf_gfx_display(&m_nrf_lcd);
         xQueueGenericSend( ( QueueHandle_t ) ( mutex_spi ), 
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c" 3 4
+# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
        0
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\display.c"
+# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
     }

@@ -22,7 +22,7 @@
 	.type	prvGetTimestamp32, %function
 prvGetTimestamp32:
 .LFB238:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\trcStreamingRecorder.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\trcStreamingRecorder.c"
 	.loc 1 1612 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -18760,10 +18760,6 @@ lastPage.9075:
 	.ascii	"Flags\000"
 .LASF4:
 	.ascii	"char\000"
-.LASF282:
-	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\TraceRecorder\\trcStre"
-	.ascii	"amingRecorder.c\000"
 .LASF93:
 	.ascii	"int_n_sign_posn\000"
 .LASF87:
@@ -18792,10 +18788,6 @@ lastPage.9075:
 	.ascii	"prvPageReadComplete\000"
 .LASF177:
 	.ascii	"uiTraceTickCount\000"
-.LASF283:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF215:
 	.ascii	"prvTraceDeleteObjectData\000"
 .LASF260:
@@ -18969,6 +18961,9 @@ lastPage.9075:
 	.ascii	"lastEntryPtr\000"
 .LASF158:
 	.ascii	"largestEventType\000"
+.LASF282:
+	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
+	.ascii	"al\\slam\\TraceRecorder\\trcStreamingRecorder.c\000"
 .LASF110:
 	.ascii	"__RAL_codeset_utf8\000"
 .LASF230:
@@ -19101,6 +19096,9 @@ lastPage.9075:
 	.ascii	"symbolTable\000"
 .LASF67:
 	.ascii	"__wctomb\000"
+.LASF283:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF252:
 	.ascii	"prvSetRecorderEnabled\000"
 .LASF29:

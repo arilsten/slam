@@ -5250,10 +5250,6 @@ vPortSetupTimerInterrupt:
 	.ascii	"SHCSR\000"
 .LASF96:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF248:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF60:
 	.ascii	"STIR\000"
 .LASF194:
@@ -5521,6 +5517,9 @@ vPortSetupTimerInterrupt:
 	.ascii	"ISAR\000"
 .LASF128:
 	.ascii	"__wctomb\000"
+.LASF248:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF155:
 	.ascii	"day_names\000"
 .LASF179:

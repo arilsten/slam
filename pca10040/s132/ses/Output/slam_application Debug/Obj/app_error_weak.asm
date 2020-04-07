@@ -3219,10 +3219,8 @@ app_error_fault_handler:
 	.ascii	"p_info\000"
 .LASF6:
 	.ascii	"uint16_t\000"
-.LASF136:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF36:
+	.ascii	"__isctype\000"
 .LASF113:
 	.ascii	"error_info_t\000"
 .LASF0:
@@ -3277,6 +3275,9 @@ app_error_fault_handler:
 	.ascii	"short unsigned int\000"
 .LASF31:
 	.ascii	"name\000"
+.LASF136:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF69:
 	.ascii	"day_names\000"
 .LASF1:
@@ -3392,8 +3393,6 @@ app_error_fault_handler:
 	.ascii	"stderr\000"
 .LASF92:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF36:
-	.ascii	"__isctype\000"
 .LASF27:
 	.ascii	"__RAL_error_decoder_s\000"
 .LASF102:

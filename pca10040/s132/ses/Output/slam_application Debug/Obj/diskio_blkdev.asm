@@ -7436,12 +7436,12 @@ m_drives_count:
 	.ascii	"ITM_RxBuffer\000"
 .LASF99:
 	.ascii	"date_format\000"
+.LASF169:
+	.ascii	"nrf_blk_dev_ioctl\000"
 .LASF50:
 	.ascii	"next\000"
 .LASF11:
 	.ascii	"wait_func\000"
-.LASF114:
-	.ascii	"DWORD\000"
 .LASF97:
 	.ascii	"abbrev_month_names\000"
 .LASF122:
@@ -7488,10 +7488,8 @@ m_drives_count:
 	.ascii	"uint16_t\000"
 .LASF41:
 	.ascii	"NRF_BLOCK_DEV_RESULT_TIMEOUT\000"
-.LASF179:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF114:
+	.ascii	"DWORD\000"
 .LASF104:
 	.ascii	"__wchar\000"
 .LASF88:
@@ -7562,8 +7560,9 @@ m_drives_count:
 	.ascii	"negative_sign\000"
 .LASF113:
 	.ascii	"short unsigned int\000"
-.LASF169:
-	.ascii	"nrf_blk_dev_ioctl\000"
+.LASF179:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF94:
 	.ascii	"day_names\000"
 .LASF158:

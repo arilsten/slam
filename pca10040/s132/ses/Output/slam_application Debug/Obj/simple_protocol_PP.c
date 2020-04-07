@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h" 1
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h" 1
 
 
 
@@ -53,18 +53,18 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h" 2
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h"
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h"
 
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h"
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h"
 void network_set_callback(uint8_t protocol, void (*cb)(uint8_t, uint8_t*, uint16_t));
 uint8_t network_send(uint8_t remote_address, uint8_t protocol, uint8_t *data, uint16_t len);
 uint8_t network_get_address(void);
 void network_receive( uint8_t* frame, uint8_t len);
 void network_ReciveFromBle(const uint8_t* data, uint8_t length);
 void network_getMessage();
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.h" 1
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.h" 1
 
 
 
@@ -72,7 +72,7 @@ void network_getMessage();
 
 void simple_p_init(void (*cb)(uint8_t*, uint16_t));
 uint8_t simple_p_send(uint8_t address, uint8_t *data, uint16_t length);
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 3 4
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 1 3 4
@@ -381,7 +381,7 @@ char *strerror(int __num);
 
 int strcoll(const char *__str1, const char *__str2);
 size_t strxfrm( char *__str1, const char *__str2, size_t __num);
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c" 2
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c" 2
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5360,7 +5360,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -5761,14 +5761,14 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c" 2
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c" 2
 
 
 
 
 
 
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.c"
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.c"
 typedef struct {
   uint8_t status;
   uint8_t address;

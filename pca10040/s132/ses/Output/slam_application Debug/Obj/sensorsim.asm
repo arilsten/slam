@@ -1138,10 +1138,6 @@ sensorsim_measure:
 	.ascii	"sensorsim_init\000"
 .LASF1:
 	.ascii	"is_increasing\000"
-.LASF21:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF0:
 	.ascii	"current_val\000"
 .LASF22:
@@ -1165,6 +1161,9 @@ sensorsim_measure:
 	.ascii	"short unsigned int\000"
 .LASF13:
 	.ascii	"sensorsim_cfg_t\000"
+.LASF21:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF16:
 	.ascii	"sensorsim_increment\000"
 .LASF3:

@@ -5569,10 +5569,8 @@ _aV2C.8156:
 	.ascii	"SEGGER_RTT_BUFFER_UP\000"
 .LASF52:
 	.ascii	"n_cs_precedes\000"
-.LASF140:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF29:
+	.ascii	"__isctype\000"
 .LASF129:
 	.ascii	"pBufferDesc\000"
 .LASF75:
@@ -5629,6 +5627,9 @@ _aV2C.8156:
 	.ascii	"short unsigned int\000"
 .LASF24:
 	.ascii	"name\000"
+.LASF140:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF120:
 	.ascii	"BufferIndex\000"
 .LASF13:
@@ -5748,8 +5749,6 @@ _aV2C.8156:
 	.ascii	"stderr\000"
 .LASF96:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF29:
-	.ascii	"__isctype\000"
 .LASF20:
 	.ascii	"__RAL_error_decoder_s\000"
 .LASF106:

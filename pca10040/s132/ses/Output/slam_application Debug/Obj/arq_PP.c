@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
 
 
 
@@ -382,7 +382,7 @@ int wctomb_l(char *__s, wchar_t __wc, struct __locale_s *__loc);
 
 size_t wcstombs(char *__s, const wchar_t *__pwcs, size_t __n);
 size_t wcstombs_l(char *__s, const wchar_t *__pwcs, size_t __n, struct __locale_s *__loc);
-# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
+# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 int __float32_isinf(float);
@@ -781,8 +781,8 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.h" 1
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.h" 1
 
 
 
@@ -830,10 +830,10 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.h" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.h" 2
 
 
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.h"
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.h"
 typedef uint8_t arq_connection;
 
 void arq_init(void);
@@ -845,7 +845,7 @@ uint8_t arq_close_connection(arq_connection id);
 uint8_t arq_send(arq_connection id, uint8_t *data, uint16_t len);
 uint8_t arq_send_string(arq_connection id, char *str);
 void vARQTask(void *pvParamters);
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 1 3 4
 # 90 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 3 4
 
@@ -932,19 +932,19 @@ char *strerror(int __num);
 
 int strcoll(const char *__str1, const char *__str2);
 size_t strxfrm( char *__str1, const char *__str2, size_t __num);
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h" 1
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h"
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h" 1
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h"
 
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\network.h"
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\network.h"
 void network_set_callback(uint8_t protocol, void (*cb)(uint8_t, uint8_t*, uint16_t));
 uint8_t network_send(uint8_t remote_address, uint8_t protocol, uint8_t *data, uint16_t len);
 uint8_t network_get_address(void);
 void network_receive( uint8_t* frame, uint8_t len);
 void network_ReciveFromBle(const uint8_t* data, uint8_t length);
 void network_getMessage();
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.h" 1
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.h" 1
 
 
 
@@ -964,7 +964,7 @@ uint16_t buffer_append(buffer_t *b, uint8_t *data, uint16_t len);
 uint16_t buffer_remove(buffer_t *b, uint8_t *data, uint16_t len);
 uint16_t buffer_remove_token(buffer_t *b, uint8_t* data, uint8_t token, uint16_t nbytes);
 uint16_t buffer_read(buffer_t *b, uint8_t *data, uint16_t idx, uint16_t len);
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5943,7 +5943,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
@@ -6046,7 +6046,7 @@ uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
 # 37 "../../../../../../external/freertos/source/include/task.h"
 # 1 "../../../../../../external/freertos/source/include/list.h" 1
@@ -6350,7 +6350,7 @@ void *pvTaskIncrementMutexHeldCount( void ) ;
 
 
 void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) ;
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -6563,8 +6563,8 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 2
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 2
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
 typedef struct {
   uint8_t status;
   buffer_t send_buffer;
@@ -6596,9 +6596,9 @@ void receiver(uint8_t address, uint8_t *data, uint16_t len);
 void arq_init(void) {
   network_set_callback(1, receiver);
   listening_task = 
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                   0
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                       ;
   uint8_t i=0;
   for(i=0;i<1;i++) {
@@ -6610,9 +6610,9 @@ void arq_init(void) {
 
 arq_connection arq_new_connection(void) {
   arq_connection_t *con = 
-# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                          0
-# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                              ;
   uint8_t id, i;
 
@@ -6624,17 +6624,17 @@ arq_connection arq_new_connection(void) {
     }
   }
   if(con == 
-# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
            0
-# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                ) return 0xFF;
 
   con->num_received_bytes = con->receive_message_length = con->send_buffer_window_end = con->timeout = 0;
   con->sequence_base = con->sequence_number = con->request_number = con->timer = con->timer_started = 0;
   con->blocked_task = 
-# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                      0
-# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 88 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                          ;
 
   con->status = 1;
@@ -6644,9 +6644,9 @@ arq_connection arq_new_connection(void) {
 
 arq_connection arq_listen(void (*func)(uint8_t*, uint16_t)) {
   if(listening_task != 
-# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                       0
-# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                           ) return 0xFF;
   uint32_t sender;
   listening_task = xTaskGetCurrentTaskHandle();
@@ -6663,17 +6663,17 @@ arq_connection arq_listen(void (*func)(uint8_t*, uint16_t)) {
 
   uint8_t *buf = pvPortMalloc(256);
   if(buf == 
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
            0
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                ) return 0xFF;
   buffer_init(&connections[id].send_buffer, buf, 256);
 
   buf = pvPortMalloc(2*10);
   if(buf == 
-# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
            0
-# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                ) return 0xFF;
   buffer_init(&connections[id].segment_lengths, buf, 2*10);
 
@@ -6700,17 +6700,17 @@ uint8_t arq_connect(arq_connection id, uint8_t remote_addr, void (*func)(uint8_t
   } else {
     uint8_t *buf = pvPortMalloc(256);
     if(buf == 
-# 140 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 140 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
              0
-# 140 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 140 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                  ) return 0xFF;
     buffer_init(&con->send_buffer, buf, 256);
 
     buf = pvPortMalloc(2*10);
     if(buf == 
-# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
              0
-# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                  ) return 0xFF;
     buffer_init(&con->segment_lengths, buf, 2*10);
 
@@ -6728,9 +6728,9 @@ uint8_t arq_close_connection(arq_connection id) {
 
   if(connections[id].status != 2) {
     xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
    0
-# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
   }
@@ -6740,15 +6740,15 @@ uint8_t arq_close_connection(arq_connection id) {
   con->status = 1;
 
   con->callback_data_received(
-# 168 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 168 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                              0
-# 168 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 168 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                                  , 0);
 
   xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 170 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 170 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
  0
-# 170 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 170 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
   return 1;
@@ -6760,14 +6760,14 @@ uint8_t arq_send(arq_connection id, uint8_t *data, uint16_t len) {
   xQueueSemaphoreTake( ( con->mutex ), ( ( TickType_t ) 0xffffffffUL ) );
 
   if(con->status != 2 || data == 
-# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                                                0 
-# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                                                     || len == 0 || len > 100) {
     xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 181 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 181 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
    0
-# 181 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 181 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
   }
@@ -6785,16 +6785,16 @@ uint8_t arq_send(arq_connection id, uint8_t *data, uint16_t len) {
     }
   } else {
     xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 197 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 197 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
    0
-# 197 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 197 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
   }
   xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 200 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 200 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
  0
-# 200 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 200 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
   return len;
 }
@@ -6820,9 +6820,9 @@ uint8_t arq_send_ack(arq_connection id, uint8_t sequence_number) {
 
 void receiver(uint8_t address, uint8_t *data, uint16_t len) {
   arq_connection_t *con = 
-# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                          0
-# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                              ;
   uint8_t id;
   uint8_t i;
@@ -6836,64 +6836,64 @@ void receiver(uint8_t address, uint8_t *data, uint16_t len) {
   uint8_t type = data[0];
 
   if(con == 
-# 236 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 236 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
            0 
-# 236 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 236 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                 && type != 2) return;
   if(con == 
-# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
            0 
-# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                 && type == 2 && listening_task != 
-# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                                                          0
-# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                                                              ) {
     xTaskGenericNotify( ( listening_task ), ( address ), ( eSetValueWithOverwrite ), 
-# 238 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 238 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
    0 
-# 238 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 238 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
    );
     return;
   }
   xQueueSemaphoreTake( ( con->mutex ), ( ( TickType_t ) 0xffffffffUL ) );
 
   if(con->status == 1 || con->status == 0 || len == 0 || data == 
-# 243 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 243 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                                                                                       0
-# 243 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 243 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                                                                                           ) {
     xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 244 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 244 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
    0
-# 244 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 244 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return;
   }
 
   if(con->status == 3 && type == 3) {
     if(con->blocked_task != 
-# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                            0
-# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                                ) {
       xTaskGenericNotify( ( con->blocked_task ), ( 0 ), eIncrement, 
-# 250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
      0 
-# 250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
      );
       con->blocked_task = 
-# 251 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 251 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                          0
-# 251 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 251 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                              ;
       arq_send_ack(id, 0x00);
     }
 
     xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
    0
-# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return;
   }
@@ -6915,9 +6915,9 @@ void receiver(uint8_t address, uint8_t *data, uint16_t len) {
       for(i=0;i<count;i++) {
         buffer_remove(&con->segment_lengths, &len, 2);
         buffer_remove(&con->send_buffer, 
-# 275 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 275 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
                                         0
-# 275 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 275 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
                                             , len);
       }
       con->sequence_base = sequence;
@@ -6929,9 +6929,9 @@ void receiver(uint8_t address, uint8_t *data, uint16_t len) {
   }
 
   xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 285 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 285 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
  0
-# 285 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 285 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 }
@@ -6950,9 +6950,9 @@ void sender(arq_connection id) {
 
   if(con->status != 2) {
     xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
    0
-# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return;
   }
@@ -6962,9 +6962,9 @@ void sender(arq_connection id) {
     con->timer += 10;
     if(con->timeout > 1000) {
       xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 310 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 310 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
      0
-# 310 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 310 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
      , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
       arq_close_connection(id);
       return;
@@ -7001,9 +7001,9 @@ void sender(arq_connection id) {
   }
 
   xQueueGenericSend( ( QueueHandle_t ) ( con->mutex ), 
-# 345 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c" 3 4
+# 345 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c" 3 4
  0
-# 345 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.c"
+# 345 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 

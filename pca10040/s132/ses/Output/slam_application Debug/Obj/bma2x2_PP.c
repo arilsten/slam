@@ -1,11 +1,11 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
-# 83 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h" 1
-# 288 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
+# 83 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h" 1
+# 288 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 typedef signed char s8;
 typedef signed short int s16;
 typedef signed int s32;
@@ -16,7 +16,7 @@ typedef unsigned char u8;
 typedef unsigned short int u16;
 typedef unsigned int u32;
 typedef unsigned long long int u64;
-# 593 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 593 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 struct bma2x2_accel_data {
 s16 x,
 y,
@@ -50,7 +50,7 @@ y,
 z;
 s8 temp;
 };
-# 641 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 641 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 union fifo_frame {
 
 
@@ -65,7 +65,7 @@ union fifo_frame {
 
  s16 z;
 };
-# 667 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 667 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 struct bma2x2_t {
 
  u8 power_mode_u8;
@@ -88,7 +88,7 @@ struct bma2x2_t {
 
  void (*delay_msec)(u32);
 };
-# 699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 struct fifo_configuration {
 
  u8 *fifo_data;
@@ -97,391 +97,391 @@ struct fifo_configuration {
 
  u8 fifo_length;
 };
-# 2179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_burst_read(u8 addr_u8,
 u8 *data_u8, u32 len_u32);
-# 2207 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2207 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_init(struct bma2x2_t *bma2x2);
-# 2226 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2226 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_write_reg(u8 adr_u8,
 u8 *data_u8, u8 len_u8);
-# 2245 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2245 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_reg(u8 adr_u8,
 u8 *data_u8, u8 len_u8);
-# 2270 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2270 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_x(s16 *accel_x_s16);
-# 2287 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2287 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_eight_resolution_x(
 s8 *accel_x_s8);
-# 2308 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2308 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_y(s16 *accel_y_s16);
-# 2326 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2326 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_eight_resolution_y(
 s8 *accel_y_s8);
-# 2347 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2347 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_z(s16 *accel_z_s16);
-# 2365 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2365 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_eight_resolution_z(
 s8 *accel_z_s8);
-# 2384 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2384 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_xyz(
 struct bma2x2_accel_data *accel);
-# 2404 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2404 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_eight_resolution_xyz(
 struct bma2x2_accel_eight_resolution *accel);
-# 2424 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2424 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_tap_stat(
 u8 *stat_tap_u8);
-# 2441 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2441 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_orient_stat(
 u8 *stat_orient_u8);
-# 2457 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2457 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_fifo_stat(
 u8 *stat_fifo_u8);
-# 2474 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2474 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_fifo_frame_count(
 u8 *frame_count_u8);
-# 2491 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2491 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_fifo_overrun(
 u8 *fifo_overrun_u8);
-# 2512 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2512 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_stat(
 u8 *intr_stat_u8);
-# 2535 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2535 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_range(u8 *range_u8);
-# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_range(u8 range_u8);
-# 2586 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2586 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_bw(u8 *bw_u8);
-# 2612 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2612 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_bw(u8 bw_u8);
-# 2641 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2641 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_power_mode(
 u8 *power_mode_u8);
-# 2668 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2668 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_power_mode(u8 power_mode_u8);
-# 2694 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2694 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_mode_value(u8 power_mode_u8);
-# 2729 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2729 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_sleep_durn(u8 *sleep_durn_u8);
-# 2761 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2761 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_sleep_durn(u8 sleep_durn_u8);
-# 2782 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2782 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_sleep_timer_mode(
 u8 *sleep_timer_u8);
-# 2804 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2804 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_sleep_timer_mode(u8 sleep_timer_u8);
-# 2825 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2825 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_high_bw(u8 *high_bw_u8);
-# 2843 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2843 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_high_bw(u8 high_bw_u8);
-# 2862 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2862 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_shadow_dis(u8 *shadow_dis_u8);
-# 2881 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2881 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_shadow_dis(u8 shadow_dis_u8);
-# 2898 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2898 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_soft_rst(void);
-# 2915 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2915 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_update_image(void);
-# 2963 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 2963 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_enable(u8 intr_type_u8,
 u8 *value_u8);
-# 3009 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3009 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_enable(u8 intr_type_u8,
 u8 value_u8);
-# 3031 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3031 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_fifo_full(u8 *fifo_full_u8);
-# 3052 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3052 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_fifo_full(u8 fifo_full_u8);
-# 3075 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3075 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_fifo_wm(u8 *fifo_wm_u8);
-# 3098 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3098 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_fifo_wm(u8 fifo_wm_u8);
-# 3127 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3127 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_slow_no_motion(u8 channel_u8,
 u8 *slow_no_motion_u8);
-# 3156 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3156 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_slow_no_motion(u8 channel_u8,
 u8 slow_no_motion_u8);
-# 3187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_low_g(u8 channel_u8,
 u8 *intr_low_g_u8);
-# 3218 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3218 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_low_g(u8 channel_u8,
 u8 intr_low_u8);
-# 3246 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3246 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_high_g(u8 channel_u8,
 u8 *intr_high_g_u8);
-# 3274 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3274 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_high_g(u8 channel_u8,
 u8 intr_high_g_u8);
-# 3304 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3304 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_slope(u8 channel_u8,
 u8 *intr_slope_u8);
-# 3334 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3334 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_slope(u8 channel_u8,
 u8 intr_slope_u8);
-# 3365 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3365 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_slow_no_motion(u8 channel_u8,
 u8 *intr_slow_no_motion_u8);
-# 3396 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3396 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_slow_no_motion(u8 channel_u8,
 u8 intr_slow_no_motion_u8);
-# 3426 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3426 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_double_tap(u8 channel_u8,
 u8 *intr_double_tap_u8);
-# 3456 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3456 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_double_tap(u8 channel_u8,
 u8 intr_double_tap_u8);
-# 3485 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3485 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_single_tap(u8 channel_u8,
 u8 *intr_single_tap_u8);
-# 3514 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3514 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_single_tap(u8 channel_u8,
 u8 intr_single_tap_u8);
-# 3542 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3542 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_orient(u8 channel_u8,
 u8 *intr_orient_u8);
-# 3570 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3570 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_orient(u8 channel_u8,
 u8 intr_orient_u8);
-# 3600 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3600 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_flat(u8 channel_u8,
 u8 *intr_flat_u8);
-# 3630 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3630 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_flat(u8 channel_u8,
 u8 intr_flat_u8);
-# 3659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_new_data(u8 channel_u8,
 u8 *intr_newdata_u8);
-# 3688 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3688 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_new_data(u8 channel_u8,
 u8 intr_newdata_u8);
-# 3711 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3711 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr1_fifo_wm(u8 *intr1_fifo_wm_u8);
-# 3730 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3730 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr1_fifo_wm(u8 intr1_fifo_wm_u8);
-# 3749 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3749 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr2_fifo_wm(u8 *intr2_fifo_wm_u8);
-# 3768 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3768 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr2_fifo_wm(u8 intr2_fifo_wm_u8);
-# 3789 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3789 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr1_fifo_full(
 u8 *intr1_fifo_full_u8);
-# 3811 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3811 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr1_fifo_full(u8 intr1_fifo_full_u8);
-# 3833 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3833 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr2_fifo_full(
 u8 *intr2_fifo_full_u8);
-# 3856 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3856 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr2_fifo_full(u8 intr2_fifo_full_u8);
-# 3889 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3889 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_source(u8 channel_u8,
 u8 *intr_source_u8);
-# 3920 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3920 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_source(u8 channel_u8,
 u8 intr_source_u8);
-# 3951 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3951 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_output_type(u8 channel_u8,
 u8 *intr_output_type_u8);
-# 3979 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 3979 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_output_type(u8 channel_u8,
 u8 intr_output_type_u8);
-# 4006 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4006 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_intr_level(u8 channel_u8,
 u8 *intr_level_u8);
-# 4033 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4033 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_intr_level(u8 channel_u8,
 u8 intr_level_u8);
-# 4057 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4057 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_rst_intr(u8 rst_intr_u8);
-# 4093 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4093 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_latch_intr(u8 *latch_intr_u8);
-# 4126 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4126 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_latch_intr(u8 latch_intr_u8);
-# 4169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_durn(u8 channel_u8,
 u8 *durn_u8);
-# 4210 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4210 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_durn(u8 channel_u8,
 u8 durn_u8);
-# 4275 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4275 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_thres(u8 channel_u8,
 u8 *thres_u8);
-# 4337 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4337 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_thres(u8 channel_u8,
 u8 thres_u8);
-# 4374 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4374 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_low_high_g_hyst(u8 channel_u8,
 u8 *hyst_u8);
-# 4408 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4408 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_low_high_g_hyst(u8 channel_u8,
 u8 hyst_u8);
-# 4431 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4431 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_low_g_mode(u8 *low_g_mode_u8);
-# 4450 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4450 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_low_g_mode(u8 low_g_mode_u8);
-# 4479 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4479 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_tap_durn(u8 *tap_durn_u8);
-# 4505 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4505 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_tap_durn(u8 tap_durn_u8);
-# 4528 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4528 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_tap_shock(u8 *tap_shock_u8);
-# 4548 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4548 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_tap_shock(u8 tap_shock_u8);
-# 4570 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4570 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_tap_quiet(u8 *tap_quiet_u8);
-# 4589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_tap_quiet(u8 tap_quiet_u8);
-# 4616 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4616 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_tap_thres(u8 *tap_thres_u8);
-# 4640 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4640 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_tap_thres(u8 tap_thres_u8);
-# 4665 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4665 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_tap_sample(u8 *tap_sample_u8);
-# 4687 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4687 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_tap_sample(u8 tap_sample_u8);
-# 4713 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4713 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_orient_mode(u8 *orient_mode_u8);
-# 4736 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4736 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_orient_mode(u8 orient_mode_u8);
-# 4767 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4767 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_orient_block(
 u8 *orient_block_u8);
-# 4796 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4796 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_orient_block(u8 orient_block_u8);
-# 4816 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4816 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_orient_hyst(u8 *orient_hyst_u8);
-# 4833 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4833 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_orient_hyst(u8 orient_hyst_u8);
-# 4861 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4861 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_theta(u8 channel_u8,
 u8 *theta_u8);
-# 4887 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4887 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_theta(u8 channel_u8,
 u8 theta_u8);
-# 4911 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4911 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_orient_enable(
 u8 *orient_enable_u8);
-# 4932 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4932 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_orient_enable(u8 orient_enable_u8);
-# 4954 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4954 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_flat_hyst(u8 *flat_hyst_u8);
-# 4973 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4973 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_flat_hyst(u8 flat_hyst_u8);
-# 4999 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 4999 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_flat_hold_time(
 u8 *flat_hold_time_u8);
-# 5023 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5023 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_flat_hold_time(
 u8 flat_hold_time_u8);
-# 5045 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5045 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_fifo_wml_trig(
 u8 *fifo_wml_trig);
-# 5064 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5064 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_fifo_wml_trig(
 u8 fifo_wml_trig);
-# 5090 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5090 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_selftest_axis(
 u8 *selftest_axis_u8);
-# 5113 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5113 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_selftest_axis(
 u8 selftest_axis_u8);
-# 5134 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5134 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_selftest_sign(
 u8 *selftest_sign_u8);
-# 5155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_selftest_sign(
 u8 selftest_sign_u8);
-# 5177 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5177 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_nvmprog_mode(
 u8 *nvmprog_mode_u8);
-# 5196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_nvmprog_mode(u8 nvmprog_mode_u8);
-# 5217 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5217 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_nvprog_trig(u8 nvprog_trig_u8);
-# 5237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_nvmprog_ready(u8 *nvprog_ready_u8);
-# 5257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_nvmprog_remain(u8 *nvprog_remain_u8);
-# 5281 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5281 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_spi3(u8 *spi3_u8);
-# 5302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_spi3(u8 spi3_u8);
-# 5334 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5334 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_i2c_wdt(u8 channel_u8,
 u8 *i2c_wdt_u8);
-# 5367 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5367 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_i2c_wdt(u8 channel_u8,
 u8 i2c_wdt_u8);
-# 5401 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5401 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_slow_comp(u8 channel_u8,
 u8 *slow_comp_u8);
-# 5432 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5432 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_slow_comp(u8 channel_u8,
 u8 slow_comp_u8);
-# 5452 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5452 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_cal_rdy(u8 *cal_rdy_u8);
-# 5471 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5471 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_cal_trigger(u8 cal_trigger_u8);
-# 5489 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5489 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_offset_rst(u8 offset_rst_u8);
-# 5528 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5528 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_offset_target(u8 channel_u8,
 u8 *offset_u8);
-# 5568 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5568 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_offset_target(u8 channel_u8,
 u8 offset_u8);
-# 5595 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5595 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_offset(u8 channel_u8,
 s8 *offset_u8);
-# 5622 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5622 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_offset(u8 channel_u8,
 s8 offset_u8);
-# 5648 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5648 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_fifo_mode(u8 *fifo_mode_u8);
-# 5670 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5670 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_fifo_mode(u8 fifo_mode_u8);
-# 5692 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5692 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_fifo_data_select(
 u8 *fifo_data_select_u8);
-# 5715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_set_fifo_data_select(
 u8 fifo_data_select_u8);
-# 5741 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5741 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_fifo_data(
    struct fifo_configuration *fifo_conf);
-# 5770 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5770 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_extract_accel(union fifo_frame *accel_frame,
   u8 *accel_frame_count, struct fifo_configuration *fifo_conf);
-# 5791 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5791 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_temp(s8 *temp_s8);
-# 5810 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5810 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_xyzt(
 struct bma2x2_accel_data_temp *accel);
-# 5827 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5827 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_read_accel_eight_resolution_xyzt(
 struct bma2x2_accel_eight_resolution_temp *accel);
-# 5845 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.h"
+# 5845 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.h"
 s8 bma2x2_get_fifo_data_output_reg(
 u8 *output_reg_u8);
-# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c" 2
+# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c" 2
 
 static struct bma2x2_t *p_bma2x2;
 
 u8 V_BMA2x2RESOLUTION_U8 = (2);
-# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 103 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 static void get_accel_len_to_parse(u8 *data_index, u8 *data_read_length,
   u8 accel_frame_count, u8 fifo_data_select,
   struct fifo_configuration *fifo_conf);
-# 126 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 126 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 static void unpack_accel_frame(union fifo_frame *accel_frame, u8 *data_index,
   u8 *accel_index, u8 fifo_data_select,
   struct fifo_configuration *fifo_conf);
-# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 static void unpack_accel_xyz(union fifo_frame *accel_frame, u8 *data_index,
   struct fifo_configuration *fifo_conf);
-# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_burst_read(u8 addr_u8,
 u8 *data_u8, u32 len_u32)
 {
@@ -499,7 +499,7 @@ u8 *data_u8, u32 len_u32)
   }
  return com_rslt;
 }
-# 200 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 200 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_init(struct bma2x2_t *bma2x2)
 {
 
@@ -526,7 +526,7 @@ s8 bma2x2_init(struct bma2x2_t *bma2x2)
  }
  return com_rslt;
 }
-# 244 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 244 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_write_reg(u8 adr_u8,
 u8 *data_u8, u8 len_u8)
 {
@@ -550,7 +550,7 @@ u8 *data_u8, u8 len_u8)
  }
  return com_rslt;
 }
-# 284 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 284 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_reg(u8 adr_u8,
 u8 *data_u8, u8 len_u8)
 {
@@ -568,7 +568,7 @@ u8 *data_u8, u8 len_u8)
   }
  return com_rslt;
 }
-# 321 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 321 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_x(s16 *accel_x_s16)
 {
 
@@ -633,7 +633,7 @@ s8 bma2x2_read_accel_x(s16 *accel_x_s16)
  }
  return com_rslt;
 }
-# 401 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 401 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_eight_resolution_x(
 s8 *accel_x_s8)
 {
@@ -656,7 +656,7 @@ s8 *accel_x_s8)
   }
  return com_rslt;
 }
-# 442 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 442 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_y(s16 *accel_y_s16)
 {
 
@@ -722,7 +722,7 @@ s8 bma2x2_read_accel_y(s16 *accel_y_s16)
  }
  return com_rslt;
 }
-# 524 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 524 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_eight_resolution_y(
 s8 *accel_y_s8)
 {
@@ -744,7 +744,7 @@ s8 *accel_y_s8)
   }
  return com_rslt;
 }
-# 564 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 564 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_z(s16 *accel_z_s16)
 {
 
@@ -810,7 +810,7 @@ s8 bma2x2_read_accel_z(s16 *accel_z_s16)
  }
  return com_rslt;
 }
-# 646 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 646 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_eight_resolution_z(
 s8 *accel_z_s8)
 {
@@ -832,14 +832,14 @@ s8 *accel_z_s8)
   }
  return com_rslt;
 }
-# 684 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 684 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_xyz(
 struct bma2x2_accel_data *accel)
 {
 
 
  s8 com_rslt = ((s8)-1);
-# 698 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 698 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
  u8 data_u8[(6)] = {
  ((u8)0), ((u8)0),
  ((u8)0), ((u8)0),
@@ -945,7 +945,7 @@ struct bma2x2_accel_data *accel)
  }
  return com_rslt;
 }
-# 821 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 821 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_eight_resolution_xyz(
 struct bma2x2_accel_eight_resolution *accel)
 {
@@ -981,7 +981,7 @@ struct bma2x2_accel_eight_resolution *accel)
   }
  return com_rslt;
 }
-# 871 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 871 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_tap_stat(
 u8 *stat_tap_u8)
 {
@@ -1000,7 +1000,7 @@ u8 *stat_tap_u8)
   }
  return com_rslt;
 }
-# 904 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 904 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_orient_stat(
 u8 *stat_orient_u8)
 {
@@ -1019,7 +1019,7 @@ u8 *stat_orient_u8)
   }
  return com_rslt;
 }
-# 936 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 936 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_fifo_stat(
 u8 *stat_fifo_u8)
 {
@@ -1039,7 +1039,7 @@ u8 *stat_fifo_u8)
   }
  return com_rslt;
 }
-# 970 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 970 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_fifo_frame_count(
 u8 *frame_count_u8)
 {
@@ -1062,7 +1062,7 @@ u8 *frame_count_u8)
   }
  return com_rslt;
 }
-# 1007 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1007 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_fifo_overrun(
 u8 *fifo_overrun_u8)
 {
@@ -1085,7 +1085,7 @@ u8 *fifo_overrun_u8)
   }
  return com_rslt;
 }
-# 1045 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1045 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_stat(
 u8 *intr_stat_u8)
 {
@@ -1105,7 +1105,7 @@ u8 *intr_stat_u8)
   }
  return com_rslt;
 }
-# 1085 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1085 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_range(u8 *range_u8)
 {
 
@@ -1126,7 +1126,7 @@ s8 bma2x2_get_range(u8 *range_u8)
  }
  return com_rslt;
 }
-# 1126 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1126 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_range(u8 range_u8)
 {
 
@@ -1179,7 +1179,7 @@ s8 bma2x2_set_range(u8 range_u8)
  }
  return com_rslt;
 }
-# 1203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_bw(u8 *bw_u8)
 {
 
@@ -1201,7 +1201,7 @@ s8 bma2x2_get_bw(u8 *bw_u8)
   }
  return com_rslt;
 }
-# 1250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_bw(u8 bw_u8)
 {
 
@@ -1333,7 +1333,7 @@ if (p_bma2x2 == ((void *)0)) {
  }
  return com_rslt;
 }
-# 1406 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1406 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_power_mode(
 u8 *power_mode_u8)
 {
@@ -1413,7 +1413,7 @@ if (p_bma2x2 == ((void *)0)) {
  p_bma2x2->power_mode_u8 = *power_mode_u8;
 return com_rslt;
 }
-# 1510 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1510 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_power_mode(u8 power_mode_u8)
 {
 
@@ -1483,7 +1483,7 @@ s8 bma2x2_set_power_mode(u8 power_mode_u8)
  }
  return com_rslt;
 }
-# 1604 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1604 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_mode_value(u8 power_mode_u8)
 {
  s8 com_rslt = ((u8)0);
@@ -1535,7 +1535,7 @@ s8 bma2x2_set_mode_value(u8 power_mode_u8)
  }
  return com_rslt;
 }
-# 1684 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1684 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_sleep_durn(u8 *sleep_durn_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -1556,7 +1556,7 @@ s8 bma2x2_get_sleep_durn(u8 *sleep_durn_u8)
   }
  return com_rslt;
 }
-# 1735 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1735 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_sleep_durn(u8 sleep_durn_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -1644,7 +1644,7 @@ s8 bma2x2_set_sleep_durn(u8 sleep_durn_u8)
  }
  return com_rslt;
 }
-# 1842 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1842 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_sleep_timer_mode(
 u8 *sleep_timer_u8)
 {
@@ -1666,7 +1666,7 @@ u8 *sleep_timer_u8)
   }
  return com_rslt;
 }
-# 1883 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1883 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_sleep_timer_mode(u8 sleep_timer_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -1693,7 +1693,7 @@ s8 bma2x2_set_sleep_timer_mode(u8 sleep_timer_u8)
  }
  return com_rslt;
 }
-# 1926 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1926 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_high_bw(u8 *high_bw_u8)
 {
 
@@ -1713,7 +1713,7 @@ s8 bma2x2_get_high_bw(u8 *high_bw_u8)
   }
  return com_rslt;
 }
-# 1962 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 1962 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_high_bw(u8 high_bw_u8)
 {
 
@@ -1736,7 +1736,7 @@ s8 bma2x2_set_high_bw(u8 high_bw_u8)
   }
  return com_rslt;
 }
-# 2002 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2002 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_shadow_dis(u8 *shadow_dis_u8)
 {
 
@@ -1757,7 +1757,7 @@ s8 bma2x2_get_shadow_dis(u8 *shadow_dis_u8)
   }
  return com_rslt;
 }
-# 2040 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2040 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_shadow_dis(u8 shadow_dis_u8)
 {
 
@@ -1779,7 +1779,7 @@ s8 bma2x2_set_shadow_dis(u8 shadow_dis_u8)
   }
  return com_rslt;
 }
-# 2076 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2076 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_soft_rst(void)
 {
 
@@ -1798,7 +1798,7 @@ s8 bma2x2_soft_rst(void)
   }
  return com_rslt;
 }
-# 2110 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2110 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_update_image(void)
 {
 
@@ -1821,7 +1821,7 @@ s8 bma2x2_update_image(void)
   }
  return com_rslt;
 }
-# 2176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_enable(u8 intr_type_u8,
 u8 *value_u8)
 {
@@ -1938,7 +1938,7 @@ u8 *value_u8)
  }
  return com_rslt;
 }
-# 2336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_enable(u8 intr_type_u8,
 u8 value_u8)
 {
@@ -2034,7 +2034,7 @@ u8 value_u8)
  }
  return com_rslt;
 }
-# 2451 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2451 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_fifo_full(u8 *fifo_full_u8)
 {
 
@@ -2056,7 +2056,7 @@ s8 bma2x2_get_intr_fifo_full(u8 *fifo_full_u8)
   }
  return com_rslt;
 }
-# 2492 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2492 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_fifo_full(u8 fifo_full_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -2086,7 +2086,7 @@ s8 bma2x2_set_intr_fifo_full(u8 fifo_full_u8)
  }
  return com_rslt;
 }
-# 2543 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2543 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_fifo_wm(u8 *fifo_wm_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -2108,7 +2108,7 @@ s8 bma2x2_get_intr_fifo_wm(u8 *fifo_wm_u8)
   }
  return com_rslt;
 }
-# 2586 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2586 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_fifo_wm(u8 fifo_wm_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -2138,7 +2138,7 @@ s8 bma2x2_set_intr_fifo_wm(u8 fifo_wm_u8)
  }
  return com_rslt;
 }
-# 2642 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2642 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_slow_no_motion(u8 channel_u8,
 u8 *slow_no_motion_u8)
 {
@@ -2193,7 +2193,7 @@ u8 *slow_no_motion_u8)
  }
  return com_rslt;
 }
-# 2724 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2724 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_slow_no_motion(u8 channel_u8,
 u8 slow_no_motion_u8)
 {
@@ -2267,7 +2267,7 @@ u8 slow_no_motion_u8)
  }
  return com_rslt;
 }
-# 2826 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2826 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_low_g(u8 channel_u8,
 u8 *intr_low_g_u8)
 {
@@ -2305,7 +2305,7 @@ u8 *intr_low_g_u8)
  }
  return com_rslt;
 }
-# 2892 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2892 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_low_g(u8 channel_u8,
 u8 intr_low_u8)
 {
@@ -2349,7 +2349,7 @@ u8 intr_low_u8)
  }
  return com_rslt;
 }
-# 2961 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 2961 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_high_g(u8 channel_u8,
 u8 *intr_high_g_u8)
 {
@@ -2387,7 +2387,7 @@ u8 *intr_high_g_u8)
  }
  return com_rslt;
 }
-# 3024 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3024 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_high_g(u8 channel_u8,
 u8 intr_high_g_u8)
 {
@@ -2433,7 +2433,7 @@ u8 intr_high_g_u8)
  }
  return com_rslt;
 }
-# 3097 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3097 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_slope(u8 channel_u8,
 u8 *intr_slope_u8)
 {
@@ -2471,7 +2471,7 @@ u8 *intr_slope_u8)
  }
  return com_rslt;
 }
-# 3162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_slope(u8 channel_u8,
 u8 intr_slope_u8)
 {
@@ -2517,7 +2517,7 @@ u8 intr_slope_u8)
  }
  return com_rslt;
 }
-# 3236 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3236 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_slow_no_motion(u8 channel_u8,
 u8 *intr_slow_no_motion_u8)
 {
@@ -2555,7 +2555,7 @@ u8 *intr_slow_no_motion_u8)
  }
  return com_rslt;
 }
-# 3302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_slow_no_motion(u8 channel_u8,
 u8 intr_slow_no_motion_u8)
 {
@@ -2603,7 +2603,7 @@ u8 intr_slow_no_motion_u8)
  }
  return com_rslt;
 }
-# 3377 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3377 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_double_tap(u8 channel_u8,
 u8 *intr_double_tap_u8)
 {
@@ -2641,7 +2641,7 @@ u8 *intr_double_tap_u8)
  }
  return com_rslt;
 }
-# 3442 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3442 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_double_tap(u8 channel_u8,
 u8 intr_double_tap_u8)
 {
@@ -2689,7 +2689,7 @@ u8 intr_double_tap_u8)
  }
  return com_rslt;
 }
-# 3516 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3516 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_single_tap(u8 channel_u8,
 u8 *intr_single_tap_u8)
 {
@@ -2727,7 +2727,7 @@ u8 *intr_single_tap_u8)
  }
  return com_rslt;
 }
-# 3580 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3580 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_single_tap(u8 channel_u8,
 u8 intr_single_tap_u8)
 {
@@ -2774,7 +2774,7 @@ u8 intr_single_tap_u8)
  }
  return com_rslt;
 }
-# 3652 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3652 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_orient(u8 channel_u8,
 u8 *intr_orient_u8)
 {
@@ -2812,7 +2812,7 @@ u8 *intr_orient_u8)
  }
  return com_rslt;
 }
-# 3715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_orient(u8 channel_u8,
 u8 intr_orient_u8)
 {
@@ -2858,7 +2858,7 @@ u8 intr_orient_u8)
  }
  return com_rslt;
 }
-# 3788 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3788 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_flat(u8 channel_u8,
 u8 *intr_flat_u8)
 {
@@ -2896,7 +2896,7 @@ u8 *intr_flat_u8)
  }
  return com_rslt;
 }
-# 3853 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3853 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_flat(u8 channel_u8,
 u8 intr_flat_u8)
 {
@@ -2942,7 +2942,7 @@ u8 intr_flat_u8)
  }
  return com_rslt;
 }
-# 3925 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3925 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_new_data(u8 channel_u8,
 u8 *intr_newdata_u8)
 {
@@ -2980,7 +2980,7 @@ u8 *intr_newdata_u8)
  }
  return com_rslt;
 }
-# 3989 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 3989 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_new_data(u8 channel_u8,
 u8 intr_newdata_u8)
 {
@@ -3026,7 +3026,7 @@ u8 intr_newdata_u8)
  }
  return com_rslt;
 }
-# 4052 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4052 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr1_fifo_wm(u8 *intr1_fifo_wm_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3048,7 +3048,7 @@ s8 bma2x2_get_intr1_fifo_wm(u8 *intr1_fifo_wm_u8)
   }
  return com_rslt;
 }
-# 4091 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4091 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr1_fifo_wm(u8 intr1_fifo_wm_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3079,7 +3079,7 @@ s8 bma2x2_set_intr1_fifo_wm(u8 intr1_fifo_wm_u8)
  }
  return com_rslt;
 }
-# 4139 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4139 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr2_fifo_wm(u8 *intr2_fifo_wm_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3101,7 +3101,7 @@ s8 bma2x2_get_intr2_fifo_wm(u8 *intr2_fifo_wm_u8)
   }
  return com_rslt;
 }
-# 4178 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4178 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr2_fifo_wm(u8 intr2_fifo_wm_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3132,7 +3132,7 @@ s8 bma2x2_set_intr2_fifo_wm(u8 intr2_fifo_wm_u8)
  }
  return com_rslt;
 }
-# 4228 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4228 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr1_fifo_full(u8 *intr1_fifo_full_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3154,7 +3154,7 @@ s8 bma2x2_get_intr1_fifo_full(u8 *intr1_fifo_full_u8)
   }
  return com_rslt;
 }
-# 4269 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4269 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr1_fifo_full(u8 intr1_fifo_full_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3185,7 +3185,7 @@ s8 bma2x2_set_intr1_fifo_full(u8 intr1_fifo_full_u8)
  }
  return com_rslt;
 }
-# 4320 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4320 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr2_fifo_full(u8 *intr2_fifo_full_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3207,7 +3207,7 @@ s8 bma2x2_get_intr2_fifo_full(u8 *intr2_fifo_full_u8)
   }
  return com_rslt;
 }
-# 4362 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4362 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr2_fifo_full(u8 intr2_fifo_full_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3239,7 +3239,7 @@ s8 bma2x2_set_intr2_fifo_full(u8 intr2_fifo_full_u8)
   }
  return com_rslt;
 }
-# 4422 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4422 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_source(u8 channel_u8,
 u8 *intr_source_u8)
 {
@@ -3308,7 +3308,7 @@ u8 *intr_source_u8)
   }
  return com_rslt;
 }
-# 4519 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4519 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_source(u8 channel_u8,
 u8 intr_source_u8)
 {
@@ -3401,7 +3401,7 @@ u8 intr_source_u8)
  }
  return com_rslt;
 }
-# 4637 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4637 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_output_type(u8 channel_u8,
 u8 *intr_output_type_u8)
 {
@@ -3438,7 +3438,7 @@ u8 *intr_output_type_u8)
  }
  return com_rslt;
 }
-# 4699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_output_type(u8 channel_u8,
 u8 intr_output_type_u8)
 {
@@ -3483,7 +3483,7 @@ u8 intr_output_type_u8)
  }
  return com_rslt;
 }
-# 4768 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4768 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_intr_level(u8 channel_u8,
 u8 *intr_level_u8)
 {
@@ -3520,7 +3520,7 @@ u8 *intr_level_u8)
  }
  return com_rslt;
 }
-# 4829 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4829 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_intr_level(u8 channel_u8,
 u8 intr_level_u8)
 {
@@ -3565,7 +3565,7 @@ u8 intr_level_u8)
  }
  return com_rslt;
 }
-# 4892 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4892 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_rst_intr(u8 rst_intr_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3587,7 +3587,7 @@ s8 bma2x2_rst_intr(u8 rst_intr_u8)
   }
  return com_rslt;
 }
-# 4945 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4945 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_latch_intr(u8 *latch_intr_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -3608,7 +3608,7 @@ s8 bma2x2_get_latch_intr(u8 *latch_intr_u8)
   }
  return com_rslt;
 }
-# 4997 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 4997 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_latch_intr(u8 latch_intr_u8)
 {
 u8 data_u8 = ((u8)0);
@@ -3719,7 +3719,7 @@ if (p_bma2x2 == ((void *)0)) {
  }
  return com_rslt;
 }
-# 5146 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5146 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_durn(u8 channel_u8,
 u8 *durn_u8)
 {
@@ -3772,7 +3772,7 @@ u8 *durn_u8)
  }
  return com_rslt;
 }
-# 5237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_durn(u8 channel_u8,
 u8 durn_u8)
 {
@@ -3831,7 +3831,7 @@ u8 durn_u8)
  }
  return com_rslt;
 }
-# 5355 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5355 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_thres(u8 channel_u8,
 u8 *thres_u8)
 {
@@ -3884,7 +3884,7 @@ u8 *thres_u8)
  }
  return com_rslt;
 }
-# 5467 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5467 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_thres(u8 channel_u8,
 u8 thres_u8)
 {
@@ -3934,7 +3934,7 @@ u8 thres_u8)
  }
  return com_rslt;
 }
-# 5548 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5548 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_low_high_g_hyst(u8 channel_u8,
 u8 *hyst_u8)
 {
@@ -3972,7 +3972,7 @@ u8 *hyst_u8)
  }
  return com_rslt;
 }
-# 5617 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5617 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_low_high_g_hyst(u8 channel_u8,
 u8 hyst_u8)
 {
@@ -4015,7 +4015,7 @@ u8 hyst_u8)
  }
  return com_rslt;
 }
-# 5677 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5677 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_low_g_mode(u8 *low_g_mode_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4036,7 +4036,7 @@ s8 bma2x2_get_low_g_mode(u8 *low_g_mode_u8)
   }
  return com_rslt;
 }
-# 5715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_low_g_mode(u8 low_g_mode_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4061,7 +4061,7 @@ s8 bma2x2_set_low_g_mode(u8 low_g_mode_u8)
   }
  return com_rslt;
 }
-# 5764 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5764 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_tap_durn(u8 *tap_durn_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4083,7 +4083,7 @@ s8 bma2x2_get_tap_durn(u8 *tap_durn_u8)
   }
  return com_rslt;
 }
-# 5810 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5810 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_tap_durn(u8 tap_durn_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4108,7 +4108,7 @@ s8 bma2x2_set_tap_durn(u8 tap_durn_u8)
   }
  return com_rslt;
 }
-# 5853 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5853 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_tap_shock(u8 *tap_shock_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4130,7 +4130,7 @@ s8 bma2x2_get_tap_shock(u8 *tap_shock_u8)
   }
  return com_rslt;
 }
-# 5893 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5893 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_tap_shock(u8 tap_shock_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4155,7 +4155,7 @@ s8 bma2x2_set_tap_shock(u8 tap_shock_u8)
   }
  return com_rslt;
 }
-# 5935 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5935 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_tap_quiet(u8 *tap_quiet_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4177,7 +4177,7 @@ s8 bma2x2_get_tap_quiet(u8 *tap_quiet_u8)
   }
  return com_rslt;
 }
-# 5974 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 5974 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_tap_quiet(u8 tap_quiet_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4202,7 +4202,7 @@ s8 bma2x2_set_tap_quiet(u8 tap_quiet_u8)
   }
  return com_rslt;
 }
-# 6021 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6021 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_tap_thres(u8 *tap_thres_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4224,7 +4224,7 @@ s8 bma2x2_get_tap_thres(u8 *tap_thres_u8)
   }
  return com_rslt;
 }
-# 6064 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6064 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_tap_thres(u8 tap_thres_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4248,7 +4248,7 @@ s8 bma2x2_set_tap_thres(u8 tap_thres_u8)
   }
  return com_rslt;
 }
-# 6108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_tap_sample(u8 *tap_sample_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4270,7 +4270,7 @@ s8 bma2x2_get_tap_sample(u8 *tap_sample_u8)
   }
  return com_rslt;
 }
-# 6150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_tap_sample(u8 tap_sample_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4294,7 +4294,7 @@ s8 bma2x2_set_tap_sample(u8 tap_sample_u8)
   }
  return com_rslt;
 }
-# 6195 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6195 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_orient_mode(u8 *orient_mode_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4315,7 +4315,7 @@ s8 bma2x2_get_orient_mode(u8 *orient_mode_u8)
   }
  return com_rslt;
 }
-# 6237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_orient_mode(u8 orient_mode_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4339,7 +4339,7 @@ s8 bma2x2_set_orient_mode(u8 orient_mode_u8)
   }
  return com_rslt;
 }
-# 6287 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6287 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_orient_block(
 u8 *orient_block_u8)
 {
@@ -4362,7 +4362,7 @@ u8 *orient_block_u8)
   }
  return com_rslt;
 }
-# 6336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6336 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_orient_block(u8 orient_block_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4387,7 +4387,7 @@ s8 bma2x2_set_orient_block(u8 orient_block_u8)
   }
  return com_rslt;
 }
-# 6376 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6376 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_orient_hyst(u8 *orient_hyst_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4409,7 +4409,7 @@ s8 bma2x2_get_orient_hyst(u8 *orient_hyst_u8)
   }
  return com_rslt;
 }
-# 6413 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6413 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_orient_hyst(u8 orient_hyst_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4434,7 +4434,7 @@ s8 bma2x2_set_orient_hyst(u8 orient_hyst_u8)
   }
  return com_rslt;
 }
-# 6461 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6461 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_theta(u8 channel_u8,
 u8 *theta_u8)
 {
@@ -4473,7 +4473,7 @@ u8 *theta_u8)
  }
  return com_rslt;
 }
-# 6523 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6523 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_theta(u8 channel_u8,
 u8 theta_u8)
 {
@@ -4514,7 +4514,7 @@ u8 theta_u8)
  }
  return com_rslt;
 }
-# 6582 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6582 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_orient_enable(u8 *orient_enable_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4535,7 +4535,7 @@ s8 bma2x2_get_orient_enable(u8 *orient_enable_u8)
   }
  return com_rslt;
 }
-# 6621 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6621 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_orient_enable(u8 orient_enable_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4559,7 +4559,7 @@ s8 bma2x2_set_orient_enable(u8 orient_enable_u8)
   }
  return com_rslt;
 }
-# 6662 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6662 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_flat_hyst(u8 *flat_hyst_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4580,7 +4580,7 @@ s8 bma2x2_get_flat_hyst(u8 *flat_hyst_u8)
   }
  return com_rslt;
 }
-# 6700 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6700 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_flat_hyst(u8 flat_hyst_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4604,7 +4604,7 @@ s8 bma2x2_set_flat_hyst(u8 flat_hyst_u8)
   }
  return com_rslt;
 }
-# 6745 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6745 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_flat_hold_time(
 u8 *flat_hold_time_u8)
 {
@@ -4627,7 +4627,7 @@ u8 *flat_hold_time_u8)
   }
  return com_rslt;
 }
-# 6789 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6789 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_flat_hold_time(
 u8 flat_hold_time_u8)
 {
@@ -4653,7 +4653,7 @@ u8 flat_hold_time_u8)
   }
  return com_rslt;
 }
-# 6831 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6831 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_fifo_wml_trig(
 u8 *fifo_wml_trig)
 {
@@ -4676,7 +4676,7 @@ u8 *fifo_wml_trig)
   }
  return com_rslt;
 }
-# 6870 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6870 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_fifo_wml_trig(
 u8 fifo_wml_trig)
 {
@@ -4711,7 +4711,7 @@ u8 fifo_wml_trig)
  }
  return com_rslt;
 }
-# 6925 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6925 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_selftest_axis(
 u8 *selftest_axis_u8)
 {
@@ -4734,7 +4734,7 @@ u8 *selftest_axis_u8)
   }
  return com_rslt;
 }
-# 6968 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 6968 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_selftest_axis(
 u8 selftest_axis_u8)
 {
@@ -4764,7 +4764,7 @@ u8 selftest_axis_u8)
  }
  return com_rslt;
 }
-# 7016 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7016 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_selftest_sign(
 u8 *selftest_sign_u8)
 {
@@ -4787,7 +4787,7 @@ u8 *selftest_sign_u8)
   }
  return com_rslt;
 }
-# 7057 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7057 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_selftest_sign(
 u8 selftest_sign_u8)
 {
@@ -4818,7 +4818,7 @@ u8 selftest_sign_u8)
  }
  return com_rslt;
 }
-# 7104 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7104 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_nvmprog_mode(
 u8 *nvmprog_mode_u8)
 {
@@ -4840,7 +4840,7 @@ u8 *nvmprog_mode_u8)
  }
  return com_rslt;
 }
-# 7142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_nvmprog_mode(u8 nvmprog_mode_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4865,7 +4865,7 @@ s8 bma2x2_set_nvmprog_mode(u8 nvmprog_mode_u8)
  }
  return com_rslt;
 }
-# 7186 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7186 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_nvprog_trig(u8 nvprog_trig_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4890,7 +4890,7 @@ s8 bma2x2_set_nvprog_trig(u8 nvprog_trig_u8)
  }
  return com_rslt;
 }
-# 7229 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7229 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_nvmprog_ready(u8 *nvprog_ready_u8)
 {
 
@@ -4912,7 +4912,7 @@ s8 bma2x2_get_nvmprog_ready(u8 *nvprog_ready_u8)
  }
  return com_rslt;
 }
-# 7269 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7269 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_nvmprog_remain(u8 *nvprog_remain_u8)
 {
 
@@ -4933,7 +4933,7 @@ s8 bma2x2_get_nvmprog_remain(u8 *nvprog_remain_u8)
  }
  return com_rslt;
 }
-# 7309 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7309 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_spi3(u8 *spi3_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4955,7 +4955,7 @@ s8 bma2x2_get_spi3(u8 *spi3_u8)
   }
  return com_rslt;
 }
-# 7350 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7350 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_spi3(u8 spi3_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -4980,7 +4980,7 @@ s8 bma2x2_set_spi3(u8 spi3_u8)
   }
  return com_rslt;
 }
-# 7405 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7405 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_i2c_wdt(u8 channel_u8,
 u8 *i2c_wdt_u8)
 {
@@ -5017,7 +5017,7 @@ u8 *i2c_wdt_u8)
  }
  return com_rslt;
 }
-# 7472 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7472 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_i2c_wdt(u8 channel_u8,
 u8 i2c_wdt_u8)
 {
@@ -5062,7 +5062,7 @@ u8 i2c_wdt_u8)
  }
  return com_rslt;
 }
-# 7545 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7545 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_slow_comp(u8 channel_u8,
 u8 *slow_comp_u8)
 {
@@ -5110,7 +5110,7 @@ u8 *slow_comp_u8)
  }
  return com_rslt;
 }
-# 7621 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7621 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_slow_comp(u8 channel_u8,
 u8 slow_comp_u8)
 {
@@ -5170,7 +5170,7 @@ u8 slow_comp_u8)
  }
  return com_rslt;
 }
-# 7698 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7698 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_cal_rdy(u8 *cal_rdy_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -5191,7 +5191,7 @@ s8 bma2x2_get_cal_rdy(u8 *cal_rdy_u8)
  }
  return com_rslt;
 }
-# 7736 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7736 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_cal_trigger(u8 cal_trigger_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -5215,7 +5215,7 @@ s8 bma2x2_set_cal_trigger(u8 cal_trigger_u8)
   }
  return com_rslt;
 }
-# 7776 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7776 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_offset_rst(u8 offset_rst_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -5240,7 +5240,7 @@ s8 bma2x2_set_offset_rst(u8 offset_rst_u8)
   }
  return com_rslt;
 }
-# 7838 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7838 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_offset_target(u8 channel_u8,
 u8 *offset_u8)
 {
@@ -5297,7 +5297,7 @@ u8 *offset_u8)
  }
  return com_rslt;
 }
-# 7932 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 7932 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_offset_target(u8 channel_u8,
 u8 offset_u8)
 {
@@ -5366,7 +5366,7 @@ u8 offset_u8)
  }
  return com_rslt;
 }
-# 8025 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8025 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_offset(u8 channel_u8,
 s8 *offset_u8)
 {
@@ -5408,7 +5408,7 @@ s8 *offset_u8)
  }
  return com_rslt;
 }
-# 8091 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8091 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_offset(u8 channel_u8,
 s8 offset_u8)
 {
@@ -5447,7 +5447,7 @@ s8 offset_u8)
  }
  return com_rslt;
 }
-# 8150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_fifo_mode(u8 *fifo_mode_u8)
 {
 
@@ -5468,7 +5468,7 @@ s8 bma2x2_get_fifo_mode(u8 *fifo_mode_u8)
   }
  return com_rslt;
 }
-# 8191 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8191 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_fifo_mode(u8 fifo_mode_u8)
 {
  u8 data_u8 = ((u8)0);
@@ -5509,7 +5509,7 @@ s8 bma2x2_set_fifo_mode(u8 fifo_mode_u8)
  }
  return com_rslt;
 }
-# 8252 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8252 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_fifo_data_select(
 u8 *fifo_data_select_u8)
 {
@@ -5531,7 +5531,7 @@ u8 *fifo_data_select_u8)
   }
  return com_rslt;
 }
-# 8294 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8294 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_set_fifo_data_select(
 u8 fifo_data_select_u8)
 {
@@ -5573,7 +5573,7 @@ u8 fifo_data_select_u8)
  }
  return com_rslt;
 }
-# 8360 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8360 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_fifo_data(
     struct fifo_configuration *fifo_conf)
 {
@@ -5618,7 +5618,7 @@ s8 bma2x2_read_fifo_data(
  }
  return com_rslt;
 }
-# 8431 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8431 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_extract_accel(union fifo_frame *accel_frame,
  u8 *accel_frame_count, struct fifo_configuration *fifo_conf)
 {
@@ -5681,7 +5681,7 @@ static void get_accel_len_to_parse(u8 *data_index, u8 *data_read_length,
   *data_read_length = fifo_conf->fifo_length;
  }
 }
-# 8506 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8506 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 static void unpack_accel_frame(union fifo_frame *accel_frame, u8 *data_index,
  u8 *accel_index, u8 fifo_data_select,
  struct fifo_configuration *fifo_conf)
@@ -5765,7 +5765,7 @@ static void unpack_accel_frame(union fifo_frame *accel_frame, u8 *data_index,
  break;
  }
 }
-# 8597 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8597 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 static void unpack_accel_xyz(union fifo_frame *accel_frame, u8 *data_index,
  struct fifo_configuration *fifo_conf)
 {
@@ -5802,7 +5802,7 @@ static void unpack_accel_xyz(union fifo_frame *accel_frame, u8 *data_index,
   accel_frame->accel_data.z = (accel_frame->accel_data.z >> 6);
  }
 }
-# 8650 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8650 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_temp(s8 *temp_s8)
 {
  u8 data_u8 = ((u8)0);
@@ -5822,7 +5822,7 @@ s8 bma2x2_read_temp(s8 *temp_s8)
   }
  return com_rslt;
 }
-# 8684 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8684 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_xyzt(
 struct bma2x2_accel_data_temp *accel)
 {
@@ -5941,7 +5941,7 @@ struct bma2x2_accel_data_temp *accel)
  }
  return com_rslt;
 }
-# 8817 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8817 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_read_accel_eight_resolution_xyzt(
 struct bma2x2_accel_eight_resolution_temp *accel)
 {
@@ -5982,7 +5982,7 @@ struct bma2x2_accel_eight_resolution_temp *accel)
   }
  return com_rslt;
 }
-# 8873 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\bma2x2.c"
+# 8873 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2.c"
 s8 bma2x2_get_fifo_data_output_reg(
 u8 *output_reg_u8)
 {

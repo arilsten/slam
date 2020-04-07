@@ -7476,8 +7476,6 @@ descriptor_add:
 	.ascii	"ble_srv_report_ref_encode\000"
 .LASF197:
 	.ascii	"p_descr_handle\000"
-.LASF107:
-	.ascii	"__isctype\000"
 .LASF143:
 	.ascii	"abbrev_month_names\000"
 .LASF19:
@@ -7534,10 +7532,8 @@ descriptor_add:
 	.ascii	"value_handle\000"
 .LASF205:
 	.ascii	"p_char_handle\000"
-.LASF234:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF107:
+	.ascii	"__isctype\000"
 .LASF134:
 	.ascii	"int_p_cs_precedes\000"
 .LASF121:
@@ -7620,6 +7616,9 @@ descriptor_add:
 	.ascii	"descr_params\000"
 .LASF220:
 	.ascii	"cccd_value\000"
+.LASF234:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF231:
 	.ascii	"strlen\000"
 .LASF9:

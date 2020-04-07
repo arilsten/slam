@@ -135,9 +135,11 @@ void vMainCommunicationTask(void *pvParameters){
 					waypoint[0] = *((int16_t*)&message[1]);
 					waypoint[1] = *((int16_t*)&message[3]);
 					
-					xSemaphoreTake(xCollisionMutex, 20);
-					memcpy(&collAngles, &collisionAngles, sizeof(collisionAngles));
-					xSemaphoreGive(xCollisionMutex);
+					//xSemaphoreTake(xCollisionMutex, 20);
+					//memcpy(&collAngles, &collisionAngles, sizeof(collisionAngles));
+					//xSemaphoreGive(xCollisionMutex);
+					
+					//bool validWaypoint = checkWaypoint(int x, int y);
 					
 					// Add functionality to check if the new waypoint is valid
 					if(oldwaypoint[0] != waypoint[0] || oldwaypoint[1] != waypoint[1]){

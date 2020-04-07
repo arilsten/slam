@@ -9403,10 +9403,6 @@ m_sd_state_observer:
 	.ascii	"NRF_EVT_RADIO_SIGNAL_CALLBACK_INVALID_RETURN\000"
 .LASF183:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF361:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF46:
 	.ascii	"NRF_DRV_CLOCK_EVT_CAL_DONE\000"
 .LASF292:
@@ -9761,6 +9757,9 @@ m_sd_state_observer:
 	.ascii	"initial_lvl\000"
 .LASF124:
 	.ascii	"EVENTS_CTTO\000"
+.LASF361:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF212:
 	.ascii	"__towupper\000"
 .LASF66:

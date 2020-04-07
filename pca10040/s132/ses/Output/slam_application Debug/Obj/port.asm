@@ -2164,6 +2164,8 @@ PendSV_Handler:
 	.ascii	"__RAL_error_decoder_fn_t\000"
 .LASF77:
 	.ascii	"__user_set_time_of_day\000"
+.LASF95:
+	.ascii	"stdout\000"
 .LASF61:
 	.ascii	"unsigned char\000"
 .LASF63:
@@ -2274,14 +2276,11 @@ PendSV_Handler:
 	.ascii	"abbrev_day_names\000"
 .LASF23:
 	.ascii	"__wctomb\000"
-.LASF95:
-	.ascii	"stdout\000"
+.LASF107:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF5:
 	.ascii	"next\000"
 .LASF9:
 	.ascii	"__locale_s\000"
-.LASF107:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

@@ -9482,10 +9482,6 @@ m_state_obs:
 	.ascii	"nrf_fstorage_sdh_req_handler\000"
 .LASF137:
 	.ascii	"uninit\000"
-.LASF311:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF142:
 	.ascii	"ret_code_t\000"
 .LASF106:
@@ -9780,6 +9776,9 @@ m_state_obs:
 	.ascii	"__wctomb\000"
 .LASF24:
 	.ascii	"pages_to_erase\000"
+.LASF311:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF16:
 	.ascii	"op_code\000"
 .LASF89:

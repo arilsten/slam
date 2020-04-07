@@ -17058,6 +17058,8 @@ m_nrf_log_PWM_logs_data_dynamic:
 	.ascii	"nrf_nvic_state\000"
 .LASF243:
 	.ascii	"decode\000"
+.LASF42:
+	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
 .LASF22:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF87:
@@ -17076,10 +17078,6 @@ m_nrf_log_PWM_logs_data_dynamic:
 	.ascii	"pwm_control_block_t\000"
 .LASF230:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF449:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF289:
 	.ascii	"abbrev_day_names\000"
 .LASF194:
@@ -17518,8 +17516,9 @@ m_nrf_log_PWM_logs_data_dynamic:
 	.ascii	"__wctomb\000"
 .LASF12:
 	.ascii	"initial_lvl\000"
-.LASF42:
-	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
+.LASF449:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF162:
 	.ascii	"ENABLE\000"
 .LASF370:

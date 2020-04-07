@@ -12456,6 +12456,9 @@ m_evt_handlers:
 	.ascii	"srv_uuid\000"
 .LASF263:
 	.ascii	"stderr\000"
+.LASF345:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF206:
 	.ascii	"n_sep_by_space\000"
 .LASF336:
@@ -12529,10 +12532,6 @@ m_evt_handlers:
 	.ascii	"__RAL_c_locale_abbrev_month_names\000"
 .LASF326:
 	.ascii	"p_index\000"
-.LASF345:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF286:
 	.ascii	"new_peer_id\000"
 .LASF104:

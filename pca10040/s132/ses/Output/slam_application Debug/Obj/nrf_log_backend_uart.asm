@@ -6750,10 +6750,6 @@ nrf_log_backend_uart_api:
 	.ascii	"decode\000"
 .LASF14:
 	.ascii	"pseltxd\000"
-.LASF266:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF40:
 	.ascii	"NRF_UART_Type\000"
 .LASF214:
@@ -7031,6 +7027,9 @@ nrf_log_backend_uart_api:
 	.ascii	"NRF_UART_BAUDRATE_2400\000"
 .LASF151:
 	.ascii	"__wctomb\000"
+.LASF266:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF106:
 	.ascii	"ENABLE\000"
 .LASF178:

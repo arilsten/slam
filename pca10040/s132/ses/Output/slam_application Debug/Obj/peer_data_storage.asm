@@ -12362,6 +12362,9 @@ m_peer_delete_deferred:
 	.ascii	"stderr\000"
 .LASF376:
 	.ascii	"fds_record_find\000"
+.LASF382:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF232:
 	.ascii	"n_sep_by_space\000"
 .LASF46:
@@ -12444,10 +12447,6 @@ m_peer_delete_deferred:
 	.ascii	"pds_evt\000"
 .LASF229:
 	.ascii	"p_cs_precedes\000"
-.LASF382:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF131:
 	.ascii	"PM_CONN_SEC_PROCEDURE_PAIRING\000"
 .LASF342:

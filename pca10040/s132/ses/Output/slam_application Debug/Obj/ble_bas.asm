@@ -14987,6 +14987,9 @@ m_nrf_log_ble_bas_logs_data_dynamic:
 	.ascii	"ble_bas_on_ble_evt\000"
 .LASF95:
 	.ascii	"request\000"
+.LASF516:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF341:
 	.ascii	"master_id\000"
 .LASF57:
@@ -15400,10 +15403,6 @@ m_nrf_log_ble_bas_logs_data_dynamic:
 	.ascii	"rand\000"
 .LASF88:
 	.ascii	"ble_gatts_evt_exchange_mtu_request_t\000"
-.LASF516:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF372:
 	.ascii	"aux_phy\000"
 .LASF334:

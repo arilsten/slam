@@ -5538,10 +5538,6 @@ m_handlers:
 	.ascii	"decode\000"
 .LASF83:
 	.ascii	"NRF_SPIM_FREQ_4M\000"
-.LASF242:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF223:
 	.ascii	"ret_code_t\000"
 .LASF63:
@@ -5774,6 +5770,9 @@ m_handlers:
 	.ascii	"NRF_DRV_SPI_FREQ_2M\000"
 .LASF146:
 	.ascii	"__wctomb\000"
+.LASF242:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF94:
 	.ascii	"ENABLE\000"
 .LASF89:

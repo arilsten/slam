@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.h" 1
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.h" 1
 
 
 
@@ -53,10 +53,10 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.h" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.h" 2
 
 
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.h"
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.h"
 typedef struct {
   uint8_t *buf;
   uint16_t capacity;
@@ -71,7 +71,7 @@ uint16_t buffer_append(buffer_t *b, uint8_t *data, uint16_t len);
 uint16_t buffer_remove(buffer_t *b, uint8_t *data, uint16_t len);
 uint16_t buffer_remove_token(buffer_t *b, uint8_t* data, uint8_t token, uint16_t nbytes);
 uint16_t buffer_read(buffer_t *b, uint8_t *data, uint16_t idx, uint16_t len);
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 3 4
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 1 3 4
@@ -380,15 +380,15 @@ char *strerror(int __num);
 
 int strcoll(const char *__str1, const char *__str2);
 size_t strxfrm( char *__str1, const char *__str2, size_t __num);
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c" 2
 
 
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c"
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c"
 uint8_t buffer_init(buffer_t *b, uint8_t *buf, uint16_t size) {
   if(buf == 
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c" 3 4
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c" 3 4
            0
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c"
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c"
                ) return 0;
   b->buf = buf;
   b->capacity = size;
@@ -435,9 +435,9 @@ uint16_t buffer_remove_token(buffer_t *b, uint8_t* data, uint8_t token, uint16_t
 
 uint16_t buffer_read(buffer_t *b, uint8_t *data, uint16_t idx, uint16_t len) {
   if(data == 
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c" 3 4
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c" 3 4
             0
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c"
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c"
                 ) return 0;
   if(idx >= b->capacity) idx -= b->capacity;
   if(b->capacity - idx >= len) {
@@ -454,17 +454,17 @@ uint16_t buffer_remove(buffer_t *b, uint8_t *data, uint16_t len) {
   if(len > b->len) len = b->len;
   if(b->capacity - b->tail >= len) {
     if(data != 
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c" 3 4
+# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c" 3 4
               0
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c"
+# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c"
                   ) memcpy(data, b->buf+b->tail, len);
     b->tail = b->tail + len;
     if(b->tail == b->capacity) b->tail = 0;
   } else {
     if(data != 
-# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c" 3 4
+# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c" 3 4
               0
-# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\buffer.c"
+# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\buffer.c"
                   ) {
       memcpy(data, b->buf+b->tail, b->capacity - b->tail);
       memcpy(data + (b->capacity - b->tail), b->buf, len - (b->capacity - b->tail) );

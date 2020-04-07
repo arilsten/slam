@@ -15162,10 +15162,8 @@ m_nrf_log_gfx_logs_data_dynamic:
 	.ascii	"uint16_t\000"
 .LASF202:
 	.ascii	"nrf_gfx_uninit\000"
-.LASF216:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF71:
+	.ascii	"__isctype\000"
 .LASF98:
 	.ascii	"int_p_cs_precedes\000"
 .LASF55:
@@ -15246,8 +15244,9 @@ m_nrf_log_gfx_logs_data_dynamic:
 	.ascii	"short unsigned int\000"
 .LASF67:
 	.ascii	"name\000"
-.LASF40:
-	.ascii	"lcd_display_invert\000"
+.LASF216:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF31:
 	.ascii	"FONT_CHAR_INFO\000"
 .LASF104:
@@ -15429,8 +15428,8 @@ m_nrf_log_gfx_logs_data_dynamic:
 	.ascii	"stderr\000"
 .LASF128:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF71:
-	.ascii	"__isctype\000"
+.LASF40:
+	.ascii	"lcd_display_invert\000"
 .LASF63:
 	.ascii	"__RAL_error_decoder_s\000"
 .LASF138:

@@ -5390,8 +5390,8 @@ uxCriticalNesting:
 	.ascii	"ulMaxPRIGROUPValue\000"
 .LASF108:
 	.ascii	"long int\000"
-.LASF171:
-	.ascii	"xPSR_Type\000"
+.LASF98:
+	.ascii	"__RAL_locale_data_t\000"
 .LASF154:
 	.ascii	"__RAL_data_utf8_comma\000"
 .LASF80:
@@ -5414,10 +5414,8 @@ uxCriticalNesting:
 	.ascii	"ucMaxSysCallPriority\000"
 .LASF192:
 	.ascii	"BaseType_t\000"
-.LASF222:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF171:
+	.ascii	"xPSR_Type\000"
 .LASF127:
 	.ascii	"int_p_cs_precedes\000"
 .LASF0:
@@ -5488,6 +5486,9 @@ uxCriticalNesting:
 	.ascii	"MMFAR\000"
 .LASF62:
 	.ascii	"RNG_IRQn\000"
+.LASF222:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF11:
 	.ascii	"ICSR\000"
 .LASF13:
@@ -5639,8 +5640,6 @@ uxCriticalNesting:
 	.ascii	"__mbstate_s\000"
 .LASF186:
 	.ascii	"TaskFunction_t\000"
-.LASF98:
-	.ascii	"__RAL_locale_data_t\000"
 .LASF179:
 	.ascii	"FILE\000"
 .LASF84:

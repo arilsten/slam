@@ -24,7 +24,7 @@
 timer_event_handler_dummy:
 .LVL0:
 .LFB321:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
 	.loc 1 41 79 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -161,7 +161,7 @@ cb_trampoline:
 	.align	2
 .LC0:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\drivers\\encoder.c\000"
+	.ascii	"al\\slam\\drivers\\encoder.c\000"
 	.align	2
 .LC1:
 	.ascii	"counter: %d\000"
@@ -204,9 +204,9 @@ encoder_init_ppi:
 	cmp	r4, #0
 	bne	.L28
 .L17:
-	.loc 1 54 250 is_stmt 1 discriminator 3 view .LVU33
+	.loc 1 54 231 is_stmt 1 discriminator 3 view .LVU33
 .LBE25:
-	.loc 1 54 265 discriminator 3 view .LVU34
+	.loc 1 54 246 discriminator 3 view .LVU34
 	.loc 1 56 2 discriminator 3 view .LVU35
 .LVL11:
 	.loc 1 57 2 discriminator 3 view .LVU36
@@ -277,9 +277,9 @@ encoder_init_ppi:
 	bne	.L29
 .LVL19:
 .L19:
-	.loc 1 80 250 is_stmt 1 discriminator 3 view .LVU60
+	.loc 1 80 231 is_stmt 1 discriminator 3 view .LVU60
 .LBE26:
-	.loc 1 80 265 discriminator 3 view .LVU61
+	.loc 1 80 246 discriminator 3 view .LVU61
 	.loc 1 81 2 discriminator 3 view .LVU62
 	mov	r0, r5
 	bl	nrfx_timer_enable
@@ -322,9 +322,9 @@ encoder_init_ppi:
 	bne	.L30
 .LVL24:
 .L20:
-	.loc 1 86 250 is_stmt 1 discriminator 3 view .LVU77
+	.loc 1 86 231 is_stmt 1 discriminator 3 view .LVU77
 .LBE31:
-	.loc 1 86 265 discriminator 3 view .LVU78
+	.loc 1 86 246 discriminator 3 view .LVU78
 	.loc 1 87 2 discriminator 3 view .LVU79
 	.loc 1 87 8 is_stmt 0 discriminator 3 view .LVU80
 	mov	r2, r7
@@ -341,9 +341,9 @@ encoder_init_ppi:
 	bne	.L31
 .LVL26:
 .L21:
-	.loc 1 90 250 is_stmt 1 discriminator 3 view .LVU85
+	.loc 1 90 231 is_stmt 1 discriminator 3 view .LVU85
 .LBE32:
-	.loc 1 90 265 discriminator 3 view .LVU86
+	.loc 1 90 246 discriminator 3 view .LVU86
 	.loc 1 91 2 discriminator 3 view .LVU87
 	.loc 1 91 8 is_stmt 0 discriminator 3 view .LVU88
 	ldrb	r0, [r4]	@ zero_extendqisi2
@@ -358,9 +358,9 @@ encoder_init_ppi:
 	bne	.L32
 .LVL28:
 .L22:
-	.loc 1 92 250 is_stmt 1 discriminator 3 view .LVU93
+	.loc 1 92 231 is_stmt 1 discriminator 3 view .LVU93
 .LBE33:
-	.loc 1 92 265 discriminator 3 view .LVU94
+	.loc 1 92 246 discriminator 3 view .LVU94
 	.loc 1 95 2 discriminator 3 view .LVU95
 	movs	r1, #0
 	mov	r0, r8
@@ -643,9 +643,9 @@ encoder_init_int:
 	mov	r0, r4
 	bl	app_error_handler
 .LVL64:
-	.loc 1 118 251 discriminator 1 view .LVU176
+	.loc 1 118 232 discriminator 1 view .LVU176
 .LBE49:
-	.loc 1 118 266 discriminator 1 view .LVU177
+	.loc 1 118 247 discriminator 1 view .LVU177
 	.loc 1 119 1 is_stmt 0 discriminator 1 view .LVU178
 	b	.L35
 .L42:
@@ -1174,7 +1174,7 @@ delay_bytecode.7993:
 	.byte	0x8
 	.4byte	.LASF10
 	.byte	0
-	.file 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.h"
+	.file 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.h"
 	.section	.debug_types,"G",%progbits,wt.4fd2472da03bc8a9,comdat
 	.4byte	0x45
 	.2byte	0x4
@@ -7026,6 +7026,9 @@ delay_bytecode.7993:
 	.ascii	"cc_channel\000"
 .LASF123:
 	.ascii	"TASKS_SHUTDOWN\000"
+.LASF302:
+	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
+	.ascii	"al\\slam\\drivers\\encoder.c\000"
 .LASF132:
 	.ascii	"INTENCLR\000"
 .LASF101:
@@ -7236,10 +7239,6 @@ delay_bytecode.7993:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF69:
 	.ascii	"NRF_TIMER_FREQ_4MHz\000"
-.LASF303:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF233:
 	.ascii	"ret_code_t\000"
 .LASF93:
@@ -7489,6 +7488,9 @@ delay_bytecode.7993:
 	.ascii	"NRF_TIMER_BIT_WIDTH_8\000"
 .LASF158:
 	.ascii	"__wctomb\000"
+.LASF303:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF184:
 	.ascii	"day_names\000"
 .LASF213:
@@ -7541,9 +7543,6 @@ delay_bytecode.7993:
 	.ascii	"delay_cycles\000"
 .LASF164:
 	.ascii	"currency_symbol\000"
-.LASF302:
-	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\drivers\\encoder.c\000"
 .LASF214:
 	.ascii	"__RAL_data_empty_string\000"
 .LASF53:

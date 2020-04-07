@@ -8389,10 +8389,8 @@ m_bsp_leds_tmr:
 	.ascii	"BSP_EVENT_CLEAR_ALERT\000"
 .LASF186:
 	.ascii	"bsp_event_callback_t\000"
-.LASF254:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF96:
+	.ascii	"__isctype\000"
 .LASF123:
 	.ascii	"int_p_cs_precedes\000"
 .LASF73:
@@ -8489,6 +8487,9 @@ m_bsp_leds_tmr:
 	.ascii	"name\000"
 .LASF63:
 	.ascii	"button_handler\000"
+.LASF254:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF37:
 	.ascii	"BSP_INDICATE_ADVERTISING\000"
 .LASF215:
@@ -8716,8 +8717,6 @@ m_bsp_leds_tmr:
 	.ascii	"NRF_GPIO_PIN_SENSE_LOW\000"
 .LASF154:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF96:
-	.ascii	"__isctype\000"
 .LASF224:
 	.ascii	"next_delay\000"
 .LASF128:

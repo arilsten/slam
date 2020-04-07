@@ -23240,6 +23240,9 @@ m_ble_evt_observer:
 	.ascii	"ble_gattc_service_t\000"
 .LASF51:
 	.ascii	"pm_peer_data_update_succeeded_evt_t\000"
+.LASF639:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF340:
 	.ascii	"id_addr_info\000"
 .LASF343:
@@ -23752,10 +23755,6 @@ m_ble_evt_observer:
 	.ascii	"pdb_peer_allocate\000"
 .LASF160:
 	.ascii	"ble_gatts_evt_exchange_mtu_request_t\000"
-.LASF639:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF75:
 	.ascii	"PM_EVT_CONN_SEC_SUCCEEDED\000"
 .LASF0:

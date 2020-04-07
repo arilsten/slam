@@ -21312,10 +21312,6 @@ log_mempool:
 	.ascii	"nrf_log_frontend_hexdump\000"
 .LASF192:
 	.ascii	"__stop_log_const_data\000"
-.LASF317:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF161:
 	.ascii	"ret_code_t\000"
 .LASF50:
@@ -21359,6 +21355,8 @@ log_mempool:
 	.ascii	"__RAL_error_decoder_head\000"
 .LASF90:
 	.ascii	"__RAL_locale_data_t\000"
+.LASF204:
+	.ascii	"nrf_log_frontend_dequeue\000"
 .LASF303:
 	.ascii	"nrf_memobj_alloc\000"
 .LASF148:
@@ -21613,8 +21611,9 @@ log_mempool:
 	.ascii	"__wctomb\000"
 .LASF66:
 	.ascii	"initial_lvl\000"
-.LASF204:
-	.ascii	"nrf_log_frontend_dequeue\000"
+.LASF317:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF251:
 	.ascii	"p_buf\000"
 .LASF42:

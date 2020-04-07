@@ -16065,6 +16065,9 @@ ble_hrs_on_gatt_evt:
 	.ascii	"attr_char_value\000"
 .LASF192:
 	.ascii	"ble_gattc_service_t\000"
+.LASF536:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF486:
 	.ascii	"ble_hrs_on_gatt_evt\000"
 .LASF327:
@@ -16488,10 +16491,6 @@ ble_hrs_on_gatt_evt:
 	.ascii	"BLE_GAP_EVT_DATA_LENGTH_UPDATE\000"
 .LASF370:
 	.ascii	"BLE_GAP_EVT_SEC_INFO_REQUEST\000"
-.LASF536:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF358:
 	.ascii	"aux_phy\000"
 .LASF320:

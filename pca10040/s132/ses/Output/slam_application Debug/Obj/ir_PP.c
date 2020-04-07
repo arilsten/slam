@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.h" 1
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.h" 1
 
 
 
@@ -53,14 +53,14 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.h" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.h" 2
 
 
 
 
 
 
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.h"
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.h"
 typedef enum {
  IR_SENSOR_1,
  IR_SENSOR_2,
@@ -77,11 +77,11 @@ typedef enum {
 
 
 typedef void(* ir_cb_t)(uint16_t reading);
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.h"
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.h"
 void ir_init();
-# 43 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.h"
+# 43 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.h"
 uint16_t ir_read_blocking(IR_Sensor_t sensor);
-# 53 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.h"
+# 53 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.h"
 void ir_read(IR_Sensor_t sensor, ir_cb_t ir_cb);
 
 
@@ -91,7 +91,7 @@ void ir_read(IR_Sensor_t sensor, ir_cb_t ir_cb);
 
 
 void ir_calibrate();
-# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.h"
+# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.h"
 uint8_t ui8DistSens_readCM(IR_Sensor_t sensor);
 
 int16_t i16DistSens_readMM(IR_Sensor_t sensor);
@@ -99,7 +99,7 @@ int16_t i16DistSens_readMM(IR_Sensor_t sensor);
 uint8_t IrAnalogToCM(uint16_t reading);
 
 int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor);
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 2
 # 1 "../../../../../../modules/nrfx/drivers/include/nrfx_saadc.h" 1
 # 44 "../../../../../../modules/nrfx/drivers/include/nrfx_saadc.h"
 # 1 "../../../../../../modules/nrfx/nrfx.h" 1
@@ -5677,7 +5677,7 @@ void nrfx_saadc_limits_set(uint8_t channel, int16_t limit_low, int16_t limit_hig
 
 
 void SAADC_IRQHandler(void);
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -5972,7 +5972,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 2
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 2
 # 1 "../../../../../../components/libraries/delay/nrf_delay.h" 1
 # 64 "../../../../../../components/libraries/delay/nrf_delay.h"
 static inline void nrf_delay_ms(uint32_t ms_time)
@@ -5986,7 +5986,7 @@ static inline void nrf_delay_ms(uint32_t ms_time)
         nrfx_coredep_delay_us(1000);
     } while (--ms_time);
 }
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -6387,21 +6387,21 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\defines.h" 1
-# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 2
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\defines.h" 1
+# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 2
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
 
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
 static const nrfx_saadc_config_t saadc_config = {
  .resolution = NRF_SAADC_RESOLUTION_12BIT,
  .oversample = NRF_SAADC_OVERSAMPLE_DISABLED,
  .interrupt_priority = 7,
  .low_power_mode = 
-# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                   0
 
-# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
 };
 
 
@@ -6409,22 +6409,22 @@ static const nrfx_saadc_config_t saadc_config = {
 
 
 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
 _Bool 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
     calibration_completed = 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                             0
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
                                  ;
 
-# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
 _Bool 
-# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
     initial_calibration_completed = 
-# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                                     0
-# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
                                          ;
 
 ir_cb_t cb;
@@ -6440,7 +6440,7 @@ void saadc_event_handler(nrfx_saadc_evt_t const* p_event) {
   case NRFX_SAADC_EVT_DONE:
    err = nrfx_saadc_buffer_convert(p_event->data.done.p_buffer,
            4);
-   do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 45, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
+   do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 45, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
 
    p_event->data.done.p_buffer;
    p_event->data.done.size;
@@ -6459,20 +6459,20 @@ void saadc_event_handler(nrfx_saadc_evt_t const* p_event) {
    break;
   case NRFX_SAADC_EVT_CALIBRATEDONE:
    if (initial_calibration_completed != 
-# 63 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 63 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                                        1
-# 63 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 63 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
                                            )
     initial_calibration_completed = 
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                                    1
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
                                        ;
    else
     calibration_completed = 
-# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                            1
-# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
                                ;
    break;
   default:
@@ -6503,23 +6503,23 @@ void ir_init(){
  static nrf_saadc_channel_config_t channel_3_config = { .resistor_p = NRF_SAADC_RESISTOR_DISABLED, .resistor_n = NRF_SAADC_RESISTOR_DISABLED, .gain = NRF_SAADC_GAIN1_6, .reference = NRF_SAADC_REFERENCE_INTERNAL, .acq_time = NRF_SAADC_ACQTIME_10US, .mode = NRF_SAADC_MODE_SINGLE_ENDED, .burst = NRF_SAADC_BURST_DISABLED, .pin_p = (nrf_saadc_input_t)(NRF_SAADC_INPUT_AIN4), .pin_n = NRF_SAADC_INPUT_DISABLED };
  channel_3_config.gain = NRF_SAADC_GAIN1_4;
  channel_3_config.reference =NRF_SAADC_REFERENCE_VDD4;
-# 109 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 109 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
  nrfx_saadc_init(&saadc_config, saadc_event_handler);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 110, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 110, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
 
  nrfx_saadc_channel_init(0, &channel_0_config);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 113, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 113, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
 
  nrfx_saadc_channel_init(1, &channel_1_config);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 116, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 116, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
 
  nrfx_saadc_channel_init(2, &channel_2_config);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 119, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 119, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
 
 
  nrfx_saadc_channel_init(3, &channel_3_config);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 123, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 123, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
 }
 
 
@@ -6531,7 +6531,7 @@ void ir_read(IR_Sensor_t sensor, ir_cb_t ir_cb) {
  for (int i = 0; i < 4; i++) {
   err = nrfx_saadc_sample();
 
-  do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 147, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
+  do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 147, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
  }
 }
 
@@ -6545,7 +6545,7 @@ uint16_t ir_read_blocking(IR_Sensor_t sensor) {
  int acc = 0;
  for (int i = 0; i < 4; i++) {
   err = nrfx_saadc_sample_convert(channel, val+i);
-                do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 161, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"); } while (0); } } while (0);
+                do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 161, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
   acc += val[i];
 
  }
@@ -6560,9 +6560,9 @@ void ir_calibrate() {
 
  while(!calibration_completed) ;;
  calibration_completed = 
-# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c" 3 4
+# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                         0
-# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\ir.c"
+# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
                              ;
 }
 

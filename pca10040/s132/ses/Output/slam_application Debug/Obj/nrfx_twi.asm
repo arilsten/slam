@@ -17592,8 +17592,8 @@ m_nrf_log_TWI_logs_data_dynamic:
 	.ascii	"nrf_nvic_state\000"
 .LASF226:
 	.ascii	"decode\000"
-.LASF133:
-	.ascii	"EVENTS_TXDSENT\000"
+.LASF57:
+	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
 .LASF37:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF327:
@@ -17606,10 +17606,6 @@ m_nrf_log_TWI_logs_data_dynamic:
 	.ascii	"SHCSR\000"
 .LASF213:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF427:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF77:
 	.ascii	"NRFX_TWI1_INST_IDX\000"
 .LASF177:
@@ -17679,6 +17675,8 @@ m_nrf_log_TWI_logs_data_dynamic:
 	.ascii	"__RAL_locale_data_t\000"
 .LASF181:
 	.ascii	"MemoryManagement_IRQn\000"
+.LASF133:
+	.ascii	"EVENTS_TXDSENT\000"
 .LASF293:
 	.ascii	"__RAL_c_locale_month_names\000"
 .LASF60:
@@ -18045,8 +18043,9 @@ m_nrf_log_TWI_logs_data_dynamic:
 	.ascii	"__wctomb\000"
 .LASF27:
 	.ascii	"initial_lvl\000"
-.LASF57:
-	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
+.LASF427:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF148:
 	.ascii	"ENABLE\000"
 .LASF242:

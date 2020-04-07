@@ -3741,8 +3741,6 @@ m_nrf_sdh_soc_evts_poll:
 	.ascii	"stdin\000"
 .LASF56:
 	.ascii	"SD_APP_EVT_WAIT\000"
-.LASF179:
-	.ascii	"m_nrf_log_nrf_sdh_soc_logs_data_const\000"
 .LASF15:
 	.ascii	"NRF_LOG_SEVERITY_WARNING\000"
 .LASF11:
@@ -3751,10 +3749,8 @@ m_nrf_sdh_soc_evts_poll:
 	.ascii	"SD_POWER_GPREGRET_SET\000"
 .LASF124:
 	.ascii	"day_names\000"
-.LASF194:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF179:
+	.ascii	"m_nrf_log_nrf_sdh_soc_logs_data_const\000"
 .LASF118:
 	.ascii	"int_p_cs_precedes\000"
 .LASF63:
@@ -3821,6 +3817,9 @@ m_nrf_sdh_soc_evts_poll:
 	.ascii	"short unsigned int\000"
 .LASF41:
 	.ascii	"SD_RAND_APPLICATION_BYTES_AVAILABLE_GET\000"
+.LASF194:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF73:
 	.ascii	"section\000"
 .LASF54:

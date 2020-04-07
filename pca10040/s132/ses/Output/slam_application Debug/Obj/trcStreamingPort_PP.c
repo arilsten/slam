@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
 
 # 1 "../../../TraceRecorder/include/trcRecorder.h" 1
 # 52 "../../../TraceRecorder/include/trcRecorder.h"
@@ -5517,7 +5517,7 @@ int prvIsValidCommand(TracealyzerCommandType* cmd);
 
 
 void prvProcessCommand(TracealyzerCommandType* cmd);
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c" 2
 
 
 
@@ -5531,9 +5531,9 @@ int32_t readFromRTT(void* ptrData, uint32_t size, int32_t* ptrBytesRead)
   bytesRead = SEGGER_RTT_Read(1, (char*)ptrData, size);
 
   if (ptrBytesRead != 
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c" 3 4
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c" 3 4
                      0
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
                          )
    *ptrBytesRead = (int32_t)bytesRead;
 
@@ -5552,9 +5552,9 @@ int32_t writeToRTT(void* ptrData, uint32_t size, int32_t* ptrBytesWritten)
  uint32_t bytesWritten = SEGGER_RTT_Write(1, (const char*)ptrData, size);
 
  if (ptrBytesWritten != 
-# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c" 3 4
+# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c" 3 4
                        0
-# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
+# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\TraceRecorder\\streamports\\Jlink_RTT\\trcStreamingPort.c"
                            )
   *ptrBytesWritten = (int32_t)bytesWritten;
 

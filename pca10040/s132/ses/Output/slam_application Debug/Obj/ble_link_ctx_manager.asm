@@ -2345,8 +2345,8 @@ blcm_link_ctx_get:
 	.ascii	"__wchar\000"
 .LASF45:
 	.ascii	"n_sep_by_space\000"
-.LASF92:
-	.ascii	"ret_code_t\000"
+.LASF23:
+	.ascii	"__tolower\000"
 .LASF47:
 	.ascii	"n_sign_posn\000"
 .LASF60:
@@ -2381,8 +2381,6 @@ blcm_link_ctx_get:
 	.ascii	"decimal_point\000"
 .LASF40:
 	.ascii	"int_frac_digits\000"
-.LASF23:
-	.ascii	"__tolower\000"
 .LASF18:
 	.ascii	"codeset\000"
 .LASF69:
@@ -2495,6 +2493,8 @@ blcm_link_ctx_get:
 	.ascii	"blcm_link_ctx_storage_t\000"
 .LASF98:
 	.ascii	"p_link_ctx_storage\000"
+.LASF95:
+	.ascii	"_vectors\000"
 .LASF15:
 	.ascii	"__RAL_locale_t\000"
 .LASF81:
@@ -2523,14 +2523,13 @@ blcm_link_ctx_get:
 	.ascii	"abbrev_day_names\000"
 .LASF27:
 	.ascii	"__wctomb\000"
-.LASF95:
-	.ascii	"_vectors\000"
+.LASF104:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF8:
 	.ascii	"next\000"
 .LASF12:
 	.ascii	"__locale_s\000"
-.LASF104:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF92:
+	.ascii	"ret_code_t\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

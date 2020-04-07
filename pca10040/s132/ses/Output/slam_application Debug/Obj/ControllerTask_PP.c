@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
 
 
 
@@ -11,7 +11,7 @@
 
 
 # 1 "../../../drivers/defines.h" 1
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../drivers/encoder.h" 1
 # 13 "../../../drivers/encoder.h"
 # 1 "../../../../../../modules/nrfx/drivers/include/nrfx_gpiote.h" 1
@@ -6685,7 +6685,7 @@ void encoder_init_int();
 
 encoderTicks encoder_get_ticks();
 encoderTicks encoder_get_all_ticks();
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/freeRTOS.h" 1
 # 57 "../../../../../../external/freertos/source/include/freeRTOS.h"
 # 1 "../../../config/FreeRTOSConfig.h" 1
@@ -7114,7 +7114,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../drivers/functions.h" 1
 # 14 "../../../drivers/functions.h"
 void vFunc_Inf2pi(float *angle_in_radians);
@@ -7138,7 +7138,7 @@ void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
 
 
 void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -7539,7 +7539,7 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../drivers/motor.h" 1
 
 
@@ -7587,7 +7587,7 @@ void motor_stop(void);
 void motor_brake(void);
 
 void vMotorMovementSwitch(int leftSpeed, int rightSpeed);
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -7882,7 +7882,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 47 "../../../../../../external/freertos/source/include/queue.h"
 typedef void * QueueHandle_t;
@@ -7980,14 +7980,14 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 # 1 "../../../../../../external/freertos/source/include/timers.h" 1
 # 39 "../../../../../../external/freertos/source/include/timers.h"
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
@@ -8348,18 +8348,18 @@ BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommand
 
  void vTimerSetTimerNumber( TimerHandle_t xTimer, UBaseType_t uxTimerNumber ) ;
  UBaseType_t uxTimerGetTimerNumber( TimerHandle_t xTimer ) ;
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.h" 1
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.h"
+# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.h" 1
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.h"
 void motorRegulator(int16_t lspeed, int16_t rspeed, encoderTicks ticks);
 void vMainPoseControllerTask(void *pvParameters);
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 1
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h"
+# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 1
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h"
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 2
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 2
 
 
 extern TaskHandle_t handle_display_task,
@@ -8414,7 +8414,7 @@ struct sCartesian {
     float x;
     float y;
 };
-# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 2
+# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 2
 
 
 void vMainPoseControllerTask(void *pvParameters) {
@@ -8430,14 +8430,14 @@ void vMainPoseControllerTask(void *pvParameters) {
 
 
     float rotateThreshold = 10.0 * 
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                   3.14159265358979323846 
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                   / 180.0;
     float driveThreshold = 2.0 * 
-# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                 3.14159265358979323846 
-# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                 / 180.0;
     float driveKp = 200;
     float driveKi = 1;
@@ -8465,24 +8465,24 @@ void vMainPoseControllerTask(void *pvParameters) {
     float rightIntError = 0;
 
     uint8_t doneTurning = 
-# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                          0
-# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                               ;
     volatile int16_t LSpeed = 0;
     volatile int16_t RSpeed = 0;
 
     uint8_t idleSendt = 
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                        0
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                             ;
 
 
     uint8_t controllerStop = 
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                             0
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                  ;
     float distanceStart = 0;
     float prevDist = 0;
@@ -8497,35 +8497,35 @@ void vMainPoseControllerTask(void *pvParameters) {
     uint8_t baseUpRampActuation = 10;
     uint8_t baseDownRampActuation = 5;
     uint8_t bBaseUpRampActFound = 
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                  0
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                       ;
     uint8_t bBaseDownRampActFound = 
-# 82 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 82 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                    0
-# 82 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 82 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                         ;
     uint8_t starteds = 0;
     uint8_t newOrder = 
-# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                       0
-# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                            ;
     uint8_t initIncrement = 40;
     uint8_t bStuck = 
-# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                     0
-# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                          ;
     char str4[20];
     float dLeft = 0;
     float dRight = 0;
 
     uint8_t stuckValueFound = 
-# 91 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 91 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                              0
-# 91 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 91 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                   ;
 
     while (1) {
@@ -8537,9 +8537,9 @@ void vMainPoseControllerTask(void *pvParameters) {
             gLeftWheelTicks = ticks.left;
             gRightWheelTicks = ticks.right;
             xQueueGenericSend( ( QueueHandle_t ) ( xTickMutex ), 
-# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
            0
-# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
            , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
             if (xQueueSemaphoreTake( ( xControllerBSem ), ( ( TickType_t ) 0xffffffffUL ) ) == ( ( BaseType_t ) 1 )) {
 
@@ -8551,9 +8551,9 @@ void vMainPoseControllerTask(void *pvParameters) {
                 dLeft = gLeft;
                 dRight = gRight;
                 xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                0
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 
@@ -8566,19 +8566,19 @@ void vMainPoseControllerTask(void *pvParameters) {
                     yhatStart = yhat;
                     starteds++;
                     newOrder = 
-# 122 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 122 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                               1
-# 122 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 122 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                   ;
                     controllerStop = 
-# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                     0
-# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                          ;
                     doneTurning = 
-# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                  0
-# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                       ;
                     stuckIncrement = 0;
                     sprintf(str4,"Tx:%i Ty:%i",((int)xTargt),((int)yTargt));
@@ -8605,51 +8605,51 @@ void vMainPoseControllerTask(void *pvParameters) {
                 }
                 if (fabs(thetaDiff) < driveThreshold) {
                     doneTurning = 
-# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                  1
-# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                      ;
                     thetaDiffInt = 0;
                 }
                 if(fabs(thetaDiff)>= (
-# 152 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 152 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                      3.14159265358979323846
-# 152 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 152 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                          /2.0) && doneTurning){
                       if(controllerStop == 
-# 153 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 153 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                           0
-# 153 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 153 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                                ){
                             controllerStop = 
-# 154 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 154 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                             1
-# 154 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 154 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                                 ;
                             if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "HEADING is more the 90 degrees wrong stopping controller"); } };
                             }
                }
 
                 if ((prevThetaDiff - thetaDiff) > (
-# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                                   3.14159265358979323846 
-# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                                        / 2) || ((prevThetaDiff - thetaDiff) < (-
-# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                                                                                 3.14159265358979323846 
-# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                                                                                      / 2)))
                 {
                     distanceStart = distance;
                     if (newOrder == 
-# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                    0
-# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                         ) {
                         controllerStop = 
-# 163 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 163 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                         1
-# 163 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 163 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                             ;
                     }
                 } else {
@@ -8673,9 +8673,9 @@ void vMainPoseControllerTask(void *pvParameters) {
                 if (distance > radiusEpsilon && !controllerStop) {
 
                     idleSendt = 
-# 185 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 185 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                0
-# 185 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 185 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                     ;
                     if (doneTurning) {
 
@@ -8688,9 +8688,9 @@ void vMainPoseControllerTask(void *pvParameters) {
                                     baseUpRampActuation++;
                                 } else {
                                     bBaseUpRampActFound = 
-# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                                          1
-# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 196 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                                              ;
                                     maxDriveActuation = baseUpRampActuation + 10;
                                 }
@@ -8787,9 +8787,9 @@ void vMainPoseControllerTask(void *pvParameters) {
 
                         lastMovement =(thetaDiff<0) ? 3 : 4 ;
                         newOrder = 
-# 291 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 291 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                   0
-# 291 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 291 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                        ;
                     }
 
@@ -8799,17 +8799,17 @@ void vMainPoseControllerTask(void *pvParameters) {
                 } else {
 
                     if (idleSendt == 
-# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                     0
-# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                          ) {
                         if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "controller sending idle"); } };
                         send_idle();
                         idlesendtInc = 0;
                         idleSendt = 
-# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c" 3 4
+# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
                                    1
-# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                        ;
                     }
                     idlesendtInc++;
@@ -8821,7 +8821,7 @@ void vMainPoseControllerTask(void *pvParameters) {
                 }
                 xQueueGenericSend( ( scanStatusQ ), ( &lastMovement ), ( 0 ), ( ( BaseType_t ) 0 ) );
             }
-# 327 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\ControllerTask.c"
+# 327 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
         }
 
 

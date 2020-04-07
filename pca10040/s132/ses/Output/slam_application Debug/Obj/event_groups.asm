@@ -7920,10 +7920,8 @@ vEventGroupSetNumber:
 	.ascii	"uint16_t\000"
 .LASF141:
 	.ascii	"BaseType_t\000"
-.LASF206:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF56:
+	.ascii	"__isctype\000"
 .LASF83:
 	.ascii	"int_p_cs_precedes\000"
 .LASF24:
@@ -7995,6 +7993,9 @@ vEventGroupSetNumber:
 	.ascii	"short unsigned int\000"
 .LASF51:
 	.ascii	"name\000"
+.LASF206:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF27:
 	.ascii	"ICSR\000"
 .LASF29:
@@ -8177,8 +8178,6 @@ vEventGroupSetNumber:
 	.ascii	"stderr\000"
 .LASF107:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF56:
-	.ascii	"__isctype\000"
 .LASF182:
 	.ascii	"uxOriginalBitValue\000"
 .LASF43:

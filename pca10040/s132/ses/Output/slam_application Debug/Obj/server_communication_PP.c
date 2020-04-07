@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 
 
 
@@ -315,7 +315,7 @@ char *strerror(int __num);
 
 int strcoll(const char *__str1, const char *__str2);
 size_t strxfrm( char *__str1, const char *__str2, size_t __num);
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h" 1 3 4
 # 78 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h" 3 4
 int putchar(int __c);
@@ -394,12 +394,12 @@ char *tmpnam(char *);
 int ungetc(int, FILE *);
 int vfprintf(FILE *, const char *, __va_list);
 int vfscanf(FILE *, const char *, __va_list);
-# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 1 3 4
 # 69 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 3 4
 typedef __va_list va_list;
-# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.h" 1
+# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.h" 1
 
 
 
@@ -447,10 +447,10 @@ typedef uint32_t uintptr_t;
 # 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
 typedef int64_t intmax_t;
 typedef uint64_t uintmax_t;
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.h" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.h" 2
 
 
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\arq.h"
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\arq.h"
 typedef uint8_t arq_connection;
 
 void arq_init(void);
@@ -462,9 +462,9 @@ uint8_t arq_close_connection(arq_connection id);
 uint8_t arq_send(arq_connection id, uint8_t *data, uint16_t len);
 uint8_t arq_send_string(arq_connection id, char *str);
 void vARQTask(void *pvParamters);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "../../../drivers/defines.h" 1
-# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "../../../drivers/functions.h" 1
 # 14 "../../../drivers/functions.h"
 void vFunc_Inf2pi(float *angle_in_radians);
@@ -488,9 +488,9 @@ void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
 
 
 void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.h" 1
-# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.h"
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.h" 1
+# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.h"
 typedef struct {
   uint8_t name_length;
   uint8_t name[3];
@@ -545,7 +545,7 @@ void send_idle(void);
 void send_ping_response(void);
 void server_receiver(uint8_t *data, uint16_t len);
 void debug(const char *fmt, ...);
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5435,7 +5435,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
@@ -5538,8 +5538,8 @@ uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\simple_protocol.h" 1
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\simple_protocol.h" 1
 
 
 
@@ -5547,7 +5547,7 @@ typedef QueueHandle_t SemaphoreHandle_t;
 
 void simple_p_init(void (*cb)(uint8_t*, uint16_t));
 uint8_t simple_p_send(uint8_t address, uint8_t *data, uint16_t length);
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/NRF_LOG.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/NRF_LOG.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -5760,7 +5760,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/NRF_LOG.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/NRF_LOG.h"
 uint32_t nrf_log_push(char * const p_str);
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 2
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 
 
 
@@ -5778,7 +5778,7 @@ uint8_t use_arq[11] = {
   [9] = 1,
   [10] = 0
 };
-# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 extern uint8_t USEBLUETOOTH;
 
 void server_communication_init(void) {
@@ -5849,27 +5849,27 @@ void debug(const char *fmt, ...) {
  va_list ap;
  buf[0] = 10;
  
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 3 4
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 __builtin_va_start((
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 ap
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 3 4
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 ),
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 fmt
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 3 4
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 )
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
                  ;
  uint8_t ret = vsprintf((char*)buf+1, fmt, ap);
  
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 3 4
+# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 __builtin_va_end(
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 ap
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 3 4
+# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 )
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
           ;
  if (ret > 0) {
   if(use_arq[10]) arq_send(server_connection, buf, ret+1);
@@ -5886,17 +5886,17 @@ void send_ping_response(void) {
 
 void server_receiver(uint8_t *data, uint16_t len) {
   if(data == 
-# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 3 4
+# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
             0
-# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
                 ) {
       gHandshook = 0;
   }
   if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_1(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "GIVING command semaphore with len:%d", (uint32_t)(len)); } };
   memcpy(&message_in, data, len);
   xQueueGenericSend( ( QueueHandle_t ) ( xCommandReadyBSem ), 
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c" 3 4
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
  0
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\server_communication.c"
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }

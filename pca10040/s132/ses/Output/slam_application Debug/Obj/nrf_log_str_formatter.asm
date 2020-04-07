@@ -4743,10 +4743,8 @@ severity_names:
 	.ascii	"uint16_t\000"
 .LASF155:
 	.ascii	"nrf_log_module_name_get\000"
-.LASF159:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF22:
+	.ascii	"io_buffer_size\000"
 .LASF71:
 	.ascii	"int_p_cs_precedes\000"
 .LASF12:
@@ -4810,6 +4808,9 @@ severity_names:
 	.ascii	"short unsigned int\000"
 .LASF39:
 	.ascii	"name\000"
+.LASF159:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF21:
 	.ascii	"p_io_buffer\000"
 .LASF77:
@@ -4854,8 +4855,6 @@ severity_names:
 	.ascii	"__tolower\000"
 .LASF154:
 	.ascii	"nrf_fprintf_buffer_flush\000"
-.LASF22:
-	.ascii	"io_buffer_size\000"
 .LASF108:
 	.ascii	"__user_set_time_of_day\000"
 .LASF72:

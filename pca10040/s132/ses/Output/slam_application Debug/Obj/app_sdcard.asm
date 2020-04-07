@@ -28221,6 +28221,8 @@ m_spi:
 	.ascii	"rx_buffer_length\000"
 .LASF150:
 	.ascii	"decode\000"
+.LASF125:
+	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
 .LASF28:
 	.ascii	"blocks_left\000"
 .LASF16:
@@ -28229,10 +28231,6 @@ m_spi:
 	.ascii	"__iswctype\000"
 .LASF372:
 	.ascii	"input\000"
-.LASF386:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF289:
 	.ascii	"ret_code_t\000"
 .LASF43:
@@ -28614,8 +28612,9 @@ m_spi:
 	.ascii	"block_address\000"
 .LASF167:
 	.ascii	"__wctomb\000"
-.LASF125:
-	.ascii	"NRF_GPIO_PIN_DIR_OUTPUT\000"
+.LASF386:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF320:
 	.ascii	"p_buf\000"
 .LASF216:

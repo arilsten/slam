@@ -4905,10 +4905,8 @@ nrf_nvic_state:
 	.ascii	"n_cs_precedes\000"
 .LASF146:
 	.ascii	"uint16_t\000"
-.LASF211:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF23:
+	.ascii	"__isctype\000"
 .LASF194:
 	.ascii	"sd_nvic_critical_region_exit\000"
 .LASF67:
@@ -4985,6 +4983,9 @@ nrf_nvic_state:
 	.ascii	"name\000"
 .LASF120:
 	.ascii	"RNG_IRQn\000"
+.LASF211:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF205:
 	.ascii	"__get_CONTROL\000"
 .LASF73:
@@ -5183,8 +5184,6 @@ nrf_nvic_state:
 	.ascii	"SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQn\000"
 .LASF165:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF23:
-	.ascii	"__isctype\000"
 .LASF55:
 	.ascii	"int_n_sign_posn\000"
 .LASF71:

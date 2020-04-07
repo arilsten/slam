@@ -25830,10 +25830,6 @@ page_tag_swap.8639:
 	.ascii	"valid_records\000"
 .LASF7:
 	.ascii	"uninit\000"
-.LASF498:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF168:
 	.ascii	"gc_run_count\000"
 .LASF489:
@@ -26316,6 +26312,9 @@ page_tag_swap.8639:
 	.ascii	"FDS_HEADER_CORRUPT\000"
 .LASF401:
 	.ascii	"delete_execute\000"
+.LASF498:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF99:
 	.ascii	"op_code\000"
 .LASF1:

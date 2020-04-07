@@ -1,8 +1,8 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 3 4
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 1 3 4
@@ -376,7 +376,7 @@ int wctomb_l(char *__s, wchar_t __wc, struct __locale_s *__loc);
 
 size_t wcstombs(char *__s, const wchar_t *__pwcs, size_t __n);
 size_t wcstombs_l(char *__s, const wchar_t *__pwcs, size_t __n, struct __locale_s *__loc);
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 2
 
 # 1 "../../../../../../components/libraries/delay/nrf_delay.h" 1
 # 44 "../../../../../../components/libraries/delay/nrf_delay.h"
@@ -5189,7 +5189,7 @@ static inline void nrf_delay_ms(uint32_t ms_time)
         nrfx_coredep_delay_us(1000);
     } while (--ms_time);
 }
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 2
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 2
 # 1 "../../../../../../components/libraries/spi_mngr/nrf_spi_mngr.h" 1
 # 44 "../../../../../../components/libraries/spi_mngr/nrf_spi_mngr.h"
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_spi.h" 1
@@ -6784,7 +6784,7 @@ static inline
 # 298 "../../../../../../components/libraries/spi_mngr/nrf_spi_mngr.h"
                                                                            );
 }
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 2
 # 1 "../../../../../../modules/nrfx/hal/nrf_gpio.h" 1
 # 76 "../../../../../../modules/nrfx/hal/nrf_gpio.h"
 typedef enum
@@ -7244,9 +7244,9 @@ static inline void nrf_gpio_pin_latch_clear(uint32_t pin_number)
 
     reg->LATCH = (1 << pin_number);
 }
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 2
+# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 2
 
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h" 1
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h" 1
 
 
 
@@ -7316,8 +7316,8 @@ typedef struct
 
     lcd_cb_t * p_lcd_cb;
 }nrf_lcd_t;
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h" 2
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h" 2
+# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 ret_code_t oled_init(void);
 
 
@@ -7326,9 +7326,9 @@ ret_code_t oled_init(void);
 
 
 void oled_uninit(void);
-# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_draw_pixel(uint16_t x, uint16_t y, uint32_t color);
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_draw_rectangle(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color);
 
 
@@ -7344,20 +7344,20 @@ void oled_display(void);
 
 
 void oled_clear(void);
-# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_dummy_rotation_set(nrf_lcd_rotation_t rotation);
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
 void oled_invert(
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h" 3 4
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h" 3 4
                 _Bool 
-# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.h"
+# 81 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.h"
                      invert);
-# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 2
-# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 2
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
 static nrf_spi_mngr_transaction_t const * m_nrf_spi_mngr_queue_nrf_queue_buffer[((15)) + 1]; static nrf_queue_cb_t m_nrf_spi_mngr_queue_nrf_queue_cb; const nrf_log_module_const_data_t m_nrf_log_queue_m_nrf_spi_mngr_queue_logs_data_const __attribute__ ((section("." "log_const_data_queue_m_nrf_spi_mngr_queue"))) __attribute__((used)) = { .p_module_name = "queue.m_nrf_spi_mngr_queue", .info_color_id = (0), .debug_color_id = (0), .compiled_lvl = (nrf_log_severity_t)(0 ? 3 : NRF_LOG_SEVERITY_NONE), .initial_lvl = (nrf_log_severity_t)(3), }; nrf_log_module_reduced_dynamic_data_t m_nrf_log_queue_m_nrf_spi_mngr_queue_logs_data_dynamic __attribute__ ((section("." "log_dynamic_data_queue_m_nrf_spi_mngr_queue"))) __attribute__((used)); const nrf_queue_t m_nrf_spi_mngr_queue __attribute__ ((section("." "nrf_queue"))) __attribute__((used)) = { .p_cb = &m_nrf_spi_mngr_queue_nrf_queue_cb, .p_buffer = m_nrf_spi_mngr_queue_nrf_queue_buffer, .size = ((15)), .element_size = sizeof(nrf_spi_mngr_transaction_t const *), .mode = NRF_QUEUE_MODE_NO_OVERFLOW, .p_log = &m_nrf_log_queue_m_nrf_spi_mngr_queue_logs_data_dynamic, }; static nrf_spi_mngr_cb_t m_nrf_spi_mngr_cb; static const nrf_spi_mngr_t m_nrf_spi_mngr = { .p_nrf_spi_mngr_cb = &m_nrf_spi_mngr_cb, .p_queue = &m_nrf_spi_mngr_queue, .spi = { 2, { .spi = { .p_reg = ((NRF_SPI_Type *) 0x40023000UL), .drv_inst_idx = NRFX_SPI2_INST_IDX, } }, 
-# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
 0 
-# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
 } };
 
 static nrf_drv_spi_config_t const spi_config = {
@@ -7501,11 +7501,11 @@ static void cb_oled_set_data_cb(void * p_user_data)
 {
     nrf_gpio_pin_set(9);
 }
-# 176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  extern 
-# 176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
        _Bool 
-# 176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 176 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
             shared_SPI_init;
 
 ret_code_t oled_init(void) {
@@ -7515,7 +7515,7 @@ ret_code_t oled_init(void) {
  if (err_code == ((0x0) + 8)) {
   nrf_spi_mngr_uninit(&m_nrf_spi_mngr);
   err_code = nrf_spi_mngr_init(&m_nrf_spi_mngr, &spi_config);
-  do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 185, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"); } while (0); } } while (0);
+  do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 185, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"); } while (0); } } while (0);
  }
 
     if (err_code == ((0x0) + 0))
@@ -7532,19 +7532,19 @@ ret_code_t oled_init(void) {
         nrf_spi_mngr_transfer_t const transfers[] =
         {
             { .p_tx_data = (uint8_t const *)oled_init_commands, .tx_length = (uint8_t) sizeof(oled_init_commands), .p_rx_data = (uint8_t *) 
-# 201 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 201 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
            0
-# 201 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 201 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
            , .rx_length = (uint8_t) 0, }
         };
         err_code = nrf_spi_mngr_perform(&m_nrf_spi_mngr, 
-# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
                                                         0
-# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
                                                             , transfers, (sizeof(transfers) / sizeof((transfers)[0])), 
-# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
                                                                                                 0
-# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 203 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
                                                                                                     );
     }
     return err_code;
@@ -7554,10 +7554,10 @@ void oled_uninit(void)
 {
     nrf_spi_mngr_uninit(&m_nrf_spi_mngr);
 }
-# 223 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 223 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
 void oled_draw_pixel(uint16_t x, uint16_t y, uint32_t color) {
- if (1) { if (x < 128) { } else { assert_nrf_callback((uint16_t)224, (uint8_t *)"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"); } };
-    if (1) { if (y < 64) { } else { assert_nrf_callback((uint16_t)225, (uint8_t *)"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"); } };
+ if (1) { if (x < 128) { } else { assert_nrf_callback((uint16_t)224, (uint8_t *)"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"); } };
+    if (1) { if (y < 64) { } else { assert_nrf_callback((uint16_t)225, (uint8_t *)"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"); } };
 
  if (color == 1)
   oled_buffer[x + (y/8)*128] |= (1 << (y&7));
@@ -7567,7 +7567,7 @@ void oled_draw_pixel(uint16_t x, uint16_t y, uint32_t color) {
 
 
 }
-# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
 void oled_draw_rectangle(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color) {
  if ((x + width) >= 128)
     {
@@ -7602,7 +7602,7 @@ void oled_display(void) {
  if (err_code == ((0x0) + 8)) {
   nrf_spi_mngr_uninit(&m_nrf_spi_mngr);
   err_code = nrf_spi_mngr_init(&m_nrf_spi_mngr, &spi_config);
-  do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 283, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"); } while (0); } } while (0);
+  do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 283, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"); } while (0); } } while (0);
  }
 
  static nrf_spi_mngr_transfer_t const oled_display_transfer[] = {
@@ -7610,9 +7610,9 @@ void oled_display(void) {
 
  };
  nrf_spi_mngr_perform(&m_nrf_spi_mngr, &spi_config, oled_display_transfer, 1, 
-# 290 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 290 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
                                                                              0
-# 290 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 290 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
                                                                                  );
 
  nrf_gpio_pin_set(9);
@@ -7620,52 +7620,52 @@ void oled_display(void) {
 
  static nrf_spi_mngr_transfer_t const transfer[] = {
   { .p_tx_data = (uint8_t const *)oled_buffer, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 296 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 296 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 296 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 296 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
   { .p_tx_data = (uint8_t const *)oled_buffer+128, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 297 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 297 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 297 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 297 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
   { .p_tx_data = (uint8_t const *)oled_buffer+256, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 298 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 298 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 298 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 298 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
   { .p_tx_data = (uint8_t const *)oled_buffer+384, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 299 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
   { .p_tx_data = (uint8_t const *)oled_buffer+512, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 300 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 300 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 300 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 300 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
   { .p_tx_data = (uint8_t const *)oled_buffer+640, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
   { .p_tx_data = (uint8_t const *)oled_buffer+768, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 302 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
   { .p_tx_data = (uint8_t const *)oled_buffer+896, .tx_length = (uint8_t) 128, .p_rx_data = (uint8_t *) 
-# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
  0
-# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 303 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
  , .rx_length = (uint8_t) 0, },
  };
 
  nrf_spi_mngr_perform(&m_nrf_spi_mngr, &spi_config, transfer,
   sizeof(transfer)/sizeof(transfer[0]), 
-# 307 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 307 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
                                        0
-# 307 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 307 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
                                            );
 }
 
@@ -7677,15 +7677,15 @@ void oled_display(void) {
 void oled_clear(void) {
  memset((void *)oled_buffer, 0, sizeof(oled_buffer));
 }
-# 327 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 327 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
 void oled_dummy_rotation_set(nrf_lcd_rotation_t rotation) {
 
 }
-# 338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
 void oled_invert(
-# 338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c" 3 4
+# 338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c" 3 4
                 _Bool 
-# 338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\oled.c"
+# 338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\oled.c"
                      invert) {
 
 }

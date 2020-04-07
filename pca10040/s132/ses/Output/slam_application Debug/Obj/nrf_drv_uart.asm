@@ -6250,10 +6250,6 @@ nrf_drv_uart_use_easy_dma:
 	.ascii	"pseltxd\000"
 .LASF73:
 	.ascii	"NRFX_UARTE_EVT_TX_DONE\000"
-.LASF272:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF44:
 	.ascii	"NRF_UART_Type\000"
 .LASF247:
@@ -6524,6 +6520,9 @@ nrf_drv_uart_use_easy_dma:
 	.ascii	"NRF_UART_BAUDRATE_14400\000"
 .LASF170:
 	.ascii	"__wctomb\000"
+.LASF272:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF125:
 	.ascii	"ENABLE\000"
 .LASF197:

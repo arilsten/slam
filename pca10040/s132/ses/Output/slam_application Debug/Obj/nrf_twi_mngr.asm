@@ -9839,10 +9839,6 @@ nrf_twi_mngr_perform:
 	.ascii	"nrfx_twim_xfer_type_t\000"
 .LASF18:
 	.ascii	"p_transfers\000"
-.LASF290:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF138:
 	.ascii	"TWIM_PSEL_Type\000"
 .LASF37:
@@ -10115,6 +10111,9 @@ nrf_twi_mngr_perform:
 	.ascii	"NRF_QUEUE_MODE_NO_OVERFLOW\000"
 .LASF163:
 	.ascii	"__wctomb\000"
+.LASF290:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF123:
 	.ascii	"ENABLE\000"
 .LASF190:

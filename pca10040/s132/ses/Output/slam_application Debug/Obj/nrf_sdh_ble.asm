@@ -14945,6 +14945,9 @@ m_nrf_sdh_ble_evts_poll:
 	.ascii	"ble_gattc_service_t\000"
 .LASF409:
 	.ascii	"__RAL_error_decoder_s\000"
+.LASF547:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF338:
 	.ascii	"master_id\000"
 .LASF59:
@@ -15349,10 +15352,6 @@ m_nrf_sdh_ble_evts_poll:
 	.ascii	"ble_gatts_evt_exchange_mtu_request_t\000"
 .LASF517:
 	.ascii	"iter\000"
-.LASF547:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF19:
 	.ascii	"handler\000"
 .LASF369:

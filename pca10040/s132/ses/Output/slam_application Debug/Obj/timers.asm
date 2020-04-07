@@ -10089,10 +10089,8 @@ xTimerTaskHandle:
 	.ascii	"pxCallback\000"
 .LASF2:
 	.ascii	"BaseType_t\000"
-.LASF247:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF1:
+	.ascii	"tmrTimerQueueMessage\000"
 .LASF103:
 	.ascii	"int_p_cs_precedes\000"
 .LASF46:
@@ -10175,6 +10173,9 @@ xTimerTaskHandle:
 	.ascii	"short unsigned int\000"
 .LASF72:
 	.ascii	"name\000"
+.LASF247:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF49:
 	.ascii	"ICSR\000"
 .LASF51:
@@ -10376,8 +10377,6 @@ xTimerTaskHandle:
 	.ascii	"pxTemp\000"
 .LASF27:
 	.ascii	"uxTimerNumber\000"
-.LASF1:
-	.ascii	"tmrTimerQueueMessage\000"
 .LASF76:
 	.ascii	"__RAL_locale_codeset_t\000"
 .LASF220:

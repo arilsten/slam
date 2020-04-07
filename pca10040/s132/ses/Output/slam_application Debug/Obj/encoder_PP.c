@@ -1,10 +1,10 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.h" 1
-# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.h" 1
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.h"
 # 1 "../../../../../../modules/nrfx/drivers/include/nrfx_gpiote.h" 1
 # 44 "../../../../../../modules/nrfx/drivers/include/nrfx_gpiote.h"
 # 1 "../../../../../../modules/nrfx/nrfx.h" 1
@@ -5996,7 +5996,7 @@ void nrfx_gpiote_clr_task_trigger(nrfx_gpiote_pin_t pin);
 
 
 void GPIOTE_IRQHandler(void);
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.h" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.h" 2
 # 1 "../../../../../../modules/nrfx/drivers/include/nrfx_timer.h" 1
 # 45 "../../../../../../modules/nrfx/drivers/include/nrfx_timer.h"
 # 1 "../../../../../../modules/nrfx/hal/nrf_timer.h" 1
@@ -6656,7 +6656,7 @@ void TIMER1_IRQHandler(void);
 void TIMER2_IRQHandler(void);
 void TIMER3_IRQHandler(void);
 void TIMER4_IRQHandler(void);
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.h" 2
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.h" 2
 
 
 typedef enum {
@@ -6669,14 +6669,14 @@ typedef struct {
     long left;
     long right;
 }encoderTicks;
-# 40 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.h"
+# 40 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.h"
 void encoder_init_ppi(EncoderSide_t side, const nrfx_timer_t* counter);
-# 52 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.h"
+# 52 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.h"
 void encoder_init_int();
 
 encoderTicks encoder_get_ticks();
 encoderTicks encoder_get_all_ticks();
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 2
+# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 2
 # 1 "../../../../../../modules/nrfx/drivers/include/nrfx_ppi.h" 1
 # 45 "../../../../../../modules/nrfx/drivers/include/nrfx_ppi.h"
 # 1 "../../../../../../modules/nrfx/hal/nrf_ppi.h" 1
@@ -7062,7 +7062,7 @@ static inline uint32_t nrfx_ppi_task_addr_group_disable_get(nrf_ppi_channel_grou
 {
     return (uint32_t) nrf_ppi_task_group_disable_address_get(group);
 }
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 2
+# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 2
 # 1 "../../../../../../components/libraries/delay/nrf_delay.h" 1
 # 64 "../../../../../../components/libraries/delay/nrf_delay.h"
 static inline void nrf_delay_ms(uint32_t ms_time)
@@ -7076,7 +7076,7 @@ static inline void nrf_delay_ms(uint32_t ms_time)
         nrfx_coredep_delay_us(1000);
     } while (--ms_time);
 }
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 2
+# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -7371,7 +7371,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 2
+# 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 2
 
 
 
@@ -7421,19 +7421,19 @@ void encoder_init_ppi(EncoderSide_t side, const nrfx_timer_t* counter) {
  nrfx_err_t err;
  if(!nrfx_gpiote_is_init())
   err = nrfx_gpiote_init();
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 54, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 54, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"); } while (0); } } while (0);
 
  uint32_t ppi_timer_task_addr = 0;
  uint32_t ppi_gpio_event_addr = 0;
 
  nrfx_gpiote_in_config_t config = { .is_watcher = 
-# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                  0
-# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                  , .hi_accuracy = 
-# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                  1
-# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                  , .pull = NRF_GPIO_PIN_NOPULL, .sense = NRF_GPIOTE_POLARITY_LOTOHI, };
 
  int pin;
@@ -7453,31 +7453,31 @@ void encoder_init_ppi(EncoderSide_t side, const nrfx_timer_t* counter) {
 
 
  nrfx_timer_config_t timer_config = { .frequency = (nrf_timer_frequency_t)0, .mode = (nrf_timer_mode_t)0, .bit_width = (nrf_timer_bit_width_t)0, .interrupt_priority = 7, .p_context = 
-# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                    0 
-# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                    };
  timer_config.mode = NRF_TIMER_MODE_COUNTER;
  err = nrfx_timer_init(counter, &timer_config, timer_event_handler_dummy);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 80, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 80, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"); } while (0); } } while (0);
  nrfx_timer_enable(counter);
  ppi_timer_task_addr = nrfx_timer_task_address_get(counter, NRF_TIMER_TASK_COUNT);
 
 
  err = nrfx_ppi_channel_alloc(ppi_channel);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 86, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 86, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"); } while (0); } } while (0);
  err = nrfx_ppi_channel_assign( *ppi_channel,
          ppi_gpio_event_addr,
          ppi_timer_task_addr);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 90, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 90, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"); } while (0); } } while (0);
  err = nrfx_ppi_channel_enable(*ppi_channel);
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 92, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 92, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"); } while (0); } } while (0);
 
 
  nrfx_gpiote_in_event_enable(pin, 
-# 95 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 95 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                  0
-# 95 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 95 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                       );
 
  for (;;) {
@@ -7495,29 +7495,29 @@ void encoder_init_int(){
   err = nrfx_gpiote_init();
 
  nrfx_gpiote_in_config_t config = { .is_watcher = 
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                  0
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                  , .hi_accuracy = 
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                  1
-# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 111 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                  , .pull = NRF_GPIO_PIN_NOPULL, .sense = NRF_GPIOTE_POLARITY_LOTOHI, };
         err = nrfx_gpiote_in_init(11, &config, cb_trampoline);
         nrfx_gpiote_in_event_enable(11,
-# 113 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 113 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                                     1
-# 113 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 113 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                                         );
         err = nrfx_gpiote_in_init(12, &config, cb_trampoline);
         nrfx_gpiote_in_event_enable(12,
-# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c" 3 4
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c" 3 4
                                                      1
-# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"
                                                          );
 
 
- do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 118, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\drivers\\encoder.c"); } while (0); } } while (0);
+ do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 118, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\encoder.c"); } while (0); } } while (0);
 }
 
 encoderTicks encoder_get_ticks(){

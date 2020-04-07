@@ -5052,6 +5052,9 @@ SystemCoreClock:
 	.ascii	"NRF_NVMC_Type\000"
 .LASF75:
 	.ascii	"CODEPAGESIZE\000"
+.LASF147:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF39:
 	.ascii	"LFCLKSTAT\000"
 .LASF85:
@@ -5078,10 +5081,6 @@ SystemCoreClock:
 	.ascii	"errata_16\000"
 .LASF3:
 	.ascii	"CONFIG\000"
-.LASF147:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF18:
 	.ascii	"EVENTS_DATARDY\000"
 .LASF86:

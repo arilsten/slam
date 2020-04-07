@@ -5530,10 +5530,8 @@ nrf_memobj_read:
 	.ascii	"uint16_t\000"
 .LASF80:
 	.ascii	"day_names\000"
-.LASF173:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF47:
+	.ascii	"__isctype\000"
 .LASF74:
 	.ascii	"int_p_cs_precedes\000"
 .LASF33:
@@ -5599,6 +5597,9 @@ nrf_memobj_read:
 	.ascii	"short unsigned int\000"
 .LASF29:
 	.ascii	"p_stack_pointer\000"
+.LASF173:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF43:
 	.ascii	"name\000"
 .LASF169:
@@ -5745,8 +5746,6 @@ nrf_memobj_read:
 	.ascii	"stderr\000"
 .LASF103:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF47:
-	.ascii	"__isctype\000"
 .LASF15:
 	.ascii	"chunk_size\000"
 .LASF35:

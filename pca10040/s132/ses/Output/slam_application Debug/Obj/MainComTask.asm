@@ -58,14 +58,14 @@
 vMainCommunicationTask:
 .LVL0:
 .LFB267:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\MainComTask.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
 	.loc 1 27 48 view -0
 	@ args = 0, pretend = 0, frame = 48
 	@ frame_needed = 0, uses_anonymous_args = 0
 	.loc 1 27 48 is_stmt 0 view .LVU1
-	push	{r4, r5, r6, lr}
+	push	{r4, r5, lr}
 .LCFI0:
-	sub	sp, sp, #48
+	sub	sp, sp, #52
 .LCFI1:
 	.loc 1 28 5 is_stmt 1 view .LVU2
 	.loc 1 28 23 is_stmt 0 view .LVU3
@@ -431,24 +431,24 @@ vMainCommunicationTask:
 	b	.L18
 .L20:
 .LBB4:
-	.loc 1 143 7 view .LVU141
-	.loc 1 143 25 is_stmt 0 view .LVU142
-	ldr	r3, .L23+88
-	smull	r1, r2, r3, r4
-	asrs	r4, r4, #31
-	rsb	r4, r4, r2, asr #2
-	sxth	r4, r4
-	vmov	s15, r4	@ int
+	.loc 1 146 7 view .LVU141
+	.loc 1 146 25 is_stmt 0 view .LVU142
+	ldr	r1, .L23+88
+	smull	r4, r0, r1, r3
+	asrs	r3, r3, #31
+	rsb	r3, r3, r0, asr #2
+	sxth	r3, r3
+	vmov	s15, r3	@ int
 	vcvt.f32.s32	s15, s15
 	vstr.32	s15, [sp, #12]
-	smull	r2, r3, r3, r5
-	asrs	r5, r5, #31
-	rsb	r5, r5, r3, asr #2
-	sxth	r5, r5
-	vmov	s15, r5	@ int
+	smull	r3, r1, r1, r2
+	asrs	r2, r2, #31
+	rsb	r2, r2, r1, asr #2
+	sxth	r2, r2
+	vmov	s15, r2	@ int
 	vcvt.f32.s32	s15, s15
 	vstr.32	s15, [sp, #16]
-	.loc 1 144 7 is_stmt 1 view .LVU143
+	.loc 1 147 7 is_stmt 1 view .LVU143
 	movs	r3, #0
 	movs	r2, #100
 	add	r1, sp, #12
@@ -458,13 +458,13 @@ vMainCommunicationTask:
 .LVL27:
 .L18:
 .LBE4:
-	.loc 1 153 326 discriminator 5 view .LVU144
-	.loc 1 156 4 discriminator 5 view .LVU145
-	.loc 1 156 12 is_stmt 0 discriminator 5 view .LVU146
+	.loc 1 156 326 discriminator 5 view .LVU144
+	.loc 1 159 4 discriminator 5 view .LVU145
+	.loc 1 159 12 is_stmt 0 discriminator 5 view .LVU146
 	ldr	r3, .L23+92
 	movs	r2, #0
 	strb	r2, [r3]
-	.loc 1 157 4 is_stmt 1 discriminator 5 view .LVU147
+	.loc 1 160 4 is_stmt 1 discriminator 5 view .LVU147
 	movs	r0, #100
 	bl	vTaskDelay
 .LVL28:
@@ -505,35 +505,16 @@ vMainCommunicationTask:
 	.loc 1 134 6 view .LVU162
 	.loc 1 135 6 view .LVU163
 	.loc 1 135 20 is_stmt 0 view .LVU164
-	ldrsh	r4, [sp, #5]	@ unaligned
+	ldrsh	r3, [sp, #5]	@ unaligned
 	.loc 1 136 6 is_stmt 1 view .LVU165
 	.loc 1 136 20 is_stmt 0 view .LVU166
-	ldrsh	r5, [sp, #7]	@ unaligned
-	.loc 1 137 6 is_stmt 1 view .LVU167
-	ldr	r6, .L23+96
-	movs	r1, #20
-	ldr	r0, [r6]
-	bl	xQueueSemaphoreTake
-.LVL30:
-	.loc 1 138 6 view .LVU168
-	movs	r2, #4
-	ldr	r1, .L23+100
-	mov	r0, sp
-	bl	memcpy
-.LVL31:
-	.loc 1 139 6 view .LVU169
-	movs	r3, #0
-	mov	r2, r3
-	mov	r1, r3
-	ldr	r0, [r6]
-	bl	xQueueGenericSend
-.LVL32:
-	.loc 1 142 6 view .LVU170
-	.loc 1 142 8 is_stmt 0 view .LVU171
-	cmp	r4, #0
+	ldrsh	r2, [sp, #7]	@ unaligned
+	.loc 1 145 6 is_stmt 1 view .LVU167
+	.loc 1 145 8 is_stmt 0 view .LVU168
+	cmp	r3, #0
 	bne	.L20
-	.loc 1 142 39 discriminator 1 view .LVU172
-	cmp	r5, #0
+	.loc 1 145 39 discriminator 1 view .LVU169
+	cmp	r2, #0
 	beq	.L18
 	b	.L20
 .L24:
@@ -563,8 +544,6 @@ vMainCommunicationTask:
 	.word	gY_hat
 	.word	1717986919
 	.word	.LANCHOR1
-	.word	xCollisionMutex
-	.word	.LANCHOR2
 .LBE5:
 .LFE267:
 	.size	vMainCommunicationTask, .-vMainCommunicationTask
@@ -586,7 +565,6 @@ message_in:
 	.space	26
 	.section	.data.collisionAngles,"aw"
 	.align	2
-	.set	.LANCHOR2,. + 0
 	.type	collisionAngles, %object
 	.size	collisionAngles, 4
 collisionAngles:
@@ -616,12 +594,10 @@ collisionAngles:
 	.byte	0x4
 	.4byte	.LCFI0-.LFB267
 	.byte	0xe
-	.uleb128 0x10
+	.uleb128 0xc
 	.byte	0x84
-	.uleb128 0x4
-	.byte	0x85
 	.uleb128 0x3
-	.byte	0x86
+	.byte	0x85
 	.uleb128 0x2
 	.byte	0x8e
 	.uleb128 0x1
@@ -774,7 +750,7 @@ collisionAngles:
 	.byte	0x8
 	.4byte	.LASF14
 	.byte	0
-	.file 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\globals.h"
+	.file 5 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h"
 	.section	.debug_types,"G",%progbits,wt.983716c4a1013425,comdat
 	.4byte	0x45
 	.2byte	0x4
@@ -2056,7 +2032,7 @@ collisionAngles:
 	.4byte	.LASF74
 	.byte	0
 	.file 9 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h"
-	.file 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\software\\MainComTask.h"
+	.file 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h"
 	.file 11 "../../../../../../components/toolchain/cmsis/include/core_cm4.h"
 	.file 12 "../../../../../../modules/nrfx/mdk/system_nrf52.h"
 	.file 13 "../../../../../../components/libraries/util/app_util.h"
@@ -2066,18 +2042,17 @@ collisionAngles:
 	.file 17 "../../../../../../external/freertos/source/include/semphr.h"
 	.file 18 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
 	.file 19 "../../../drivers/i2c.h"
-	.file 20 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0x922
+	.4byte	0x8c1
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1b
-	.4byte	.LASF209
+	.4byte	.LASF208
 	.byte	0xc
+	.4byte	.LASF209
 	.4byte	.LASF210
-	.4byte	.LASF211
 	.4byte	.Ldebug_ranges0+0x18
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -2734,7 +2709,7 @@ collisionAngles:
 	.byte	0x3
 	.4byte	counter
 	.uleb128 0x25
-	.4byte	.LASF212
+	.4byte	.LASF211
 	.byte	0x1
 	.byte	0x1b
 	.byte	0x6
@@ -2742,9 +2717,9 @@ collisionAngles:
 	.4byte	.LFE267-.LFB267
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x859
+	.4byte	0x804
 	.uleb128 0x26
-	.4byte	.LASF213
+	.4byte	.LASF212
 	.byte	0x1
 	.byte	0x1b
 	.byte	0x23
@@ -2756,7 +2731,7 @@ collisionAngles:
 	.byte	0x1
 	.byte	0x1c
 	.byte	0x17
-	.4byte	0x91c
+	.4byte	0x8bb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
@@ -2783,16 +2758,16 @@ collisionAngles:
 	.4byte	.LVUS1
 	.uleb128 0x2a
 	.4byte	.LVL1
-	.4byte	0x879
+	.4byte	0x824
 	.uleb128 0x2a
 	.4byte	.LVL2
-	.4byte	0x885
+	.4byte	0x830
 	.uleb128 0x2a
 	.4byte	.LVL4
-	.4byte	0x892
+	.4byte	0x83d
 	.uleb128 0x2b
 	.4byte	.LVL6
-	.4byte	0x89e
+	.4byte	0x849
 	.4byte	0x5af
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2803,7 +2778,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL7
-	.4byte	0x8ab
+	.4byte	0x856
 	.4byte	0x5cc
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2820,7 +2795,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL8
-	.4byte	0x89e
+	.4byte	0x849
 	.4byte	0x5e0
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2831,10 +2806,10 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL9
-	.4byte	0x8b8
+	.4byte	0x863
 	.uleb128 0x2b
 	.4byte	.LVL10
-	.4byte	0x8c4
+	.4byte	0x86f
 	.4byte	0x600
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2845,7 +2820,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL12
-	.4byte	0x8c4
+	.4byte	0x86f
 	.4byte	0x617
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2856,7 +2831,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL13
-	.4byte	0x8d1
+	.4byte	0x87c
 	.4byte	0x62b
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2867,7 +2842,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL14
-	.4byte	0x8c4
+	.4byte	0x86f
 	.4byte	0x642
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2878,7 +2853,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL15
-	.4byte	0x8c4
+	.4byte	0x86f
 	.4byte	0x659
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2889,10 +2864,10 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL16
-	.4byte	0x8de
+	.4byte	0x889
 	.uleb128 0x2b
 	.4byte	.LVL17
-	.4byte	0x8ea
+	.4byte	0x895
 	.4byte	0x685
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2915,7 +2890,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL18
-	.4byte	0x8f7
+	.4byte	0x8a2
 	.4byte	0x6a4
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2937,7 +2912,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL19
-	.4byte	0x8c4
+	.4byte	0x86f
 	.4byte	0x6bb
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2948,7 +2923,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL20
-	.4byte	0x8f7
+	.4byte	0x8a2
 	.4byte	0x6da
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2970,7 +2945,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL21
-	.4byte	0x8c4
+	.4byte	0x86f
 	.4byte	0x6f1
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2981,7 +2956,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL22
-	.4byte	0x8c4
+	.4byte	0x86f
 	.4byte	0x708
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -2992,7 +2967,7 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2d
 	.4byte	.LVL23
-	.4byte	0x8ab
+	.4byte	0x856
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x51
@@ -3008,7 +2983,7 @@ collisionAngles:
 	.byte	0x1
 	.byte	0x71
 	.byte	0xc
-	.4byte	0x859
+	.4byte	0x804
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -60
@@ -3017,38 +2992,35 @@ collisionAngles:
 	.byte	0x1
 	.byte	0x72
 	.byte	0xc
-	.4byte	0x869
+	.4byte	0x814
 	.uleb128 0x2f
 	.4byte	.LASF193
 	.byte	0x1
 	.byte	0x73
 	.byte	0xc
-	.4byte	0x869
-	.uleb128 0x27
+	.4byte	0x814
+	.uleb128 0x2f
 	.4byte	.LASF194
 	.byte	0x1
 	.byte	0x74
 	.byte	0xb
 	.4byte	0x28f
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -64
 	.uleb128 0x28
 	.4byte	.LBB4
 	.4byte	.LBE4-.LBB4
-	.4byte	0x78f
+	.4byte	0x78c
 	.uleb128 0x27
 	.4byte	.LASF195
 	.byte	0x1
-	.byte	0x8f
+	.byte	0x92
 	.byte	0x19
-	.4byte	0x91c
+	.4byte	0x8bb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -52
 	.uleb128 0x2d
 	.4byte	.LVL27
-	.4byte	0x8f7
+	.4byte	0x8a2
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x51
@@ -3070,8 +3042,8 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL24
-	.4byte	0x8d1
-	.4byte	0x7a2
+	.4byte	0x87c
+	.4byte	0x79f
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x51
@@ -3080,8 +3052,8 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL25
-	.4byte	0x8c4
-	.4byte	0x7b9
+	.4byte	0x86f
+	.4byte	0x7b6
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x51
@@ -3091,8 +3063,8 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL26
-	.4byte	0x8f7
-	.4byte	0x7d6
+	.4byte	0x8a2
+	.4byte	0x7d3
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x51
@@ -3111,8 +3083,8 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL28
-	.4byte	0x89e
-	.4byte	0x7ea
+	.4byte	0x849
+	.4byte	0x7e7
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x50
@@ -3120,10 +3092,9 @@ collisionAngles:
 	.byte	0x8
 	.byte	0x64
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2d
 	.4byte	.LVL29
-	.4byte	0x904
-	.4byte	0x809
+	.4byte	0x8af
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x50
@@ -3142,69 +3113,18 @@ collisionAngles:
 	.uleb128 0x1
 	.byte	0x35
 	.byte	0
-	.uleb128 0x2b
-	.4byte	.LVL30
-	.4byte	0x8d1
-	.4byte	0x81c
-	.uleb128 0x2c
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x1
-	.byte	0x44
-	.byte	0
-	.uleb128 0x2b
-	.4byte	.LVL31
-	.4byte	0x910
-	.4byte	0x83e
-	.uleb128 0x2c
-	.uleb128 0x1
-	.byte	0x50
-	.uleb128 0x2
-	.byte	0x7d
-	.sleb128 0
-	.uleb128 0x2c
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LANCHOR2
-	.uleb128 0x2c
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x1
-	.byte	0x34
-	.byte	0
-	.uleb128 0x2d
-	.4byte	.LVL32
-	.4byte	0x8f7
-	.uleb128 0x2c
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x1
-	.byte	0x30
-	.uleb128 0x2c
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x1
-	.byte	0x30
-	.uleb128 0x2c
-	.uleb128 0x1
-	.byte	0x53
-	.uleb128 0x1
-	.byte	0x30
-	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0xc
 	.4byte	0x3c
-	.4byte	0x869
+	.4byte	0x814
 	.uleb128 0xd
 	.4byte	0x92
 	.byte	0x4
 	.byte	0
 	.uleb128 0xc
 	.4byte	0x54
-	.4byte	0x879
+	.4byte	0x824
 	.uleb128 0xd
 	.4byte	0x92
 	.byte	0x1
@@ -3281,12 +3201,6 @@ collisionAngles:
 	.byte	0x13
 	.byte	0x8
 	.byte	0x6
-	.uleb128 0x30
-	.4byte	.LASF208
-	.4byte	.LASF208
-	.byte	0x14
-	.byte	0x5a
-	.byte	0x7
 	.uleb128 0x32
 	.byte	0x98
 	.byte	0x37
@@ -4020,7 +3934,7 @@ collisionAngles:
 	.4byte	0x14e
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0x926
+	.4byte	0x8c5
 	.4byte	0x2b
 	.ascii	"NRF_LOG_SEVERITY_NONE\000"
 	.4byte	0x31
@@ -4054,7 +3968,7 @@ collisionAngles:
 	.4byte	0x260
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0x926
+	.4byte	0x8c5
 	.4byte	0x35
 	.ascii	"signed char\000"
 	.4byte	0x29
@@ -4173,63 +4087,63 @@ collisionAngles:
 	.byte	0x3
 	.uleb128 0xb
 	.uleb128 0xa
-	.file 21 "../../../drivers/defines.h"
+	.file 20 "../../../drivers/defines.h"
 	.byte	0x3
 	.uleb128 0xc
-	.uleb128 0x15
+	.uleb128 0x14
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xc
 	.uleb128 0x7
 	.byte	0x4
-	.file 22 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+	.file 21 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 	.byte	0x3
 	.uleb128 0xd
-	.uleb128 0x16
-	.file 23 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h"
+	.uleb128 0x15
+	.file 22 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h"
 	.byte	0x3
 	.uleb128 0x23
-	.uleb128 0x17
+	.uleb128 0x16
 	.byte	0x4
-	.file 24 "../../../config/FreeRTOSConfig.h"
+	.file 23 "../../../config/FreeRTOSConfig.h"
 	.byte	0x3
 	.uleb128 0x39
-	.uleb128 0x18
-	.file 25 "../../../../../../components/softdevice/s132/headers/nrf_soc.h"
+	.uleb128 0x17
+	.file 24 "../../../../../../components/softdevice/s132/headers/nrf_soc.h"
 	.byte	0x3
 	.uleb128 0x22
-	.uleb128 0x19
-	.file 26 "../../../../../../modules/nrfx/mdk/nrf.h"
+	.uleb128 0x18
+	.file 25 "../../../../../../modules/nrfx/mdk/nrf.h"
 	.byte	0x3
 	.uleb128 0x33
-	.uleb128 0x1a
-	.file 27 "../../../../../../modules/nrfx/mdk/nrf52.h"
+	.uleb128 0x19
+	.file 26 "../../../../../../modules/nrfx/mdk/nrf52.h"
 	.byte	0x3
 	.uleb128 0x54
-	.uleb128 0x1b
+	.uleb128 0x1a
 	.byte	0x3
 	.uleb128 0x92
 	.uleb128 0xb
-	.file 28 "../../../../../../components/toolchain/cmsis/include/core_cmInstr.h"
+	.file 27 "../../../../../../components/toolchain/cmsis/include/core_cmInstr.h"
 	.byte	0x3
 	.uleb128 0xd2
-	.uleb128 0x1c
-	.file 29 "../../../../../../components/toolchain/cmsis/include/cmsis_gcc.h"
+	.uleb128 0x1b
+	.file 28 "../../../../../../components/toolchain/cmsis/include/cmsis_gcc.h"
 	.byte	0x3
 	.uleb128 0x3d
-	.uleb128 0x1d
+	.uleb128 0x1c
 	.byte	0x4
 	.byte	0x4
-	.file 30 "../../../../../../components/toolchain/cmsis/include/core_cmFunc.h"
+	.file 29 "../../../../../../components/toolchain/cmsis/include/core_cmFunc.h"
 	.byte	0x3
 	.uleb128 0xd3
-	.uleb128 0x1e
+	.uleb128 0x1d
 	.byte	0x4
-	.file 31 "../../../../../../components/toolchain/cmsis/include/core_cmSimd.h"
+	.file 30 "../../../../../../components/toolchain/cmsis/include/core_cmSimd.h"
 	.byte	0x3
 	.uleb128 0xd4
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
@@ -4237,138 +4151,138 @@ collisionAngles:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0x4
-	.file 32 "../../../../../../modules/nrfx/mdk/nrf52_bitfields.h"
+	.file 31 "../../../../../../modules/nrfx/mdk/nrf52_bitfields.h"
 	.byte	0x3
 	.uleb128 0x55
-	.uleb128 0x20
+	.uleb128 0x1f
 	.byte	0x4
-	.file 33 "../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h"
+	.file 32 "../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h"
 	.byte	0x3
 	.uleb128 0x56
-	.uleb128 0x21
+	.uleb128 0x20
 	.byte	0x4
-	.file 34 "../../../../../../modules/nrfx/mdk/nrf52_name_change.h"
+	.file 33 "../../../../../../modules/nrfx/mdk/nrf52_name_change.h"
 	.byte	0x3
 	.uleb128 0x57
-	.uleb128 0x22
+	.uleb128 0x21
 	.byte	0x4
-	.file 35 "../../../../../../modules/nrfx/mdk/compiler_abstraction.h"
+	.file 34 "../../../../../../modules/nrfx/mdk/compiler_abstraction.h"
 	.byte	0x3
 	.uleb128 0x61
-	.uleb128 0x23
+	.uleb128 0x22
 	.byte	0x4
 	.byte	0x4
-	.file 36 "../../../../../../components/softdevice/s132/headers/nrf_svc.h"
+	.file 35 "../../../../../../components/softdevice/s132/headers/nrf_svc.h"
 	.byte	0x3
 	.uleb128 0x34
-	.uleb128 0x24
+	.uleb128 0x23
 	.byte	0x4
-	.file 37 "../../../../../../components/softdevice/s132/headers/nrf_error.h"
+	.file 36 "../../../../../../components/softdevice/s132/headers/nrf_error.h"
 	.byte	0x3
 	.uleb128 0x35
-	.uleb128 0x25
+	.uleb128 0x24
 	.byte	0x4
-	.file 38 "../../../../../../components/softdevice/s132/headers/nrf_error_soc.h"
+	.file 37 "../../../../../../components/softdevice/s132/headers/nrf_error_soc.h"
 	.byte	0x3
 	.uleb128 0x36
-	.uleb128 0x26
+	.uleb128 0x25
 	.byte	0x4
 	.byte	0x4
-	.file 39 "../../../../../../components/libraries/util/app_util_platform.h"
+	.file 38 "../../../../../../components/libraries/util/app_util_platform.h"
 	.byte	0x3
 	.uleb128 0x24
-	.uleb128 0x27
+	.uleb128 0x26
 	.byte	0x3
 	.uleb128 0x35
-	.uleb128 0x23
+	.uleb128 0x22
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x39
 	.uleb128 0x6
 	.byte	0x4
-	.file 40 "../../../../../../components/libraries/util/nrf_assert.h"
+	.file 39 "../../../../../../components/libraries/util/nrf_assert.h"
 	.byte	0x3
 	.uleb128 0x3b
-	.uleb128 0x28
+	.uleb128 0x27
 	.byte	0x4
-	.file 41 "../../../../../../components/libraries/util/app_error.h"
+	.file 40 "../../../../../../components/libraries/util/app_error.h"
 	.byte	0x3
 	.uleb128 0x3c
-	.uleb128 0x29
-	.file 42 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h"
+	.uleb128 0x28
+	.file 41 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h"
 	.byte	0x3
 	.uleb128 0x37
-	.uleb128 0x2a
+	.uleb128 0x29
 	.byte	0x4
-	.file 43 "../../../../../../components/libraries/util/sdk_errors.h"
+	.file 42 "../../../../../../components/libraries/util/sdk_errors.h"
 	.byte	0x3
 	.uleb128 0x39
-	.uleb128 0x2b
+	.uleb128 0x2a
 	.byte	0x3
 	.uleb128 0x49
-	.uleb128 0x25
+	.uleb128 0x24
 	.byte	0x4
 	.byte	0x4
-	.file 44 "../../../../../../components/libraries/util/nordic_common.h"
+	.file 43 "../../../../../../components/libraries/util/nordic_common.h"
 	.byte	0x3
 	.uleb128 0x3a
-	.uleb128 0x2c
+	.uleb128 0x2b
 	.byte	0x4
-	.file 45 "../../../../../../components/libraries/util/app_error_weak.h"
+	.file 44 "../../../../../../components/libraries/util/app_error_weak.h"
 	.byte	0x3
 	.uleb128 0x3b
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xb1
-	.uleb128 0x28
+	.uleb128 0x27
 	.byte	0x4
-	.file 46 "../../../systemView/SEGGER_SYSVIEW_FreeRTOS.h"
+	.file 45 "../../../systemView/SEGGER_SYSVIEW_FreeRTOS.h"
 	.byte	0x3
 	.uleb128 0xd6
-	.uleb128 0x2e
-	.file 47 "../../../systemView/SEGGER_SYSVIEW.h"
+	.uleb128 0x2d
+	.file 46 "../../../systemView/SEGGER_SYSVIEW.h"
 	.byte	0x3
 	.uleb128 0x47
-	.uleb128 0x2f
-	.file 48 "../../../systemView/SEGGER.h"
+	.uleb128 0x2e
+	.file 47 "../../../systemView/SEGGER.h"
 	.byte	0x3
 	.uleb128 0x4a
-	.uleb128 0x30
-	.file 49 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h"
+	.uleb128 0x2f
+	.file 48 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h"
 	.byte	0x3
 	.uleb128 0x43
-	.uleb128 0x31
+	.uleb128 0x30
 	.byte	0x4
-	.file 50 "../../../systemView/Global.h"
+	.file 49 "../../../systemView/Global.h"
 	.byte	0x3
 	.uleb128 0x44
-	.uleb128 0x32
+	.uleb128 0x31
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 51 "../../../../../../external/freertos/source/include/projdefs.h"
+	.file 50 "../../../../../../external/freertos/source/include/projdefs.h"
 	.byte	0x3
 	.uleb128 0x3c
-	.uleb128 0x33
+	.uleb128 0x32
 	.byte	0x4
-	.file 52 "../../../../../../external/freertos/source/include/portable.h"
+	.file 51 "../../../../../../external/freertos/source/include/portable.h"
 	.byte	0x3
 	.uleb128 0x3f
-	.uleb128 0x34
-	.file 53 "../../../../../../external/freertos/source/include/deprecated_definitions.h"
+	.uleb128 0x33
+	.file 52 "../../../../../../external/freertos/source/include/deprecated_definitions.h"
 	.byte	0x3
 	.uleb128 0x2e
-	.uleb128 0x35
+	.uleb128 0x34
 	.byte	0x4
-	.file 54 "../../../../../../external/freertos/portable/GCC/nrf52/portmacro.h"
+	.file 53 "../../../../../../external/freertos/portable/GCC/nrf52/portmacro.h"
 	.byte	0x3
 	.uleb128 0x35
-	.uleb128 0x36
+	.uleb128 0x35
 	.byte	0x3
 	.uleb128 0x21
 	.uleb128 0xe
@@ -4378,26 +4292,26 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 55 "../../../../../../external/freertos/source/include/mpu_wrappers.h"
+	.file 54 "../../../../../../external/freertos/source/include/mpu_wrappers.h"
 	.byte	0x3
 	.uleb128 0x5c
-	.uleb128 0x37
+	.uleb128 0x36
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xe
 	.uleb128 0xf
-	.file 56 "../../../../../../external/freertos/source/include/list.h"
+	.file 55 "../../../../../../external/freertos/source/include/list.h"
 	.byte	0x3
 	.uleb128 0x25
-	.uleb128 0x38
+	.uleb128 0x37
 	.byte	0x4
 	.byte	0x4
-	.file 57 "../../../communication/arq.h"
+	.file 56 "../../../communication/arq.h"
 	.byte	0x3
 	.uleb128 0xf
-	.uleb128 0x39
+	.uleb128 0x38
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x10
@@ -4411,17 +4325,18 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 58 "../../../../../../components/libraries/experimental_log/nrf_log.h"
+	.file 57 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 	.byte	0x3
 	.uleb128 0x11
-	.uleb128 0x3a
-	.file 59 "../../../../../../components/libraries/util/sdk_common.h"
+	.uleb128 0x39
+	.file 58 "../../../../../../components/libraries/util/sdk_common.h"
 	.byte	0x3
 	.uleb128 0x34
-	.uleb128 0x3b
+	.uleb128 0x3a
+	.file 59 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h"
 	.byte	0x3
 	.uleb128 0x37
-	.uleb128 0x14
+	.uleb128 0x3b
 	.byte	0x4
 	.file 60 "../config/sdk_config.h"
 	.byte	0x3
@@ -4449,7 +4364,7 @@ collisionAngles:
 	.uleb128 0x3f
 	.byte	0x3
 	.uleb128 0x2b
-	.uleb128 0x2c
+	.uleb128 0x2b
 	.byte	0x4
 	.byte	0x4
 	.file 64 "../../../../../../components/libraries/strerror/nrf_strerror.h"
@@ -4458,7 +4373,7 @@ collisionAngles:
 	.uleb128 0x40
 	.byte	0x3
 	.uleb128 0x33
-	.uleb128 0x2b
+	.uleb128 0x2a
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
@@ -4627,7 +4542,7 @@ collisionAngles:
 	.ascii	"xQueueGenericSend\000"
 .LASF114:
 	.ascii	"long long unsigned int\000"
-.LASF209:
+.LASF208:
 	.ascii	"GNU C99 9.2.1 20191025 (release) [ARM/arm-9-branch "
 	.ascii	"revision 277599] -fmessage-length=0 -mcpu=cortex-m4"
 	.ascii	" -mlittle-endian -mfloat-abi=hard -mfpu=fpv4-sp-d16"
@@ -4654,6 +4569,9 @@ collisionAngles:
 	.ascii	"date_format\000"
 .LASF56:
 	.ascii	"next\000"
+.LASF209:
+	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
+	.ascii	"al\\slam\\software\\MainComTask.c\000"
 .LASF78:
 	.ascii	"int_curr_symbol\000"
 .LASF42:
@@ -4710,10 +4628,8 @@ collisionAngles:
 	.ascii	"poseControllerQ\000"
 .LASF151:
 	.ascii	"BaseType_t\000"
-.LASF211:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF66:
+	.ascii	"__isctype\000"
 .LASF93:
 	.ascii	"int_p_cs_precedes\000"
 .LASF163:
@@ -4758,7 +4674,7 @@ collisionAngles:
 	.ascii	"gX_hat\000"
 .LASF129:
 	.ascii	"__RAL_data_empty_string\000"
-.LASF213:
+.LASF212:
 	.ascii	"pvParameters\000"
 .LASF160:
 	.ascii	"pose_controller_task\000"
@@ -4782,14 +4698,13 @@ collisionAngles:
 	.ascii	"server_connect\000"
 .LASF6:
 	.ascii	"short unsigned int\000"
+.LASF210:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF20:
 	.ascii	"type\000"
 .LASF197:
 	.ascii	"vTaskResume\000"
-.LASF208:
-	.ascii	"memcpy\000"
-.LASF175:
-	.ascii	"gPaused\000"
 .LASF99:
 	.ascii	"day_names\000"
 .LASF47:
@@ -4826,7 +4741,7 @@ collisionAngles:
 	.ascii	"name_length\000"
 .LASF167:
 	.ascii	"xControllerBSem\000"
-.LASF212:
+.LASF211:
 	.ascii	"vMainCommunicationTask\000"
 .LASF152:
 	.ascii	"TickType_t\000"
@@ -4914,10 +4829,8 @@ collisionAngles:
 	.ascii	"positive_sign\000"
 .LASF19:
 	.ascii	"uint32_t\000"
-.LASF210:
-	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\software\\MainComTask."
-	.ascii	"c\000"
+.LASF175:
+	.ascii	"gPaused\000"
 .LASF194:
 	.ascii	"collAngles\000"
 .LASF204:
@@ -4932,8 +4845,6 @@ collisionAngles:
 	.ascii	"SemaphoreHandle_t\000"
 .LASF58:
 	.ascii	"char\000"
-.LASF66:
-	.ascii	"__isctype\000"
 .LASF88:
 	.ascii	"p_sep_by_space\000"
 .LASF29:

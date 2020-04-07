@@ -5009,10 +5009,8 @@ app_timer_stop:
 	.ascii	"uint16_t\000"
 .LASF130:
 	.ascii	"BaseType_t\000"
-.LASF162:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF44:
+	.ascii	"__isctype\000"
 .LASF71:
 	.ascii	"int_p_cs_precedes\000"
 .LASF14:
@@ -5077,6 +5075,9 @@ app_timer_stop:
 	.ascii	"short unsigned int\000"
 .LASF40:
 	.ascii	"name\000"
+.LASF162:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF138:
 	.ascii	"timer_id\000"
 .LASF19:
@@ -5224,8 +5225,6 @@ app_timer_stop:
 	.ascii	"app_timer_callback\000"
 .LASF102:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF44:
-	.ascii	"__isctype\000"
 .LASF153:
 	.ascii	"xTaskGetTickCountFromISR\000"
 .LASF17:

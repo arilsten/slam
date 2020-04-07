@@ -12057,10 +12057,6 @@ m_nrf_log_TIMER_logs_data_dynamic:
 	.ascii	"SHCSR\000"
 .LASF183:
 	.ascii	"SWI5_EGU5_IRQn\000"
-.LASF372:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF37:
 	.ascii	"NRFX_TIMER_ENABLED_COUNT\000"
 .LASF147:
@@ -12424,6 +12420,9 @@ m_nrf_log_TIMER_logs_data_dynamic:
 	.ascii	"__wctomb\000"
 .LASF10:
 	.ascii	"initial_lvl\000"
+.LASF372:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF241:
 	.ascii	"day_names\000"
 .LASF47:

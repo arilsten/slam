@@ -1,15 +1,15 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
-# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Int.h" 1
-# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Int.h"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h" 1
-# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER.h" 1
-# 67 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Int.h" 1
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Int.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h" 1
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER.h" 1
+# 67 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 1 3 4
 # 48 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 3 4
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 1 3 4
@@ -229,12 +229,12 @@ const char *__RAL_decode_error(int num);
 # 49 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 2 3 4
 # 69 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 3 4
 typedef __va_list va_list;
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER.h" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\Global.h" 1
-# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER.h" 2
-# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER.h"
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER.h" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\Global.h" 1
+# 69 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER.h" 2
+# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER.h"
 
-# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER.h"
+# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER.h"
 typedef struct {
   char* pBuffer;
   int BufferSize;
@@ -269,7 +269,7 @@ typedef struct SEGGER_PRINTF_FORMATTER {
   SEGGER_pFormatter pfFormatter;
   char Specifier;
 } SEGGER_PRINTF_FORMATTER;
-# 194 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER.h"
+# 194 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER.h"
 void SEGGER_ARM_memcpy(void* pDest, const void* pSrc, int NumBytes);
 void SEGGER_memcpy (void* pDest, const void* pSrc, unsigned NumBytes);
 void SEGGER_memxor (void* pDest, const void* pSrc, unsigned NumBytes);
@@ -298,8 +298,8 @@ int SEGGER_PRINTF_AddFormatter (SEGGER_PRINTF_FORMATTER* pFormatter, SEGGER_pFor
 void SEGGER_PRINTF_AddDoubleFormatter(void);
 void SEGGER_PRINTF_AddIPFormatter (void);
 void SEGGER_PRINTF_AddHTMLFormatter (void);
-# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h" 2
-# 189 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h"
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h" 2
+# 189 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h"
 typedef struct {
   unsigned long TaskID;
   const char* sName;
@@ -319,7 +319,7 @@ struct SEGGER_SYSVIEW_MODULE_STRUCT {
 };
 
 typedef void (SEGGER_SYSVIEW_SEND_SYS_DESC_FUNC)(void);
-# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h"
+# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h"
 typedef struct {
   unsigned long long (*pfGetTime) (void);
   void (*pfSendTaskList) (void);
@@ -432,15 +432,15 @@ void SEGGER_SYSVIEW_DisableEvents (unsigned long DisableMask);
 void SEGGER_SYSVIEW_Conf (void);
 unsigned long SEGGER_SYSVIEW_X_GetTimestamp (void);
 unsigned long SEGGER_SYSVIEW_X_GetInterruptId (void);
-# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Int.h" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Conf.h" 1
-# 76 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Int.h" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_ConfDefaults.h" 1
-# 76 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_ConfDefaults.h"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT_Conf.h" 1
-# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_ConfDefaults.h" 2
-# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Int.h" 2
-# 92 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Int.h"
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Int.h" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Conf.h" 1
+# 76 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Int.h" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_ConfDefaults.h" 1
+# 76 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_ConfDefaults.h"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT_Conf.h" 1
+# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_ConfDefaults.h" 2
+# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Int.h" 2
+# 92 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Int.h"
 typedef enum {
   SEGGER_SYSVIEW_COMMAND_ID_START = 1,
   SEGGER_SYSVIEW_COMMAND_ID_STOP,
@@ -452,9 +452,9 @@ typedef enum {
 
   SEGGER_SYSVIEW_COMMAND_ID_GET_MODULE = 128
 } SEGGER_SYSVIEW_COMMAND_ID;
-# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT.h" 1
-# 89 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT.h"
+# 149 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT.h" 1
+# 89 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 1 3 4
 # 55 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdlib.h" 3 4
 
@@ -608,10 +608,10 @@ int wctomb_l(char *__s, wchar_t __wc, struct __locale_s *__loc);
 
 size_t wcstombs(char *__s, const wchar_t *__pwcs, size_t __n);
 size_t wcstombs_l(char *__s, const wchar_t *__pwcs, size_t __n, struct __locale_s *__loc);
-# 90 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT.h" 2
-# 110 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT.h"
+# 90 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT.h" 2
+# 110 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT.h"
 
-# 110 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT.h"
+# 110 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT.h"
 typedef struct {
   const char* sName;
             char* pBuffer;
@@ -654,7 +654,7 @@ typedef struct {
 
 
 extern SEGGER_RTT_CB _SEGGER_RTT;
-# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT.h"
+# 162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT.h"
 int SEGGER_RTT_AllocDownBuffer (const char* sName, void* pBuffer, unsigned BufferSize, unsigned Flags);
 int SEGGER_RTT_AllocUpBuffer (const char* sName, void* pBuffer, unsigned BufferSize, unsigned Flags);
 int SEGGER_RTT_ConfigUpBuffer (unsigned BufferIndex, const char* sName, void* pBuffer, unsigned BufferSize, unsigned Flags);
@@ -680,7 +680,7 @@ void SEGGER_RTT_WriteWithOverwriteNoLock(unsigned BufferIndex, const void* pBuff
 unsigned SEGGER_RTT_PutChar (unsigned BufferIndex, char c);
 unsigned SEGGER_RTT_PutCharSkip (unsigned BufferIndex, char c);
 unsigned SEGGER_RTT_PutCharSkipNoLock (unsigned BufferIndex, char c);
-# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_RTT.h"
+# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_RTT.h"
 int SEGGER_RTT_SetTerminal (char TerminalId);
 int SEGGER_RTT_TerminalOut (char TerminalId, const char* s);
 
@@ -692,7 +692,7 @@ int SEGGER_RTT_TerminalOut (char TerminalId, const char* s);
 
 int SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);
 int SEGGER_RTT_vprintf(unsigned BufferIndex, const char * sFormat, va_list * pParamList);
-# 150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 2
+# 150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 1 3 4
 # 90 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h" 3 4
 
@@ -779,10 +779,10 @@ char *strerror(int __num);
 
 int strcoll(const char *__str1, const char *__str2);
 size_t strxfrm( char *__str1, const char *__str2, size_t __num);
-# 151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 2
-# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 2
+# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 
-# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 typedef struct {
   unsigned char* pBuffer;
   unsigned char* pPayload;
@@ -825,7 +825,7 @@ static void _SendPacket(unsigned char* pStartPacket, unsigned char* pEndPacket, 
 
 
 static const unsigned char _abSync[10] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-# 282 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 282 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
     static char _UpBuffer [4096];
 
     static char _DownBuffer[8];
@@ -836,9 +836,9 @@ static SEGGER_SYSVIEW_GLOBALS _SYSVIEW_Globals;
 
 static SEGGER_SYSVIEW_MODULE* _pFirstModule;
 static unsigned char _NumModules;
-# 316 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 316 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static unsigned char _aPacket[9 + 128 + 2 * 5 + 16 * 5];
-# 354 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 354 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static unsigned char* _EncodeData(unsigned char* pPayload, const char* pSrc, unsigned int NumBytes) {
   unsigned int n;
 
@@ -850,7 +850,7 @@ static unsigned char* _EncodeData(unsigned char* pPayload, const char* pSrc, uns
   }
   return pPayload;
 }
-# 388 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 388 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static unsigned char *_EncodeStr(unsigned char *pPayload, const char *pText, unsigned int Limit) {
   unsigned int n;
   unsigned int Len;
@@ -884,11 +884,11 @@ static unsigned char *_EncodeStr(unsigned char *pPayload, const char *pText, uns
   }
   return pPayload;
 }
-# 440 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 440 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static unsigned char* _PreparePacket(unsigned char* pPacket) {
   return pPacket + 4;
 }
-# 457 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 457 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static void _HandleIncomingPacket(void) {
   unsigned char Cmd;
   int Status;
@@ -931,7 +931,7 @@ static void _HandleIncomingPacket(void) {
     }
   }
 }
-# 522 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 522 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static int _TrySendOverflowPacket(void) {
   unsigned long TimeStamp;
   signed long Delta;
@@ -962,14 +962,14 @@ static int _TrySendOverflowPacket(void) {
 
   return Status;
 }
-# 625 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 625 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static void _SendPacket(unsigned char* pStartPacket, unsigned char* pEndPacket, unsigned int EventId) {
   unsigned int NumBytes;
   unsigned long TimeStamp;
   unsigned long Delta;
 
   int Status;
-# 642 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 642 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   if (_SYSVIEW_Globals.EnableState == 1) {
     goto Send;
   }
@@ -1026,14 +1026,14 @@ Send:
   Delta = TimeStamp - _SYSVIEW_Globals.LastTxTimeStamp;
   ;
   { unsigned char* pSysviewPointer; unsigned long SysViewData; pSysviewPointer = pEndPacket; SysViewData = Delta; while(SysViewData > 0x7F) { *pSysviewPointer++ = (unsigned char)(SysViewData | 0x80); SysViewData >>= 7; }; *pSysviewPointer++ = (unsigned char)SysViewData; pEndPacket = pSysviewPointer; };;
-# 708 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 708 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   Status = SEGGER_RTT_ASM_WriteSkipNoLock(1, pStartPacket, pEndPacket - pStartPacket);
   if (Status) {
     _SYSVIEW_Globals.LastTxTimeStamp = TimeStamp;
   } else {
     _SYSVIEW_Globals.EnableState++;
   }
-# 731 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 731 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 SendDone:
 
 
@@ -1053,7 +1053,7 @@ SendDone:
 
 
 }
-# 764 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 764 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static int _VPrintHost(const char* s, unsigned long Options, va_list* pParamList) {
   unsigned long aParas[16];
   unsigned long* pParas;
@@ -1062,7 +1062,7 @@ static int _VPrintHost(const char* s, unsigned long Options, va_list* pParamList
   char c;
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
-# 781 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 781 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   p = s;
   NumArguments = 0;
   for (;;) {
@@ -1074,17 +1074,17 @@ static int _VPrintHost(const char* s, unsigned long Options, va_list* pParamList
       c = *p;
 
       aParas[NumArguments++] = 
-# 791 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 791 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
                               __builtin_va_arg
-# 791 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 791 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                                     (*pParamList, int);
       if (NumArguments == 16) {
         break;
       }
-# 806 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 806 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
     }
   }
-# 817 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 817 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   {
     { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
     pPayload = _EncodeStr(pPayloadStart, s, 128);
@@ -1100,7 +1100,7 @@ static int _VPrintHost(const char* s, unsigned long Options, va_list* pParamList
   }
   return 0;
 }
-# 845 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 845 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static void _StoreChar(SEGGER_SYSVIEW_PRINTF_DESC * p, char c) {
   unsigned int Cnt;
   unsigned char* pPayload;
@@ -1126,7 +1126,7 @@ static void _StoreChar(SEGGER_SYSVIEW_PRINTF_DESC * p, char c) {
     p->Cnt = 0u;
   }
 }
-# 887 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 887 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static void _PrintUnsigned(SEGGER_SYSVIEW_PRINTF_DESC * pBufferDesc, unsigned int v, unsigned int Base, unsigned int NumDigits, unsigned int FieldWidth, unsigned int FormatFlags) {
   static const char _aV2C[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
   unsigned int Div;
@@ -1201,7 +1201,7 @@ static void _PrintUnsigned(SEGGER_SYSVIEW_PRINTF_DESC * pBufferDesc, unsigned in
     }
   }
 }
-# 978 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 978 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static void _PrintInt(SEGGER_SYSVIEW_PRINTF_DESC * pBufferDesc, int v, unsigned int Base, unsigned int NumDigits, unsigned int FieldWidth, unsigned int FormatFlags) {
   unsigned int Width;
   int Number;
@@ -1261,7 +1261,7 @@ static void _PrintInt(SEGGER_SYSVIEW_PRINTF_DESC * pBufferDesc, int v, unsigned 
 
   _PrintUnsigned(pBufferDesc, (unsigned int)v, Base, NumDigits, FieldWidth, FormatFlags);
 }
-# 1051 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1051 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 static void _VPrintTarget(const char* sFormat, unsigned long Options, va_list* pParamList) {
   SEGGER_SYSVIEW_PRINTF_DESC BufferDesc;
   char c;
@@ -1357,9 +1357,9 @@ static void _VPrintTarget(const char* sFormat, unsigned long Options, va_list* p
       case 'c': {
         char c0;
         v = 
-# 1145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 1145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
            __builtin_va_arg
-# 1145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1145 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                  (*pParamList, int);
         c0 = (char)v;
         _StoreChar(&BufferDesc, c0);
@@ -1367,34 +1367,34 @@ static void _VPrintTarget(const char* sFormat, unsigned long Options, va_list* p
       }
       case 'd':
         v = 
-# 1151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 1151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
            __builtin_va_arg
-# 1151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                  (*pParamList, int);
         _PrintInt(&BufferDesc, v, 10u, NumDigits, FieldWidth, FormatFlags);
         break;
       case 'u':
         v = 
-# 1155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 1155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
            __builtin_va_arg
-# 1155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                  (*pParamList, int);
         _PrintUnsigned(&BufferDesc, (unsigned int)v, 10u, NumDigits, FieldWidth, FormatFlags);
         break;
       case 'x':
       case 'X':
         v = 
-# 1160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 1160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
            __builtin_va_arg
-# 1160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1160 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                  (*pParamList, int);
         _PrintUnsigned(&BufferDesc, (unsigned int)v, 16u, NumDigits, FieldWidth, FormatFlags);
         break;
       case 'p':
         v = 
-# 1164 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 1164 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
            __builtin_va_arg
-# 1164 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1164 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                  (*pParamList, int);
         _PrintUnsigned(&BufferDesc, (unsigned int)v, 16u, 8u, 8u, 0u);
         break;
@@ -1426,12 +1426,12 @@ static void _VPrintTarget(const char* sFormat, unsigned long Options, va_list* p
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 
 }
-# 1227 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1227 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_Init(unsigned long SysFreq, unsigned long CPUFreq, const SEGGER_SYSVIEW_OS_API *pOSAPI, SEGGER_SYSVIEW_SEND_SYS_DESC_FUNC pfSendSysDesc) {
-# 1250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1250 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   SEGGER_RTT_ConfigUpBuffer (1, "SysView", &_UpBuffer[0], sizeof(_UpBuffer), (0U));
   SEGGER_RTT_ConfigDownBuffer (1, "SysView", &_DownBuffer[0], sizeof(_DownBuffer), (0U));
-# 1260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1260 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   _SYSVIEW_Globals.RAMBaseAddress = 0x10000000;
   _SYSVIEW_Globals.LastTxTimeStamp = (*(unsigned long *)(0xE0001004));
   _SYSVIEW_Globals.pOSAPI = pOSAPI;
@@ -1441,11 +1441,11 @@ void SEGGER_SYSVIEW_Init(unsigned long SysFreq, unsigned long CPUFreq, const SEG
   _SYSVIEW_Globals.EnableState = 0;
 
 }
-# 1281 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1281 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_SetRAMBase(unsigned long RAMBaseAddress) {
   _SYSVIEW_Globals.RAMBaseAddress = RAMBaseAddress;
 }
-# 1295 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1295 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordVoid(unsigned int EventID) {
   unsigned char* pPayloadStart;
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
@@ -1453,7 +1453,7 @@ void SEGGER_SYSVIEW_RecordVoid(unsigned int EventID) {
   _SendPacket(pPayloadStart, pPayloadStart, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1315 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1315 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32(unsigned int EventID, unsigned long Value) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1464,7 +1464,7 @@ void SEGGER_SYSVIEW_RecordU32(unsigned int EventID, unsigned long Value) {
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1338 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x2(unsigned int EventID, unsigned long Para0, unsigned long Para1) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1476,7 +1476,7 @@ void SEGGER_SYSVIEW_RecordU32x2(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1363 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1363 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x3(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1489,7 +1489,7 @@ void SEGGER_SYSVIEW_RecordU32x3(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1390 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1390 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x4(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1503,7 +1503,7 @@ void SEGGER_SYSVIEW_RecordU32x4(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1419 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1419 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x5(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1518,7 +1518,7 @@ void SEGGER_SYSVIEW_RecordU32x5(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1450 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1450 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x6(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1534,7 +1534,7 @@ void SEGGER_SYSVIEW_RecordU32x6(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1483 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1483 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x7(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1551,7 +1551,7 @@ void SEGGER_SYSVIEW_RecordU32x7(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1518 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1518 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x8(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6, unsigned long Para7) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1569,7 +1569,7 @@ void SEGGER_SYSVIEW_RecordU32x8(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x9(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6, unsigned long Para7, unsigned long Para8) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1588,7 +1588,7 @@ void SEGGER_SYSVIEW_RecordU32x9(unsigned int EventID, unsigned long Para0, unsig
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1594 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1594 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordU32x10(unsigned int EventID, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6, unsigned long Para7, unsigned long Para8, unsigned long Para9) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1608,7 +1608,7 @@ void SEGGER_SYSVIEW_RecordU32x10(unsigned int EventID, unsigned long Para0, unsi
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1629 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1629 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordString(unsigned int EventID, const char* pString) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1618,7 +1618,7 @@ void SEGGER_SYSVIEW_RecordString(unsigned int EventID, const char* pString) {
   _SendPacket(pPayloadStart, pPayload, EventID);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1658 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1658 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_Start(void) {
   if (_SYSVIEW_Globals.EnableState == 0) {
     _SYSVIEW_Globals.EnableState = 1;
@@ -1651,7 +1651,7 @@ void SEGGER_SYSVIEW_Start(void) {
 
   }
 }
-# 1704 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1704 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_Stop(void) {
   unsigned char* pPayloadStart;
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
@@ -1662,7 +1662,7 @@ void SEGGER_SYSVIEW_Stop(void) {
   }
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1723 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1723 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_GetSysDesc(void) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1679,7 +1679,7 @@ void SEGGER_SYSVIEW_GetSysDesc(void) {
     _SYSVIEW_Globals.pfSendSysDesc();
   }
 }
-# 1751 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1751 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_SendTaskInfo(const SEGGER_SYSVIEW_TASKINFO *pInfo) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1699,13 +1699,13 @@ void SEGGER_SYSVIEW_SendTaskInfo(const SEGGER_SYSVIEW_TASKINFO *pInfo) {
   _SendPacket(pPayloadStart, pPayload, 21);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1778 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1778 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_SendTaskList(void) {
   if (_SYSVIEW_Globals.pOSAPI && _SYSVIEW_Globals.pOSAPI->pfSendTaskList) {
     _SYSVIEW_Globals.pOSAPI->pfSendTaskList();
   }
 }
-# 1803 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1803 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_SendSysDesc(const char *sSysDesc) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1715,7 +1715,7 @@ void SEGGER_SYSVIEW_SendSysDesc(const char *sSysDesc) {
   _SendPacket(pPayloadStart, pPayload, 14);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1821 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1821 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordSystime(void) {
   unsigned long long Systime;
 
@@ -1728,7 +1728,7 @@ void SEGGER_SYSVIEW_RecordSystime(void) {
     SEGGER_SYSVIEW_RecordU32(12, (*(unsigned long *)(0xE0001004)));
   }
 }
-# 1845 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1845 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordEnterISR(void) {
   unsigned v;
   unsigned char* pPayload;
@@ -1741,7 +1741,7 @@ void SEGGER_SYSVIEW_RecordEnterISR(void) {
   _SendPacket(pPayloadStart, pPayload, 2);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1872 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1872 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordExitISR(void) {
   unsigned char* pPayloadStart;
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
@@ -1749,7 +1749,7 @@ void SEGGER_SYSVIEW_RecordExitISR(void) {
   _SendPacket(pPayloadStart, pPayloadStart, 3);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1894 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1894 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordExitISRToScheduler(void) {
   unsigned char* pPayloadStart;
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
@@ -1757,7 +1757,7 @@ void SEGGER_SYSVIEW_RecordExitISRToScheduler(void) {
   _SendPacket(pPayloadStart, pPayloadStart, 18);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1912 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1912 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordEnterTimer(unsigned long TimerId) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1768,7 +1768,7 @@ void SEGGER_SYSVIEW_RecordEnterTimer(unsigned long TimerId) {
   _SendPacket(pPayloadStart, pPayload, 19);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1930 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1930 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordExitTimer(void) {
   unsigned char* pPayloadStart;
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
@@ -1776,7 +1776,7 @@ void SEGGER_SYSVIEW_RecordExitTimer(void) {
   _SendPacket(pPayloadStart, pPayloadStart, 20);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1948 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1948 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordEndCall(unsigned int EventID) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1787,7 +1787,7 @@ void SEGGER_SYSVIEW_RecordEndCall(unsigned int EventID) {
   _SendPacket(pPayloadStart, pPayload, 28);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1970 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1970 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordEndCallU32(unsigned int EventID, unsigned long Para0) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1799,7 +1799,7 @@ void SEGGER_SYSVIEW_RecordEndCallU32(unsigned int EventID, unsigned long Para0) 
   _SendPacket(pPayloadStart, pPayload, 28);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 1989 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 1989 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnIdle(void) {
   unsigned char* pPayloadStart;
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
@@ -1807,7 +1807,7 @@ void SEGGER_SYSVIEW_OnIdle(void) {
   _SendPacket(pPayloadStart, pPayloadStart, 17);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2008 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2008 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnTaskCreate(unsigned long TaskId) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1819,7 +1819,7 @@ void SEGGER_SYSVIEW_OnTaskCreate(unsigned long TaskId) {
   _SendPacket(pPayloadStart, pPayload, 8);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2033 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2033 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnTaskTerminate(unsigned long TaskId) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1831,7 +1831,7 @@ void SEGGER_SYSVIEW_OnTaskTerminate(unsigned long TaskId) {
   _SendPacket(pPayloadStart, pPayload, 29);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2057 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2057 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnTaskStartExec(unsigned long TaskId) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1843,7 +1843,7 @@ void SEGGER_SYSVIEW_OnTaskStartExec(unsigned long TaskId) {
   _SendPacket(pPayloadStart, pPayload, 4);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2077 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2077 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnTaskStopExec(void) {
   unsigned char* pPayloadStart;
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );; pPayloadStart = _PreparePacket(_aPacket);;
@@ -1851,7 +1851,7 @@ void SEGGER_SYSVIEW_OnTaskStopExec(void) {
   _SendPacket(pPayloadStart, pPayloadStart, 5);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2095 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2095 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnTaskStartReady(unsigned long TaskId) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1863,7 +1863,7 @@ void SEGGER_SYSVIEW_OnTaskStartReady(unsigned long TaskId) {
   _SendPacket(pPayloadStart, pPayload, 6);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnTaskStopReady(unsigned long TaskId, unsigned int Cause) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1876,7 +1876,7 @@ void SEGGER_SYSVIEW_OnTaskStopReady(unsigned long TaskId, unsigned int Cause) {
   _SendPacket(pPayloadStart, pPayload, 7);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnUserStart(unsigned UserId) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1887,7 +1887,7 @@ void SEGGER_SYSVIEW_OnUserStart(unsigned UserId) {
   _SendPacket(pPayloadStart, pPayload, 15);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2162 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_OnUserStop(unsigned UserId) {
   unsigned char * pPayload;
   unsigned char * pPayloadStart;
@@ -1898,7 +1898,7 @@ void SEGGER_SYSVIEW_OnUserStop(unsigned UserId) {
   _SendPacket(pPayloadStart, pPayload, 16);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2184 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2184 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_NameResource(unsigned long ResourceId, const char* sName) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -1910,7 +1910,7 @@ void SEGGER_SYSVIEW_NameResource(unsigned long ResourceId, const char* sName) {
   _SendPacket(pPayloadStart, pPayload, 25);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2213 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2213 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 int SEGGER_SYSVIEW_SendPacket(unsigned char* pPacket, unsigned char* pPayloadEnd, unsigned int EventId) {
 
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );;
@@ -1921,30 +1921,30 @@ int SEGGER_SYSVIEW_SendPacket(unsigned char* pPacket, unsigned char* pPayloadEnd
 
   return 0;
 }
-# 2240 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2240 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 unsigned char* SEGGER_SYSVIEW_EncodeU32(unsigned char* pPayload, unsigned long Value) {
   { unsigned char* pSysviewPointer; unsigned long SysViewData; pSysviewPointer = pPayload; SysViewData = Value; while(SysViewData > 0x7F) { *pSysviewPointer++ = (unsigned char)(SysViewData | 0x80); SysViewData >>= 7; }; *pSysviewPointer++ = (unsigned char)SysViewData; pPayload = pSysviewPointer; };;
   return pPayload;
 }
-# 2267 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2267 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 unsigned char* SEGGER_SYSVIEW_EncodeString(unsigned char* pPayload, const char* s, unsigned int MaxLen) {
   return _EncodeStr(pPayload, s, MaxLen);
 }
-# 2293 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2293 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 unsigned char* SEGGER_SYSVIEW_EncodeData(unsigned char *pPayload, const char* pSrc, unsigned int NumBytes) {
   return _EncodeData(pPayload, pSrc, NumBytes);
 }
-# 2321 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2321 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 unsigned char* SEGGER_SYSVIEW_EncodeId(unsigned char* pPayload, unsigned long Id) {
   Id = (((Id) - _SYSVIEW_Globals.RAMBaseAddress) >> 2);
   { unsigned char* pSysviewPointer; unsigned long SysViewData; pSysviewPointer = pPayload; SysViewData = Id; while(SysViewData > 0x7F) { *pSysviewPointer++ = (unsigned char)(SysViewData | 0x80); SysViewData >>= 7; }; *pSysviewPointer++ = (unsigned char)SysViewData; pPayload = pSysviewPointer; };;
   return pPayload;
 }
-# 2349 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2349 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 unsigned long SEGGER_SYSVIEW_ShrinkId(unsigned long Id) {
   return (((Id) - _SYSVIEW_Globals.RAMBaseAddress) >> 2);
 }
-# 2371 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2371 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RegisterModule(SEGGER_SYSVIEW_MODULE* pModule) {
   { unsigned int LockState; __asm volatile ("mrs   %0, basepri  \n\t" "mov   r1, %1       \n\t" "msr   basepri, r1  \n\t" : "=r" (LockState) : "i"((0x20)) : "r1" );;
   if (_pFirstModule == 0) {
@@ -1974,7 +1974,7 @@ void SEGGER_SYSVIEW_RegisterModule(SEGGER_SYSVIEW_MODULE* pModule) {
   }
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2412 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2412 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_RecordModuleDescription(const SEGGER_SYSVIEW_MODULE* pModule, const char* sDescription) {
   unsigned char ModuleId;
   SEGGER_SYSVIEW_MODULE* p;
@@ -2005,7 +2005,7 @@ void SEGGER_SYSVIEW_RecordModuleDescription(const SEGGER_SYSVIEW_MODULE* pModule
     __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
   }
 }
-# 2453 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2453 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_SendModule(unsigned char ModuleId) {
   SEGGER_SYSVIEW_MODULE* pModule;
   unsigned long n;
@@ -2036,7 +2036,7 @@ void SEGGER_SYSVIEW_SendModule(unsigned char ModuleId) {
     }
   }
 }
-# 2492 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2492 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_SendModuleDescription(void) {
   SEGGER_SYSVIEW_MODULE* pModule;
 
@@ -2050,7 +2050,7 @@ void SEGGER_SYSVIEW_SendModuleDescription(void) {
     } while (pModule);
   }
 }
-# 2513 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2513 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_SendNumModules(void) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -2060,235 +2060,235 @@ void SEGGER_SYSVIEW_SendNumModules(void) {
   _SendPacket(pPayloadStart, pPayload, 27);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2540 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2540 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_PrintfHostEx(const char* s, unsigned long Options, ...) {
   va_list ParamList;
-# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   
-# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  Options
-# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2555 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                              ;
   _VPrintHost(s, Options, &ParamList);
   
-# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2557 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 
 }
-# 2574 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2574 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_PrintfHost(const char* s, ...) {
   va_list ParamList;
-# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   
-# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  s
-# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2589 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                        ;
   _VPrintHost(s, (0u), &ParamList);
   
-# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2591 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 
 }
-# 2609 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2609 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_WarnfHost(const char* s, ...) {
   va_list ParamList;
-# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   
-# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  s
-# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2624 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                        ;
   _VPrintHost(s, (1u), &ParamList);
   
-# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2626 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 
 }
-# 2644 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2644 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_ErrorfHost(const char* s, ...) {
   va_list ParamList;
-# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
   
-# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  s
-# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2659 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                        ;
   _VPrintHost(s, (2u), &ParamList);
   
-# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2661 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 
 }
-# 2677 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2677 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_PrintfTargetEx(const char* s, unsigned long Options, ...) {
   va_list ParamList;
 
   
-# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  Options
-# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2680 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                              ;
   _VPrintTarget(s, Options, &ParamList);
   
-# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2682 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 }
-# 2696 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2696 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_PrintfTarget(const char* s, ...) {
   va_list ParamList;
 
   
-# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  s
-# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2699 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                        ;
   _VPrintTarget(s, (0u), &ParamList);
   
-# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2701 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 }
-# 2715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2715 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_WarnfTarget(const char* s, ...) {
   va_list ParamList;
 
   
-# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  s
-# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2718 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                        ;
   _VPrintTarget(s, (1u), &ParamList);
   
-# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2720 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 }
-# 2734 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2734 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_ErrorfTarget(const char* s, ...) {
   va_list ParamList;
 
   
-# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_start((
-# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  ),
-# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  s
-# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2737 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                        ;
   _VPrintTarget(s, (2u), &ParamList);
   
-# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  __builtin_va_end(
-# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
  ParamList
-# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c" 3 4
+# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c" 3 4
  )
-# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2739 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
                   ;
 }
-# 2753 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2753 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_Print(const char* s) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -2300,7 +2300,7 @@ void SEGGER_SYSVIEW_Print(const char* s) {
   _SendPacket(pPayloadStart, pPayload, 26);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2775 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2775 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_Warn(const char* s) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -2312,7 +2312,7 @@ void SEGGER_SYSVIEW_Warn(const char* s) {
   _SendPacket(pPayloadStart, pPayload, 26);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2797 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2797 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_Error(const char* s) {
   unsigned char* pPayload;
   unsigned char* pPayloadStart;
@@ -2324,15 +2324,15 @@ void SEGGER_SYSVIEW_Error(const char* s) {
   _SendPacket(pPayloadStart, pPayload, 26);
   __asm volatile ("msr   basepri, %0  \n\t" : : "r" (LockState) : ); };
 }
-# 2819 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2819 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_EnableEvents(unsigned long EnableMask) {
   _SYSVIEW_Globals.DisabledEvents &= ~EnableMask;
 }
-# 2833 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2833 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 void SEGGER_SYSVIEW_DisableEvents(unsigned long DisableMask) {
   _SYSVIEW_Globals.DisabledEvents |= DisableMask;
 }
-# 2848 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.c"
+# 2848 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.c"
 int SEGGER_SYSVIEW_IsStarted(void) {
 
 

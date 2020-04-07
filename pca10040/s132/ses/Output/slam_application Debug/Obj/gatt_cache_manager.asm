@@ -16896,6 +16896,9 @@ m_flag_service_changed_sent:
 	.ascii	"ble_gattc_service_t\000"
 .LASF66:
 	.ascii	"pm_peer_data_update_succeeded_evt_t\000"
+.LASF575:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF366:
 	.ascii	"id_addr_info\000"
 .LASF369:
@@ -17343,10 +17346,6 @@ m_flag_service_changed_sent:
 	.ascii	"rand\000"
 .LASF175:
 	.ascii	"ble_gatts_evt_exchange_mtu_request_t\000"
-.LASF575:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF91:
 	.ascii	"PM_EVT_CONN_SEC_SUCCEEDED\000"
 .LASF408:

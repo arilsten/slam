@@ -1,9 +1,9 @@
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\pca10040\\s132\\ses//"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\pca10040\\s132\\ses//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5262,12 +5262,12 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW.h" 1
-# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c" 2
+# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c" 2
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW.h" 1
+# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c" 2
 
 extern const SEGGER_SYSVIEW_OS_API SYSVIEW_X_OS_TraceAPI;
-# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
+# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\systemView\\SEGGER_SYSVIEW_Config_FreeRTOS.c"
 static void _cbSendSystemDesc(void) {
   SEGGER_SYSVIEW_SendSysDesc("N=""FreeRTOS Demo Application"",D=""Cortex-M4"",O=FreeRTOS");
   SEGGER_SYSVIEW_SendSysDesc("I#15=SysTick");

@@ -4388,10 +4388,8 @@ m_pi:
 	.ascii	"n_cs_precedes\000"
 .LASF67:
 	.ascii	"uint16_t\000"
-.LASF136:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+.LASF137:
+	.ascii	"m_pi\000"
 .LASF48:
 	.ascii	"int_p_cs_precedes\000"
 .LASF5:
@@ -4450,6 +4448,9 @@ m_pi:
 	.ascii	"short unsigned int\000"
 .LASF16:
 	.ascii	"name\000"
+.LASF136:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF54:
 	.ascii	"day_names\000"
 .LASF6:
@@ -4533,8 +4534,6 @@ m_pi:
 	.ascii	"peer_id_get_next_deleted\000"
 .LASF19:
 	.ascii	"__RAL_locale_data_t\000"
-.LASF137:
-	.ascii	"m_pi\000"
 .LASF7:
 	.ascii	"uint32_t\000"
 .LASF52:

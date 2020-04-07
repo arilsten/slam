@@ -23690,10 +23690,6 @@ xYieldPending:
 	.ascii	"xPendingReadyList\000"
 .LASF73:
 	.ascii	"SHCSR\000"
-.LASF382:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF10:
 	.ascii	"ulNotifiedValue\000"
 .LASF256:
@@ -24076,6 +24072,9 @@ xYieldPending:
 	.ascii	"xTaskToQuery\000"
 .LASF102:
 	.ascii	"__wctomb\000"
+.LASF382:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF295:
 	.ascii	"uxQueue\000"
 .LASF194:

@@ -9338,10 +9338,6 @@ nrf_spi_mngr_perform:
 	.ascii	"nrf_queue_push\000"
 .LASF19:
 	.ascii	"p_transfers\000"
-.LASF277:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF39:
 	.ascii	"nrf_queue_mode_t\000"
 .LASF25:
@@ -9615,6 +9611,9 @@ nrf_spi_mngr_perform:
 	.ascii	"NRF_DRV_SPI_FREQ_2M\000"
 .LASF151:
 	.ascii	"__wctomb\000"
+.LASF277:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF99:
 	.ascii	"ENABLE\000"
 .LASF94:

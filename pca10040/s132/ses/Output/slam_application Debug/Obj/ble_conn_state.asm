@@ -15602,6 +15602,9 @@ m_ble_evt_observer:
 	.ascii	"nrf_sdh_ble_evt_handler_t\000"
 .LASF201:
 	.ascii	"ble_gattc_service_t\000"
+.LASF501:
+	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF339:
 	.ascii	"master_id\000"
 .LASF110:
@@ -15983,10 +15986,6 @@ m_ble_evt_observer:
 	.ascii	"BLE_GAP_EVT_DATA_LENGTH_UPDATE\000"
 .LASF382:
 	.ascii	"BLE_GAP_EVT_SEC_INFO_REQUEST\000"
-.LASF501:
-	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
 .LASF15:
 	.ascii	"handler\000"
 .LASF371:

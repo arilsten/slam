@@ -24,7 +24,7 @@
 crc_ibutton_update:
 .LVL0:
 .LFB1:
-	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\crc.c"
+	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\crc.c"
 	.loc 1 26 46 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -622,7 +622,7 @@ calculate_crc:
 	.byte	0x3
 	.uleb128 0
 	.uleb128 0x1
-	.file 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam_application-master\\communication\\crc.h"
+	.file 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\crc.h"
 	.byte	0x3
 	.uleb128 0xd
 	.uleb128 0x2
@@ -634,7 +634,7 @@ calculate_crc:
 	.section	.debug_str,"MS",%progbits,1
 .LASF5:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
-	.ascii	"al\\slam_application-master\\communication\\crc.c\000"
+	.ascii	"al\\slam\\communication\\crc.c\000"
 .LASF4:
 	.ascii	"GNU C99 9.2.1 20191025 (release) [ARM/arm-9-branch "
 	.ascii	"revision 277599] -fmessage-length=0 -mcpu=cortex-m4"
@@ -650,8 +650,7 @@ calculate_crc:
 	.ascii	"char\000"
 .LASF6:
 	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
-	.ascii	"ripheral\\\\slam_application-master\\\\pca10040\\\\"
-	.ascii	"s132\\\\ses\000"
+	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF0:
 	.ascii	"crc_ibutton_update\000"
 .LASF1:
