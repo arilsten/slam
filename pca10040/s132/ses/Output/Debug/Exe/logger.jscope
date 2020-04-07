@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="1" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options Connection="4" IsRTTSession="0" IsRTTWithTimeStamp="1" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="-1" JTAG_DRPre="-1" IP="localhost" TargetDevice="unspecified" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ScriptFile Name="unspecified" />
+            <ElfFile Name="C:\nRF5_SDK_15.0.0_a53641a\nRF5_SDK_15.0.0_a53641a\examples\ble_peripheral\slam_application\pca10040\s132\ses\Output\Debug\Exe\slam_application.elf" />
+            <DataFile Name="" />
+            <RawFile Name="" />
+            <Scope>
+                <Options TimeResolutionUs="1000000" />
+            </Scope>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="gLeftWheelTicks" Address="0x200064A0" Type="volatile short" TypeID="11" Size="2" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="-32" YMaxSampled="18" YAvgSampled="0" Offset="4" ShowInGraph="1" ACCoupling="0" YOffset="200" IsAutoConfig="1" YResolution="20" MaxValue="40" File="C:\nRF5_SDK_15.0.0_a53641a\nRF5_SDK_15.0.0_a53641a\examples\ble_peripheral\slam_application\main.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="gRightWheelTicks" Address="0x200064A8" Type="volatile short" TypeID="11" Size="2" GraphColorRed="0" GraphColorGreen="255" GraphColorBlue="0" YMinSampled="-15" YMaxSampled="48" YAvgSampled="1" Offset="6" ShowInGraph="1" ACCoupling="0" YOffset="200" IsAutoConfig="0" YResolution="20" MaxValue="100" File="C:\nRF5_SDK_15.0.0_a53641a\nRF5_SDK_15.0.0_a53641a\examples\ble_peripheral\slam_application\main.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="gTheta_hat" Address="0x200064AC" Type="float" TypeID="1" Size="4" GraphColorRed="102" GraphColorGreen="102" GraphColorBlue="178" YMinSampled="-3" YMaxSampled="3" YAvgSampled="0" Offset="8" ShowInGraph="1" ACCoupling="0" YOffset="200" IsAutoConfig="0" YResolution="1" MaxValue="10" File="C:\nRF5_SDK_15.0.0_a53641a\nRF5_SDK_15.0.0_a53641a\examples\ble_peripheral\slam_application\main.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="gX_hat" Address="0x200064B0" Type="short" TypeID="11" Size="2" GraphColorRed="160" GraphColorGreen="32" GraphColorBlue="240" YMinSampled="8" YMaxSampled="174" YAvgSampled="138" Offset="12" ShowInGraph="1" ACCoupling="0" YOffset="200" IsAutoConfig="1" YResolution="100" MaxValue="200" File="C:\nRF5_SDK_15.0.0_a53641a\nRF5_SDK_15.0.0_a53641a\examples\ble_peripheral\slam_application\main.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="gY_hat" Address="0x200064B2" Type="short" TypeID="11" Size="2" GraphColorRed="255" GraphColorGreen="0" GraphColorBlue="0" YMinSampled="1" YMaxSampled="202" YAvgSampled="18" Offset="14" ShowInGraph="1" ACCoupling="0" YOffset="200" IsAutoConfig="1" YResolution="200" MaxValue="400" File="C:\nRF5_SDK_15.0.0_a53641a\nRF5_SDK_15.0.0_a53641a\examples\ble_peripheral\slam_application\main.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>

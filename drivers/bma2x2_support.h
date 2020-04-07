@@ -1,0 +1,1 @@
+signed int bma2x2_data_readout_template(void);
