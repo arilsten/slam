@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include "defines.h"
 
-extern int8_t collisionAngles[NUM_DIST_SENSORS];
+extern int16_t collisionAngles[NUM_DIST_SENSORS];
 
 void vMainCommunicationTask(void *pvParameters);
 
@@ -20,9 +20,9 @@ void vMainCommunicationTask(void *pvParameters);
 
 
 
-/* C++ server messages */
+/* C++ server message types */
 #define START_POSITION	1
-#define NEW_WAYPOINT	114		//Test from Grindviks C++ server
+#define NEW_WAYPOINT	114		// Found by test from Grindviks C++ server, may be changed in the new version for 2020.
 
 
 

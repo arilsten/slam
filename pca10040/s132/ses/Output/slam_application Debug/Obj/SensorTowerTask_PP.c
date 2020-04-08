@@ -8528,7 +8528,7 @@ struct sCartesian {
 # 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h" 1
 # 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h"
-extern int8_t collisionAngles[4];
+extern int16_t collisionAngles[4];
 
 void vMainCommunicationTask(void *pvParameters);
 # 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
@@ -8813,10 +8813,10 @@ void vMainSensorTowerTask(void *pvParameters) {
    }
 
 
-   int8_t angles[4];
+   int16_t angles[4];
    for(int i = 0; i < 4; i++){
-    uint16_t xObject = distObjectXlocal(thetahat, servoStep, sensor16, i);
-    uint16_t yObject = distObjectYlocal(thetahat, servoStep, sensor16, i);
+    int16_t xObject = distObjectXlocal(thetahat, servoStep, sensor16, i);
+    int16_t yObject = distObjectYlocal(thetahat, servoStep, sensor16, i);
     uint16_t dist = sqrt(xObject*xObject + yObject*yObject);
 
     if(dist < 200){
@@ -8828,17 +8828,18 @@ void vMainSensorTowerTask(void *pvParameters) {
 
 
 
+
     }else{
-     angles[i] = 400;
+     angles[i] = 200;
     }
 
    }
    xQueueSemaphoreTake( ( xCollisionMutex ), ( 20 ) );
    memcpy(&collisionAngles, &angles, sizeof(angles));
    xQueueGenericSend( ( QueueHandle_t ) ( xCollisionMutex ), 
-# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
   0
-# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
   , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 

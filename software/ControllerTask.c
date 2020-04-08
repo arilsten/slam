@@ -28,11 +28,11 @@ void vMainPoseControllerTask(void *pvParameters) {
     float radiusEpsilon = 15;            //[mm]The acceptable radius from goal for completion
     uint8_t lastMovement = 0;
 
-    uint8_t maxDriveActuation = 90; //The max speed the motors will run at during drive max is 100
+    uint8_t maxDriveActuation = 90; //The max speed the motors will run at during drive max is 100, check also MAX_DUTY in motor.c.
 
     /* Controller variables for tuning */
-    float rotateThreshold = 10.0 * DEG2RAD; // [rad] The threshold at which the robot will go from driving to rotation. Equals 10 degrees
-    float driveThreshold = 2.0 * DEG2RAD;   // [rad ]The threshold at which the robot will go from rotation to driving. In degrees.
+    float rotateThreshold = 10.0 * DEG2RAD; // [rad] The threshold at which the robot will go from driving to rotation.
+    float driveThreshold = 2.0 * DEG2RAD;   // [rad ]The threshold at which the robot will go from rotation to driving.
     float driveKp = 200;                    // Proportional gain for theta control during drive
     float driveKi = 1;                      // Integral gain for theta during drive
     float speedDecreaseThreshold = 300;     // [mm] Distance from goal where the robot will decrease its speed inverse proportionally
@@ -150,11 +150,11 @@ void vMainPoseControllerTask(void *pvParameters) {
                     thetaDiffInt = 0; //reset the error integral
                 }
                 if(fabs(thetaDiff)>= (M_PI/2.0) && doneTurning){
-                      if(controllerStop == false){
-                            controllerStop = true; //our heading is more than 90 degrees away from target, stop..
-                            NRF_LOG_INFO("HEADING is more the 90 degrees wrong stopping controller");
-                            }
-               }
+					if(controllerStop == false){
+						controllerStop = true; //our heading is more than 90 degrees away from target, stop..
+                        NRF_LOG_INFO("HEADING is more the 90 degrees wrong stopping controller");
+                    }
+                }
 
                 if ((prevThetaDiff - thetaDiff) > (M_PI / 2) || ((prevThetaDiff - thetaDiff) < (-M_PI / 2))) // Gone past target or new target
                 {
@@ -307,7 +307,10 @@ void vMainPoseControllerTask(void *pvParameters) {
                     motor_brake();
 
                     lastMovement = moveStop;
-					display_text_on_line(4,"Reached goal");
+				
+					display_text_on_line(4,"Reached target");
+					
+					
                 }
                 xQueueSend(scanStatusQ, &lastMovement, 0); // Send the current movement to the scan task
             }                                              // No semaphore available, task is blocking

@@ -12457,7 +12457,7 @@ void vMainSensorCalibrationTask(void *pvParameters);
 # 63 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../software/MainComTask.h" 1
 # 14 "../../../software/MainComTask.h"
-extern int8_t collisionAngles[4];
+extern int16_t collisionAngles[4];
 
 void vMainCommunicationTask(void *pvParameters);
 # 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2

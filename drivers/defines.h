@@ -1,6 +1,7 @@
 /************************************************************************/
 // File:			defines.h
 // Author:			Erlend Ese, NTNU Spring 2016
+//					Remeasured by Stenset, spring 2020
 /************************************************************************/
 
 #ifndef DEFINES_H_
@@ -11,16 +12,16 @@
 
 /************************************************************************/
 /* PHYSICAL CONSTANTS - If the robot is changed these need to be changed 
- Some of these will be sent to server during the start-up-handshake   
- Wheel factor is the circumference divided by ticks per rotation 
- -> (((pi*80)/600)/4 != 1.02101761125 mm 
-                        Length the robot travels per  tick
-                        (Ticks are NO LONGER divided in motor.c)                     */
+Some of these will be sent to server during the start-up-handshake   
+
+
+*/
+
 #define WHEELBASE_MM				172  // Updated 30.03.2020 /* Length between wheel centers  */
 #define ROBOT_TOTAL_WIDTH_MM		197  // Updated 30.03.2020 /* From outer rim to outer rim   */
 #define ROBOT_TOTAL_LENGTH_MM		230  /* From front to aft, total	     */
 #define ROBOT_AXEL_OFFSET_MM		67   // 55  /* From center of square	     */
-#define SENSOR_TOWER_OFFSET_X_MM	0   // 16  /* From center of square         */
+#define SENSOR_TOWER_OFFSET_X_MM	0    // 16  /* From center of square         */
 #define SENSOR_TOWER_OFFSET_Y_MM	0    /* From center of square		     */
 #define SENSOR_OFFSET_RADIUS_MM		21   /* From center of tower		     */
 #define ROBOT_DEADLINE_MS			200  /* Interval between measurements	     */
@@ -29,7 +30,7 @@
 #define SENSOR3_HEADING_DEG			180
 #define SENSOR4_HEADING_DEG			270
 #define WHEEL_CIRCUMFERENCE			228  // [mm] Updated 30.03.2020
-#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE)/320.0        /* Gearratio(34:1)*pulses pr rev(4) = 136. 136*2 = 272. 300 Calculated, see above */ 
+#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE)/320.0        /* 320 is a number found from experiments*/ 
 
 
 /************************************************************************/
@@ -60,7 +61,7 @@
 #define distSensRear              3
 #define distSensRight             2
 #define NUM_DIST_SENSORS          4
-#define DETECTION_THRESHOLD_MM   800
+#define DETECTION_THRESHOLD_MM    800
 #define COLLISION_THRESHOLD_MM    200
 
 

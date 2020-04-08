@@ -1,9 +1,10 @@
-/************************************************************************/
-// File:            MainComTask.h                                      //
-// Author:          Stenset                                              //
-// Purpose:                                                             //
-//                                                                      //
-/************************************************************************/
+/***************************************************************************/
+// File:            MainComTask.h											//
+// Author:          Stenset, Spring 2020									//
+// Purpose:         Keep the main communication task and its functions		//
+//					in its own source file, previously located in main.c	//
+//																			//
+/***************************************************************************/
 
 #include <stdint.h>
 #include <stdio.h>
@@ -17,7 +18,7 @@
 #include "nrf_log.h"
 #include "i2c.h"
 
-int8_t collisionAngles[NUM_DIST_SENSORS] = {400}; // Just to be above 360 degrees
+int16_t collisionAngles[NUM_DIST_SENSORS] = {200}; // Just to be above 360 degrees
 
 message_t message_in;
 
@@ -108,12 +109,13 @@ void vMainCommunicationTask(void *pvParameters){
 		}
 	}
 	else{ // If NRF52840 Dongle used with thread and C++ server
+		counter++;
+		uint8_t message[5] = {0};
+		int16_t oldwaypoint[2] = {0};
+		int16_t waypoint[2] = {0};
+		int16_t collAngles[NUM_DIST_SENSORS];
+		
 		while(true){
-			counter++;
-			uint8_t message[5] = {0};
-			int16_t oldwaypoint[2];
-			int16_t waypoint[2] = {0};
-			int8_t collAngles[NUM_DIST_SENSORS];
 			i2cReciveNOADDR(I2C_DEVICE_DONGLE, &message, 5);
 		
 			switch(message[0]){
@@ -125,7 +127,7 @@ void vMainCommunicationTask(void *pvParameters){
 						//TODO This may need some condition variables so the scanning and stuff dont start before this is received.
 						xSemaphoreGive(xPoseMutex);
 					}else{
-						NRF_LOG_WARNING("xPoseMutex not available!");
+						NRF_LOG_INFO("xPoseMutex not available!");
 					}
 					break;
 			
@@ -135,9 +137,19 @@ void vMainCommunicationTask(void *pvParameters){
 					waypoint[0] = *((int16_t*)&message[1]);
 					waypoint[1] = *((int16_t*)&message[3]);
 					
-					//xSemaphoreTake(xCollisionMutex, 20);
-					//memcpy(&collAngles, &collisionAngles, sizeof(collisionAngles));
-					//xSemaphoreGive(xCollisionMutex);
+					/*
+					xSemaphoreTake(xCollisionMutex, 20);
+					memcpy(&collAngles, &collisionAngles, sizeof(collisionAngles));
+					xSemaphoreGive(xCollisionMutex);
+					
+					if(counter > 100){
+						NRF_LOG_INFO("CollAngleSens1: %i", (int)collAngles[0]);
+						NRF_LOG_INFO("CollAngleSens2: %i", (int)collAngles[1]);
+						NRF_LOG_INFO("CollAngleSens3: %i", (int)collAngles[2]);
+						NRF_LOG_INFO("CollAngleSens4: %i", (int)collAngles[3]);
+						counter = 0;
+					}
+					*/
 					
 					//bool validWaypoint = checkWaypoint(int x, int y);
 					
@@ -153,10 +165,10 @@ void vMainCommunicationTask(void *pvParameters){
 			
 				default:
 					if(counter > 300){
-						NRF_LOG_WARNING("Unknown message type from server. Type: %i", (int)message[0]);
+						NRF_LOG_INFO("Unknown message type from server. Type: %i", (int)message[0]);
 					}
 			}
-			counter = 0;
+				
 			vTaskDelay(100);
 		}
 	}

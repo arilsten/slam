@@ -8616,19 +8616,19 @@ void vMainPoseControllerTask(void *pvParameters) {
                                      3.14159265358979323846
 # 152 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
                                          /2.0) && doneTurning){
-                      if(controllerStop == 
+     if(controllerStop == 
 # 153 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
-                                          0
+                         0
 # 153 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
-                                               ){
-                            controllerStop = 
+                              ){
+      controllerStop = 
 # 154 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
-                                            1
+                      1
 # 154 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
-                                                ;
-                            if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "HEADING is more the 90 degrees wrong stopping controller"); } };
-                            }
-               }
+                          ;
+                        if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "HEADING is more the 90 degrees wrong stopping controller"); } };
+                    }
+                }
 
                 if ((prevThetaDiff - thetaDiff) > (
 # 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c" 3 4
@@ -8817,11 +8817,14 @@ void vMainPoseControllerTask(void *pvParameters) {
                     motor_brake();
 
                     lastMovement = 0;
-     display_text_on_line(4,"Reached goal");
+
+     display_text_on_line(4,"Reached target");
+
+
                 }
                 xQueueGenericSend( ( scanStatusQ ), ( &lastMovement ), ( 0 ), ( ( BaseType_t ) 0 ) );
             }
-# 327 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
+# 330 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
         }
 
 

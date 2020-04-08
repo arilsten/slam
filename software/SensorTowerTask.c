@@ -126,19 +126,20 @@ void vMainSensorTowerTask(void *pvParameters) {
 			}
 			
 			// Anti-collision
-			int8_t angles[NUM_DIST_SENSORS];
+			int16_t angles[NUM_DIST_SENSORS];		// Needs 16 bit to cover -180 -> 180 degrees
 			for(int i = 0; i < NUM_DIST_SENSORS; i++){
-				uint16_t xObject = distObjectXlocal(thetahat, servoStep, sensor16, i);
-				uint16_t yObject = distObjectYlocal(thetahat, servoStep, sensor16, i);
+				int16_t xObject = distObjectXlocal(thetahat, servoStep, sensor16, i);
+				int16_t yObject = distObjectYlocal(thetahat, servoStep, sensor16, i);
 				uint16_t dist = sqrt(xObject*xObject + yObject*yObject);
 				
 				if(dist < COLLISION_THRESHOLD_MM){
 					angles[i] = atan2(yObject, xObject)*RAD2DEG;
 					//struct sCartesian Setpoint = {xhat/10, yhat/10};
 					//xQueueSend(poseControllerQ, &Setpoint, 100);
+					// When setting the setpoint to current position, the controller task takes care of stopping the robot.
 					
 				}else{
-					angles[i] = 400; // Above 360 degrees 
+					angles[i] = 200; // Above 180 degrees
 				}
 				
 			}

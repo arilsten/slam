@@ -22,14 +22,14 @@ void vFunc_Inf2pi(float *angle_in_radians){
     *angle_in_radians = result;
 }
 
-/* Calculates the distance in x direction to a measured object*/
+/* Calculates the distance in x direction to a measured object in global coordinate system */
 int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t xDist = x - cos(theta)*SENSOR_TOWER_OFFSET_X_MM + cos(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
 
     return xDist;
 }
 
-
+/* Returns the distance to object in local robot coordinate system */
 int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t xDist = cos(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
 
@@ -37,14 +37,14 @@ int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, 
 }
 
 
-/* Calculates the distance in y direction to a measured object*/
+/* Calculates the distance in y direction to a measured object in global coordinate system */
 int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t yDist = y - cos(theta)*SENSOR_TOWER_OFFSET_Y_MM + sin(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
     
     return yDist;
 }
 
-
+/* Returns the distance to object in local robot coordinate system */
 int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t yDist = sin(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
 	

@@ -2550,15 +2550,15 @@ RightMotorDirection:
 	.file 34 "../../../../../../integration/nrfx/legacy/nrf_drv_clock.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0xf81
+	.4byte	0xf75
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1a
-	.4byte	.LASF233
+	.4byte	.LASF232
 	.byte	0xc
+	.4byte	.LASF233
 	.4byte	.LASF234
-	.4byte	.LASF235
 	.4byte	.Ldebug_ranges0+0x30
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -2744,7 +2744,7 @@ RightMotorDirection:
 	.byte	0x4
 	.4byte	0x18d
 	.uleb128 0x1f
-	.4byte	.LASF137
+	.4byte	.LASF136
 	.uleb128 0x9
 	.4byte	0x188
 	.uleb128 0x1d
@@ -2800,16 +2800,10 @@ RightMotorDirection:
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x1d4
-	.uleb128 0x7
-	.4byte	.LASF125
-	.byte	0x4
-	.byte	0x2f
-	.byte	0x15
-	.4byte	0x204
 	.uleb128 0x4
 	.byte	0x1
 	.byte	0x6
-	.4byte	.LASF126
+	.4byte	.LASF125
 	.uleb128 0x7
 	.4byte	.LASF9
 	.byte	0x4
@@ -2817,23 +2811,23 @@ RightMotorDirection:
 	.byte	0x17
 	.4byte	0x51
 	.uleb128 0x7
-	.4byte	.LASF127
+	.4byte	.LASF126
 	.byte	0x4
 	.byte	0x35
 	.byte	0x16
-	.4byte	0x223
+	.4byte	0x217
 	.uleb128 0x4
 	.byte	0x2
 	.byte	0x5
-	.4byte	.LASF128
+	.4byte	.LASF127
 	.uleb128 0x7
-	.4byte	.LASF129
+	.4byte	.LASF128
 	.byte	0x4
 	.byte	0x37
 	.byte	0x14
 	.4byte	0x2b
 	.uleb128 0x11
-	.4byte	0x22a
+	.4byte	0x21e
 	.uleb128 0x7
 	.4byte	.LASF25
 	.byte	0x4
@@ -2841,29 +2835,29 @@ RightMotorDirection:
 	.byte	0x16
 	.4byte	0x4a
 	.uleb128 0x9
-	.4byte	0x23b
+	.4byte	0x22f
 	.uleb128 0x4
 	.byte	0x8
 	.byte	0x5
-	.4byte	.LASF130
+	.4byte	.LASF129
 	.uleb128 0x4
 	.byte	0x8
 	.byte	0x7
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.uleb128 0x1d
-	.4byte	.LASF132
+	.4byte	.LASF131
 	.byte	0xb
 	.2byte	0x744
 	.byte	0x19
-	.4byte	0x236
+	.4byte	0x22a
 	.uleb128 0x21
-	.4byte	.LASF133
+	.4byte	.LASF132
 	.byte	0xc
 	.byte	0x21
 	.byte	0x11
-	.4byte	0x23b
+	.4byte	0x22f
 	.uleb128 0xa
-	.4byte	.LASF134
+	.4byte	.LASF133
 	.byte	0x9
 	.byte	0x71
 	.byte	0x3
@@ -2876,103 +2870,103 @@ RightMotorDirection:
 	.byte	0x32
 	.byte	0x74
 	.uleb128 0x21
-	.4byte	.LASF135
+	.4byte	.LASF134
 	.byte	0x9
 	.byte	0x75
 	.byte	0x19
-	.4byte	0x273
+	.4byte	0x267
 	.uleb128 0x16
-	.4byte	.LASF136
+	.4byte	.LASF135
 	.byte	0xd
 	.2byte	0x317
 	.byte	0x1b
-	.4byte	0x29c
+	.4byte	0x290
 	.uleb128 0x1f
-	.4byte	.LASF138
+	.4byte	.LASF137
 	.uleb128 0x1d
-	.4byte	.LASF139
+	.4byte	.LASF138
 	.byte	0xd
 	.2byte	0x31b
 	.byte	0xe
-	.4byte	0x2ae
+	.4byte	0x2a2
 	.uleb128 0x8
 	.byte	0x4
-	.4byte	0x28f
+	.4byte	0x283
 	.uleb128 0x1d
-	.4byte	.LASF140
+	.4byte	.LASF139
 	.byte	0xd
 	.2byte	0x31c
 	.byte	0xe
-	.4byte	0x2ae
+	.4byte	0x2a2
 	.uleb128 0x1d
-	.4byte	.LASF141
+	.4byte	.LASF140
 	.byte	0xd
 	.2byte	0x31d
 	.byte	0xe
-	.4byte	0x2ae
+	.4byte	0x2a2
 	.uleb128 0x7
 	.4byte	.LASF24
 	.byte	0x6
 	.byte	0x9e
 	.byte	0x12
-	.4byte	0x23b
+	.4byte	0x22f
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x7
-	.4byte	.LASF142
+	.4byte	.LASF141
 	.uleb128 0x8
 	.byte	0x4
-	.4byte	0x2e7
+	.4byte	0x2db
 	.uleb128 0xd
-	.4byte	0x2f2
+	.4byte	0x2e6
 	.uleb128 0xe
 	.4byte	0x29
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF143
+	.4byte	.LASF142
 	.byte	0xe
 	.byte	0x53
 	.byte	0x11
-	.4byte	0x23b
+	.4byte	0x22f
 	.uleb128 0x21
-	.4byte	.LASF144
+	.4byte	.LASF143
 	.byte	0xe
 	.byte	0x54
 	.byte	0x11
-	.4byte	0x23b
+	.4byte	0x22f
 	.uleb128 0x21
-	.4byte	.LASF145
+	.4byte	.LASF144
 	.byte	0xe
 	.byte	0x72
 	.byte	0x13
-	.4byte	0x316
+	.4byte	0x30a
 	.uleb128 0x8
 	.byte	0x4
-	.4byte	0x23b
+	.4byte	0x22f
 	.uleb128 0x21
-	.4byte	.LASF146
+	.4byte	.LASF145
 	.byte	0xe
 	.byte	0x73
 	.byte	0x11
-	.4byte	0x23b
+	.4byte	0x22f
 	.uleb128 0x7
-	.4byte	.LASF147
+	.4byte	.LASF146
 	.byte	0xf
 	.byte	0x39
 	.byte	0xe
 	.4byte	0x37
 	.uleb128 0x7
-	.4byte	.LASF148
+	.4byte	.LASF147
 	.byte	0xf
 	.byte	0x3a
 	.byte	0x17
-	.4byte	0x2da
+	.4byte	0x2ce
 	.uleb128 0x4
 	.byte	0x1
 	.byte	0x2
 	.4byte	.LASF27
 	.uleb128 0xa
-	.4byte	.LASF149
+	.4byte	.LASF148
 	.byte	0x8
 	.byte	0x50
 	.byte	0x3
@@ -2985,31 +2979,31 @@ RightMotorDirection:
 	.byte	0x76
 	.byte	0xca
 	.uleb128 0x1d
-	.4byte	.LASF150
+	.4byte	.LASF149
 	.byte	0x10
 	.2byte	0x124
 	.byte	0x2e
-	.4byte	0x347
+	.4byte	0x33b
 	.uleb128 0x7
-	.4byte	.LASF151
+	.4byte	.LASF150
 	.byte	0x11
 	.byte	0x36
 	.byte	0x10
-	.4byte	0x2e1
+	.4byte	0x2d5
 	.uleb128 0x7
-	.4byte	.LASF152
+	.4byte	.LASF151
 	.byte	0x12
 	.byte	0x2f
 	.byte	0x10
 	.4byte	0x29
 	.uleb128 0x7
-	.4byte	.LASF153
+	.4byte	.LASF152
 	.byte	0x13
 	.byte	0x26
 	.byte	0x17
-	.4byte	0x370
+	.4byte	0x364
 	.uleb128 0x7
-	.4byte	.LASF154
+	.4byte	.LASF153
 	.byte	0x14
 	.byte	0x3e
 	.byte	0x10
@@ -3021,7 +3015,7 @@ RightMotorDirection:
 	.uleb128 0x4
 	.byte	0x8
 	.byte	0x4
-	.4byte	.LASF155
+	.4byte	.LASF154
 	.uleb128 0xa
 	.4byte	.LASF23
 	.byte	0x5
@@ -3036,7 +3030,7 @@ RightMotorDirection:
 	.byte	0x7d
 	.byte	0x93
 	.uleb128 0xa
-	.4byte	.LASF156
+	.4byte	.LASF155
 	.byte	0x5
 	.byte	0x8c
 	.byte	0x2
@@ -3049,9 +3043,9 @@ RightMotorDirection:
 	.byte	0x5d
 	.byte	0x3
 	.uleb128 0x9
-	.4byte	0x3b2
+	.4byte	0x3a6
 	.uleb128 0xa
-	.4byte	.LASF157
+	.4byte	.LASF156
 	.byte	0x3
 	.byte	0x38
 	.byte	0x2
@@ -3064,31 +3058,31 @@ RightMotorDirection:
 	.byte	0xc3
 	.byte	0xc2
 	.uleb128 0x7
-	.4byte	.LASF158
+	.4byte	.LASF157
 	.byte	0x15
 	.byte	0x92
 	.byte	0x13
-	.4byte	0x3c7
+	.4byte	0x3bb
 	.uleb128 0x9
+	.4byte	0x3cb
+	.uleb128 0x21
+	.4byte	.LASF158
+	.byte	0x16
+	.byte	0x13
+	.byte	0x22
 	.4byte	0x3d7
 	.uleb128 0x21
 	.4byte	.LASF159
 	.byte	0x16
-	.byte	0x13
-	.byte	0x22
-	.4byte	0x3e3
-	.uleb128 0x21
-	.4byte	.LASF160
-	.byte	0x16
 	.byte	0x14
 	.byte	0x16
-	.4byte	0x370
+	.4byte	0x364
 	.uleb128 0x22
-	.4byte	.LASF194
+	.4byte	.LASF193
 	.byte	0x16
 	.byte	0x3a
 	.byte	0x11
-	.4byte	0x3a2
+	.4byte	0x396
 	.byte	0x8
 	.byte	0
 	.byte	0
@@ -3099,194 +3093,194 @@ RightMotorDirection:
 	.byte	0
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF161
+	.4byte	.LASF160
 	.byte	0x16
 	.byte	0x42
 	.byte	0x18
-	.4byte	0x3c2
+	.4byte	0x3b6
 	.uleb128 0x12
-	.4byte	0x1f8
-	.4byte	0x431
+	.4byte	0x20b
+	.4byte	0x425
 	.uleb128 0x13
 	.4byte	0x4a
 	.byte	0x3
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF162
+	.4byte	.LASF161
 	.byte	0x17
 	.byte	0xe
-	.byte	0xf
-	.4byte	0x421
+	.byte	0x10
+	.4byte	0x415
 	.uleb128 0x21
-	.4byte	.LASF163
+	.4byte	.LASF162
 	.byte	0x2
 	.byte	0x11
 	.byte	0x15
-	.4byte	0x388
+	.4byte	0x37c
 	.uleb128 0x21
-	.4byte	.LASF164
+	.4byte	.LASF163
 	.byte	0x2
 	.byte	0x12
 	.byte	0x5
-	.4byte	0x388
+	.4byte	0x37c
 	.uleb128 0x21
-	.4byte	.LASF165
+	.4byte	.LASF164
 	.byte	0x2
 	.byte	0x13
 	.byte	0x5
-	.4byte	0x388
+	.4byte	0x37c
 	.uleb128 0x21
-	.4byte	.LASF166
+	.4byte	.LASF165
 	.byte	0x2
 	.byte	0x14
 	.byte	0x5
-	.4byte	0x388
+	.4byte	0x37c
 	.uleb128 0x21
-	.4byte	.LASF167
+	.4byte	.LASF166
 	.byte	0x2
 	.byte	0x15
 	.byte	0x5
-	.4byte	0x388
+	.4byte	0x37c
+	.uleb128 0x21
+	.4byte	.LASF167
+	.byte	0x2
+	.byte	0x16
+	.byte	0x5
+	.4byte	0x37c
 	.uleb128 0x21
 	.4byte	.LASF168
 	.byte	0x2
-	.byte	0x16
+	.byte	0x17
 	.byte	0x5
-	.4byte	0x388
+	.4byte	0x37c
 	.uleb128 0x21
 	.4byte	.LASF169
 	.byte	0x2
-	.byte	0x17
+	.byte	0x18
 	.byte	0x5
-	.4byte	0x388
+	.4byte	0x37c
 	.uleb128 0x21
 	.4byte	.LASF170
 	.byte	0x2
-	.byte	0x18
-	.byte	0x5
-	.4byte	0x388
+	.byte	0x1b
+	.byte	0x1a
+	.4byte	0x370
 	.uleb128 0x21
 	.4byte	.LASF171
 	.byte	0x2
-	.byte	0x1b
+	.byte	0x1c
 	.byte	0x1a
-	.4byte	0x37c
+	.4byte	0x370
 	.uleb128 0x21
 	.4byte	.LASF172
 	.byte	0x2
-	.byte	0x1c
+	.byte	0x1d
 	.byte	0x1a
-	.4byte	0x37c
+	.4byte	0x370
 	.uleb128 0x21
 	.4byte	.LASF173
 	.byte	0x2
-	.byte	0x1d
+	.byte	0x1e
 	.byte	0x1a
-	.4byte	0x37c
+	.4byte	0x370
 	.uleb128 0x21
 	.4byte	.LASF174
 	.byte	0x2
-	.byte	0x1e
+	.byte	0x1f
 	.byte	0x1a
-	.4byte	0x37c
+	.4byte	0x370
 	.uleb128 0x21
 	.4byte	.LASF175
 	.byte	0x2
-	.byte	0x1f
+	.byte	0x20
 	.byte	0x1a
-	.4byte	0x37c
+	.4byte	0x370
 	.uleb128 0x21
 	.4byte	.LASF176
 	.byte	0x2
-	.byte	0x20
+	.byte	0x21
 	.byte	0x1a
-	.4byte	0x37c
+	.4byte	0x370
 	.uleb128 0x21
 	.4byte	.LASF177
 	.byte	0x2
-	.byte	0x21
-	.byte	0x1a
-	.4byte	0x37c
+	.byte	0x25
+	.byte	0x16
+	.4byte	0x364
 	.uleb128 0x21
 	.4byte	.LASF178
 	.byte	0x2
-	.byte	0x25
+	.byte	0x26
 	.byte	0x16
-	.4byte	0x370
+	.4byte	0x364
 	.uleb128 0x21
 	.4byte	.LASF179
 	.byte	0x2
-	.byte	0x26
+	.byte	0x27
 	.byte	0x16
-	.4byte	0x370
+	.4byte	0x364
 	.uleb128 0x21
 	.4byte	.LASF180
 	.byte	0x2
-	.byte	0x27
-	.byte	0x16
-	.4byte	0x370
+	.byte	0x2a
+	.byte	0x10
+	.4byte	0x1ff
 	.uleb128 0x21
 	.4byte	.LASF181
 	.byte	0x2
-	.byte	0x2a
+	.byte	0x2b
 	.byte	0x10
-	.4byte	0x20b
+	.4byte	0x1ff
 	.uleb128 0x21
 	.4byte	.LASF182
 	.byte	0x2
-	.byte	0x2b
+	.byte	0x2d
 	.byte	0x10
-	.4byte	0x20b
+	.4byte	0x1ff
 	.uleb128 0x21
 	.4byte	.LASF183
 	.byte	0x2
-	.byte	0x2d
-	.byte	0x10
-	.4byte	0x20b
+	.byte	0x30
+	.byte	0xe
+	.4byte	0x388
 	.uleb128 0x21
 	.4byte	.LASF184
 	.byte	0x2
-	.byte	0x30
-	.byte	0xe
-	.4byte	0x394
+	.byte	0x31
+	.byte	0x10
+	.4byte	0x20b
 	.uleb128 0x21
 	.4byte	.LASF185
 	.byte	0x2
-	.byte	0x31
+	.byte	0x32
 	.byte	0x10
-	.4byte	0x217
+	.4byte	0x20b
 	.uleb128 0x21
 	.4byte	.LASF186
 	.byte	0x2
-	.byte	0x32
-	.byte	0x10
-	.4byte	0x217
+	.byte	0x33
+	.byte	0xe
+	.4byte	0x388
 	.uleb128 0x21
 	.4byte	.LASF187
 	.byte	0x2
-	.byte	0x33
+	.byte	0x34
 	.byte	0xe
-	.4byte	0x394
+	.4byte	0x388
 	.uleb128 0x21
 	.4byte	.LASF188
 	.byte	0x2
-	.byte	0x34
-	.byte	0xe
-	.4byte	0x394
+	.byte	0x37
+	.byte	0x10
+	.4byte	0x20b
 	.uleb128 0x21
 	.4byte	.LASF189
 	.byte	0x2
-	.byte	0x37
-	.byte	0x10
-	.4byte	0x217
-	.uleb128 0x21
-	.4byte	.LASF190
-	.byte	0x2
 	.byte	0x38
 	.byte	0x10
-	.4byte	0x217
+	.4byte	0x20b
 	.uleb128 0x23
-	.4byte	0x43d
+	.4byte	0x431
 	.byte	0x1
 	.byte	0x46
 	.byte	0xe
@@ -3294,56 +3288,56 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	handle_display_task
 	.uleb128 0x24
-	.4byte	0x449
+	.4byte	0x43d
 	.byte	0x1
 	.byte	0x47
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	handle_user_task
 	.uleb128 0x24
-	.4byte	0x455
+	.4byte	0x449
 	.byte	0x1
 	.byte	0x48
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	handle_microsd_task
 	.uleb128 0x24
-	.4byte	0x461
+	.4byte	0x455
 	.byte	0x1
 	.byte	0x49
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	pose_estimator_task
 	.uleb128 0x24
-	.4byte	0x46d
+	.4byte	0x461
 	.byte	0x1
 	.byte	0x4a
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	pose_controller_task
 	.uleb128 0x24
-	.4byte	0x479
+	.4byte	0x46d
 	.byte	0x1
 	.byte	0x4b
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	communication_task
 	.uleb128 0x24
-	.4byte	0x485
+	.4byte	0x479
 	.byte	0x1
 	.byte	0x4c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	sensor_tower_task
 	.uleb128 0x24
-	.4byte	0x491
+	.4byte	0x485
 	.byte	0x1
 	.byte	0x4d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	arq_task
 	.uleb128 0x23
-	.4byte	0x49d
+	.4byte	0x491
 	.byte	0x1
 	.byte	0x50
 	.byte	0x13
@@ -3351,7 +3345,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	xScanLock
 	.uleb128 0x23
-	.4byte	0x4a9
+	.4byte	0x49d
 	.byte	0x1
 	.byte	0x51
 	.byte	0x13
@@ -3359,7 +3353,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	xPoseMutex
 	.uleb128 0x23
-	.4byte	0x4b5
+	.4byte	0x4a9
 	.byte	0x1
 	.byte	0x52
 	.byte	0x13
@@ -3367,7 +3361,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	xTickMutex
 	.uleb128 0x23
-	.4byte	0x4c1
+	.4byte	0x4b5
 	.byte	0x1
 	.byte	0x53
 	.byte	0x13
@@ -3375,7 +3369,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	xControllerBSem
 	.uleb128 0x23
-	.4byte	0x4cd
+	.4byte	0x4c1
 	.byte	0x1
 	.byte	0x54
 	.byte	0x13
@@ -3383,7 +3377,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	xCommandReadyBSem
 	.uleb128 0x23
-	.4byte	0x4d9
+	.4byte	0x4cd
 	.byte	0x1
 	.byte	0x55
 	.byte	0x13
@@ -3391,7 +3385,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	mutex_spi
 	.uleb128 0x23
-	.4byte	0x4e5
+	.4byte	0x4d9
 	.byte	0x1
 	.byte	0x56
 	.byte	0x13
@@ -3399,7 +3393,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	xCollisionMutex
 	.uleb128 0x23
-	.4byte	0x4f1
+	.4byte	0x4e5
 	.byte	0x1
 	.byte	0x5a
 	.byte	0xf
@@ -3407,7 +3401,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	poseControllerQ
 	.uleb128 0x23
-	.4byte	0x4fd
+	.4byte	0x4f1
 	.byte	0x1
 	.byte	0x5b
 	.byte	0xf
@@ -3415,7 +3409,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	scanStatusQ
 	.uleb128 0x23
-	.4byte	0x509
+	.4byte	0x4fd
 	.byte	0x1
 	.byte	0x5c
 	.byte	0xf
@@ -3423,7 +3417,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	queue_microsd
 	.uleb128 0x23
-	.4byte	0x515
+	.4byte	0x509
 	.byte	0x1
 	.byte	0x60
 	.byte	0x9
@@ -3431,7 +3425,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gHandshook
 	.uleb128 0x23
-	.4byte	0x521
+	.4byte	0x515
 	.byte	0x1
 	.byte	0x61
 	.byte	0x9
@@ -3439,7 +3433,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gPaused
 	.uleb128 0x23
-	.4byte	0x52d
+	.4byte	0x521
 	.byte	0x1
 	.byte	0x64
 	.byte	0x9
@@ -3447,7 +3441,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	USEBLUETOOTH
 	.uleb128 0x23
-	.4byte	0x539
+	.4byte	0x52d
 	.byte	0x1
 	.byte	0x67
 	.byte	0x7
@@ -3455,7 +3449,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gTheta_hat
 	.uleb128 0x23
-	.4byte	0x545
+	.4byte	0x539
 	.byte	0x1
 	.byte	0x68
 	.byte	0x9
@@ -3463,7 +3457,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gX_hat
 	.uleb128 0x23
-	.4byte	0x551
+	.4byte	0x545
 	.byte	0x1
 	.byte	0x69
 	.byte	0x9
@@ -3471,7 +3465,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gY_hat
 	.uleb128 0x23
-	.4byte	0x55d
+	.4byte	0x551
 	.byte	0x1
 	.byte	0x6a
 	.byte	0x7
@@ -3479,7 +3473,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gLeft
 	.uleb128 0x23
-	.4byte	0x569
+	.4byte	0x55d
 	.byte	0x1
 	.byte	0x6b
 	.byte	0x7
@@ -3487,7 +3481,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gRight
 	.uleb128 0x23
-	.4byte	0x575
+	.4byte	0x569
 	.byte	0x1
 	.byte	0x6e
 	.byte	0x9
@@ -3495,7 +3489,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gRightWheelTicks
 	.uleb128 0x23
-	.4byte	0x581
+	.4byte	0x575
 	.byte	0x1
 	.byte	0x6f
 	.byte	0x9
@@ -3503,16 +3497,16 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	gLeftWheelTicks
 	.uleb128 0x25
-	.4byte	.LASF191
+	.4byte	.LASF190
 	.byte	0x1
 	.byte	0x72
 	.byte	0x5
-	.4byte	0x340
+	.4byte	0x334
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	shared_SPI_init
 	.uleb128 0x25
-	.4byte	.LASF192
+	.4byte	.LASF191
 	.byte	0x1
 	.byte	0x85
 	.byte	0xe
@@ -3521,7 +3515,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	RightMotorDirection
 	.uleb128 0x25
-	.4byte	.LASF193
+	.4byte	.LASF192
 	.byte	0x1
 	.byte	0x86
 	.byte	0xe
@@ -3530,7 +3524,7 @@ RightMotorDirection:
 	.byte	0x3
 	.4byte	LeftMotorDirection
 	.uleb128 0x26
-	.4byte	.LASF236
+	.4byte	.LASF235
 	.byte	0x1
 	.byte	0xf5
 	.byte	0x5
@@ -3539,35 +3533,35 @@ RightMotorDirection:
 	.4byte	.LFE413-.LFB413
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbbf
+	.4byte	0xbb3
 	.uleb128 0x27
-	.4byte	.LASF195
+	.4byte	.LASF194
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x9
-	.4byte	0x340
+	.4byte	0x334
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.uleb128 0x28
 	.4byte	.LVL28
-	.4byte	0xbbf
+	.4byte	0xbb3
 	.uleb128 0x28
 	.4byte	.LVL29
-	.4byte	0xddf
+	.4byte	0xdd3
 	.uleb128 0x28
 	.4byte	.LVL30
-	.4byte	0xe5c
+	.4byte	0xe50
 	.uleb128 0x28
 	.4byte	.LVL31
-	.4byte	0xe68
+	.4byte	0xe5c
 	.uleb128 0x28
 	.4byte	.LVL32
-	.4byte	0xe74
+	.4byte	0xe68
 	.uleb128 0x29
 	.4byte	.LVL33
-	.4byte	0xe80
-	.4byte	0x7b7
+	.4byte	0xe74
+	.4byte	0x7ab
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3586,8 +3580,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL34
-	.4byte	0xe80
-	.4byte	0x7d4
+	.4byte	0xe74
+	.4byte	0x7c8
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3606,8 +3600,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL35
-	.4byte	0xe80
-	.4byte	0x7f1
+	.4byte	0xe74
+	.4byte	0x7e5
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3626,8 +3620,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL36
-	.4byte	0xe80
-	.4byte	0x80e
+	.4byte	0xe74
+	.4byte	0x802
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3646,8 +3640,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL37
-	.4byte	0xe8d
-	.4byte	0x821
+	.4byte	0xe81
+	.4byte	0x815
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3656,8 +3650,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL38
-	.4byte	0xe8d
-	.4byte	0x834
+	.4byte	0xe81
+	.4byte	0x828
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3666,8 +3660,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL39
-	.4byte	0xe8d
-	.4byte	0x847
+	.4byte	0xe81
+	.4byte	0x83b
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3676,8 +3670,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL40
-	.4byte	0xe80
-	.4byte	0x864
+	.4byte	0xe74
+	.4byte	0x858
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3696,8 +3690,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL41
-	.4byte	0xe80
-	.4byte	0x881
+	.4byte	0xe74
+	.4byte	0x875
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3716,8 +3710,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL42
-	.4byte	0xe8d
-	.4byte	0x894
+	.4byte	0xe81
+	.4byte	0x888
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3726,8 +3720,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL43
-	.4byte	0xe9a
-	.4byte	0x8c6
+	.4byte	0xe8e
+	.4byte	0x8ba
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -3761,8 +3755,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL44
-	.4byte	0xe9a
-	.4byte	0x901
+	.4byte	0xe8e
+	.4byte	0x8f5
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -3802,8 +3796,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL45
-	.4byte	0xe9a
-	.4byte	0x934
+	.4byte	0xe8e
+	.4byte	0x928
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -3837,8 +3831,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL46
-	.4byte	0xe9a
-	.4byte	0x967
+	.4byte	0xe8e
+	.4byte	0x95b
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -3872,8 +3866,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL47
-	.4byte	0xe9a
-	.4byte	0x99a
+	.4byte	0xe8e
+	.4byte	0x98e
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -3907,8 +3901,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL48
-	.4byte	0xe9a
-	.4byte	0x9cd
+	.4byte	0xe8e
+	.4byte	0x9c1
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -3942,8 +3936,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL49
-	.4byte	0xe9a
-	.4byte	0xa00
+	.4byte	0xe8e
+	.4byte	0x9f4
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -3977,8 +3971,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL50
-	.4byte	0xea7
-	.4byte	0xa17
+	.4byte	0xe9b
+	.4byte	0xa0b
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -3988,11 +3982,11 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL51
-	.4byte	0xeb4
+	.4byte	0xea8
 	.uleb128 0x29
 	.4byte	.LVL52
-	.4byte	0xec1
-	.4byte	0xa43
+	.4byte	0xeb5
+	.4byte	0xa37
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4013,8 +4007,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL53
-	.4byte	0xec1
-	.4byte	0xa66
+	.4byte	0xeb5
+	.4byte	0xa5a
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4035,8 +4029,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL54
-	.4byte	0xec1
-	.4byte	0xa89
+	.4byte	0xeb5
+	.4byte	0xa7d
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4057,8 +4051,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL55
-	.4byte	0xec1
-	.4byte	0xaac
+	.4byte	0xeb5
+	.4byte	0xaa0
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4079,8 +4073,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL56
-	.4byte	0xec1
-	.4byte	0xacf
+	.4byte	0xeb5
+	.4byte	0xac3
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4101,8 +4095,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL57
-	.4byte	0xec1
-	.4byte	0xaf2
+	.4byte	0xeb5
+	.4byte	0xae6
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4123,8 +4117,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL58
-	.4byte	0xec1
-	.4byte	0xb15
+	.4byte	0xeb5
+	.4byte	0xb09
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4145,8 +4139,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL59
-	.4byte	0xec1
-	.4byte	0xb38
+	.4byte	0xeb5
+	.4byte	0xb2c
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4167,8 +4161,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL60
-	.4byte	0xe9a
-	.4byte	0xb6b
+	.4byte	0xe8e
+	.4byte	0xb5f
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -4202,11 +4196,11 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL61
-	.4byte	0xecd
+	.4byte	0xec1
 	.uleb128 0x29
 	.4byte	.LVL62
-	.4byte	0xeda
-	.4byte	0xb88
+	.4byte	0xece
+	.4byte	0xb7c
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -4216,8 +4210,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL63
-	.4byte	0xea7
-	.4byte	0xb9f
+	.4byte	0xe9b
+	.4byte	0xb93
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -4227,7 +4221,7 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL64
-	.4byte	0xec1
+	.4byte	0xeb5
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4248,7 +4242,7 @@ RightMotorDirection:
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF198
+	.4byte	.LASF197
 	.byte	0x1
 	.byte	0xee
 	.byte	0xd
@@ -4256,29 +4250,29 @@ RightMotorDirection:
 	.4byte	.LFE412-.LFB412
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc37
+	.4byte	0xc2b
 	.uleb128 0x2d
-	.4byte	.LASF196
+	.4byte	.LASF195
 	.byte	0x1
 	.byte	0xef
 	.byte	0x10
-	.4byte	0x2ce
+	.4byte	0x2c2
 	.4byte	.LLST1
 	.4byte	.LVUS1
 	.uleb128 0x2e
 	.4byte	.Ldebug_ranges0+0
-	.4byte	0xc20
+	.4byte	0xc14
 	.uleb128 0x2d
-	.4byte	.LASF197
+	.4byte	.LASF196
 	.byte	0x1
 	.byte	0xf0
 	.byte	0x19
-	.4byte	0x247
+	.4byte	0x23b
 	.4byte	.LLST2
 	.4byte	.LVUS2
 	.uleb128 0x2b
 	.4byte	.LVL23
-	.4byte	0xec1
+	.4byte	0xeb5
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -4295,7 +4289,7 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL20
-	.4byte	0xee6
+	.4byte	0xeda
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4310,7 +4304,7 @@ RightMotorDirection:
 	.byte	0
 	.byte	0
 	.uleb128 0x2f
-	.4byte	.LASF199
+	.4byte	.LASF198
 	.byte	0x1
 	.byte	0x90
 	.byte	0xd
@@ -4318,7 +4312,7 @@ RightMotorDirection:
 	.4byte	.LFE411-.LFB411
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xdcf
+	.4byte	0xdc3
 	.uleb128 0x30
 	.ascii	"arg\000"
 	.byte	0x1
@@ -4328,62 +4322,62 @@ RightMotorDirection:
 	.4byte	.LLST0
 	.4byte	.LVUS0
 	.uleb128 0x27
-	.4byte	.LASF200
+	.4byte	.LASF199
 	.byte	0x1
 	.byte	0xae
 	.byte	0xa
-	.4byte	0xdcf
+	.4byte	0xdc3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -28
 	.uleb128 0x27
-	.4byte	.LASF201
+	.4byte	.LASF200
 	.byte	0x1
 	.byte	0xaf
 	.byte	0xa
-	.4byte	0xdcf
+	.4byte	0xdc3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x31
-	.4byte	.LASF202
+	.4byte	.LASF201
 	.byte	0x1
 	.byte	0xb4
 	.byte	0x6
 	.4byte	0x2b
 	.byte	0x64
 	.uleb128 0x31
-	.4byte	.LASF203
+	.4byte	.LASF202
 	.byte	0x1
 	.byte	0xb5
 	.byte	0x6
 	.4byte	0x2b
 	.byte	0
 	.uleb128 0x31
-	.4byte	.LASF204
+	.4byte	.LASF203
 	.byte	0x1
 	.byte	0xb6
 	.byte	0x6
-	.4byte	0x340
+	.4byte	0x334
 	.byte	0
 	.uleb128 0x31
-	.4byte	.LASF205
+	.4byte	.LASF204
 	.byte	0x1
 	.byte	0xb7
 	.byte	0x6
-	.4byte	0x340
+	.4byte	0x334
 	.byte	0
 	.uleb128 0x32
-	.4byte	0xcd7
+	.4byte	0xccb
 	.uleb128 0x33
-	.4byte	.LASF206
+	.4byte	.LASF205
 	.byte	0x1
 	.byte	0xc7
 	.byte	0x8
 	.4byte	0x2b
 	.uleb128 0x34
 	.uleb128 0x35
-	.4byte	.LASF207
+	.4byte	.LASF206
 	.byte	0x1
 	.byte	0xcb
 	.byte	0x17
@@ -4399,26 +4393,26 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL1
-	.4byte	0xef2
+	.4byte	0xee6
 	.uleb128 0x28
 	.4byte	.LVL2
-	.4byte	0xefe
+	.4byte	0xef2
 	.uleb128 0x28
 	.4byte	.LVL3
-	.4byte	0xf0a
+	.4byte	0xefe
 	.uleb128 0x28
 	.4byte	.LVL4
-	.4byte	0xf16
+	.4byte	0xf0a
 	.uleb128 0x28
 	.4byte	.LVL5
-	.4byte	0xf22
+	.4byte	0xf16
 	.uleb128 0x28
 	.4byte	.LVL6
-	.4byte	0xf2e
+	.4byte	0xf22
 	.uleb128 0x29
 	.4byte	.LVL7
-	.4byte	0xf3a
-	.4byte	0xd20
+	.4byte	0xf2e
+	.4byte	0xd14
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4427,11 +4421,11 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL8
-	.4byte	0xf47
+	.4byte	0xf3b
 	.uleb128 0x29
 	.4byte	.LVL9
-	.4byte	0xf53
-	.4byte	0xd3c
+	.4byte	0xf47
+	.4byte	0xd30
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -4440,8 +4434,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL10
-	.4byte	0xf3a
-	.4byte	0xd51
+	.4byte	0xf2e
+	.4byte	0xd45
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4451,8 +4445,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL11
-	.4byte	0xf3a
-	.4byte	0xd66
+	.4byte	0xf2e
+	.4byte	0xd5a
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4462,8 +4456,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL12
-	.4byte	0xf60
-	.4byte	0xd83
+	.4byte	0xf54
+	.4byte	0xd77
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4479,8 +4473,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL13
-	.4byte	0xf6c
-	.4byte	0xd9c
+	.4byte	0xf60
+	.4byte	0xd90
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4495,8 +4489,8 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL18
-	.4byte	0xf60
-	.4byte	0xdb9
+	.4byte	0xf54
+	.4byte	0xdad
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4512,7 +4506,7 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL19
-	.4byte	0xf6c
+	.4byte	0xf60
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x50
@@ -4528,13 +4522,13 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x12
 	.4byte	0x3e
-	.4byte	0xddf
+	.4byte	0xdd3
 	.uleb128 0x13
 	.4byte	0x4a
 	.byte	0x13
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF208
+	.4byte	.LASF207
 	.byte	0x1
 	.byte	0x7f
 	.byte	0xd
@@ -4542,29 +4536,29 @@ RightMotorDirection:
 	.4byte	.LFE410-.LFB410
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe4a
+	.4byte	0xe3e
 	.uleb128 0x2d
-	.4byte	.LASF196
+	.4byte	.LASF195
 	.byte	0x1
 	.byte	0x80
 	.byte	0x10
-	.4byte	0x2ce
+	.4byte	0x2c2
 	.4byte	.LLST3
 	.4byte	.LVUS3
 	.uleb128 0x2e
 	.4byte	.Ldebug_ranges0+0x18
-	.4byte	0xe40
+	.4byte	0xe34
 	.uleb128 0x2d
-	.4byte	.LASF197
+	.4byte	.LASF196
 	.byte	0x1
 	.byte	0x81
 	.byte	0x19
-	.4byte	0x247
+	.4byte	0x23b
 	.4byte	.LLST4
 	.4byte	.LVUS4
 	.uleb128 0x2b
 	.4byte	.LVL27
-	.4byte	0xec1
+	.4byte	0xeb5
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x51
@@ -4581,10 +4575,10 @@ RightMotorDirection:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL24
-	.4byte	0xf78
+	.4byte	0xf6c
 	.byte	0
 	.uleb128 0x36
-	.4byte	.LASF237
+	.4byte	.LASF236
 	.byte	0x1
 	.byte	0x77
 	.byte	0x6
@@ -4593,146 +4587,146 @@ RightMotorDirection:
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x37
-	.4byte	.LASF209
-	.4byte	.LASF209
+	.4byte	.LASF208
+	.4byte	.LASF208
 	.byte	0x18
 	.byte	0x22
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF210
-	.4byte	.LASF210
+	.4byte	.LASF209
+	.4byte	.LASF209
 	.byte	0x19
 	.byte	0x1
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF211
-	.4byte	.LASF211
+	.4byte	.LASF210
+	.4byte	.LASF210
 	.byte	0x1a
 	.byte	0x8
 	.byte	0x6
 	.uleb128 0x38
-	.4byte	.LASF212
-	.4byte	.LASF212
+	.4byte	.LASF211
+	.4byte	.LASF211
 	.byte	0x12
 	.2byte	0x5d7
 	.byte	0x10
 	.uleb128 0x38
-	.4byte	.LASF213
-	.4byte	.LASF213
+	.4byte	.LASF212
+	.4byte	.LASF212
 	.byte	0x12
 	.2byte	0x585
 	.byte	0xf
 	.uleb128 0x38
-	.4byte	.LASF214
-	.4byte	.LASF214
+	.4byte	.LASF213
+	.4byte	.LASF213
 	.byte	0x14
 	.2byte	0x142
 	.byte	0xd
 	.uleb128 0x38
-	.4byte	.LASF215
-	.4byte	.LASF215
+	.4byte	.LASF214
+	.4byte	.LASF214
 	.byte	0x10
 	.2byte	0x1ab
 	.byte	0x6
 	.uleb128 0x38
-	.4byte	.LASF216
-	.4byte	.LASF216
+	.4byte	.LASF215
+	.4byte	.LASF215
 	.byte	0x14
 	.2byte	0x48f
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF217
-	.4byte	.LASF217
+	.4byte	.LASF216
+	.4byte	.LASF216
 	.byte	0x1b
 	.byte	0x6f
 	.byte	0x6
 	.uleb128 0x38
-	.4byte	.LASF218
-	.4byte	.LASF218
+	.4byte	.LASF217
+	.4byte	.LASF217
 	.byte	0x14
 	.2byte	0x420
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF219
-	.4byte	.LASF219
+	.4byte	.LASF218
+	.4byte	.LASF218
 	.byte	0x11
 	.byte	0x3d
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF220
-	.4byte	.LASF220
+	.4byte	.LASF219
+	.4byte	.LASF219
 	.byte	0x1c
 	.byte	0x7b
 	.byte	0xc
 	.uleb128 0x37
-	.4byte	.LASF221
-	.4byte	.LASF221
+	.4byte	.LASF220
+	.4byte	.LASF220
 	.byte	0xf
 	.byte	0x69
 	.byte	0xd
 	.uleb128 0x37
-	.4byte	.LASF222
-	.4byte	.LASF222
+	.4byte	.LASF221
+	.4byte	.LASF221
 	.byte	0x1d
 	.byte	0x7
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF223
-	.4byte	.LASF223
+	.4byte	.LASF222
+	.4byte	.LASF222
 	.byte	0x1e
 	.byte	0x7
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF224
-	.4byte	.LASF224
+	.4byte	.LASF223
+	.4byte	.LASF223
 	.byte	0x1f
 	.byte	0x34
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF225
-	.4byte	.LASF225
+	.4byte	.LASF224
+	.4byte	.LASF224
 	.byte	0xf
 	.byte	0x6a
 	.byte	0xd
 	.uleb128 0x37
-	.4byte	.LASF226
-	.4byte	.LASF226
+	.4byte	.LASF225
+	.4byte	.LASF225
 	.byte	0x20
 	.byte	0x4
 	.byte	0x6
 	.uleb128 0x38
-	.4byte	.LASF227
-	.4byte	.LASF227
+	.4byte	.LASF226
+	.4byte	.LASF226
 	.byte	0x14
 	.2byte	0x2ee
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF228
-	.4byte	.LASF228
+	.4byte	.LASF227
+	.4byte	.LASF227
 	.byte	0x21
 	.byte	0x18
 	.byte	0x6
 	.uleb128 0x38
-	.4byte	.LASF229
-	.4byte	.LASF229
+	.4byte	.LASF228
+	.4byte	.LASF228
 	.byte	0x14
 	.2byte	0x3ed
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF230
-	.4byte	.LASF230
+	.4byte	.LASF229
+	.4byte	.LASF229
 	.byte	0xd
 	.byte	0x87
 	.byte	0x5
 	.uleb128 0x37
-	.4byte	.LASF231
-	.4byte	.LASF231
+	.4byte	.LASF230
+	.4byte	.LASF230
 	.byte	0x16
 	.byte	0x66
 	.byte	0x6
 	.uleb128 0x37
-	.4byte	.LASF232
-	.4byte	.LASF232
+	.4byte	.LASF231
+	.4byte	.LASF231
 	.byte	0x22
 	.byte	0x64
 	.byte	0xc
@@ -5609,7 +5603,7 @@ RightMotorDirection:
 	.4byte	0x464
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0xf85
+	.4byte	0xf79
 	.4byte	0x2b
 	.ascii	"NRF_LOG_SEVERITY_NONE\000"
 	.4byte	0x31
@@ -5622,116 +5616,116 @@ RightMotorDirection:
 	.ascii	"NRF_LOG_SEVERITY_DEBUG\000"
 	.4byte	0x49
 	.ascii	"NRF_LOG_SEVERITY_INFO_RAW\000"
-	.4byte	0x400
+	.4byte	0x3f4
 	.ascii	"m_lcd_cb\000"
-	.4byte	0x58d
+	.4byte	0x581
 	.ascii	"handle_display_task\000"
-	.4byte	0x59b
+	.4byte	0x58f
 	.ascii	"handle_user_task\000"
-	.4byte	0x5a8
+	.4byte	0x59c
 	.ascii	"handle_microsd_task\000"
-	.4byte	0x5b5
+	.4byte	0x5a9
 	.ascii	"pose_estimator_task\000"
-	.4byte	0x5c2
+	.4byte	0x5b6
 	.ascii	"pose_controller_task\000"
-	.4byte	0x5cf
+	.4byte	0x5c3
 	.ascii	"communication_task\000"
-	.4byte	0x5dc
+	.4byte	0x5d0
 	.ascii	"sensor_tower_task\000"
-	.4byte	0x5e9
+	.4byte	0x5dd
 	.ascii	"arq_task\000"
-	.4byte	0x5f6
+	.4byte	0x5ea
 	.ascii	"xScanLock\000"
-	.4byte	0x604
+	.4byte	0x5f8
 	.ascii	"xPoseMutex\000"
-	.4byte	0x612
+	.4byte	0x606
 	.ascii	"xTickMutex\000"
-	.4byte	0x620
+	.4byte	0x614
 	.ascii	"xControllerBSem\000"
-	.4byte	0x62e
+	.4byte	0x622
 	.ascii	"xCommandReadyBSem\000"
-	.4byte	0x63c
+	.4byte	0x630
 	.ascii	"mutex_spi\000"
-	.4byte	0x64a
+	.4byte	0x63e
 	.ascii	"xCollisionMutex\000"
-	.4byte	0x658
+	.4byte	0x64c
 	.ascii	"poseControllerQ\000"
-	.4byte	0x666
+	.4byte	0x65a
 	.ascii	"scanStatusQ\000"
-	.4byte	0x674
+	.4byte	0x668
 	.ascii	"queue_microsd\000"
-	.4byte	0x682
+	.4byte	0x676
 	.ascii	"gHandshook\000"
-	.4byte	0x690
+	.4byte	0x684
 	.ascii	"gPaused\000"
-	.4byte	0x69e
+	.4byte	0x692
 	.ascii	"USEBLUETOOTH\000"
-	.4byte	0x6ac
+	.4byte	0x6a0
 	.ascii	"gTheta_hat\000"
-	.4byte	0x6ba
+	.4byte	0x6ae
 	.ascii	"gX_hat\000"
-	.4byte	0x6c8
+	.4byte	0x6bc
 	.ascii	"gY_hat\000"
-	.4byte	0x6d6
+	.4byte	0x6ca
 	.ascii	"gLeft\000"
-	.4byte	0x6e4
+	.4byte	0x6d8
 	.ascii	"gRight\000"
-	.4byte	0x6f2
+	.4byte	0x6e6
 	.ascii	"gRightWheelTicks\000"
-	.4byte	0x700
+	.4byte	0x6f4
 	.ascii	"gLeftWheelTicks\000"
-	.4byte	0x70e
+	.4byte	0x702
 	.ascii	"shared_SPI_init\000"
-	.4byte	0x720
+	.4byte	0x714
 	.ascii	"RightMotorDirection\000"
-	.4byte	0x732
+	.4byte	0x726
 	.ascii	"LeftMotorDirection\000"
-	.4byte	0x58d
+	.4byte	0x581
 	.ascii	"handle_display_task\000"
-	.4byte	0x59b
+	.4byte	0x58f
 	.ascii	"handle_user_task\000"
-	.4byte	0x5a8
+	.4byte	0x59c
 	.ascii	"handle_microsd_task\000"
-	.4byte	0x5b5
+	.4byte	0x5a9
 	.ascii	"pose_estimator_task\000"
-	.4byte	0x5c2
+	.4byte	0x5b6
 	.ascii	"pose_controller_task\000"
-	.4byte	0x5cf
+	.4byte	0x5c3
 	.ascii	"communication_task\000"
-	.4byte	0x5dc
+	.4byte	0x5d0
 	.ascii	"sensor_tower_task\000"
-	.4byte	0x5e9
+	.4byte	0x5dd
 	.ascii	"arq_task\000"
-	.4byte	0x5f6
+	.4byte	0x5ea
 	.ascii	"xScanLock\000"
-	.4byte	0x604
+	.4byte	0x5f8
 	.ascii	"xPoseMutex\000"
-	.4byte	0x612
+	.4byte	0x606
 	.ascii	"xTickMutex\000"
-	.4byte	0x620
+	.4byte	0x614
 	.ascii	"xControllerBSem\000"
-	.4byte	0x62e
+	.4byte	0x622
 	.ascii	"xCommandReadyBSem\000"
-	.4byte	0x63c
+	.4byte	0x630
 	.ascii	"mutex_spi\000"
-	.4byte	0x64a
+	.4byte	0x63e
 	.ascii	"xCollisionMutex\000"
-	.4byte	0x744
+	.4byte	0x738
 	.ascii	"main\000"
-	.4byte	0xbbf
+	.4byte	0xbb3
 	.ascii	"log_init\000"
-	.4byte	0xc37
+	.4byte	0xc2b
 	.ascii	"user_task\000"
-	.4byte	0xddf
+	.4byte	0xdd3
 	.ascii	"clock_init\000"
-	.4byte	0xe4a
+	.4byte	0xe3e
 	.ascii	"vApplicationIdleHook\000"
 	.4byte	0
 	.section	.debug_pubtypes,"",%progbits
-	.4byte	0x2c3
+	.4byte	0x2b8
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0xf85
+	.4byte	0xf79
 	.4byte	0x2b
 	.ascii	"int\000"
 	.4byte	0x37
@@ -5756,59 +5750,57 @@ RightMotorDirection:
 	.ascii	"__RAL_error_decoder_s\000"
 	.4byte	0x1d4
 	.ascii	"__RAL_error_decoder_t\000"
-	.4byte	0x204
-	.ascii	"signed char\000"
 	.4byte	0x1f8
-	.ascii	"int8_t\000"
-	.4byte	0x20b
+	.ascii	"signed char\000"
+	.4byte	0x1ff
 	.ascii	"uint8_t\000"
-	.4byte	0x223
-	.ascii	"short int\000"
 	.4byte	0x217
+	.ascii	"short int\000"
+	.4byte	0x20b
 	.ascii	"int16_t\000"
-	.4byte	0x22a
+	.4byte	0x21e
 	.ascii	"int32_t\000"
-	.4byte	0x23b
+	.4byte	0x22f
 	.ascii	"uint32_t\000"
-	.4byte	0x24c
+	.4byte	0x240
 	.ascii	"long long int\000"
-	.4byte	0x253
+	.4byte	0x247
 	.ascii	"long long unsigned int\000"
-	.4byte	0x273
+	.4byte	0x267
 	.ascii	"nrf_nvic_state_t\000"
-	.4byte	0x28f
+	.4byte	0x283
 	.ascii	"FILE\000"
-	.4byte	0x2ce
+	.4byte	0x2c2
 	.ascii	"ret_code_t\000"
-	.4byte	0x2da
+	.4byte	0x2ce
 	.ascii	"long unsigned int\000"
-	.4byte	0x328
+	.4byte	0x31c
 	.ascii	"BaseType_t\000"
-	.4byte	0x334
+	.4byte	0x328
 	.ascii	"UBaseType_t\000"
-	.4byte	0x340
+	.4byte	0x334
 	.ascii	"_Bool\000"
-	.4byte	0x347
+	.4byte	0x33b
 	.ascii	"nrf_log_module_reduced_dynamic_data_t\000"
-	.4byte	0x364
+	.4byte	0x358
 	.ascii	"nrf_sdh_freertos_task_hook_t\000"
-	.4byte	0x370
+	.4byte	0x364
 	.ascii	"QueueHandle_t\000"
-	.4byte	0x37c
+	.4byte	0x370
 	.ascii	"SemaphoreHandle_t\000"
-	.4byte	0x388
+	.4byte	0x37c
 	.ascii	"TaskHandle_t\000"
-	.4byte	0x394
+	.4byte	0x388
 	.ascii	"float\000"
-	.4byte	0x39b
+	.4byte	0x38f
 	.ascii	"double\000"
-	.4byte	0x3a2
+	.4byte	0x396
 	.ascii	"lcd_cb_t\000"
-	.4byte	0x3b2
+	.4byte	0x3a6
 	.ascii	"nrf_lcd_t\000"
-	.4byte	0x3c7
+	.4byte	0x3bb
 	.ascii	"FONT_INFO\000"
-	.4byte	0x3d7
+	.4byte	0x3cb
 	.ascii	"nrf_gfx_font_desc_t\000"
 	.4byte	0xb
 	.ascii	"sCartesian\000"
@@ -6518,7 +6510,7 @@ RightMotorDirection:
 	.section	.debug_line,"",%progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",%progbits,1
-.LASF223:
+.LASF222:
 	.ascii	"servo_init\000"
 .LASF75:
 	.ascii	"currency_symbol\000"
@@ -6526,9 +6518,9 @@ RightMotorDirection:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF38:
 	.ascii	"padding\000"
-.LASF209:
+.LASF208:
 	.ascii	"ir_init\000"
-.LASF146:
+.LASF145:
 	.ascii	"__FLASH_segment_used_end__\000"
 .LASF117:
 	.ascii	"__RAL_data_utf8_space\000"
@@ -6540,7 +6532,7 @@ RightMotorDirection:
 	.ascii	"next\000"
 .LASF40:
 	.ascii	"NRF_LOG_SEVERITY_ERROR\000"
-.LASF220:
+.LASF219:
 	.ascii	"nrf_log_init\000"
 .LASF108:
 	.ascii	"__RAL_codeset_ascii\000"
@@ -6552,17 +6544,17 @@ RightMotorDirection:
 	.ascii	"int_n_sep_by_space\000"
 .LASF83:
 	.ascii	"p_cs_precedes\000"
-.LASF164:
+.LASF163:
 	.ascii	"handle_user_task\000"
 .LASF119:
 	.ascii	"__RAL_data_utf8_minus\000"
-.LASF181:
+.LASF180:
 	.ascii	"gHandshook\000"
-.LASF217:
+.LASF216:
 	.ascii	"app_error_handler\000"
-.LASF131:
+.LASF130:
 	.ascii	"long long unsigned int\000"
-.LASF233:
+.LASF232:
 	.ascii	"GNU C99 9.2.1 20191025 (release) [ARM/arm-9-branch "
 	.ascii	"revision 277599] -fmessage-length=0 -mcpu=cortex-m4"
 	.ascii	" -mlittle-endian -mfloat-abi=hard -mfpu=fpv4-sp-d16"
@@ -6577,29 +6569,29 @@ RightMotorDirection:
 	.ascii	"__locale_s\000"
 .LASF122:
 	.ascii	"__user_get_time_of_day\000"
-.LASF145:
+.LASF144:
 	.ascii	"_vectors\000"
-.LASF152:
+.LASF151:
 	.ascii	"QueueHandle_t\000"
-.LASF132:
+.LASF131:
 	.ascii	"ITM_RxBuffer\000"
-.LASF195:
+.LASF194:
 	.ascii	"erase_bonds\000"
-.LASF159:
+.LASF158:
 	.ascii	"orkney_8ptFontInfo\000"
 .LASF74:
 	.ascii	"int_curr_symbol\000"
-.LASF199:
+.LASF198:
 	.ascii	"user_task\000"
-.LASF194:
+.LASF193:
 	.ascii	"m_lcd_cb\000"
 .LASF98:
 	.ascii	"abbrev_month_names\000"
-.LASF127:
-	.ascii	"int16_t\000"
-.LASF130:
-	.ascii	"long long int\000"
 .LASF126:
+	.ascii	"int16_t\000"
+.LASF129:
+	.ascii	"long long int\000"
+.LASF125:
 	.ascii	"signed char\000"
 .LASF106:
 	.ascii	"__RAL_global_locale\000"
@@ -6607,13 +6599,13 @@ RightMotorDirection:
 	.ascii	"module_id\000"
 .LASF59:
 	.ascii	"codeset\000"
-.LASF227:
+.LASF226:
 	.ascii	"vTaskDelay\000"
-.LASF157:
+.LASF156:
 	.ascii	"FONT_INFO\000"
 .LASF66:
 	.ascii	"__towupper\000"
-.LASF169:
+.LASF168:
 	.ascii	"sensor_tower_task\000"
 .LASF81:
 	.ascii	"int_frac_digits\000"
@@ -6621,19 +6613,19 @@ RightMotorDirection:
 	.ascii	"state\000"
 .LASF70:
 	.ascii	"long int\000"
-.LASF192:
+.LASF191:
 	.ascii	"RightMotorDirection\000"
-.LASF202:
+.LASF201:
 	.ascii	"targetX\000"
-.LASF187:
+.LASF186:
 	.ascii	"gLeft\000"
 .LASF60:
 	.ascii	"__RAL_locale_data_t\000"
 .LASF116:
 	.ascii	"__RAL_data_utf8_comma\000"
-.LASF154:
+.LASF153:
 	.ascii	"TaskHandle_t\000"
-.LASF139:
+.LASF138:
 	.ascii	"stdin\000"
 .LASF64:
 	.ascii	"__tolower\000"
@@ -6641,20 +6633,20 @@ RightMotorDirection:
 	.ascii	"NRF_LOG_SEVERITY_WARNING\000"
 .LASF13:
 	.ascii	"uint16_t\000"
-.LASF234:
+.LASF233:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
 	.ascii	"al\\slam\\main.c\000"
-.LASF155:
+.LASF154:
 	.ascii	"double\000"
-.LASF232:
+.LASF231:
 	.ascii	"nrf_drv_clock_init\000"
-.LASF147:
+.LASF146:
 	.ascii	"BaseType_t\000"
-.LASF200:
+.LASF199:
 	.ascii	"str1\000"
-.LASF201:
+.LASF200:
 	.ascii	"str2\000"
-.LASF170:
+.LASF169:
 	.ascii	"arq_task\000"
 .LASF48:
 	.ascii	"__irq_masks\000"
@@ -6666,17 +6658,17 @@ RightMotorDirection:
 	.ascii	"__wchar\000"
 .LASF4:
 	.ascii	"endChar\000"
-.LASF183:
+.LASF182:
 	.ascii	"USEBLUETOOTH\000"
 .LASF89:
 	.ascii	"int_p_cs_precedes\000"
 .LASF26:
 	.ascii	"nrf_lcd_rotation_t\000"
-.LASF229:
+.LASF228:
 	.ascii	"vTaskPrioritySet\000"
 .LASF72:
 	.ascii	"thousands_sep\000"
-.LASF216:
+.LASF215:
 	.ascii	"vTaskStartScheduler\000"
 .LASF12:
 	.ascii	"offset\000"
@@ -6686,29 +6678,27 @@ RightMotorDirection:
 	.ascii	"__iswctype\000"
 .LASF88:
 	.ascii	"n_sign_posn\000"
-.LASF221:
-	.ascii	"vPortEnterCritical\000"
-.LASF231:
+.LASF230:
 	.ascii	"display_text_on_line\000"
-.LASF197:
+.LASF196:
 	.ascii	"LOCAL_ERR_CODE\000"
 .LASF23:
 	.ascii	"lcd_cb_t\000"
 .LASF100:
 	.ascii	"date_format\000"
-.LASF208:
+.LASF207:
 	.ascii	"clock_init\000"
 .LASF5:
 	.ascii	"spacePixels\000"
 .LASF28:
 	.ascii	"unsigned int\000"
-.LASF203:
+.LASF202:
 	.ascii	"targetY\000"
 .LASF91:
 	.ascii	"int_p_sep_by_space\000"
-.LASF133:
+.LASF132:
 	.ascii	"SystemCoreClock\000"
-.LASF205:
+.LASF204:
 	.ascii	"testWaypoint\000"
 .LASF99:
 	.ascii	"am_pm_indicator\000"
@@ -6716,80 +6706,80 @@ RightMotorDirection:
 	.ascii	"__RAL_data_utf8_period\000"
 .LASF73:
 	.ascii	"grouping\000"
-.LASF193:
+.LASF192:
 	.ascii	"LeftMotorDirection\000"
-.LASF142:
+.LASF141:
 	.ascii	"long unsigned int\000"
 .LASF6:
 	.ascii	"charInfo\000"
 .LASF67:
 	.ascii	"__towlower\000"
-.LASF185:
+.LASF184:
 	.ascii	"gX_hat\000"
 .LASF120:
 	.ascii	"__RAL_data_empty_string\000"
-.LASF167:
+.LASF166:
 	.ascii	"pose_controller_task\000"
 .LASF56:
 	.ascii	"__category\000"
-.LASF179:
+.LASF178:
 	.ascii	"scanStatusQ\000"
-.LASF149:
+.LASF148:
 	.ascii	"nrf_log_module_reduced_dynamic_data_t\000"
-.LASF144:
+.LASF143:
 	.ascii	"__StackLimit\000"
-.LASF191:
+.LASF190:
 	.ascii	"shared_SPI_init\000"
 .LASF30:
 	.ascii	"width\000"
-.LASF134:
+.LASF133:
 	.ascii	"nrf_nvic_state_t\000"
-.LASF165:
+.LASF164:
 	.ascii	"handle_microsd_task\000"
-.LASF180:
+.LASF179:
 	.ascii	"queue_microsd\000"
 .LASF14:
 	.ascii	"short unsigned int\000"
 .LASF58:
 	.ascii	"name\000"
-.LASF235:
+.LASF234:
 	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
 	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF10:
 	.ascii	"FONT_CHAR_INFO\000"
 .LASF39:
 	.ascii	"NRF_LOG_SEVERITY_NONE\000"
-.LASF213:
+.LASF212:
 	.ascii	"xQueueCreateMutex\000"
 .LASF95:
 	.ascii	"day_names\000"
-.LASF207:
+.LASF206:
 	.ascii	"target\000"
 .LASF33:
 	.ascii	"NRF_LCD_ROTATE_0\000"
 .LASF49:
 	.ascii	"__cr_flag\000"
-.LASF230:
+.LASF229:
 	.ascii	"sprintf\000"
 .LASF3:
 	.ascii	"startChar\000"
-.LASF137:
+.LASF136:
 	.ascii	"timeval\000"
 .LASF47:
 	.ascii	"NRFX_DRV_STATE_POWERED_ON\000"
-.LASF140:
+.LASF139:
 	.ascii	"stdout\000"
-.LASF168:
+.LASF167:
 	.ascii	"communication_task\000"
 .LASF57:
 	.ascii	"__RAL_locale_t\000"
 .LASF101:
 	.ascii	"time_format\000"
-.LASF173:
+.LASF172:
 	.ascii	"xTickMutex\000"
 .LASF63:
 	.ascii	"__toupper\000"
-.LASF224:
+.LASF223:
 	.ascii	"encoder_init_int\000"
 .LASF87:
 	.ascii	"p_sign_posn\000"
@@ -6799,37 +6789,37 @@ RightMotorDirection:
 	.ascii	"lcd_pixel_draw\000"
 .LASF110:
 	.ascii	"__RAL_ascii_ctype_map\000"
-.LASF196:
+.LASF195:
 	.ascii	"err_code\000"
-.LASF174:
+.LASF173:
 	.ascii	"xControllerBSem\000"
-.LASF214:
+.LASF213:
 	.ascii	"xTaskCreate\000"
 .LASF51:
 	.ascii	"decode\000"
 .LASF22:
 	.ascii	"p_lcd_cb\000"
-.LASF198:
+.LASF197:
 	.ascii	"log_init\000"
 .LASF36:
 	.ascii	"NRF_LCD_ROTATE_270\000"
 .LASF69:
 	.ascii	"__mbtowc\000"
-.LASF135:
+.LASF134:
 	.ascii	"nrf_nvic_state\000"
-.LASF204:
+.LASF203:
 	.ascii	"sent\000"
 .LASF107:
 	.ascii	"__RAL_c_locale\000"
-.LASF206:
+.LASF205:
 	.ascii	"time\000"
-.LASF172:
+.LASF171:
 	.ascii	"xPoseMutex\000"
 .LASF121:
 	.ascii	"__user_set_time_of_day\000"
 .LASF90:
 	.ascii	"int_n_cs_precedes\000"
-.LASF188:
+.LASF187:
 	.ascii	"gRight\000"
 .LASF109:
 	.ascii	"__RAL_codeset_utf8\000"
@@ -6837,17 +6827,17 @@ RightMotorDirection:
 	.ascii	"__state\000"
 .LASF16:
 	.ascii	"lcd_uninit\000"
-.LASF161:
+.LASF160:
 	.ascii	"m_nrf_lcd\000"
 .LASF18:
 	.ascii	"lcd_rect_draw\000"
-.LASF143:
+.LASF142:
 	.ascii	"__StackTop\000"
-.LASF171:
+.LASF170:
 	.ascii	"xScanLock\000"
 .LASF27:
 	.ascii	"_Bool\000"
-.LASF129:
+.LASF128:
 	.ascii	"int32_t\000"
 .LASF8:
 	.ascii	"unsigned char\000"
@@ -6855,31 +6845,31 @@ RightMotorDirection:
 	.ascii	"height\000"
 .LASF111:
 	.ascii	"__RAL_c_locale_day_names\000"
-.LASF156:
+.LASF155:
 	.ascii	"nrf_lcd_t\000"
 .LASF82:
 	.ascii	"frac_digits\000"
 .LASF44:
 	.ascii	"NRF_LOG_SEVERITY_INFO_RAW\000"
-.LASF128:
+.LASF127:
 	.ascii	"short int\000"
 .LASF124:
 	.ascii	"__RAL_error_decoder_head\000"
-.LASF215:
+.LASF214:
 	.ascii	"nrf_log_frontend_std_0\000"
-.LASF184:
+.LASF183:
 	.ascii	"gTheta_hat\000"
 .LASF103:
 	.ascii	"__mbstate_s\000"
-.LASF212:
+.LASF211:
 	.ascii	"xQueueGenericCreate\000"
-.LASF210:
+.LASF209:
 	.ascii	"BLE_init\000"
-.LASF136:
+.LASF135:
 	.ascii	"FILE\000"
-.LASF237:
+.LASF236:
 	.ascii	"vApplicationIdleHook\000"
-.LASF162:
+.LASF161:
 	.ascii	"collisionAngles\000"
 .LASF20:
 	.ascii	"lcd_rotation_set\000"
@@ -6887,41 +6877,41 @@ RightMotorDirection:
 	.ascii	"nrfx_drv_state_t\000"
 .LASF77:
 	.ascii	"mon_thousands_sep\000"
-.LASF189:
+.LASF188:
 	.ascii	"gRightWheelTicks\000"
 .LASF79:
 	.ascii	"positive_sign\000"
 .LASF25:
 	.ascii	"uint32_t\000"
-.LASF182:
+.LASF181:
 	.ascii	"gPaused\000"
 .LASF93:
 	.ascii	"int_p_sign_posn\000"
-.LASF226:
+.LASF225:
 	.ascii	"i2cInit\000"
 .LASF35:
 	.ascii	"NRF_LCD_ROTATE_180\000"
-.LASF153:
+.LASF152:
 	.ascii	"SemaphoreHandle_t\000"
 .LASF54:
 	.ascii	"char\000"
-.LASF225:
+.LASF224:
 	.ascii	"vPortExitCritical\000"
 .LASF62:
 	.ascii	"__isctype\000"
-.LASF178:
+.LASF177:
 	.ascii	"poseControllerQ\000"
 .LASF84:
 	.ascii	"p_sep_by_space\000"
-.LASF150:
+.LASF149:
 	.ascii	"m_nrf_log_app_logs_data_dynamic\000"
-.LASF228:
+.LASF227:
 	.ascii	"IMU_init\000"
-.LASF177:
+.LASF176:
 	.ascii	"xCollisionMutex\000"
-.LASF211:
+.LASF210:
 	.ascii	"arq_init\000"
-.LASF151:
+.LASF150:
 	.ascii	"nrf_sdh_freertos_task_hook_t\000"
 .LASF34:
 	.ascii	"NRF_LCD_ROTATE_90\000"
@@ -6931,21 +6921,21 @@ RightMotorDirection:
 	.ascii	"__RAL_locale_codeset_t\000"
 .LASF0:
 	.ascii	"sCartesian\000"
-.LASF125:
-	.ascii	"int8_t\000"
-.LASF190:
+.LASF220:
+	.ascii	"vPortEnterCritical\000"
+.LASF189:
 	.ascii	"gLeftWheelTicks\000"
 .LASF94:
 	.ascii	"int_n_sign_posn\000"
-.LASF166:
+.LASF165:
 	.ascii	"pose_estimator_task\000"
-.LASF141:
+.LASF140:
 	.ascii	"stderr\000"
-.LASF218:
+.LASF217:
 	.ascii	"vTaskSuspend\000"
 .LASF113:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF163:
+.LASF162:
 	.ascii	"handle_display_task\000"
 .LASF21:
 	.ascii	"lcd_display_invert\000"
@@ -6963,27 +6953,27 @@ RightMotorDirection:
 	.ascii	"float\000"
 .LASF97:
 	.ascii	"month_names\000"
-.LASF222:
+.LASF221:
 	.ascii	"motor_init\000"
-.LASF219:
+.LASF218:
 	.ascii	"nrf_sdh_freertos_init\000"
-.LASF175:
+.LASF174:
 	.ascii	"xCommandReadyBSem\000"
-.LASF176:
+.LASF175:
 	.ascii	"mutex_spi\000"
 .LASF46:
 	.ascii	"NRFX_DRV_STATE_INITIALIZED\000"
 .LASF45:
 	.ascii	"NRFX_DRV_STATE_UNINITIALIZED\000"
-.LASF160:
+.LASF159:
 	.ascii	"queue_display\000"
 .LASF31:
 	.ascii	"rotation\000"
 .LASF86:
 	.ascii	"n_sep_by_space\000"
-.LASF138:
+.LASF137:
 	.ascii	"__RAL_FILE\000"
-.LASF158:
+.LASF157:
 	.ascii	"nrf_gfx_font_desc_t\000"
 .LASF118:
 	.ascii	"__RAL_data_utf8_plus\000"
@@ -6991,16 +6981,16 @@ RightMotorDirection:
 	.ascii	"lcd_init\000"
 .LASF114:
 	.ascii	"__RAL_c_locale_abbrev_month_names\000"
-.LASF236:
+.LASF235:
 	.ascii	"main\000"
 .LASF76:
 	.ascii	"mon_decimal_point\000"
-.LASF148:
+.LASF147:
 	.ascii	"UBaseType_t\000"
 .LASF68:
 	.ascii	"__wctomb\000"
 .LASF71:
 	.ascii	"decimal_point\000"
-.LASF186:
+.LASF185:
 	.ascii	"gY_hat\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"
