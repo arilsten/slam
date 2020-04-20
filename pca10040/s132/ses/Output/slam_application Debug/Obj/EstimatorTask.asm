@@ -14,14 +14,14 @@
 	.text
 .Ltext0:
 	.global	__aeabi_i2d
-	.global	__aeabi_ddiv
+	.global	__aeabi_dmul
 	.global	__aeabi_d2f
 	.section	.rodata.vMainPoseEstimatorTask.str1.4,"aMS",%progbits,1
 	.align	2
 .LC0:
 	.ascii	"IMU Has no new data\000"
 	.global	__aeabi_f2d
-	.global	__aeabi_dmul
+	.global	__aeabi_ddiv
 	.global	__aeabi_dcmpgt
 	.align	2
 .LC1:
@@ -231,7 +231,7 @@ vMainPoseEstimatorTask:
 	.loc 1 196 79 discriminator 3 view .LVU57
 	.loc 1 196 134 discriminator 3 view .LVU58
 	.loc 1 196 215 is_stmt 0 discriminator 3 view .LVU59
-	ldr	r3, .L41+24
+	ldr	r3, .L41+32
 	ldrh	r4, [r3]
 	.loc 1 196 226 discriminator 3 view .LVU60
 	lsls	r4, r4, #16
@@ -243,7 +243,7 @@ vMainPoseEstimatorTask:
 .LVL19:
 	.loc 1 196 273 discriminator 3 view .LVU63
 	movs	r2, #0
-	ldr	r3, .L41+28
+	ldr	r3, .L41+36
 	bl	__aeabi_dmul
 .LVL20:
 	.loc 1 196 281 discriminator 3 view .LVU64
@@ -255,7 +255,7 @@ vMainPoseEstimatorTask:
 	bl	__aeabi_d2uiz
 .LVL22:
 	mov	r2, r0
-	ldr	r1, .L41+32
+	ldr	r1, .L41+40
 	mov	r0, r4
 	bl	nrf_log_frontend_std_1
 .LVL23:
@@ -265,12 +265,12 @@ vMainPoseEstimatorTask:
 .LVL24:
 .L10:
 	.loc 1 237 4 is_stmt 1 view .LVU68
-	ldr	r4, .L41+36
+	ldr	r4, .L41+44
 	add	r0, r4, #8
 	bl	vFunc_Inf2pi
 .LVL25:
 	.loc 1 238 4 view .LVU69
-	ldr	r5, .L41+40
+	ldr	r5, .L41+48
 .LVL26:
 	.loc 1 238 4 is_stmt 0 view .LVU70
 	movs	r1, #15
@@ -281,18 +281,18 @@ vMainPoseEstimatorTask:
 	.loc 1 239 25 is_stmt 0 view .LVU72
 	ldr	r2, [r4, #8]	@ float
 	.loc 1 239 15 view .LVU73
-	ldr	r3, .L41+44
+	ldr	r3, .L41+52
 	str	r2, [r3]	@ float
 	.loc 1 248 4 is_stmt 1 view .LVU74
 	.loc 1 248 27 is_stmt 0 view .LVU75
 	vldr.32	s15, [r4]
 	.loc 1 248 29 view .LVU76
-	vldr.32	s14, .L41+48
+	vldr.32	s14, .L41+56
 	vmul.f32	s15, s15, s14
 	.loc 1 248 13 view .LVU77
 	vcvt.s32.f32	s15, s15
 	.loc 1 248 11 view .LVU78
-	ldr	r3, .L41+52
+	ldr	r3, .L41+60
 	vmov	r2, s15	@ int
 	strh	r2, [r3]	@ movhi
 	.loc 1 249 4 is_stmt 1 view .LVU79
@@ -303,16 +303,16 @@ vMainPoseEstimatorTask:
 	.loc 1 249 13 view .LVU82
 	vcvt.s32.f32	s15, s15
 	.loc 1 249 11 view .LVU83
-	ldr	r3, .L41+56
+	ldr	r3, .L41+64
 	vmov	r2, s15	@ int
 	strh	r2, [r3]	@ movhi
 	.loc 1 250 4 is_stmt 1 view .LVU84
 	.loc 1 250 10 is_stmt 0 view .LVU85
-	ldr	r3, .L41+60
+	ldr	r3, .L41+68
 	vstr.32	s17, [r3]
 	.loc 1 251 4 is_stmt 1 view .LVU86
 	.loc 1 251 11 is_stmt 0 view .LVU87
-	ldr	r3, .L41+64
+	ldr	r3, .L41+72
 	vstr.32	s16, [r3]
 	.loc 1 252 4 is_stmt 1 view .LVU88
 	movs	r3, #0
@@ -325,7 +325,7 @@ vMainPoseEstimatorTask:
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
-	ldr	r0, .L41+68
+	ldr	r0, .L41+76
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL29:
@@ -344,7 +344,7 @@ vMainPoseEstimatorTask:
 .LVL31:
 	.loc 1 62 3 view .LVU95
 	.loc 1 62 7 is_stmt 0 view .LVU96
-	ldr	r3, .L41+72
+	ldr	r3, .L41+80
 	ldrb	r3, [r3]	@ zero_extendqisi2
 	.loc 1 62 6 view .LVU97
 	cmp	r3, #0
@@ -356,19 +356,19 @@ vMainPoseEstimatorTask:
 	.loc 1 65 3 view .LVU100
 	.loc 1 66 3 view .LVU101
 	.loc 1 70 3 view .LVU102
-	ldr	r4, .L41+76
+	ldr	r4, .L41+84
 	movs	r1, #15
 	ldr	r0, [r4]
 	bl	xQueueSemaphoreTake
 .LVL33:
 	.loc 1 71 3 view .LVU103
 	.loc 1 71 18 is_stmt 0 view .LVU104
-	ldr	r3, .L41+80
+	ldr	r3, .L41+88
 	ldrsh	r6, [r3]
 .LVL34:
 	.loc 1 72 3 is_stmt 1 view .LVU105
 	.loc 1 72 19 is_stmt 0 view .LVU106
-	ldr	r3, .L41+84
+	ldr	r3, .L41+92
 	ldrsh	r5, [r3]
 .LVL35:
 	.loc 1 73 3 is_stmt 1 view .LVU107
@@ -380,98 +380,96 @@ vMainPoseEstimatorTask:
 .LVL36:
 	.loc 1 75 3 view .LVU108
 	.loc 1 75 40 is_stmt 0 view .LVU109
-	movs	r4, #228
-	.loc 1 75 47 view .LVU110
-	mul	r0, r4, r6
+	mov	r0, r6
 	bl	__aeabi_i2d
 .LVL37:
-	movs	r2, #0
-	ldr	r3, .L41+88
-	bl	__aeabi_ddiv
+	adr	r3, .L41+8
+	ldrd	r2, [r3]
+	bl	__aeabi_dmul
 .LVL38:
-	.loc 1 75 9 view .LVU111
+	.loc 1 75 9 view .LVU110
 	bl	__aeabi_d2f
 .LVL39:
 	vmov	s17, r0
 .LVL40:
-	.loc 1 76 3 is_stmt 1 view .LVU112
-	.loc 1 76 49 is_stmt 0 view .LVU113
-	mul	r0, r4, r5
+	.loc 1 76 3 is_stmt 1 view .LVU111
+	.loc 1 76 42 is_stmt 0 view .LVU112
+	mov	r0, r5
 .LVL41:
-	.loc 1 76 49 view .LVU114
+	.loc 1 76 42 view .LVU113
 	bl	__aeabi_i2d
 .LVL42:
-	movs	r2, #0
-	ldr	r3, .L41+88
-	bl	__aeabi_ddiv
+	adr	r3, .L41+8
+	ldrd	r2, [r3]
+	bl	__aeabi_dmul
 .LVL43:
-	.loc 1 76 9 view .LVU115
+	.loc 1 76 9 view .LVU114
 	bl	__aeabi_d2f
 .LVL44:
 	vmov	s16, r0
 .LVL45:
-	.loc 1 77 3 is_stmt 1 view .LVU116
-	.loc 1 77 19 is_stmt 0 view .LVU117
+	.loc 1 77 3 is_stmt 1 view .LVU115
+	.loc 1 77 19 is_stmt 0 view .LVU116
 	vadd.f32	s18, s17, s16
-	.loc 1 77 10 view .LVU118
+	.loc 1 77 10 view .LVU117
 	vmov.f32	s15, #5.0e-1
 	vmul.f32	s18, s18, s15
 .LVL46:
-	.loc 1 78 3 is_stmt 1 view .LVU119
-	.loc 1 79 3 view .LVU120
-	.loc 1 79 20 is_stmt 0 view .LVU121
+	.loc 1 78 3 is_stmt 1 view .LVU118
+	.loc 1 79 3 view .LVU119
+	.loc 1 79 20 is_stmt 0 view .LVU120
 	vsub.f32	s14, s16, s17
-	.loc 1 79 10 view .LVU122
-	vldr.32	s15, .L41+92
+	.loc 1 79 10 view .LVU121
+	vldr.32	s15, .L41+96
 	vdiv.f32	s24, s14, s15
 .LVL47:
-	.loc 1 82 3 is_stmt 1 view .LVU123
-	.loc 1 82 7 is_stmt 0 view .LVU124
+	.loc 1 82 3 is_stmt 1 view .LVU122
+	.loc 1 82 7 is_stmt 0 view .LVU123
 	bl	IMU_newData
 .LVL48:
-	.loc 1 82 6 view .LVU125
+	.loc 1 82 6 view .LVU124
 	cmp	r0, #0
 	beq	.L4
-	.loc 1 83 4 is_stmt 1 view .LVU126
+	.loc 1 83 4 is_stmt 1 view .LVU125
 	bl	IMU_read
 .LVL49:
-	.loc 1 84 4 view .LVU127
-	.loc 1 84 11 is_stmt 0 view .LVU128
+	.loc 1 84 4 view .LVU126
+	.loc 1 84 11 is_stmt 0 view .LVU127
 	bl	IMU_getGyro
 .LVL50:
-	ldr	r4, .L41+96
+	ldr	r4, .L41+100
 	vstr.32	s0, [r4]
 	vstr.32	s1, [r4, #4]
 	vstr.32	s2, [r4, #8]
-	.loc 1 85 4 is_stmt 1 view .LVU129
-	.loc 1 85 12 is_stmt 0 view .LVU130
+	.loc 1 85 4 is_stmt 1 view .LVU128
+	.loc 1 85 12 is_stmt 0 view .LVU129
 	bl	IMU_getAccel
 .LVL51:
-	ldr	r3, .L41+100
+	ldr	r3, .L41+104
 	vstr.32	s2, [r3, #8]
-	.loc 1 86 4 is_stmt 1 view .LVU131
-	.loc 1 86 12 is_stmt 0 view .LVU132
+	.loc 1 86 4 is_stmt 1 view .LVU130
+	.loc 1 86 12 is_stmt 0 view .LVU131
 	vsub.f32	s0, s0, s22
 	vstr.32	s0, [r3]
-	.loc 1 87 4 is_stmt 1 view .LVU133
-	.loc 1 87 12 is_stmt 0 view .LVU134
+	.loc 1 87 4 is_stmt 1 view .LVU132
+	.loc 1 87 12 is_stmt 0 view .LVU133
 	vsub.f32	s1, s1, s23
 	vstr.32	s1, [r3, #4]
-	.loc 1 89 4 is_stmt 1 view .LVU135
-	.loc 1 89 15 is_stmt 0 view .LVU136
+	.loc 1 89 4 is_stmt 1 view .LVU134
+	.loc 1 89 15 is_stmt 0 view .LVU135
 	vldr.32	s15, [r4, #8]
-	.loc 1 89 9 view .LVU137
+	.loc 1 89 9 view .LVU136
 	vsub.f32	s15, s15, s19
 	vmov	r5, s15
 .LVL52:
-	.loc 1 136 4 is_stmt 1 view .LVU138
+	.loc 1 136 4 is_stmt 1 view .LVU137
 	movs	r0, #10
 	bl	vTaskDelay
 .LVL53:
 .L5:
-	.loc 1 146 4 view .LVU139
-	.loc 1 146 21 is_stmt 0 view .LVU140
-	ldr	r4, .L41+44
+	.loc 1 146 4 view .LVU138
+	.loc 1 146 21 is_stmt 0 view .LVU139
+	ldr	r4, .L41+52
 	ldr	r0, [r4]	@ float
 	bl	__aeabi_f2d
 .LVL54:
@@ -479,101 +477,101 @@ vMainPoseEstimatorTask:
 	bl	cos
 .LVL55:
 	vmov	r0, r1, d0
-	.loc 1 146 10 view .LVU141
+	.loc 1 146 10 view .LVU140
 	bl	__aeabi_d2f
 .LVL56:
 	vmov	s21, r0
 .LVL57:
-	.loc 1 147 4 is_stmt 1 view .LVU142
-	.loc 1 147 21 is_stmt 0 view .LVU143
+	.loc 1 147 4 is_stmt 1 view .LVU141
+	.loc 1 147 21 is_stmt 0 view .LVU142
 	ldr	r0, [r4]	@ float
 .LVL58:
-	.loc 1 147 21 view .LVU144
+	.loc 1 147 21 view .LVU143
 	bl	__aeabi_f2d
 .LVL59:
 	vmov	d0, r0, r1
 	bl	sin
 .LVL60:
 	vmov	r0, r1, d0
-	.loc 1 147 10 view .LVU145
+	.loc 1 147 10 view .LVU144
 	bl	__aeabi_d2f
 .LVL61:
 	vmov	s20, r0
 .LVL62:
-	.loc 1 155 4 is_stmt 1 view .LVU146
-	.loc 1 155 15 is_stmt 0 view .LVU147
+	.loc 1 155 4 is_stmt 1 view .LVU145
+	.loc 1 155 15 is_stmt 0 view .LVU146
 	vmul.f32	s15, s18, s21
 	vmov	r0, s15
 .LVL63:
-	.loc 1 155 15 view .LVU148
+	.loc 1 155 15 view .LVU147
 	bl	__aeabi_f2d
 .LVL64:
-	.loc 1 155 24 view .LVU149
-	adr	r3, .L41+8
+	.loc 1 155 24 view .LVU148
+	adr	r3, .L41+16
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
 .LVL65:
 	bl	__aeabi_d2f
 .LVL66:
-	.loc 1 155 8 view .LVU150
+	.loc 1 155 8 view .LVU149
 	str	r0, [sp, #32]	@ float
-	.loc 1 156 4 is_stmt 1 view .LVU151
-	.loc 1 156 14 is_stmt 0 view .LVU152
-	ldr	r3, .L41+100
+	.loc 1 156 4 is_stmt 1 view .LVU150
+	.loc 1 156 14 is_stmt 0 view .LVU151
+	ldr	r3, .L41+104
 	vldr.32	s25, [r3]
-	.loc 1 156 16 view .LVU153
+	.loc 1 156 16 view .LVU152
 	vmul.f32	s15, s25, s21
 	vmov	r0, s15
 	bl	__aeabi_f2d
 .LVL67:
-	.loc 1 156 25 view .LVU154
-	adr	r3, .L41+16
+	.loc 1 156 25 view .LVU153
+	adr	r3, .L41+24
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
 .LVL68:
 	bl	__aeabi_d2f
 .LVL69:
-	.loc 1 156 8 view .LVU155
+	.loc 1 156 8 view .LVU154
 	str	r0, [sp, #36]	@ float
-	.loc 1 158 4 is_stmt 1 view .LVU156
-	.loc 1 158 15 is_stmt 0 view .LVU157
+	.loc 1 158 4 is_stmt 1 view .LVU155
+	.loc 1 158 15 is_stmt 0 view .LVU156
 	vmul.f32	s15, s18, s20
 	vmov	r0, s15
 	bl	__aeabi_f2d
 .LVL70:
-	.loc 1 158 24 view .LVU158
-	adr	r3, .L41+8
+	.loc 1 158 24 view .LVU157
+	adr	r3, .L41+16
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
 .LVL71:
 	bl	__aeabi_d2f
 .LVL72:
-	.loc 1 158 8 view .LVU159
+	.loc 1 158 8 view .LVU158
 	str	r0, [sp, #40]	@ float
-	.loc 1 159 4 is_stmt 1 view .LVU160
-	.loc 1 159 16 is_stmt 0 view .LVU161
+	.loc 1 159 4 is_stmt 1 view .LVU159
+	.loc 1 159 16 is_stmt 0 view .LVU160
 	vmul.f32	s15, s25, s20
 	vmov	r0, s15
 	bl	__aeabi_f2d
 .LVL73:
-	.loc 1 159 25 view .LVU162
-	adr	r3, .L41+16
+	.loc 1 159 25 view .LVU161
+	adr	r3, .L41+24
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
 .LVL74:
 	bl	__aeabi_d2f
 .LVL75:
-	.loc 1 159 8 view .LVU163
+	.loc 1 159 8 view .LVU162
 	str	r0, [sp, #44]	@ float
-	.loc 1 161 4 is_stmt 1 view .LVU164
-	.loc 1 161 8 is_stmt 0 view .LVU165
+	.loc 1 161 4 is_stmt 1 view .LVU163
+	.loc 1 161 8 is_stmt 0 view .LVU164
 	vmov.f32	s20, #2.5e+1
 .LVL76:
-	.loc 1 161 8 view .LVU166
+	.loc 1 161 8 view .LVU165
 	vmul.f32	s20, s24, s20
 	vstr.32	s20, [sp, #48]
-	.loc 1 162 4 is_stmt 1 view .LVU167
-	.loc 1 162 13 is_stmt 0 view .LVU168
+	.loc 1 162 4 is_stmt 1 view .LVU166
+	.loc 1 162 13 is_stmt 0 view .LVU167
 	mov	r0, r5	@ float
 	bl	__aeabi_f2d
 .LVL77:
@@ -581,158 +579,160 @@ vMainPoseEstimatorTask:
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
 .LVL78:
-	.loc 1 162 13 view .LVU169
+	.loc 1 162 13 view .LVU168
 	movs	r2, #0
-	ldr	r3, .L41+104
+	ldr	r3, .L41+108
 	bl	__aeabi_ddiv
 .LVL79:
 	bl	__aeabi_d2f
 .LVL80:
 	vmov	s15, r0
-	.loc 1 162 8 view .LVU170
+	.loc 1 162 8 view .LVU169
 	str	r0, [sp, #52]	@ float
-	.loc 1 163 4 is_stmt 1 view .LVU171
-	.loc 1 163 8 is_stmt 0 view .LVU172
+	.loc 1 163 4 is_stmt 1 view .LVU170
+	.loc 1 163 8 is_stmt 0 view .LVU171
 	movs	r3, #0
 	str	r3, [sp, #56]	@ float
-	.loc 1 165 4 is_stmt 1 view .LVU173
-	.loc 1 165 6 is_stmt 0 view .LVU174
+	.loc 1 165 4 is_stmt 1 view .LVU172
+	.loc 1 165 6 is_stmt 0 view .LVU173
 	vcmp.f32	s18, #0
 	vmrs	APSR_nzcv, FPSCR
 	bne	.L6
-	.loc 1 167 5 is_stmt 1 view .LVU175
-	.loc 1 167 9 is_stmt 0 view .LVU176
+	.loc 1 167 5 is_stmt 1 view .LVU174
+	.loc 1 167 9 is_stmt 0 view .LVU175
 	str	r3, [sp, #36]	@ float
-	.loc 1 168 5 is_stmt 1 view .LVU177
-	.loc 1 168 9 is_stmt 0 view .LVU178
+	.loc 1 168 5 is_stmt 1 view .LVU176
+	.loc 1 168 9 is_stmt 0 view .LVU177
 	str	r3, [sp, #44]	@ float
-	.loc 1 169 5 is_stmt 1 view .LVU179
-	.loc 1 169 29 is_stmt 0 view .LVU180
-	vldr.32	s14, .L41+48
+	.loc 1 169 5 is_stmt 1 view .LVU178
+	.loc 1 169 29 is_stmt 0 view .LVU179
+	vldr.32	s14, .L41+56
 	vdiv.f32	s15, s25, s14
-	.loc 1 169 18 view .LVU181
+	.loc 1 169 18 view .LVU180
 	vadd.f32	s22, s22, s15
 .LVL81:
 .L7:
-	.loc 1 177 4 is_stmt 1 view .LVU182
+	.loc 1 177 4 is_stmt 1 view .LVU181
 	add	r0, sp, #32
 	bl	kf_step
 .LVL82:
-	.loc 1 178 4 view .LVU183
-	.loc 1 178 15 is_stmt 0 view .LVU184
+	.loc 1 178 4 view .LVU182
+	.loc 1 178 15 is_stmt 0 view .LVU183
 	bl	kalmanGetState
 .LVL83:
-	ldr	r3, .L41+36
+	ldr	r3, .L41+44
 	vstr.32	s0, [r3]
 	vstr.32	s1, [r3, #4]
 	vstr.32	s2, [r3, #8]
-	.loc 1 180 4 is_stmt 1 view .LVU185
-	.loc 1 180 6 is_stmt 0 view .LVU186
+	.loc 1 180 4 is_stmt 1 view .LVU184
+	.loc 1 180 6 is_stmt 0 view .LVU185
 	cmp	r8, #200
 	ble	.L10
-	.loc 1 181 5 is_stmt 1 view .LVU187
-	.loc 1 181 7 is_stmt 0 view .LVU188
+	.loc 1 181 5 is_stmt 1 view .LVU186
+	.loc 1 181 7 is_stmt 0 view .LVU187
 	vcmpe.f32	s0, #0
 	vmrs	APSR_nzcv, FPSCR
 	bmi	.L34
-	.loc 1 185 6 is_stmt 1 discriminator 3 view .LVU189
-	.loc 1 185 79 discriminator 3 view .LVU190
-	.loc 1 185 134 discriminator 3 view .LVU191
-	.loc 1 185 215 is_stmt 0 discriminator 3 view .LVU192
-	ldr	r3, .L41+24
+	.loc 1 185 6 is_stmt 1 discriminator 3 view .LVU188
+	.loc 1 185 79 discriminator 3 view .LVU189
+	.loc 1 185 134 discriminator 3 view .LVU190
+	.loc 1 185 215 is_stmt 0 discriminator 3 view .LVU191
+	ldr	r3, .L41+32
 	ldrh	r0, [r3]
-	.loc 1 185 226 discriminator 3 view .LVU193
+	.loc 1 185 226 discriminator 3 view .LVU192
 	lsls	r0, r0, #16
-	.loc 1 185 264 discriminator 3 view .LVU194
-	vldr.32	s14, .L41+48
+	.loc 1 185 264 discriminator 3 view .LVU193
+	vldr.32	s14, .L41+56
 	vmul.f32	s15, s0, s14
-	.loc 1 185 134 discriminator 3 view .LVU195
-	vcvt.u32.f32	s15, s15
-	vmov	r2, s15	@ int
-	ldr	r1, .L41+108
-	orr	r0, r0, #3
-	bl	nrf_log_frontend_std_1
-.LVL84:
-.L13:
-	.loc 1 185 276 is_stmt 1 discriminator 5 view .LVU196
-	.loc 1 188 5 discriminator 5 view .LVU197
-	.loc 1 188 16 is_stmt 0 discriminator 5 view .LVU198
-	ldr	r3, .L41+36
-	vldr.32	s15, [r3, #4]
-	.loc 1 188 7 discriminator 5 view .LVU199
-	vcmpe.f32	s15, #0
-	vmrs	APSR_nzcv, FPSCR
-	bmi	.L35
-	.loc 1 192 6 is_stmt 1 discriminator 3 view .LVU200
-	.loc 1 192 79 discriminator 3 view .LVU201
-	.loc 1 192 134 discriminator 3 view .LVU202
-	.loc 1 192 215 is_stmt 0 discriminator 3 view .LVU203
-	ldr	r3, .L41+24
-	ldrh	r0, [r3]
-	.loc 1 192 226 discriminator 3 view .LVU204
-	lsls	r0, r0, #16
-	.loc 1 192 264 discriminator 3 view .LVU205
-	vldr.32	s14, .L41+48
-	vmul.f32	s15, s15, s14
-	.loc 1 192 134 discriminator 3 view .LVU206
+	.loc 1 185 134 discriminator 3 view .LVU194
 	vcvt.u32.f32	s15, s15
 	vmov	r2, s15	@ int
 	ldr	r1, .L41+112
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_1
+.LVL84:
+.L13:
+	.loc 1 185 276 is_stmt 1 discriminator 5 view .LVU195
+	.loc 1 188 5 discriminator 5 view .LVU196
+	.loc 1 188 16 is_stmt 0 discriminator 5 view .LVU197
+	ldr	r3, .L41+44
+	vldr.32	s15, [r3, #4]
+	.loc 1 188 7 discriminator 5 view .LVU198
+	vcmpe.f32	s15, #0
+	vmrs	APSR_nzcv, FPSCR
+	bmi	.L35
+	.loc 1 192 6 is_stmt 1 discriminator 3 view .LVU199
+	.loc 1 192 79 discriminator 3 view .LVU200
+	.loc 1 192 134 discriminator 3 view .LVU201
+	.loc 1 192 215 is_stmt 0 discriminator 3 view .LVU202
+	ldr	r3, .L41+32
+	ldrh	r0, [r3]
+	.loc 1 192 226 discriminator 3 view .LVU203
+	lsls	r0, r0, #16
+	.loc 1 192 264 discriminator 3 view .LVU204
+	vldr.32	s14, .L41+56
+	vmul.f32	s15, s15, s14
+	.loc 1 192 134 discriminator 3 view .LVU205
+	vcvt.u32.f32	s15, s15
+	vmov	r2, s15	@ int
+	ldr	r1, .L41+116
+	orr	r0, r0, #3
+	bl	nrf_log_frontend_std_1
 .LVL85:
 .L16:
-	.loc 1 192 276 is_stmt 1 discriminator 5 view .LVU207
-	.loc 1 195 5 discriminator 5 view .LVU208
-	.loc 1 195 16 is_stmt 0 discriminator 5 view .LVU209
-	ldr	r3, .L41+36
+	.loc 1 192 276 is_stmt 1 discriminator 5 view .LVU206
+	.loc 1 195 5 discriminator 5 view .LVU207
+	.loc 1 195 16 is_stmt 0 discriminator 5 view .LVU208
+	ldr	r3, .L41+44
 	vldr.32	s15, [r3, #8]
-	.loc 1 195 7 discriminator 5 view .LVU210
+	.loc 1 195 7 discriminator 5 view .LVU209
 	vcmpe.f32	s15, #0
 	vmrs	APSR_nzcv, FPSCR
 	bmi	.L36
-	.loc 1 199 6 is_stmt 1 discriminator 3 view .LVU211
-	.loc 1 199 79 discriminator 3 view .LVU212
-	.loc 1 199 134 discriminator 3 view .LVU213
-	.loc 1 199 215 is_stmt 0 discriminator 3 view .LVU214
-	ldr	r3, .L41+24
+	.loc 1 199 6 is_stmt 1 discriminator 3 view .LVU210
+	.loc 1 199 79 discriminator 3 view .LVU211
+	.loc 1 199 134 discriminator 3 view .LVU212
+	.loc 1 199 215 is_stmt 0 discriminator 3 view .LVU213
+	ldr	r3, .L41+32
 	ldrh	r4, [r3]
-	.loc 1 199 226 discriminator 3 view .LVU215
+	.loc 1 199 226 discriminator 3 view .LVU214
 	lsls	r4, r4, #16
-	.loc 1 199 182 discriminator 3 view .LVU216
+	.loc 1 199 182 discriminator 3 view .LVU215
 	orr	r4, r4, #3
-	.loc 1 199 264 discriminator 3 view .LVU217
+	.loc 1 199 264 discriminator 3 view .LVU216
 	vmov	r0, s15
 	bl	__aeabi_f2d
 .LVL86:
-	.loc 1 199 272 discriminator 3 view .LVU218
+	.loc 1 199 272 discriminator 3 view .LVU217
 	movs	r2, #0
-	ldr	r3, .L41+104
+	ldr	r3, .L41+108
 	bl	__aeabi_dmul
 .LVL87:
-	.loc 1 199 279 discriminator 3 view .LVU219
+	.loc 1 199 279 discriminator 3 view .LVU218
 	adr	r3, .L41
 	ldrd	r2, [r3]
 	bl	__aeabi_ddiv
 .LVL88:
-	.loc 1 199 134 discriminator 3 view .LVU220
+	.loc 1 199 134 discriminator 3 view .LVU219
 	bl	__aeabi_d2uiz
 .LVL89:
 	mov	r2, r0
-	ldr	r1, .L41+116
+	ldr	r1, .L41+120
 	mov	r0, r4
 	bl	nrf_log_frontend_std_1
 .LVL90:
-	.loc 1 201 11 discriminator 3 view .LVU221
+	.loc 1 201 11 discriminator 3 view .LVU220
 	mov	r8, #0
 .LVL91:
-	.loc 1 201 11 discriminator 3 view .LVU222
+	.loc 1 201 11 discriminator 3 view .LVU221
 	b	.L10
 .L42:
 	.align	3
 .L41:
 	.word	1413754136
 	.word	1074340347
+	.word	-858993459
+	.word	1072090316
 	.word	-1717986918
 	.word	1067030937
 	.word	1202590843
@@ -753,7 +753,6 @@ vMainPoseEstimatorTask:
 	.word	xTickMutex
 	.word	gLeftWheelTicks
 	.word	gRightWheelTicks
-	.word	1081344000
 	.word	1126957056
 	.word	.LANCHOR0
 	.word	.LANCHOR1
@@ -763,156 +762,156 @@ vMainPoseEstimatorTask:
 	.word	.LC6
 .LVL92:
 .L3:
-	.loc 1 201 11 discriminator 3 view .LVU223
+	.loc 1 201 11 discriminator 3 view .LVU222
 .LBE3:
-	.loc 1 263 4 is_stmt 1 view .LVU224
-	.loc 1 263 8 is_stmt 0 view .LVU225
+	.loc 1 263 4 is_stmt 1 view .LVU223
+	.loc 1 263 8 is_stmt 0 view .LVU224
 	ldr	r3, .L43
 	ldrsb	r3, [r3]
-	.loc 1 263 7 view .LVU226
+	.loc 1 263 7 view .LVU225
 	cmp	r3, #0
 	beq	.L2
 .LBB4:
-	.loc 1 265 5 is_stmt 1 view .LVU227
-	.loc 1 266 5 view .LVU228
-	.loc 1 267 5 view .LVU229
+	.loc 1 265 5 is_stmt 1 view .LVU226
+	.loc 1 266 5 view .LVU227
+	.loc 1 267 5 view .LVU228
 .LVL93:
-	.loc 1 268 5 view .LVU230
-	.loc 1 269 5 view .LVU231
-	.loc 1 270 5 view .LVU232
-	.loc 1 271 5 view .LVU233
-	.loc 1 272 5 view .LVU234
-	.loc 1 274 5 view .LVU235
+	.loc 1 268 5 view .LVU229
+	.loc 1 269 5 view .LVU230
+	.loc 1 270 5 view .LVU231
+	.loc 1 271 5 view .LVU232
+	.loc 1 272 5 view .LVU233
+	.loc 1 274 5 view .LVU234
 	movs	r0, #150
 	bl	vTaskDelay
 .LVL94:
-	.loc 1 276 5 view .LVU236
-	.loc 1 272 9 is_stmt 0 view .LVU237
+	.loc 1 276 5 view .LVU235
+	.loc 1 272 9 is_stmt 0 view .LVU236
 	movs	r5, #0
-	.loc 1 271 9 view .LVU238
+	.loc 1 271 9 view .LVU237
 	mov	r4, r5
-	.loc 1 270 11 view .LVU239
+	.loc 1 270 11 view .LVU238
 	vldr.32	s16, .L43+4
-	.loc 1 269 11 view .LVU240
+	.loc 1 269 11 view .LVU239
 	vmov.f32	s17, s16
-	.loc 1 268 11 view .LVU241
+	.loc 1 268 11 view .LVU240
 	vmov.f32	s18, s16
-	.loc 1 276 12 view .LVU242
+	.loc 1 276 12 view .LVU241
 	mov	r6, r5
-	.loc 1 276 5 view .LVU243
+	.loc 1 276 5 view .LVU242
 	b	.L20
 .LVL95:
 .L38:
-	.loc 1 276 31 is_stmt 1 discriminator 2 view .LVU244
-	.loc 1 276 32 is_stmt 0 discriminator 2 view .LVU245
+	.loc 1 276 31 is_stmt 1 discriminator 2 view .LVU243
+	.loc 1 276 32 is_stmt 0 discriminator 2 view .LVU244
 	adds	r6, r6, #1
 .LVL96:
-	.loc 1 276 32 discriminator 2 view .LVU246
+	.loc 1 276 32 discriminator 2 view .LVU245
 	uxth	r6, r6
 .LVL97:
 .L20:
-	.loc 1 276 17 is_stmt 1 discriminator 1 view .LVU247
-	.loc 1 276 5 is_stmt 0 discriminator 1 view .LVU248
+	.loc 1 276 17 is_stmt 1 discriminator 1 view .LVU246
+	.loc 1 276 5 is_stmt 0 discriminator 1 view .LVU247
 	cmp	r6, #300
 	bhi	.L37
-	.loc 1 277 6 is_stmt 1 view .LVU249
+	.loc 1 277 6 is_stmt 1 view .LVU248
 	bl	IMU_read
 .LVL98:
-	.loc 1 278 6 view .LVU250
-	.loc 1 278 13 is_stmt 0 view .LVU251
+	.loc 1 278 6 view .LVU249
+	.loc 1 278 13 is_stmt 0 view .LVU250
 	bl	IMU_getGyro
 .LVL99:
 	ldr	r7, .L43+8
 	vstr.32	s0, [r7]
 	vstr.32	s1, [r7, #4]
 	vstr.32	s2, [r7, #8]
-	.loc 1 279 6 is_stmt 1 view .LVU252
-	.loc 1 279 14 is_stmt 0 view .LVU253
+	.loc 1 279 6 is_stmt 1 view .LVU251
+	.loc 1 279 14 is_stmt 0 view .LVU252
 	bl	IMU_getAccel
 .LVL100:
 	ldr	r3, .L43+12
 	vstr.32	s0, [r3]
 	vstr.32	s1, [r3, #4]
 	vstr.32	s2, [r3, #8]
-	.loc 1 280 6 is_stmt 1 view .LVU254
-	.loc 1 280 19 is_stmt 0 view .LVU255
+	.loc 1 280 6 is_stmt 1 view .LVU253
+	.loc 1 280 19 is_stmt 0 view .LVU254
 	vldr.32	s15, [r7, #8]
-	.loc 1 280 12 view .LVU256
+	.loc 1 280 12 view .LVU255
 	vadd.f32	s18, s18, s15
 .LVL101:
-	.loc 1 281 6 is_stmt 1 view .LVU257
-	.loc 1 281 14 is_stmt 0 view .LVU258
+	.loc 1 281 6 is_stmt 1 view .LVU256
+	.loc 1 281 14 is_stmt 0 view .LVU257
 	vadd.f32	s17, s17, s0
 .LVL102:
-	.loc 1 282 6 is_stmt 1 view .LVU259
-	.loc 1 282 14 is_stmt 0 view .LVU260
+	.loc 1 282 6 is_stmt 1 view .LVU258
+	.loc 1 282 14 is_stmt 0 view .LVU259
 	vadd.f32	s16, s16, s1
 .LVL103:
-	.loc 1 284 6 is_stmt 1 view .LVU261
+	.loc 1 284 6 is_stmt 1 view .LVU260
 	movs	r0, #40
 	bl	vTaskDelay
 .LVL104:
-	.loc 1 285 6 view .LVU262
+	.loc 1 285 6 view .LVU261
 	mov	r3, r5
 	mov	r2, r4
 	ldr	r1, .L43+16
 	add	r0, sp, #12
 	bl	sprintf
 .LVL105:
-	.loc 1 286 6 view .LVU263
+	.loc 1 286 6 view .LVU262
 	add	r1, sp, #12
 	movs	r0, #4
 	bl	display_text_on_line
 .LVL106:
-	.loc 1 287 6 view .LVU264
-	.loc 1 287 13 is_stmt 0 view .LVU265
+	.loc 1 287 6 view .LVU263
+	.loc 1 287 13 is_stmt 0 view .LVU264
 	adds	r5, r5, #1
 .LVL107:
-	.loc 1 289 6 is_stmt 1 view .LVU266
+	.loc 1 289 6 is_stmt 1 view .LVU265
 .L21:
-	.loc 1 289 12 view .LVU267
-	.loc 1 289 14 is_stmt 0 view .LVU268
+	.loc 1 289 12 view .LVU266
+	.loc 1 289 14 is_stmt 0 view .LVU267
 	bl	IMU_newData
 .LVL108:
-	.loc 1 289 12 view .LVU269
+	.loc 1 289 12 view .LVU268
 	cmp	r0, #0
 	bne	.L38
-	.loc 1 290 7 is_stmt 1 view .LVU270
+	.loc 1 290 7 is_stmt 1 view .LVU269
 	movs	r0, #20
 	bl	vTaskDelay
 .LVL109:
-	.loc 1 291 7 view .LVU271
-	.loc 1 291 12 is_stmt 0 view .LVU272
+	.loc 1 291 7 view .LVU270
+	.loc 1 291 12 is_stmt 0 view .LVU271
 	adds	r4, r4, #1
 .LVL110:
-	.loc 1 292 7 is_stmt 1 view .LVU273
+	.loc 1 292 7 is_stmt 1 view .LVU272
 	mov	r3, r5
 	mov	r2, r4
 	ldr	r1, .L43+16
 	add	r0, sp, #12
 	bl	sprintf
 .LVL111:
-	.loc 1 293 7 view .LVU274
+	.loc 1 293 7 view .LVU273
 	add	r1, sp, #12
 	movs	r0, #4
 	bl	display_text_on_line
 .LVL112:
 	b	.L21
 .L37:
-	.loc 1 296 5 discriminator 3 view .LVU275
-	.loc 1 296 78 discriminator 3 view .LVU276
-	.loc 1 296 133 discriminator 3 view .LVU277
-	.loc 1 296 214 is_stmt 0 discriminator 3 view .LVU278
+	.loc 1 296 5 discriminator 3 view .LVU274
+	.loc 1 296 78 discriminator 3 view .LVU275
+	.loc 1 296 133 discriminator 3 view .LVU276
+	.loc 1 296 214 is_stmt 0 discriminator 3 view .LVU277
 	ldr	r4, .L43+20
 .LVL113:
-	.loc 1 296 214 discriminator 3 view .LVU279
+	.loc 1 296 214 discriminator 3 view .LVU278
 	ldrh	r0, [r4]
-	.loc 1 296 225 discriminator 3 view .LVU280
+	.loc 1 296 225 discriminator 3 view .LVU279
 	lsls	r0, r0, #16
-	.loc 1 296 133 discriminator 3 view .LVU281
+	.loc 1 296 133 discriminator 3 view .LVU280
 	vcvt.u32.f32	s19, s19
 .LVL114:
-	.loc 1 296 133 discriminator 3 view .LVU282
+	.loc 1 296 133 discriminator 3 view .LVU281
 	vstr.32	s19, [sp]	@ int
 	vcvt.u32.f32	s15, s17
 	vmov	r3, s15	@ int
@@ -922,35 +921,35 @@ vMainPoseEstimatorTask:
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_3
 .LVL115:
-	.loc 1 296 327 is_stmt 1 discriminator 3 view .LVU283
-	.loc 1 297 5 discriminator 3 view .LVU284
-	.loc 1 297 26 is_stmt 0 discriminator 3 view .LVU285
+	.loc 1 296 327 is_stmt 1 discriminator 3 view .LVU282
+	.loc 1 297 5 discriminator 3 view .LVU283
+	.loc 1 297 26 is_stmt 0 discriminator 3 view .LVU284
 	vmov	s15, r6	@ int
 	vcvt.f32.u32	s15, s15
-	.loc 1 297 16 discriminator 3 view .LVU286
+	.loc 1 297 16 discriminator 3 view .LVU285
 	vdiv.f32	s19, s18, s15
 .LVL116:
-	.loc 1 298 5 is_stmt 1 discriminator 3 view .LVU287
-	.loc 1 298 18 is_stmt 0 discriminator 3 view .LVU288
+	.loc 1 298 5 is_stmt 1 discriminator 3 view .LVU286
+	.loc 1 298 18 is_stmt 0 discriminator 3 view .LVU287
 	vdiv.f32	s22, s17, s15
 .LVL117:
-	.loc 1 299 5 is_stmt 1 discriminator 3 view .LVU289
-	.loc 1 299 18 is_stmt 0 discriminator 3 view .LVU290
+	.loc 1 299 5 is_stmt 1 discriminator 3 view .LVU288
+	.loc 1 299 18 is_stmt 0 discriminator 3 view .LVU289
 	vdiv.f32	s23, s16, s15
 .LVL118:
-	.loc 1 300 5 is_stmt 1 discriminator 3 view .LVU291
-	.loc 1 300 19 is_stmt 0 discriminator 3 view .LVU292
+	.loc 1 300 5 is_stmt 1 discriminator 3 view .LVU290
+	.loc 1 300 19 is_stmt 0 discriminator 3 view .LVU291
 	ldr	r3, .L43
 	movs	r2, #0
 	strb	r2, [r3]
-	.loc 1 302 5 is_stmt 1 discriminator 3 view .LVU293
-	.loc 1 302 78 discriminator 3 view .LVU294
-	.loc 1 302 133 discriminator 3 view .LVU295
-	.loc 1 302 214 is_stmt 0 discriminator 3 view .LVU296
+	.loc 1 302 5 is_stmt 1 discriminator 3 view .LVU292
+	.loc 1 302 78 discriminator 3 view .LVU293
+	.loc 1 302 133 discriminator 3 view .LVU294
+	.loc 1 302 214 is_stmt 0 discriminator 3 view .LVU295
 	ldrh	r0, [r4]
-	.loc 1 302 225 discriminator 3 view .LVU297
+	.loc 1 302 225 discriminator 3 view .LVU296
 	lsls	r0, r0, #16
-	.loc 1 302 133 discriminator 3 view .LVU298
+	.loc 1 302 133 discriminator 3 view .LVU297
 	vcvt.u32.f32	s15, s19
 	vstr.32	s15, [sp]	@ int
 	vcvt.u32.f32	s15, s23
@@ -961,16 +960,16 @@ vMainPoseEstimatorTask:
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_3
 .LVL119:
-	.loc 1 302 336 is_stmt 1 discriminator 3 view .LVU299
-	.loc 1 304 5 discriminator 3 view .LVU300
-	.loc 1 304 8 is_stmt 0 discriminator 3 view .LVU301
+	.loc 1 302 336 is_stmt 1 discriminator 3 view .LVU298
+	.loc 1 304 5 discriminator 3 view .LVU299
+	.loc 1 304 8 is_stmt 0 discriminator 3 view .LVU300
 	ldr	r3, .L43+32
 	ldrb	r3, [r3]	@ zero_extendqisi2
-	.loc 1 304 7 discriminator 3 view .LVU302
+	.loc 1 304 7 discriminator 3 view .LVU301
 	cmp	r3, #0
 	bne	.L2
-	.loc 1 305 6 is_stmt 1 view .LVU303
-	.loc 1 305 17 is_stmt 0 view .LVU304
+	.loc 1 305 6 is_stmt 1 view .LVU302
+	.loc 1 305 17 is_stmt 0 view .LVU303
 	ldr	r3, .L43+36
 	movs	r2, #1
 	strb	r2, [r3]
@@ -5072,8 +5071,8 @@ gyroBiasGuard:
 	.uleb128 .LVU3
 	.uleb128 .LVU23
 	.uleb128 .LVU23
+	.uleb128 .LVU221
 	.uleb128 .LVU222
-	.uleb128 .LVU223
 	.uleb128 0
 .LLST1:
 	.4byte	.LVL1
@@ -5133,8 +5132,8 @@ gyroBiasGuard:
 	.uleb128 .LVU7
 	.uleb128 .LVU23
 	.uleb128 .LVU23
-	.uleb128 .LVU282
-	.uleb128 .LVU287
+	.uleb128 .LVU281
+	.uleb128 .LVU286
 	.uleb128 0
 .LLST4:
 	.4byte	.LVL1
@@ -5162,8 +5161,8 @@ gyroBiasGuard:
 	.uleb128 .LVU33
 	.uleb128 .LVU33
 	.uleb128 .LVU70
-	.uleb128 .LVU138
-	.uleb128 .LVU223
+	.uleb128 .LVU137
+	.uleb128 .LVU222
 .LLST5:
 	.4byte	.LVL1
 	.4byte	.LVL6
@@ -5210,7 +5209,7 @@ gyroBiasGuard:
 	.uleb128 .LVU99
 	.uleb128 .LVU105
 	.uleb128 .LVU105
-	.uleb128 .LVU223
+	.uleb128 .LVU222
 .LLST7:
 	.4byte	.LVL6
 	.4byte	.LVL29
@@ -5233,7 +5232,7 @@ gyroBiasGuard:
 	.uleb128 .LVU100
 	.uleb128 .LVU107
 	.uleb128 .LVU107
-	.uleb128 .LVU138
+	.uleb128 .LVU137
 .LLST8:
 	.4byte	.LVL6
 	.4byte	.LVL8
@@ -5254,9 +5253,9 @@ gyroBiasGuard:
 	.uleb128 .LVU23
 	.uleb128 .LVU90
 	.uleb128 .LVU101
-	.uleb128 .LVU119
-	.uleb128 .LVU119
-	.uleb128 .LVU223
+	.uleb128 .LVU118
+	.uleb128 .LVU118
+	.uleb128 .LVU222
 .LLST9:
 	.4byte	.LVL6
 	.4byte	.LVL29
@@ -5280,9 +5279,9 @@ gyroBiasGuard:
 	.uleb128 .LVU23
 	.uleb128 .LVU90
 	.uleb128 .LVU102
-	.uleb128 .LVU123
-	.uleb128 .LVU123
-	.uleb128 .LVU223
+	.uleb128 .LVU122
+	.uleb128 .LVU122
+	.uleb128 .LVU222
 .LLST10:
 	.4byte	.LVL6
 	.4byte	.LVL29
@@ -5305,10 +5304,10 @@ gyroBiasGuard:
 .LVUS11:
 	.uleb128 .LVU23
 	.uleb128 .LVU90
-	.uleb128 .LVU112
-	.uleb128 .LVU114
-	.uleb128 .LVU114
-	.uleb128 .LVU223
+	.uleb128 .LVU111
+	.uleb128 .LVU113
+	.uleb128 .LVU113
+	.uleb128 .LVU222
 .LLST11:
 	.4byte	.LVL6
 	.4byte	.LVL29
@@ -5329,10 +5328,10 @@ gyroBiasGuard:
 .LVUS12:
 	.uleb128 .LVU23
 	.uleb128 .LVU90
-	.uleb128 .LVU116
-	.uleb128 .LVU125
-	.uleb128 .LVU125
-	.uleb128 .LVU223
+	.uleb128 .LVU115
+	.uleb128 .LVU124
+	.uleb128 .LVU124
+	.uleb128 .LVU222
 .LLST12:
 	.4byte	.LVL6
 	.4byte	.LVL29
@@ -5353,10 +5352,10 @@ gyroBiasGuard:
 .LVUS13:
 	.uleb128 .LVU33
 	.uleb128 .LVU90
-	.uleb128 .LVU142
-	.uleb128 .LVU144
-	.uleb128 .LVU144
-	.uleb128 .LVU223
+	.uleb128 .LVU141
+	.uleb128 .LVU143
+	.uleb128 .LVU143
+	.uleb128 .LVU222
 .LLST13:
 	.4byte	.LVL9
 	.4byte	.LVL29
@@ -5375,10 +5374,10 @@ gyroBiasGuard:
 	.4byte	0
 	.4byte	0
 .LVUS14:
-	.uleb128 .LVU146
-	.uleb128 .LVU148
-	.uleb128 .LVU148
-	.uleb128 .LVU166
+	.uleb128 .LVU145
+	.uleb128 .LVU147
+	.uleb128 .LVU147
+	.uleb128 .LVU165
 .LLST14:
 	.4byte	.LVL62
 	.4byte	.LVL63
@@ -5392,11 +5391,11 @@ gyroBiasGuard:
 	.4byte	0
 	.4byte	0
 .LVUS15:
-	.uleb128 .LVU237
-	.uleb128 .LVU244
-	.uleb128 .LVU244
+	.uleb128 .LVU236
+	.uleb128 .LVU243
+	.uleb128 .LVU243
+	.uleb128 .LVU245
 	.uleb128 .LVU246
-	.uleb128 .LVU247
 	.uleb128 0
 .LLST15:
 	.4byte	.LVL94
@@ -5415,9 +5414,9 @@ gyroBiasGuard:
 	.4byte	0
 	.4byte	0
 .LVUS16:
-	.uleb128 .LVU231
-	.uleb128 .LVU244
-	.uleb128 .LVU244
+	.uleb128 .LVU230
+	.uleb128 .LVU243
+	.uleb128 .LVU243
 	.uleb128 0
 .LLST16:
 	.4byte	.LVL93
@@ -5434,9 +5433,9 @@ gyroBiasGuard:
 	.4byte	0
 	.4byte	0
 .LVUS17:
-	.uleb128 .LVU232
-	.uleb128 .LVU244
-	.uleb128 .LVU244
+	.uleb128 .LVU231
+	.uleb128 .LVU243
+	.uleb128 .LVU243
 	.uleb128 0
 .LLST17:
 	.4byte	.LVL93
@@ -5453,9 +5452,9 @@ gyroBiasGuard:
 	.4byte	0
 	.4byte	0
 .LVUS18:
-	.uleb128 .LVU233
-	.uleb128 .LVU244
-	.uleb128 .LVU244
+	.uleb128 .LVU232
+	.uleb128 .LVU243
+	.uleb128 .LVU243
 	.uleb128 0
 .LLST18:
 	.4byte	.LVL93
@@ -5472,10 +5471,10 @@ gyroBiasGuard:
 	.4byte	0
 	.4byte	0
 .LVUS19:
-	.uleb128 .LVU234
-	.uleb128 .LVU244
-	.uleb128 .LVU244
-	.uleb128 .LVU279
+	.uleb128 .LVU233
+	.uleb128 .LVU243
+	.uleb128 .LVU243
+	.uleb128 .LVU278
 .LLST19:
 	.4byte	.LVL93
 	.4byte	.LVL95
@@ -5489,9 +5488,9 @@ gyroBiasGuard:
 	.4byte	0
 	.4byte	0
 .LVUS20:
-	.uleb128 .LVU235
-	.uleb128 .LVU244
-	.uleb128 .LVU244
+	.uleb128 .LVU234
+	.uleb128 .LVU243
+	.uleb128 .LVU243
 	.uleb128 0
 .LLST20:
 	.4byte	.LVL93

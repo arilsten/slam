@@ -26,7 +26,7 @@ int newMsgCounter = 0;
 int time = 0;
 
 /* _________ SETUP VARIABLES __________ */
-bool newServer = false;          // Changes between old and new message-style, when false it supports Grindviks server from 2019.
+bool newServer = false;          // Changes between old and new message-style, when false it supports Grindviks server from 2019. Difference is MQTT message-format.
 
 void vMainSensorTowerTask(void *pvParameters) {
     int count = 0;
@@ -37,7 +37,7 @@ void vMainSensorTowerTask(void *pvParameters) {
     int16_t yhat = 0;
     uint8_t servoDirection = moveCounterClockwise;
     uint8_t servoStep = 0;
-    uint8_t servoResolution = 1;                    //Is servoResolution used to turn the servoangle on or to 0? Look like it
+    uint8_t servoResolution = 1;                    
     uint8_t robotMovement = moveStop;
     uint8_t idleCounter = 0;
     int16_t previous_left = 0;
@@ -83,13 +83,13 @@ void vMainSensorTowerTask(void *pvParameters) {
             uint8_t sensor[4];
             int16_t sensor16[4];
             if(USEBLUETOOTH){
-                sensor[0] = (IrAnalogToMM(ir_read_blocking(distSensFwd), distSensFwd)/10);          //Saves distance in cm?
+                sensor[0] = (IrAnalogToMM(ir_read_blocking(distSensFwd), distSensFwd)/10);          //[cm]
                 sensor[1] = (IrAnalogToMM(ir_read_blocking(distSensLeft), distSensLeft)/10);
                 sensor[2] = (IrAnalogToMM(ir_read_blocking(distSensRear), distSensRear)/10);
                 sensor[3] = (IrAnalogToMM(ir_read_blocking(distSensRight), distSensRight)/10);
            
             }else{
-                sensor16[0] = IrAnalogToMM(ir_read_blocking(distSensFwd), distSensFwd);              //Saves distance in mm?
+                sensor16[0] = IrAnalogToMM(ir_read_blocking(distSensFwd), distSensFwd);              //[mm]
                 sensor16[1] = IrAnalogToMM(ir_read_blocking(distSensLeft), distSensLeft);
                 sensor16[2] = IrAnalogToMM(ir_read_blocking(distSensRear), distSensRear);
                 sensor16[3] = IrAnalogToMM(ir_read_blocking(distSensRight), distSensRight);
@@ -119,7 +119,7 @@ void vMainSensorTowerTask(void *pvParameters) {
 				
             }else{ // C++ server message
 				if(newServer){
-					sendNewPoseMessage(xhat, yhat, thetahat, servoStep, sensor16); // New format from 2020.
+					sendNewPoseMessage(xhat, yhat, thetahat, servoStep, sensor16); // New  message-format from spring 2020.
 				}else{
 					sendOldPoseMessage(xhat, yhat, thetahat, servoStep, sensor16); // Old message formats supports Grindviks server from 2019.
 				}
@@ -136,7 +136,7 @@ void vMainSensorTowerTask(void *pvParameters) {
 					angles[i] = atan2(yObject, xObject)*RAD2DEG;
 					//struct sCartesian Setpoint = {xhat/10, yhat/10};
 					//xQueueSend(poseControllerQ, &Setpoint, 100);
-					// When setting the setpoint to current position, the controller task takes care of stopping the robot.
+					// When setting the setpoint to current position, the controller-task takes care of stopping the robot.
 					
 				}else{
 					angles[i] = 200; // Above 180 degrees

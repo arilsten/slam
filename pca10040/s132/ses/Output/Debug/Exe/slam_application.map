@@ -14860,9 +14860,8 @@ Linker script and memory map
                 0x0003d038                vMainPoseControllerTask
  *fill*         0x0003d7c4        0x4 
  .text.vMainPoseEstimatorTask
-                0x0003d7c8      0x5ec Output/slam_application Debug/Obj/EstimatorTask.o
+                0x0003d7c8      0x5f0 Output/slam_application Debug/Obj/EstimatorTask.o
                 0x0003d7c8                vMainPoseEstimatorTask
- *fill*         0x0003ddb4        0x4 
  .text.vMainSensorTowerTask
                 0x0003ddb8      0x3ec Output/slam_application Debug/Obj/SensorTowerTask.o
                 0x0003ddb8                vMainSensorTowerTask
@@ -17328,7 +17327,7 @@ OUTPUT(Output/Debug/Exe/slam_application.elf elf32-littlearm)
  .comment       0x00000047       0x48 C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .comment       0x00000047       0x48 C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/lib/libvfprintf_v7em_fpv4_sp_d16_hard_t_le_eabi.o
 
-.debug_line     0x00000000    0x6734c
+.debug_line     0x00000000    0x67349
  .debug_line    0x00000000      0x1f3 Output/slam_application Debug/Obj/thumb_crt0.o
  .debug_line    0x000001f3      0x93a Output/slam_application Debug/Obj/nrf_log_backend_rtt.o
  .debug_line    0x00000b2d      0x707 Output/slam_application Debug/Obj/nrf_log_backend_serial.o
@@ -17447,9 +17446,9 @@ OUTPUT(Output/Debug/Exe/slam_application.elf elf32-littlearm)
  .debug_line    0x0005df8d     0x56ec Output/slam_application Debug/Obj/SEGGER_SYSVIEW.o
  .debug_line    0x00063679       0xc5 Output/slam_application Debug/Obj/SEGGER_RTT_ASM_ARMv7M.o
  .debug_line    0x0006373e     0x10cd Output/slam_application Debug/Obj/ControllerTask.o
- .debug_line    0x0006480b      0xf91 Output/slam_application Debug/Obj/EstimatorTask.o
- .debug_line    0x0006579c      0xd4c Output/slam_application Debug/Obj/SensorTowerTask.o
- .debug_line    0x000664e8      0xe64 Output/slam_application Debug/Obj/MainComTask.o
+ .debug_line    0x0006480b      0xf8e Output/slam_application Debug/Obj/EstimatorTask.o
+ .debug_line    0x00065799      0xd4c Output/slam_application Debug/Obj/SensorTowerTask.o
+ .debug_line    0x000664e5      0xe64 Output/slam_application Debug/Obj/MainComTask.o
 
 .debug_info     0x00000000    0x6fc16
  .debug_info    0x00000000       0x22 Output/slam_application Debug/Obj/thumb_crt0.o

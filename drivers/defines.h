@@ -13,8 +13,6 @@
 /************************************************************************/
 /* PHYSICAL CONSTANTS - If the robot is changed these need to be changed 
 Some of these will be sent to server during the start-up-handshake   
-
-
 */
 
 #define WHEELBASE_MM				172  // Updated 30.03.2020 /* Length between wheel centers  */
@@ -30,7 +28,7 @@ Some of these will be sent to server during the start-up-handshake
 #define SENSOR3_HEADING_DEG			180
 #define SENSOR4_HEADING_DEG			270
 #define WHEEL_CIRCUMFERENCE			228  // [mm] Updated 30.03.2020
-#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE)/320.0        /* 320 is a number found from experiments*/ 
+#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE/320.0)       /* 320 is a number found from experiments */ 
 
 
 /************************************************************************/

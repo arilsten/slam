@@ -167,7 +167,7 @@ static void user_task(void *arg) {
     //mag_init(MAG_OS_128);//oversampling rate used to set datarate 16->80hz 32->40hz 64->20hz 128->10hz
     //the rest of this is just used for testing and displaying values
     //vTaskSuspend(NULL);//no need to run more here except for debugging purposes
-    vTaskPrioritySet(handle_user_task,1);
+    vTaskPrioritySet(handle_user_task, 1);
     vTaskDelay(5000);
 
     
@@ -201,7 +201,7 @@ static void user_task(void *arg) {
 		
 			if ((time > 60) && (sent == false)){
 				struct sCartesian target = {targetX, targetY};
-				xQueueSend(poseControllerQ, &target, 100);
+				xQueueSend(poseControllerQ, &target, 100); //Sends target to poseControllerQ, which is received and handled by ControllerTask
 				sent = true;
 				time = 0;
 			}

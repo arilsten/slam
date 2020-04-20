@@ -7312,8 +7312,8 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 # 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
-  float dLeft = (float)(leftWheelTicks * (228)/320.0);
-  float dRight = (float)(rightWheelTicks * (228)/320.0);
+  float dLeft = (float)(leftWheelTicks * (228/320.0));
+  float dRight = (float)(rightWheelTicks * (228/320.0));
   dRobot = (dLeft + dRight) / 2;
   dRobot = dRobot;
   dTheta = (dRight - dLeft) / 172;
