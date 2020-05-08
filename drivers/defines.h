@@ -18,8 +18,8 @@ Some of these will be sent to server during the start-up-handshake
 #define WHEELBASE_MM				172  // Updated 30.03.2020 /* Length between wheel centers  */
 #define ROBOT_TOTAL_WIDTH_MM		197  // Updated 30.03.2020 /* From outer rim to outer rim   */
 #define ROBOT_TOTAL_LENGTH_MM		230  /* From front to aft, total	     */
-#define ROBOT_AXEL_OFFSET_MM		67   // 55  /* From center of square	     */
-#define SENSOR_TOWER_OFFSET_X_MM	0    // 16  /* From center of square         */
+#define ROBOT_AXEL_OFFSET_MM		0    /* From center of square	     */
+#define SENSOR_TOWER_OFFSET_X_MM	0    /* From center of square         */
 #define SENSOR_TOWER_OFFSET_Y_MM	0    /* From center of square		     */
 #define SENSOR_OFFSET_RADIUS_MM		21   /* From center of tower		     */
 #define ROBOT_DEADLINE_MS			200  /* Interval between measurements	     */
@@ -54,13 +54,15 @@ Some of these will be sent to server during the start-up-handshake
 
 
 /******** IR SENSORS ********/
-#define distSensFwd               0
-#define distSensLeft              1
-#define distSensRear              3
-#define distSensRight             2
-#define NUM_DIST_SENSORS          4
-#define DETECTION_THRESHOLD_MM    800
-#define COLLISION_THRESHOLD_MM    200
+#define IR_1						0
+#define IR_2						1
+#define IR_3						2
+#define IR_4						3
+#define NUM_DIST_SENSORS			4
+#define DETECTION_THRESHOLD_MM		800
+#define COLLISION_THRESHOLD_MM		200
+#define COLLISION_THRESHOLD_CM		(COLLISION_THRESHOLD_MM/10)
+#define COLLISION_SECTOR_OFFSET		60		//[degrees] (to each side)
 
 
 

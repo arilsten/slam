@@ -466,7 +466,11 @@ void vARQTask(void *pvParamters);
 # 1 "../../../drivers/defines.h" 1
 # 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "../../../drivers/functions.h" 1
-# 14 "../../../drivers/functions.h"
+# 12 "../../../drivers/functions.h"
+# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h" 1 3 4
+# 13 "../../../drivers/functions.h" 2
+
+
 void vFunc_Inf2pi(float *angle_in_radians);
 
 
@@ -488,6 +492,25 @@ void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
 
 
 void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+
+
+void increaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+int16_t getDetectionAngle(uint8_t servoAngle, uint8_t sensor);
+
+
+void decreaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+void printCollisionSectors(void);
+
+
+
+# 50 "../../../drivers/functions.h" 3 4
+_Bool 
+# 50 "../../../drivers/functions.h"
+    validWaypoint(int16_t waypointAngle);
 # 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.h" 1
 # 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.h"
@@ -4675,10 +4698,7 @@ static inline uint32_t sd_nvic_critical_region_exit(uint8_t is_nested_critical_r
 void assert_nrf_callback(uint16_t line_num, const uint8_t *file_name);
 # 60 "../../../../../../components/libraries/util/app_util_platform.h" 2
 # 1 "../../../../../../components/libraries/util/app_error.h" 1
-# 55 "../../../../../../components/libraries/util/app_error.h"
-# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h" 1 3 4
-# 56 "../../../../../../components/libraries/util/app_error.h" 2
-
+# 57 "../../../../../../components/libraries/util/app_error.h"
 # 1 "../../../../../../components/libraries/util/sdk_errors.h" 1
 # 73 "../../../../../../components/libraries/util/sdk_errors.h"
 # 1 "../../../../../../components/softdevice/s132/headers/nrf_error.h" 1
@@ -5799,7 +5819,7 @@ uint8_t send_handshake(void) {
   strcpy((char*)msg.message.handshake.name, "NRF");
   msg.message.handshake.width = 197;
   msg.message.handshake.length = 230;
-  msg.message.handshake.axel_offset = 67;
+  msg.message.handshake.axel_offset = 0;
   msg.message.handshake.tower_offset_x = 0;
   msg.message.handshake.tower_offset_y = 0;
   msg.message.handshake.sensor_offset1 = 21;

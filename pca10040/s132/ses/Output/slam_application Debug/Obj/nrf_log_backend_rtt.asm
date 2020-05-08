@@ -24,11 +24,11 @@ nrf_log_backend_rtt_flush:
 .LVL0:
 .LFB225:
 	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
-	.loc 1 109 1 view -0
+	.loc 1 110 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-	.loc 1 111 1 view .LVU1
+	.loc 1 112 1 view .LVU1
 	bx	lr
 .LFE225:
 	.size	nrf_log_backend_rtt_flush, .-nrf_log_backend_rtt_flush
@@ -42,11 +42,11 @@ nrf_log_backend_rtt_flush:
 nrf_log_backend_rtt_panic_set:
 .LVL1:
 .LFB226:
-	.loc 1 114 1 view -0
+	.loc 1 115 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-	.loc 1 116 1 view .LVU3
+	.loc 1 117 1 view .LVU3
 	bx	lr
 .LFE226:
 	.size	nrf_log_backend_rtt_panic_set, .-nrf_log_backend_rtt_panic_set
@@ -60,22 +60,22 @@ nrf_log_backend_rtt_panic_set:
 nrf_log_backend_rtt_put:
 .LVL2:
 .LFB224:
-	.loc 1 104 1 view -0
+	.loc 1 105 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 104 1 is_stmt 0 view .LVU5
+	.loc 1 105 1 is_stmt 0 view .LVU5
 	push	{lr}
 .LCFI0:
 	sub	sp, sp, #12
 .LCFI1:
-	.loc 1 105 5 is_stmt 1 view .LVU6
+	.loc 1 106 5 is_stmt 1 view .LVU6
 	ldr	r3, .L5
 	str	r3, [sp]
 	movs	r3, #64
 	ldr	r2, .L5+4
 	bl	nrf_log_backend_serial_put
 .LVL3:
-	.loc 1 106 1 is_stmt 0 view .LVU7
+	.loc 1 107 1 is_stmt 0 view .LVU7
 	add	sp, sp, #12
 .LCFI2:
 	@ sp needed
@@ -97,63 +97,63 @@ nrf_log_backend_rtt_put:
 serial_tx:
 .LVL4:
 .LFB223:
-	.loc 1 60 1 is_stmt 1 view -0
+	.loc 1 61 1 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 61 5 view .LVU9
-	.loc 1 61 8 is_stmt 0 view .LVU10
+	.loc 1 62 5 view .LVU9
+	.loc 1 62 8 is_stmt 0 view .LVU10
 	cbz	r2, .L12
-	.loc 1 60 1 view .LVU11
+	.loc 1 61 1 view .LVU11
 	push	{r3, r4, r5, r6, r7, lr}
 .LCFI3:
 	mov	r7, r1
 	mov	r4, r2
 .LBB9:
-	.loc 1 65 18 view .LVU12
+	.loc 1 66 18 view .LVU12
 	movs	r6, #3
-	.loc 1 63 18 view .LVU13
+	.loc 1 64 18 view .LVU13
 	movs	r5, #0
 	b	.L10
 .LVL5:
 .L9:
-	.loc 1 98 13 is_stmt 1 view .LVU14
-	.loc 1 98 28 is_stmt 0 view .LVU15
+	.loc 1 99 13 is_stmt 1 view .LVU14
+	.loc 1 99 28 is_stmt 0 view .LVU15
 	ldr	r3, .L15
 	movs	r2, #1
 	strb	r2, [r3]
-	.loc 1 99 17 is_stmt 1 view .LVU16
-	.loc 1 99 9 is_stmt 0 view .LVU17
+	.loc 1 100 17 is_stmt 1 view .LVU16
+	.loc 1 100 9 is_stmt 0 view .LVU17
 	cbz	r4, .L7
 .LVL6:
 .L10:
-	.loc 1 66 9 is_stmt 1 view .LVU18
-	.loc 1 68 13 view .LVU19
-	.loc 1 68 25 is_stmt 0 view .LVU20
+	.loc 1 67 9 is_stmt 1 view .LVU18
+	.loc 1 69 13 view .LVU19
+	.loc 1 69 25 is_stmt 0 view .LVU20
 	mov	r2, r4
 	adds	r1, r7, r5
 	movs	r0, #0
 	bl	SEGGER_RTT_WriteNoLock
 .LVL7:
-	.loc 1 69 13 is_stmt 1 view .LVU21
-	.loc 1 69 17 is_stmt 0 view .LVU22
+	.loc 1 70 13 is_stmt 1 view .LVU21
+	.loc 1 70 17 is_stmt 0 view .LVU22
 	add	r5, r5, r0
 .LVL8:
-	.loc 1 70 13 is_stmt 1 view .LVU23
-	.loc 1 70 17 is_stmt 0 view .LVU24
+	.loc 1 71 13 is_stmt 1 view .LVU23
+	.loc 1 71 17 is_stmt 0 view .LVU24
 	subs	r4, r4, r0
 .LVL9:
-	.loc 1 71 13 is_stmt 1 view .LVU25
-	.loc 1 71 16 is_stmt 0 view .LVU26
+	.loc 1 72 13 is_stmt 1 view .LVU25
+	.loc 1 72 16 is_stmt 0 view .LVU26
 	cmp	r0, #0
 	bne	.L9
-	.loc 1 83 17 is_stmt 1 view .LVU27
-	.loc 1 83 21 is_stmt 0 view .LVU28
+	.loc 1 84 17 is_stmt 1 view .LVU27
+	.loc 1 84 21 is_stmt 0 view .LVU28
 	ldr	r3, .L15
 	ldrb	r3, [r3]	@ zero_extendqisi2
-	.loc 1 83 20 view .LVU29
+	.loc 1 84 20 view .LVU29
 	cbz	r3, .L7
 .LVL10:
-	.loc 1 83 20 view .LVU30
+	.loc 1 84 20 view .LVU30
 .LBE9:
 	.file 2 "../../../../../../components/libraries/delay/nrf_delay.h"
 	.loc 2 71 5 is_stmt 1 view .LVU31
@@ -187,28 +187,28 @@ serial_tx:
 .LBE13:
 	.loc 2 73 13 is_stmt 1 view .LVU43
 .LBB14:
-	.loc 1 90 21 view .LVU44
-	.loc 1 91 21 view .LVU45
-	.loc 1 91 24 is_stmt 0 view .LVU46
+	.loc 1 91 21 view .LVU44
+	.loc 1 92 21 view .LVU45
+	.loc 1 92 24 is_stmt 0 view .LVU46
 	subs	r6, r6, #1
 .LVL14:
-	.loc 1 91 24 view .LVU47
+	.loc 1 92 24 view .LVU47
 	bne	.L9
-	.loc 1 93 25 is_stmt 1 view .LVU48
-	.loc 1 93 40 is_stmt 0 view .LVU49
+	.loc 1 94 25 is_stmt 1 view .LVU48
+	.loc 1 94 40 is_stmt 0 view .LVU49
 	ldr	r3, .L15
 	movs	r2, #0
 	strb	r2, [r3]
-	.loc 1 94 25 is_stmt 1 view .LVU50
+	.loc 1 95 25 is_stmt 1 view .LVU50
 .L7:
-	.loc 1 94 25 is_stmt 0 view .LVU51
+	.loc 1 95 25 is_stmt 0 view .LVU51
 .LBE14:
-	.loc 1 101 1 view .LVU52
+	.loc 1 102 1 view .LVU52
 	pop	{r3, r4, r5, r6, r7, pc}
 .LVL15:
 .L12:
 .LCFI4:
-	.loc 1 101 1 view .LVU53
+	.loc 1 102 1 view .LVU53
 	bx	lr
 .L16:
 	.align	2
@@ -227,15 +227,15 @@ serial_tx:
 	.type	nrf_log_backend_rtt_init, %function
 nrf_log_backend_rtt_init:
 .LFB222:
-	.loc 1 55 1 is_stmt 1 view -0
+	.loc 1 56 1 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, lr}
 .LCFI5:
-	.loc 1 56 5 view .LVU55
+	.loc 1 57 5 view .LVU55
 	bl	SEGGER_RTT_Init
 .LVL16:
-	.loc 1 57 1 is_stmt 0 view .LVU56
+	.loc 1 58 1 is_stmt 0 view .LVU56
 	pop	{r3, pc}
 .LFE222:
 	.size	nrf_log_backend_rtt_init, .-nrf_log_backend_rtt_init
@@ -2191,7 +2191,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x1f
 	.4byte	.LASF134
 	.byte	0x1
-	.byte	0x32
+	.byte	0x33
 	.byte	0xc
 	.4byte	0x363
 	.uleb128 0x5
@@ -2207,7 +2207,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x1f
 	.4byte	.LASF135
 	.byte	0x1
-	.byte	0x34
+	.byte	0x35
 	.byte	0x10
 	.4byte	0x3b8
 	.uleb128 0x5
@@ -2216,7 +2216,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x20
 	.4byte	0x36a
 	.byte	0x1
-	.byte	0x76
+	.byte	0x77
 	.byte	0x1d
 	.uleb128 0x5
 	.byte	0x3
@@ -2224,7 +2224,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x21
 	.4byte	.LASF136
 	.byte	0x1
-	.byte	0x71
+	.byte	0x72
 	.byte	0xd
 	.4byte	.LFB226
 	.4byte	.LFE226-.LFB226
@@ -2234,7 +2234,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x22
 	.4byte	.LASF138
 	.byte	0x1
-	.byte	0x71
+	.byte	0x72
 	.byte	0x45
 	.4byte	0x342
 	.uleb128 0x1
@@ -2243,7 +2243,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x21
 	.4byte	.LASF137
 	.byte	0x1
-	.byte	0x6c
+	.byte	0x6d
 	.byte	0xd
 	.4byte	.LFB225
 	.4byte	.LFE225-.LFB225
@@ -2253,7 +2253,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x22
 	.4byte	.LASF138
 	.byte	0x1
-	.byte	0x6c
+	.byte	0x6d
 	.byte	0x41
 	.4byte	0x342
 	.uleb128 0x1
@@ -2262,7 +2262,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x21
 	.4byte	.LASF139
 	.byte	0x1
-	.byte	0x66
+	.byte	0x67
 	.byte	0xd
 	.4byte	.LFB224
 	.4byte	.LFE224-.LFB224
@@ -2272,7 +2272,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x23
 	.4byte	.LASF138
 	.byte	0x1
-	.byte	0x66
+	.byte	0x67
 	.byte	0x3f
 	.4byte	0x342
 	.4byte	.LLST0
@@ -2280,7 +2280,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x23
 	.4byte	.LASF140
 	.byte	0x1
-	.byte	0x67
+	.byte	0x68
 	.byte	0x32
 	.4byte	0x348
 	.4byte	.LLST1
@@ -2326,7 +2326,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x21
 	.4byte	.LASF141
 	.byte	0x1
-	.byte	0x3b
+	.byte	0x3c
 	.byte	0xd
 	.4byte	.LFB223
 	.4byte	.LFE223-.LFB223
@@ -2336,7 +2336,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x23
 	.4byte	.LASF142
 	.byte	0x1
-	.byte	0x3b
+	.byte	0x3c
 	.byte	0x24
 	.4byte	0x376
 	.4byte	.LLST2
@@ -2344,7 +2344,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x23
 	.4byte	.LASF143
 	.byte	0x1
-	.byte	0x3b
+	.byte	0x3c
 	.byte	0x3c
 	.4byte	0xb5
 	.4byte	.LLST3
@@ -2352,7 +2352,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x26
 	.ascii	"len\000"
 	.byte	0x1
-	.byte	0x3b
+	.byte	0x3c
 	.byte	0x4b
 	.4byte	0x24f
 	.4byte	.LLST4
@@ -2362,7 +2362,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x28
 	.ascii	"idx\000"
 	.byte	0x1
-	.byte	0x3f
+	.byte	0x40
 	.byte	0x12
 	.4byte	0x7f
 	.4byte	.LLST5
@@ -2370,7 +2370,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x29
 	.4byte	.LASF144
 	.byte	0x1
-	.byte	0x40
+	.byte	0x41
 	.byte	0x12
 	.4byte	0x7f
 	.4byte	.LLST6
@@ -2378,7 +2378,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x29
 	.4byte	.LASF145
 	.byte	0x1
-	.byte	0x41
+	.byte	0x42
 	.byte	0x12
 	.4byte	0x7f
 	.4byte	.LLST7
@@ -2388,7 +2388,7 @@ nrf_log_backend_rtt_api:
 	.4byte	.LBB10
 	.4byte	.LBE10-.LBB10
 	.byte	0x1
-	.byte	0x59
+	.byte	0x5a
 	.byte	0x15
 	.4byte	0x5a9
 	.uleb128 0x2b
@@ -2461,7 +2461,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x2f
 	.4byte	.LASF160
 	.byte	0x1
-	.byte	0x36
+	.byte	0x37
 	.byte	0x6
 	.4byte	.LFB222
 	.4byte	.LFE222-.LFB222
@@ -3680,7 +3680,7 @@ nrf_log_backend_rtt_api:
 	.uleb128 0x1
 	.file 19 "../../../../../../components/libraries/util/sdk_common.h"
 	.byte	0x3
-	.uleb128 0x28
+	.uleb128 0x29
 	.uleb128 0x13
 	.byte	0x3
 	.uleb128 0x35
@@ -3807,7 +3807,7 @@ nrf_log_backend_rtt_api:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.uleb128 0x10
 	.byte	0x3
 	.uleb128 0x34
@@ -3897,7 +3897,7 @@ nrf_log_backend_rtt_api:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.uleb128 0x12
 	.byte	0x3
 	.uleb128 0x35
@@ -3911,7 +3911,7 @@ nrf_log_backend_rtt_api:
 	.byte	0x4
 	.file 50 "../../../../../../components/libraries/experimental_log/nrf_log_str_formatter.h"
 	.byte	0x3
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.uleb128 0x32
 	.file 51 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
 	.byte	0x3
@@ -3925,7 +3925,7 @@ nrf_log_backend_rtt_api:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.uleb128 0x11
 	.byte	0x3
 	.uleb128 0x31
@@ -3933,7 +3933,7 @@ nrf_log_backend_rtt_api:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.uleb128 0x2
 	.file 53 "../../../../../../modules/nrfx/nrfx.h"
 	.byte	0x3
@@ -4006,11 +4006,11 @@ nrf_log_backend_rtt_api:
 	.byte	0x4
 	.file 65 "../../../systemView/SEGGER_RTT_Conf.h"
 	.byte	0x3
-	.uleb128 0x2f
+	.uleb128 0x30
 	.uleb128 0x41
 	.byte	0x4
 	.byte	0x3
-	.uleb128 0x30
+	.uleb128 0x31
 	.uleb128 0x4
 	.byte	0x3
 	.uleb128 0x46

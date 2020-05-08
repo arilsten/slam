@@ -3,7 +3,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
-# 40 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
+# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
 # 53 "../../../../../../components/libraries/util/sdk_common.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
@@ -3577,7 +3577,7 @@ static inline
 void assert_nrf_callback(uint16_t line_num, const uint8_t *file_name);
 # 53 "../../../../../../components/libraries/util/sdk_macros.h" 2
 # 63 "../../../../../../components/libraries/util/sdk_common.h" 2
-# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
+# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
 
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_backend_rtt.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log_backend_rtt.h"
@@ -5390,7 +5390,7 @@ typedef struct {
 } nrf_log_backend_rtt_t;
 # 74 "../../../../../../components/libraries/experimental_log/nrf_log_backend_rtt.h"
 void nrf_log_backend_rtt_init(void);
-# 43 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
+# 44 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_serial.h" 1
 # 53 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_serial.h"
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_backend_interface.h" 1
@@ -5435,7 +5435,7 @@ void nrf_log_backend_serial_put(nrf_log_backend_t const * p_backend,
                                uint8_t * p_buffer,
                                uint32_t length,
                                nrf_fprintf_fwrite tx_func);
-# 44 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
+# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_str_formatter.h" 1
 # 53 "../../../../../../components/libraries/experimental_log/nrf_log_str_formatter.h"
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h" 1
@@ -5530,7 +5530,7 @@ void nrf_log_hexdump_entry_process(uint8_t * p_data,
                                    nrf_fprintf_ctx_t * p_ctx);
 
 void nrf_log_str_formatter_timestamp_freq_set(uint32_t freq);
-# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
+# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_internal.h" 1
 # 49 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_internal.h"
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_types.h" 1
@@ -5654,7 +5654,7 @@ void nrf_log_frontend_hexdump(uint32_t severity_mid,
 
 
 uint8_t nrf_log_getchar(void);
-# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
 # 1 "../../../../../../components/libraries/delay/nrf_delay.h" 1
 # 44 "../../../../../../components/libraries/delay/nrf_delay.h"
 # 1 "../../../../../../modules/nrfx/nrfx.h" 1
@@ -5859,9 +5859,9 @@ static inline void nrf_delay_ms(uint32_t ms_time)
         nrfx_coredep_delay_us(1000);
     } while (--ms_time);
 }
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
-# 1 "../../../systemView/SEGGER_RTT_Conf.h" 1
 # 48 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
+# 1 "../../../systemView/SEGGER_RTT_Conf.h" 1
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
 # 1 "../../../systemView/SEGGER_RTT.h" 1
 # 70 "../../../systemView/SEGGER_RTT.h"
 # 1 "../../../systemView/SEGGER_RTT_Conf.h" 1
@@ -5956,12 +5956,12 @@ int SEGGER_RTT_TerminalOut (char TerminalId, const char* s);
 
 int SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);
 int SEGGER_RTT_vprintf(unsigned BufferIndex, const char * sFormat, va_list * pParamList);
-# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 2
 
 static 
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 3 4
+# 51 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 3 4
       _Bool 
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
+# 51 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
            m_host_present;
 
 static uint8_t m_string_buff[64];
@@ -5985,7 +5985,7 @@ static void serial_tx(void const * p_context, char const * buffer, size_t len)
             len -= processed;
             if (processed == 0)
             {
-# 83 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
+# 84 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
                 if (!m_host_present)
                 {
                     break;
@@ -5997,18 +5997,18 @@ static void serial_tx(void const * p_context, char const * buffer, size_t len)
                     if (watchdog_counter == 0)
                     {
                         m_host_present = 
-# 93 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 3 4
+# 94 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 3 4
                                         0
-# 93 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
+# 94 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
                                              ;
                         break;
                     }
                 }
             }
             m_host_present = 
-# 98 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 3 4
+# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c" 3 4
                             1
-# 98 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
+# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\components\\libraries\\experimental_log\\src\\nrf_log_backend_rtt.c"
                                 ;
         } while (len);
     }

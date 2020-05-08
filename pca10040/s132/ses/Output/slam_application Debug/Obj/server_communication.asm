@@ -228,8 +228,7 @@ send_handshake:
 	strb	r4, [sp, #36]
 	.loc 1 65 3 is_stmt 1 view .LVU47
 	.loc 1 65 37 is_stmt 0 view .LVU48
-	movs	r3, #67
-	strb	r3, [sp, #39]
+	strb	r4, [sp, #39]
 	.loc 1 66 3 is_stmt 1 view .LVU49
 	.loc 1 66 40 is_stmt 0 view .LVU50
 	strb	r4, [sp, #37]
@@ -4696,58 +4695,63 @@ use_arq:
 	.byte	0x3
 	.uleb128 0xa
 	.uleb128 0x15
+	.file 22 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h"
+	.byte	0x3
+	.uleb128 0xc
+	.uleb128 0x16
+	.byte	0x4
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xb
 	.uleb128 0x5
 	.byte	0x4
-	.file 22 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+	.file 23 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 	.byte	0x3
 	.uleb128 0xc
-	.uleb128 0x16
-	.file 23 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h"
+	.uleb128 0x17
+	.file 24 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h"
 	.byte	0x3
 	.uleb128 0x23
-	.uleb128 0x17
+	.uleb128 0x18
 	.byte	0x4
-	.file 24 "../../../config/FreeRTOSConfig.h"
+	.file 25 "../../../config/FreeRTOSConfig.h"
 	.byte	0x3
 	.uleb128 0x39
-	.uleb128 0x18
-	.file 25 "../../../../../../components/softdevice/s132/headers/nrf_soc.h"
+	.uleb128 0x19
+	.file 26 "../../../../../../components/softdevice/s132/headers/nrf_soc.h"
 	.byte	0x3
 	.uleb128 0x22
-	.uleb128 0x19
-	.file 26 "../../../../../../modules/nrfx/mdk/nrf.h"
+	.uleb128 0x1a
+	.file 27 "../../../../../../modules/nrfx/mdk/nrf.h"
 	.byte	0x3
 	.uleb128 0x33
-	.uleb128 0x1a
-	.file 27 "../../../../../../modules/nrfx/mdk/nrf52.h"
+	.uleb128 0x1b
+	.file 28 "../../../../../../modules/nrfx/mdk/nrf52.h"
 	.byte	0x3
 	.uleb128 0x54
-	.uleb128 0x1b
+	.uleb128 0x1c
 	.byte	0x3
 	.uleb128 0x92
 	.uleb128 0xb
-	.file 28 "../../../../../../components/toolchain/cmsis/include/core_cmInstr.h"
+	.file 29 "../../../../../../components/toolchain/cmsis/include/core_cmInstr.h"
 	.byte	0x3
 	.uleb128 0xd2
-	.uleb128 0x1c
-	.file 29 "../../../../../../components/toolchain/cmsis/include/cmsis_gcc.h"
+	.uleb128 0x1d
+	.file 30 "../../../../../../components/toolchain/cmsis/include/cmsis_gcc.h"
 	.byte	0x3
 	.uleb128 0x3d
-	.uleb128 0x1d
-	.byte	0x4
-	.byte	0x4
-	.file 30 "../../../../../../components/toolchain/cmsis/include/core_cmFunc.h"
-	.byte	0x3
-	.uleb128 0xd3
 	.uleb128 0x1e
 	.byte	0x4
-	.file 31 "../../../../../../components/toolchain/cmsis/include/core_cmSimd.h"
+	.byte	0x4
+	.file 31 "../../../../../../components/toolchain/cmsis/include/core_cmFunc.h"
+	.byte	0x3
+	.uleb128 0xd3
+	.uleb128 0x1f
+	.byte	0x4
+	.file 32 "../../../../../../components/toolchain/cmsis/include/core_cmSimd.h"
 	.byte	0x3
 	.uleb128 0xd4
-	.uleb128 0x1f
+	.uleb128 0x20
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
@@ -4755,76 +4759,71 @@ use_arq:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0x4
-	.file 32 "../../../../../../modules/nrfx/mdk/nrf52_bitfields.h"
+	.file 33 "../../../../../../modules/nrfx/mdk/nrf52_bitfields.h"
 	.byte	0x3
 	.uleb128 0x55
-	.uleb128 0x20
-	.byte	0x4
-	.file 33 "../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h"
-	.byte	0x3
-	.uleb128 0x56
 	.uleb128 0x21
 	.byte	0x4
-	.file 34 "../../../../../../modules/nrfx/mdk/nrf52_name_change.h"
+	.file 34 "../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h"
 	.byte	0x3
-	.uleb128 0x57
+	.uleb128 0x56
 	.uleb128 0x22
 	.byte	0x4
-	.file 35 "../../../../../../modules/nrfx/mdk/compiler_abstraction.h"
+	.file 35 "../../../../../../modules/nrfx/mdk/nrf52_name_change.h"
+	.byte	0x3
+	.uleb128 0x57
+	.uleb128 0x23
+	.byte	0x4
+	.file 36 "../../../../../../modules/nrfx/mdk/compiler_abstraction.h"
 	.byte	0x3
 	.uleb128 0x61
-	.uleb128 0x23
+	.uleb128 0x24
 	.byte	0x4
 	.byte	0x4
-	.file 36 "../../../../../../components/softdevice/s132/headers/nrf_svc.h"
+	.file 37 "../../../../../../components/softdevice/s132/headers/nrf_svc.h"
 	.byte	0x3
 	.uleb128 0x34
-	.uleb128 0x24
-	.byte	0x4
-	.file 37 "../../../../../../components/softdevice/s132/headers/nrf_error.h"
-	.byte	0x3
-	.uleb128 0x35
 	.uleb128 0x25
 	.byte	0x4
-	.file 38 "../../../../../../components/softdevice/s132/headers/nrf_error_soc.h"
-	.byte	0x3
-	.uleb128 0x36
-	.uleb128 0x26
-	.byte	0x4
-	.byte	0x4
-	.file 39 "../../../../../../components/libraries/util/app_util_platform.h"
-	.byte	0x3
-	.uleb128 0x24
-	.uleb128 0x27
+	.file 38 "../../../../../../components/softdevice/s132/headers/nrf_error.h"
 	.byte	0x3
 	.uleb128 0x35
-	.uleb128 0x23
+	.uleb128 0x26
+	.byte	0x4
+	.file 39 "../../../../../../components/softdevice/s132/headers/nrf_error_soc.h"
+	.byte	0x3
+	.uleb128 0x36
+	.uleb128 0x27
+	.byte	0x4
+	.byte	0x4
+	.file 40 "../../../../../../components/libraries/util/app_util_platform.h"
+	.byte	0x3
+	.uleb128 0x24
+	.uleb128 0x28
+	.byte	0x3
+	.uleb128 0x35
+	.uleb128 0x24
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x39
 	.uleb128 0x4
 	.byte	0x4
-	.file 40 "../../../../../../components/libraries/util/nrf_assert.h"
+	.file 41 "../../../../../../components/libraries/util/nrf_assert.h"
 	.byte	0x3
 	.uleb128 0x3b
-	.uleb128 0x28
+	.uleb128 0x29
 	.byte	0x4
-	.file 41 "../../../../../../components/libraries/util/app_error.h"
+	.file 42 "../../../../../../components/libraries/util/app_error.h"
 	.byte	0x3
 	.uleb128 0x3c
-	.uleb128 0x29
-	.file 42 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h"
-	.byte	0x3
-	.uleb128 0x37
 	.uleb128 0x2a
-	.byte	0x4
 	.file 43 "../../../../../../components/libraries/util/sdk_errors.h"
 	.byte	0x3
 	.uleb128 0x39
 	.uleb128 0x2b
 	.byte	0x3
 	.uleb128 0x49
-	.uleb128 0x25
+	.uleb128 0x26
 	.byte	0x4
 	.byte	0x4
 	.file 44 "../../../../../../components/libraries/util/nordic_common.h"
@@ -4841,7 +4840,7 @@ use_arq:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xb1
-	.uleb128 0x28
+	.uleb128 0x29
 	.byte	0x4
 	.file 46 "../../../systemView/SEGGER_SYSVIEW_FreeRTOS.h"
 	.byte	0x3

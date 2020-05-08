@@ -5297,7 +5297,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
 # 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../drivers/functions.h" 1
-# 14 "../../../drivers/functions.h"
+# 15 "../../../drivers/functions.h"
 void vFunc_Inf2pi(float *angle_in_radians);
 
 
@@ -5319,6 +5319,25 @@ void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
 
 
 void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+
+
+void increaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+int16_t getDetectionAngle(uint8_t servoAngle, uint8_t sensor);
+
+
+void decreaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+void printCollisionSectors(void);
+
+
+
+# 50 "../../../drivers/functions.h" 3 4
+_Bool 
+# 50 "../../../drivers/functions.h"
+    validWaypoint(int16_t waypointAngle);
 # 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 # 1 "../../../drivers/mag3110.h" 1
 
@@ -7331,7 +7350,7 @@ void vMainPoseEstimatorTask(void *pvParameters) {
    vTaskDelay(10);
 
    } else {
-    if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "IMU Has no new data"); } };
+
     gyrZ = 0.0;
    }
 

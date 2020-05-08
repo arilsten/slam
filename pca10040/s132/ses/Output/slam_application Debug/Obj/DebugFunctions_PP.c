@@ -7198,10 +7198,10 @@ static void ir_task(void *arg) {
     char strIR3[10];
     char strIR4[10];
     for (;;) {
-        int sensor1 = IrAnalogToMM(ir_read_blocking(0),0);
-        int sensor2 = IrAnalogToMM(ir_read_blocking(1),1);
-        int sensor3 = IrAnalogToMM(ir_read_blocking(3),3);
-        int sensor4 = IrAnalogToMM(ir_read_blocking(2),2);
+        int sensor1 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_1),IR_SENSOR_1);
+        int sensor2 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_2),IR_SENSOR_2);
+        int sensor3 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_3),IR_SENSOR_3);
+        int sensor4 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_4),IR_SENSOR_4);
 
         sprintf(strIR1, "ir1: %i", sensor1);
         display_text_on_line(2, strIR1);
@@ -7300,10 +7300,10 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             vTaskDelay(800);
             do { ((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->ICSR = (1UL << 28U); __SEV(); __DSB(); __ISB(); }while (0);
             uint16_t sensor16[4];
-            sensor16[0] = ir_read_blocking(0);
-            sensor16[1] = ir_read_blocking(1);
-            sensor16[3] = ir_read_blocking(2);
-            sensor16[2] = ir_read_blocking(3);
+            sensor16[0] = ir_read_blocking(IR_SENSOR_1);
+            sensor16[1] = ir_read_blocking(IR_SENSOR_2);
+            sensor16[3] = ir_read_blocking(IR_SENSOR_3);
+            sensor16[2] = ir_read_blocking(IR_SENSOR_4);
 
 
             xQueueSemaphoreTake( ( xPoseMutex ), ( 40 ) );
@@ -7325,10 +7325,11 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             vServo_setAngle(90);
             vTaskDelay(1500);
             do { ((SCB_Type *) ((0xE000E000UL) + 0x0D00UL) )->ICSR = (1UL << 28U); __SEV(); __DSB(); __ISB(); }while (0);
-                        sensor16[0] = ir_read_blocking(0);
-            sensor16[1] = ir_read_blocking(1);
-            sensor16[3] = ir_read_blocking(2);
-            sensor16[2] = ir_read_blocking(3);
+
+            sensor16[0] = ir_read_blocking(IR_SENSOR_1);
+            sensor16[1] = ir_read_blocking(IR_SENSOR_2);
+            sensor16[3] = ir_read_blocking(IR_SENSOR_3);
+            sensor16[2] = ir_read_blocking(IR_SENSOR_4);
 
 
             xQueueSemaphoreTake( ( xPoseMutex ), ( 40 ) );
@@ -7336,9 +7337,9 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             xhat = gX_hat;
             yhat = gY_hat;
             xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
+# 170 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
            0
-# 169 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
+# 170 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
            , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
             sprintf(strLOG,"Ta:90,x:%d,y:%d,T:%d,F:%u,L:%u,B:%u,R:%u\n",xhat,yhat,(int)(gTheta_hat*1000),sensor16[0],sensor16[1],sensor16[2],sensor16[3]);
             write.filename = "SC";
@@ -7350,9 +7351,9 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             vServo_setAngle(0);
             vTaskDelay(1000);
             scan = 
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
+# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c" 3 4
                   0
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
+# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\DebugFunctions.c"
                        ;
             }
         }

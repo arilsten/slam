@@ -29,10 +29,10 @@ motorRegulator:
 .LVL0:
 .LFB293:
 	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.c"
-	.loc 1 344 73 view -0
+	.loc 1 345 73 view -0
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 344 73 is_stmt 0 view .LVU1
+	.loc 1 345 73 is_stmt 0 view .LVU1
 	push	{r4, r5, r6, r7, lr}
 .LCFI0:
 	vpush.64	{d8}
@@ -42,60 +42,60 @@ motorRegulator:
 	mov	r4, r1
 	add	r1, sp, #8
 .LVL1:
-	.loc 1 344 73 view .LVU2
+	.loc 1 345 73 view .LVU2
 	stmdb	r1, {r2, r3}
-	.loc 1 345 5 is_stmt 1 view .LVU3
-	.loc 1 345 16 is_stmt 0 view .LVU4
+	.loc 1 346 5 is_stmt 1 view .LVU3
+	.loc 1 346 16 is_stmt 0 view .LVU4
 	ldr	r3, .L25
 	vldr.32	s15, [r3]
-	.loc 1 345 8 view .LVU5
+	.loc 1 346 8 view .LVU5
 	vcmpe.f32	s15, #0
 	vmrs	APSR_nzcv, FPSCR
 	ble	.L2
-	.loc 1 345 20 discriminator 1 view .LVU6
+	.loc 1 346 20 discriminator 1 view .LVU6
 	cmp	r4, #0
 	blt	.L4
 .L2:
-	.loc 1 345 34 discriminator 3 view .LVU7
+	.loc 1 346 34 discriminator 3 view .LVU7
 	vcmpe.f32	s15, #0
 	vmrs	APSR_nzcv, FPSCR
 	bmi	.L23
 .L5:
-	.loc 1 349 5 is_stmt 1 view .LVU8
-	.loc 1 349 15 is_stmt 0 view .LVU9
+	.loc 1 350 5 is_stmt 1 view .LVU8
+	.loc 1 350 15 is_stmt 0 view .LVU9
 	ldr	r3, .L25+4
 	vldr.32	s15, [r3]
-	.loc 1 349 8 view .LVU10
+	.loc 1 350 8 view .LVU10
 	vcmpe.f32	s15, #0
 	vmrs	APSR_nzcv, FPSCR
 	ble	.L7
-	.loc 1 349 19 discriminator 1 view .LVU11
+	.loc 1 350 19 discriminator 1 view .LVU11
 	cmp	r0, #0
 	blt	.L9
 .L7:
-	.loc 1 349 33 discriminator 3 view .LVU12
+	.loc 1 350 33 discriminator 3 view .LVU12
 	vcmpe.f32	s15, #0
 	vmrs	APSR_nzcv, FPSCR
 	bmi	.L24
 .L10:
-	.loc 1 353 5 is_stmt 1 view .LVU13
-	.loc 1 354 5 view .LVU14
-	.loc 1 355 5 view .LVU15
+	.loc 1 354 5 is_stmt 1 view .LVU13
+	.loc 1 355 5 view .LVU14
+	.loc 1 356 5 view .LVU15
 .LVL2:
-	.loc 1 356 5 view .LVU16
-	.loc 1 357 5 view .LVU17
-	.loc 1 358 5 view .LVU18
-	.loc 1 358 27 is_stmt 0 view .LVU19
+	.loc 1 357 5 view .LVU16
+	.loc 1 358 5 view .LVU17
+	.loc 1 359 5 view .LVU18
+	.loc 1 359 27 is_stmt 0 view .LVU19
 	bl	__aeabi_i2d
 .LVL3:
-	.loc 1 358 27 view .LVU20
+	.loc 1 359 27 view .LVU20
 	movs	r2, #0
 	ldr	r3, .L25+8
 	bl	__aeabi_dmul
 .LVL4:
 	mov	r6, r0
 	mov	r7, r1
-	.loc 1 358 32 view .LVU21
+	.loc 1 359 32 view .LVU21
 	ldr	r0, [sp]
 	bl	__aeabi_i2d
 .LVL5:
@@ -105,16 +105,16 @@ motorRegulator:
 	mov	r1, r7
 	bl	__aeabi_dsub
 .LVL6:
-	.loc 1 358 9 view .LVU22
+	.loc 1 359 9 view .LVU22
 	bl	__aeabi_d2iz
 .LVL7:
 	vmov	s16, r0	@ int
 .LVL8:
-	.loc 1 359 5 is_stmt 1 view .LVU23
-	.loc 1 359 28 is_stmt 0 view .LVU24
+	.loc 1 360 5 is_stmt 1 view .LVU23
+	.loc 1 360 28 is_stmt 0 view .LVU24
 	mov	r0, r4
 .LVL9:
-	.loc 1 359 28 view .LVU25
+	.loc 1 360 28 view .LVU25
 	bl	__aeabi_i2d
 .LVL10:
 	movs	r2, #0
@@ -123,7 +123,7 @@ motorRegulator:
 .LVL11:
 	mov	r4, r0
 	mov	r5, r1
-	.loc 1 359 33 view .LVU26
+	.loc 1 360 33 view .LVU26
 	ldr	r0, [sp, #4]
 	bl	__aeabi_i2d
 .LVL12:
@@ -133,130 +133,130 @@ motorRegulator:
 	mov	r1, r5
 	bl	__aeabi_dsub
 .LVL13:
-	.loc 1 359 9 view .LVU27
+	.loc 1 360 9 view .LVU27
 	bl	__aeabi_d2iz
 .LVL14:
 	vmov	s14, r0	@ int
 .LVL15:
-	.loc 1 360 5 is_stmt 1 view .LVU28
-	.loc 1 360 24 is_stmt 0 view .LVU29
+	.loc 1 361 5 is_stmt 1 view .LVU28
+	.loc 1 361 24 is_stmt 0 view .LVU29
 	vcvt.f32.s32	s15, s16
 	vldr.32	s13, .L25+12
 	vmul.f32	s12, s15, s13
-	.loc 1 360 11 view .LVU30
+	.loc 1 361 11 view .LVU30
 	ldr	r3, .L25+4
 	vldr.32	s11, [r3]
 	vadd.f32	s12, s12, s11
 	vstr.32	s12, [r3]
-	.loc 1 361 5 is_stmt 1 view .LVU31
-	.loc 1 361 26 is_stmt 0 view .LVU32
+	.loc 1 362 5 is_stmt 1 view .LVU31
+	.loc 1 362 26 is_stmt 0 view .LVU32
 	vcvt.f32.s32	s14, s14
 	vmul.f32	s13, s14, s13
-	.loc 1 361 12 view .LVU33
+	.loc 1 362 12 view .LVU33
 	ldr	r3, .L25
 	vldr.32	s11, [r3]
 	vadd.f32	s13, s13, s11
 	vstr.32	s13, [r3]
-	.loc 1 362 5 is_stmt 1 view .LVU34
-	.loc 1 362 35 is_stmt 0 view .LVU35
+	.loc 1 363 5 is_stmt 1 view .LVU34
+	.loc 1 363 35 is_stmt 0 view .LVU35
 	vadd.f32	s13, s13, s13
-	.loc 1 362 30 view .LVU36
+	.loc 1 363 30 view .LVU36
 	vadd.f32	s14, s14, s13
-	.loc 1 362 12 view .LVU37
+	.loc 1 363 12 view .LVU37
 	vcvt.s32.f32	s14, s14
 	vmov	r3, s14	@ int
 	sxth	r1, r3
 .LVL16:
-	.loc 1 363 5 is_stmt 1 view .LVU38
-	.loc 1 363 34 is_stmt 0 view .LVU39
+	.loc 1 364 5 is_stmt 1 view .LVU38
+	.loc 1 364 34 is_stmt 0 view .LVU39
 	vadd.f32	s12, s12, s12
-	.loc 1 363 29 view .LVU40
+	.loc 1 364 29 view .LVU40
 	vadd.f32	s15, s15, s12
-	.loc 1 363 12 view .LVU41
+	.loc 1 364 12 view .LVU41
 	vcvt.s32.f32	s15, s15
 	vmov	r3, s15	@ int
 	sxth	r0, r3
 .LVL17:
-	.loc 1 366 5 is_stmt 1 view .LVU42
-	.loc 1 366 8 is_stmt 0 view .LVU43
+	.loc 1 367 5 is_stmt 1 view .LVU42
+	.loc 1 367 8 is_stmt 0 view .LVU43
 	cmp	r0, #100
 	bgt	.L14
-	.loc 1 369 5 is_stmt 1 view .LVU44
-	.loc 1 369 8 is_stmt 0 view .LVU45
+	.loc 1 370 5 is_stmt 1 view .LVU44
+	.loc 1 370 8 is_stmt 0 view .LVU45
 	cmn	r0, #100
 	bge	.L12
-	.loc 1 370 16 view .LVU46
+	.loc 1 371 16 view .LVU46
 	mvn	r0, #99
 .LVL18:
-	.loc 1 370 16 view .LVU47
+	.loc 1 371 16 view .LVU47
 	b	.L12
 .LVL19:
 .L23:
-	.loc 1 345 48 discriminator 4 view .LVU48
+	.loc 1 346 48 discriminator 4 view .LVU48
 	cmp	r4, #0
 	ble	.L5
 .L4:
-	.loc 1 346 9 is_stmt 1 view .LVU49
-	.loc 1 346 16 is_stmt 0 view .LVU50
+	.loc 1 347 9 is_stmt 1 view .LVU49
+	.loc 1 347 16 is_stmt 0 view .LVU50
 	movs	r3, #0
 	ldr	r2, .L25
 	str	r3, [r2]	@ float
-	.loc 1 347 9 is_stmt 1 view .LVU51
-	.loc 1 347 15 is_stmt 0 view .LVU52
+	.loc 1 348 9 is_stmt 1 view .LVU51
+	.loc 1 348 15 is_stmt 0 view .LVU52
 	ldr	r2, .L25+4
 	str	r3, [r2]	@ float
 	b	.L5
 .L24:
-	.loc 1 349 46 discriminator 4 view .LVU53
+	.loc 1 350 46 discriminator 4 view .LVU53
 	cmp	r0, #0
 	ble	.L10
 .L9:
-	.loc 1 350 9 is_stmt 1 view .LVU54
-	.loc 1 350 16 is_stmt 0 view .LVU55
+	.loc 1 351 9 is_stmt 1 view .LVU54
+	.loc 1 351 16 is_stmt 0 view .LVU55
 	movs	r3, #0
 	ldr	r2, .L25
 	str	r3, [r2]	@ float
-	.loc 1 351 9 is_stmt 1 view .LVU56
-	.loc 1 351 15 is_stmt 0 view .LVU57
+	.loc 1 352 9 is_stmt 1 view .LVU56
+	.loc 1 352 15 is_stmt 0 view .LVU57
 	ldr	r2, .L25+4
 	str	r3, [r2]	@ float
 	b	.L10
 .LVL20:
 .L14:
-	.loc 1 367 16 view .LVU58
+	.loc 1 368 16 view .LVU58
 	movs	r0, #100
 .LVL21:
 .L12:
-	.loc 1 372 5 is_stmt 1 view .LVU59
-	.loc 1 372 8 is_stmt 0 view .LVU60
+	.loc 1 373 5 is_stmt 1 view .LVU59
+	.loc 1 373 8 is_stmt 0 view .LVU60
 	cmp	r1, #100
 	bgt	.L16
-	.loc 1 375 5 is_stmt 1 view .LVU61
-	.loc 1 375 8 is_stmt 0 view .LVU62
+	.loc 1 376 5 is_stmt 1 view .LVU61
+	.loc 1 376 8 is_stmt 0 view .LVU62
 	cmn	r1, #100
 	bge	.L13
-	.loc 1 376 16 view .LVU63
+	.loc 1 377 16 view .LVU63
 	mvn	r1, #99
 .LVL22:
-	.loc 1 376 16 view .LVU64
+	.loc 1 377 16 view .LVU64
 	b	.L13
 .LVL23:
 .L16:
-	.loc 1 373 16 view .LVU65
+	.loc 1 374 16 view .LVU65
 	movs	r1, #100
 .LVL24:
 .L13:
-	.loc 1 379 5 is_stmt 1 view .LVU66
+	.loc 1 380 5 is_stmt 1 view .LVU66
 	bl	vMotorMovementSwitch
 .LVL25:
-	.loc 1 380 1 is_stmt 0 view .LVU67
+	.loc 1 381 1 is_stmt 0 view .LVU67
 	add	sp, sp, #12
 .LCFI3:
 	@ sp needed
 	vldm	sp!, {d8}
 .LCFI4:
 .LVL26:
-	.loc 1 380 1 view .LVU68
+	.loc 1 381 1 view .LVU68
 	pop	{r4, r5, r6, r7, pc}
 .L26:
 	.align	2
@@ -836,7 +836,7 @@ vMainPoseControllerTask:
 .L60:
 	.loc 1 234 38 view .LVU297
 .LBE9:
-	.loc 1 296 21 is_stmt 1 view .LVU298
+	.loc 1 297 21 is_stmt 1 view .LVU298
 	ldrh	r0, [sp, #66]
 	ldrh	r1, [sp, #64]
 	ldr	r3, [sp, #40]
@@ -847,7 +847,7 @@ vMainPoseControllerTask:
 .LVL92:
 	.loc 1 185 31 is_stmt 0 view .LVU299
 	mov	r10, r7
-	.loc 1 296 21 view .LVU300
+	.loc 1 297 21 view .LVU300
 	b	.L80
 .L125:
 	.align	2
@@ -900,13 +900,13 @@ vMainPoseControllerTask:
 	bl	vFunc_Inf2pi
 .LVL100:
 	.loc 1 245 25 view .LVU315
-	.loc 1 246 25 view .LVU316
-	.loc 1 247 25 view .LVU317
-	.loc 1 249 25 view .LVU318
-	.loc 1 250 25 view .LVU319
-	.loc 1 251 25 view .LVU320
-	.loc 1 253 25 view .LVU321
-	.loc 1 253 46 is_stmt 0 view .LVU322
+	.loc 1 247 25 view .LVU316
+	.loc 1 248 25 view .LVU317
+	.loc 1 250 25 view .LVU318
+	.loc 1 251 25 view .LVU319
+	.loc 1 252 25 view .LVU320
+	.loc 1 254 25 view .LVU321
+	.loc 1 254 46 is_stmt 0 view .LVU322
 	ldr	r0, [sp, #28]	@ float
 	bl	__aeabi_f2d
 .LVL101:
@@ -914,35 +914,35 @@ vMainPoseControllerTask:
 	bl	fabs
 .LVL102:
 	vmov	r0, r1, d0
-	.loc 1 253 61 view .LVU323
+	.loc 1 254 61 view .LVU323
 	movs	r2, #0
 	ldr	r3, .L126
 	bl	__aeabi_dmul
 .LVL103:
-	.loc 1 253 31 view .LVU324
+	.loc 1 254 31 view .LVU324
 	bl	__aeabi_d2f
 .LVL104:
 	vmov	s20, r0
 .LVL105:
-	.loc 1 255 25 is_stmt 1 view .LVU325
-	.loc 1 255 51 is_stmt 0 view .LVU326
+	.loc 1 256 25 is_stmt 1 view .LVU325
+	.loc 1 256 51 is_stmt 0 view .LVU326
 	ldr	r0, [sp, #72]	@ float
 .LVL106:
-	.loc 1 255 51 view .LVU327
+	.loc 1 256 51 view .LVU327
 	bl	__aeabi_f2d
 .LVL107:
 	movs	r2, #0
 	ldr	r3, .L126+4
 	bl	__aeabi_dmul
 .LVL108:
-	.loc 1 255 58 view .LVU328
+	.loc 1 256 58 view .LVU328
 	movs	r2, #0
 	ldr	r3, .L126+8
 	bl	__aeabi_ddiv
 .LVL109:
 	mov	r4, r0
 	mov	r5, r1
-	.loc 1 255 38 view .LVU329
+	.loc 1 256 38 view .LVU329
 	vmov	r0, s27
 	bl	__aeabi_f2d
 .LVL110:
@@ -954,40 +954,40 @@ vMainPoseControllerTask:
 .LVL112:
 	vmov	s27, r0
 .LVL113:
-	.loc 1 257 25 is_stmt 1 view .LVU330
-	.loc 1 257 42 is_stmt 0 view .LVU331
+	.loc 1 258 25 is_stmt 1 view .LVU330
+	.loc 1 258 42 is_stmt 0 view .LVU331
 	vldr.32	s14, [sp, #24]
-	.loc 1 257 28 view .LVU332
+	.loc 1 258 28 view .LVU332
 	vldr.32	s15, .L126+12
 	vmul.f32	s19, s14, s15
 .LVL114:
-	.loc 1 258 25 is_stmt 1 view .LVU333
-	.loc 1 258 60 is_stmt 0 view .LVU334
+	.loc 1 259 25 is_stmt 1 view .LVU333
+	.loc 1 259 60 is_stmt 0 view .LVU334
 	vcmpe.f32	s20, s19
 	vmrs	APSR_nzcv, FPSCR
 	bgt	.L61
-	.loc 1 258 60 view .LVU335
+	.loc 1 259 60 view .LVU335
 	vmov.f32	s19, s20
 .LVL115:
 .L61:
-	.loc 1 259 25 is_stmt 1 discriminator 4 view .LVU336
-	.loc 1 259 39 is_stmt 0 discriminator 4 view .LVU337
+	.loc 1 260 25 is_stmt 1 discriminator 4 view .LVU336
+	.loc 1 260 39 is_stmt 0 discriminator 4 view .LVU337
 	vneg.f32	s16, s20
-	.loc 1 259 72 discriminator 4 view .LVU338
+	.loc 1 260 72 discriminator 4 view .LVU338
 	vcmpe.f32	s16, s19
 	vmrs	APSR_nzcv, FPSCR
 	ble	.L63
-	.loc 1 259 72 view .LVU339
+	.loc 1 260 72 view .LVU339
 	vmov.f32	s19, s16
 .LVL116:
 .L63:
-	.loc 1 262 25 is_stmt 1 discriminator 4 view .LVU340
-	.loc 1 262 28 is_stmt 0 discriminator 4 view .LVU341
+	.loc 1 263 25 is_stmt 1 discriminator 4 view .LVU340
+	.loc 1 263 28 is_stmt 0 discriminator 4 view .LVU341
 	vldr.32	s15, .L126+16
 	vmul.f32	s18, s27, s15
 .LVL117:
-	.loc 1 263 25 is_stmt 1 discriminator 4 view .LVU342
-	.loc 1 263 50 is_stmt 0 discriminator 4 view .LVU343
+	.loc 1 264 25 is_stmt 1 discriminator 4 view .LVU342
+	.loc 1 264 50 is_stmt 0 discriminator 4 view .LVU343
 	vmov.f32	s15, #1.0e+1
 	vcmpe.f32	s18, s15
 	vmrs	APSR_nzcv, FPSCR
@@ -995,28 +995,28 @@ vMainPoseControllerTask:
 	vmov.f32	s18, s15
 .LVL118:
 .L64:
-	.loc 1 264 25 is_stmt 1 discriminator 4 view .LVU344
-	.loc 1 264 52 is_stmt 0 discriminator 4 view .LVU345
+	.loc 1 265 25 is_stmt 1 discriminator 4 view .LVU344
+	.loc 1 265 52 is_stmt 0 discriminator 4 view .LVU345
 	vmov.f32	s15, #-1.0e+1
 	vcmpe.f32	s18, s15
 	vmrs	APSR_nzcv, FPSCR
 	bpl	.L66
-	.loc 1 264 52 view .LVU346
+	.loc 1 265 52 view .LVU346
 	vmov.f32	s18, s15
 .LVL119:
 .L66:
-	.loc 1 267 25 is_stmt 1 discriminator 4 view .LVU347
-	.loc 1 267 28 is_stmt 0 discriminator 4 view .LVU348
+	.loc 1 268 25 is_stmt 1 discriminator 4 view .LVU347
+	.loc 1 268 28 is_stmt 0 discriminator 4 view .LVU348
 	vmov	r0, s14
 .LVL120:
-	.loc 1 267 28 discriminator 4 view .LVU349
+	.loc 1 268 28 discriminator 4 view .LVU349
 	bl	__aeabi_f2d
 .LVL121:
 	vmov	d0, r0, r1
 	bl	fabs
 .LVL122:
 	vmov	r4, r5, d0
-	.loc 1 267 46 discriminator 4 view .LVU350
+	.loc 1 268 46 discriminator 4 view .LVU350
 	ldr	r0, [sp, #28]	@ float
 	bl	__aeabi_f2d
 .LVL123:
@@ -1028,24 +1028,24 @@ vMainPoseControllerTask:
 	bl	fabs
 .LVL125:
 	vmov	r2, r3, d0
-	.loc 1 267 27 discriminator 4 view .LVU351
+	.loc 1 268 27 discriminator 4 view .LVU351
 	mov	r0, r4
 	mov	r1, r5
 	bl	__aeabi_dcmpgt
 .LVL126:
 	cbnz	r0, .L119
-	.loc 1 251 31 view .LVU352
+	.loc 1 252 31 view .LVU352
 	vldr.32	s16, .L126+24
 .LVL127:
 .L68:
-	.loc 1 278 25 is_stmt 1 view .LVU353
-	.loc 1 278 43 is_stmt 0 view .LVU354
+	.loc 1 279 25 is_stmt 1 view .LVU353
+	.loc 1 279 43 is_stmt 0 view .LVU354
 	vadd.f32	s15, s16, s19
-	.loc 1 278 31 view .LVU355
+	.loc 1 279 31 view .LVU355
 	vadd.f32	s15, s15, s18
 .LVL128:
-	.loc 1 284 25 is_stmt 1 view .LVU356
-	.loc 1 284 65 is_stmt 0 view .LVU357
+	.loc 1 285 25 is_stmt 1 view .LVU356
+	.loc 1 285 65 is_stmt 0 view .LVU357
 	vldr.32	s14, .L126+12
 	vcmpe.f32	s15, s14
 	vmrs	APSR_nzcv, FPSCR
@@ -1053,56 +1053,56 @@ vMainPoseControllerTask:
 	vmov.f32	s15, s14
 .LVL129:
 .L74:
-	.loc 1 285 25 is_stmt 1 discriminator 4 view .LVU358
-	.loc 1 285 66 is_stmt 0 discriminator 4 view .LVU359
+	.loc 1 286 25 is_stmt 1 discriminator 4 view .LVU358
+	.loc 1 286 66 is_stmt 0 discriminator 4 view .LVU359
 	vldr.32	s14, .L126+28
 	vcmpe.f32	s15, s14
 	vmrs	APSR_nzcv, FPSCR
 	bpl	.L76
-	.loc 1 285 66 view .LVU360
+	.loc 1 286 66 view .LVU360
 	vmov.f32	s15, s14
 .LVL130:
 .L76:
-	.loc 1 286 25 is_stmt 1 discriminator 4 view .LVU361
-	.loc 1 286 29 is_stmt 0 discriminator 4 view .LVU362
+	.loc 1 287 25 is_stmt 1 discriminator 4 view .LVU361
+	.loc 1 287 29 is_stmt 0 discriminator 4 view .LVU362
 	vcvt.s32.f32	s15, s15
 .LVL131:
-	.loc 1 286 29 discriminator 4 view .LVU363
+	.loc 1 287 29 discriminator 4 view .LVU363
 	vmov	r3, s15	@ int
 .LVL132:
-	.loc 1 287 25 is_stmt 1 discriminator 4 view .LVU364
-	.loc 1 287 32 is_stmt 0 discriminator 4 view .LVU365
+	.loc 1 288 25 is_stmt 1 discriminator 4 view .LVU364
+	.loc 1 288 32 is_stmt 0 discriminator 4 view .LVU365
 	rsbs	r2, r3, #0
 	sxth	r2, r2
 	strh	r2, [sp, #66]	@ movhi
-	.loc 1 288 25 is_stmt 1 discriminator 4 view .LVU366
-	.loc 1 288 32 is_stmt 0 discriminator 4 view .LVU367
+	.loc 1 289 25 is_stmt 1 discriminator 4 view .LVU366
+	.loc 1 289 32 is_stmt 0 discriminator 4 view .LVU367
 	sxth	r3, r3
 .LVL133:
-	.loc 1 288 32 discriminator 4 view .LVU368
+	.loc 1 289 32 discriminator 4 view .LVU368
 	strh	r3, [sp, #64]	@ movhi
-	.loc 1 290 25 is_stmt 1 discriminator 4 view .LVU369
-	.loc 1 290 49 is_stmt 0 discriminator 4 view .LVU370
+	.loc 1 291 25 is_stmt 1 discriminator 4 view .LVU369
+	.loc 1 291 49 is_stmt 0 discriminator 4 view .LVU370
 	vldr.32	s15, [sp, #72]
 .LVL134:
-	.loc 1 290 38 discriminator 4 view .LVU371
+	.loc 1 291 38 discriminator 4 view .LVU371
 	vcmpe.f32	s15, #0
 	vmrs	APSR_nzcv, FPSCR
 	bmi	.L120
-	.loc 1 290 38 view .LVU372
+	.loc 1 291 38 view .LVU372
 	movs	r3, #4
 .L78:
-	.loc 1 290 38 discriminator 4 view .LVU373
+	.loc 1 291 38 discriminator 4 view .LVU373
 	strb	r3, [sp, #79]
-	.loc 1 291 25 is_stmt 1 discriminator 4 view .LVU374
+	.loc 1 292 25 is_stmt 1 discriminator 4 view .LVU374
 .LVL135:
-	.loc 1 291 34 is_stmt 0 discriminator 4 view .LVU375
+	.loc 1 292 34 is_stmt 0 discriminator 4 view .LVU375
 	mov	fp, r6
 	b	.L60
 .LVL136:
 .L119:
-	.loc 1 268 25 is_stmt 1 view .LVU376
-	.loc 1 268 35 is_stmt 0 view .LVU377
+	.loc 1 269 25 is_stmt 1 view .LVU376
+	.loc 1 269 35 is_stmt 0 view .LVU377
 	ldr	r0, [sp, #32]	@ float
 	bl	__aeabi_f2d
 .LVL137:
@@ -1110,78 +1110,78 @@ vMainPoseControllerTask:
 	bl	fabs
 .LVL138:
 	vmov	r0, r1, d0
-	.loc 1 268 32 view .LVU378
+	.loc 1 269 32 view .LVU378
 	movs	r2, #0
 	ldr	r3, .L126+32
 	bl	__aeabi_dmul
 .LVL139:
-	.loc 1 268 27 view .LVU379
+	.loc 1 269 27 view .LVU379
 	bl	__aeabi_d2f
 .LVL140:
 	vmov	s15, r0
 .LVL141:
-	.loc 1 269 25 is_stmt 1 view .LVU380
-	.loc 1 269 37 is_stmt 0 view .LVU381
+	.loc 1 270 25 is_stmt 1 view .LVU380
+	.loc 1 270 37 is_stmt 0 view .LVU381
 	vldr.32	s14, [sp, #72]
-	.loc 1 269 27 view .LVU382
+	.loc 1 270 27 view .LVU382
 	vcmpe.f32	s14, #0
 	vmrs	APSR_nzcv, FPSCR
 	ble	.L70
-	.loc 1 270 25 is_stmt 1 view .LVU383
-	.loc 1 270 28 is_stmt 0 view .LVU384
+	.loc 1 271 25 is_stmt 1 view .LVU383
+	.loc 1 271 28 is_stmt 0 view .LVU384
 	vneg.f32	s15, s15
 .LVL142:
 .L70:
-	.loc 1 273 25 is_stmt 1 view .LVU385
-	.loc 1 273 60 is_stmt 0 view .LVU386
+	.loc 1 274 25 is_stmt 1 view .LVU385
+	.loc 1 274 60 is_stmt 0 view .LVU386
 	vcmpe.f32	s15, s20
 	vmrs	APSR_nzcv, FPSCR
 	bpl	.L72
-	.loc 1 273 60 view .LVU387
+	.loc 1 274 60 view .LVU387
 	vmov.f32	s20, s15
 .LVL143:
 .L72:
-	.loc 1 274 25 is_stmt 1 discriminator 4 view .LVU388
-	.loc 1 274 72 is_stmt 0 discriminator 4 view .LVU389
+	.loc 1 275 25 is_stmt 1 discriminator 4 view .LVU388
+	.loc 1 275 72 is_stmt 0 discriminator 4 view .LVU389
 	vcmpe.f32	s16, s20
 	vmrs	APSR_nzcv, FPSCR
 	bgt	.L68
-	.loc 1 274 72 view .LVU390
+	.loc 1 275 72 view .LVU390
 	vmov.f32	s16, s20
 	b	.L68
 .LVL144:
 .L120:
-	.loc 1 290 38 view .LVU391
+	.loc 1 291 38 view .LVU391
 	movs	r3, #3
 	b	.L78
 .LVL145:
 .L42:
-	.loc 1 290 38 view .LVU392
+	.loc 1 291 38 view .LVU392
 .LBE10:
 .LBB11:
-	.loc 1 299 21 is_stmt 1 view .LVU393
-	.loc 1 299 24 is_stmt 0 view .LVU394
+	.loc 1 300 21 is_stmt 1 view .LVU393
+	.loc 1 300 24 is_stmt 0 view .LVU394
 	cmp	r10, #0
 	beq	.L121
 .LVL146:
 .L81:
-	.loc 1 305 21 is_stmt 1 view .LVU395
-	.loc 1 307 21 view .LVU396
+	.loc 1 306 21 is_stmt 1 view .LVU395
+	.loc 1 308 21 view .LVU396
 	bl	motor_brake
 .LVL147:
-	.loc 1 309 21 view .LVU397
-	.loc 1 309 34 is_stmt 0 view .LVU398
+	.loc 1 310 21 view .LVU397
+	.loc 1 310 34 is_stmt 0 view .LVU398
 	movs	r3, #0
 	strb	r3, [sp, #79]
-	.loc 1 311 6 is_stmt 1 view .LVU399
+	.loc 1 312 6 is_stmt 1 view .LVU399
 	ldr	r1, .L126+36
 	movs	r0, #4
 	bl	display_text_on_line
 .LVL148:
 .L80:
-	.loc 1 311 6 is_stmt 0 view .LVU400
+	.loc 1 312 6 is_stmt 0 view .LVU400
 .LBE11:
-	.loc 1 315 17 is_stmt 1 view .LVU401
+	.loc 1 316 17 is_stmt 1 view .LVU401
 	movs	r3, #0
 	mov	r2, r3
 	add	r1, sp, #79
@@ -1198,26 +1198,26 @@ vMainPoseControllerTask:
 .L121:
 .LBB13:
 .LBB12:
-	.loc 1 300 25 is_stmt 1 discriminator 3 view .LVU404
-	.loc 1 300 98 discriminator 3 view .LVU405
-	.loc 1 300 153 discriminator 3 view .LVU406
-	.loc 1 300 234 is_stmt 0 discriminator 3 view .LVU407
+	.loc 1 301 25 is_stmt 1 discriminator 3 view .LVU404
+	.loc 1 301 98 discriminator 3 view .LVU405
+	.loc 1 301 153 discriminator 3 view .LVU406
+	.loc 1 301 234 is_stmt 0 discriminator 3 view .LVU407
 	ldr	r3, .L126+44
 	ldrh	r0, [r3]
-	.loc 1 300 245 discriminator 3 view .LVU408
+	.loc 1 301 245 discriminator 3 view .LVU408
 	lsls	r0, r0, #16
-	.loc 1 300 153 discriminator 3 view .LVU409
+	.loc 1 301 153 discriminator 3 view .LVU409
 	ldr	r1, .L126+48
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL152:
-	.loc 1 300 284 is_stmt 1 discriminator 3 view .LVU410
-	.loc 1 301 25 discriminator 3 view .LVU411
+	.loc 1 301 284 is_stmt 1 discriminator 3 view .LVU410
+	.loc 1 302 25 discriminator 3 view .LVU411
 	bl	send_idle
 .LVL153:
-	.loc 1 302 25 discriminator 3 view .LVU412
-	.loc 1 303 25 discriminator 3 view .LVU413
-	.loc 1 303 35 is_stmt 0 discriminator 3 view .LVU414
+	.loc 1 303 25 discriminator 3 view .LVU412
+	.loc 1 304 25 discriminator 3 view .LVU413
+	.loc 1 304 35 is_stmt 0 discriminator 3 view .LVU414
 	mov	r10, #1
 	b	.L81
 .L127:
@@ -1238,12 +1238,12 @@ vMainPoseControllerTask:
 	.word	.LC2
 .LVL154:
 .L29:
-	.loc 1 303 35 discriminator 3 view .LVU415
+	.loc 1 304 35 discriminator 3 view .LVU415
 .LBE12:
 .LBE13:
 .LBE3:
 .LBE2:
-	.loc 1 335 13 is_stmt 1 view .LVU416
+	.loc 1 336 13 is_stmt 1 view .LVU416
 	bl	motor_brake
 .LVL155:
 .L28:
@@ -3374,7 +3374,7 @@ rightI:
 	.uleb128 0x1f
 	.4byte	.LASF155
 	.byte	0x1
-	.2byte	0x154
+	.2byte	0x155
 	.byte	0x7
 	.4byte	0x30
 	.uleb128 0x5
@@ -3383,7 +3383,7 @@ rightI:
 	.uleb128 0x1f
 	.4byte	.LASF156
 	.byte	0x1
-	.2byte	0x155
+	.2byte	0x156
 	.byte	0x7
 	.4byte	0x30
 	.uleb128 0x5
@@ -3392,7 +3392,7 @@ rightI:
 	.uleb128 0x20
 	.4byte	.LASF163
 	.byte	0x1
-	.2byte	0x158
+	.2byte	0x159
 	.byte	0x6
 	.4byte	.LFB293
 	.4byte	.LFE293-.LFB293
@@ -3402,7 +3402,7 @@ rightI:
 	.uleb128 0x21
 	.4byte	.LASF157
 	.byte	0x1
-	.2byte	0x158
+	.2byte	0x159
 	.byte	0x1d
 	.4byte	0x5d
 	.4byte	.LLST0
@@ -3410,7 +3410,7 @@ rightI:
 	.uleb128 0x21
 	.4byte	.LASF158
 	.byte	0x1
-	.2byte	0x158
+	.2byte	0x159
 	.byte	0x2d
 	.4byte	0x5d
 	.4byte	.LLST1
@@ -3418,7 +3418,7 @@ rightI:
 	.uleb128 0x22
 	.4byte	.LASF217
 	.byte	0x1
-	.2byte	0x158
+	.2byte	0x159
 	.byte	0x42
 	.4byte	0x308
 	.uleb128 0x2
@@ -3427,7 +3427,7 @@ rightI:
 	.uleb128 0x23
 	.4byte	.LASF159
 	.byte	0x1
-	.2byte	0x161
+	.2byte	0x162
 	.byte	0xd
 	.4byte	0x5d
 	.4byte	.LLST2
@@ -3435,7 +3435,7 @@ rightI:
 	.uleb128 0x23
 	.4byte	.LASF160
 	.byte	0x1
-	.2byte	0x162
+	.2byte	0x163
 	.byte	0xd
 	.4byte	0x5d
 	.4byte	.LLST3
@@ -3443,7 +3443,7 @@ rightI:
 	.uleb128 0x24
 	.ascii	"ki\000"
 	.byte	0x1
-	.2byte	0x163
+	.2byte	0x164
 	.byte	0xb
 	.4byte	0x30
 	.4byte	.LLST4
@@ -3451,7 +3451,7 @@ rightI:
 	.uleb128 0x24
 	.ascii	"kp\000"
 	.byte	0x1
-	.2byte	0x164
+	.2byte	0x165
 	.byte	0xb
 	.4byte	0x30
 	.4byte	.LLST5
@@ -3459,7 +3459,7 @@ rightI:
 	.uleb128 0x24
 	.ascii	"t\000"
 	.byte	0x1
-	.2byte	0x165
+	.2byte	0x166
 	.byte	0xb
 	.4byte	0x30
 	.4byte	.LLST6
@@ -3467,7 +3467,7 @@ rightI:
 	.uleb128 0x23
 	.4byte	.LASF161
 	.byte	0x1
-	.2byte	0x166
+	.2byte	0x167
 	.byte	0x9
 	.4byte	0x29
 	.4byte	.LLST7
@@ -3475,7 +3475,7 @@ rightI:
 	.uleb128 0x23
 	.4byte	.LASF162
 	.byte	0x1
-	.2byte	0x167
+	.2byte	0x168
 	.byte	0x9
 	.4byte	0x29
 	.4byte	.LLST8
@@ -4124,7 +4124,7 @@ rightI:
 	.uleb128 0x35
 	.ascii	"ki\000"
 	.byte	0x1
-	.byte	0xf6
+	.byte	0xf7
 	.byte	0x1f
 	.4byte	0x30
 	.4byte	.LLST51
@@ -4132,7 +4132,7 @@ rightI:
 	.uleb128 0x35
 	.ascii	"kd\000"
 	.byte	0x1
-	.byte	0xf7
+	.byte	0xf8
 	.byte	0x1f
 	.4byte	0x30
 	.4byte	.LLST52
@@ -4140,7 +4140,7 @@ rightI:
 	.uleb128 0x35
 	.ascii	"rp\000"
 	.byte	0x1
-	.byte	0xf9
+	.byte	0xfa
 	.byte	0x1f
 	.4byte	0x30
 	.4byte	.LLST53
@@ -4148,7 +4148,7 @@ rightI:
 	.uleb128 0x35
 	.ascii	"ri\000"
 	.byte	0x1
-	.byte	0xfa
+	.byte	0xfb
 	.byte	0x1f
 	.4byte	0x30
 	.4byte	.LLST54
@@ -4156,7 +4156,7 @@ rightI:
 	.uleb128 0x35
 	.ascii	"rd\000"
 	.byte	0x1
-	.byte	0xfb
+	.byte	0xfc
 	.byte	0x1f
 	.4byte	0x30
 	.4byte	.LLST55
@@ -4164,7 +4164,7 @@ rightI:
 	.uleb128 0x2c
 	.4byte	.LASF229
 	.byte	0x1
-	.byte	0xfd
+	.byte	0xfe
 	.byte	0x1f
 	.4byte	0x30
 	.4byte	.LLST56
@@ -4172,7 +4172,7 @@ rightI:
 	.uleb128 0x23
 	.4byte	.LASF230
 	.byte	0x1
-	.2byte	0x116
+	.2byte	0x117
 	.byte	0x1f
 	.4byte	0x30
 	.4byte	.LLST57
@@ -4180,7 +4180,7 @@ rightI:
 	.uleb128 0x23
 	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x11e
+	.2byte	0x11f
 	.byte	0x1d
 	.4byte	0x29
 	.4byte	.LLST58
@@ -4250,7 +4250,7 @@ rightI:
 	.uleb128 0x36
 	.4byte	.LASF233
 	.byte	0x1
-	.2byte	0x12d
+	.2byte	0x12e
 	.byte	0x19
 	.4byte	0x29
 	.4byte	0xca0
@@ -4514,7 +4514,7 @@ rightI:
 	.4byte	.LASF236
 	.4byte	.LASF236
 	.byte	0x12
-	.byte	0xe
+	.byte	0xf
 	.byte	0x6
 	.uleb128 0x38
 	.4byte	.LASF237
@@ -4532,7 +4532,7 @@ rightI:
 	.4byte	.LASF233
 	.4byte	.LASF233
 	.byte	0x1
-	.2byte	0x12d
+	.2byte	0x12e
 	.byte	0x19
 	.uleb128 0x37
 	.4byte	.LASF239

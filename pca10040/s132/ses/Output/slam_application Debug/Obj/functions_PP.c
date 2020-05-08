@@ -10,6 +10,102 @@
 
 
 
+# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 1
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
+# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
+# 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
+
+# 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
+typedef signed char int8_t;
+typedef unsigned char uint8_t;
+
+
+
+
+typedef signed short int16_t;
+typedef unsigned short uint16_t;
+typedef signed int int32_t;
+typedef unsigned int uint32_t;
+# 68 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
+typedef signed long long int64_t;
+typedef unsigned long long uint64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+typedef int32_t int_least32_t;
+typedef int64_t int_least64_t;
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_least32_t;
+typedef uint64_t uint_least64_t;
+
+
+
+typedef int32_t int_fast8_t;
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef int64_t int_fast64_t;
+
+typedef uint32_t uint_fast8_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+typedef uint64_t uint_fast64_t;
+
+typedef int32_t intptr_t;
+typedef uint32_t uintptr_t;
+# 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
+typedef int64_t intmax_t;
+typedef uint64_t uintmax_t;
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 2
+# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h" 1 3 4
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 2
+
+
+
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
+void vFunc_Inf2pi(float *angle_in_radians);
+
+
+int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+
+void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+
+
+
+void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+
+
+void increaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+int16_t getDetectionAngle(uint8_t servoAngle, uint8_t sensor);
+
+
+void decreaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+void printCollisionSectors(void);
+
+
+
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 3 4
+_Bool 
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
+    validWaypoint(int16_t waypointAngle);
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 
@@ -410,83 +506,12 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
-# 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 1
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
-# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
-# 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
-typedef signed char int8_t;
-typedef unsigned char uint8_t;
-
-
-
-
-typedef signed short int16_t;
-typedef unsigned short uint16_t;
-typedef signed int int32_t;
-typedef unsigned int uint32_t;
-# 68 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
-typedef signed long long int64_t;
-typedef unsigned long long uint64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-typedef int32_t int_least32_t;
-typedef int64_t int_least64_t;
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-typedef uint32_t uint_least32_t;
-typedef uint64_t uint_least64_t;
-
-
-
-typedef int32_t int_fast8_t;
-typedef int32_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef int64_t int_fast64_t;
-
-typedef uint32_t uint_fast8_t;
-typedef uint32_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-typedef uint64_t uint_fast64_t;
-
-typedef int32_t intptr_t;
-typedef uint32_t uintptr_t;
-# 118 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 3 4
-typedef int64_t intmax_t;
-typedef uint64_t uintmax_t;
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 2
-
-
-
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
-void vFunc_Inf2pi(float *angle_in_radians);
-
-
-int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
-
-
-int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
-
-
-int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
-
-
-int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
-
-
-
-void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
-
-
-
-void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
 # 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
+
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\defines.h" 1
-# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 1
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h"
 # 1 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h" 1
 # 44 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_twi.h" 1
@@ -503,8 +528,6 @@ void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
 # 47 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 3 4
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 1 3 4
-# 76 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 3 4
-
 # 76 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 3 4
 typedef __builtin_va_list __va_list;
 # 126 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h" 3 4
@@ -735,8 +758,7 @@ typedef int ptrdiff_t;
 # 77 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 3 4
 typedef unsigned wchar_t;
 # 46 "../../../../../../modules/nrfx/drivers/nrfx_common.h" 2
-# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h" 1 3 4
-# 47 "../../../../../../modules/nrfx/drivers/nrfx_common.h" 2
+
 
 # 1 "../../../../../../modules/nrfx/mdk/nrf.h" 1
 # 84 "../../../../../../modules/nrfx/mdk/nrf.h"
@@ -7313,8 +7335,7 @@ static inline
 # 330 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
                                                                            );
 }
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 2
-
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 2
 
 void i2cInit();
 void i2cRecive(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
@@ -7323,46 +7344,1098 @@ void i2cSendNOADDR(uint8_t device,uint8_t* data,uint8_t len);
 void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len);
 const nrf_twi_mngr_t* getTWIManagerAddress();
 const nrf_drv_twi_config_t* getBusConfig();
-# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
+# 1 "../../../software/MainComTask.h" 1
+# 12 "../../../software/MainComTask.h"
+# 1 "../../../drivers/defines.h" 1
+# 13 "../../../software/MainComTask.h" 2
+
+extern int16_t collisionAngles[4];
+
+void vMainCommunicationTask(void *pvParameters);
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
+# 1 "../../../software/globals.h" 1
+# 13 "../../../software/globals.h"
+# 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
+# 57 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+# 1 "../../../config/FreeRTOSConfig.h" 1
+# 214 "../../../config/FreeRTOSConfig.h"
+# 1 "../../../systemView/SEGGER_SYSVIEW_FreeRTOS.h" 1
+# 71 "../../../systemView/SEGGER_SYSVIEW_FreeRTOS.h"
+# 1 "../../../systemView/SEGGER_SYSVIEW.h" 1
+# 74 "../../../systemView/SEGGER_SYSVIEW.h"
+# 1 "../../../systemView/SEGGER.h" 1
+# 67 "../../../systemView/SEGGER.h"
+# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 1 3 4
+# 69 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 3 4
+
+# 69 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdarg.h" 3 4
+typedef __va_list va_list;
+# 68 "../../../systemView/SEGGER.h" 2
+# 1 "../../../systemView/Global.h" 1
+# 69 "../../../systemView/SEGGER.h" 2
+# 149 "../../../systemView/SEGGER.h"
+
+# 149 "../../../systemView/SEGGER.h"
+typedef struct {
+  char* pBuffer;
+  int BufferSize;
+  int Cnt;
+} SEGGER_BUFFER_DESC;
+
+typedef struct {
+  unsigned int CacheLineSize;
+  void (*pfDMB) (void);
+  void (*pfClean) (void *p, unsigned NumBytes);
+  void (*pfInvalidate)(void *p, unsigned NumBytes);
+} SEGGER_CACHE_CONFIG;
+
+typedef struct SEGGER_SNPRINTF_CONTEXT_struct SEGGER_SNPRINTF_CONTEXT;
+
+struct SEGGER_SNPRINTF_CONTEXT_struct {
+  void* pContext;
+  SEGGER_BUFFER_DESC* pBufferDesc;
+  void (*pfFlush)(SEGGER_SNPRINTF_CONTEXT* pContext);
+};
+
+typedef struct {
+  void (*pfStoreChar) (SEGGER_BUFFER_DESC* pBufferDesc, SEGGER_SNPRINTF_CONTEXT* pContext, char c);
+  int (*pfPrintUnsigned) (SEGGER_BUFFER_DESC* pBufferDesc, SEGGER_SNPRINTF_CONTEXT* pContext, unsigned long v, unsigned Base, char Flags, int Width, int Precision);
+  int (*pfPrintInt) (SEGGER_BUFFER_DESC* pBufferDesc, SEGGER_SNPRINTF_CONTEXT* pContext, signed long v, unsigned Base, char Flags, int Width, int Precision);
+} SEGGER_PRINTF_API;
+
+typedef void (*SEGGER_pFormatter)(SEGGER_BUFFER_DESC* pBufferDesc, SEGGER_SNPRINTF_CONTEXT* pContext, const SEGGER_PRINTF_API* pApi, va_list* pParamList, char Lead, int Width, int Precision);
+
+typedef struct SEGGER_PRINTF_FORMATTER {
+  struct SEGGER_PRINTF_FORMATTER* pNext;
+  SEGGER_pFormatter pfFormatter;
+  char Specifier;
+} SEGGER_PRINTF_FORMATTER;
+# 194 "../../../systemView/SEGGER.h"
+void SEGGER_ARM_memcpy(void* pDest, const void* pSrc, int NumBytes);
+void SEGGER_memcpy (void* pDest, const void* pSrc, unsigned NumBytes);
+void SEGGER_memxor (void* pDest, const void* pSrc, unsigned NumBytes);
+
+
+
+
+int SEGGER_atoi (const char* s);
+int SEGGER_isalnum (int c);
+int SEGGER_isalpha (int c);
+unsigned SEGGER_strlen (const char* s);
+int SEGGER_tolower (int c);
+int SEGGER_strcasecmp(const char* sText1, const char* sText2);
+
+
+
+
+void SEGGER_StoreChar (SEGGER_BUFFER_DESC* pBufferDesc, char c);
+void SEGGER_PrintUnsigned(SEGGER_BUFFER_DESC* pBufferDesc, unsigned long v, unsigned Base, int Precision);
+void SEGGER_PrintInt (SEGGER_BUFFER_DESC* pBufferDesc, signed long v, unsigned Base, int Precision);
+int SEGGER_snprintf (char* pBuffer, int BufferSize, const char* sFormat, ...);
+int SEGGER_vsnprintf (char* pBuffer, int BufferSize, const char* sFormat, va_list ParamList);
+int SEGGER_vsnprintfEx (SEGGER_SNPRINTF_CONTEXT* pContext, const char* sFormat, va_list ParamList);
+
+int SEGGER_PRINTF_AddFormatter (SEGGER_PRINTF_FORMATTER* pFormatter, SEGGER_pFormatter pfFormatter, char c);
+void SEGGER_PRINTF_AddDoubleFormatter(void);
+void SEGGER_PRINTF_AddIPFormatter (void);
+void SEGGER_PRINTF_AddHTMLFormatter (void);
+# 75 "../../../systemView/SEGGER_SYSVIEW.h" 2
+# 189 "../../../systemView/SEGGER_SYSVIEW.h"
+typedef struct {
+  unsigned long TaskID;
+  const char* sName;
+  unsigned long Prio;
+  unsigned long StackBase;
+  unsigned long StackSize;
+} SEGGER_SYSVIEW_TASKINFO;
+
+typedef struct SEGGER_SYSVIEW_MODULE_STRUCT SEGGER_SYSVIEW_MODULE;
+
+struct SEGGER_SYSVIEW_MODULE_STRUCT {
+  const char* sModule;
+        unsigned long NumEvents;
+        unsigned long EventOffset;
+        void (*pfSendModuleDesc)(void);
+        SEGGER_SYSVIEW_MODULE* pNext;
+};
+
+typedef void (SEGGER_SYSVIEW_SEND_SYS_DESC_FUNC)(void);
+# 216 "../../../systemView/SEGGER_SYSVIEW.h"
+typedef struct {
+  unsigned long long (*pfGetTime) (void);
+  void (*pfSendTaskList) (void);
+} SEGGER_SYSVIEW_OS_API;
+
+
+
+
+
+void SEGGER_SYSVIEW_Init (unsigned long SysFreq, unsigned long CPUFreq, const SEGGER_SYSVIEW_OS_API *pOSAPI, SEGGER_SYSVIEW_SEND_SYS_DESC_FUNC pfSendSysDesc);
+void SEGGER_SYSVIEW_SetRAMBase (unsigned long RAMBaseAddress);
+void SEGGER_SYSVIEW_Start (void);
+void SEGGER_SYSVIEW_Stop (void);
+void SEGGER_SYSVIEW_GetSysDesc (void);
+void SEGGER_SYSVIEW_SendTaskList (void);
+void SEGGER_SYSVIEW_SendTaskInfo (const SEGGER_SYSVIEW_TASKINFO* pInfo);
+void SEGGER_SYSVIEW_SendSysDesc (const char* sSysDesc);
+int SEGGER_SYSVIEW_IsStarted (void);
+
+
+
+
+
+void SEGGER_SYSVIEW_RecordVoid (unsigned int EventId);
+void SEGGER_SYSVIEW_RecordU32 (unsigned int EventId, unsigned long Para0);
+void SEGGER_SYSVIEW_RecordU32x2 (unsigned int EventId, unsigned long Para0, unsigned long Para1);
+void SEGGER_SYSVIEW_RecordU32x3 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2);
+void SEGGER_SYSVIEW_RecordU32x4 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3);
+void SEGGER_SYSVIEW_RecordU32x5 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4);
+void SEGGER_SYSVIEW_RecordU32x6 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5);
+void SEGGER_SYSVIEW_RecordU32x7 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6);
+void SEGGER_SYSVIEW_RecordU32x8 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6, unsigned long Para7);
+void SEGGER_SYSVIEW_RecordU32x9 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6, unsigned long Para7, unsigned long Para8);
+void SEGGER_SYSVIEW_RecordU32x10 (unsigned int EventId, unsigned long Para0, unsigned long Para1, unsigned long Para2, unsigned long Para3, unsigned long Para4, unsigned long Para5, unsigned long Para6, unsigned long Para7, unsigned long Para8, unsigned long Para9);
+void SEGGER_SYSVIEW_RecordString (unsigned int EventId, const char* pString);
+void SEGGER_SYSVIEW_RecordSystime (void);
+void SEGGER_SYSVIEW_RecordEnterISR (void);
+void SEGGER_SYSVIEW_RecordExitISR (void);
+void SEGGER_SYSVIEW_RecordExitISRToScheduler (void);
+void SEGGER_SYSVIEW_RecordEnterTimer (unsigned long TimerId);
+void SEGGER_SYSVIEW_RecordExitTimer (void);
+void SEGGER_SYSVIEW_RecordEndCall (unsigned int EventID);
+void SEGGER_SYSVIEW_RecordEndCallU32 (unsigned int EventID, unsigned long Para0);
+
+void SEGGER_SYSVIEW_OnIdle (void);
+void SEGGER_SYSVIEW_OnTaskCreate (unsigned long TaskId);
+void SEGGER_SYSVIEW_OnTaskTerminate (unsigned long TaskId);
+void SEGGER_SYSVIEW_OnTaskStartExec (unsigned long TaskId);
+void SEGGER_SYSVIEW_OnTaskStopExec (void);
+void SEGGER_SYSVIEW_OnTaskStartReady (unsigned long TaskId);
+void SEGGER_SYSVIEW_OnTaskStopReady (unsigned long TaskId, unsigned int Cause);
+void SEGGER_SYSVIEW_OnUserStart (unsigned int UserId);
+void SEGGER_SYSVIEW_OnUserStop (unsigned int UserId);
+
+void SEGGER_SYSVIEW_NameResource (unsigned long ResourceId, const char* sName);
+
+int SEGGER_SYSVIEW_SendPacket (unsigned char* pPacket, unsigned char* pPayloadEnd, unsigned int EventId);
+
+
+
+
+
+unsigned char* SEGGER_SYSVIEW_EncodeU32 (unsigned char* pPayload, unsigned long Value);
+unsigned char* SEGGER_SYSVIEW_EncodeData (unsigned char* pPayload, const char* pSrc, unsigned int Len);
+unsigned char* SEGGER_SYSVIEW_EncodeString (unsigned char* pPayload, const char* s, unsigned int MaxLen);
+unsigned char* SEGGER_SYSVIEW_EncodeId (unsigned char* pPayload, unsigned long Id);
+unsigned long SEGGER_SYSVIEW_ShrinkId (unsigned long Id);
+
+
+
+
+
+
+void SEGGER_SYSVIEW_RegisterModule (SEGGER_SYSVIEW_MODULE* pModule);
+void SEGGER_SYSVIEW_RecordModuleDescription (const SEGGER_SYSVIEW_MODULE* pModule, const char* sDescription);
+void SEGGER_SYSVIEW_SendModule (unsigned char ModuleId);
+void SEGGER_SYSVIEW_SendModuleDescription (void);
+void SEGGER_SYSVIEW_SendNumModules (void);
+
+
+
+
+
+
+void SEGGER_SYSVIEW_PrintfHostEx (const char* s, unsigned long Options, ...);
+void SEGGER_SYSVIEW_PrintfTargetEx (const char* s, unsigned long Options, ...);
+void SEGGER_SYSVIEW_PrintfHost (const char* s, ...);
+void SEGGER_SYSVIEW_PrintfTarget (const char* s, ...);
+void SEGGER_SYSVIEW_WarnfHost (const char* s, ...);
+void SEGGER_SYSVIEW_WarnfTarget (const char* s, ...);
+void SEGGER_SYSVIEW_ErrorfHost (const char* s, ...);
+void SEGGER_SYSVIEW_ErrorfTarget (const char* s, ...);
+
+
+void SEGGER_SYSVIEW_Print (const char* s);
+void SEGGER_SYSVIEW_Warn (const char* s);
+void SEGGER_SYSVIEW_Error (const char* s);
+
+
+
+
+
+void SEGGER_SYSVIEW_EnableEvents (unsigned long EnableMask);
+void SEGGER_SYSVIEW_DisableEvents (unsigned long DisableMask);
+
+
+
+
+
+void SEGGER_SYSVIEW_Conf (void);
+unsigned long SEGGER_SYSVIEW_X_GetTimestamp (void);
+unsigned long SEGGER_SYSVIEW_X_GetInterruptId (void);
+# 72 "../../../systemView/SEGGER_SYSVIEW_FreeRTOS.h" 2
+# 329 "../../../systemView/SEGGER_SYSVIEW_FreeRTOS.h"
+void SYSVIEW_AddTask (unsigned long xHandle, const char* pcTaskName, unsigned uxCurrentPriority, unsigned long pxStack, unsigned uStackHighWaterMark);
+void SYSVIEW_UpdateTask (unsigned long xHandle, const char* pcTaskName, unsigned uxCurrentPriority, unsigned long pxStack, unsigned uStackHighWaterMark);
+void SYSVIEW_DeleteTask (unsigned long xHandle);
+void SYSVIEW_SendTaskInfo (unsigned long TaskID, const char* sName, unsigned Prio, unsigned long StackBase, unsigned StackSize);
+# 215 "../../../config/FreeRTOSConfig.h" 2
+# 58 "../../../../../../external/freertos/source/include/FreeRTOS.h" 2
+
+
+# 1 "../../../../../../external/freertos/source/include/projdefs.h" 1
+# 36 "../../../../../../external/freertos/source/include/projdefs.h"
+typedef void (*TaskFunction_t)( void * );
+# 61 "../../../../../../external/freertos/source/include/FreeRTOS.h" 2
+
+
+# 1 "../../../../../../external/freertos/source/include/portable.h" 1
+# 46 "../../../../../../external/freertos/source/include/portable.h"
+# 1 "../../../../../../external/freertos/source/include/deprecated_definitions.h" 1
+# 47 "../../../../../../external/freertos/source/include/portable.h" 2
+
+
+
+
+
+
+# 1 "../../../../../../external/freertos/portable/GCC/nrf52/portmacro.h" 1
+# 33 "../../../../../../external/freertos/portable/GCC/nrf52/portmacro.h"
+# 1 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h" 1
+# 56 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
+typedef uint32_t StackType_t;
+typedef long BaseType_t;
+typedef unsigned long UBaseType_t;
+
+
+
+
+
+    typedef uint32_t TickType_t;
+# 105 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
+extern void vPortEnterCritical( void );
+extern void vPortExitCritical( void );
+# 125 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
+    extern void vPortSuppressTicksAndSleep( TickType_t xExpectedIdleTime );
+# 158 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
+    void vPortValidateInterruptPriority( void );
+# 172 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
+static inline uint32_t ulPortRaiseBASEPRI( void )
+{
+    uint32_t ulOriginalBASEPRI = __get_BASEPRI();
+    __set_BASEPRI(2 << (8 - 3));
+    return ulOriginalBASEPRI;
+}
+# 34 "../../../../../../external/freertos/portable/GCC/nrf52/portmacro.h" 2
+# 54 "../../../../../../external/freertos/source/include/portable.h" 2
+# 92 "../../../../../../external/freertos/source/include/portable.h"
+# 1 "../../../../../../external/freertos/source/include/mpu_wrappers.h" 1
+# 93 "../../../../../../external/freertos/source/include/portable.h" 2
+# 103 "../../../../../../external/freertos/source/include/portable.h"
+ StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters ) ;
+
+
+
+typedef struct HeapRegion
+{
+ uint8_t *pucStartAddress;
+ size_t xSizeInBytes;
+} HeapRegion_t;
+# 124 "../../../../../../external/freertos/source/include/portable.h"
+void vPortDefineHeapRegions( const HeapRegion_t * const pxHeapRegions ) ;
+
+
+
+
+
+void *pvPortMalloc( size_t xSize ) ;
+void vPortFree( void *pv ) ;
+void vPortInitialiseBlocks( void ) ;
+size_t xPortGetFreeHeapSize( void ) ;
+size_t xPortGetMinimumEverFreeHeapSize( void ) ;
+
+
+
+
+
+BaseType_t xPortStartScheduler( void ) ;
+
+
+
+
+
+
+void vPortEndScheduler( void ) ;
+# 64 "../../../../../../external/freertos/source/include/FreeRTOS.h" 2
+# 949 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+struct xSTATIC_LIST_ITEM
+{
+ TickType_t xDummy1;
+ void *pvDummy2[ 4 ];
+};
+typedef struct xSTATIC_LIST_ITEM StaticListItem_t;
+
+
+struct xSTATIC_MINI_LIST_ITEM
+{
+ TickType_t xDummy1;
+ void *pvDummy2[ 2 ];
+};
+typedef struct xSTATIC_MINI_LIST_ITEM StaticMiniListItem_t;
+
+
+typedef struct xSTATIC_LIST
+{
+ UBaseType_t uxDummy1;
+ void *pvDummy2;
+ StaticMiniListItem_t xDummy3;
+} StaticList_t;
+# 985 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+typedef struct xSTATIC_TCB
+{
+ void *pxDummy1;
+
+
+
+ StaticListItem_t xDummy3[ 2 ];
+ UBaseType_t uxDummy5;
+ void *pxDummy6;
+ uint8_t ucDummy7[ ( 6 ) ];
+
+
+
+
+
+
+
+  UBaseType_t uxDummy10[ 2 ];
+
+
+  UBaseType_t uxDummy12[ 2 ];
+# 1020 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+  uint32_t ulDummy18;
+  uint8_t ucDummy19;
+# 1031 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+} StaticTask_t;
+# 1047 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+typedef struct xSTATIC_QUEUE
+{
+ void *pvDummy1[ 3 ];
+
+ union
+ {
+  void *pvDummy2;
+  UBaseType_t uxDummy2;
+ } u;
+
+ StaticList_t xDummy3[ 2 ];
+ UBaseType_t uxDummy4[ 3 ];
+ uint8_t ucDummy5[ 2 ];
+# 1070 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+  UBaseType_t uxDummy8;
+  uint8_t ucDummy9;
+
+
+} StaticQueue_t;
+typedef StaticQueue_t StaticSemaphore_t;
+# 1091 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+typedef struct xSTATIC_EVENT_GROUP
+{
+ TickType_t xDummy1;
+ StaticList_t xDummy2;
+
+
+  UBaseType_t uxDummy3;
+
+
+
+
+
+
+} StaticEventGroup_t;
+# 1120 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+typedef struct xSTATIC_TIMER
+{
+ void *pvDummy1;
+ StaticListItem_t xDummy2;
+ TickType_t xDummy3;
+ UBaseType_t uxDummy4;
+ void *pvDummy5[ 2 ];
+
+  UBaseType_t uxDummy6;
+
+
+
+
+
+
+} StaticTimer_t;
+# 1151 "../../../../../../external/freertos/source/include/FreeRTOS.h"
+typedef struct xSTATIC_STREAM_BUFFER
+{
+ size_t uxDummy1[ 4 ];
+ void * pvDummy2[ 3 ];
+ uint8_t ucDummy3;
+
+  UBaseType_t uxDummy4;
+
+} StaticStreamBuffer_t;
+
+
+typedef StaticStreamBuffer_t StaticMessageBuffer_t;
+# 14 "../../../software/globals.h" 2
+# 1 "../../../../../../external/freertos/source/include/task.h" 1
+# 37 "../../../../../../external/freertos/source/include/task.h"
+# 1 "../../../../../../external/freertos/source/include/list.h" 1
+# 140 "../../../../../../external/freertos/source/include/list.h"
+struct xLIST_ITEM
+{
+
+ TickType_t xItemValue;
+ struct xLIST_ITEM * pxNext;
+ struct xLIST_ITEM * pxPrevious;
+ void * pvOwner;
+ void * pvContainer;
+
+};
+typedef struct xLIST_ITEM ListItem_t;
+
+struct xMINI_LIST_ITEM
+{
+
+ TickType_t xItemValue;
+ struct xLIST_ITEM * pxNext;
+ struct xLIST_ITEM * pxPrevious;
+};
+typedef struct xMINI_LIST_ITEM MiniListItem_t;
+
+
+
+
+typedef struct xLIST
+{
+
+ volatile UBaseType_t uxNumberOfItems;
+ ListItem_t * pxIndex;
+ MiniListItem_t xListEnd;
+
+} List_t;
+# 345 "../../../../../../external/freertos/source/include/list.h"
+void vListInitialise( List_t * const pxList ) ;
+# 356 "../../../../../../external/freertos/source/include/list.h"
+void vListInitialiseItem( ListItem_t * const pxItem ) ;
+# 369 "../../../../../../external/freertos/source/include/list.h"
+void vListInsert( List_t * const pxList, ListItem_t * const pxNewListItem ) ;
+# 390 "../../../../../../external/freertos/source/include/list.h"
+void vListInsertEnd( List_t * const pxList, ListItem_t * const pxNewListItem ) ;
+# 405 "../../../../../../external/freertos/source/include/list.h"
+UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) ;
+# 38 "../../../../../../external/freertos/source/include/task.h" 2
+# 62 "../../../../../../external/freertos/source/include/task.h"
+typedef void * TaskHandle_t;
+
+
+
+
+
+typedef BaseType_t (*TaskHookFunction_t)( void * );
+
+
+typedef enum
+{
+ eRunning = 0,
+ eReady,
+ eBlocked,
+ eSuspended,
+ eDeleted,
+ eInvalid
+} eTaskState;
+
+
+typedef enum
+{
+ eNoAction = 0,
+ eSetBits,
+ eIncrement,
+ eSetValueWithOverwrite,
+ eSetValueWithoutOverwrite
+} eNotifyAction;
+
+
+
+
+typedef struct xTIME_OUT
+{
+ BaseType_t xOverflowCount;
+ TickType_t xTimeOnEntering;
+} TimeOut_t;
+
+
+
+
+typedef struct xMEMORY_REGION
+{
+ void *pvBaseAddress;
+ uint32_t ulLengthInBytes;
+ uint32_t ulParameters;
+} MemoryRegion_t;
+
+
+
+
+typedef struct xTASK_PARAMETERS
+{
+ TaskFunction_t pvTaskCode;
+ const char * const pcName;
+ uint16_t usStackDepth;
+ void *pvParameters;
+ UBaseType_t uxPriority;
+ StackType_t *puxStackBuffer;
+ MemoryRegion_t xRegions[ 1 ];
+
+
+
+} TaskParameters_t;
+
+
+
+typedef struct xTASK_STATUS
+{
+ TaskHandle_t xHandle;
+ const char *pcTaskName;
+ UBaseType_t xTaskNumber;
+ eTaskState eCurrentState;
+ UBaseType_t uxCurrentPriority;
+ UBaseType_t uxBasePriority;
+ uint32_t ulRunTimeCounter;
+ StackType_t *pxStackBase;
+ uint16_t usStackHighWaterMark;
+} TaskStatus_t;
+
+
+typedef enum
+{
+ eAbortSleep = 0,
+ eStandardSleep,
+ eNoTasksWaitingTimeout
+} eSleepModeStatus;
+# 322 "../../../../../../external/freertos/source/include/task.h"
+ BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+       const char * const pcName,
+       const uint16_t usStackDepth,
+       void * const pvParameters,
+       UBaseType_t uxPriority,
+       TaskHandle_t * const pxCreatedTask ) ;
+# 657 "../../../../../../external/freertos/source/include/task.h"
+void vTaskAllocateMPURegions( TaskHandle_t xTask, const MemoryRegion_t * const pxRegions ) ;
+# 698 "../../../../../../external/freertos/source/include/task.h"
+void vTaskDelete( TaskHandle_t xTaskToDelete ) ;
+# 750 "../../../../../../external/freertos/source/include/task.h"
+void vTaskDelay( const TickType_t xTicksToDelay ) ;
+# 809 "../../../../../../external/freertos/source/include/task.h"
+void vTaskDelayUntil( TickType_t * const pxPreviousWakeTime, const TickType_t xTimeIncrement ) ;
+# 834 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) ;
+# 881 "../../../../../../external/freertos/source/include/task.h"
+UBaseType_t uxTaskPriorityGet( TaskHandle_t xTask ) ;
+
+
+
+
+
+
+
+UBaseType_t uxTaskPriorityGetFromISR( TaskHandle_t xTask ) ;
+# 907 "../../../../../../external/freertos/source/include/task.h"
+eTaskState eTaskGetState( TaskHandle_t xTask ) ;
+# 963 "../../../../../../external/freertos/source/include/task.h"
+void vTaskGetInfo( TaskHandle_t xTask, TaskStatus_t *pxTaskStatus, BaseType_t xGetFreeStackSpace, eTaskState eState ) ;
+# 1005 "../../../../../../external/freertos/source/include/task.h"
+void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) ;
+# 1056 "../../../../../../external/freertos/source/include/task.h"
+void vTaskSuspend( TaskHandle_t xTaskToSuspend ) ;
+# 1105 "../../../../../../external/freertos/source/include/task.h"
+void vTaskResume( TaskHandle_t xTaskToResume ) ;
+# 1134 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) ;
+# 1167 "../../../../../../external/freertos/source/include/task.h"
+void vTaskStartScheduler( void ) ;
+# 1223 "../../../../../../external/freertos/source/include/task.h"
+void vTaskEndScheduler( void ) ;
+# 1274 "../../../../../../external/freertos/source/include/task.h"
+void vTaskSuspendAll( void ) ;
+# 1328 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskResumeAll( void ) ;
+# 1343 "../../../../../../external/freertos/source/include/task.h"
+TickType_t xTaskGetTickCount( void ) ;
+# 1359 "../../../../../../external/freertos/source/include/task.h"
+TickType_t xTaskGetTickCountFromISR( void ) ;
+# 1373 "../../../../../../external/freertos/source/include/task.h"
+UBaseType_t uxTaskGetNumberOfTasks( void ) ;
+# 1386 "../../../../../../external/freertos/source/include/task.h"
+char *pcTaskGetName( TaskHandle_t xTaskToQuery ) ;
+# 1402 "../../../../../../external/freertos/source/include/task.h"
+TaskHandle_t xTaskGetHandle( const char *pcNameToQuery ) ;
+# 1423 "../../../../../../external/freertos/source/include/task.h"
+UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) ;
+# 1476 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask, void *pvParameter ) ;
+# 1485 "../../../../../../external/freertos/source/include/task.h"
+TaskHandle_t xTaskGetIdleTaskHandle( void ) ;
+# 1584 "../../../../../../external/freertos/source/include/task.h"
+UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray, const UBaseType_t uxArraySize, uint32_t * const pulTotalRunTime ) ;
+# 1631 "../../../../../../external/freertos/source/include/task.h"
+void vTaskList( char * pcWriteBuffer ) ;
+# 1685 "../../../../../../external/freertos/source/include/task.h"
+void vTaskGetRunTimeStats( char *pcWriteBuffer ) ;
+# 1766 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue ) ;
+# 1857 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue, BaseType_t *pxHigherPriorityTaskWoken ) ;
+# 1934 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskNotifyWait( uint32_t ulBitsToClearOnEntry, uint32_t ulBitsToClearOnExit, uint32_t *pulNotificationValue, TickType_t xTicksToWait ) ;
+# 2035 "../../../../../../external/freertos/source/include/task.h"
+void vTaskNotifyGiveFromISR( TaskHandle_t xTaskToNotify, BaseType_t *pxHigherPriorityTaskWoken ) ;
+# 2104 "../../../../../../external/freertos/source/include/task.h"
+uint32_t ulTaskNotifyTake( BaseType_t xClearCountOnExit, TickType_t xTicksToWait ) ;
+# 2120 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskNotifyStateClear( TaskHandle_t xTask );
+# 2141 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskIncrementTick( void ) ;
+# 2174 "../../../../../../external/freertos/source/include/task.h"
+void vTaskPlaceOnEventList( List_t * const pxEventList, const TickType_t xTicksToWait ) ;
+void vTaskPlaceOnUnorderedEventList( List_t * pxEventList, const TickType_t xItemValue, const TickType_t xTicksToWait ) ;
+# 2188 "../../../../../../external/freertos/source/include/task.h"
+void vTaskPlaceOnEventListRestricted( List_t * const pxEventList, TickType_t xTicksToWait, const BaseType_t xWaitIndefinitely ) ;
+# 2214 "../../../../../../external/freertos/source/include/task.h"
+BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) ;
+void vTaskRemoveFromUnorderedEventList( ListItem_t * pxEventListItem, const TickType_t xItemValue ) ;
+# 2225 "../../../../../../external/freertos/source/include/task.h"
+void vTaskSwitchContext( void ) ;
+
+
+
+
+
+TickType_t uxTaskResetEventItemValue( void ) ;
+
+
+
+
+TaskHandle_t xTaskGetCurrentTaskHandle( void ) ;
+
+
+
+
+void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) ;
+
+
+
+
+
+BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut, TickType_t * const pxTicksToWait ) ;
+
+
+
+
+
+void vTaskMissedYield( void ) ;
+
+
+
+
+
+BaseType_t xTaskGetSchedulerState( void ) ;
+
+
+
+
+
+BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) ;
+
+
+
+
+
+BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) ;
+# 2281 "../../../../../../external/freertos/source/include/task.h"
+void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder, UBaseType_t uxHighestPriorityWaitingTask ) ;
+
+
+
+
+UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) ;
+
+
+
+
+
+void vTaskSetTaskNumber( TaskHandle_t xTask, const UBaseType_t uxHandle ) ;
+# 2302 "../../../../../../external/freertos/source/include/task.h"
+void vTaskStepTick( const TickType_t xTicksToJump ) ;
+# 2318 "../../../../../../external/freertos/source/include/task.h"
+eSleepModeStatus eTaskConfirmSleepModeStatus( void ) ;
+
+
+
+
+
+void *pvTaskIncrementMutexHeldCount( void ) ;
+
+
+
+
+
+void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) ;
+# 15 "../../../software/globals.h" 2
+# 1 "../../../../../../external/freertos/source/include/semphr.h" 1
+# 36 "../../../../../../external/freertos/source/include/semphr.h"
+# 1 "../../../../../../external/freertos/source/include/queue.h" 1
+# 47 "../../../../../../external/freertos/source/include/queue.h"
+typedef void * QueueHandle_t;
+
+
+
+
+
+
+typedef void * QueueSetHandle_t;
+
+
+
+
+
+
+typedef void * QueueSetMemberHandle_t;
+# 649 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) ;
+# 743 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueuePeek( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) ;
+# 776 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer ) ;
+# 867 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueueReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) ;
+# 882 "../../../../../../external/freertos/source/include/queue.h"
+UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) ;
+# 899 "../../../../../../external/freertos/source/include/queue.h"
+UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) ;
+# 913 "../../../../../../external/freertos/source/include/queue.h"
+void vQueueDelete( QueueHandle_t xQueue ) ;
+# 1294 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, const void * const pvItemToQueue, BaseType_t * const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition ) ;
+BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+# 1384 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+
+
+
+
+
+BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) ;
+BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) ;
+UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) ;
+# 1403 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue, const void *pvItemToQueue, BaseType_t xCoRoutinePreviouslyWoken );
+BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue, void *pvBuffer, BaseType_t *pxTaskWoken );
+BaseType_t xQueueCRSend( QueueHandle_t xQueue, const void *pvItemToQueue, TickType_t xTicksToWait );
+BaseType_t xQueueCRReceive( QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait );
+
+
+
+
+
+
+QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) ;
+QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType, StaticQueue_t *pxStaticQueue ) ;
+QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount ) ;
+QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount, StaticQueue_t *pxStaticQueue ) ;
+BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue, TickType_t xTicksToWait ) ;
+void* xQueueGetMutexHolder( QueueHandle_t xSemaphore ) ;
+void* xQueueGetMutexHolderFromISR( QueueHandle_t xSemaphore ) ;
+
+
+
+
+
+BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex, TickType_t xTicksToWait ) ;
+BaseType_t xQueueGiveMutexRecursive( QueueHandle_t pxMutex ) ;
+# 1457 "../../../../../../external/freertos/source/include/queue.h"
+ void vQueueAddToRegistry( QueueHandle_t xQueue, const char *pcName ) ;
+# 1471 "../../../../../../external/freertos/source/include/queue.h"
+ void vQueueUnregisterQueue( QueueHandle_t xQueue ) ;
+# 1486 "../../../../../../external/freertos/source/include/queue.h"
+ const char *pcQueueGetName( QueueHandle_t xQueue ) ;
+# 1495 "../../../../../../external/freertos/source/include/queue.h"
+ QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType ) ;
+# 1555 "../../../../../../external/freertos/source/include/queue.h"
+QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) ;
+# 1579 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+# 1598 "../../../../../../external/freertos/source/include/queue.h"
+BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+# 1634 "../../../../../../external/freertos/source/include/queue.h"
+QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet, const TickType_t xTicksToWait ) ;
+
+
+
+
+QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) ;
+
+
+void vQueueWaitForMessageRestricted( QueueHandle_t xQueue, TickType_t xTicksToWait, const BaseType_t xWaitIndefinitely ) ;
+BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
+void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
+UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
+uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
+# 37 "../../../../../../external/freertos/source/include/semphr.h" 2
+
+typedef QueueHandle_t SemaphoreHandle_t;
+# 16 "../../../software/globals.h" 2
+
+extern TaskHandle_t handle_display_task,
+    handle_user_task,
+    handle_microsd_task,
+    pose_estimator_task,
+    pose_controller_task,
+    communication_task,
+    sensor_tower_task,
+    arq_task;
+
+
+extern SemaphoreHandle_t xScanLock;
+extern SemaphoreHandle_t xPoseMutex;
+extern SemaphoreHandle_t xTickMutex;
+extern SemaphoreHandle_t xControllerBSem;
+extern SemaphoreHandle_t xCommandReadyBSem;
+extern SemaphoreHandle_t mutex_spi;
+extern SemaphoreHandle_t xCollisionMutex;
+
+
+
+extern QueueHandle_t poseControllerQ;
+extern QueueHandle_t scanStatusQ;
+extern QueueHandle_t queue_microsd;
+
+
+extern uint8_t gHandshook;
+extern uint8_t gPaused;
+
+extern uint8_t USEBLUETOOTH;
+
+
+extern float gTheta_hat;
+extern int16_t gX_hat;
+extern int16_t gY_hat;
+extern float gLeft;
+extern float gRight;
+
+
+extern int16_t gRightWheelTicks;
+extern int16_t gLeftWheelTicks;
+
+
+
+struct sPolar {
+    float heading;
+    int16_t distance;
+};
+
+struct sCartesian {
+    float x;
+    float y;
+};
+# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
+# 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
+# 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
+# 1 "../../../../../../components/libraries/util/sdk_common.h" 1
+# 59 "../../../../../../components/libraries/util/sdk_common.h"
+# 1 "../../../../../../components/libraries/util/sdk_os.h" 1
+# 60 "../../../../../../components/libraries/util/sdk_common.h" 2
+
+# 1 "../../../../../../components/libraries/util/app_util.h" 1
+# 62 "../../../../../../components/libraries/util/sdk_common.h" 2
+# 1 "../../../../../../components/libraries/util/sdk_macros.h" 1
+# 63 "../../../../../../components/libraries/util/sdk_common.h" 2
+# 53 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
+
+
+# 1 "../../../../../../components/libraries/strerror/nrf_strerror.h" 1
+# 69 "../../../../../../components/libraries/strerror/nrf_strerror.h"
+char const * nrf_strerror_get(ret_code_t code);
+# 81 "../../../../../../components/libraries/strerror/nrf_strerror.h"
+char const * nrf_strerror_find(ret_code_t code);
+# 56 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
+# 81 "../../../../../../components/libraries/experimental_log/nrf_log.h"
+# 1 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h" 1
+# 49 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+# 1 "../../../../../../components/libraries/experimental_log/nrf_log_types.h" 1
+# 50 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h" 2
+# 292 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+extern nrf_log_module_reduced_dynamic_data_t m_nrf_log_app_logs_data_dynamic;
+# 362 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+typedef struct
+{
+    uint32_t type : 2;
+    uint32_t in_progress: 1;
+    uint32_t data : 29;
+} nrf_log_generic_header_t;
+
+typedef struct
+{
+    uint32_t type : 2;
+    uint32_t in_progress: 1;
+    uint32_t severity : 3;
+    uint32_t nargs : 4;
+    uint32_t addr : 22;
+} nrf_log_std_header_t;
+
+typedef struct
+{
+    uint32_t type : 2;
+    uint32_t in_progress: 1;
+    uint32_t severity : 3;
+    uint32_t offset : 10;
+    uint32_t reserved : 6;
+    uint32_t len : 10;
+} nrf_log_hexdump_header_t;
+
+typedef struct
+{
+    uint32_t type : 2;
+    uint32_t reserved0 : 4;
+    uint32_t offset : 10;
+    uint32_t reserved1 : 6;
+    uint32_t len : 10;
+} nrf_log_pushed_header_t;
+
+typedef union
+{
+    nrf_log_generic_header_t generic;
+    nrf_log_std_header_t std;
+    nrf_log_hexdump_header_t hexdump;
+    nrf_log_pushed_header_t pushed;
+    uint32_t raw;
+} nrf_log_main_header_t;
+
+typedef struct
+{
+    nrf_log_main_header_t base;
+    uint16_t module_id;
+    uint16_t dropped;
+    uint32_t timestamp;
+} nrf_log_header_t;
+
+
+
+
+
+
+
+_Static_assert((sizeof(nrf_log_pushed_header_t)/sizeof(uint32_t)) == 1, "unspecified message");
+
+
+
+
+
+
+void nrf_log_frontend_std_0(uint32_t severity_mid, char const * const p_str);
+# 436 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+void nrf_log_frontend_std_1(uint32_t severity_mid,
+                            char const * const p_str,
+                            uint32_t val0);
+# 447 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+void nrf_log_frontend_std_2(uint32_t severity_mid,
+                            char const * const p_str,
+                            uint32_t val0,
+                            uint32_t val1);
+# 459 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+void nrf_log_frontend_std_3(uint32_t severity_mid,
+                            char const * const p_str,
+                            uint32_t val0,
+                            uint32_t val1,
+                            uint32_t val2);
+# 472 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+void nrf_log_frontend_std_4(uint32_t severity_mid,
+                            char const * const p_str,
+                            uint32_t val0,
+                            uint32_t val1,
+                            uint32_t val2,
+                            uint32_t val3);
+# 486 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+void nrf_log_frontend_std_5(uint32_t severity_mid,
+                            char const * const p_str,
+                            uint32_t val0,
+                            uint32_t val1,
+                            uint32_t val2,
+                            uint32_t val3,
+                            uint32_t val4);
+# 501 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+void nrf_log_frontend_std_6(uint32_t severity_mid,
+                            char const * const p_str,
+                            uint32_t val0,
+                            uint32_t val1,
+                            uint32_t val2,
+                            uint32_t val3,
+                            uint32_t val4,
+                            uint32_t val5);
+# 519 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+void nrf_log_frontend_hexdump(uint32_t severity_mid,
+                              const void * const p_data,
+                              uint16_t length);
+
+
+
+
+
+
+uint8_t nrf_log_getchar(void);
+# 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
+# 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
+uint32_t nrf_log_push(char * const p_str);
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
+
+uint8_t collisionCounter;
 
 
 void vFunc_Inf2pi(float *angle_in_radians){
     float result = fmod(*angle_in_radians,2*
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                                            3.14159265358979323846
-# 15 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                                                );
     if(result > 
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                3.14159265358979323846
-# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                    ){
       result -= 2*
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                  3.14159265358979323846
-# 17 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                      ;
       }
     if(result < -
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                 3.14159265358979323846
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                     ){
       result += 2*
-# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                  3.14159265358979323846
-# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                      ;
     }
     *angle_in_radians = result;
 }
 
 
+
 int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t xDist = x - cos(theta)*0 + cos(theta+(servoAngle+sensorNumber*90)*
-# 27 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                                                                                                     3.14159265358979323846 
-# 27 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                                                                                                     / 180.0)*(sensorData[sensorNumber]);
 
     return xDist;
@@ -7371,9 +8444,9 @@ int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensor
 
 int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t xDist = cos(theta+(servoAngle+sensorNumber*90)*
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                                                           3.14159265358979323846 
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                                                           / 180.0)*(sensorData[sensorNumber]);
 
     return xDist;
@@ -7383,9 +8456,9 @@ int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, 
 
 int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t yDist = y - cos(theta)*0 + sin(theta+(servoAngle+sensorNumber*90)*
-# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                                                                                                     3.14159265358979323846 
-# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                                                                                                     / 180.0)*(sensorData[sensorNumber]);
 
     return yDist;
@@ -7394,9 +8467,9 @@ int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensor
 
 int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t yDist = sin(theta+(servoAngle+sensorNumber*90)*
-# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                                                           3.14159265358979323846 
-# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                                                           / 180.0)*(sensorData[sensorNumber]);
 
     return yDist;
@@ -7462,4 +8535,132 @@ void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
             i2cSendNOADDR(0x72, data, msgLength);
         }
     }
+}
+
+static int16_t collisionSectors[2*4] = {360, 360, 360, 360, 360, 360, 360, 360};
+uint8_t collisionPrinter = 0;
+
+void increaseCollisionSector(int16_t angle, uint8_t sensor){
+
+ int16_t lowerLimit = collisionSectors[sensor*2];
+ int16_t upperLimit = collisionSectors[sensor*2+1];
+
+ if(lowerLimit == 360 && upperLimit == 360){
+  collisionSectors[sensor*2] = angle-1;
+  collisionSectors[sensor*2+1] = angle+1;
+ }
+ else{
+  if(angle < lowerLimit){
+   collisionSectors[sensor*2] = angle;
+  }
+  else if(angle > upperLimit){
+   collisionSectors[sensor*2+1] = angle;
+  }
+ }
+ printCollisionSectors();
+}
+
+
+int16_t getDetectionAngle(uint8_t servoAngle, uint8_t sensor){
+ int16_t sensorAngle = servoAngle+sensor*90;
+ if(sensorAngle > 180){
+  return (sensorAngle-360);
+ }
+ else{
+  return sensorAngle;
+ }
+}
+
+void decreaseCollisionSector(int16_t angle, uint8_t sensor){
+
+ int16_t lowerLimit = collisionSectors[sensor*2];
+ int16_t upperLimit = collisionSectors[sensor*2+1];
+
+ if((angle >= lowerLimit) && (angle <= upperLimit)){
+  if((angle-lowerLimit) < (upperLimit-angle)){
+   collisionSectors[sensor*2] = angle;
+  }
+  else if((angle-lowerLimit) > (upperLimit-angle)){
+   collisionSectors[sensor*2+1] = angle;
+  }
+  else{
+   collisionSectors[sensor*2] = 360;
+   collisionSectors[sensor*2+1] = 360;
+  }
+ }
+ printCollisionSectors();
+}
+
+
+void printCollisionSectors(void){
+ collisionPrinter++;
+ if(collisionPrinter > 60){
+  for(int i = 0; i < 4; i++){
+   if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_2(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "CollSector: %i. From: %i", (uint32_t)((int)i), (uint32_t)((int)collisionSectors[i*2])); } };
+   if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_2(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "CollSector: %i.   To: %i", (uint32_t)((int)i), (uint32_t)((int)collisionSectors[i*2+1])); } };
+  }
+  collisionPrinter = 0;
+ }
+}
+
+
+
+
+# 191 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+_Bool 
+# 191 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+    validWaypoint(int16_t waypointAngle){
+ uint8_t noCollision = 0;
+
+ for(int i = 0; i < 4; i++){
+  if((collisionSectors[i*2] != 360) || (collisionSectors[i*2+1] != 360)){
+
+   int16_t upperLimit = collisionSectors[i*2+1]+60;
+   int16_t lowerLimit = collisionSectors[i*2]-60;
+
+   if(upperLimit > 179){
+    if((waypointAngle > lowerLimit) && (waypointAngle+360 < upperLimit)){
+     return 
+# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+           0
+# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+                ;
+    }
+   }
+
+   else if(lowerLimit < -179){
+    if((waypointAngle-360 > lowerLimit) && (waypointAngle < upperLimit)){
+     return 
+# 208 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+           0
+# 208 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+                ;
+    }
+   }
+   else if((waypointAngle > lowerLimit) && (waypointAngle < upperLimit)){
+    return 
+# 212 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+          0
+# 212 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+               ;
+   }
+  }
+  else{
+   noCollision++;
+  }
+ }
+
+
+ if(noCollision == 4){
+  return 
+# 222 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+        1
+# 222 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+            ;
+ }
+ return 
+# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+       0
+# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+            ;
 }

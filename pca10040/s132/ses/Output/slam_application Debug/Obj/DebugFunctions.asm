@@ -71,12 +71,12 @@ vMainSensorCalibrationTask:
 	b	.L2
 .LVL3:
 .L3:
-	.loc 1 184 13 is_stmt 1 view .LVU19
+	.loc 1 185 13 is_stmt 1 view .LVU19
 	movs	r0, #0
 	bl	vServo_setAngle
 .LVL4:
-	.loc 1 186 13 view .LVU20
-	.loc 1 187 13 view .LVU21
+	.loc 1 187 13 view .LVU20
+	.loc 1 188 13 view .LVU21
 	movs	r0, #100
 	bl	vTaskDelay
 .LVL5:
@@ -322,56 +322,56 @@ vMainSensorCalibrationTask:
 .LBE27:
 .LBE26:
 	.loc 1 158 118 view .LVU90
-	.loc 1 159 25 view .LVU91
-	.loc 1 159 39 is_stmt 0 view .LVU92
+	.loc 1 160 13 view .LVU91
+	.loc 1 160 27 is_stmt 0 view .LVU92
 	movs	r0, #0
 	bl	ir_read_blocking
 .LVL25:
 	str	r0, [sp, #24]
-	.loc 1 160 13 is_stmt 1 view .LVU93
-	.loc 1 160 27 is_stmt 0 view .LVU94
+	.loc 1 161 13 is_stmt 1 view .LVU93
+	.loc 1 161 27 is_stmt 0 view .LVU94
 	movs	r0, #1
 	bl	ir_read_blocking
 .LVL26:
 	str	r0, [sp, #28]
-	.loc 1 161 13 is_stmt 1 view .LVU95
-	.loc 1 161 27 is_stmt 0 view .LVU96
+	.loc 1 162 13 is_stmt 1 view .LVU95
+	.loc 1 162 27 is_stmt 0 view .LVU96
 	movs	r0, #2
 	bl	ir_read_blocking
 .LVL27:
 	mov	r6, r0
-	.loc 1 162 13 is_stmt 1 view .LVU97
-	.loc 1 162 27 is_stmt 0 view .LVU98
+	.loc 1 163 13 is_stmt 1 view .LVU97
+	.loc 1 163 27 is_stmt 0 view .LVU98
 	movs	r0, #3
 	bl	ir_read_blocking
 .LVL28:
 	mov	r5, r0
-	.loc 1 165 13 is_stmt 1 view .LVU99
+	.loc 1 166 13 is_stmt 1 view .LVU99
 	movs	r1, #40
 	ldr	r0, [r4]
 	bl	xQueueSemaphoreTake
 .LVL29:
-	.loc 1 166 13 view .LVU100
-	.loc 1 167 13 view .LVU101
-	.loc 1 167 18 is_stmt 0 view .LVU102
+	.loc 1 167 13 view .LVU100
+	.loc 1 168 13 view .LVU101
+	.loc 1 168 18 is_stmt 0 view .LVU102
 	ldrsh	fp, [fp]
 .LVL30:
-	.loc 1 168 13 is_stmt 1 view .LVU103
-	.loc 1 168 18 is_stmt 0 view .LVU104
+	.loc 1 169 13 is_stmt 1 view .LVU103
+	.loc 1 169 18 is_stmt 0 view .LVU104
 	ldrsh	r10, [r10]
 .LVL31:
-	.loc 1 169 13 is_stmt 1 view .LVU105
+	.loc 1 170 13 is_stmt 1 view .LVU105
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
 	ldr	r0, [r4]
 	bl	xQueueGenericSend
 .LVL32:
-	.loc 1 170 13 view .LVU106
-	.loc 1 170 99 is_stmt 0 view .LVU107
+	.loc 1 171 13 view .LVU106
+	.loc 1 171 99 is_stmt 0 view .LVU107
 	vldr.32	s15, [r9]
 	vmul.f32	s15, s15, s16
-	.loc 1 170 13 view .LVU108
+	.loc 1 171 13 view .LVU108
 	str	r6, [sp, #16]
 	str	r5, [sp, #12]
 	ldr	r3, [sp, #28]
@@ -386,24 +386,24 @@ vMainSensorCalibrationTask:
 	add	r0, sp, #64
 	bl	sprintf
 .LVL33:
-	.loc 1 171 13 is_stmt 1 view .LVU109
-	.loc 1 171 28 is_stmt 0 view .LVU110
+	.loc 1 172 13 is_stmt 1 view .LVU109
+	.loc 1 172 28 is_stmt 0 view .LVU110
 	str	r8, [sp, #40]
-	.loc 1 172 13 is_stmt 1 view .LVU111
-	.loc 1 172 27 is_stmt 0 view .LVU112
+	.loc 1 173 13 is_stmt 1 view .LVU111
+	.loc 1 173 27 is_stmt 0 view .LVU112
 	add	r3, sp, #64
 	str	r3, [sp, #44]
-	.loc 1 173 13 is_stmt 1 view .LVU113
+	.loc 1 174 13 is_stmt 1 view .LVU113
 	movs	r3, #0
 	mov	r2, #-1
 	add	r1, sp, #40
 	ldr	r0, [r7]
 	bl	xQueueGenericSend
 .LVL34:
-	.loc 1 174 13 view .LVU114
-	.loc 1 174 52 is_stmt 0 view .LVU115
+	.loc 1 175 13 view .LVU114
+	.loc 1 175 52 is_stmt 0 view .LVU115
 	ldrsh	r4, [sp, #56]
-	.loc 1 174 31 view .LVU116
+	.loc 1 175 31 view .LVU116
 	ldr	r1, .L6+36
 	smull	r2, r3, r1, r4
 	asrs	r2, r4, #31
@@ -412,9 +412,9 @@ vMainSensorCalibrationTask:
 	vmov	s15, r2	@ int
 	vcvt.f32.s32	s15, s15
 	vstr.32	s15, [sp, #48]
-	.loc 1 174 70 view .LVU117
+	.loc 1 175 70 view .LVU117
 	ldrsh	r3, [sp, #58]
-	.loc 1 174 31 view .LVU118
+	.loc 1 175 31 view .LVU118
 	smull	r2, r1, r1, r3
 	asrs	r3, r3, #31
 	rsb	r3, r3, r1, asr #2
@@ -422,7 +422,7 @@ vMainSensorCalibrationTask:
 	vmov	s15, r3	@ int
 	vcvt.f32.s32	s15, s15
 	vstr.32	s15, [sp, #52]
-	.loc 1 175 13 is_stmt 1 view .LVU119
+	.loc 1 176 13 is_stmt 1 view .LVU119
 	movs	r3, #0
 	movs	r2, #100
 	add	r1, sp, #48
@@ -430,20 +430,20 @@ vMainSensorCalibrationTask:
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL35:
-	.loc 1 176 13 view .LVU120
-	.loc 1 176 24 is_stmt 0 view .LVU121
+	.loc 1 177 13 view .LVU120
+	.loc 1 177 24 is_stmt 0 view .LVU121
 	adds	r4, r4, #25
 	strh	r4, [sp, #56]	@ movhi
-	.loc 1 177 13 is_stmt 1 view .LVU122
+	.loc 1 178 13 is_stmt 1 view .LVU122
 	movs	r0, #0
 	bl	vServo_setAngle
 .LVL36:
-	.loc 1 178 13 view .LVU123
+	.loc 1 179 13 view .LVU123
 	mov	r0, #1000
 	bl	vTaskDelay
 .LVL37:
-	.loc 1 179 13 view .LVU124
-	.loc 1 179 13 is_stmt 0 view .LVU125
+	.loc 1 180 13 view .LVU124
+	.loc 1 180 13 is_stmt 0 view .LVU125
 	b	.L2
 .L7:
 	.align	2
@@ -1197,7 +1197,51 @@ vMainSensorCalibrationTask:
 	.byte	0x7
 	.4byte	.LASF14
 	.byte	0
-	.file 10 "../../../../../../components/softdevice/s132/headers/nrf_nvic.h"
+	.file 10 "../../../drivers/ir.h"
+	.section	.debug_types,"G",%progbits,wt.72987e626125a64e,comdat
+	.4byte	0x48
+	.2byte	0x4
+	.4byte	.Ldebug_abbrev0
+	.byte	0x4
+	.byte	0x72
+	.byte	0x98
+	.byte	0x7e
+	.byte	0x62
+	.byte	0x61
+	.byte	0x25
+	.byte	0xa6
+	.byte	0x4e
+	.4byte	0x1d
+	.uleb128 0x1
+	.byte	0xc
+	.4byte	.Ldebug_line0
+	.uleb128 0xf
+	.byte	0x7
+	.byte	0x1
+	.4byte	0x44
+	.byte	0xa
+	.byte	0xa
+	.byte	0xe
+	.4byte	0x44
+	.uleb128 0x10
+	.4byte	.LASF45
+	.byte	0
+	.uleb128 0x10
+	.4byte	.LASF46
+	.byte	0x1
+	.uleb128 0x10
+	.4byte	.LASF47
+	.byte	0x2
+	.uleb128 0x10
+	.4byte	.LASF48
+	.byte	0x3
+	.byte	0
+	.uleb128 0x4
+	.byte	0x1
+	.byte	0x8
+	.4byte	.LASF8
+	.byte	0
+	.file 11 "../../../../../../components/softdevice/s132/headers/nrf_nvic.h"
 	.section	.debug_types,"G",%progbits,wt.23144061f65d3274,comdat
 	.4byte	0x6b
 	.2byte	0x4
@@ -1217,20 +1261,20 @@ vMainSensorCalibrationTask:
 	.4byte	.Ldebug_line0
 	.uleb128 0x5
 	.byte	0xc
-	.byte	0xa
+	.byte	0xb
 	.byte	0x6d
 	.byte	0x9
 	.4byte	0x41
 	.uleb128 0x6
-	.4byte	.LASF45
-	.byte	0xa
+	.4byte	.LASF49
+	.byte	0xb
 	.byte	0x6f
 	.byte	0x15
 	.4byte	0x41
 	.byte	0
 	.uleb128 0x6
-	.4byte	.LASF46
-	.byte	0xa
+	.4byte	.LASF50
+	.byte	0xb
 	.byte	0x70
 	.byte	0x15
 	.4byte	0x46
@@ -1258,7 +1302,7 @@ vMainSensorCalibrationTask:
 	.byte	0x7
 	.4byte	.LASF28
 	.byte	0
-	.file 11 "../../../../../../components/toolchain/cmsis/include/core_cm4.h"
+	.file 12 "../../../../../../components/toolchain/cmsis/include/core_cm4.h"
 	.section	.debug_types,"G",%progbits,wt.1a6b2b7b737fbd2c,comdat
 	.4byte	0x1f8
 	.2byte	0x4
@@ -1278,153 +1322,153 @@ vMainSensorCalibrationTask:
 	.4byte	.Ldebug_line0
 	.uleb128 0x14
 	.byte	0x8c
-	.byte	0xb
+	.byte	0xc
 	.2byte	0x1e5
 	.byte	0x9
 	.4byte	0x14e
 	.uleb128 0x15
-	.4byte	.LASF47
-	.byte	0xb
+	.4byte	.LASF51
+	.byte	0xc
 	.2byte	0x1e7
 	.byte	0x1b
 	.4byte	0x14e
 	.byte	0
 	.uleb128 0x15
-	.4byte	.LASF48
-	.byte	0xb
+	.4byte	.LASF52
+	.byte	0xc
 	.2byte	0x1e8
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x4
 	.uleb128 0x15
-	.4byte	.LASF49
-	.byte	0xb
+	.4byte	.LASF53
+	.byte	0xc
 	.2byte	0x1e9
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x8
 	.uleb128 0x15
-	.4byte	.LASF50
-	.byte	0xb
+	.4byte	.LASF54
+	.byte	0xc
 	.2byte	0x1ea
 	.byte	0x15
 	.4byte	0x153
 	.byte	0xc
 	.uleb128 0x16
 	.ascii	"SCR\000"
-	.byte	0xb
+	.byte	0xc
 	.2byte	0x1eb
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x10
 	.uleb128 0x16
 	.ascii	"CCR\000"
-	.byte	0xb
+	.byte	0xc
 	.2byte	0x1ec
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x14
 	.uleb128 0x16
 	.ascii	"SHP\000"
-	.byte	0xb
+	.byte	0xc
 	.2byte	0x1ed
 	.byte	0x14
 	.4byte	0x158
 	.byte	0x18
 	.uleb128 0x15
-	.4byte	.LASF51
-	.byte	0xb
+	.4byte	.LASF55
+	.byte	0xc
 	.2byte	0x1ee
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x24
 	.uleb128 0x15
-	.4byte	.LASF52
-	.byte	0xb
+	.4byte	.LASF56
+	.byte	0xc
 	.2byte	0x1ef
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x28
 	.uleb128 0x15
-	.4byte	.LASF53
-	.byte	0xb
+	.4byte	.LASF57
+	.byte	0xc
 	.2byte	0x1f0
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x2c
 	.uleb128 0x15
-	.4byte	.LASF54
-	.byte	0xb
+	.4byte	.LASF58
+	.byte	0xc
 	.2byte	0x1f1
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x30
 	.uleb128 0x15
-	.4byte	.LASF55
-	.byte	0xb
+	.4byte	.LASF59
+	.byte	0xc
 	.2byte	0x1f2
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x34
 	.uleb128 0x15
-	.4byte	.LASF56
-	.byte	0xb
+	.4byte	.LASF60
+	.byte	0xc
 	.2byte	0x1f3
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x38
 	.uleb128 0x15
-	.4byte	.LASF57
-	.byte	0xb
+	.4byte	.LASF61
+	.byte	0xc
 	.2byte	0x1f4
 	.byte	0x15
 	.4byte	0x153
 	.byte	0x3c
 	.uleb128 0x16
 	.ascii	"PFR\000"
-	.byte	0xb
+	.byte	0xc
 	.2byte	0x1f5
 	.byte	0x1b
 	.4byte	0x15d
 	.byte	0x40
 	.uleb128 0x16
 	.ascii	"DFR\000"
-	.byte	0xb
+	.byte	0xc
 	.2byte	0x1f6
 	.byte	0x1b
 	.4byte	0x14e
 	.byte	0x48
 	.uleb128 0x16
 	.ascii	"ADR\000"
-	.byte	0xb
+	.byte	0xc
 	.2byte	0x1f7
 	.byte	0x1b
 	.4byte	0x14e
 	.byte	0x4c
 	.uleb128 0x15
-	.4byte	.LASF58
-	.byte	0xb
+	.4byte	.LASF62
+	.byte	0xc
 	.2byte	0x1f8
 	.byte	0x1b
 	.4byte	0x162
 	.byte	0x50
 	.uleb128 0x15
-	.4byte	.LASF59
-	.byte	0xb
+	.4byte	.LASF63
+	.byte	0xc
 	.2byte	0x1f9
 	.byte	0x1b
 	.4byte	0x167
 	.byte	0x60
 	.uleb128 0x15
-	.4byte	.LASF60
-	.byte	0xb
+	.4byte	.LASF64
+	.byte	0xc
 	.2byte	0x1fa
 	.byte	0x12
 	.4byte	0x16c
 	.byte	0x74
 	.uleb128 0x15
-	.4byte	.LASF61
-	.byte	0xb
+	.4byte	.LASF65
+	.byte	0xc
 	.2byte	0x1fb
 	.byte	0x15
 	.4byte	0x153
@@ -1508,7 +1552,7 @@ vMainSensorCalibrationTask:
 	.byte	0x8
 	.4byte	.LASF8
 	.byte	0
-	.file 12 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h"
+	.file 13 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/__crossworks.h"
 	.section	.debug_types,"G",%progbits,wt.1839347164335ef6,comdat
 	.4byte	0x86
 	.2byte	0x4
@@ -1527,30 +1571,30 @@ vMainSensorCalibrationTask:
 	.byte	0xc
 	.4byte	.Ldebug_line0
 	.uleb128 0x17
-	.4byte	.LASF62
+	.4byte	.LASF66
 	.byte	0x8
-	.byte	0xc
+	.byte	0xd
 	.2byte	0x14f
 	.byte	0x10
 	.4byte	0x48
 	.uleb128 0x15
-	.4byte	.LASF63
-	.byte	0xc
+	.4byte	.LASF67
+	.byte	0xd
 	.2byte	0x151
 	.byte	0x1c
 	.4byte	0x48
 	.byte	0
 	.uleb128 0x15
-	.4byte	.LASF64
-	.byte	0xc
+	.4byte	.LASF68
+	.byte	0xd
 	.2byte	0x152
 	.byte	0x21
 	.4byte	0x55
 	.byte	0x4
 	.byte	0
 	.uleb128 0x18
-	.4byte	.LASF65
-	.byte	0xc
+	.4byte	.LASF69
+	.byte	0xd
 	.2byte	0x14d
 	.byte	0x18
 	.4byte	0x5b
@@ -1598,15 +1642,15 @@ vMainSensorCalibrationTask:
 	.byte	0xc
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
-	.4byte	.LASF66
+	.4byte	.LASF70
 	.byte	0x14
-	.byte	0xc
+	.byte	0xd
 	.byte	0xdc
 	.byte	0x10
 	.4byte	0x38
 	.uleb128 0x6
-	.4byte	.LASF67
-	.byte	0xc
+	.4byte	.LASF71
+	.byte	0xd
 	.byte	0xdd
 	.byte	0x19
 	.4byte	0x38
@@ -1629,8 +1673,8 @@ vMainSensorCalibrationTask:
 	.uleb128 0x9
 	.4byte	0x5a
 	.uleb128 0xa
-	.4byte	.LASF68
-	.byte	0xc
+	.4byte	.LASF72
+	.byte	0xd
 	.byte	0xd8
 	.byte	0x3
 	.byte	0x81
@@ -1661,27 +1705,27 @@ vMainSensorCalibrationTask:
 	.4byte	.Ldebug_line0
 	.uleb128 0x5
 	.byte	0xc
-	.byte	0xc
+	.byte	0xd
 	.byte	0xd4
 	.byte	0x9
 	.4byte	0x4e
 	.uleb128 0x6
-	.4byte	.LASF69
-	.byte	0xc
+	.4byte	.LASF73
+	.byte	0xd
 	.byte	0xd5
 	.byte	0xf
 	.4byte	0x4e
 	.byte	0
 	.uleb128 0x6
 	.4byte	.LASF7
-	.byte	0xc
+	.byte	0xd
 	.byte	0xd6
 	.byte	0x1e
 	.4byte	0x54
 	.byte	0x4
 	.uleb128 0x6
-	.4byte	.LASF70
-	.byte	0xc
+	.4byte	.LASF74
+	.byte	0xd
 	.byte	0xd7
 	.byte	0x21
 	.4byte	0x5a
@@ -1707,8 +1751,8 @@ vMainSensorCalibrationTask:
 	.byte	0x8
 	.4byte	.LASF42
 	.uleb128 0xa
-	.4byte	.LASF71
-	.byte	0xc
+	.4byte	.LASF75
+	.byte	0xd
 	.byte	0xae
 	.byte	0x3
 	.byte	0xc0
@@ -1720,8 +1764,8 @@ vMainSensorCalibrationTask:
 	.byte	0x2d
 	.byte	0x75
 	.uleb128 0xa
-	.4byte	.LASF72
-	.byte	0xc
+	.4byte	.LASF76
+	.byte	0xd
 	.byte	0xd2
 	.byte	0x3
 	.byte	0x45
@@ -1752,62 +1796,62 @@ vMainSensorCalibrationTask:
 	.4byte	.Ldebug_line0
 	.uleb128 0x5
 	.byte	0x20
-	.byte	0xc
+	.byte	0xd
 	.byte	0xc4
 	.byte	0x9
 	.4byte	0x8f
 	.uleb128 0x6
-	.4byte	.LASF73
-	.byte	0xc
+	.4byte	.LASF77
+	.byte	0xd
 	.byte	0xc6
 	.byte	0x9
 	.4byte	0x8f
 	.byte	0
 	.uleb128 0x6
-	.4byte	.LASF74
-	.byte	0xc
+	.4byte	.LASF78
+	.byte	0xd
 	.byte	0xc7
 	.byte	0x9
 	.4byte	0x95
 	.byte	0x4
 	.uleb128 0x6
-	.4byte	.LASF75
-	.byte	0xc
+	.4byte	.LASF79
+	.byte	0xd
 	.byte	0xc8
 	.byte	0x9
 	.4byte	0x95
 	.byte	0x8
 	.uleb128 0x6
-	.4byte	.LASF76
-	.byte	0xc
+	.4byte	.LASF80
+	.byte	0xd
 	.byte	0xcb
 	.byte	0x9
 	.4byte	0x9b
 	.byte	0xc
 	.uleb128 0x6
-	.4byte	.LASF77
-	.byte	0xc
+	.4byte	.LASF81
+	.byte	0xd
 	.byte	0xcc
 	.byte	0xa
 	.4byte	0xa1
 	.byte	0x10
 	.uleb128 0x6
-	.4byte	.LASF78
-	.byte	0xc
+	.4byte	.LASF82
+	.byte	0xd
 	.byte	0xcd
 	.byte	0xa
 	.4byte	0xa1
 	.byte	0x14
 	.uleb128 0x6
-	.4byte	.LASF79
-	.byte	0xc
+	.4byte	.LASF83
+	.byte	0xd
 	.byte	0xd0
 	.byte	0x9
 	.4byte	0xa7
 	.byte	0x18
 	.uleb128 0x6
-	.4byte	.LASF80
-	.byte	0xc
+	.4byte	.LASF84
+	.byte	0xd
 	.byte	0xd1
 	.byte	0x9
 	.4byte	0xad
@@ -1888,7 +1932,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x5
-	.4byte	.LASF81
+	.4byte	.LASF85
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x161
@@ -1938,230 +1982,230 @@ vMainSensorCalibrationTask:
 	.4byte	.Ldebug_line0
 	.uleb128 0x5
 	.byte	0x58
-	.byte	0xc
+	.byte	0xd
 	.byte	0x86
 	.byte	0x9
 	.4byte	0x1c7
 	.uleb128 0x6
-	.4byte	.LASF82
-	.byte	0xc
+	.4byte	.LASF86
+	.byte	0xd
 	.byte	0x88
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0
 	.uleb128 0x6
-	.4byte	.LASF83
-	.byte	0xc
+	.4byte	.LASF87
+	.byte	0xd
 	.byte	0x89
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x4
 	.uleb128 0x6
-	.4byte	.LASF84
-	.byte	0xc
+	.4byte	.LASF88
+	.byte	0xd
 	.byte	0x8a
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x8
 	.uleb128 0x6
-	.4byte	.LASF85
-	.byte	0xc
+	.4byte	.LASF89
+	.byte	0xd
 	.byte	0x8c
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0xc
 	.uleb128 0x6
-	.4byte	.LASF86
-	.byte	0xc
+	.4byte	.LASF90
+	.byte	0xd
 	.byte	0x8d
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x10
 	.uleb128 0x6
-	.4byte	.LASF87
-	.byte	0xc
+	.4byte	.LASF91
+	.byte	0xd
 	.byte	0x8e
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x14
 	.uleb128 0x6
-	.4byte	.LASF88
-	.byte	0xc
+	.4byte	.LASF92
+	.byte	0xd
 	.byte	0x8f
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x18
 	.uleb128 0x6
-	.4byte	.LASF89
-	.byte	0xc
+	.4byte	.LASF93
+	.byte	0xd
 	.byte	0x90
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x1c
 	.uleb128 0x6
-	.4byte	.LASF90
-	.byte	0xc
+	.4byte	.LASF94
+	.byte	0xd
 	.byte	0x91
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x20
 	.uleb128 0x6
-	.4byte	.LASF91
-	.byte	0xc
+	.4byte	.LASF95
+	.byte	0xd
 	.byte	0x92
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x24
 	.uleb128 0x6
-	.4byte	.LASF92
-	.byte	0xc
+	.4byte	.LASF96
+	.byte	0xd
 	.byte	0x94
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x28
 	.uleb128 0x6
-	.4byte	.LASF93
-	.byte	0xc
+	.4byte	.LASF97
+	.byte	0xd
 	.byte	0x95
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x29
 	.uleb128 0x6
-	.4byte	.LASF94
-	.byte	0xc
+	.4byte	.LASF98
+	.byte	0xd
 	.byte	0x96
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x2a
 	.uleb128 0x6
-	.4byte	.LASF95
-	.byte	0xc
+	.4byte	.LASF99
+	.byte	0xd
 	.byte	0x97
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x2b
 	.uleb128 0x6
-	.4byte	.LASF96
-	.byte	0xc
+	.4byte	.LASF100
+	.byte	0xd
 	.byte	0x98
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x2c
 	.uleb128 0x6
-	.4byte	.LASF97
-	.byte	0xc
+	.4byte	.LASF101
+	.byte	0xd
 	.byte	0x99
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x2d
 	.uleb128 0x6
-	.4byte	.LASF98
-	.byte	0xc
+	.4byte	.LASF102
+	.byte	0xd
 	.byte	0x9a
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x2e
 	.uleb128 0x6
-	.4byte	.LASF99
-	.byte	0xc
+	.4byte	.LASF103
+	.byte	0xd
 	.byte	0x9b
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x2f
 	.uleb128 0x6
-	.4byte	.LASF100
-	.byte	0xc
+	.4byte	.LASF104
+	.byte	0xd
 	.byte	0x9c
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x30
 	.uleb128 0x6
-	.4byte	.LASF101
-	.byte	0xc
+	.4byte	.LASF105
+	.byte	0xd
 	.byte	0x9d
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x31
 	.uleb128 0x6
-	.4byte	.LASF102
-	.byte	0xc
+	.4byte	.LASF106
+	.byte	0xd
 	.byte	0x9e
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x32
 	.uleb128 0x6
-	.4byte	.LASF103
-	.byte	0xc
+	.4byte	.LASF107
+	.byte	0xd
 	.byte	0x9f
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x33
 	.uleb128 0x6
-	.4byte	.LASF104
-	.byte	0xc
+	.4byte	.LASF108
+	.byte	0xd
 	.byte	0xa0
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x34
 	.uleb128 0x6
-	.4byte	.LASF105
-	.byte	0xc
+	.4byte	.LASF109
+	.byte	0xd
 	.byte	0xa1
 	.byte	0x8
 	.4byte	0x1cd
 	.byte	0x35
 	.uleb128 0x6
-	.4byte	.LASF106
-	.byte	0xc
+	.4byte	.LASF110
+	.byte	0xd
 	.byte	0xa6
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x38
 	.uleb128 0x6
-	.4byte	.LASF107
-	.byte	0xc
+	.4byte	.LASF111
+	.byte	0xd
 	.byte	0xa7
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x3c
 	.uleb128 0x6
-	.4byte	.LASF108
-	.byte	0xc
+	.4byte	.LASF112
+	.byte	0xd
 	.byte	0xa8
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x40
 	.uleb128 0x6
-	.4byte	.LASF109
-	.byte	0xc
+	.4byte	.LASF113
+	.byte	0xd
 	.byte	0xa9
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x44
 	.uleb128 0x6
-	.4byte	.LASF110
-	.byte	0xc
+	.4byte	.LASF114
+	.byte	0xd
 	.byte	0xaa
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x48
 	.uleb128 0x6
-	.4byte	.LASF111
-	.byte	0xc
+	.4byte	.LASF115
+	.byte	0xd
 	.byte	0xab
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x4c
 	.uleb128 0x6
-	.4byte	.LASF112
-	.byte	0xc
+	.4byte	.LASF116
+	.byte	0xd
 	.byte	0xac
 	.byte	0xf
 	.4byte	0x1c7
 	.byte	0x50
 	.uleb128 0x6
-	.4byte	.LASF113
-	.byte	0xc
+	.4byte	.LASF117
+	.byte	0xd
 	.byte	0xad
 	.byte	0xf
 	.4byte	0x1c7
@@ -2195,22 +2239,22 @@ vMainSensorCalibrationTask:
 	.byte	0xc
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
-	.4byte	.LASF114
+	.4byte	.LASF118
 	.byte	0x8
-	.byte	0xc
+	.byte	0xd
 	.byte	0x7e
 	.byte	0x8
 	.4byte	0x45
 	.uleb128 0x6
-	.4byte	.LASF115
-	.byte	0xc
+	.4byte	.LASF119
+	.byte	0xd
 	.byte	0x7f
 	.byte	0x7
 	.4byte	0x45
 	.byte	0
 	.uleb128 0x6
-	.4byte	.LASF116
-	.byte	0xc
+	.4byte	.LASF120
+	.byte	0xd
 	.byte	0x80
 	.byte	0x8
 	.4byte	0x4c
@@ -2223,20 +2267,19 @@ vMainSensorCalibrationTask:
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x5
-	.4byte	.LASF81
+	.4byte	.LASF85
 	.byte	0
-	.file 13 "../../../../../../modules/nrfx/mdk/system_nrf52.h"
-	.file 14 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h"
-	.file 15 "../../../../../../components/libraries/util/app_util.h"
-	.file 16 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
-	.file 17 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
-	.file 18 "../../../../../../external/freertos/source/include/queue.h"
-	.file 19 "../../../../../../external/freertos/source/include/semphr.h"
-	.file 20 "../../../../../../components/libraries/gfx/nrf_gfx.h"
-	.file 21 "../../../drivers/display.h"
-	.file 22 "../../../drivers/servo.h"
-	.file 23 "../../../../../../external/freertos/source/include/task.h"
-	.file 24 "../../../drivers/ir.h"
+	.file 14 "../../../../../../modules/nrfx/mdk/system_nrf52.h"
+	.file 15 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h"
+	.file 16 "../../../../../../components/libraries/util/app_util.h"
+	.file 17 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
+	.file 18 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+	.file 19 "../../../../../../external/freertos/source/include/queue.h"
+	.file 20 "../../../../../../external/freertos/source/include/semphr.h"
+	.file 21 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+	.file 22 "../../../drivers/display.h"
+	.file 23 "../../../drivers/servo.h"
+	.file 24 "../../../../../../external/freertos/source/include/task.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
 	.4byte	0x973
@@ -2244,10 +2287,10 @@ vMainSensorCalibrationTask:
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1c
-	.4byte	.LASF208
+	.4byte	.LASF212
 	.byte	0xc
-	.4byte	.LASF209
-	.4byte	.LASF210
+	.4byte	.LASF213
+	.4byte	.LASF214
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -2261,7 +2304,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x5
-	.4byte	.LASF81
+	.4byte	.LASF85
 	.uleb128 0x4
 	.byte	0x1
 	.byte	0x8
@@ -2279,8 +2322,8 @@ vMainSensorCalibrationTask:
 	.uleb128 0x9
 	.4byte	0x4c
 	.uleb128 0xa
-	.4byte	.LASF72
-	.byte	0xc
+	.4byte	.LASF76
+	.byte	0xd
 	.byte	0xd2
 	.byte	0x3
 	.byte	0x45
@@ -2294,8 +2337,8 @@ vMainSensorCalibrationTask:
 	.uleb128 0x9
 	.4byte	0x58
 	.uleb128 0xa
-	.4byte	.LASF68
-	.byte	0xc
+	.4byte	.LASF72
+	.byte	0xd
 	.byte	0xd8
 	.byte	0x3
 	.byte	0x81
@@ -2309,8 +2352,8 @@ vMainSensorCalibrationTask:
 	.uleb128 0x9
 	.4byte	0x6d
 	.uleb128 0x1e
-	.4byte	.LASF117
-	.byte	0xc
+	.4byte	.LASF121
+	.byte	0xd
 	.2byte	0x106
 	.byte	0x1a
 	.byte	0x67
@@ -2322,20 +2365,20 @@ vMainSensorCalibrationTask:
 	.byte	0x85
 	.byte	0xaa
 	.uleb128 0x1f
-	.4byte	.LASF118
-	.byte	0xc
+	.4byte	.LASF122
+	.byte	0xd
 	.2byte	0x10d
 	.byte	0x1d
 	.4byte	0x7d
 	.uleb128 0x1f
-	.4byte	.LASF119
-	.byte	0xc
+	.4byte	.LASF123
+	.byte	0xd
 	.2byte	0x110
 	.byte	0x25
 	.4byte	0x68
 	.uleb128 0x1f
-	.4byte	.LASF120
-	.byte	0xc
+	.4byte	.LASF124
+	.byte	0xd
 	.2byte	0x111
 	.byte	0x25
 	.4byte	0x68
@@ -2349,8 +2392,8 @@ vMainSensorCalibrationTask:
 	.uleb128 0x9
 	.4byte	0xba
 	.uleb128 0x1f
-	.4byte	.LASF121
-	.byte	0xc
+	.4byte	.LASF125
+	.byte	0xd
 	.2byte	0x113
 	.byte	0x1c
 	.4byte	0xca
@@ -2362,62 +2405,62 @@ vMainSensorCalibrationTask:
 	.uleb128 0x9
 	.4byte	0xdc
 	.uleb128 0x1f
-	.4byte	.LASF122
-	.byte	0xc
+	.4byte	.LASF126
+	.byte	0xd
 	.2byte	0x115
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF123
-	.byte	0xc
+	.4byte	.LASF127
+	.byte	0xd
 	.2byte	0x116
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF124
-	.byte	0xc
+	.4byte	.LASF128
+	.byte	0xd
 	.2byte	0x117
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF125
-	.byte	0xc
+	.4byte	.LASF129
+	.byte	0xd
 	.2byte	0x118
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF126
-	.byte	0xc
+	.4byte	.LASF130
+	.byte	0xd
 	.2byte	0x11a
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF127
-	.byte	0xc
+	.4byte	.LASF131
+	.byte	0xd
 	.2byte	0x11b
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF128
-	.byte	0xc
+	.4byte	.LASF132
+	.byte	0xd
 	.2byte	0x11c
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF129
-	.byte	0xc
+	.4byte	.LASF133
+	.byte	0xd
 	.2byte	0x11d
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF130
-	.byte	0xc
+	.4byte	.LASF134
+	.byte	0xd
 	.2byte	0x11e
 	.byte	0x13
 	.4byte	0xe7
 	.uleb128 0x1f
-	.4byte	.LASF131
-	.byte	0xc
+	.4byte	.LASF135
+	.byte	0xd
 	.2byte	0x11f
 	.byte	0x13
 	.4byte	0xe7
@@ -2431,12 +2474,12 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.4byte	0x188
 	.uleb128 0x21
-	.4byte	.LASF148
+	.4byte	.LASF152
 	.uleb128 0x9
 	.4byte	0x183
 	.uleb128 0x1f
-	.4byte	.LASF132
-	.byte	0xc
+	.4byte	.LASF136
+	.byte	0xd
 	.2byte	0x135
 	.byte	0xe
 	.4byte	0x19a
@@ -2453,8 +2496,8 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.4byte	0x183
 	.uleb128 0x1f
-	.4byte	.LASF133
-	.byte	0xc
+	.4byte	.LASF137
+	.byte	0xd
 	.2byte	0x136
 	.byte	0xe
 	.4byte	0x1c2
@@ -2466,8 +2509,8 @@ vMainSensorCalibrationTask:
 	.byte	0x7
 	.4byte	.LASF14
 	.uleb128 0x22
-	.4byte	.LASF134
-	.byte	0xc
+	.4byte	.LASF138
+	.byte	0xd
 	.2byte	0x153
 	.byte	0x3
 	.byte	0x18
@@ -2479,8 +2522,8 @@ vMainSensorCalibrationTask:
 	.byte	0x5e
 	.byte	0xf6
 	.uleb128 0x1f
-	.4byte	.LASF135
-	.byte	0xc
+	.4byte	.LASF139
+	.byte	0xd
 	.2byte	0x157
 	.byte	0x1f
 	.4byte	0x1ed
@@ -2490,7 +2533,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x4
 	.byte	0x1
 	.byte	0x6
-	.4byte	.LASF136
+	.4byte	.LASF140
 	.uleb128 0x7
 	.4byte	.LASF9
 	.byte	0x4
@@ -2498,7 +2541,7 @@ vMainSensorCalibrationTask:
 	.byte	0x17
 	.4byte	0x4c
 	.uleb128 0x7
-	.4byte	.LASF137
+	.4byte	.LASF141
 	.byte	0x4
 	.byte	0x35
 	.byte	0x16
@@ -2506,7 +2549,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x4
 	.byte	0x2
 	.byte	0x5
-	.4byte	.LASF138
+	.4byte	.LASF142
 	.uleb128 0x7
 	.4byte	.LASF13
 	.byte	0x4
@@ -2514,7 +2557,7 @@ vMainSensorCalibrationTask:
 	.byte	0x18
 	.4byte	0x1c8
 	.uleb128 0x7
-	.4byte	.LASF139
+	.4byte	.LASF143
 	.byte	0x4
 	.byte	0x37
 	.byte	0x14
@@ -2530,14 +2573,14 @@ vMainSensorCalibrationTask:
 	.uleb128 0x4
 	.byte	0x8
 	.byte	0x5
-	.4byte	.LASF140
+	.4byte	.LASF144
 	.uleb128 0x4
 	.byte	0x8
 	.byte	0x7
-	.4byte	.LASF141
+	.4byte	.LASF145
 	.uleb128 0x22
-	.4byte	.LASF142
-	.byte	0xb
+	.4byte	.LASF146
+	.byte	0xc
 	.2byte	0x1fc
 	.byte	0x3
 	.byte	0x1a
@@ -2549,20 +2592,20 @@ vMainSensorCalibrationTask:
 	.byte	0xbd
 	.byte	0x2c
 	.uleb128 0x1f
-	.4byte	.LASF143
-	.byte	0xb
+	.4byte	.LASF147
+	.byte	0xc
 	.2byte	0x744
 	.byte	0x19
 	.4byte	0x231
 	.uleb128 0x23
-	.4byte	.LASF144
-	.byte	0xd
+	.4byte	.LASF148
+	.byte	0xe
 	.byte	0x21
 	.byte	0x11
 	.4byte	0x236
 	.uleb128 0xa
-	.4byte	.LASF145
-	.byte	0xa
+	.4byte	.LASF149
+	.byte	0xb
 	.byte	0x71
 	.byte	0x3
 	.byte	0x23
@@ -2574,22 +2617,22 @@ vMainSensorCalibrationTask:
 	.byte	0x32
 	.byte	0x74
 	.uleb128 0x23
-	.4byte	.LASF146
-	.byte	0xa
+	.4byte	.LASF150
+	.byte	0xb
 	.byte	0x75
 	.byte	0x19
 	.4byte	0x27a
 	.uleb128 0x18
-	.4byte	.LASF147
-	.byte	0xe
+	.4byte	.LASF151
+	.byte	0xf
 	.2byte	0x317
 	.byte	0x1b
 	.4byte	0x2a3
 	.uleb128 0x21
-	.4byte	.LASF149
+	.4byte	.LASF153
 	.uleb128 0x1f
-	.4byte	.LASF150
-	.byte	0xe
+	.4byte	.LASF154
+	.byte	0xf
 	.2byte	0x31b
 	.byte	0xe
 	.4byte	0x2b5
@@ -2597,36 +2640,36 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.4byte	0x296
 	.uleb128 0x1f
-	.4byte	.LASF151
-	.byte	0xe
+	.4byte	.LASF155
+	.byte	0xf
 	.2byte	0x31c
 	.byte	0xe
 	.4byte	0x2b5
 	.uleb128 0x1f
-	.4byte	.LASF152
-	.byte	0xe
+	.4byte	.LASF156
+	.byte	0xf
 	.2byte	0x31d
 	.byte	0xe
 	.4byte	0x2b5
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x7
-	.4byte	.LASF153
+	.4byte	.LASF157
 	.uleb128 0x23
-	.4byte	.LASF154
-	.byte	0xf
+	.4byte	.LASF158
+	.byte	0x10
 	.byte	0x53
 	.byte	0x11
 	.4byte	0x236
 	.uleb128 0x23
-	.4byte	.LASF155
-	.byte	0xf
+	.4byte	.LASF159
+	.byte	0x10
 	.byte	0x54
 	.byte	0x11
 	.4byte	0x236
 	.uleb128 0x23
-	.4byte	.LASF156
-	.byte	0xf
+	.4byte	.LASF160
+	.byte	0x10
 	.byte	0x72
 	.byte	0x13
 	.4byte	0x300
@@ -2634,20 +2677,20 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.4byte	0x236
 	.uleb128 0x23
-	.4byte	.LASF157
-	.byte	0xf
+	.4byte	.LASF161
+	.byte	0x10
 	.byte	0x73
 	.byte	0x11
 	.4byte	0x236
 	.uleb128 0x7
-	.4byte	.LASF158
-	.byte	0x10
+	.4byte	.LASF162
+	.byte	0x11
 	.byte	0x39
 	.byte	0xe
 	.4byte	0x32
 	.uleb128 0x7
-	.4byte	.LASF159
-	.byte	0x10
+	.4byte	.LASF163
+	.byte	0x11
 	.byte	0x40
 	.byte	0x16
 	.4byte	0x236
@@ -2658,9 +2701,9 @@ vMainSensorCalibrationTask:
 	.uleb128 0x4
 	.byte	0x8
 	.byte	0x4
-	.4byte	.LASF160
+	.4byte	.LASF164
 	.uleb128 0xa
-	.4byte	.LASF161
+	.4byte	.LASF165
 	.byte	0x9
 	.byte	0x50
 	.byte	0x3
@@ -2673,25 +2716,25 @@ vMainSensorCalibrationTask:
 	.byte	0x76
 	.byte	0xca
 	.uleb128 0x1f
-	.4byte	.LASF162
-	.byte	0x11
+	.4byte	.LASF166
+	.byte	0x12
 	.2byte	0x124
 	.byte	0x2e
 	.4byte	0x338
 	.uleb128 0x7
-	.4byte	.LASF163
-	.byte	0x12
+	.4byte	.LASF167
+	.byte	0x13
 	.byte	0x2f
 	.byte	0x10
 	.4byte	0x29
 	.uleb128 0x7
-	.4byte	.LASF164
-	.byte	0x13
+	.4byte	.LASF168
+	.byte	0x14
 	.byte	0x26
 	.byte	0x17
 	.4byte	0x355
 	.uleb128 0xa
-	.4byte	.LASF165
+	.4byte	.LASF169
 	.byte	0x8
 	.byte	0x7
 	.byte	0x3
@@ -2721,7 +2764,7 @@ vMainSensorCalibrationTask:
 	.byte	0x2
 	.4byte	.LASF27
 	.uleb128 0xa
-	.4byte	.LASF166
+	.4byte	.LASF170
 	.byte	0x5
 	.byte	0x8c
 	.byte	0x2
@@ -2736,7 +2779,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x9
 	.4byte	0x394
 	.uleb128 0xa
-	.4byte	.LASF167
+	.4byte	.LASF171
 	.byte	0x3
 	.byte	0x38
 	.byte	0x2
@@ -2749,28 +2792,28 @@ vMainSensorCalibrationTask:
 	.byte	0xc3
 	.byte	0xc2
 	.uleb128 0x7
-	.4byte	.LASF168
-	.byte	0x14
+	.4byte	.LASF172
+	.byte	0x15
 	.byte	0x92
 	.byte	0x13
 	.4byte	0x3a9
 	.uleb128 0x9
 	.4byte	0x3b9
 	.uleb128 0x23
-	.4byte	.LASF169
-	.byte	0x15
+	.4byte	.LASF173
+	.byte	0x16
 	.byte	0x13
 	.byte	0x22
 	.4byte	0x3c5
 	.uleb128 0x23
-	.4byte	.LASF170
-	.byte	0x15
+	.4byte	.LASF174
+	.byte	0x16
 	.byte	0x14
 	.byte	0x16
 	.4byte	0x355
 	.uleb128 0x24
-	.4byte	.LASF182
-	.byte	0x15
+	.4byte	.LASF186
+	.byte	0x16
 	.byte	0x3a
 	.byte	0x11
 	.4byte	0x37d
@@ -2784,73 +2827,73 @@ vMainSensorCalibrationTask:
 	.byte	0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LASF171
-	.byte	0x15
+	.4byte	.LASF175
+	.byte	0x16
 	.byte	0x42
 	.byte	0x18
 	.4byte	0x3a4
 	.uleb128 0x23
-	.4byte	.LASF172
+	.4byte	.LASF176
 	.byte	0x1
 	.byte	0x16
 	.byte	0x10
 	.4byte	0x206
 	.uleb128 0x23
-	.4byte	.LASF173
+	.4byte	.LASF177
 	.byte	0x1
 	.byte	0x17
 	.byte	0x10
 	.4byte	0x206
 	.uleb128 0x23
-	.4byte	.LASF174
+	.4byte	.LASF178
 	.byte	0x1
 	.byte	0x18
 	.byte	0xe
 	.4byte	0x32a
 	.uleb128 0x23
-	.4byte	.LASF175
+	.4byte	.LASF179
 	.byte	0x1
 	.byte	0x19
 	.byte	0x10
 	.4byte	0x1fa
 	.uleb128 0x23
-	.4byte	.LASF176
+	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x1a
 	.byte	0x10
 	.4byte	0x1fa
 	.uleb128 0x23
-	.4byte	.LASF177
+	.4byte	.LASF181
 	.byte	0x1
 	.byte	0x1b
 	.byte	0x16
 	.4byte	0x355
 	.uleb128 0x23
-	.4byte	.LASF178
+	.4byte	.LASF182
 	.byte	0x1
 	.byte	0x1c
 	.byte	0x16
 	.4byte	0x355
 	.uleb128 0x23
-	.4byte	.LASF179
+	.4byte	.LASF183
 	.byte	0x1
 	.byte	0x1d
 	.byte	0x16
 	.4byte	0x355
 	.uleb128 0x23
-	.4byte	.LASF180
+	.4byte	.LASF184
 	.byte	0x1
 	.byte	0x1e
 	.byte	0x1a
 	.4byte	0x361
 	.uleb128 0x23
-	.4byte	.LASF181
+	.4byte	.LASF185
 	.byte	0x1
 	.byte	0x1f
 	.byte	0x10
 	.4byte	0x1fa
 	.uleb128 0x25
-	.4byte	.LASF211
+	.4byte	.LASF215
 	.byte	0x1
 	.byte	0x59
 	.byte	0x6
@@ -2860,7 +2903,7 @@ vMainSensorCalibrationTask:
 	.byte	0x9c
 	.4byte	0x8c3
 	.uleb128 0x26
-	.4byte	.LASF212
+	.4byte	.LASF216
 	.byte	0x1
 	.byte	0x59
 	.byte	0x27
@@ -2868,7 +2911,7 @@ vMainSensorCalibrationTask:
 	.4byte	.LLST0
 	.4byte	.LVUS0
 	.uleb128 0x27
-	.4byte	.LASF183
+	.4byte	.LASF187
 	.byte	0x1
 	.byte	0x5a
 	.byte	0xa
@@ -2877,7 +2920,7 @@ vMainSensorCalibrationTask:
 	.byte	0x91
 	.sleb128 -200
 	.uleb128 0x28
-	.4byte	.LASF184
+	.4byte	.LASF188
 	.byte	0x1
 	.byte	0x5c
 	.byte	0xb
@@ -2885,7 +2928,7 @@ vMainSensorCalibrationTask:
 	.4byte	.LLST1
 	.4byte	.LVUS1
 	.uleb128 0x28
-	.4byte	.LASF185
+	.4byte	.LASF189
 	.byte	0x1
 	.byte	0x5d
 	.byte	0xd
@@ -2893,7 +2936,7 @@ vMainSensorCalibrationTask:
 	.4byte	.LLST2
 	.4byte	.LVUS2
 	.uleb128 0x28
-	.4byte	.LASF186
+	.4byte	.LASF190
 	.byte	0x1
 	.byte	0x5e
 	.byte	0xd
@@ -2901,21 +2944,21 @@ vMainSensorCalibrationTask:
 	.4byte	.LLST3
 	.4byte	.LVUS3
 	.uleb128 0x29
-	.4byte	.LASF187
+	.4byte	.LASF191
 	.byte	0x1
 	.byte	0x5f
 	.byte	0xd
 	.4byte	0x1fa
 	.byte	0x4
 	.uleb128 0x29
-	.4byte	.LASF188
+	.4byte	.LASF192
 	.byte	0x1
 	.byte	0x60
 	.byte	0xd
 	.4byte	0x1fa
 	.byte	0x1
 	.uleb128 0x27
-	.4byte	.LASF189
+	.4byte	.LASF193
 	.byte	0x1
 	.byte	0x61
 	.byte	0xd
@@ -2924,7 +2967,7 @@ vMainSensorCalibrationTask:
 	.byte	0x91
 	.sleb128 -201
 	.uleb128 0x27
-	.4byte	.LASF190
+	.4byte	.LASF194
 	.byte	0x1
 	.byte	0x64
 	.byte	0xd
@@ -2933,13 +2976,13 @@ vMainSensorCalibrationTask:
 	.byte	0x91
 	.sleb128 -208
 	.uleb128 0x2a
-	.4byte	.LASF193
+	.4byte	.LASF197
 	.byte	0x1
 	.byte	0x68
 	.byte	0x10
 	.4byte	0x31e
 	.uleb128 0x28
-	.4byte	.LASF191
+	.4byte	.LASF195
 	.byte	0x1
 	.byte	0x69
 	.byte	0xd
@@ -2947,7 +2990,7 @@ vMainSensorCalibrationTask:
 	.4byte	.LLST4
 	.4byte	.LVUS4
 	.uleb128 0x29
-	.4byte	.LASF192
+	.4byte	.LASF196
 	.byte	0x1
 	.byte	0x6a
 	.byte	0xd
@@ -2958,13 +3001,13 @@ vMainSensorCalibrationTask:
 	.4byte	.LBE15-.LBB15
 	.4byte	0x87b
 	.uleb128 0x2a
-	.4byte	.LASF194
+	.4byte	.LASF198
 	.byte	0x1
 	.byte	0x89
 	.byte	0x16
 	.4byte	0x8e3
 	.uleb128 0x27
-	.4byte	.LASF195
+	.4byte	.LASF199
 	.byte	0x1
 	.byte	0x95
 	.byte	0x27
@@ -2973,9 +3016,9 @@ vMainSensorCalibrationTask:
 	.byte	0x91
 	.sleb128 -224
 	.uleb128 0x2c
-	.4byte	.LASF196
+	.4byte	.LASF200
 	.byte	0x1
-	.byte	0xae
+	.byte	0xaf
 	.byte	0x1f
 	.byte	0x98
 	.byte	0x37
@@ -3497,69 +3540,69 @@ vMainSensorCalibrationTask:
 	.byte	0x3
 	.byte	0
 	.uleb128 0x32
-	.4byte	.LASF197
+	.4byte	.LASF201
 	.byte	0x2
 	.2byte	0x1ab
 	.byte	0x33
 	.byte	0x3
 	.uleb128 0x32
-	.4byte	.LASF198
+	.4byte	.LASF202
 	.byte	0x2
 	.2byte	0x1a0
 	.byte	0x33
 	.byte	0x3
 	.uleb128 0x32
-	.4byte	.LASF199
+	.4byte	.LASF203
 	.byte	0x2
 	.2byte	0x194
 	.byte	0x33
 	.byte	0x3
 	.uleb128 0x33
-	.4byte	.LASF200
-	.4byte	.LASF200
-	.byte	0x16
+	.4byte	.LASF204
+	.4byte	.LASF204
+	.byte	0x17
 	.byte	0x12
 	.byte	0x6
 	.uleb128 0x34
-	.4byte	.LASF201
-	.4byte	.LASF201
-	.byte	0x17
+	.4byte	.LASF205
+	.4byte	.LASF205
+	.byte	0x18
 	.2byte	0x2ee
 	.byte	0x6
 	.uleb128 0x33
-	.4byte	.LASF202
-	.4byte	.LASF202
-	.byte	0x18
+	.4byte	.LASF206
+	.4byte	.LASF206
+	.byte	0xa
 	.byte	0x2b
 	.byte	0xa
 	.uleb128 0x34
-	.4byte	.LASF203
-	.4byte	.LASF203
-	.byte	0x12
+	.4byte	.LASF207
+	.4byte	.LASF207
+	.byte	0x13
 	.2byte	0x589
 	.byte	0xc
 	.uleb128 0x34
-	.4byte	.LASF204
-	.4byte	.LASF204
-	.byte	0x12
+	.4byte	.LASF208
+	.4byte	.LASF208
+	.byte	0x13
 	.2byte	0x289
 	.byte	0xc
 	.uleb128 0x33
-	.4byte	.LASF205
-	.4byte	.LASF205
-	.byte	0xe
+	.4byte	.LASF209
+	.4byte	.LASF209
+	.byte	0xf
 	.byte	0x87
 	.byte	0x5
 	.uleb128 0x34
-	.4byte	.LASF206
-	.4byte	.LASF206
-	.byte	0x17
+	.4byte	.LASF210
+	.4byte	.LASF210
+	.byte	0x18
 	.2byte	0x53f
 	.byte	0xc
 	.uleb128 0x34
-	.4byte	.LASF207
-	.4byte	.LASF207
-	.byte	0x12
+	.4byte	.LASF211
+	.4byte	.LASF211
+	.byte	0x13
 	.2byte	0x363
 	.byte	0xc
 	.byte	0
@@ -4389,10 +4432,18 @@ vMainSensorCalibrationTask:
 	.4byte	0
 	.4byte	0
 	.section	.debug_pubnames,"",%progbits
-	.4byte	0x58
+	.4byte	0x98
 	.2byte	0x2
 	.4byte	.Ldebug_info0
 	.4byte	0x977
+	.4byte	0x2b
+	.ascii	"IR_SENSOR_1\000"
+	.4byte	0x31
+	.ascii	"IR_SENSOR_2\000"
+	.4byte	0x37
+	.ascii	"IR_SENSOR_3\000"
+	.4byte	0x3d
+	.ascii	"IR_SENSOR_4\000"
 	.4byte	0x3e2
 	.ascii	"m_lcd_cb\000"
 	.4byte	0x47b
@@ -4529,7 +4580,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x1b
 	.byte	0x3
 	.uleb128 0x2f
-	.uleb128 0xc
+	.uleb128 0xd
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
@@ -4554,7 +4605,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x1f
 	.byte	0x3
 	.uleb128 0x92
-	.uleb128 0xb
+	.uleb128 0xc
 	.file 32 "../../../../../../components/toolchain/cmsis/include/core_cmInstr.h"
 	.byte	0x3
 	.uleb128 0xd2
@@ -4577,7 +4628,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x93
-	.uleb128 0xd
+	.uleb128 0xe
 	.byte	0x4
 	.byte	0x4
 	.file 35 "../../../../../../modules/nrfx/mdk/nrf52_bitfields.h"
@@ -4627,7 +4678,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x39
-	.uleb128 0xa
+	.uleb128 0xb
 	.byte	0x4
 	.file 43 "../../../../../../components/libraries/util/nrf_assert.h"
 	.byte	0x3
@@ -4640,7 +4691,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x2c
 	.byte	0x3
 	.uleb128 0x36
-	.uleb128 0xe
+	.uleb128 0xf
 	.byte	0x4
 	.file 45 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdbool.h"
 	.byte	0x3
@@ -4717,10 +4768,10 @@ vMainSensorCalibrationTask:
 	.uleb128 0x38
 	.byte	0x3
 	.uleb128 0x21
-	.uleb128 0x10
+	.uleb128 0x11
 	.byte	0x3
 	.uleb128 0x1f
-	.uleb128 0xf
+	.uleb128 0x10
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
@@ -4733,7 +4784,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x8
-	.uleb128 0x18
+	.uleb128 0xa
 	.byte	0x4
 	.file 58 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h"
 	.byte	0x3
@@ -4765,7 +4816,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x3d
-	.uleb128 0xf
+	.uleb128 0x10
 	.byte	0x4
 	.file 64 "../../../../../../components/libraries/util/sdk_macros.h"
 	.byte	0x3
@@ -4793,7 +4844,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x51
-	.uleb128 0x11
+	.uleb128 0x12
 	.file 67 "../../../../../../components/libraries/experimental_log/nrf_log_instance.h"
 	.byte	0x3
 	.uleb128 0x30
@@ -4811,14 +4862,14 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xb
-	.uleb128 0x12
+	.uleb128 0x13
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xc
-	.uleb128 0x13
+	.uleb128 0x14
 	.byte	0x3
 	.uleb128 0x24
-	.uleb128 0x12
+	.uleb128 0x13
 	.byte	0x4
 	.byte	0x4
 	.file 68 "../../../communication/server_communication.h"
@@ -4828,7 +4879,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xe
-	.uleb128 0x16
+	.uleb128 0x17
 	.byte	0x4
 	.file 69 "../../../../../../external/freertos/source/include/timers.h"
 	.byte	0x3
@@ -4836,7 +4887,7 @@ vMainSensorCalibrationTask:
 	.uleb128 0x45
 	.byte	0x3
 	.uleb128 0x27
-	.uleb128 0x17
+	.uleb128 0x18
 	.file 70 "../../../../../../external/freertos/source/include/list.h"
 	.byte	0x3
 	.uleb128 0x25
@@ -4850,7 +4901,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x12
-	.uleb128 0x15
+	.uleb128 0x16
 	.byte	0x3
 	.uleb128 0xb
 	.uleb128 0x5
@@ -4921,7 +4972,7 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xc
-	.uleb128 0x14
+	.uleb128 0x15
 	.byte	0x3
 	.uleb128 0x2f
 	.uleb128 0x5
@@ -4949,46 +5000,50 @@ vMainSensorCalibrationTask:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x14
-	.uleb128 0x17
+	.uleb128 0x18
 	.byte	0x4
 	.byte	0x4
 	.byte	0
 	.section	.debug_line,"",%progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",%progbits,1
-.LASF194:
+.LASF198:
 	.ascii	"sensor16\000"
 .LASF44:
 	.ascii	"padding\000"
-.LASF157:
+.LASF161:
 	.ascii	"__FLASH_segment_used_end__\000"
-.LASF128:
+.LASF132:
 	.ascii	"__RAL_data_utf8_space\000"
-.LASF113:
+.LASF117:
 	.ascii	"date_time_format\000"
-.LASF123:
+.LASF127:
 	.ascii	"__RAL_c_locale_abbrev_day_names\000"
-.LASF64:
+.LASF68:
 	.ascii	"next\000"
-.LASF119:
+.LASF123:
 	.ascii	"__RAL_codeset_ascii\000"
-.LASF65:
+.LASF45:
+	.ascii	"IR_SENSOR_1\000"
+.LASF69:
 	.ascii	"__RAL_error_decoder_fn_t\000"
-.LASF195:
+.LASF199:
 	.ascii	"write\000"
-.LASF103:
+.LASF107:
 	.ascii	"int_n_sep_by_space\000"
-.LASF94:
+.LASF48:
+	.ascii	"IR_SENSOR_4\000"
+.LASF98:
 	.ascii	"p_cs_precedes\000"
-.LASF130:
+.LASF134:
 	.ascii	"__RAL_data_utf8_minus\000"
-.LASF175:
+.LASF179:
 	.ascii	"gHandshook\000"
-.LASF204:
-	.ascii	"xQueueGenericSend\000"
-.LASF141:
-	.ascii	"long long unsigned int\000"
 .LASF208:
+	.ascii	"xQueueGenericSend\000"
+.LASF145:
+	.ascii	"long long unsigned int\000"
+.LASF212:
 	.ascii	"GNU C99 9.2.1 20191025 (release) [ARM/arm-9-branch "
 	.ascii	"revision 277599] -fmessage-length=0 -mcpu=cortex-m4"
 	.ascii	" -mlittle-endian -mfloat-abi=hard -mfpu=fpv4-sp-d16"
@@ -4997,398 +5052,402 @@ vMainSensorCalibrationTask:
 	.ascii	"-pointer -fno-dwarf2-cfi-asm -fno-builtin -ffunctio"
 	.ascii	"n-sections -fdata-sections -fshort-enums -fno-commo"
 	.ascii	"n\000"
-.LASF66:
+.LASF70:
 	.ascii	"__locale_s\000"
-.LASF133:
+.LASF137:
 	.ascii	"__user_get_time_of_day\000"
-.LASF156:
+.LASF160:
 	.ascii	"_vectors\000"
-.LASF163:
+.LASF167:
 	.ascii	"QueueHandle_t\000"
-.LASF143:
+.LASF147:
 	.ascii	"ITM_RxBuffer\000"
-.LASF111:
+.LASF115:
 	.ascii	"date_format\000"
-.LASF169:
+.LASF173:
 	.ascii	"orkney_8ptFontInfo\000"
-.LASF85:
+.LASF89:
 	.ascii	"int_curr_symbol\000"
 .LASF35:
 	.ascii	"NRF_LCD_ROTATE_180\000"
-.LASF182:
+.LASF186:
 	.ascii	"m_lcd_cb\000"
-.LASF51:
+.LASF55:
 	.ascii	"SHCSR\000"
-.LASF137:
+.LASF141:
 	.ascii	"int16_t\000"
-.LASF59:
+.LASF63:
 	.ascii	"ISAR\000"
-.LASF140:
+.LASF144:
 	.ascii	"long long int\000"
-.LASF136:
+.LASF140:
 	.ascii	"signed char\000"
-.LASF183:
+.LASF187:
 	.ascii	"strLOG\000"
-.LASF117:
+.LASF121:
 	.ascii	"__RAL_global_locale\000"
 .LASF43:
 	.ascii	"module_id\000"
-.LASF70:
+.LASF74:
 	.ascii	"codeset\000"
-.LASF201:
+.LASF205:
 	.ascii	"vTaskDelay\000"
-.LASF167:
+.LASF171:
 	.ascii	"FONT_INFO\000"
-.LASF77:
+.LASF81:
 	.ascii	"__towupper\000"
-.LASF190:
+.LASF194:
 	.ascii	"waypoint\000"
-.LASF92:
+.LASF96:
 	.ascii	"int_frac_digits\000"
 .LASF29:
 	.ascii	"state\000"
-.LASF81:
+.LASF85:
 	.ascii	"long int\000"
-.LASF191:
+.LASF195:
 	.ascii	"scan\000"
-.LASF127:
+.LASF131:
 	.ascii	"__RAL_data_utf8_comma\000"
-.LASF150:
+.LASF154:
 	.ascii	"stdin\000"
-.LASF96:
+.LASF100:
 	.ascii	"n_cs_precedes\000"
 .LASF13:
 	.ascii	"uint16_t\000"
-.LASF160:
+.LASF164:
 	.ascii	"double\000"
-.LASF158:
+.LASF162:
 	.ascii	"BaseType_t\000"
-.LASF73:
+.LASF77:
 	.ascii	"__isctype\000"
-.LASF100:
+.LASF104:
 	.ascii	"int_p_cs_precedes\000"
-.LASF45:
+.LASF49:
 	.ascii	"__irq_masks\000"
-.LASF107:
+.LASF111:
 	.ascii	"abbrev_day_names\000"
-.LASF116:
+.LASF120:
 	.ascii	"__wchar\000"
-.LASF56:
+.LASF60:
 	.ascii	"BFAR\000"
 .LASF4:
 	.ascii	"endChar\000"
-.LASF181:
+.LASF185:
 	.ascii	"USEBLUETOOTH\000"
-.LASF57:
+.LASF61:
 	.ascii	"AFSR\000"
-.LASF192:
+.LASF196:
 	.ascii	"incr\000"
-.LASF110:
+.LASF114:
 	.ascii	"am_pm_indicator\000"
-.LASF104:
+.LASF108:
 	.ascii	"int_p_sign_posn\000"
-.LASF142:
+.LASF146:
 	.ascii	"SCB_Type\000"
-.LASF76:
+.LASF80:
 	.ascii	"__iswctype\000"
-.LASF99:
+.LASF103:
 	.ascii	"n_sign_posn\000"
-.LASF89:
+.LASF93:
 	.ascii	"mon_grouping\000"
 .LASF23:
 	.ascii	"lcd_cb_t\000"
-.LASF209:
+.LASF213:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
 	.ascii	"al\\slam\\software\\DebugFunctions.c\000"
 .LASF5:
 	.ascii	"spacePixels\000"
 .LASF28:
 	.ascii	"unsigned int\000"
-.LASF189:
-	.ascii	"robotMovement\000"
-.LASF144:
-	.ascii	"SystemCoreClock\000"
 .LASF193:
+	.ascii	"robotMovement\000"
+.LASF148:
+	.ascii	"SystemCoreClock\000"
+.LASF197:
 	.ascii	"xLastWakeTime\000"
-.LASF126:
+.LASF130:
 	.ascii	"__RAL_data_utf8_period\000"
-.LASF84:
+.LASF88:
 	.ascii	"grouping\000"
-.LASF153:
+.LASF157:
 	.ascii	"long unsigned int\000"
 .LASF6:
 	.ascii	"charInfo\000"
-.LASF78:
+.LASF82:
 	.ascii	"__towlower\000"
-.LASF172:
+.LASF176:
 	.ascii	"gX_hat\000"
-.LASF131:
+.LASF135:
 	.ascii	"__RAL_data_empty_string\000"
-.LASF212:
+.LASF216:
 	.ascii	"pvParameters\000"
-.LASF83:
+.LASF87:
 	.ascii	"thousands_sep\000"
-.LASF67:
+.LASF71:
 	.ascii	"__category\000"
-.LASF177:
+.LASF181:
 	.ascii	"scanStatusQ\000"
-.LASF161:
+.LASF165:
 	.ascii	"nrf_log_module_reduced_dynamic_data_t\000"
-.LASF155:
+.LASF159:
 	.ascii	"__StackLimit\000"
 .LASF30:
 	.ascii	"width\000"
-.LASF145:
+.LASF149:
 	.ascii	"nrf_nvic_state_t\000"
 .LASF7:
 	.ascii	"data\000"
-.LASF179:
+.LASF183:
 	.ascii	"queue_microsd\000"
 .LASF14:
 	.ascii	"short unsigned int\000"
 .LASF22:
 	.ascii	"p_lcd_cb\000"
-.LASF69:
+.LASF73:
 	.ascii	"name\000"
-.LASF200:
+.LASF204:
 	.ascii	"vServo_setAngle\000"
-.LASF210:
+.LASF214:
 	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
 	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF10:
 	.ascii	"FONT_CHAR_INFO\000"
-.LASF50:
-	.ascii	"AIRCR\000"
 .LASF54:
+	.ascii	"AIRCR\000"
+.LASF58:
 	.ascii	"DFSR\000"
-.LASF55:
+.LASF59:
 	.ascii	"MMFAR\000"
-.LASF106:
+.LASF110:
 	.ascii	"day_names\000"
 .LASF33:
 	.ascii	"NRF_LCD_ROTATE_0\000"
-.LASF46:
+.LASF50:
 	.ascii	"__cr_flag\000"
-.LASF205:
+.LASF209:
 	.ascii	"sprintf\000"
 .LASF3:
 	.ascii	"startChar\000"
-.LASF148:
+.LASF152:
 	.ascii	"timeval\000"
-.LASF207:
+.LASF211:
 	.ascii	"xQueueReceive\000"
 .LASF39:
 	.ascii	"NRFX_DRV_STATE_POWERED_ON\000"
-.LASF151:
+.LASF155:
 	.ascii	"stdout\000"
-.LASF197:
+.LASF201:
 	.ascii	"__DSB\000"
-.LASF68:
+.LASF72:
 	.ascii	"__RAL_locale_t\000"
-.LASF112:
+.LASF116:
 	.ascii	"time_format\000"
 .LASF26:
 	.ascii	"nrf_lcd_rotation_t\000"
-.LASF74:
+.LASF78:
 	.ascii	"__toupper\000"
-.LASF98:
+.LASF102:
 	.ascii	"p_sign_posn\000"
 .LASF24:
 	.ascii	"ret_code_t\000"
 .LASF17:
 	.ascii	"lcd_pixel_draw\000"
-.LASF121:
+.LASF125:
 	.ascii	"__RAL_ascii_ctype_map\000"
 .LASF41:
 	.ascii	"content\000"
 .LASF40:
 	.ascii	"filename\000"
-.LASF52:
+.LASF56:
 	.ascii	"CFSR\000"
-.LASF63:
+.LASF67:
 	.ascii	"decode\000"
-.LASF159:
+.LASF163:
 	.ascii	"TickType_t\000"
-.LASF188:
+.LASF192:
 	.ascii	"servoResolution\000"
 .LASF11:
 	.ascii	"widthBits\000"
-.LASF184:
+.LASF188:
 	.ascii	"thetahat\000"
-.LASF80:
+.LASF84:
 	.ascii	"__mbtowc\000"
-.LASF146:
+.LASF150:
 	.ascii	"nrf_nvic_state\000"
 .LASF38:
 	.ascii	"NRFX_DRV_STATE_INITIALIZED\000"
-.LASF198:
+.LASF202:
 	.ascii	"__ISB\000"
-.LASF118:
+.LASF122:
 	.ascii	"__RAL_c_locale\000"
-.LASF75:
+.LASF79:
 	.ascii	"__tolower\000"
-.LASF180:
+.LASF184:
 	.ascii	"xPoseMutex\000"
-.LASF132:
+.LASF136:
 	.ascii	"__user_set_time_of_day\000"
-.LASF101:
+.LASF105:
 	.ascii	"int_n_cs_precedes\000"
-.LASF47:
+.LASF51:
 	.ascii	"CPUID\000"
-.LASF120:
+.LASF124:
 	.ascii	"__RAL_codeset_utf8\000"
-.LASF61:
+.LASF65:
 	.ascii	"CPACR\000"
-.LASF60:
+.LASF64:
 	.ascii	"RESERVED0\000"
-.LASF115:
+.LASF119:
 	.ascii	"__state\000"
 .LASF16:
 	.ascii	"lcd_uninit\000"
-.LASF171:
+.LASF175:
 	.ascii	"m_nrf_lcd\000"
 .LASF18:
 	.ascii	"lcd_rect_draw\000"
-.LASF48:
+.LASF52:
 	.ascii	"ICSR\000"
-.LASF154:
+.LASF158:
 	.ascii	"__StackTop\000"
 .LASF27:
 	.ascii	"_Bool\000"
-.LASF139:
+.LASF143:
 	.ascii	"int32_t\000"
 .LASF8:
 	.ascii	"unsigned char\000"
-.LASF186:
+.LASF190:
 	.ascii	"yhat\000"
 .LASF2:
 	.ascii	"height\000"
-.LASF122:
+.LASF126:
 	.ascii	"__RAL_c_locale_day_names\000"
-.LASF166:
+.LASF170:
 	.ascii	"nrf_lcd_t\000"
-.LASF93:
+.LASF97:
 	.ascii	"frac_digits\000"
-.LASF138:
+.LASF142:
 	.ascii	"short int\000"
-.LASF135:
+.LASF139:
 	.ascii	"__RAL_error_decoder_head\000"
-.LASF174:
+.LASF178:
 	.ascii	"gTheta_hat\000"
-.LASF147:
+.LASF151:
 	.ascii	"FILE\000"
-.LASF196:
+.LASF200:
 	.ascii	"Setpoint\000"
 .LASF20:
 	.ascii	"lcd_rotation_set\000"
 .LASF32:
 	.ascii	"nrfx_drv_state_t\000"
-.LASF88:
+.LASF92:
 	.ascii	"mon_thousands_sep\000"
-.LASF71:
+.LASF75:
 	.ascii	"__RAL_locale_data_t\000"
-.LASF90:
+.LASF94:
 	.ascii	"positive_sign\000"
 .LASF25:
 	.ascii	"uint32_t\000"
-.LASF176:
+.LASF180:
 	.ascii	"gPaused\000"
 .LASF36:
 	.ascii	"NRF_LCD_ROTATE_270\000"
-.LASF165:
+.LASF169:
 	.ascii	"microsd_write_operation_t\000"
-.LASF187:
+.LASF191:
 	.ascii	"rotationDirection\000"
-.LASF185:
+.LASF189:
 	.ascii	"xhat\000"
-.LASF164:
+.LASF168:
 	.ascii	"SemaphoreHandle_t\000"
 .LASF42:
 	.ascii	"char\000"
-.LASF86:
+.LASF90:
 	.ascii	"currency_symbol\000"
-.LASF178:
+.LASF182:
 	.ascii	"poseControllerQ\000"
-.LASF95:
+.LASF99:
 	.ascii	"p_sep_by_space\000"
-.LASF206:
+.LASF210:
 	.ascii	"xTaskGetTickCount\000"
-.LASF162:
+.LASF166:
 	.ascii	"m_nrf_log_app_logs_data_dynamic\000"
-.LASF102:
+.LASF106:
 	.ascii	"int_p_sep_by_space\000"
 .LASF12:
 	.ascii	"offset\000"
 .LASF34:
 	.ascii	"NRF_LCD_ROTATE_90\000"
-.LASF91:
+.LASF95:
 	.ascii	"negative_sign\000"
-.LASF72:
+.LASF76:
 	.ascii	"__RAL_locale_codeset_t\000"
 .LASF0:
 	.ascii	"sCartesian\000"
-.LASF202:
+.LASF206:
 	.ascii	"ir_read_blocking\000"
-.LASF109:
+.LASF113:
 	.ascii	"abbrev_month_names\000"
-.LASF105:
+.LASF109:
 	.ascii	"int_n_sign_posn\000"
-.LASF152:
+.LASF156:
 	.ascii	"stderr\000"
-.LASF124:
+.LASF128:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF211:
+.LASF215:
 	.ascii	"vMainSensorCalibrationTask\000"
 .LASF21:
 	.ascii	"lcd_display_invert\000"
-.LASF62:
+.LASF66:
 	.ascii	"__RAL_error_decoder_s\000"
-.LASF134:
+.LASF138:
 	.ascii	"__RAL_error_decoder_t\000"
-.LASF58:
+.LASF62:
 	.ascii	"MMFR\000"
-.LASF114:
+.LASF118:
 	.ascii	"__mbstate_s\000"
 .LASF9:
 	.ascii	"uint8_t\000"
 .LASF19:
 	.ascii	"lcd_display\000"
-.LASF203:
+.LASF207:
 	.ascii	"xQueueSemaphoreTake\000"
 .LASF1:
 	.ascii	"float\000"
-.LASF108:
+.LASF112:
 	.ascii	"month_names\000"
-.LASF199:
+.LASF203:
 	.ascii	"__SEV\000"
 .LASF37:
 	.ascii	"NRFX_DRV_STATE_UNINITIALIZED\000"
-.LASF170:
+.LASF174:
 	.ascii	"queue_display\000"
 .LASF31:
 	.ascii	"rotation\000"
-.LASF97:
+.LASF101:
 	.ascii	"n_sep_by_space\000"
-.LASF149:
+.LASF153:
 	.ascii	"__RAL_FILE\000"
-.LASF168:
+.LASF172:
 	.ascii	"nrf_gfx_font_desc_t\000"
-.LASF129:
+.LASF46:
+	.ascii	"IR_SENSOR_2\000"
+.LASF47:
+	.ascii	"IR_SENSOR_3\000"
+.LASF133:
 	.ascii	"__RAL_data_utf8_plus\000"
 .LASF15:
 	.ascii	"lcd_init\000"
-.LASF125:
+.LASF129:
 	.ascii	"__RAL_c_locale_abbrev_month_names\000"
-.LASF53:
+.LASF57:
 	.ascii	"HFSR\000"
-.LASF87:
+.LASF91:
 	.ascii	"mon_decimal_point\000"
-.LASF49:
+.LASF53:
 	.ascii	"VTOR\000"
-.LASF79:
+.LASF83:
 	.ascii	"__wctomb\000"
-.LASF82:
+.LASF86:
 	.ascii	"decimal_point\000"
-.LASF173:
+.LASF177:
 	.ascii	"gY_hat\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

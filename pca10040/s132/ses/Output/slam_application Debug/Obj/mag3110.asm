@@ -3365,13 +3365,13 @@ y_scale:
 	.4byte	.LASF150
 	.4byte	.LASF150
 	.byte	0xf
-	.byte	0x5
+	.byte	0xe
 	.byte	0x6
 	.uleb128 0x30
 	.4byte	.LASF151
 	.4byte	.LASF151
 	.byte	0xf
-	.byte	0x6
+	.byte	0xf
 	.byte	0x6
 	.byte	0
 	.section	.debug_abbrev,"",%progbits

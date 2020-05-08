@@ -4692,7 +4692,7 @@ RightMotorDirection:
 	.4byte	.LASF225
 	.4byte	.LASF225
 	.byte	0x20
-	.byte	0x4
+	.byte	0xd
 	.byte	0x6
 	.uleb128 0x38
 	.4byte	.LASF226

@@ -5,10 +5,16 @@
 //                                                                      //
 /************************************************************************/
 
-#include "math.h"
 #include "functions.h"
+#include <math.h>
+#include "stdint.h"
 #include "defines.h"
 #include "i2c.h"
+#include "MainComTask.h"
+#include "globals.h"
+#include "nrf_log.h"
+
+uint8_t collisionCounter;
 
 /* Take any angle and put it inside -PI, PI */
 void vFunc_Inf2pi(float *angle_in_radians){
@@ -21,6 +27,7 @@ void vFunc_Inf2pi(float *angle_in_radians){
     }
     *angle_in_radians = result;
 }
+
 
 /* Calculates the distance in x direction to a measured object in global coordinate system */
 int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
@@ -52,7 +59,7 @@ int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, 
 }
 
 
-/* Arranges the message with robot positons, object positions and returns an array used from February 2020*/
+/* Arranges the message with robot positons, object positions and returns an array. Used from February 2020*/
 void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData){
 	uint8_t msgLength = 23;
     int8_t data[msgLength];
@@ -111,4 +118,108 @@ void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
             i2cSendNOADDR(I2C_DEVICE_DONGLE, data, msgLength);
         }
     }
+}
+
+static int16_t collisionSectors[2*NUM_DIST_SENSORS] = {360, 360, 360, 360, 360, 360, 360, 360};
+uint8_t collisionPrinter = 0;
+
+void increaseCollisionSector(int16_t angle, uint8_t sensor){
+	
+	int16_t lowerLimit = collisionSectors[sensor*2];
+	int16_t upperLimit = collisionSectors[sensor*2+1];
+	
+	if(lowerLimit == 360 && upperLimit == 360){
+		collisionSectors[sensor*2] = angle-1;
+		collisionSectors[sensor*2+1] = angle+1;
+	}
+	else{
+		if(angle < lowerLimit){
+			collisionSectors[sensor*2] = angle;
+		}
+		else if(angle > upperLimit){
+			collisionSectors[sensor*2+1] = angle;
+		}
+	}
+	printCollisionSectors();
+}
+
+/* Returns detection angle inside -179->180 based on servoAngle and which sensor */
+int16_t getDetectionAngle(uint8_t servoAngle, uint8_t sensor){
+	int16_t sensorAngle = servoAngle+sensor*90;
+	if(sensorAngle > 180){
+		return (sensorAngle-360);
+	}
+	else{
+		return sensorAngle;
+	}
+}
+
+void decreaseCollisionSector(int16_t angle, uint8_t sensor){
+	
+	int16_t lowerLimit = collisionSectors[sensor*2];
+	int16_t upperLimit = collisionSectors[sensor*2+1];
+	
+	if((angle >= lowerLimit) && (angle <= upperLimit)){
+		if((angle-lowerLimit) < (upperLimit-angle)){
+			collisionSectors[sensor*2] = angle;
+		}
+		else if((angle-lowerLimit) > (upperLimit-angle)){
+			collisionSectors[sensor*2+1] = angle;
+		}
+		else{
+			collisionSectors[sensor*2] = 360;
+			collisionSectors[sensor*2+1] = 360;
+		}
+	}
+	printCollisionSectors();
+}
+
+
+void printCollisionSectors(void){
+	collisionPrinter++;
+	if(collisionPrinter > 60){
+		for(int i = 0; i < NUM_DIST_SENSORS; i++){
+			NRF_LOG_INFO("CollSector: %i. From: %i", (int)i, (int)collisionSectors[i*2]);
+			NRF_LOG_INFO("CollSector: %i.   To: %i", (int)i, (int)collisionSectors[i*2+1]);
+		}
+		collisionPrinter = 0;
+	}
+}
+
+
+/*  */
+bool validWaypoint(int16_t waypointAngle){
+	uint8_t noCollision = 0;
+	
+	for(int i = 0; i < NUM_DIST_SENSORS; i++){
+		if((collisionSectors[i*2] != 360) || (collisionSectors[i*2+1] != 360)){
+			
+			int16_t upperLimit = collisionSectors[i*2+1]+COLLISION_SECTOR_OFFSET;
+			int16_t lowerLimit = collisionSectors[i*2]-COLLISION_SECTOR_OFFSET;
+			
+			if(upperLimit > 179){
+				if((waypointAngle > lowerLimit) && (waypointAngle+360 < upperLimit)){
+					return false;
+				}
+			}
+			
+			else if(lowerLimit < -179){
+				if((waypointAngle-360 > lowerLimit) && (waypointAngle < upperLimit)){
+					return false;
+				}
+			}
+			else if((waypointAngle > lowerLimit) && (waypointAngle < upperLimit)){
+				return false;
+			}
+		}
+		else{
+			noCollision++;
+		}
+	}
+
+	
+	if(noCollision == 4){
+		return true;
+	}
+	return false;
 }

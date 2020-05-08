@@ -76,4 +76,5 @@ void send_idle(void);
 void send_ping_response(void);
 void server_receiver(uint8_t *data, uint16_t len);
 void debug(const char *fmt, ...);
+
 #endif /* INCLUDES_SERVER_COMMUNICATION_H_ */

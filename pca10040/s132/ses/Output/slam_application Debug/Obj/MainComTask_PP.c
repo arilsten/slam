@@ -6097,6 +6097,7 @@ uint8_t nrf_log_getchar(void);
 uint32_t nrf_log_push(char * const p_str);
 # 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
 # 1 "../../../drivers/i2c.h" 1
+# 11 "../../../drivers/i2c.h"
 # 1 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h" 1
 # 44 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_twi.h" 1
@@ -7975,8 +7976,7 @@ static inline
 # 330 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
                                                                            );
 }
-# 2 "../../../drivers/i2c.h" 2
-
+# 12 "../../../drivers/i2c.h" 2
 
 void i2cInit();
 void i2cRecive(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
@@ -7986,7 +7986,848 @@ void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len);
 const nrf_twi_mngr_t* getTWIManagerAddress();
 const nrf_drv_twi_config_t* getBusConfig();
 # 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
+# 1 "../../../drivers/functions.h" 1
+# 15 "../../../drivers/functions.h"
+void vFunc_Inf2pi(float *angle_in_radians);
 
+
+int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+
+
+
+void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+
+
+
+void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+
+
+void increaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+int16_t getDetectionAngle(uint8_t servoAngle, uint8_t sensor);
+
+
+void decreaseCollisionSector(int16_t angle, uint8_t sensor);
+
+
+void printCollisionSectors(void);
+
+
+
+# 50 "../../../drivers/functions.h" 3 4
+_Bool 
+# 50 "../../../drivers/functions.h"
+    validWaypoint(int16_t waypointAngle);
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
+# 1 "../../../drivers/display.h" 1
+# 11 "../../../drivers/display.h"
+# 1 "../../../../../../components/libraries/gfx/nrf_lcd.h" 1
+# 58 "../../../../../../components/libraries/gfx/nrf_lcd.h"
+typedef enum{
+    NRF_LCD_ROTATE_0 = 0,
+    NRF_LCD_ROTATE_90,
+    NRF_LCD_ROTATE_180,
+    NRF_LCD_ROTATE_270
+}nrf_lcd_rotation_t;
+
+
+
+
+typedef struct
+{
+    nrfx_drv_state_t state;
+    uint16_t height;
+    uint16_t width;
+    nrf_lcd_rotation_t rotation;
+}lcd_cb_t;
+
+
+
+
+
+
+typedef struct
+{
+
+
+
+    ret_code_t (* lcd_init)(void);
+
+
+
+
+    void (* lcd_uninit)(void);
+# 100 "../../../../../../components/libraries/gfx/nrf_lcd.h"
+    void (* lcd_pixel_draw)(uint16_t x, uint16_t y, uint32_t color);
+# 111 "../../../../../../components/libraries/gfx/nrf_lcd.h"
+    void (* lcd_rect_draw)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color);
+# 120 "../../../../../../components/libraries/gfx/nrf_lcd.h"
+    void (* lcd_display)(void);
+
+
+
+
+
+
+    void (* lcd_rotation_set)(nrf_lcd_rotation_t rotation);
+
+
+
+
+
+
+    void (* lcd_display_invert)(
+# 134 "../../../../../../components/libraries/gfx/nrf_lcd.h" 3 4
+                               _Bool 
+# 134 "../../../../../../components/libraries/gfx/nrf_lcd.h"
+                                    invert);
+
+
+
+
+    lcd_cb_t * p_lcd_cb;
+}nrf_lcd_t;
+# 12 "../../../drivers/display.h" 2
+# 1 "../../../../../../components/libraries/gfx/nrf_gfx.h" 1
+# 47 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+# 1 "../../../../../../components/libraries/gfx/nrf_lcd.h" 1
+# 48 "../../../../../../components/libraries/gfx/nrf_gfx.h" 2
+# 1 "../../../../../../external/thedotfactory_fonts/nrf_font.h" 1
+# 39 "../../../../../../external/thedotfactory_fonts/nrf_font.h"
+typedef struct
+{
+    uint8_t widthBits;
+    uint16_t offset;
+}FONT_CHAR_INFO;
+
+
+
+
+typedef struct
+{
+    uint8_t height;
+    uint8_t startChar;
+    uint8_t endChar;
+    uint8_t spacePixels;
+    const FONT_CHAR_INFO * charInfo;
+    const uint8_t * data;
+}FONT_INFO;
+# 49 "../../../../../../components/libraries/gfx/nrf_gfx.h" 2
+# 69 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+typedef struct
+{
+    uint16_t x;
+    uint16_t y;
+}nrf_gfx_point_t;
+
+
+
+
+typedef struct
+{
+    uint16_t x_start;
+    uint16_t y_start;
+    uint16_t x_end;
+    uint16_t y_end;
+    uint16_t thickness;
+}nrf_gfx_line_t;
+
+
+
+
+typedef struct
+{
+    uint16_t x;
+    uint16_t y;
+    uint16_t r;
+}nrf_gfx_circle_t;
+
+
+
+
+typedef struct
+{
+    uint16_t x;
+    uint16_t y;
+    uint16_t width;
+    uint16_t height;
+}nrf_gfx_rect_t;
+# 146 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+typedef FONT_INFO nrf_gfx_font_desc_t;
+# 155 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+ret_code_t nrf_gfx_init(nrf_lcd_t const * p_instance);
+# 164 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+void nrf_gfx_uninit(nrf_lcd_t const * p_instance);
+# 173 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+void nrf_gfx_point_draw(nrf_lcd_t const * p_instance, nrf_gfx_point_t const * p_point, uint32_t color);
+# 185 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+ret_code_t nrf_gfx_line_draw(nrf_lcd_t const * p_instance, nrf_gfx_line_t const * p_line, uint32_t color);
+# 201 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+ret_code_t nrf_gfx_circle_draw(nrf_lcd_t const * p_instance,
+                               nrf_gfx_circle_t const * p_circle,
+                               uint32_t color,
+                               
+# 204 "../../../../../../components/libraries/gfx/nrf_gfx.h" 3 4
+                              _Bool 
+# 204 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+                                   fill);
+# 218 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+ret_code_t nrf_gfx_rect_draw(nrf_lcd_t const * p_instance,
+                             nrf_gfx_rect_t const * p_rect,
+                             uint16_t thickness,
+                             uint32_t color,
+                             
+# 222 "../../../../../../components/libraries/gfx/nrf_gfx.h" 3 4
+                            _Bool 
+# 222 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+                                 fill);
+
+
+
+
+
+
+
+void nrf_gfx_screen_fill(nrf_lcd_t const * p_instance, uint32_t color);
+# 244 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+ret_code_t nrf_gfx_bmp565_draw(nrf_lcd_t const * p_instance,
+                               nrf_gfx_rect_t const * p_rect,
+                               uint16_t const * img_buf);
+# 259 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+void nrf_gfx_background_set(nrf_lcd_t const * p_instance, uint16_t const * img_buf);
+
+
+
+
+
+
+void nrf_gfx_display(nrf_lcd_t const * p_instance);
+
+
+
+
+
+
+
+void nrf_gfx_rotation_set(nrf_lcd_t const * p_instance, nrf_lcd_rotation_t rotation);
+
+
+
+
+
+
+
+void nrf_gfx_invert(nrf_lcd_t const * p_instance, 
+# 282 "../../../../../../components/libraries/gfx/nrf_gfx.h" 3 4
+                                                 _Bool 
+# 282 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+                                                      invert);
+# 294 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+ret_code_t nrf_gfx_print(nrf_lcd_t const * p_instance,
+                         nrf_gfx_point_t const * p_point,
+                         uint16_t font_color,
+                         const char * p_string,
+                         const nrf_gfx_font_desc_t * p_font,
+                         
+# 299 "../../../../../../components/libraries/gfx/nrf_gfx.h" 3 4
+                        _Bool 
+# 299 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+                             wrap);
+
+
+
+
+
+
+
+uint16_t nrf_gfx_height_get(nrf_lcd_t const * p_instance);
+
+
+
+
+
+
+
+uint16_t nrf_gfx_width_get(nrf_lcd_t const * p_instance);
+# 13 "../../../drivers/display.h" 2
+# 1 "../../../drivers/oled.h" 1
+# 17 "../../../drivers/oled.h"
+ret_code_t oled_init(void);
+
+
+
+
+
+
+void oled_uninit(void);
+# 35 "../../../drivers/oled.h"
+void oled_draw_pixel(uint16_t x, uint16_t y, uint32_t color);
+# 48 "../../../drivers/oled.h"
+void oled_draw_rectangle(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color);
+
+
+
+
+
+
+void oled_display(void);
+
+
+
+
+
+
+void oled_clear(void);
+# 72 "../../../drivers/oled.h"
+void oled_dummy_rotation_set(nrf_lcd_rotation_t rotation);
+# 81 "../../../drivers/oled.h"
+void oled_invert(
+# 81 "../../../drivers/oled.h" 3 4
+                _Bool 
+# 81 "../../../drivers/oled.h"
+                     invert);
+# 14 "../../../drivers/display.h" 2
+
+# 1 "../../../../../../external/freertos/source/include/queue.h" 1
+# 16 "../../../drivers/display.h" 2
+
+
+
+extern const nrf_gfx_font_desc_t orkney_8ptFontInfo;
+extern QueueHandle_t queue_display;
+
+typedef enum {
+ DISPLAY_TEXT,
+ DISPLAY_POINT,
+ DISPLAY_LINE,
+ DISPLAY_CIRCLE,
+ DISPLAY_RECTANGLE,
+ DISPLAY_LOG,
+ DISPLAY_CLEAR
+} DisplayOperationType;
+
+typedef struct {
+ nrf_gfx_point_t text_position;
+ const char* p_string;
+ 
+# 35 "../../../drivers/display.h" 3 4
+_Bool 
+# 35 "../../../drivers/display.h"
+     wrap;
+} display_element_text_t;
+
+typedef struct {
+ nrf_gfx_point_t point;
+} display_element_point_t;
+
+typedef struct {
+ nrf_gfx_line_t line;
+} display_element_line_t;
+
+typedef struct {
+ nrf_gfx_circle_t circle;
+ 
+# 48 "../../../drivers/display.h" 3 4
+_Bool 
+# 48 "../../../drivers/display.h"
+     fill;
+} display_element_circle_t;
+
+typedef struct {
+ nrf_gfx_rect_t rectangle;
+ uint16_t thickness;
+ 
+# 54 "../../../drivers/display.h" 3 4
+_Bool 
+# 54 "../../../drivers/display.h"
+     fill;
+        int color;
+} display_element_rectangle_t;
+
+static lcd_cb_t m_lcd_cb =
+{
+    .state = NRFX_DRV_STATE_UNINITIALIZED,
+    .height = 64 - 1,
+    .width = 128 - 1,
+    .rotation = NRF_LCD_ROTATE_0
+};
+
+extern const nrf_lcd_t m_nrf_lcd;
+
+typedef struct {
+ DisplayOperationType operation;
+ union DisplayElement {
+  display_element_text_t text;
+  display_element_point_t point;
+  display_element_line_t line;
+  display_element_circle_t circle;
+  display_element_rectangle_t rectangle;
+  char log_string[10];
+ } element;
+} display_operation_t;
+
+
+
+
+
+
+
+void display_init(void);
+# 95 "../../../drivers/display.h"
+void display_text(int x, int y, const char* p_string);
+
+
+
+
+
+
+void display_text_on_line(int line, char* p_string);
+
+
+
+
+
+
+
+void display_point(int x, int y);
+# 121 "../../../drivers/display.h"
+void display_line(int x_start, int y_start, int x_end, int y_end, int thickness);
+# 132 "../../../drivers/display.h"
+void display_circle(int x, int y, int r, 
+# 132 "../../../drivers/display.h" 3 4
+                                        _Bool 
+# 132 "../../../drivers/display.h"
+                                             fill);
+# 145 "../../../drivers/display.h"
+void display_rectangle(int x, int y, int width, int height, int thickness, 
+# 145 "../../../drivers/display.h" 3 4
+                                                                          _Bool 
+# 145 "../../../drivers/display.h"
+                                                                               fill, int color);
+# 155 "../../../drivers/display.h"
+void display_log(const char* p_string);
+
+
+
+
+void display_clear(void);
+
+void display_task(void *arg);
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
+# 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
+# 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+
+# 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+int __float32_isinf(float);
+int __float64_isinf(double);
+int __float32_isnan(float);
+int __float64_isnan(double);
+int __float32_isfinite(float);
+int __float64_isfinite(double);
+int __float32_isnormal(float);
+int __float64_isnormal(double);
+int __float32_signbit(float);
+int __float64_signbit(double);
+int __float32_classify(float);
+int __float64_classify(double);
+# 261 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+typedef float float_t;
+typedef double double_t;
+# 274 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float cosf(float __x);
+# 293 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double cos(double __x);
+# 305 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float sinf(float __x);
+# 324 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double sin(double __x);
+# 337 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float tanf(float __x);
+# 356 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double tan(double __x);
+# 370 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float acosf(float __x);
+# 390 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double acos(double __x);
+# 405 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float asinf(float __x);
+# 426 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double asin(double __x);
+# 436 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float atanf(float __x);
+# 451 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double atan(double __x);
+# 475 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float atan2f(float __y, float __x);
+# 505 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double atan2(double __y, double __x);
+# 524 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float frexpf(float __x, int *__exp);
+# 549 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double frexp(double __x, int *__exp);
+# 565 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float ldexpf(float __x, int __exp);
+# 586 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double ldexp(double __x, int __exp);
+# 608 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float scalbnf(float __x, int __exp);
+# 635 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double scalbn(double __x, int __exp);
+# 651 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float logf(float __x);
+# 673 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double log(double __x);
+# 689 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float log10f(float __x);
+# 711 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double log10(double __x);
+# 730 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float fmodf(float __x, float __y);
+# 755 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double fmod(double __x, double __y);
+# 768 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float modff(float __x, float *__iptr);
+# 787 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double modf(double __x, double *__iptr);
+# 819 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float powf(float __x, float __y);
+# 857 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double pow(double __x, double __y);
+# 873 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float sqrtf(float __x);
+# 895 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double sqrt(double __x);
+
+
+
+
+
+
+
+float cbrtf(float __x);
+# 917 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double cbrt(double __x);
+# 928 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float ceilf(float __x);
+# 946 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double ceil(double __x);
+
+
+
+
+
+
+
+float fabsf(float __x);
+# 968 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double fabs(double __x);
+# 979 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float fminf(float __x, float __y);
+# 996 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double fmin(double __x, double __y);
+# 1007 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float fmaxf(float __x, float __y);
+# 1024 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double fmax(double __x, double __y);
+# 1035 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float floorf(float);
+# 1052 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double floor(double);
+# 1066 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float hypotf(float __x, float __y);
+# 1086 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double hypot(double __x, double __y);
+# 1100 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float coshf(float __x);
+# 1120 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double cosh(double __x);
+# 1133 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float sinhf(float __x);
+# 1152 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double sinh(double __x);
+# 1163 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float tanhf(float __x);
+# 1180 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double tanh(double __x);
+# 1194 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float expf(float __x);
+# 1214 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double exp(double __x);
+# 1229 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float acoshf(float __x);
+# 1251 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double acosh(double __x);
+# 1264 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float asinhf(float __x);
+# 1284 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double asinh(double __x);
+# 1297 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+float atanhf(float __x);
+# 1319 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double atanh(double __x);
+
+
+
+
+
+
+
+float fmaf(float __x, float __y, float __z);
+# 1341 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double fma(double __x, double __y, double __z);
+
+
+
+
+
+
+
+float copysignf(float __x, float __y);
+# 1363 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double copysign(double __x, double __y);
+
+
+
+
+
+
+
+float erff(float __x);
+# 1385 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double erf(double __x);
+
+
+
+
+
+
+
+float erfcf(float __x);
+# 1407 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double erfc(double __x);
+
+
+
+
+
+
+
+float exp2f(float __x);
+# 1429 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double exp2(double __x);
+
+
+
+
+
+
+
+float expm1f(float __x);
+# 1451 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double expm1(double __x);
+
+
+
+
+
+
+
+float fdimf(float __x, float __y);
+# 1473 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double fdim(double __x, double __y);
+
+
+
+
+
+
+
+int ilogbf(float __x);
+# 1496 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+int ilogb(double __x);
+
+
+
+
+
+
+
+float lgammaf(float __x);
+# 1518 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double lgamma(double __x);
+
+
+
+
+
+
+
+long long int llrintf(float __x);
+# 1540 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+long long int llrint(double __x);
+
+
+
+
+
+
+
+long long int llroundf(float __x);
+# 1562 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+long long int llround(double __x);
+
+
+
+
+
+
+
+float log1pf(float __x);
+# 1584 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double log1p(double __x);
+
+
+
+
+
+
+
+float log2f(float __x);
+# 1606 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double log2(double __x);
+
+
+
+
+
+
+
+float logbf(float __x);
+# 1628 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double logb(double __x);
+
+
+
+
+
+
+long int lrintf(float __x);
+# 1649 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+long int lrint(double __x);
+
+
+
+
+
+
+
+long int lroundf(float __x);
+# 1671 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+long int lround(double __x);
+
+
+
+
+
+
+
+float nearbyintf(float);
+# 1693 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double nearbyint(double);
+
+
+
+
+
+
+
+float nextafterf(float __x, float __y);
+# 1715 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double nextafter(double __x, double __y);
+
+
+
+
+
+
+
+float remainderf(float numer, float denom);
+# 1737 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double remainder(double numer, double denom);
+
+
+
+
+
+
+
+float remquof(float numer, float denom, int *quot);
+# 1759 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double remquo(double numer, double denom, int *quot);
+
+
+
+
+
+
+
+float rintf(float __x);
+# 1781 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double rint(double __x);
+
+
+
+
+
+
+
+float roundf(float __x);
+# 1803 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double round(double __x);
+
+
+
+
+
+
+
+float scalblnf(float __x, long int __exp);
+# 1825 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double scalbln(double __x, long int __exp);
+
+
+
+
+
+
+
+float tgammaf(float __x);
+# 1847 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double tgamma(double __x);
+
+
+
+
+
+
+
+float truncf(float __x);
+# 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
+double trunc(double __x);
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
+
+
+# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
 int16_t collisionAngles[4] = {200};
 
 message_t message_in;
@@ -8028,9 +8869,9 @@ void vMainCommunicationTask(void *pvParameters){
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "MESSAGE WAS: TYPE_CONFIRM"); } };
 
      gHandshook = 
-# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                  1
-# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                      ;
 
 
@@ -8054,9 +8895,9 @@ void vMainCommunicationTask(void *pvParameters){
 
 
      gPaused = 
-# 83 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
               1
-# 83 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                   ;
 
 
@@ -8069,9 +8910,9 @@ void vMainCommunicationTask(void *pvParameters){
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "MESSAGE WAS: TYPE_UNPAUSE"); } };
 
      gPaused = 
-# 94 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
               0
-# 94 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                    ;
 
      break;
@@ -8080,9 +8921,9 @@ void vMainCommunicationTask(void *pvParameters){
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "MESSAGE WAS: TYPE_FINISH"); } };
 
      gHandshook = 
-# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 104 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                  0
-# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 104 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                       ;
 
      break;
@@ -8094,16 +8935,14 @@ void vMainCommunicationTask(void *pvParameters){
   }
  }
  else{
-  counter++;
   uint8_t message[5] = {0};
   int16_t oldwaypoint[2] = {0};
   int16_t waypoint[2] = {0};
-  int16_t collAngles[4];
 
   while(
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
        1
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
            ){
    i2cReciveNOADDR(0x72, &message, 5);
 
@@ -8115,9 +8954,9 @@ void vMainCommunicationTask(void *pvParameters){
       gY_hat = *((int16_t*)&message[3]);
 
       xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 129 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
      0
-# 128 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 129 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
      , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
      }else{
       if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "xPoseMutex not available!"); } };
@@ -8129,20 +8968,39 @@ void vMainCommunicationTask(void *pvParameters){
      oldwaypoint[1] = waypoint[1];
      waypoint[0] = *((int16_t*)&message[1]);
      waypoint[1] = *((int16_t*)&message[3]);
-# 157 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
-     if(oldwaypoint[0] != waypoint[0] || oldwaypoint[1] != waypoint[1]){
+
+     int16_t wpAngle = atan2(waypoint[1], waypoint[0])*180.0 / 
+# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                                                      3.14159265358979323846
+# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                                                             ;
+     
+# 142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+    _Bool 
+# 142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+         isvalidWaypoint = validWaypoint(wpAngle);
+
+     if(isvalidWaypoint == 
+# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                          0
+# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                               ){
+      display_text_on_line(3, "Discarded WP");
+      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "WP not valid"); } };
+     }else{
+      display_text_on_line(3, "");
+      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "WP valid"); } };
+     }
+
+     if((oldwaypoint[0] != waypoint[0] || oldwaypoint[1] != waypoint[1])){
+
       struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
       xQueueGenericSend( ( poseControllerQ ), ( &target ), ( 100 ), ( ( BaseType_t ) 0 ) );
-     }
-     if(counter > 300){
-      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "Just got a new waypoint"); } };
      }
      break;
 
     default:
-     if(counter > 300){
-      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_1(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "Unknown message type from server. Type: %i", (uint32_t)((int)message[0])); } };
-     }
+     break;
    }
 
    vTaskDelay(100);

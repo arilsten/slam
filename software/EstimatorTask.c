@@ -136,7 +136,7 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 			vTaskDelay(10);  //arilsten: Seems like there has to be a delay here because the line below makes the robot not work properly.
 			//NRF_LOG_INFO("ACC X:%d ,Y:%d, Z:%d",(int)(accel.x*10000), (int)(accel.y*10000), (int)(accel.z*10000));          // Prints often to RTT
 			} else {
-				NRF_LOG_INFO("IMU Has no new data");
+				//NRF_LOG_INFO("IMU Has no new data");
 				gyrZ = 0.0;		 // This doesnt work as intended since the gyro has new data with noice present which makes the heading drift accordingly.
 			}
 			//get MAGNETOMETER data:

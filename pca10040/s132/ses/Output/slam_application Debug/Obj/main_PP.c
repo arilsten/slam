@@ -12206,9 +12206,7 @@ encoderTicks encoder_get_ticks();
 encoderTicks encoder_get_all_ticks();
 # 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/i2c.h" 1
-
-
-
+# 13 "../../../drivers/i2c.h"
 void i2cInit();
 void i2cRecive(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
 void i2cSend(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
@@ -12620,7 +12618,7 @@ static void user_task(void *arg) {
 
 
 
-    vTaskPrioritySet(handle_user_task,1);
+    vTaskPrioritySet(handle_user_task, 1);
     vTaskDelay(5000);
 
 

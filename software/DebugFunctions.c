@@ -40,10 +40,10 @@ static void ir_task(void *arg) {
     char strIR3[10];
     char strIR4[10];
     for (;;) {
-        int sensor1 = IrAnalogToMM(ir_read_blocking(distSensFwd),distSensFwd);
-        int sensor2 = IrAnalogToMM(ir_read_blocking(distSensLeft),distSensLeft);
-        int sensor3 = IrAnalogToMM(ir_read_blocking(distSensRear),distSensRear);
-        int sensor4 = IrAnalogToMM(ir_read_blocking(distSensRight),distSensRight);
+        int sensor1 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_1),IR_SENSOR_1);
+        int sensor2 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_2),IR_SENSOR_2);
+        int sensor3 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_3),IR_SENSOR_3);
+        int sensor4 = IrAnalogToMM(ir_read_blocking(IR_SENSOR_4),IR_SENSOR_4);
 
         sprintf(strIR1, "ir1: %i", sensor1); // display on screen
         display_text_on_line(2, strIR1);
@@ -135,10 +135,10 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             vTaskDelay(800); // Wait total of 200 ms for servo to reach set point
             taskYIELD();
             uint16_t sensor16[4];
-            sensor16[0] = ir_read_blocking(distSensFwd);
-            sensor16[1] = ir_read_blocking(distSensLeft);
-            sensor16[3] = ir_read_blocking(distSensRight);
-            sensor16[2] = ir_read_blocking(distSensRear);
+            sensor16[0] = ir_read_blocking(IR_SENSOR_1);
+            sensor16[1] = ir_read_blocking(IR_SENSOR_2);
+            sensor16[3] = ir_read_blocking(IR_SENSOR_3);
+            sensor16[2] = ir_read_blocking(IR_SENSOR_4);
 
 
             xSemaphoreTake(xPoseMutex, 40);
@@ -156,10 +156,11 @@ void vMainSensorCalibrationTask(void *pvParameters) {
             vServo_setAngle(90);
             vTaskDelay(1500); // Wait total of 200 ms for servo to reach set point
             taskYIELD();
-                        sensor16[0] = ir_read_blocking(distSensFwd);
-            sensor16[1] = ir_read_blocking(distSensLeft);
-            sensor16[3] = ir_read_blocking(distSensRight);
-            sensor16[2] = ir_read_blocking(distSensRear);
+			
+            sensor16[0] = ir_read_blocking(IR_SENSOR_1);
+            sensor16[1] = ir_read_blocking(IR_SENSOR_2);
+            sensor16[3] = ir_read_blocking(IR_SENSOR_3);
+            sensor16[2] = ir_read_blocking(IR_SENSOR_4);
 
 
             xSemaphoreTake(xPoseMutex, 40);

@@ -770,28 +770,28 @@ IrAnalogToMM:
 	movs	r0, #0
 .LVL64:
 .L74:
-	.loc 1 201 5 is_stmt 1 view .LVU210
-	.loc 1 201 8 is_stmt 0 view .LVU211
+	.loc 1 200 5 is_stmt 1 view .LVU210
+	.loc 1 200 8 is_stmt 0 view .LVU211
 	cmp	r4, #1
 	beq	.L81
 .L75:
-	.loc 1 204 5 is_stmt 1 view .LVU212
-	.loc 1 204 7 is_stmt 0 view .LVU213
-	cmp	r4, #3
+	.loc 1 203 5 is_stmt 1 view .LVU212
+	.loc 1 203 7 is_stmt 0 view .LVU213
+	cmp	r4, #2
 	beq	.L82
 .L76:
-	.loc 1 207 5 is_stmt 1 view .LVU214
-	.loc 1 207 8 is_stmt 0 view .LVU215
-	cmp	r4, #2
+	.loc 1 206 5 is_stmt 1 view .LVU214
+	.loc 1 206 8 is_stmt 0 view .LVU215
+	cmp	r4, #3
 	beq	.L83
 .L77:
-	.loc 1 210 5 is_stmt 1 view .LVU216
-	.loc 1 211 1 is_stmt 0 view .LVU217
+	.loc 1 209 5 is_stmt 1 view .LVU216
+	.loc 1 210 1 is_stmt 0 view .LVU217
 	cmp	r0, #1000
 	it	ge
 	movge	r0, #1000
 .LVL65:
-	.loc 1 211 1 view .LVU218
+	.loc 1 210 1 view .LVU218
 	pop	{r3, r4, r5, pc}
 .LVL66:
 .L80:
@@ -822,11 +822,11 @@ IrAnalogToMM:
 	.loc 1 198 12 view .LVU224
 	b	.L74
 .L81:
-	.loc 1 202 5 is_stmt 1 view .LVU225
-	.loc 1 202 40 is_stmt 0 view .LVU226
+	.loc 1 201 5 is_stmt 1 view .LVU225
+	.loc 1 201 40 is_stmt 0 view .LVU226
 	mov	r0, r5
 .LVL73:
-	.loc 1 202 40 view .LVU227
+	.loc 1 201 40 view .LVU227
 	bl	__aeabi_ui2d
 .LVL74:
 	vldr.64	d1, .L84+8
@@ -834,7 +834,7 @@ IrAnalogToMM:
 	bl	pow
 .LVL75:
 	vmov	r0, r1, d0
-	.loc 1 202 24 view .LVU228
+	.loc 1 201 24 view .LVU228
 	adr	r3, .L84+40
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
@@ -843,19 +843,19 @@ IrAnalogToMM:
 	bl	ceil
 .LVL77:
 	vmov	r0, r1, d0
-	.loc 1 202 12 view .LVU229
+	.loc 1 201 12 view .LVU229
 	bl	__aeabi_d2iz
 .LVL78:
 	sxth	r0, r0
 .LVL79:
-	.loc 1 202 12 view .LVU230
+	.loc 1 201 12 view .LVU230
 	b	.L75
 .L82:
-	.loc 1 205 5 is_stmt 1 view .LVU231
-	.loc 1 205 37 is_stmt 0 view .LVU232
+	.loc 1 204 5 is_stmt 1 view .LVU231
+	.loc 1 204 37 is_stmt 0 view .LVU232
 	mov	r0, r5
 .LVL80:
-	.loc 1 205 37 view .LVU233
+	.loc 1 204 37 view .LVU233
 	bl	__aeabi_ui2d
 .LVL81:
 	vldr.64	d1, .L84+16
@@ -863,7 +863,7 @@ IrAnalogToMM:
 	bl	pow
 .LVL82:
 	vmov	r0, r1, d0
-	.loc 1 205 24 view .LVU234
+	.loc 1 204 24 view .LVU234
 	adr	r3, .L84+48
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
@@ -872,19 +872,19 @@ IrAnalogToMM:
 	bl	ceil
 .LVL84:
 	vmov	r0, r1, d0
-	.loc 1 205 12 view .LVU235
+	.loc 1 204 12 view .LVU235
 	bl	__aeabi_d2iz
 .LVL85:
 	sxth	r0, r0
 .LVL86:
-	.loc 1 205 12 view .LVU236
+	.loc 1 204 12 view .LVU236
 	b	.L76
 .L83:
-	.loc 1 208 5 is_stmt 1 view .LVU237
-	.loc 1 208 39 is_stmt 0 view .LVU238
+	.loc 1 207 5 is_stmt 1 view .LVU237
+	.loc 1 207 39 is_stmt 0 view .LVU238
 	mov	r0, r5
 .LVL87:
-	.loc 1 208 39 view .LVU239
+	.loc 1 207 39 view .LVU239
 	bl	__aeabi_ui2d
 .LVL88:
 	vldr.64	d1, .L84+24
@@ -892,7 +892,7 @@ IrAnalogToMM:
 	bl	pow
 .LVL89:
 	vmov	r0, r1, d0
-	.loc 1 208 24 view .LVU240
+	.loc 1 207 24 view .LVU240
 	adr	r3, .L84+56
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
@@ -901,12 +901,12 @@ IrAnalogToMM:
 	bl	ceil
 .LVL91:
 	vmov	r0, r1, d0
-	.loc 1 208 12 view .LVU241
+	.loc 1 207 12 view .LVU241
 	bl	__aeabi_d2iz
 .LVL92:
 	sxth	r0, r0
 .LVL93:
-	.loc 1 208 12 view .LVU242
+	.loc 1 207 12 view .LVU242
 	b	.L77
 .L85:
 	.align	3
@@ -6080,10 +6080,18 @@ saadc_config:
 	.4byte	0
 	.4byte	0
 	.section	.debug_pubnames,"",%progbits
-	.4byte	0x76f
+	.4byte	0x7af
 	.2byte	0x2
 	.4byte	.Ldebug_info0
 	.4byte	0xbaa
+	.4byte	0x2b
+	.ascii	"IR_SENSOR_1\000"
+	.4byte	0x31
+	.ascii	"IR_SENSOR_2\000"
+	.4byte	0x37
+	.ascii	"IR_SENSOR_3\000"
+	.4byte	0x3d
+	.ascii	"IR_SENSOR_4\000"
 	.4byte	0x2b
 	.ascii	"NRF_SAADC_RESOLUTION_8BIT\000"
 	.4byte	0x31

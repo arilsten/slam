@@ -28,46 +28,46 @@
 i2cInit:
 .LFB277:
 	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
-	.loc 1 25 15 view -0
+	.loc 1 32 15 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, lr}
 .LCFI0:
-	.loc 1 26 7 view .LVU1
-	.loc 1 26 22 is_stmt 0 view .LVU2
+	.loc 1 33 7 view .LVU1
+	.loc 1 33 22 is_stmt 0 view .LVU2
 	movs	r0, #1
 	bl	xQueueCreateMutex
 .LVL0:
-	.loc 1 26 20 view .LVU3
+	.loc 1 33 20 view .LVU3
 	ldr	r3, .L5
 	str	r0, [r3]
-	.loc 1 27 9 is_stmt 1 view .LVU4
-	.loc 1 27 12 is_stmt 0 view .LVU5
+	.loc 1 34 9 is_stmt 1 view .LVU4
+	.loc 1 34 12 is_stmt 0 view .LVU5
 	ldr	r1, .L5+4
 	ldr	r0, .L5+8
 	bl	nrf_twi_mngr_init
 .LVL1:
-	.loc 1 27 11 view .LVU6
+	.loc 1 34 11 view .LVU6
 	cbnz	r0, .L4
 .L1:
-	.loc 1 30 1 view .LVU7
+	.loc 1 37 1 view .LVU7
 	pop	{r3, pc}
 .L4:
-	.loc 1 28 13 is_stmt 1 discriminator 3 view .LVU8
-	.loc 1 28 92 discriminator 3 view .LVU9
-	.loc 1 28 150 discriminator 3 view .LVU10
-	.loc 1 28 234 is_stmt 0 discriminator 3 view .LVU11
+	.loc 1 35 13 is_stmt 1 discriminator 3 view .LVU8
+	.loc 1 35 92 discriminator 3 view .LVU9
+	.loc 1 35 150 discriminator 3 view .LVU10
+	.loc 1 35 234 is_stmt 0 discriminator 3 view .LVU11
 	ldr	r3, .L5+12
 	ldrh	r0, [r3]
-	.loc 1 28 245 discriminator 3 view .LVU12
+	.loc 1 35 245 discriminator 3 view .LVU12
 	lsls	r0, r0, #16
-	.loc 1 28 150 discriminator 3 view .LVU13
+	.loc 1 35 150 discriminator 3 view .LVU13
 	ldr	r1, .L5+16
 	orr	r0, r0, #2
 	bl	nrf_log_frontend_std_0
 .LVL2:
-	.loc 1 28 279 is_stmt 1 discriminator 3 view .LVU14
-	.loc 1 30 1 is_stmt 0 discriminator 3 view .LVU15
+	.loc 1 35 279 is_stmt 1 discriminator 3 view .LVU14
+	.loc 1 37 1 is_stmt 0 discriminator 3 view .LVU15
 	b	.L1
 .L6:
 	.align	2
@@ -94,77 +94,77 @@ i2cInit:
 i2cSend:
 .LVL3:
 .LFB278:
-	.loc 1 32 68 is_stmt 1 view -0
+	.loc 1 39 68 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 32 68 is_stmt 0 view .LVU17
+	.loc 1 39 68 is_stmt 0 view .LVU17
 	push	{r4, r5, lr}
 .LCFI1:
 	sub	sp, sp, #20
 .LCFI2:
-	.loc 1 33 6 is_stmt 1 view .LVU18
-	.loc 1 34 7 view .LVU19
-	.loc 1 34 16 is_stmt 0 view .LVU20
+	.loc 1 40 6 is_stmt 1 view .LVU18
+	.loc 1 41 7 view .LVU19
+	.loc 1 41 16 is_stmt 0 view .LVU20
 	ldr	r4, .L14
 	strb	r1, [r4]
-	.loc 1 35 7 is_stmt 1 view .LVU21
+	.loc 1 42 7 is_stmt 1 view .LVU21
 .LBB2:
-	.loc 1 35 11 view .LVU22
+	.loc 1 42 11 view .LVU22
 .LVL4:
-	.loc 1 35 15 is_stmt 0 view .LVU23
+	.loc 1 42 15 is_stmt 0 view .LVU23
 	movs	r1, #0
 .LVL5:
 .L8:
-	.loc 1 35 20 is_stmt 1 discriminator 1 view .LVU24
-	.loc 1 35 7 is_stmt 0 discriminator 1 view .LVU25
+	.loc 1 42 20 is_stmt 1 discriminator 1 view .LVU24
+	.loc 1 42 7 is_stmt 0 discriminator 1 view .LVU25
 	cmp	r3, r1
 	ble	.L12
-	.loc 1 36 11 is_stmt 1 discriminator 3 view .LVU26
-	.loc 1 36 27 is_stmt 0 discriminator 3 view .LVU27
+	.loc 1 43 11 is_stmt 1 discriminator 3 view .LVU26
+	.loc 1 43 27 is_stmt 0 discriminator 3 view .LVU27
 	adds	r4, r2, r1
-	.loc 1 36 19 discriminator 3 view .LVU28
+	.loc 1 43 19 discriminator 3 view .LVU28
 	adds	r1, r1, #1
 .LVL6:
-	.loc 1 36 27 discriminator 3 view .LVU29
+	.loc 1 43 27 discriminator 3 view .LVU29
 	ldrb	r5, [r4]	@ zero_extendqisi2
-	.loc 1 36 22 discriminator 3 view .LVU30
+	.loc 1 43 22 discriminator 3 view .LVU30
 	ldr	r4, .L14
 	strb	r5, [r4, r1]
-	.loc 1 35 26 is_stmt 1 discriminator 3 view .LVU31
+	.loc 1 42 26 is_stmt 1 discriminator 3 view .LVU31
 .LVL7:
-	.loc 1 35 26 is_stmt 0 discriminator 3 view .LVU32
+	.loc 1 42 26 is_stmt 0 discriminator 3 view .LVU32
 	b	.L8
 .L12:
-	.loc 1 35 26 discriminator 3 view .LVU33
+	.loc 1 42 26 discriminator 3 view .LVU33
 .LBE2:
-	.loc 1 38 7 is_stmt 1 view .LVU34
-	.loc 1 38 37 is_stmt 0 view .LVU35
+	.loc 1 45 7 is_stmt 1 view .LVU34
+	.loc 1 45 37 is_stmt 0 view .LVU35
 	ldr	r2, .L14
 .LVL8:
-	.loc 1 38 37 view .LVU36
+	.loc 1 45 37 view .LVU36
 	str	r2, [sp, #8]
-	.loc 1 39 54 view .LVU37
+	.loc 1 46 54 view .LVU37
 	adds	r3, r3, #1
 .LVL9:
-	.loc 1 38 37 view .LVU38
+	.loc 1 45 37 view .LVU38
 	strb	r3, [sp, #12]
-	.loc 1 39 88 view .LVU39
+	.loc 1 46 88 view .LVU39
 	lsls	r0, r0, #1
 .LVL10:
-	.loc 1 38 37 view .LVU40
+	.loc 1 45 37 view .LVU40
 	strb	r0, [sp, #13]
 	movs	r4, #1
 	strb	r4, [sp, #14]
-	.loc 1 41 7 is_stmt 1 view .LVU41
+	.loc 1 48 7 is_stmt 1 view .LVU41
 	movs	r1, #200
 .LVL11:
-	.loc 1 41 7 is_stmt 0 view .LVU42
+	.loc 1 48 7 is_stmt 0 view .LVU42
 	ldr	r3, .L14+4
 	ldr	r0, [r3]
 	bl	xQueueSemaphoreTake
 .LVL12:
-	.loc 1 42 7 is_stmt 1 view .LVU43
-	.loc 1 42 10 is_stmt 0 view .LVU44
+	.loc 1 49 7 is_stmt 1 view .LVU43
+	.loc 1 49 10 is_stmt 0 view .LVU44
 	movs	r3, #0
 	str	r3, [sp]
 	mov	r3, r4
@@ -173,11 +173,11 @@ i2cSend:
 	ldr	r0, .L14+12
 	bl	nrf_twi_mngr_perform
 .LVL13:
-	.loc 1 42 9 view .LVU45
+	.loc 1 49 9 view .LVU45
 	cbnz	r0, .L13
 .L10:
-	.loc 1 43 277 is_stmt 1 discriminator 5 view .LVU46
-	.loc 1 45 7 discriminator 5 view .LVU47
+	.loc 1 50 277 is_stmt 1 discriminator 5 view .LVU46
+	.loc 1 52 7 discriminator 5 view .LVU47
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
@@ -185,22 +185,22 @@ i2cSend:
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL14:
-	.loc 1 46 1 is_stmt 0 discriminator 5 view .LVU48
+	.loc 1 53 1 is_stmt 0 discriminator 5 view .LVU48
 	add	sp, sp, #20
 .LCFI3:
 	@ sp needed
 	pop	{r4, r5, pc}
 .L13:
 .LCFI4:
-	.loc 1 43 11 is_stmt 1 discriminator 3 view .LVU49
-	.loc 1 43 90 discriminator 3 view .LVU50
-	.loc 1 43 148 discriminator 3 view .LVU51
-	.loc 1 43 232 is_stmt 0 discriminator 3 view .LVU52
+	.loc 1 50 11 is_stmt 1 discriminator 3 view .LVU49
+	.loc 1 50 90 discriminator 3 view .LVU50
+	.loc 1 50 148 discriminator 3 view .LVU51
+	.loc 1 50 232 is_stmt 0 discriminator 3 view .LVU52
 	ldr	r3, .L14+16
 	ldrh	r0, [r3]
-	.loc 1 43 243 discriminator 3 view .LVU53
+	.loc 1 50 243 discriminator 3 view .LVU53
 	lsls	r0, r0, #16
-	.loc 1 43 148 discriminator 3 view .LVU54
+	.loc 1 50 148 discriminator 3 view .LVU54
 	ldr	r1, .L14+20
 	orr	r0, r0, #2
 	bl	nrf_log_frontend_std_0
@@ -232,49 +232,49 @@ i2cSend:
 i2cRecive:
 .LVL16:
 .LFB279:
-	.loc 1 48 73 is_stmt 1 view -0
+	.loc 1 55 73 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 48 73 is_stmt 0 view .LVU56
+	.loc 1 55 73 is_stmt 0 view .LVU56
 	push	{r4, lr}
 .LCFI5:
 	sub	sp, sp, #32
 .LCFI6:
 	strb	r1, [sp, #15]
-	.loc 1 49 7 is_stmt 1 view .LVU57
-	.loc 1 49 37 is_stmt 0 view .LVU58
+	.loc 1 56 7 is_stmt 1 view .LVU57
+	.loc 1 56 37 is_stmt 0 view .LVU58
 	add	r1, sp, #15
 .LVL17:
-	.loc 1 49 37 view .LVU59
+	.loc 1 56 37 view .LVU59
 	str	r1, [sp, #16]
 	movs	r1, #1
 .LVL18:
-	.loc 1 49 37 view .LVU60
+	.loc 1 56 37 view .LVU60
 	strb	r1, [sp, #20]
-	.loc 1 50 82 view .LVU61
+	.loc 1 57 82 view .LVU61
 	lsls	r0, r0, r1
 .LVL19:
-	.loc 1 49 37 view .LVU62
+	.loc 1 56 37 view .LVU62
 	strb	r0, [sp, #21]
 	strb	r1, [sp, #22]
 	str	r2, [sp, #24]
 	strb	r3, [sp, #28]
-	.loc 1 51 83 view .LVU63
+	.loc 1 58 83 view .LVU63
 	orrs	r0, r0, r1
-	.loc 1 49 37 view .LVU64
+	.loc 1 56 37 view .LVU64
 	strb	r0, [sp, #29]
 	movs	r4, #0
 	strb	r4, [sp, #30]
-	.loc 1 53 7 is_stmt 1 view .LVU65
+	.loc 1 60 7 is_stmt 1 view .LVU65
 	movs	r1, #200
 	ldr	r3, .L20
 .LVL20:
-	.loc 1 53 7 is_stmt 0 view .LVU66
+	.loc 1 60 7 is_stmt 0 view .LVU66
 	ldr	r0, [r3]
 	bl	xQueueSemaphoreTake
 .LVL21:
-	.loc 1 54 7 is_stmt 1 view .LVU67
-	.loc 1 54 10 is_stmt 0 view .LVU68
+	.loc 1 61 7 is_stmt 1 view .LVU67
+	.loc 1 61 10 is_stmt 0 view .LVU68
 	str	r4, [sp]
 	movs	r3, #2
 	add	r2, sp, #16
@@ -282,11 +282,11 @@ i2cRecive:
 	ldr	r0, .L20+8
 	bl	nrf_twi_mngr_perform
 .LVL22:
-	.loc 1 54 9 view .LVU69
+	.loc 1 61 9 view .LVU69
 	cbnz	r0, .L19
 .L17:
-	.loc 1 55 279 is_stmt 1 discriminator 5 view .LVU70
-	.loc 1 57 7 discriminator 5 view .LVU71
+	.loc 1 62 279 is_stmt 1 discriminator 5 view .LVU70
+	.loc 1 64 7 discriminator 5 view .LVU71
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
@@ -294,22 +294,22 @@ i2cRecive:
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL23:
-	.loc 1 58 1 is_stmt 0 discriminator 5 view .LVU72
+	.loc 1 65 1 is_stmt 0 discriminator 5 view .LVU72
 	add	sp, sp, #32
 .LCFI7:
 	@ sp needed
 	pop	{r4, pc}
 .L19:
 .LCFI8:
-	.loc 1 55 11 is_stmt 1 discriminator 3 view .LVU73
-	.loc 1 55 90 discriminator 3 view .LVU74
-	.loc 1 55 148 discriminator 3 view .LVU75
-	.loc 1 55 232 is_stmt 0 discriminator 3 view .LVU76
+	.loc 1 62 11 is_stmt 1 discriminator 3 view .LVU73
+	.loc 1 62 90 discriminator 3 view .LVU74
+	.loc 1 62 148 discriminator 3 view .LVU75
+	.loc 1 62 232 is_stmt 0 discriminator 3 view .LVU76
 	ldr	r3, .L20+12
 	ldrh	r0, [r3]
-	.loc 1 55 243 discriminator 3 view .LVU77
+	.loc 1 62 243 discriminator 3 view .LVU77
 	lsls	r0, r0, #16
-	.loc 1 55 148 discriminator 3 view .LVU78
+	.loc 1 62 148 discriminator 3 view .LVU78
 	ldr	r1, .L20+16
 	orr	r0, r0, #2
 	bl	nrf_log_frontend_std_0
@@ -340,35 +340,35 @@ i2cRecive:
 i2cSendNOADDR:
 .LVL25:
 .LFB280:
-	.loc 1 60 63 is_stmt 1 view -0
+	.loc 1 67 63 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 60 63 is_stmt 0 view .LVU80
+	.loc 1 67 63 is_stmt 0 view .LVU80
 	push	{r4, lr}
 .LCFI9:
 	sub	sp, sp, #16
 .LCFI10:
-	.loc 1 61 7 is_stmt 1 view .LVU81
-	.loc 1 61 37 is_stmt 0 view .LVU82
+	.loc 1 68 7 is_stmt 1 view .LVU81
+	.loc 1 68 37 is_stmt 0 view .LVU82
 	str	r1, [sp, #8]
 	strb	r2, [sp, #12]
-	.loc 1 62 83 view .LVU83
+	.loc 1 69 83 view .LVU83
 	lsls	r0, r0, #1
 .LVL26:
-	.loc 1 61 37 view .LVU84
+	.loc 1 68 37 view .LVU84
 	strb	r0, [sp, #13]
 	movs	r4, #1
 	strb	r4, [sp, #14]
-	.loc 1 64 7 is_stmt 1 view .LVU85
+	.loc 1 71 7 is_stmt 1 view .LVU85
 	movs	r1, #200
 .LVL27:
-	.loc 1 64 7 is_stmt 0 view .LVU86
+	.loc 1 71 7 is_stmt 0 view .LVU86
 	ldr	r3, .L26
 	ldr	r0, [r3]
 	bl	xQueueSemaphoreTake
 .LVL28:
-	.loc 1 65 7 is_stmt 1 view .LVU87
-	.loc 1 65 10 is_stmt 0 view .LVU88
+	.loc 1 72 7 is_stmt 1 view .LVU87
+	.loc 1 72 10 is_stmt 0 view .LVU88
 	movs	r3, #0
 	str	r3, [sp]
 	mov	r3, r4
@@ -377,11 +377,11 @@ i2cSendNOADDR:
 	ldr	r0, .L26+8
 	bl	nrf_twi_mngr_perform
 .LVL29:
-	.loc 1 65 9 view .LVU89
+	.loc 1 72 9 view .LVU89
 	cbnz	r0, .L25
 .L23:
-	.loc 1 66 282 is_stmt 1 discriminator 5 view .LVU90
-	.loc 1 68 7 discriminator 5 view .LVU91
+	.loc 1 73 282 is_stmt 1 discriminator 5 view .LVU90
+	.loc 1 75 7 discriminator 5 view .LVU91
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
@@ -389,22 +389,22 @@ i2cSendNOADDR:
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL30:
-	.loc 1 69 1 is_stmt 0 discriminator 5 view .LVU92
+	.loc 1 76 1 is_stmt 0 discriminator 5 view .LVU92
 	add	sp, sp, #16
 .LCFI11:
 	@ sp needed
 	pop	{r4, pc}
 .L25:
 .LCFI12:
-	.loc 1 66 11 is_stmt 1 discriminator 3 view .LVU93
-	.loc 1 66 90 discriminator 3 view .LVU94
-	.loc 1 66 148 discriminator 3 view .LVU95
-	.loc 1 66 232 is_stmt 0 discriminator 3 view .LVU96
+	.loc 1 73 11 is_stmt 1 discriminator 3 view .LVU93
+	.loc 1 73 90 discriminator 3 view .LVU94
+	.loc 1 73 148 discriminator 3 view .LVU95
+	.loc 1 73 232 is_stmt 0 discriminator 3 view .LVU96
 	ldr	r3, .L26+12
 	ldrh	r0, [r3]
-	.loc 1 66 243 discriminator 3 view .LVU97
+	.loc 1 73 243 discriminator 3 view .LVU97
 	lsls	r0, r0, #16
-	.loc 1 66 148 discriminator 3 view .LVU98
+	.loc 1 73 148 discriminator 3 view .LVU98
 	ldr	r1, .L26+16
 	orr	r0, r0, #2
 	bl	nrf_log_frontend_std_0
@@ -435,37 +435,37 @@ i2cSendNOADDR:
 i2cReciveNOADDR:
 .LVL32:
 .LFB281:
-	.loc 1 71 65 is_stmt 1 view -0
+	.loc 1 78 65 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 71 65 is_stmt 0 view .LVU100
+	.loc 1 78 65 is_stmt 0 view .LVU100
 	push	{r4, lr}
 .LCFI13:
 	sub	sp, sp, #16
 .LCFI14:
-	.loc 1 72 7 is_stmt 1 view .LVU101
-	.loc 1 72 37 is_stmt 0 view .LVU102
+	.loc 1 79 7 is_stmt 1 view .LVU101
+	.loc 1 79 37 is_stmt 0 view .LVU102
 	str	r1, [sp, #8]
 	strb	r2, [sp, #12]
-	.loc 1 73 77 view .LVU103
+	.loc 1 80 77 view .LVU103
 	lsls	r0, r0, #1
 .LVL33:
-	.loc 1 73 83 view .LVU104
+	.loc 1 80 83 view .LVU104
 	orr	r0, r0, #1
-	.loc 1 72 37 view .LVU105
+	.loc 1 79 37 view .LVU105
 	strb	r0, [sp, #13]
 	movs	r4, #0
 	strb	r4, [sp, #14]
-	.loc 1 75 7 is_stmt 1 view .LVU106
+	.loc 1 82 7 is_stmt 1 view .LVU106
 	movs	r1, #200
 .LVL34:
-	.loc 1 75 7 is_stmt 0 view .LVU107
+	.loc 1 82 7 is_stmt 0 view .LVU107
 	ldr	r3, .L32
 	ldr	r0, [r3]
 	bl	xQueueSemaphoreTake
 .LVL35:
-	.loc 1 76 7 is_stmt 1 view .LVU108
-	.loc 1 76 10 is_stmt 0 view .LVU109
+	.loc 1 83 7 is_stmt 1 view .LVU108
+	.loc 1 83 10 is_stmt 0 view .LVU109
 	str	r4, [sp]
 	movs	r3, #1
 	add	r2, sp, #8
@@ -473,11 +473,11 @@ i2cReciveNOADDR:
 	ldr	r0, .L32+8
 	bl	nrf_twi_mngr_perform
 .LVL36:
-	.loc 1 76 9 view .LVU110
+	.loc 1 83 9 view .LVU110
 	cbnz	r0, .L31
 .L29:
-	.loc 1 77 284 is_stmt 1 discriminator 5 view .LVU111
-	.loc 1 79 7 discriminator 5 view .LVU112
+	.loc 1 84 284 is_stmt 1 discriminator 5 view .LVU111
+	.loc 1 86 7 discriminator 5 view .LVU112
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
@@ -485,22 +485,22 @@ i2cReciveNOADDR:
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL37:
-	.loc 1 80 1 is_stmt 0 discriminator 5 view .LVU113
+	.loc 1 87 1 is_stmt 0 discriminator 5 view .LVU113
 	add	sp, sp, #16
 .LCFI15:
 	@ sp needed
 	pop	{r4, pc}
 .L31:
 .LCFI16:
-	.loc 1 77 11 is_stmt 1 discriminator 3 view .LVU114
-	.loc 1 77 90 discriminator 3 view .LVU115
-	.loc 1 77 148 discriminator 3 view .LVU116
-	.loc 1 77 232 is_stmt 0 discriminator 3 view .LVU117
+	.loc 1 84 11 is_stmt 1 discriminator 3 view .LVU114
+	.loc 1 84 90 discriminator 3 view .LVU115
+	.loc 1 84 148 discriminator 3 view .LVU116
+	.loc 1 84 232 is_stmt 0 discriminator 3 view .LVU117
 	ldr	r3, .L32+12
 	ldrh	r0, [r3]
-	.loc 1 77 243 discriminator 3 view .LVU118
+	.loc 1 84 243 discriminator 3 view .LVU118
 	lsls	r0, r0, #16
-	.loc 1 77 148 discriminator 3 view .LVU119
+	.loc 1 84 148 discriminator 3 view .LVU119
 	ldr	r1, .L32+16
 	orr	r0, r0, #2
 	bl	nrf_log_frontend_std_0
@@ -526,12 +526,12 @@ i2cReciveNOADDR:
 	.type	getTWIManagerAddress, %function
 getTWIManagerAddress:
 .LFB282:
-	.loc 1 83 45 is_stmt 1 view -0
+	.loc 1 90 45 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-	.loc 1 84 9 view .LVU121
-	.loc 1 85 1 is_stmt 0 view .LVU122
+	.loc 1 91 9 view .LVU121
+	.loc 1 92 1 is_stmt 0 view .LVU122
 	ldr	r0, .L35
 	bx	lr
 .L36:
@@ -550,12 +550,12 @@ getTWIManagerAddress:
 	.type	getBusConfig, %function
 getBusConfig:
 .LFB283:
-	.loc 1 87 43 is_stmt 1 view -0
+	.loc 1 94 43 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	@ link register save eliminated.
-	.loc 1 88 9 view .LVU124
-	.loc 1 89 1 is_stmt 0 view .LVU125
+	.loc 1 95 9 view .LVU124
+	.loc 1 96 1 is_stmt 0 view .LVU125
 	ldr	r0, .L38
 	bx	lr
 .L39:
@@ -4543,7 +4543,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2b
 	.4byte	.LASF241
 	.byte	0x1
-	.byte	0xb
+	.byte	0x12
 	.byte	0x13
 	.4byte	0x405
 	.uleb128 0x5
@@ -4552,7 +4552,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF242
 	.byte	0x1
-	.byte	0xc
+	.byte	0x13
 	.byte	0x1d
 	.4byte	0x3c5
 	.uleb128 0x5
@@ -4568,7 +4568,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF243
 	.byte	0x1
-	.byte	0xe
+	.byte	0x15
 	.byte	0x2b
 	.4byte	0x442
 	.uleb128 0x5
@@ -4577,7 +4577,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF244
 	.byte	0x1
-	.byte	0xe
+	.byte	0x15
 	.byte	0x73
 	.4byte	0x34a
 	.uleb128 0x5
@@ -4586,7 +4586,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2b
 	.4byte	.LASF245
 	.byte	0x1
-	.byte	0xe
+	.byte	0x15
 	.byte	0xb8
 	.4byte	0x345
 	.uleb128 0x5
@@ -4595,7 +4595,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2d
 	.4byte	.LASF246
 	.byte	0x1
-	.byte	0xe
+	.byte	0x15
 	.2byte	0x244
 	.4byte	0x325
 	.uleb128 0x5
@@ -4604,7 +4604,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2d
 	.4byte	.LASF247
 	.byte	0x1
-	.byte	0xe
+	.byte	0x15
 	.2byte	0x2f1
 	.4byte	0x36a
 	.uleb128 0x5
@@ -4613,7 +4613,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2e
 	.4byte	.LASF248
 	.byte	0x1
-	.byte	0xe
+	.byte	0x15
 	.2byte	0x477
 	.4byte	0x3a5
 	.uleb128 0x5
@@ -4622,7 +4622,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF249
 	.byte	0x1
-	.byte	0x10
+	.byte	0x17
 	.byte	0x23
 	.4byte	0x310
 	.uleb128 0x5
@@ -4631,7 +4631,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2f
 	.4byte	.LASF250
 	.byte	0x1
-	.byte	0x57
+	.byte	0x5e
 	.byte	0x1d
 	.4byte	0x384
 	.4byte	.LFB283
@@ -4641,7 +4641,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2f
 	.4byte	.LASF251
 	.byte	0x1
-	.byte	0x53
+	.byte	0x5a
 	.byte	0x17
 	.4byte	0x4ff
 	.4byte	.LFB282
@@ -4654,7 +4654,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x30
 	.4byte	.LASF254
 	.byte	0x1
-	.byte	0x47
+	.byte	0x4e
 	.byte	0x6
 	.4byte	.LFB281
 	.4byte	.LFE281-.LFB281
@@ -4664,7 +4664,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF252
 	.byte	0x1
-	.byte	0x47
+	.byte	0x4e
 	.byte	0x1e
 	.4byte	0x30
 	.4byte	.LLST12
@@ -4672,7 +4672,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF147
 	.byte	0x1
-	.byte	0x47
+	.byte	0x4e
 	.byte	0x2f
 	.4byte	0x298
 	.4byte	.LLST13
@@ -4680,7 +4680,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x32
 	.ascii	"len\000"
 	.byte	0x1
-	.byte	0x47
+	.byte	0x4e
 	.byte	0x3d
 	.4byte	0x30
 	.4byte	.LLST14
@@ -4688,7 +4688,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF253
 	.byte	0x1
-	.byte	0x48
+	.byte	0x4f
 	.byte	0x25
 	.4byte	0x5f0
 	.uleb128 0x2
@@ -4786,7 +4786,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x30
 	.4byte	.LASF255
 	.byte	0x1
-	.byte	0x3c
+	.byte	0x43
 	.byte	0x6
 	.4byte	.LFB280
 	.4byte	.LFE280-.LFB280
@@ -4796,7 +4796,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF252
 	.byte	0x1
-	.byte	0x3c
+	.byte	0x43
 	.byte	0x1c
 	.4byte	0x30
 	.4byte	.LLST9
@@ -4804,7 +4804,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF147
 	.byte	0x1
-	.byte	0x3c
+	.byte	0x43
 	.byte	0x2d
 	.4byte	0x298
 	.4byte	.LLST10
@@ -4812,7 +4812,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x32
 	.ascii	"len\000"
 	.byte	0x1
-	.byte	0x3c
+	.byte	0x43
 	.byte	0x3b
 	.4byte	0x30
 	.4byte	.LLST11
@@ -4820,7 +4820,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF256
 	.byte	0x1
-	.byte	0x3d
+	.byte	0x44
 	.byte	0x25
 	.4byte	0x5f0
 	.uleb128 0x2
@@ -4906,7 +4906,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x30
 	.4byte	.LASF257
 	.byte	0x1
-	.byte	0x30
+	.byte	0x37
 	.byte	0x6
 	.4byte	.LFB279
 	.4byte	.LFE279-.LFB279
@@ -4916,7 +4916,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF252
 	.byte	0x1
-	.byte	0x30
+	.byte	0x37
 	.byte	0x18
 	.4byte	0x30
 	.4byte	.LLST5
@@ -4924,7 +4924,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF258
 	.byte	0x1
-	.byte	0x30
+	.byte	0x37
 	.byte	0x28
 	.4byte	0x30
 	.4byte	.LLST6
@@ -4932,7 +4932,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF147
 	.byte	0x1
-	.byte	0x30
+	.byte	0x37
 	.byte	0x37
 	.4byte	0x298
 	.4byte	.LLST7
@@ -4940,7 +4940,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x32
 	.ascii	"len\000"
 	.byte	0x1
-	.byte	0x30
+	.byte	0x37
 	.byte	0x45
 	.4byte	0x30
 	.4byte	.LLST8
@@ -4948,7 +4948,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF253
 	.byte	0x1
-	.byte	0x31
+	.byte	0x38
 	.byte	0x25
 	.4byte	0x7cc
 	.uleb128 0x2
@@ -5046,7 +5046,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x30
 	.4byte	.LASF259
 	.byte	0x1
-	.byte	0x20
+	.byte	0x27
 	.byte	0x6
 	.4byte	.LFB278
 	.4byte	.LFE278-.LFB278
@@ -5056,7 +5056,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF252
 	.byte	0x1
-	.byte	0x20
+	.byte	0x27
 	.byte	0x16
 	.4byte	0x30
 	.4byte	.LLST0
@@ -5064,7 +5064,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF258
 	.byte	0x1
-	.byte	0x20
+	.byte	0x27
 	.byte	0x25
 	.4byte	0x30
 	.4byte	.LLST1
@@ -5072,7 +5072,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x31
 	.4byte	.LASF147
 	.byte	0x1
-	.byte	0x20
+	.byte	0x27
 	.byte	0x33
 	.4byte	0x298
 	.4byte	.LLST2
@@ -5080,7 +5080,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x32
 	.ascii	"len\000"
 	.byte	0x1
-	.byte	0x20
+	.byte	0x27
 	.byte	0x40
 	.4byte	0x30
 	.4byte	.LLST3
@@ -5088,7 +5088,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF260
 	.byte	0x1
-	.byte	0x21
+	.byte	0x28
 	.byte	0x15
 	.4byte	0x3e9
 	.uleb128 0x5
@@ -5097,7 +5097,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x2c
 	.4byte	.LASF256
 	.byte	0x1
-	.byte	0x26
+	.byte	0x2d
 	.byte	0x25
 	.4byte	0x5f0
 	.uleb128 0x2
@@ -5110,7 +5110,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x37
 	.ascii	"i\000"
 	.byte	0x1
-	.byte	0x23
+	.byte	0x2a
 	.byte	0xf
 	.4byte	0x67
 	.4byte	.LLST4
@@ -5196,7 +5196,7 @@ m_nrf_twi_mngr:
 	.uleb128 0x38
 	.4byte	.LASF270
 	.byte	0x1
-	.byte	0x19
+	.byte	0x20
 	.byte	0x6
 	.4byte	.LFB277
 	.4byte	.LFE277-.LFB277
@@ -6659,10 +6659,10 @@ m_nrf_twi_mngr:
 	.uleb128 0x1
 	.file 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h"
 	.byte	0x3
-	.uleb128 0x1
+	.uleb128 0x8
 	.uleb128 0x18
 	.byte	0x3
-	.uleb128 0x1
+	.uleb128 0xb
 	.uleb128 0x2
 	.byte	0x3
 	.uleb128 0x2b
@@ -6936,7 +6936,7 @@ m_nrf_twi_mngr:
 	.byte	0x4
 	.file 61 "../../../../../../external/freertos/source/include/freeRTOS.h"
 	.byte	0x3
-	.uleb128 0x2
+	.uleb128 0x9
 	.uleb128 0x3d
 	.file 62 "../../../config/FreeRTOSConfig.h"
 	.byte	0x3
@@ -6999,7 +6999,7 @@ m_nrf_twi_mngr:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
-	.uleb128 0x3
+	.uleb128 0xa
 	.uleb128 0x16
 	.byte	0x3
 	.uleb128 0x24
@@ -7008,7 +7008,7 @@ m_nrf_twi_mngr:
 	.byte	0x4
 	.file 73 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 	.byte	0x3
-	.uleb128 0x5
+	.uleb128 0xc
 	.uleb128 0x49
 	.file 74 "../../../../../../components/libraries/util/sdk_common.h"
 	.byte	0x3
@@ -7045,7 +7045,7 @@ m_nrf_twi_mngr:
 	.byte	0x4
 	.file 78 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
 	.byte	0x3
-	.uleb128 0x6
+	.uleb128 0xd
 	.uleb128 0x4e
 	.file 79 "../../../../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h"
 	.byte	0x3

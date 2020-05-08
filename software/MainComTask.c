@@ -1,5 +1,5 @@
 /***************************************************************************/
-// File:            MainComTask.h											//
+// File:            MainComTask.c											//
 // Author:          Stenset, Spring 2020									//
 // Purpose:         Keep the main communication task and its functions		//
 //					in its own source file, previously located in main.c	//
@@ -17,8 +17,11 @@
 #include "globals.h"
 #include "nrf_log.h"
 #include "i2c.h"
+#include "functions.h"
+#include "display.h"
+#include "math.h"
 
-int16_t collisionAngles[NUM_DIST_SENSORS] = {200}; // Just to be above 360 degrees
+int16_t collisionAngles[NUM_DIST_SENSORS] = {200}; // Just to be above 180 degrees
 
 message_t message_in;
 
@@ -109,11 +112,9 @@ void vMainCommunicationTask(void *pvParameters){
 		}
 	}
 	else{ // If NRF52840 Dongle used with thread and C++ server
-		counter++;
 		uint8_t message[5] = {0};
 		int16_t oldwaypoint[2] = {0};
 		int16_t waypoint[2] = {0};
-		int16_t collAngles[NUM_DIST_SENSORS];
 		
 		while(true){
 			i2cReciveNOADDR(I2C_DEVICE_DONGLE, &message, 5);
@@ -137,36 +138,26 @@ void vMainCommunicationTask(void *pvParameters){
 					waypoint[0] = *((int16_t*)&message[1]);
 					waypoint[1] = *((int16_t*)&message[3]);
 					
-					/*
-					xSemaphoreTake(xCollisionMutex, 20);
-					memcpy(&collAngles, &collisionAngles, sizeof(collisionAngles));
-					xSemaphoreGive(xCollisionMutex);
+					int16_t wpAngle = atan2(waypoint[1], waypoint[0])*RAD2DEG;
+					bool isvalidWaypoint = validWaypoint(wpAngle);
 					
-					if(counter > 100){
-						NRF_LOG_INFO("CollAngleSens1: %i", (int)collAngles[0]);
-						NRF_LOG_INFO("CollAngleSens2: %i", (int)collAngles[1]);
-						NRF_LOG_INFO("CollAngleSens3: %i", (int)collAngles[2]);
-						NRF_LOG_INFO("CollAngleSens4: %i", (int)collAngles[3]);
-						counter = 0;
+					if(isvalidWaypoint == false){
+						display_text_on_line(3, "Discarded WP");
+						NRF_LOG_INFO("WP not valid");
+					}else{
+						display_text_on_line(3, "");
+						NRF_LOG_INFO("WP valid");
 					}
-					*/
 					
-					//bool validWaypoint = checkWaypoint(int x, int y);
-					
-					// Add functionality to check if the new waypoint is valid
-					if(oldwaypoint[0] != waypoint[0] || oldwaypoint[1] != waypoint[1]){
+					if((oldwaypoint[0] != waypoint[0] || oldwaypoint[1] != waypoint[1])){
+						
 						struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
 						xQueueSend(poseControllerQ, &target, 100);
-					}
-					if(counter > 300){
-						NRF_LOG_INFO("Just got a new waypoint");
 					}
 					break;
 			
 				default:
-					if(counter > 300){
-						NRF_LOG_INFO("Unknown message type from server. Type: %i", (int)message[0]);
-					}
+					break;
 			}
 				
 			vTaskDelay(100);

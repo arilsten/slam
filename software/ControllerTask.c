@@ -33,8 +33,8 @@ void vMainPoseControllerTask(void *pvParameters) {
     /* Controller variables for tuning */
     float rotateThreshold = 10.0 * DEG2RAD; // [rad] The threshold at which the robot will go from driving to rotation.
     float driveThreshold = 2.0 * DEG2RAD;   // [rad ]The threshold at which the robot will go from rotation to driving.
-    float driveKp = 200;                    // Proportional gain for theta control during drive
-    float driveKi = 1;                      // Integral gain for theta during drive
+    float driveKp = 200;                    // Was 200 before 07.05.2020. 20 good. Proportional gain for theta control during drive
+    float driveKi = 1;                      // Was 1 before 07.05.2020 2 good. Integral gain for theta during drive
     float speedDecreaseThreshold = 300;     // [mm] Distance from goal where the robot will decrease its speed inverse proportionally
     float speedIncreaseThreshold = 100;     // [mm] Distance from start of movement where the speed increases to avoid spinning
 
@@ -180,7 +180,7 @@ void vMainPoseControllerTask(void *pvParameters) {
                     speedIncreaseThreshold = 100;
                 }
 
-                if (distance > radiusEpsilon && !controllerStop) { //Not close enough to target
+                if (distance > radiusEpsilon && !controllerStop) { //Not close enough to target and controller not running
                     //Simple speed controller as the robot nears the target
                     idleSendt = false;
                     if (doneTurning) { //Start forward movement
@@ -242,10 +242,11 @@ void vMainPoseControllerTask(void *pvParameters) {
                         float thetaMid = thetaTurn*0.75;
                         float thetaPastMid = thetahat-thetaMid;
                         vFunc_Inf2pi(&thetaPastMid);
-                        float kp = 100;
-                        float ki = 80;
-                        float kd = 200;
-                        
+                        float kp = 100;	//Was 100 before 07.05.2020. 50 bad, 
+										//25/80/200 ok, 15/80/100 bad, 15/80/50 bad, 15/40/100 bad, 15/40/200 bad, 10/10/10 good, 10/20/10 bad
+                        float ki = 80;	//Was 80 before 07.05.2020. 
+                        float kd = 200;	//Was 200 before 07.05.2020 //Has been tested: 200good, 300 bad, 400 bad, 100 bad, 
+						
                         float rp = 0;
                         float ri = 0;
                         float rd = 0;

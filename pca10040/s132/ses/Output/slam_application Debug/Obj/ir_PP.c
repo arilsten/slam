@@ -6585,17 +6585,16 @@ int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor){
 
     int16_t result = 0;
 
-    if(sensor==0){
+    if(sensor == IR_SENSOR_1){
     result = (int16_t) ceil((117168.0*pow(reading,-0.91)));
     }
-
-    if (sensor==1){
+    if (sensor == IR_SENSOR_2){
     result = (int16_t) ceil( (548401.0*pow(reading,-1.137)));
     }
-    if(sensor==3){
+    if(sensor == IR_SENSOR_3){
     result = (int16_t) ceil((219347*pow(reading,-1)));
     }
-    if (sensor == 2){
+    if (sensor == IR_SENSOR_4){
     result = (int16_t) ceil((206247.0*pow(reading,-0.995)));
     }
     return ((result) < (1000) ? (result) : (1000));

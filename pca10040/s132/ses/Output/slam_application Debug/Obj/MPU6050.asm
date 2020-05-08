@@ -3296,13 +3296,13 @@ IMU_COPY:
 	.4byte	.LASF141
 	.4byte	.LASF141
 	.byte	0xb
-	.byte	0x6
+	.byte	0xf
 	.byte	0x6
 	.uleb128 0x2d
 	.4byte	.LASF142
 	.4byte	.LASF142
 	.byte	0xb
-	.byte	0x5
+	.byte	0xe
 	.byte	0x6
 	.byte	0
 	.section	.debug_abbrev,"",%progbits
@@ -4682,7 +4682,7 @@ IMU_COPY:
 	.uleb128 0xb
 	.file 12 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
 	.byte	0x3
-	.uleb128 0x1
+	.uleb128 0xb
 	.uleb128 0xc
 	.file 13 "../../../../../../integration/nrfx/legacy/nrf_drv_twi.h"
 	.byte	0x3

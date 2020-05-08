@@ -7933,9 +7933,7 @@ nrf_log_severity_t nrf_log_module_filter_get(uint32_t backend_id,
                                                      dynamic);
 # 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\mag3110.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 1
-
-
-
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h"
 void i2cInit();
 void i2cRecive(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
 void i2cSend(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);

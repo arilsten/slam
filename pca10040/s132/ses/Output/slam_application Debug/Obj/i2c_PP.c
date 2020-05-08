@@ -3,7 +3,15 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+
+
+
+
+
+
+
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 1
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h"
 # 1 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h" 1
 # 43 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdint.h" 1 3 4
@@ -6875,8 +6883,7 @@ static inline
 # 330 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
                                                                            );
 }
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 2
-
+# 12 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 2
 
 void i2cInit();
 void i2cRecive(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
@@ -6885,7 +6892,7 @@ void i2cSendNOADDR(uint8_t device,uint8_t* data,uint8_t len);
 void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len);
 const nrf_twi_mngr_t* getTWIManagerAddress();
 const nrf_drv_twi_config_t* getBusConfig();
-# 2 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
+# 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
 # 1 "../../../../../../external/freertos/source/include/freeRTOS.h" 1
 # 57 "../../../../../../external/freertos/source/include/freeRTOS.h"
 # 1 "../../../config/FreeRTOSConfig.h" 1
@@ -7314,7 +7321,7 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 3 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
+# 10 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
@@ -7417,7 +7424,7 @@ uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 4 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
+# 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
 
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
@@ -7566,7 +7573,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 6 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h" 1
 # 58 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
 # 1 "../../../../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h" 1
@@ -8024,7 +8031,7 @@ nrf_log_severity_t nrf_log_module_filter_get(uint32_t backend_id,
                                             _Bool 
 # 216 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
                                                      dynamic);
-# 7 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
+# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 2
 
 
 
@@ -8033,9 +8040,9 @@ SemaphoreHandle_t i2cSemaphore;
 static const nrf_twi_mngr_t m_nrf_twi_mngr;
 
 static nrf_twi_mngr_transaction_t const * m_nrf_twi_mngr_queue_nrf_queue_buffer[((5)) + 1]; static nrf_queue_cb_t m_nrf_twi_mngr_queue_nrf_queue_cb; const nrf_log_module_const_data_t m_nrf_log_queue_m_nrf_twi_mngr_queue_logs_data_const __attribute__ ((section("." "log_const_data_queue_m_nrf_twi_mngr_queue"))) __attribute__((used)) = { .p_module_name = "queue.m_nrf_twi_mngr_queue", .info_color_id = (0), .debug_color_id = (0), .compiled_lvl = (nrf_log_severity_t)(0 ? 3 : NRF_LOG_SEVERITY_NONE), .initial_lvl = (nrf_log_severity_t)(3), }; nrf_log_module_reduced_dynamic_data_t m_nrf_log_queue_m_nrf_twi_mngr_queue_logs_data_dynamic __attribute__ ((section("." "log_dynamic_data_queue_m_nrf_twi_mngr_queue"))) __attribute__((used)); const nrf_queue_t m_nrf_twi_mngr_queue __attribute__ ((section("." "nrf_queue"))) __attribute__((used)) = { .p_cb = &m_nrf_twi_mngr_queue_nrf_queue_cb, .p_buffer = m_nrf_twi_mngr_queue_nrf_queue_buffer, .size = ((5)), .element_size = sizeof(nrf_twi_mngr_transaction_t const *), .mode = NRF_QUEUE_MODE_NO_OVERFLOW, .p_log = &m_nrf_log_queue_m_nrf_twi_mngr_queue_logs_data_dynamic, }; static nrf_twi_mngr_cb_t m_nrf_twi_mngr_cb; static const nrf_twi_mngr_t m_nrf_twi_mngr = { .p_nrf_twi_mngr_cb = &m_nrf_twi_mngr_cb, .p_queue = &m_nrf_twi_mngr_queue, .twi = { 1, { .twi = { .p_twi = ((NRF_TWI_Type *) 0x40004000UL), .drv_inst_idx = NRFX_TWI1_INST_IDX, } }, 
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
 0 
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
 } };
 
 static nrf_drv_twi_config_t const bus_config = {
@@ -8044,10 +8051,10 @@ static nrf_drv_twi_config_t const bus_config = {
    .frequency = NRF_DRV_TWI_FREQ_400K,
    .interrupt_priority = APP_IRQ_PRIORITY_LOWEST,
    .clear_bus_init = 
-# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 28 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
                         0
 
-# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
 };
 
 
@@ -8069,16 +8076,16 @@ void i2cSend(uint8_t device,uint8_t addr,uint8_t* data,uint8_t len){
       };
       xQueueSemaphoreTake( ( i2cSemaphore ), ( 200 ) );
       if(nrf_twi_mngr_perform(&m_nrf_twi_mngr, &bus_config, SendTransfer,1,
-# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
                                                                           0
-# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
                                                                               ) != ((0x0) + 0)){
           if (1 && (3 >= NRF_LOG_SEVERITY_WARNING) && (NRF_LOG_SEVERITY_WARNING <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_WARNING) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_WARNING) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "I2C send failed!\n"); } };
       }
       xQueueGenericSend( ( QueueHandle_t ) ( i2cSemaphore ), 
-# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 52 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
      0
-# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 52 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
      , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 
@@ -8089,16 +8096,16 @@ void i2cRecive(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len){
       };
       xQueueSemaphoreTake( ( i2cSemaphore ), ( 200 ) );
       if(nrf_twi_mngr_perform(&m_nrf_twi_mngr, &bus_config, ReciveTransfer, 2, 
-# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
                                                                               0
-# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
                                                                                   ) != ((0x0) + 0)){
           if (1 && (3 >= NRF_LOG_SEVERITY_WARNING) && (NRF_LOG_SEVERITY_WARNING <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_WARNING) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_WARNING) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "I2C recive failed!\n"); } };
       }
       xQueueGenericSend( ( QueueHandle_t ) ( i2cSemaphore ), 
-# 57 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
      0
-# 57 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
      , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 
@@ -8108,16 +8115,16 @@ void i2cSendNOADDR(uint8_t device, uint8_t* data, uint8_t len){
       };
       xQueueSemaphoreTake( ( i2cSemaphore ), ( 200 ) );
       if(nrf_twi_mngr_perform(&m_nrf_twi_mngr, &bus_config, SendTransfer,1,
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
                                                                           0
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
                                                                               ) != ((0x0) + 0)){
           if (1 && (3 >= NRF_LOG_SEVERITY_WARNING) && (NRF_LOG_SEVERITY_WARNING <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_WARNING) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_WARNING) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "I2CsendNOADDR failed!\n"); } };
       }
       xQueueGenericSend( ( QueueHandle_t ) ( i2cSemaphore ), 
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
      0
-# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
      , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 
@@ -8127,16 +8134,16 @@ void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len){
       };
       xQueueSemaphoreTake( ( i2cSemaphore ), ( 200 ) );
       if(nrf_twi_mngr_perform(&m_nrf_twi_mngr, &bus_config, ReciveTransfer, 1, 
-# 76 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 83 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
                                                                               0
-# 76 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 83 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
                                                                                   ) != ((0x0) + 0)){
           if (1 && (3 >= NRF_LOG_SEVERITY_WARNING) && (NRF_LOG_SEVERITY_WARNING <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_WARNING) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_WARNING) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "I2CreciveNOADDR failed!\n"); } };
       }
       xQueueGenericSend( ( QueueHandle_t ) ( i2cSemaphore ), 
-# 79 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
+# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c" 3 4
      0
-# 79 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
+# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.c"
      , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 

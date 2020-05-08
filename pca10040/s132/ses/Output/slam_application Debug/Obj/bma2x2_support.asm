@@ -2811,13 +2811,13 @@ delay_bytecode.8394:
 	.4byte	.LASF174
 	.4byte	.LASF174
 	.byte	0x11
-	.byte	0x5
+	.byte	0xe
 	.byte	0x6
 	.uleb128 0x39
 	.4byte	.LASF175
 	.4byte	.LASF175
 	.byte	0x11
-	.byte	0x6
+	.byte	0xf
 	.byte	0x6
 	.byte	0
 	.section	.debug_abbrev,"",%progbits

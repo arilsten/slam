@@ -7962,9 +7962,7 @@ static inline void nrf_delay_ms(uint32_t ms_time)
 }
 # 8 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\bma2x2_support.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h" 1
-
-
-
+# 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\i2c.h"
 void i2cInit();
 void i2cRecive(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
 void i2cSend(uint8_t device, uint8_t addr, uint8_t* data, uint8_t len);
