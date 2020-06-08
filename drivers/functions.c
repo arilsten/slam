@@ -18,85 +18,102 @@ uint8_t collisionCounter;
 
 /* Take any angle and put it inside -PI, PI */
 void vFunc_Inf2pi(float *angle_in_radians){
-    float result = fmod(*angle_in_radians,2*M_PI); //any angle is on form x +2*pi*n 
-    if(result > M_PI){  //limit angle to +_ pi instead of +_2 pi 
-      result -= 2*M_PI;
-      }
-    if(result < -M_PI){
-      result += 2*M_PI;
-    }
-    *angle_in_radians = result;
+	float result = fmod(*angle_in_radians,2*M_PI); //any angle is on form x +2*pi*n 
+	if(result > M_PI){  //limit angle to +_ pi instead of +_2 pi 
+		result -= 2*M_PI;
+	}
+	else if(result < -M_PI){
+		result += 2*M_PI;
+	}
+	*angle_in_radians = result;
 }
 
 
+
 /* Calculates the distance in x direction to a measured object in global coordinate system */
-int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+int16_t distObjectX(int16_t x, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t xDist = x - cos(theta)*SENSOR_TOWER_OFFSET_X_MM + cos(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
 
     return xDist;
 }
 
 /* Returns the distance to object in local robot coordinate system */
-int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
-    int16_t xDist = cos(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
+int16_t distObjectXlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+    int16_t xDist = cos((servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
 
     return xDist;
 }
 
 
 /* Calculates the distance in y direction to a measured object in global coordinate system */
-int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+int16_t distObjectY(int16_t y, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t yDist = y - cos(theta)*SENSOR_TOWER_OFFSET_Y_MM + sin(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
     
     return yDist;
 }
 
 /* Returns the distance to object in local robot coordinate system */
-int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
-    int16_t yDist = sin(theta+(servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
+int16_t distObjectYlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+    int16_t yDist = sin((servoAngle+sensorNumber*90)*DEG2RAD)*(sensorData[sensorNumber]);
 	
     return yDist;
 }
 
+int16_t lastX = 0;
+int16_t lastY = 0;
+float lastTheta = 0;
 
 /* Arranges the message with robot positons, object positions and returns an array. Used from February 2020*/
-void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData){
-	uint8_t msgLength = 23;
-    int8_t data[msgLength];
+void sendNewPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData){
+	uint8_t scanMessageID = 2;
+	uint8_t msgLength = 24;
+    int8_t data[msgLength];  //TODO ADD the functionality that makes the robot send changes, not its position
     int16_t xObject;
     int16_t yObject;
-    data[22] = 0;
-
-    data[0] = (x & 0xFF);         //xLowByte                
-    data[1] = (x >> 8);           //xHighByte
-    data[2] = (y & 0xFF);             
-    data[3] = (y >> 8);           
-    data[4] = (theta & 0xFF);
-    data[5] = (theta >> 8);
+	int16_t xDiff = x - lastX;
+	int16_t yDiff = y - lastY;
+	int16_t thetaDiff = (theta - lastTheta)*RAD2DEG;
+	lastX = x;
+	lastY = y;
+	lastTheta = theta;
+	
+    data[23] = 0;
+	
+	data[0] = scanMessageID;
+    data[1] = (xDiff & 0xFF);         //xLowByte                
+    data[2] = (xDiff >> 8);           //xHighByte
+    data[3] = (yDiff & 0xFF);             
+    data[4] = (yDiff >> 8);           
+    data[5] = (thetaDiff & 0xFF);
+    data[6] = (thetaDiff >> 8);
 
     for(int i = 0; i < NUM_DIST_SENSORS; i++){
-        xObject = distObjectX(x, theta, servoAngle, sensorData, i);
-        yObject = distObjectY(y, theta, servoAngle, sensorData, i);
-        data[i*4+6] = (xObject & 0xFF);                   
-        data[i*4+7] = (xObject >> 8);                     
-        data[i*4+8] = (yObject & 0xFF);                   
-        data[i*4+9] = (yObject >> 8);                    
+        xObject = distObjectXlocal(theta, servoAngle, sensorData, i);
+        yObject = distObjectYlocal(theta, servoAngle, sensorData, i);
+        data[i*4+7] = (xObject & 0xFF);                   
+        data[i*4+8] = (xObject >> 8);                     
+        data[i*4+9] = (yObject & 0xFF);                   
+        data[i*4+10] = (yObject >> 8);                    
 
         if(sensorData[i] < DETECTION_THRESHOLD_MM){
-            data[22] |= (1 << ((NUM_DIST_SENSORS-i)-1));        
+            data[23] |= (1 << ((NUM_DIST_SENSORS-i)-1));        
         }
         else{
-            data[22] &= ~(1 << ((NUM_DIST_SENSORS-i)-1));
+            data[23] &= ~(1 << ((NUM_DIST_SENSORS-i)-1));
         }
     }
 	i2cSendNOADDR(I2C_DEVICE_DONGLE, data, msgLength);
 }
 
 
+
+
 /* Arranges the message with robot positons, object positions and returns an array */
 /* If using Grindviks server version, this function has to be used to format the messages */
 
-void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData){
+
+
+void sendOldPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData){
 	uint8_t msgLength = 8;
     int8_t data[msgLength];
     int16_t xObject;
@@ -120,6 +137,14 @@ void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
     }
 }
 
+void sendScanBorder(){
+	uint8_t msgLength = 1;
+	uint8_t scanBorderID = 1;
+	i2cSendNOADDR(I2C_DEVICE_DONGLE, &scanBorderID, msgLength);
+}
+
+
+
 static int16_t collisionSectors[2*NUM_DIST_SENSORS] = {360, 360, 360, 360, 360, 360, 360, 360};
 uint8_t collisionPrinter = 0;
 
@@ -140,7 +165,7 @@ void increaseCollisionSector(int16_t angle, uint8_t sensor){
 			collisionSectors[sensor*2+1] = angle;
 		}
 	}
-	printCollisionSectors();
+	//printCollisionSectors();
 }
 
 /* Returns detection angle inside -179->180 based on servoAngle and which sensor */
@@ -171,7 +196,7 @@ void decreaseCollisionSector(int16_t angle, uint8_t sensor){
 			collisionSectors[sensor*2+1] = 360;
 		}
 	}
-	printCollisionSectors();
+	//printCollisionSectors();
 }
 
 
@@ -220,6 +245,18 @@ bool validWaypoint(int16_t waypointAngle){
 	
 	if(noCollision == 4){
 		return true;
+	}
+	return false;
+}
+
+/* Returns true if a collision is detected */
+bool checkForCollision(){
+	int sensorReading = 1000;
+	for(int i = 0; i < NUM_DIST_SENSORS; i++){
+		sensorReading = IrAnalogToMM(ir_read_blocking(i), i);
+		if(sensorReading < COLLISION_THRESHOLD_MM){
+			return true;
+		}
 	}
 	return false;
 }

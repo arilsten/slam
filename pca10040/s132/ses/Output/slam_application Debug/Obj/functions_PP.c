@@ -68,24 +68,27 @@ typedef uint64_t uintmax_t;
 void vFunc_Inf2pi(float *angle_in_radians);
 
 
-int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectX(int16_t x, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectXlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectY(int16_t y, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
-
-
-
-void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+int16_t distObjectYlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
 
-void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+void sendNewPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData);
+
+
+
+void sendOldPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData);
+
+
+void sendScanBorder();
 
 
 void increaseCollisionSector(int16_t angle, uint8_t sensor);
@@ -101,10 +104,17 @@ void printCollisionSectors(void);
 
 
 
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 3 4
+# 53 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 3 4
 _Bool 
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
+# 53 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
     validWaypoint(int16_t waypointAngle);
+
+
+
+# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h" 3 4
+_Bool 
+# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.h"
+    checkForCollision();
 # 9 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 1 3 4
 # 99 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
@@ -7350,7 +7360,7 @@ const nrf_drv_twi_config_t* getBusConfig();
 # 1 "../../../drivers/defines.h" 1
 # 13 "../../../software/MainComTask.h" 2
 
-extern int16_t collisionAngles[4];
+
 
 void vMainCommunicationTask(void *pvParameters);
 # 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 2
@@ -8209,7 +8219,7 @@ extern SemaphoreHandle_t xTickMutex;
 extern SemaphoreHandle_t xControllerBSem;
 extern SemaphoreHandle_t xCommandReadyBSem;
 extern SemaphoreHandle_t mutex_spi;
-extern SemaphoreHandle_t xCollisionMutex;
+
 
 
 
@@ -8221,7 +8231,25 @@ extern QueueHandle_t queue_microsd;
 extern uint8_t gHandshook;
 extern uint8_t gPaused;
 
-extern uint8_t USEBLUETOOTH;
+
+
+extern 
+# 47 "../../../software/globals.h" 3 4
+      _Bool 
+# 47 "../../../software/globals.h"
+           USEBLUETOOTH;
+extern 
+# 48 "../../../software/globals.h" 3 4
+      _Bool 
+# 48 "../../../software/globals.h"
+           newServer;
+extern 
+# 49 "../../../software/globals.h" 3 4
+      _Bool 
+# 49 "../../../software/globals.h"
+           validateWP;
+
+
 
 
 extern float gTheta_hat;
@@ -8399,121 +8427,134 @@ uint8_t collisionCounter;
 
 
 void vFunc_Inf2pi(float *angle_in_radians){
-    float result = fmod(*angle_in_radians,2*
+ float result = fmod(*angle_in_radians,2*
 # 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-                                           3.14159265358979323846
+                                        3.14159265358979323846
 # 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-                                               );
-    if(result > 
+                                            );
+ if(result > 
 # 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-               3.14159265358979323846
+            3.14159265358979323846
 # 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-                   ){
-      result -= 2*
+                ){
+  result -= 2*
 # 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-                 3.14159265358979323846
+             3.14159265358979323846
 # 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-                     ;
-      }
-    if(result < -
+                 ;
+ }
+ else if(result < -
 # 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-                3.14159265358979323846
+                  3.14159265358979323846
 # 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-                    ){
-      result += 2*
+                      ){
+  result += 2*
 # 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-                 3.14159265358979323846
+             3.14159265358979323846
 # 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-                     ;
-    }
-    *angle_in_radians = result;
+                 ;
+ }
+ *angle_in_radians = result;
 }
 
 
 
-int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+
+int16_t distObjectX(int16_t x, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t xDist = x - cos(theta)*0 + cos(theta+(servoAngle+sensorNumber*90)*
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                                                                                                     3.14159265358979323846 
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                                                                                                     / 180.0)*(sensorData[sensorNumber]);
 
     return xDist;
 }
 
 
-int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
-    int16_t xDist = cos(theta+(servoAngle+sensorNumber*90)*
-# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-                                                          3.14159265358979323846 
-# 41 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-                                                          / 180.0)*(sensorData[sensorNumber]);
+int16_t distObjectXlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+    int16_t xDist = cos((servoAngle+sensorNumber*90)*
+# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+                                                    3.14159265358979323846 
+# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+                                                    / 180.0)*(sensorData[sensorNumber]);
 
     return xDist;
 }
 
 
 
-int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+int16_t distObjectY(int16_t y, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
     int16_t yDist = y - cos(theta)*0 + sin(theta+(servoAngle+sensorNumber*90)*
-# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
                                                                                                     3.14159265358979323846 
-# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                                                                                                     / 180.0)*(sensorData[sensorNumber]);
 
     return yDist;
 }
 
 
-int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
-    int16_t yDist = sin(theta+(servoAngle+sensorNumber*90)*
-# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-                                                          3.14159265358979323846 
-# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-                                                          / 180.0)*(sensorData[sensorNumber]);
+int16_t distObjectYlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber){
+    int16_t yDist = sin((servoAngle+sensorNumber*90)*
+# 57 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+                                                    3.14159265358979323846 
+# 57 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+                                                    / 180.0)*(sensorData[sensorNumber]);
 
     return yDist;
 }
 
+int16_t lastX = 0;
+int16_t lastY = 0;
+float lastTheta = 0;
 
 
-void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData){
- uint8_t msgLength = 23;
+void sendNewPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData){
+ uint8_t scanMessageID = 2;
+ uint8_t msgLength = 24;
     int8_t data[msgLength];
     int16_t xObject;
     int16_t yObject;
-    data[22] = 0;
+ int16_t xDiff = x - lastX;
+ int16_t yDiff = y - lastY;
+ int16_t thetaDiff = (theta - lastTheta)*180.0 / 
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+                                        3.14159265358979323846
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+                                               ;
+ lastX = x;
+ lastY = y;
+ lastTheta = theta;
 
-    data[0] = (x & 0xFF);
-    data[1] = (x >> 8);
-    data[2] = (y & 0xFF);
-    data[3] = (y >> 8);
-    data[4] = (theta & 0xFF);
-    data[5] = (theta >> 8);
+    data[23] = 0;
+
+ data[0] = scanMessageID;
+    data[1] = (xDiff & 0xFF);
+    data[2] = (xDiff >> 8);
+    data[3] = (yDiff & 0xFF);
+    data[4] = (yDiff >> 8);
+    data[5] = (thetaDiff & 0xFF);
+    data[6] = (thetaDiff >> 8);
 
     for(int i = 0; i < 4; i++){
-        xObject = distObjectX(x, theta, servoAngle, sensorData, i);
-        yObject = distObjectY(y, theta, servoAngle, sensorData, i);
-        data[i*4+6] = (xObject & 0xFF);
-        data[i*4+7] = (xObject >> 8);
-        data[i*4+8] = (yObject & 0xFF);
-        data[i*4+9] = (yObject >> 8);
+        xObject = distObjectXlocal(theta, servoAngle, sensorData, i);
+        yObject = distObjectYlocal(theta, servoAngle, sensorData, i);
+        data[i*4+7] = (xObject & 0xFF);
+        data[i*4+8] = (xObject >> 8);
+        data[i*4+9] = (yObject & 0xFF);
+        data[i*4+10] = (yObject >> 8);
 
         if(sensorData[i] < 800){
-            data[22] |= (1 << ((4 -i)-1));
+            data[23] |= (1 << ((4 -i)-1));
         }
         else{
-            data[22] &= ~(1 << ((4 -i)-1));
+            data[23] &= ~(1 << ((4 -i)-1));
         }
     }
  i2cSendNOADDR(0x72, data, msgLength);
 }
-
-
-
-
-
-void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData){
+# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+void sendOldPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData){
  uint8_t msgLength = 8;
     int8_t data[msgLength];
     int16_t xObject;
@@ -8537,6 +8578,14 @@ void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, 
     }
 }
 
+void sendScanBorder(){
+ uint8_t msgLength = 1;
+ uint8_t scanBorderID = 1;
+ i2cSendNOADDR(0x72, &scanBorderID, msgLength);
+}
+
+
+
 static int16_t collisionSectors[2*4] = {360, 360, 360, 360, 360, 360, 360, 360};
 uint8_t collisionPrinter = 0;
 
@@ -8557,7 +8606,7 @@ void increaseCollisionSector(int16_t angle, uint8_t sensor){
    collisionSectors[sensor*2+1] = angle;
   }
  }
- printCollisionSectors();
+
 }
 
 
@@ -8588,7 +8637,7 @@ void decreaseCollisionSector(int16_t angle, uint8_t sensor){
    collisionSectors[sensor*2+1] = 360;
   }
  }
- printCollisionSectors();
+
 }
 
 
@@ -8606,9 +8655,9 @@ void printCollisionSectors(void){
 
 
 
-# 191 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
 _Bool 
-# 191 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 216 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
     validWaypoint(int16_t waypointAngle){
  uint8_t noCollision = 0;
 
@@ -8621,9 +8670,9 @@ _Bool
    if(upperLimit > 179){
     if((waypointAngle > lowerLimit) && (waypointAngle+360 < upperLimit)){
      return 
-# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 227 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
            0
-# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 227 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                 ;
     }
    }
@@ -8631,17 +8680,17 @@ _Bool
    else if(lowerLimit < -179){
     if((waypointAngle-360 > lowerLimit) && (waypointAngle < upperLimit)){
      return 
-# 208 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 233 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
            0
-# 208 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 233 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                 ;
     }
    }
    else if((waypointAngle > lowerLimit) && (waypointAngle < upperLimit)){
     return 
-# 212 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
           0
-# 212 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 237 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
                ;
    }
   }
@@ -8653,14 +8702,38 @@ _Bool
 
  if(noCollision == 4){
   return 
-# 222 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 247 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
         1
-# 222 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 247 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
             ;
  }
  return 
-# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
        0
-# 224 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 249 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+            ;
+}
+
+
+
+# 253 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+_Bool 
+# 253 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+    checkForCollision(){
+ int sensorReading = 1000;
+ for(int i = 0; i < 4; i++){
+  sensorReading = IrAnalogToMM(ir_read_blocking(i), i);
+  if(sensorReading < 200){
+   return 
+# 258 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+         1
+# 258 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+             ;
+  }
+ }
+ return 
+# 261 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+       0
+# 261 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
             ;
 }

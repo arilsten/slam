@@ -41,116 +41,116 @@ microsd_write:
 .LVL0:
 .LFB207:
 	.file 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
-	.loc 1 39 48 view -0
+	.loc 1 40 48 view -0
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 40 2 view .LVU1
-	.loc 1 40 5 is_stmt 0 view .LVU2
+	.loc 1 41 2 view .LVU1
+	.loc 1 41 5 is_stmt 0 view .LVU2
 	ldr	r3, .L22
 	ldrb	r3, [r3]	@ zero_extendqisi2
-	.loc 1 40 4 view .LVU3
+	.loc 1 41 4 view .LVU3
 	cbz	r3, .L16
 	bx	lr
 .L16:
-	.loc 1 39 48 view .LVU4
+	.loc 1 40 48 view .LVU4
 	push	{r4, r5, r6, r7, lr}
 .LCFI0:
 	sub	sp, sp, #12
 .LCFI1:
 	mov	r5, r0
 	mov	r6, r1
-	.loc 1 43 2 is_stmt 1 view .LVU5
-	.loc 1 44 5 view .LVU6
-	.loc 1 45 6 view .LVU7
-	.loc 1 50 5 view .LVU8
+	.loc 1 44 2 is_stmt 1 view .LVU5
+	.loc 1 45 5 view .LVU6
+	.loc 1 46 6 view .LVU7
+	.loc 1 51 5 view .LVU8
 	movs	r1, #1
 .LVL1:
-	.loc 1 50 5 is_stmt 0 view .LVU9
+	.loc 1 51 5 is_stmt 0 view .LVU9
 	ldr	r0, .L22+4
 .LVL2:
-	.loc 1 50 5 view .LVU10
+	.loc 1 51 5 view .LVU10
 	bl	diskio_blockdev_register
 .LVL3:
-	.loc 1 54 5 is_stmt 1 view .LVU11
+	.loc 1 55 5 is_stmt 1 view .LVU11
 .LBB2:
-	.loc 1 54 10 view .LVU12
-	.loc 1 54 19 is_stmt 0 view .LVU13
+	.loc 1 55 10 view .LVU12
+	.loc 1 55 19 is_stmt 0 view .LVU13
 	movs	r4, #3
 .LVL4:
 .L3:
-	.loc 1 54 32 is_stmt 1 discriminator 1 view .LVU14
-	.loc 1 54 5 is_stmt 0 discriminator 1 view .LVU15
+	.loc 1 55 32 is_stmt 1 discriminator 1 view .LVU14
+	.loc 1 55 5 is_stmt 0 discriminator 1 view .LVU15
 	cbz	r4, .L4
-	.loc 1 54 40 discriminator 3 view .LVU16
+	.loc 1 55 40 discriminator 3 view .LVU16
 	ldr	r3, .L22+8
 	ldrb	r3, [r3]	@ zero_extendqisi2
 	cbz	r3, .L4
-	.loc 1 56 9 is_stmt 1 discriminator 4 view .LVU17
-	.loc 1 56 22 is_stmt 0 discriminator 4 view .LVU18
+	.loc 1 57 9 is_stmt 1 discriminator 4 view .LVU17
+	.loc 1 57 22 is_stmt 0 discriminator 4 view .LVU18
 	movs	r0, #0
 	bl	disk_initialize
 .LVL5:
-	.loc 1 56 20 discriminator 4 view .LVU19
+	.loc 1 57 20 discriminator 4 view .LVU19
 	ldr	r3, .L22+8
 	strb	r0, [r3]
-	.loc 1 54 55 is_stmt 1 discriminator 4 view .LVU20
+	.loc 1 55 55 is_stmt 1 discriminator 4 view .LVU20
 	subs	r4, r4, #1
 .LVL6:
-	.loc 1 54 55 is_stmt 0 discriminator 4 view .LVU21
+	.loc 1 55 55 is_stmt 0 discriminator 4 view .LVU21
 	b	.L3
 .L4:
-	.loc 1 54 55 discriminator 4 view .LVU22
+	.loc 1 55 55 discriminator 4 view .LVU22
 .LBE2:
-	.loc 1 58 5 is_stmt 1 view .LVU23
-	.loc 1 58 9 is_stmt 0 view .LVU24
+	.loc 1 59 5 is_stmt 1 view .LVU23
+	.loc 1 59 9 is_stmt 0 view .LVU24
 	ldr	r3, .L22+8
 	ldrb	r2, [r3]	@ zero_extendqisi2
-	.loc 1 58 8 view .LVU25
+	.loc 1 59 8 view .LVU25
 	cbnz	r2, .L17
-	.loc 1 65 2 is_stmt 1 view .LVU26
-	.loc 1 65 78 is_stmt 0 view .LVU27
+	.loc 1 66 2 is_stmt 1 view .LVU26
+	.loc 1 66 78 is_stmt 0 view .LVU27
 	ldr	r3, .L22+12
 	ldr	r4, [r3, #20]
 .LVL7:
-	.loc 1 65 47 view .LVU28
+	.loc 1 66 47 view .LVU28
 	ldr	r7, .L22+16
 	mov	r0, r7
 	blx	r4
 .LVL8:
-	.loc 1 66 5 is_stmt 1 view .LVU29
-	.loc 1 66 25 is_stmt 0 view .LVU30
+	.loc 1 67 5 is_stmt 1 view .LVU29
+	.loc 1 67 25 is_stmt 0 view .LVU30
 	mov	r0, r7
 	blx	r4
 .LVL9:
-	.loc 1 70 5 is_stmt 1 view .LVU31
-	.loc 1 70 17 is_stmt 0 view .LVU32
+	.loc 1 71 5 is_stmt 1 view .LVU31
+	.loc 1 71 17 is_stmt 0 view .LVU32
 	movs	r2, #1
 	ldr	r1, .L22+20
 	ldr	r0, .L22+24
 	bl	f_mount
 .LVL10:
-	.loc 1 71 5 is_stmt 1 view .LVU33
-	.loc 1 71 8 is_stmt 0 view .LVU34
+	.loc 1 72 5 is_stmt 1 view .LVU33
+	.loc 1 72 8 is_stmt 0 view .LVU34
 	cbnz	r0, .L18
-	.loc 1 77 5 is_stmt 1 view .LVU35
+	.loc 1 78 5 is_stmt 1 view .LVU35
 .LVL11:
-	.loc 1 80 5 view .LVU36
-	.loc 1 80 17 is_stmt 0 view .LVU37
+	.loc 1 81 5 view .LVU36
+	.loc 1 81 17 is_stmt 0 view .LVU37
 	movs	r2, #51
 	mov	r1, r5
 	ldr	r0, .L22+28
 .LVL12:
-	.loc 1 80 17 view .LVU38
+	.loc 1 81 17 view .LVU38
 	bl	f_open
 .LVL13:
-	.loc 1 81 5 is_stmt 1 view .LVU39
-	.loc 1 81 8 is_stmt 0 view .LVU40
+	.loc 1 82 5 is_stmt 1 view .LVU39
+	.loc 1 82 8 is_stmt 0 view .LVU40
 	cbnz	r0, .L19
-	.loc 1 87 5 is_stmt 1 view .LVU41
-	.loc 1 87 17 is_stmt 0 view .LVU42
+	.loc 1 88 5 is_stmt 1 view .LVU41
+	.loc 1 88 17 is_stmt 0 view .LVU42
 	mov	r0, r6
 .LVL14:
-	.loc 1 87 17 view .LVU43
+	.loc 1 88 17 view .LVU43
 	bl	strlen
 .LVL15:
 	mov	r2, r0
@@ -159,84 +159,84 @@ microsd_write:
 	ldr	r0, .L22+28
 	bl	f_write
 .LVL16:
-	.loc 1 88 5 is_stmt 1 view .LVU44
-	.loc 1 88 8 is_stmt 0 view .LVU45
+	.loc 1 89 5 is_stmt 1 view .LVU44
+	.loc 1 89 8 is_stmt 0 view .LVU45
 	cbnz	r0, .L20
 .LVL17:
 .L9:
-	.loc 1 95 5 is_stmt 1 view .LVU46
-	.loc 1 97 5 view .LVU47
-	.loc 1 97 12 is_stmt 0 view .LVU48
+	.loc 1 96 5 is_stmt 1 view .LVU46
+	.loc 1 98 5 view .LVU47
+	.loc 1 98 12 is_stmt 0 view .LVU48
 	ldr	r0, .L22+28
 	bl	f_close
 .LVL18:
-	.loc 1 99 2 is_stmt 1 view .LVU49
-	.loc 1 99 14 is_stmt 0 view .LVU50
+	.loc 1 100 2 is_stmt 1 view .LVU49
+	.loc 1 100 14 is_stmt 0 view .LVU50
 	movs	r2, #1
 	ldr	r1, .L22+20
 	movs	r0, #0
 	bl	f_mount
 .LVL19:
-	.loc 1 100 5 is_stmt 1 view .LVU51
-	.loc 1 100 8 is_stmt 0 view .LVU52
+	.loc 1 101 5 is_stmt 1 view .LVU51
+	.loc 1 101 8 is_stmt 0 view .LVU52
 	cbnz	r0, .L21
-	.loc 1 105 2 is_stmt 1 view .LVU53
-	.loc 1 105 15 is_stmt 0 view .LVU54
+	.loc 1 106 2 is_stmt 1 view .LVU53
+	.loc 1 106 15 is_stmt 0 view .LVU54
 	movs	r0, #0
 .LVL20:
-	.loc 1 105 15 view .LVU55
+	.loc 1 106 15 view .LVU55
 	bl	disk_uninitialize
 .LVL21:
-	.loc 1 105 15 view .LVU56
+	.loc 1 106 15 view .LVU56
 	b	.L1
 .LVL22:
 .L17:
-	.loc 1 60 9 is_stmt 1 view .LVU57
-	.loc 1 60 16 is_stmt 0 view .LVU58
+	.loc 1 61 9 is_stmt 1 view .LVU57
+	.loc 1 61 16 is_stmt 0 view .LVU58
 	ldr	r3, .L22
 	movs	r1, #1
 	strb	r1, [r3]
-	.loc 1 61 9 is_stmt 1 view .LVU59
-	.loc 1 61 82 view .LVU60
-	.loc 1 61 137 view .LVU61
-	.loc 1 61 218 is_stmt 0 view .LVU62
+	.loc 1 62 9 is_stmt 1 view .LVU59
+	.loc 1 62 82 view .LVU60
+	.loc 1 62 137 view .LVU61
+	.loc 1 62 218 is_stmt 0 view .LVU62
 	ldr	r3, .L22+32
 	ldrh	r0, [r3]
-	.loc 1 61 229 view .LVU63
+	.loc 1 62 229 view .LVU63
 	lsls	r0, r0, #16
-	.loc 1 61 137 view .LVU64
+	.loc 1 62 137 view .LVU64
 	ldr	r1, .L22+36
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_1
 .LVL23:
-	.loc 1 61 299 is_stmt 1 view .LVU65
-	.loc 1 62 9 view .LVU66
+	.loc 1 62 299 is_stmt 1 view .LVU65
+	.loc 1 63 9 view .LVU66
 	b	.L1
 .LVL24:
 .L18:
-	.loc 1 72 7 view .LVU67
-	.loc 1 72 14 is_stmt 0 view .LVU68
+	.loc 1 73 7 view .LVU67
+	.loc 1 73 14 is_stmt 0 view .LVU68
 	ldr	r3, .L22
 	movs	r2, #1
 	strb	r2, [r3]
-	.loc 1 73 9 is_stmt 1 view .LVU69
-	.loc 1 73 82 view .LVU70
-	.loc 1 73 137 view .LVU71
-	.loc 1 73 218 is_stmt 0 view .LVU72
+	.loc 1 74 9 is_stmt 1 view .LVU69
+	.loc 1 74 82 view .LVU70
+	.loc 1 74 137 view .LVU71
+	.loc 1 74 218 is_stmt 0 view .LVU72
 	ldr	r3, .L22+32
 	ldrh	r0, [r3]
 .LVL25:
-	.loc 1 73 229 view .LVU73
+	.loc 1 74 229 view .LVU73
 	lsls	r0, r0, #16
-	.loc 1 73 137 view .LVU74
+	.loc 1 74 137 view .LVU74
 	ldr	r1, .L22+40
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL26:
-	.loc 1 73 258 is_stmt 1 view .LVU75
-	.loc 1 74 9 view .LVU76
+	.loc 1 74 258 is_stmt 1 view .LVU75
+	.loc 1 75 9 view .LVU76
 .L1:
-	.loc 1 106 1 is_stmt 0 view .LVU77
+	.loc 1 107 1 is_stmt 0 view .LVU77
 	add	sp, sp, #12
 .LCFI2:
 	@ sp needed
@@ -244,60 +244,60 @@ microsd_write:
 .LVL27:
 .L19:
 .LCFI3:
-	.loc 1 83 9 is_stmt 1 discriminator 3 view .LVU78
-	.loc 1 83 82 discriminator 3 view .LVU79
-	.loc 1 83 137 discriminator 3 view .LVU80
-	.loc 1 83 218 is_stmt 0 discriminator 3 view .LVU81
+	.loc 1 84 9 is_stmt 1 discriminator 3 view .LVU78
+	.loc 1 84 82 discriminator 3 view .LVU79
+	.loc 1 84 137 discriminator 3 view .LVU80
+	.loc 1 84 218 is_stmt 0 discriminator 3 view .LVU81
 	ldr	r3, .L22+32
 	ldrh	r0, [r3]
 .LVL28:
-	.loc 1 83 229 discriminator 3 view .LVU82
+	.loc 1 84 229 discriminator 3 view .LVU82
 	lsls	r0, r0, #16
-	.loc 1 83 137 discriminator 3 view .LVU83
+	.loc 1 84 137 discriminator 3 view .LVU83
 	mov	r2, r5
 	ldr	r1, .L22+44
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_1
 .LVL29:
-	.loc 1 83 300 is_stmt 1 discriminator 3 view .LVU84
-	.loc 1 84 9 discriminator 3 view .LVU85
+	.loc 1 84 300 is_stmt 1 discriminator 3 view .LVU84
+	.loc 1 85 9 discriminator 3 view .LVU85
 	b	.L1
 .LVL30:
 .L20:
-	.loc 1 90 9 discriminator 3 view .LVU86
-	.loc 1 90 82 discriminator 3 view .LVU87
-	.loc 1 90 137 discriminator 3 view .LVU88
-	.loc 1 90 218 is_stmt 0 discriminator 3 view .LVU89
+	.loc 1 91 9 discriminator 3 view .LVU86
+	.loc 1 91 82 discriminator 3 view .LVU87
+	.loc 1 91 137 discriminator 3 view .LVU88
+	.loc 1 91 218 is_stmt 0 discriminator 3 view .LVU89
 	ldr	r3, .L22+32
 	ldrh	r0, [r3]
 .LVL31:
-	.loc 1 90 229 discriminator 3 view .LVU90
+	.loc 1 91 229 discriminator 3 view .LVU90
 	lsls	r0, r0, #16
-	.loc 1 90 137 discriminator 3 view .LVU91
+	.loc 1 91 137 discriminator 3 view .LVU91
 	ldr	r1, .L22+48
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL32:
-	.loc 1 90 262 is_stmt 1 discriminator 3 view .LVU92
+	.loc 1 91 262 is_stmt 1 discriminator 3 view .LVU92
 	b	.L9
 .LVL33:
 .L21:
-	.loc 1 102 9 discriminator 3 view .LVU93
-	.loc 1 102 82 discriminator 3 view .LVU94
-	.loc 1 102 137 discriminator 3 view .LVU95
-	.loc 1 102 218 is_stmt 0 discriminator 3 view .LVU96
+	.loc 1 103 9 discriminator 3 view .LVU93
+	.loc 1 103 82 discriminator 3 view .LVU94
+	.loc 1 103 137 discriminator 3 view .LVU95
+	.loc 1 103 218 is_stmt 0 discriminator 3 view .LVU96
 	ldr	r3, .L22+32
 	ldrh	r0, [r3]
 .LVL34:
-	.loc 1 102 229 discriminator 3 view .LVU97
+	.loc 1 103 229 discriminator 3 view .LVU97
 	lsls	r0, r0, #16
-	.loc 1 102 137 discriminator 3 view .LVU98
+	.loc 1 103 137 discriminator 3 view .LVU98
 	ldr	r1, .L22+40
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL35:
-	.loc 1 102 258 is_stmt 1 discriminator 3 view .LVU99
-	.loc 1 103 9 discriminator 3 view .LVU100
+	.loc 1 103 258 is_stmt 1 discriminator 3 view .LVU99
+	.loc 1 104 9 discriminator 3 view .LVU100
 	b	.L1
 .L23:
 	.align	2
@@ -327,46 +327,46 @@ microsd_write:
 	.type	microsd_task, %function
 microsd_task:
 .LFB208:
-	.loc 1 112 30 view -0
+	.loc 1 114 30 view -0
 	@ Volatile: function does not return.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
 .LVL36:
-	.loc 1 112 30 is_stmt 0 view .LVU102
+	.loc 1 114 30 is_stmt 0 view .LVU102
 	push	{lr}
 .LCFI4:
 	sub	sp, sp, #12
 .LCFI5:
 .LVL37:
 .L25:
-	.loc 1 113 4 is_stmt 1 discriminator 1 view .LVU103
-	.loc 1 114 5 discriminator 1 view .LVU104
-	.loc 1 115 8 discriminator 1 view .LVU105
+	.loc 1 116 2 is_stmt 1 discriminator 1 view .LVU103
+	.loc 1 118 2 discriminator 1 view .LVU104
+	.loc 1 120 3 discriminator 1 view .LVU105
 	mov	r2, #-1
 	mov	r1, sp
 	ldr	r3, .L27
 	ldr	r0, [r3]
 	bl	xQueueReceive
 .LVL38:
-	.loc 1 116 9 discriminator 1 view .LVU106
+	.loc 1 121 9 discriminator 1 view .LVU106
 	ldr	r4, .L27+4
 	mov	r1, #-1
 	ldr	r0, [r4]
 	bl	xQueueSemaphoreTake
 .LVL39:
-	.loc 1 118 10 discriminator 1 view .LVU107
+	.loc 1 123 9 discriminator 1 view .LVU107
 	ldr	r1, [sp, #4]
 	ldr	r0, [sp]
 	bl	microsd_write
 .LVL40:
-	.loc 1 119 9 discriminator 1 view .LVU108
+	.loc 1 124 9 discriminator 1 view .LVU108
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
 	ldr	r0, [r4]
 	bl	xQueueGenericSend
 .LVL41:
-	.loc 1 114 11 discriminator 1 view .LVU109
+	.loc 1 118 8 discriminator 1 view .LVU109
 	b	.L25
 .L28:
 	.align	2
@@ -418,12 +418,12 @@ m_block_dev_sdc_work:
 	.size	disk_state, 1
 disk_state:
 	.byte	1
-	.section	.data.drives.9500,"aw"
+	.section	.data.drives.9501,"aw"
 	.align	2
 	.set	.LANCHOR1,. + 0
-	.type	drives.9500, %object
-	.size	drives.9500, 12
-drives.9500:
+	.type	drives.9501, %object
+	.size	drives.9501, 12
+drives.9501:
 	.word	m_block_dev_sdc
 	.word	0
 	.byte	0
@@ -3429,15 +3429,15 @@ m_block_dev_sdc:
 	.file 25 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/string.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0x99b
+	.4byte	0x9a7
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1e
-	.4byte	.LASF305
-	.byte	0xc
 	.4byte	.LASF306
+	.byte	0xc
 	.4byte	.LASF307
+	.4byte	.LASF308
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -4111,104 +4111,110 @@ m_block_dev_sdc:
 	.uleb128 0x25
 	.4byte	.LASF263
 	.byte	0x18
-	.byte	0x21
-	.byte	0x1a
-	.4byte	0x400
-	.uleb128 0x25
-	.4byte	.LASF264
-	.byte	0x18
 	.byte	0x25
 	.byte	0x16
 	.4byte	0x3f4
 	.uleb128 0x25
-	.4byte	.LASF265
+	.4byte	.LASF264
 	.byte	0x18
 	.byte	0x26
 	.byte	0x16
 	.4byte	0x3f4
 	.uleb128 0x25
-	.4byte	.LASF266
+	.4byte	.LASF265
 	.byte	0x18
 	.byte	0x27
 	.byte	0x16
 	.4byte	0x3f4
 	.uleb128 0x25
-	.4byte	.LASF267
+	.4byte	.LASF266
 	.byte	0x18
 	.byte	0x2a
 	.byte	0x10
 	.4byte	0x103
 	.uleb128 0x25
-	.4byte	.LASF268
+	.4byte	.LASF267
 	.byte	0x18
 	.byte	0x2b
 	.byte	0x10
 	.4byte	0x103
 	.uleb128 0x25
+	.4byte	.LASF268
+	.byte	0x18
+	.byte	0x2f
+	.byte	0xc
+	.4byte	0x339
+	.uleb128 0x25
 	.4byte	.LASF269
 	.byte	0x18
-	.byte	0x2d
-	.byte	0x10
-	.4byte	0x103
+	.byte	0x30
+	.byte	0xc
+	.4byte	0x339
 	.uleb128 0x25
 	.4byte	.LASF270
 	.byte	0x18
-	.byte	0x30
+	.byte	0x31
+	.byte	0xc
+	.4byte	0x339
+	.uleb128 0x25
+	.4byte	.LASF271
+	.byte	0x18
+	.byte	0x36
 	.byte	0xe
-	.4byte	0x53d
+	.4byte	0x549
 	.uleb128 0x5
 	.byte	0x4
 	.byte	0x4
-	.4byte	.LASF271
-	.uleb128 0x25
 	.4byte	.LASF272
-	.byte	0x18
-	.byte	0x31
-	.byte	0x10
-	.4byte	0x10f
 	.uleb128 0x25
 	.4byte	.LASF273
-	.byte	0x18
-	.byte	0x32
-	.byte	0x10
-	.4byte	0x10f
-	.uleb128 0x25
-	.4byte	.LASF274
-	.byte	0x18
-	.byte	0x33
-	.byte	0xe
-	.4byte	0x53d
-	.uleb128 0x25
-	.4byte	.LASF275
-	.byte	0x18
-	.byte	0x34
-	.byte	0xe
-	.4byte	0x53d
-	.uleb128 0x25
-	.4byte	.LASF276
 	.byte	0x18
 	.byte	0x37
 	.byte	0x10
 	.4byte	0x10f
 	.uleb128 0x25
-	.4byte	.LASF277
+	.4byte	.LASF274
 	.byte	0x18
 	.byte	0x38
 	.byte	0x10
 	.4byte	0x10f
-	.uleb128 0x26
+	.uleb128 0x25
+	.4byte	.LASF275
+	.byte	0x18
+	.byte	0x39
+	.byte	0xe
+	.4byte	0x549
+	.uleb128 0x25
+	.4byte	.LASF276
+	.byte	0x18
+	.byte	0x3a
+	.byte	0xe
+	.4byte	0x549
+	.uleb128 0x25
+	.4byte	.LASF277
+	.byte	0x18
+	.byte	0x3d
+	.byte	0x10
+	.4byte	0x10f
+	.uleb128 0x25
 	.4byte	.LASF278
+	.byte	0x18
+	.byte	0x3e
+	.byte	0x10
+	.4byte	0x10f
+	.uleb128 0x26
+	.4byte	.LASF279
 	.byte	0x1
-	.byte	0x15
+	.byte	0x16
 	.byte	0x21
 	.4byte	0x3b7
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	m_block_dev_sdc_work
 	.uleb128 0x26
-	.4byte	.LASF279
+	.4byte	.LASF280
 	.byte	0x1
-	.byte	0x15
+	.byte	0x16
 	.byte	0x58
 	.4byte	0x3d7
 	.uleb128 0x5
@@ -4217,7 +4223,7 @@ m_block_dev_sdc:
 	.uleb128 0x27
 	.ascii	"fs\000"
 	.byte	0x1
-	.byte	0x1e
+	.byte	0x1f
 	.byte	0xe
 	.4byte	0xa0
 	.uleb128 0x5
@@ -4226,73 +4232,73 @@ m_block_dev_sdc:
 	.uleb128 0x28
 	.ascii	"dir\000"
 	.byte	0x1
-	.byte	0x1f
+	.byte	0x20
 	.byte	0xc
 	.4byte	0xc0
 	.uleb128 0x28
 	.ascii	"fno\000"
 	.byte	0x1
-	.byte	0x20
+	.byte	0x21
 	.byte	0x10
 	.4byte	0xd0
 	.uleb128 0x26
-	.4byte	.LASF280
+	.4byte	.LASF281
 	.byte	0x1
-	.byte	0x21
+	.byte	0x22
 	.byte	0xc
 	.4byte	0xb0
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	file
 	.uleb128 0x26
-	.4byte	.LASF281
+	.4byte	.LASF282
 	.byte	0x1
-	.byte	0x22
+	.byte	0x23
 	.byte	0x10
 	.4byte	0x103
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	failed
 	.uleb128 0x29
-	.4byte	.LASF282
+	.4byte	.LASF283
 	.byte	0x1
-	.byte	0x23
+	.byte	0x24
 	.byte	0x9
 	.4byte	0xf0
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	disk_state
 	.uleb128 0x2a
-	.4byte	.LASF284
+	.4byte	.LASF285
 	.byte	0x1
-	.byte	0x70
+	.byte	0x72
 	.byte	0x6
 	.4byte	.LFB208
 	.4byte	.LFE208-.LFB208
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x699
+	.4byte	0x6a5
 	.uleb128 0x2b
 	.ascii	"arg\000"
 	.byte	0x1
-	.byte	0x70
+	.byte	0x72
 	.byte	0x19
 	.4byte	0x13f
 	.4byte	.LLST5
 	.4byte	.LVUS5
 	.uleb128 0x26
-	.4byte	.LASF283
+	.4byte	.LASF284
 	.byte	0x1
-	.byte	0x71
-	.byte	0x1e
+	.byte	0x74
+	.byte	0x1c
 	.4byte	0x3b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -16
 	.uleb128 0x2c
 	.4byte	.LVL38
-	.4byte	0x8fb
-	.4byte	0x662
+	.4byte	0x907
+	.4byte	0x66e
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4308,8 +4314,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL39
-	.4byte	0x908
-	.4byte	0x676
+	.4byte	0x914
+	.4byte	0x682
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4319,10 +4325,10 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL40
-	.4byte	0x699
+	.4byte	0x6a5
 	.uleb128 0x2f
 	.4byte	.LVL41
-	.4byte	0x915
+	.4byte	0x921
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4341,19 +4347,19 @@ m_block_dev_sdc:
 	.byte	0
 	.byte	0
 	.uleb128 0x2a
-	.4byte	.LASF285
+	.4byte	.LASF286
 	.byte	0x1
-	.byte	0x27
+	.byte	0x28
 	.byte	0x6
 	.4byte	.LFB207
 	.4byte	.LFE207-.LFB207
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x8eb
+	.4byte	0x8f7
 	.uleb128 0x30
 	.4byte	.LASF193
 	.byte	0x1
-	.byte	0x27
+	.byte	0x28
 	.byte	0x1a
 	.4byte	0x29
 	.4byte	.LLST0
@@ -4361,53 +4367,53 @@ m_block_dev_sdc:
 	.uleb128 0x30
 	.4byte	.LASF88
 	.byte	0x1
-	.byte	0x27
+	.byte	0x28
 	.byte	0x2a
 	.4byte	0x29
 	.4byte	.LLST1
 	.4byte	.LVUS1
 	.uleb128 0x26
-	.4byte	.LASF286
+	.4byte	.LASF287
 	.byte	0x1
-	.byte	0x2b
+	.byte	0x2c
 	.byte	0xb
 	.4byte	0x12c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -28
 	.uleb128 0x31
-	.4byte	.LASF287
+	.4byte	.LASF288
 	.byte	0x1
-	.byte	0x2c
+	.byte	0x2d
 	.byte	0xd
 	.4byte	0xe0
 	.4byte	.LLST2
 	.4byte	.LVUS2
 	.uleb128 0x26
-	.4byte	.LASF288
-	.byte	0x1
-	.byte	0x2d
-	.byte	0x1d
-	.4byte	0x8eb
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	drives.9500
-	.uleb128 0x32
 	.4byte	.LASF289
 	.byte	0x1
-	.byte	0x41
-	.byte	0xb
-	.4byte	0x12c
+	.byte	0x2e
+	.byte	0x1d
+	.4byte	0x8f7
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	drives.9501
 	.uleb128 0x32
 	.4byte	.LASF290
 	.byte	0x1
 	.byte	0x42
+	.byte	0xb
+	.4byte	0x12c
+	.uleb128 0x32
+	.4byte	.LASF291
+	.byte	0x1
+	.byte	0x43
 	.byte	0xe
 	.4byte	0x12c
 	.uleb128 0x31
-	.4byte	.LASF282
+	.4byte	.LASF283
 	.byte	0x1
-	.byte	0x4d
+	.byte	0x4e
 	.byte	0xd
 	.4byte	0xf0
 	.4byte	.LLST3
@@ -4415,18 +4421,18 @@ m_block_dev_sdc:
 	.uleb128 0x33
 	.4byte	.LBB2
 	.4byte	.LBE2-.LBB2
-	.4byte	0x769
+	.4byte	0x775
 	.uleb128 0x31
-	.4byte	.LASF291
+	.4byte	.LASF292
 	.byte	0x1
-	.byte	0x36
+	.byte	0x37
 	.byte	0x13
 	.4byte	0x12c
 	.4byte	.LLST4
 	.4byte	.LVUS4
 	.uleb128 0x2f
 	.4byte	.LVL5
-	.4byte	0x922
+	.4byte	0x92e
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4436,8 +4442,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL3
-	.4byte	0x92e
-	.4byte	0x785
+	.4byte	0x93a
+	.4byte	0x791
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4455,7 +4461,7 @@ m_block_dev_sdc:
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.4byte	0x798
+	.4byte	0x7a4
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4468,7 +4474,7 @@ m_block_dev_sdc:
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.4byte	0x7ab
+	.4byte	0x7b7
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4478,8 +4484,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL10
-	.4byte	0x93a
-	.4byte	0x7d0
+	.4byte	0x946
+	.4byte	0x7dc
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4500,8 +4506,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL13
-	.4byte	0x947
-	.4byte	0x7f3
+	.4byte	0x953
+	.4byte	0x7ff
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4523,8 +4529,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL15
-	.4byte	0x953
-	.4byte	0x807
+	.4byte	0x95f
+	.4byte	0x813
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4534,8 +4540,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL16
-	.4byte	0x960
-	.4byte	0x82a
+	.4byte	0x96c
+	.4byte	0x836
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4557,8 +4563,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL18
-	.4byte	0x96c
-	.4byte	0x841
+	.4byte	0x978
+	.4byte	0x84d
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4568,8 +4574,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL19
-	.4byte	0x93a
-	.4byte	0x862
+	.4byte	0x946
+	.4byte	0x86e
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4589,8 +4595,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL21
-	.4byte	0x978
-	.4byte	0x875
+	.4byte	0x984
+	.4byte	0x881
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x50
@@ -4599,8 +4605,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL23
-	.4byte	0x984
-	.4byte	0x88c
+	.4byte	0x990
+	.4byte	0x898
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4610,8 +4616,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL26
-	.4byte	0x991
-	.4byte	0x8a3
+	.4byte	0x99d
+	.4byte	0x8af
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4621,8 +4627,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL29
-	.4byte	0x984
-	.4byte	0x8c0
+	.4byte	0x990
+	.4byte	0x8cc
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4638,8 +4644,8 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LVL32
-	.4byte	0x991
-	.4byte	0x8d7
+	.4byte	0x99d
+	.4byte	0x8e3
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4649,7 +4655,7 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x2f
 	.4byte	.LVL35
-	.4byte	0x991
+	.4byte	0x99d
 	.uleb128 0x2d
 	.uleb128 0x1
 	.byte	0x51
@@ -4660,86 +4666,86 @@ m_block_dev_sdc:
 	.byte	0
 	.uleb128 0x11
 	.4byte	0x340
-	.4byte	0x8fb
+	.4byte	0x907
 	.uleb128 0x12
 	.4byte	0x5e
 	.byte	0
 	.byte	0
 	.uleb128 0x35
-	.4byte	.LASF292
-	.4byte	.LASF292
+	.4byte	.LASF293
+	.4byte	.LASF293
 	.byte	0x14
 	.2byte	0x363
 	.byte	0xc
 	.uleb128 0x35
-	.4byte	.LASF293
-	.4byte	.LASF293
+	.4byte	.LASF294
+	.4byte	.LASF294
 	.byte	0x14
 	.2byte	0x589
 	.byte	0xc
 	.uleb128 0x35
-	.4byte	.LASF294
-	.4byte	.LASF294
+	.4byte	.LASF295
+	.4byte	.LASF295
 	.byte	0x14
 	.2byte	0x289
 	.byte	0xc
 	.uleb128 0x36
-	.4byte	.LASF295
-	.4byte	.LASF295
+	.4byte	.LASF296
+	.4byte	.LASF296
 	.byte	0x8
 	.byte	0x70
 	.byte	0x9
 	.uleb128 0x36
-	.4byte	.LASF296
-	.4byte	.LASF296
+	.4byte	.LASF297
+	.4byte	.LASF297
 	.byte	0x8
 	.byte	0xb2
 	.byte	0x6
 	.uleb128 0x35
-	.4byte	.LASF297
-	.4byte	.LASF297
+	.4byte	.LASF298
+	.4byte	.LASF298
 	.byte	0xd
 	.2byte	0x112
 	.byte	0x9
 	.uleb128 0x36
-	.4byte	.LASF298
-	.4byte	.LASF298
+	.4byte	.LASF299
+	.4byte	.LASF299
 	.byte	0xd
 	.byte	0xf8
 	.byte	0x9
 	.uleb128 0x35
-	.4byte	.LASF299
-	.4byte	.LASF299
+	.4byte	.LASF300
+	.4byte	.LASF300
 	.byte	0x19
 	.2byte	0x1d6
 	.byte	0x8
 	.uleb128 0x36
-	.4byte	.LASF300
-	.4byte	.LASF300
+	.4byte	.LASF301
+	.4byte	.LASF301
 	.byte	0xd
 	.byte	0xfb
 	.byte	0x9
 	.uleb128 0x36
-	.4byte	.LASF301
-	.4byte	.LASF301
+	.4byte	.LASF302
+	.4byte	.LASF302
 	.byte	0xd
 	.byte	0xf9
 	.byte	0x9
 	.uleb128 0x36
-	.4byte	.LASF302
-	.4byte	.LASF302
+	.4byte	.LASF303
+	.4byte	.LASF303
 	.byte	0x8
 	.byte	0x7b
 	.byte	0x9
 	.uleb128 0x35
-	.4byte	.LASF303
-	.4byte	.LASF303
+	.4byte	.LASF304
+	.4byte	.LASF304
 	.byte	0x16
 	.2byte	0x1b4
 	.byte	0x6
 	.uleb128 0x35
-	.4byte	.LASF304
-	.4byte	.LASF304
+	.4byte	.LASF305
+	.4byte	.LASF305
 	.byte	0x16
 	.2byte	0x1ab
 	.byte	0x6
@@ -5617,7 +5623,7 @@ m_block_dev_sdc:
 	.4byte	0x347
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0x99f
+	.4byte	0x9ab
 	.4byte	0x2b
 	.ascii	"FR_OK\000"
 	.4byte	0x31
@@ -5676,42 +5682,42 @@ m_block_dev_sdc:
 	.ascii	"NRF_LOG_SEVERITY_DEBUG\000"
 	.4byte	0x49
 	.ascii	"NRF_LOG_SEVERITY_INFO_RAW\000"
-	.4byte	0x58c
+	.4byte	0x598
 	.ascii	"m_block_dev_sdc_work\000"
-	.4byte	0x59e
+	.4byte	0x5aa
 	.ascii	"m_block_dev_sdc\000"
-	.4byte	0x5b0
+	.4byte	0x5bc
 	.ascii	"fs\000"
-	.4byte	0x5c1
-	.ascii	"dir\000"
 	.4byte	0x5cd
-	.ascii	"fno\000"
+	.ascii	"dir\000"
 	.4byte	0x5d9
+	.ascii	"fno\000"
+	.4byte	0x5e5
 	.ascii	"file\000"
-	.4byte	0x5eb
+	.4byte	0x5f7
 	.ascii	"failed\000"
-	.4byte	0x5fd
+	.4byte	0x609
 	.ascii	"disk_state\000"
-	.4byte	0x58c
+	.4byte	0x598
 	.ascii	"m_block_dev_sdc_work\000"
-	.4byte	0x5b0
+	.4byte	0x5bc
 	.ascii	"fs\000"
-	.4byte	0x5c1
-	.ascii	"dir\000"
 	.4byte	0x5cd
-	.ascii	"fno\000"
+	.ascii	"dir\000"
 	.4byte	0x5d9
+	.ascii	"fno\000"
+	.4byte	0x5e5
 	.ascii	"file\000"
-	.4byte	0x60f
+	.4byte	0x61b
 	.ascii	"microsd_task\000"
-	.4byte	0x699
+	.4byte	0x6a5
 	.ascii	"microsd_write\000"
 	.4byte	0
 	.section	.debug_pubtypes,"",%progbits
 	.4byte	0x327
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0x99f
+	.4byte	0x9ab
 	.4byte	0x2f
 	.ascii	"char\000"
 	.4byte	0x3b
@@ -5802,7 +5808,7 @@ m_block_dev_sdc:
 	.ascii	"nrf_log_module_reduced_dynamic_data_t\000"
 	.4byte	0x429
 	.ascii	"TaskHandle_t\000"
-	.4byte	0x53d
+	.4byte	0x549
 	.ascii	"float\000"
 	.4byte	0
 	.section	.debug_aranges,"",%progbits
@@ -6190,7 +6196,7 @@ m_block_dev_sdc:
 	.section	.debug_str,"MS",%progbits,1
 .LASF192:
 	.ascii	"winsect\000"
-.LASF275:
+.LASF276:
 	.ascii	"gRight\000"
 .LASF185:
 	.ascii	"last_clst\000"
@@ -6214,9 +6220,9 @@ m_block_dev_sdc:
 	.ascii	"geometry\000"
 .LASF259:
 	.ascii	"xTickMutex\000"
-.LASF269:
+.LASF268:
 	.ascii	"USEBLUETOOTH\000"
-.LASF296:
+.LASF297:
 	.ascii	"diskio_blockdev_register\000"
 .LASF232:
 	.ascii	"nrf_nvic_state_t\000"
@@ -6258,9 +6264,9 @@ m_block_dev_sdc:
 	.ascii	"__StackLimit\000"
 .LASF111:
 	.ascii	"int_frac_digits\000"
-.LASF266:
+.LASF265:
 	.ascii	"queue_microsd\000"
-.LASF298:
+.LASF299:
 	.ascii	"f_open\000"
 .LASF109:
 	.ascii	"positive_sign\000"
@@ -6274,7 +6280,7 @@ m_block_dev_sdc:
 	.ascii	"result\000"
 .LASF75:
 	.ascii	"NRF_BLOCK_DEV_EVT_UNINIT\000"
-.LASF267:
+.LASF266:
 	.ascii	"gHandshook\000"
 .LASF168:
 	.ascii	"sect\000"
@@ -6306,9 +6312,9 @@ m_block_dev_sdc:
 	.ascii	"app_sdc_config_t\000"
 .LASF146:
 	.ascii	"FR_WRITE_PROTECTED\000"
-.LASF304:
+.LASF305:
 	.ascii	"nrf_log_frontend_std_0\000"
-.LASF303:
+.LASF304:
 	.ascii	"nrf_log_frontend_std_1\000"
 .LASF53:
 	.ascii	"ioctl\000"
@@ -6344,7 +6350,7 @@ m_block_dev_sdc:
 	.ascii	"FR_TOO_MANY_OPEN_FILES\000"
 .LASF10:
 	.ascii	"unsigned char\000"
-.LASF299:
+.LASF300:
 	.ascii	"strlen\000"
 .LASF74:
 	.ascii	"NRF_BLOCK_DEV_EVT_INIT\000"
@@ -6354,7 +6360,7 @@ m_block_dev_sdc:
 	.ascii	"sck_pin\000"
 .LASF190:
 	.ascii	"dirbase\000"
-.LASF265:
+.LASF264:
 	.ascii	"scanStatusQ\000"
 .LASF179:
 	.ascii	"fs_type\000"
@@ -6364,13 +6370,13 @@ m_block_dev_sdc:
 	.ascii	"nrf_block_device_sdc_ops\000"
 .LASF139:
 	.ascii	"FR_NOT_READY\000"
-.LASF264:
+.LASF263:
 	.ascii	"poseControllerQ\000"
 .LASF39:
 	.ascii	"last_result\000"
 .LASF216:
 	.ascii	"__RAL_data_utf8_space\000"
-.LASF302:
+.LASF303:
 	.ascii	"disk_uninitialize\000"
 .LASF45:
 	.ascii	"_Bool\000"
@@ -6378,9 +6384,9 @@ m_block_dev_sdc:
 	.ascii	"char\000"
 .LASF187:
 	.ascii	"n_fatent\000"
-.LASF276:
+.LASF277:
 	.ascii	"gRightWheelTicks\000"
-.LASF290:
+.LASF291:
 	.ascii	"capacity\000"
 .LASF18:
 	.ascii	"nrf_block_dev_sdc_work_t\000"
@@ -6406,7 +6412,7 @@ m_block_dev_sdc:
 	.ascii	"UINT\000"
 .LASF107:
 	.ascii	"mon_thousands_sep\000"
-.LASF278:
+.LASF279:
 	.ascii	"m_block_dev_sdc_work\000"
 .LASF4:
 	.ascii	"NRF_LOG_SEVERITY_NONE\000"
@@ -6426,7 +6432,7 @@ m_block_dev_sdc:
 	.ascii	"NRF_LOG_SEVERITY_INFO\000"
 .LASF60:
 	.ascii	"p_product\000"
-.LASF280:
+.LASF281:
 	.ascii	"file\000"
 .LASF169:
 	.ascii	"_FDID\000"
@@ -6454,12 +6460,12 @@ m_block_dev_sdc:
 	.ascii	"free_clst\000"
 .LASF128:
 	.ascii	"abbrev_month_names\000"
-.LASF306:
+.LASF307:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
 	.ascii	"al\\slam\\drivers\\microsd.c\000"
 .LASF58:
 	.ascii	"NRF_BLOCK_DEV_IOCTL_REQ_INFO_STRINGS\000"
-.LASF305:
+.LASF306:
 	.ascii	"GNU C99 9.2.1 20191025 (release) [ARM/arm-9-branch "
 	.ascii	"revision 277599] -fmessage-length=0 -mcpu=cortex-m4"
 	.ascii	" -mlittle-endian -mfloat-abi=hard -mfpu=fpv4-sp-d16"
@@ -6474,13 +6480,13 @@ m_block_dev_sdc:
 	.ascii	"codeset\000"
 .LASF70:
 	.ascii	"nrf_block_dev_event_type_t\000"
-.LASF294:
+.LASF295:
 	.ascii	"xQueueGenericSend\000"
 .LASF59:
 	.ascii	"p_vendor\000"
-.LASF291:
+.LASF292:
 	.ascii	"retries\000"
-.LASF301:
+.LASF302:
 	.ascii	"f_close\000"
 .LASF135:
 	.ascii	"__wchar\000"
@@ -6506,7 +6512,7 @@ m_block_dev_sdc:
 	.ascii	"__StackTop\000"
 .LASF174:
 	.ascii	"attr\000"
-.LASF292:
+.LASF293:
 	.ascii	"xQueueReceive\000"
 .LASF189:
 	.ascii	"fatbase\000"
@@ -6526,8 +6532,6 @@ m_block_dev_sdc:
 	.ascii	"FR_LOCKED\000"
 .LASF204:
 	.ascii	"long long int\000"
-.LASF263:
-	.ascii	"xCollisionMutex\000"
 .LASF133:
 	.ascii	"__mbstate_s\000"
 .LASF160:
@@ -6544,21 +6548,21 @@ m_block_dev_sdc:
 	.ascii	"__category\000"
 .LASF69:
 	.ascii	"p_blk_req\000"
-.LASF284:
+.LASF285:
 	.ascii	"microsd_task\000"
 .LASF6:
 	.ascii	"NRF_LOG_SEVERITY_WARNING\000"
 .LASF224:
 	.ascii	"ITM_RxBuffer\000"
-.LASF277:
+.LASF278:
 	.ascii	"gLeftWheelTicks\000"
 .LASF132:
 	.ascii	"date_time_format\000"
-.LASF271:
+.LASF272:
 	.ascii	"float\000"
 .LASF44:
 	.ascii	"DSTATUS\000"
-.LASF289:
+.LASF290:
 	.ascii	"blocks_per_mb\000"
 .LASF43:
 	.ascii	"nrf_block_dev_result_t\000"
@@ -6572,7 +6576,7 @@ m_block_dev_sdc:
 	.ascii	"FR_NOT_ENOUGH_CORE\000"
 .LASF117:
 	.ascii	"p_sign_posn\000"
-.LASF285:
+.LASF286:
 	.ascii	"microsd_write\000"
 .LASF250:
 	.ascii	"handle_user_task\000"
@@ -6606,7 +6610,7 @@ m_block_dev_sdc:
 	.ascii	"FR_NOT_ENABLED\000"
 .LASF150:
 	.ascii	"FR_MKFS_ABORTED\000"
-.LASF270:
+.LASF271:
 	.ascii	"gTheta_hat\000"
 .LASF254:
 	.ascii	"communication_task\000"
@@ -6658,7 +6662,9 @@ m_block_dev_sdc:
 	.ascii	"volbase\000"
 .LASF243:
 	.ascii	"TickType_t\000"
-.LASF293:
+.LASF270:
+	.ascii	"validateWP\000"
+.LASF294:
 	.ascii	"xQueueSemaphoreTake\000"
 .LASF25:
 	.ascii	"ev_handler\000"
@@ -6668,9 +6674,9 @@ m_block_dev_sdc:
 	.ascii	"grouping\000"
 .LASF42:
 	.ascii	"diskio_blkdev_config_t\000"
-.LASF274:
+.LASF275:
 	.ascii	"gLeft\000"
-.LASF300:
+.LASF301:
 	.ascii	"f_write\000"
 .LASF19:
 	.ascii	"block_size\000"
@@ -6690,11 +6696,11 @@ m_block_dev_sdc:
 	.ascii	"dir_ptr\000"
 .LASF93:
 	.ascii	"__toupper\000"
-.LASF288:
+.LASF289:
 	.ascii	"drives\000"
 .LASF87:
 	.ascii	"name\000"
-.LASF268:
+.LASF267:
 	.ascii	"gPaused\000"
 .LASF112:
 	.ascii	"frac_digits\000"
@@ -6710,22 +6716,22 @@ m_block_dev_sdc:
 	.ascii	"FATFS\000"
 .LASF134:
 	.ascii	"__state\000"
-.LASF287:
+.LASF288:
 	.ascii	"ff_result\000"
 .LASF202:
 	.ascii	"int16_t\000"
-.LASF273:
+.LASF274:
 	.ascii	"gY_hat\000"
 .LASF72:
 	.ascii	"NRF_BLOCK_DEV_RESULT_IO_ERROR\000"
 .LASF261:
 	.ascii	"xCommandReadyBSem\000"
-.LASF307:
+.LASF308:
 	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
 	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
-.LASF297:
+.LASF298:
 	.ascii	"f_mount\000"
-.LASF279:
+.LASF280:
 	.ascii	"m_block_dev_sdc\000"
 .LASF249:
 	.ascii	"handle_display_task\000"
@@ -6751,7 +6757,7 @@ m_block_dev_sdc:
 	.ascii	"content\000"
 .LASF1:
 	.ascii	"padding\000"
-.LASF286:
+.LASF287:
 	.ascii	"bytes_written\000"
 .LASF34:
 	.ascii	"cs_pin\000"
@@ -6765,7 +6771,7 @@ m_block_dev_sdc:
 	.ascii	"__RAL_data_empty_string\000"
 .LASF136:
 	.ascii	"FR_OK\000"
-.LASF282:
+.LASF283:
 	.ascii	"disk_state\000"
 .LASF113:
 	.ascii	"p_cs_precedes\000"
@@ -6777,11 +6783,13 @@ m_block_dev_sdc:
 	.ascii	"busy\000"
 .LASF31:
 	.ascii	"mosi_pin\000"
+.LASF269:
+	.ascii	"newServer\000"
 .LASF149:
 	.ascii	"FR_NO_FILESYSTEM\000"
-.LASF295:
+.LASF296:
 	.ascii	"disk_initialize\000"
-.LASF281:
+.LASF282:
 	.ascii	"failed\000"
 .LASF29:
 	.ascii	"nrf_block_req_t\000"
@@ -6803,11 +6811,11 @@ m_block_dev_sdc:
 	.ascii	"clust\000"
 .LASF52:
 	.ascii	"write_req\000"
-.LASF283:
+.LASF284:
 	.ascii	"write_operation\000"
 .LASF78:
 	.ascii	"blk_id\000"
-.LASF272:
+.LASF273:
 	.ascii	"gX_hat\000"
 .LASF27:
 	.ascii	"nrf_block_dev_geometry_t\000"

@@ -106,6 +106,7 @@ void send_idle(void) {
   if(use_arq[TYPE_IDLE]) arq_send(server_connection, &status, 1);
   else simple_p_send(SERVER_ADDRESS, &status, 1);
 }
+
 void debug(const char *fmt, ...) {
         if(!USEBLUETOOTH){return;}
 	uint8_t buf[100];

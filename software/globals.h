@@ -30,7 +30,7 @@ extern SemaphoreHandle_t xTickMutex;
 extern SemaphoreHandle_t xControllerBSem;
 extern SemaphoreHandle_t xCommandReadyBSem;
 extern SemaphoreHandle_t mutex_spi;
-extern SemaphoreHandle_t xCollisionMutex;
+//extern SemaphoreHandle_t xCollisionMutex;
 
 /* Queues */
 //QueueHandle_t movementQ = 0;
@@ -42,7 +42,13 @@ extern QueueHandle_t queue_microsd;
 extern uint8_t gHandshook;
 extern uint8_t gPaused;
 
-extern uint8_t USEBLUETOOTH; //for switching between bluetooth and NRF52840 dongle
+
+/* Declaration of setup parameters*/
+extern bool USEBLUETOOTH;	//for switching between bluetooth and NRF52840 dongle
+extern bool newServer;		// For switching between Grindvik and Mullins' server versions
+extern bool validateWP;		// If false, all waypoints are processed. If true, waypoints inside collision sectors are discarded.
+
+
 
 // Global robot pose
 extern float gTheta_hat; 
@@ -75,4 +81,4 @@ struct sCartesian {
 
 
 
-#endif GLOBALS_H
+#endif  /* GLOBALS_H */

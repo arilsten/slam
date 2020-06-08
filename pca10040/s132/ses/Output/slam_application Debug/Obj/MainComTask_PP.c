@@ -353,9 +353,9 @@ int vfscanf(FILE *, const char *, __va_list);
 # 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h" 2
 
 
-# 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h"
-extern int16_t collisionAngles[4];
 
+
+# 16 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h"
 void vMainCommunicationTask(void *pvParameters);
 # 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
 # 1 "../../../communication/server_communication.h" 1
@@ -5757,7 +5757,7 @@ extern SemaphoreHandle_t xTickMutex;
 extern SemaphoreHandle_t xControllerBSem;
 extern SemaphoreHandle_t xCommandReadyBSem;
 extern SemaphoreHandle_t mutex_spi;
-extern SemaphoreHandle_t xCollisionMutex;
+
 
 
 
@@ -5769,7 +5769,25 @@ extern QueueHandle_t queue_microsd;
 extern uint8_t gHandshook;
 extern uint8_t gPaused;
 
-extern uint8_t USEBLUETOOTH;
+
+
+extern 
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 3 4
+      _Bool 
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h"
+           USEBLUETOOTH;
+extern 
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 3 4
+      _Bool 
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h"
+           newServer;
+extern 
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h" 3 4
+      _Bool 
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\globals.h"
+           validateWP;
+
+
 
 
 extern float gTheta_hat;
@@ -7991,24 +8009,27 @@ const nrf_drv_twi_config_t* getBusConfig();
 void vFunc_Inf2pi(float *angle_in_radians);
 
 
-int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectX(int16_t x, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectXlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectY(int16_t y, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
-
-
-
-void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+int16_t distObjectYlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
 
-void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+void sendNewPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData);
+
+
+
+void sendOldPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData);
+
+
+void sendScanBorder();
 
 
 void increaseCollisionSector(int16_t angle, uint8_t sensor);
@@ -8024,10 +8045,17 @@ void printCollisionSectors(void);
 
 
 
-# 50 "../../../drivers/functions.h" 3 4
+# 53 "../../../drivers/functions.h" 3 4
 _Bool 
-# 50 "../../../drivers/functions.h"
+# 53 "../../../drivers/functions.h"
     validWaypoint(int16_t waypointAngle);
+
+
+
+# 56 "../../../drivers/functions.h" 3 4
+_Bool 
+# 56 "../../../drivers/functions.h"
+    checkForCollision();
 # 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
 # 1 "../../../drivers/display.h" 1
 # 11 "../../../drivers/display.h"
@@ -8935,74 +8963,108 @@ void vMainCommunicationTask(void *pvParameters){
   }
  }
  else{
-  uint8_t message[5] = {0};
+  uint8_t message[8] = {0};
   int16_t oldwaypoint[2] = {0};
   int16_t waypoint[2] = {0};
+  
+# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+ _Bool 
+# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+      isValidWaypoint;
 
   while(
-# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 120 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
        1
-# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 120 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
            ){
-   i2cReciveNOADDR(0x72, &message, 5);
+   i2cReciveNOADDR(0x72, &message, 8);
 
-   switch(message[0]){
+   if(newServer){
+    switch(message[1]){
 
-    case 1:
-     if(xQueueSemaphoreTake( ( xPoseMutex ), ( 20 ) ) == ( ( BaseType_t ) 1 )){
-      gX_hat = *((int16_t*)&message[1]);
-      gY_hat = *((int16_t*)&message[3]);
+     case 1:
 
-      xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 129 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
-     0
-# 129 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
-     , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
-     }else{
-      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "xPoseMutex not available!"); } };
-     }
-     break;
+      if(xQueueSemaphoreTake( ( xPoseMutex ), ( 20 ) ) == ( ( BaseType_t ) 1 )){
+       gX_hat = *((int16_t*)&message[2]);
+       gY_hat = *((int16_t*)&message[4]);
+       gTheta_hat = *((int16_t*)&message[6])*
+# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                                            3.14159265358979323846 
+# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                                            / 180.0;
 
-    case 114:
-     oldwaypoint[0] = waypoint[0];
-     oldwaypoint[1] = waypoint[1];
-     waypoint[0] = *((int16_t*)&message[1]);
-     waypoint[1] = *((int16_t*)&message[3]);
+       xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
+# 133 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+      0
+# 133 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+      , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
+      }else{
+       if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "xPoseMutex not available!"); } };
+      }
 
+      break;
+
+
+     case 2:
+      oldwaypoint[0] = waypoint[0];
+      oldwaypoint[1] = waypoint[1];
+      waypoint[0] = *((int16_t*)&message[2]);
+      waypoint[1] = *((int16_t*)&message[4]);
+
+      if(validateWP){
+       int16_t wpAngle = atan2(waypoint[1], waypoint[0])*180.0 / 
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                                                        3.14159265358979323846
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                                                               ;
+       isValidWaypoint = validWaypoint(wpAngle);
+      }else{
+       isValidWaypoint = 
+# 151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                        1
+# 151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                            ;
+      }
+
+      if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){
+       sendScanBorder();
+       struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
+       xQueueGenericSend( ( poseControllerQ ), ( &target ), ( 100 ), ( ( BaseType_t ) 0 ) );
+      }
+      break;
+
+     default:
+
+      break;
+    }
+   }else{
+    oldwaypoint[0] = waypoint[0];
+    oldwaypoint[1] = waypoint[1];
+    waypoint[0] = *((int16_t*)&message[1]);
+    waypoint[1] = *((int16_t*)&message[3]);
+
+    if(validateWP){
      int16_t wpAngle = atan2(waypoint[1], waypoint[0])*180.0 / 
-# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 172 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                                                       3.14159265358979323846
-# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 172 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                                                              ;
-     
-# 142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
-    _Bool 
-# 142 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
-         isvalidWaypoint = validWaypoint(wpAngle);
+     isValidWaypoint = validWaypoint(wpAngle);
+    }else{
+     isValidWaypoint = 
+# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                      1
+# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                          ;
+    }
 
-     if(isvalidWaypoint == 
-# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
-                          0
-# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
-                               ){
-      display_text_on_line(3, "Discarded WP");
-      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "WP not valid"); } };
-     }else{
-      display_text_on_line(3, "");
-      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "WP valid"); } };
-     }
+    if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){
+     sendScanBorder();
+     struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
+     xQueueGenericSend( ( poseControllerQ ), ( &target ), ( 100 ), ( ( BaseType_t ) 0 ) );
+    }
 
-     if((oldwaypoint[0] != waypoint[0] || oldwaypoint[1] != waypoint[1])){
-
-      struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
-      xQueueGenericSend( ( poseControllerQ ), ( &target ), ( 100 ), ( ( BaseType_t ) 0 ) );
-     }
-     break;
-
-    default:
-     break;
    }
-
    vTaskDelay(100);
   }
  }

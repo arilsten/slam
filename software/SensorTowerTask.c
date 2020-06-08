@@ -23,8 +23,10 @@
 #include <stdlib.h>
 
 
-/* _________ SETUP VARIABLES __________ */
-bool newServer = false;          // Changes between old and new message-style, when false it supports Grindviks server from 2019. Difference is MQTT message-format.
+///* _________ SETUP VARIABLES __________ */
+//bool newServer = false;          // Changes between old and new message-style, when false it supports Grindviks server from 2019. Difference is MQTT message-format.
+
+bool scan = false;
 
 
 void vMainSensorTowerTask(void *pvParameters) {
@@ -34,39 +36,38 @@ void vMainSensorTowerTask(void *pvParameters) {
     int16_t xhat = 0;
     int16_t yhat = 0;
     uint8_t servoDirection = moveCounterClockwise;
-    uint8_t servoAngle = 0;
-    uint8_t servoResolution = 1;                    
+    uint8_t servoAngle = 0;                
     uint8_t robotMovement = moveStop;
     uint8_t idleCounter = 0;
 	uint8_t sensorDataCM[NUM_DIST_SENSORS];		 
     uint16_t sensorDataMM[NUM_DIST_SENSORS];	
-
+	
     // Initialize the xLastWakeTime variable with the current time.
     TickType_t xLastWakeTime;
 	
-    while (true) {
+    while (true){
+		
+		
         if ((gHandshook == true) && (gPaused == false)) {
-            // xLastWakeTime variable with the current time.
-            xLastWakeTime = xTaskGetTickCount();
-            // Set scanning resolution depending on which movement the robot is executing.
+            
+			xLastWakeTime = xTaskGetTickCount();			// xLastWakeTime variable with the current time.
+			
             if (xQueueReceive(scanStatusQ, &robotMovement, 150) == pdTRUE) {
-                // Set servo step length according to movement,
                 // Note that the iterations are skipped while robot is rotating (see further downbelow)
                 switch (robotMovement) {
                 case moveStop:
-                    servoAngle *= servoResolution;
-                    servoResolution = 1;
+					scan = true;
                     idleCounter = 1;
                     break;
                 case moveForward:
                 case moveBackward:
-                    servoResolution = 5;
-                    servoAngle /= servoResolution;      
+					scan = false;
+					servoAngle = 0;		// Iterations are frozen while rotating, see further down
                     idleCounter = 0;
                     break;
                 case moveClockwise:
                 case moveCounterClockwise:
-                    // Iterations are frozen while rotating, see further down
+                    
                     idleCounter = 0;
                     break;
                 default:
@@ -74,9 +75,10 @@ void vMainSensorTowerTask(void *pvParameters) {
                     break;
                 }
             }
-            vServo_setAngle(servoAngle * servoResolution);
-            vTaskDelayUntil(&xLastWakeTime, 200); // Was 200 before 08.05.2020. Wait total of 200 ms for servo to reach set point
-            taskYIELD();
+			
+            vServo_setAngle(servoAngle);
+            vTaskDelayUntil(&xLastWakeTime, 200);
+			taskYIELD();
 			
 			xSemaphoreTake(xPoseMutex, 40);
             thetahat = gTheta_hat;
@@ -92,17 +94,14 @@ void vMainSensorTowerTask(void *pvParameters) {
 				if(USEBLUETOOTH){
 					sensorDataCM[i] = (IrAnalogToMM(ir_read_blocking(i), i)/10);
 					if(sensorDataCM[i] <= COLLISION_THRESHOLD_CM && sensorDataCM[i] > 0){
-						//Add functionality for stopping robot
-						increaseCollisionSector(servoAngle, i);
+						increaseCollisionSector(detectionAngle_DEG, i);
 					}else{
-						decreaseCollisionSector(servoAngle, i);
+						decreaseCollisionSector(detectionAngle_DEG, i);
 					}
 				}
 				else{
 					sensorDataMM[i] = IrAnalogToMM(ir_read_blocking(i), i);
 					if(sensorDataMM[i] <= COLLISION_THRESHOLD_MM && sensorDataMM[i] > 0){
-						
-						//Add functionality for stopping robot
 						increaseCollisionSector(detectionAngle_DEG, i);
 					}else{
 						decreaseCollisionSector(detectionAngle_DEG, i);
@@ -114,17 +113,21 @@ void vMainSensorTowerTask(void *pvParameters) {
 			
 			/*  Send update to server  */
             // Java server message
-            if(USEBLUETOOTH){                                                                    
-                send_update(xhat/10, yhat/10, thetahat * RAD2DEG, servoAngle * servoResolution, sensorDataCM[0], sensorDataCM[1],  sensorDataCM[2], sensorDataCM[3]);
-				
+            if(USEBLUETOOTH){
+				if(scan){
+					send_update(xhat/10, yhat/10, thetahat * RAD2DEG, servoAngle, sensorDataCM[0], sensorDataCM[1],  sensorDataCM[2], sensorDataCM[3]);
+				}
             }else{ // C++ server message
 				if(newServer){
-					sendNewPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM); // New  message-format from spring 2020.
+					if(scan){
+						sendNewPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM); // New  message-format from spring 2020.
+					}
 				}else{
-					sendOldPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM); // Old message formats supports Grindviks server from 2019.
+					if(scan){
+						sendOldPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM); // Old message format which supports Grindviks server from 2019.
+					}
 				}
 			}
-			
 			
 			
 			
@@ -137,19 +140,32 @@ void vMainSensorTowerTask(void *pvParameters) {
                 idleCounter++;
             }
 			
+			
+				
 
 
             // Iterate in a increasing/decreasign manner and depending on the robots movement
-            if ((servoAngle * servoResolution <= 90) && (servoDirection == moveCounterClockwise) && (robotMovement < moveClockwise)) {
+            if ((servoAngle <= 90) && (servoDirection == moveCounterClockwise) && (robotMovement < moveClockwise)) {
                 servoAngle++;
-            } else if ((servoAngle * servoResolution > 0) && (servoDirection == moveClockwise) && (robotMovement < moveClockwise)) {
+				
+            } else if ((servoAngle > 0) && (servoDirection == moveClockwise) && (robotMovement < moveClockwise)) {
                 servoAngle--;
             }
 
-            if ((servoAngle * servoResolution >= 90) && (servoDirection == moveCounterClockwise)) {
+
+            if ((servoAngle >= 90) && (servoDirection == moveCounterClockwise)) {
                 servoDirection = moveClockwise;
-            } else if ((servoAngle * servoResolution <= 0) && (servoDirection == moveClockwise)) {
+				if(newServer){
+					sendScanBorder(); // Sends a 1 to the server to indicate that one 90 degree scan is finished
+				}
+				
+			
+            } else if ((servoAngle <= 0) && (servoDirection == moveClockwise)) {
                 servoDirection = moveCounterClockwise;
+				if(newServer){
+					sendScanBorder();	// Sends a 1 to the server to indicate that one 90 degree scan is starting
+				}
+			
             }
         }
 

@@ -112,54 +112,76 @@ void vMainCommunicationTask(void *pvParameters){
 		}
 	}
 	else{ // If NRF52840 Dongle used with thread and C++ server
-		uint8_t message[5] = {0};
+		uint8_t message[8] = {0};
 		int16_t oldwaypoint[2] = {0};
 		int16_t waypoint[2] = {0};
+		bool isValidWaypoint;
 		
 		while(true){
-			i2cReciveNOADDR(I2C_DEVICE_DONGLE, &message, 5);
-		
-			switch(message[0]){
+			i2cReciveNOADDR(I2C_DEVICE_DONGLE, &message, 8);
 			
-				case START_POSITION:
-					if(xSemaphoreTake(xPoseMutex, 20) == pdTRUE){
-						gX_hat = *((int16_t*)&message[1]);
-						gY_hat = *((int16_t*)&message[3]);
-						//TODO This may need some condition variables so the scanning and stuff dont start before this is received.
-						xSemaphoreGive(xPoseMutex);
-					}else{
-						NRF_LOG_INFO("xPoseMutex not available!");
-					}
-					break;
+			if(newServer){
+				switch(message[1]){ // message[0] is the adress of the dongle
 			
-				case NEW_WAYPOINT: // New waypoint from Grindviks server has message code 114, check MainComTask.h.
-					oldwaypoint[0] = waypoint[0];
-					oldwaypoint[1] = waypoint[1];
-					waypoint[0] = *((int16_t*)&message[1]);
-					waypoint[1] = *((int16_t*)&message[3]);
+					case START_POSITION: //TODO Add an extra message type, ____update position_____
 					
-					int16_t wpAngle = atan2(waypoint[1], waypoint[0])*RAD2DEG;
-					bool isvalidWaypoint = validWaypoint(wpAngle);
+						if(xSemaphoreTake(xPoseMutex, 20) == pdTRUE){
+							gX_hat = *((int16_t*)&message[2]);
+							gY_hat = *((int16_t*)&message[4]);
+							gTheta_hat = *((int16_t*)&message[6])*DEG2RAD;
+							//TODO This may need some condition variables so the scanning and stuff dont start before this is received.
+							xSemaphoreGive(xPoseMutex);
+						}else{
+							NRF_LOG_INFO("xPoseMutex not available!");
+						}
 					
-					if(isvalidWaypoint == false){
-						display_text_on_line(3, "Discarded WP");
-						NRF_LOG_INFO("WP not valid");
-					}else{
-						display_text_on_line(3, "");
-						NRF_LOG_INFO("WP valid");
-					}
+						break;
 					
-					if((oldwaypoint[0] != waypoint[0] || oldwaypoint[1] != waypoint[1])){
-						
-						struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
-						xQueueSend(poseControllerQ, &target, 100);
-					}
-					break;
 			
-				default:
-					break;
-			}
+					case NEW_WAYPOINT_NEW_SERVER:  
+						oldwaypoint[0] = waypoint[0];
+						oldwaypoint[1] = waypoint[1];
+						waypoint[0] = *((int16_t*)&message[2]); // Has to be message[2] for new server
+						waypoint[1] = *((int16_t*)&message[4]);	// Has to be message[4] for new server
+					
+						if(validateWP){
+							int16_t wpAngle = atan2(waypoint[1], waypoint[0])*RAD2DEG;
+							isValidWaypoint = validWaypoint(wpAngle);
+						}else{
+							isValidWaypoint = true;
+						}
+					
+						if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){ //Add the line that discardes the waypoint.
+							sendScanBorder(); // used to signalize that the robot has a new waypoint to the server.
+							struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
+							xQueueSend(poseControllerQ, &target, 100);
+						}
+						break;
+			
+					default:
+					
+						break;
+				}
+			}else{ // There is only one message coming from the old server, which is a new waypoint
+				oldwaypoint[0] = waypoint[0];
+				oldwaypoint[1] = waypoint[1];
+				waypoint[0] = *((int16_t*)&message[1]);
+				waypoint[1] = *((int16_t*)&message[3]);
 				
+				if(validateWP){
+					int16_t wpAngle = atan2(waypoint[1], waypoint[0])*RAD2DEG;
+					isValidWaypoint = validWaypoint(wpAngle);
+				}else{
+					isValidWaypoint = true;
+				}
+				
+				if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){ //Add the line that discardes the waypoint.
+					sendScanBorder(); // used to signalize that the robot has a new waypoint to the server.
+					struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
+					xQueueSend(poseControllerQ, &target, 100);
+				}
+			
+			}
 			vTaskDelay(100);
 		}
 	}

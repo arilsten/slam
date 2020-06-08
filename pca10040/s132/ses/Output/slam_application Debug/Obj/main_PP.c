@@ -3,7 +3,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
-# 18 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
 # 1 "../../../../../../external/freertos/source/include/FreeRTOS.h" 1
 # 35 "../../../../../../external/freertos/source/include/FreeRTOS.h"
 # 1 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stddef.h" 1 3 4
@@ -5262,9 +5262,9 @@ typedef struct xSTATIC_STREAM_BUFFER
 
 
 typedef StaticStreamBuffer_t StaticMessageBuffer_t;
-# 19 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../components/libraries/util/app_error.h" 1
-# 20 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../components/libraries/timer/app_timer.h" 1
 # 69 "../../../../../../components/libraries/timer/app_timer.h"
 # 1 "../config/sdk_config.h" 1
@@ -5344,7 +5344,7 @@ void app_timer_pause(void);
 
 
 void app_timer_resume(void);
-# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../components/libraries/fds/fds.h" 1
 # 58 "../../../../../../components/libraries/fds/fds.h"
 # 1 "../../../../../../components/libraries/util/sdk_errors.h" 1
@@ -5579,7 +5579,7 @@ ret_code_t fds_record_id_from_desc(fds_record_desc_t const * p_desc,
                                    uint32_t * p_record_id);
 # 690 "../../../../../../components/libraries/fds/fds.h"
 ret_code_t fds_stat(fds_stat_t * p_stat);
-# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 
 
 # 1 "../../../../../../components/libraries/delay/nrf_delay.h" 1
@@ -5781,7 +5781,7 @@ static inline void nrf_delay_ms(uint32_t ms_time)
         nrfx_coredep_delay_us(1000);
     } while (--ms_time);
 }
-# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 27 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_clock.h" 1
 # 43 "../../../../../../integration/nrfx/legacy/nrf_drv_clock.h"
 # 1 "../../../../../../modules/nrfx/drivers/include/nrfx_clock.h" 1
@@ -6381,7 +6381,7 @@ static inline uint32_t nrf_drv_clock_ppi_event_addr(nrf_clock_event_t event)
 {
     return nrf_clock_event_address_get(event);
 }
-# 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 28 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../integration/nrfx/legacy/nrf_drv_ppi.h" 1
 # 44 "../../../../../../integration/nrfx/legacy/nrf_drv_ppi.h"
 # 1 "../../../../../../modules/nrfx/drivers/include/nrfx_ppi.h" 1
@@ -6774,7 +6774,7 @@ static inline uint32_t nrfx_ppi_task_addr_group_disable_get(nrf_ppi_channel_grou
 ret_code_t nrf_drv_ppi_init(void);
 # 122 "../../../../../../integration/nrfx/legacy/nrf_drv_ppi.h"
 ret_code_t nrf_drv_ppi_uninit(void);
-# 27 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log.h" 1
 # 52 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 # 1 "../../../../../../components/libraries/util/sdk_common.h" 1
@@ -7069,7 +7069,7 @@ uint8_t nrf_log_getchar(void);
 # 82 "../../../../../../components/libraries/experimental_log/nrf_log.h" 2
 # 257 "../../../../../../components/libraries/experimental_log/nrf_log.h"
 uint32_t nrf_log_push(char * const p_str);
-# 28 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h" 1
 # 58 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
 # 1 "../../../../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h" 1
@@ -7527,11 +7527,11 @@ nrf_log_severity_t nrf_log_module_filter_get(uint32_t backend_id,
                                             _Bool 
 # 216 "../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h"
                                                      dynamic);
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 31 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../components/libraries/experimental_log/nrf_log_default_backends.h" 1
 # 73 "../../../../../../components/libraries/experimental_log/nrf_log_default_backends.h"
 void nrf_log_default_backends_init(void);
-# 30 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../components/softdevice/common/nrf_sdh_freertos.h" 1
 # 54 "../../../../../../components/softdevice/common/nrf_sdh_freertos.h"
 typedef void (*nrf_sdh_freertos_task_hook_t)(void * p_context);
@@ -7542,7 +7542,7 @@ typedef void (*nrf_sdh_freertos_task_hook_t)(void * p_context);
 
 
 void nrf_sdh_freertos_init(nrf_sdh_freertos_task_hook_t hook, void * p_context);
-# 31 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 33 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../external/freertos/source/include/semphr.h" 1
 # 36 "../../../../../../external/freertos/source/include/semphr.h"
 # 1 "../../../../../../external/freertos/source/include/queue.h" 1
@@ -7645,7 +7645,7 @@ uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
 # 37 "../../../../../../external/freertos/source/include/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 32 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
 # 37 "../../../../../../external/freertos/source/include/task.h"
 # 1 "../../../../../../external/freertos/source/include/list.h" 1
@@ -7949,7 +7949,7 @@ void *pvTaskIncrementMutexHeldCount( void ) ;
 
 
 void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) ;
-# 33 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../../../../external/freertos/source/include/timers.h" 1
 # 39 "../../../../../../external/freertos/source/include/timers.h"
 # 1 "../../../../../../external/freertos/source/include/task.h" 1
@@ -8008,7 +8008,7 @@ BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommand
 
  void vTimerSetTimerNumber( TimerHandle_t xTimer, UBaseType_t uxTimerNumber ) ;
  UBaseType_t uxTimerGetTimerNumber( TimerHandle_t xTimer ) ;
-# 34 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 36 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 
 
 
@@ -9704,7 +9704,7 @@ static inline
 # 330 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
                                                                            );
 }
-# 38 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 40 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 
 
 
@@ -10108,7 +10108,7 @@ double tgamma(double __x);
 float truncf(float __x);
 # 1869 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h" 3 4
 double trunc(double __x);
-# 42 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 44 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 
 # 1 "../../../drivers/MPU6050.h" 1
 # 13 "../../../drivers/MPU6050.h"
@@ -10137,7 +10137,7 @@ float fIMU_readFloatGyroY(void);
 float fIMU_readFloatGyroZ(void);
 IMU_reading_t IMU_getGyro(void);
 IMU_reading_t IMU_getAccel(void);
-# 44 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../communication/arq.h" 1
 
 
@@ -10155,14 +10155,14 @@ uint8_t arq_close_connection(arq_connection id);
 uint8_t arq_send(arq_connection id, uint8_t *data, uint16_t len);
 uint8_t arq_send_string(arq_connection id, char *str);
 void vARQTask(void *pvParamters);
-# 45 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../communication/bluetooth.h" 1
 void BLE_init();
 void ble_send(uint8_t* data, uint16_t len);
 void advertising_start(void);
-# 46 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/defines.h" 1
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 49 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/display.h" 1
 # 11 "../../../drivers/display.h"
 # 1 "../../../../../../components/libraries/gfx/nrf_lcd.h" 1
@@ -10557,7 +10557,7 @@ void display_log(const char* p_string);
 void display_clear(void);
 
 void display_task(void *arg);
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 
 # 1 "../../../drivers/encoder.h" 1
 # 13 "../../../drivers/encoder.h"
@@ -12204,7 +12204,7 @@ void encoder_init_int();
 
 encoderTicks encoder_get_ticks();
 encoderTicks encoder_get_all_ticks();
-# 50 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 52 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/i2c.h" 1
 # 13 "../../../drivers/i2c.h"
 void i2cInit();
@@ -12214,7 +12214,7 @@ void i2cSendNOADDR(uint8_t device,uint8_t* data,uint8_t len);
 void i2cReciveNOADDR(uint8_t device, uint8_t* data, uint8_t len);
 const nrf_twi_mngr_t* getTWIManagerAddress();
 const nrf_drv_twi_config_t* getBusConfig();
-# 51 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 53 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/ir.h" 1
 # 10 "../../../drivers/ir.h"
 typedef enum {
@@ -12255,7 +12255,7 @@ int16_t i16DistSens_readMM(IR_Sensor_t sensor);
 uint8_t IrAnalogToCM(uint16_t reading);
 
 int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor);
-# 52 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/mag3110.h" 1
 
 
@@ -12290,7 +12290,7 @@ void mag_calibrate();
 
 float mag_heading();
 MAG_reading_t mag_read();
-# 53 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 55 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/microsd.h" 1
 
 
@@ -12302,7 +12302,7 @@ typedef struct {
 # 18 "../../../drivers/microsd.h"
 void microsd_write(char* filename, char* data);
 void microsd_task();
-# 54 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/motor.h" 1
 
 
@@ -12348,7 +12348,7 @@ void motor_stop(void);
 void motor_brake(void);
 
 void vMotorMovementSwitch(int leftSpeed, int rightSpeed);
-# 55 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 57 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../communication/network.h" 1
 # 14 "../../../communication/network.h"
 void network_set_callback(uint8_t protocol, void (*cb)(uint8_t, uint8_t*, uint16_t));
@@ -12357,7 +12357,7 @@ uint8_t network_get_address(void);
 void network_receive( uint8_t* frame, uint8_t len);
 void network_ReciveFromBle(const uint8_t* data, uint8_t length);
 void network_getMessage();
-# 56 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 58 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../communication/server_communication.h" 1
 # 25 "../../../communication/server_communication.h"
 typedef struct {
@@ -12414,7 +12414,7 @@ void send_idle(void);
 void send_ping_response(void);
 void server_receiver(uint8_t *data, uint16_t len);
 void debug(const char *fmt, ...);
-# 57 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../drivers/servo.h" 1
 
 
@@ -12425,7 +12425,7 @@ void debug(const char *fmt, ...);
 void servo_init();
 # 18 "../../../drivers/servo.h"
 void vServo_setAngle(int angle);
-# 58 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 60 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../communication/simple_protocol.h" 1
 
 
@@ -12434,31 +12434,31 @@ void vServo_setAngle(int angle);
 
 void simple_p_init(void (*cb)(uint8_t*, uint16_t));
 uint8_t simple_p_send(uint8_t address, uint8_t *data, uint16_t length);
-# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../software/SensorTowerTask.h" 1
 # 11 "../../../software/SensorTowerTask.h"
 void vMainSensorTowerTask(void *pvParameters);
-# 60 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 62 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../software/ControllerTask.h" 1
-# 13 "../../../software/ControllerTask.h"
-void motorRegulator(int16_t lspeed, int16_t rspeed, encoderTicks ticks);
+# 14 "../../../software/ControllerTask.h"
 void vMainPoseControllerTask(void *pvParameters);
-# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+void runThetaController(float thetaDiff);
+void runDistanceController(float distanceError, float thetaError);
+float getThetaTarget(void);
+# 63 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../software/EstimatorTask.h" 1
 # 11 "../../../software/EstimatorTask.h"
 void vMainPoseEstimatorTask(void *pvParameters);
-# 62 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../software/DebugFunctions.h" 1
 static void ir_task(void *arg);
 static void mag_task(void *arg);
 void vMainSensorCalibrationTask(void *pvParameters);
-# 63 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../software/MainComTask.h" 1
-# 14 "../../../software/MainComTask.h"
-extern int16_t collisionAngles[4];
-
+# 16 "../../../software/MainComTask.h"
 void vMainCommunicationTask(void *pvParameters);
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 66 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 # 1 "../../../software/globals.h" 1
 # 17 "../../../software/globals.h"
 extern TaskHandle_t handle_display_task,
@@ -12477,7 +12477,7 @@ extern SemaphoreHandle_t xTickMutex;
 extern SemaphoreHandle_t xControllerBSem;
 extern SemaphoreHandle_t xCommandReadyBSem;
 extern SemaphoreHandle_t mutex_spi;
-extern SemaphoreHandle_t xCollisionMutex;
+
 
 
 
@@ -12489,7 +12489,25 @@ extern QueueHandle_t queue_microsd;
 extern uint8_t gHandshook;
 extern uint8_t gPaused;
 
-extern uint8_t USEBLUETOOTH;
+
+
+extern 
+# 47 "../../../software/globals.h" 3 4
+      _Bool 
+# 47 "../../../software/globals.h"
+           USEBLUETOOTH;
+extern 
+# 48 "../../../software/globals.h" 3 4
+      _Bool 
+# 48 "../../../software/globals.h"
+           newServer;
+extern 
+# 49 "../../../software/globals.h" 3 4
+      _Bool 
+# 49 "../../../software/globals.h"
+           validateWP;
+
+
 
 
 extern float gTheta_hat;
@@ -12513,9 +12531,40 @@ struct sCartesian {
     float x;
     float y;
 };
-# 65 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
+# 67 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 2
 
 
+
+
+
+
+
+# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+_Bool 
+# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+    USEBLUETOOTH = 
+# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+                   0
+# 73 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+                        ;
+
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+_Bool 
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+    newServer = 
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+                0
+# 74 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+                     ;
+
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+_Bool 
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+    validateWP = 
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+                 1
+# 75 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+                     ;
 
 
 
@@ -12535,7 +12584,7 @@ SemaphoreHandle_t xTickMutex;
 SemaphoreHandle_t xControllerBSem;
 SemaphoreHandle_t xCommandReadyBSem;
 SemaphoreHandle_t mutex_spi;
-SemaphoreHandle_t xCollisionMutex;
+
 
 
 
@@ -12546,22 +12595,18 @@ QueueHandle_t queue_microsd = 0;
 
 
 uint8_t gHandshook = 
-# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 105 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                     0
-# 96 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 105 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                          ;
 uint8_t gPaused = 
-# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 106 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                  0
-# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 106 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                       ;
 
 
-uint8_t USEBLUETOOTH = 
-# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
-                      0
-# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
-                           ;
+
 
 
 float gTheta_hat = 0;
@@ -12576,13 +12621,13 @@ int16_t gLeftWheelTicks = 0;
 
 
 
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
 _Bool 
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
     shared_SPI_init = 
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                       0
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 123 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                            ;
 
 
@@ -12598,15 +12643,15 @@ void vApplicationIdleHook(void) {
 
 static void clock_init(void) {
     ret_code_t err_code = nrf_drv_clock_init();
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 129, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 138, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0); } } while (0);
 }
 
 
 volatile int RightMotorDirection = 1;
 volatile int LeftMotorDirection = 1;
-# 144 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 153 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
 static void user_task(void *arg) {
-# 159 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 163 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
     vPortEnterCritical();
     motor_init();
     servo_init();
@@ -12624,82 +12669,77 @@ static void user_task(void *arg) {
 
     char str1[20];
     char str2[20];
+    char str3[20];
 
 
 
-
- int targetX = 100;
- int targetY = 0;
+ int targetX = 0;
+ int targetY = 100;
  
-# 182 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 186 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
 _Bool 
-# 182 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 186 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
      sent = 
-# 182 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 186 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
             0
-# 182 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 186 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                  ;
  
-# 183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
 _Bool 
-# 183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
      testWaypoint = 
-# 183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                     0
-# 183 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                          ;
 
     while(
-# 185 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 189 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
          1
-# 185 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 189 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
              ){
         vTaskDelay(1000);
         sprintf(str1,"X: %i Y: %i",(int)gX_hat, (int)gY_hat);
         display_text_on_line(1, str1);
         sprintf(str2,"HEADING: %i",(int) ((gTheta_hat)*180.0 / 
-# 189 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 193 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                       3.14159265358979323846
-# 189 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 193 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                              ));
         display_text_on_line(2, str2);
 
 
-
-
-
-
-
   if(testWaypoint){
    int time = (xTaskGetTickCount()/1000);
-   if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_1(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "Time: %i", (uint32_t)((int)time)); } };
 
-   if ((time > 60) && (sent == 
-# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+
+   if ((time > 25) && (sent == 
+# 201 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                               0
-# 202 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 201 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                    )){
     struct sCartesian target = {targetX, targetY};
     xQueueGenericSend( ( poseControllerQ ), ( &target ), ( 100 ), ( ( BaseType_t ) 0 ) );
     sent = 
-# 205 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 204 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
           1
-# 205 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 204 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
               ;
     time = 0;
    }
   }
-# 226 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+
     }
 }
-# 238 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 221 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
 static void log_init(void) {
     ret_code_t err_code = nrf_log_init(
-# 239 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 222 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                          0
-# 239 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 222 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                          , 32768);
-    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 240, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0); } } while (0);
+    do { const uint32_t LOCAL_ERR_CODE = (err_code); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 223, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0); } } while (0);
 
 
 }
@@ -12707,15 +12747,15 @@ static void log_init(void) {
 int main(void) {
 
     
-# 247 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 230 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
    _Bool 
-# 247 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 230 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
         erase_bonds;
     log_init();
     clock_init();
 
     ir_init();
-# 296 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 279 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
     BLE_init();
     arq_init();
 
@@ -12731,7 +12771,7 @@ int main(void) {
  xTickMutex = xQueueCreateMutex( ( ( uint8_t ) 1U ) );
  xControllerBSem = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );
  xCommandReadyBSem = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );
- xCollisionMutex = xQueueCreateMutex( ( ( uint8_t ) 1U ) );
+
 
 
 
@@ -12739,64 +12779,63 @@ int main(void) {
 
 
     if (( ( ( BaseType_t ) 1 ) ) != xTaskCreate(display_task, "DISP", 128, 
-# 318 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                         0
-# 318 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 301 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                             , 1, &handle_display_task))
-        do { app_error_handler((((0x0) + 4)), 319, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+        do { app_error_handler((((0x0) + 4)), 302, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
 
     if (( ( ( BaseType_t ) 1 ) ) != xTaskCreate(user_task, "USER", 128, 
-# 321 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 304 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                      0
-# 321 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 304 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                          , 4, &handle_user_task))
-        do { app_error_handler((((0x0) + 4)), 322, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
-
+        do { app_error_handler((((0x0) + 4)), 305, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
 
     if (( ( ( BaseType_t ) 1 ) ) != xTaskCreate(microsd_task, "SD", 256, 
-# 325 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 307 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                       0
-# 325 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 307 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                           , 1, &handle_microsd_task))
-        do { app_error_handler((((0x0) + 4)), 326, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+        do { app_error_handler((((0x0) + 4)), 308, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
 
     if (( ( ( BaseType_t ) 1 ) ) != xTaskCreate(vMainPoseEstimatorTask, "POSE", 256, 
-# 328 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 310 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                                   0
-# 328 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 310 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                                       , 3, &pose_estimator_task))
-        do { app_error_handler((((0x0) + 4)), 329, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+        do { app_error_handler((((0x0) + 4)), 311, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
 
     if (( ( ( BaseType_t ) 1 ) ) != xTaskCreate(vMainPoseControllerTask, "POSC", 512, 
-# 331 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 313 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                                    0
-# 331 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 313 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                                        , 1, &pose_controller_task))
-        do { app_error_handler((((0x0) + 4)), 332, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+        do { app_error_handler((((0x0) + 4)), 314, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
 
     if (( ( ( BaseType_t ) 1 ) ) != xTaskCreate(vMainSensorTowerTask, "SnsT", 256, 
-# 334 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 316 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                                 0
-# 334 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 316 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                                     , 1, &sensor_tower_task))
-  do { app_error_handler((((0x0) + 4)), 335, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+  do { app_error_handler((((0x0) + 4)), 317, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
 
  if (( ( ( BaseType_t ) 1 ) ) != xTaskCreate(vMainCommunicationTask, "COM", 256, 
-# 337 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 319 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                               0
-# 337 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 319 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                                   , 1, &communication_task))
-            do { app_error_handler((((0x0) + 4)), 338, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+            do { app_error_handler((((0x0) + 4)), 320, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
 
 
     if (USEBLUETOOTH){
         if(( ( ( BaseType_t ) 1 ) ) != xTaskCreate(vARQTask, "ARQ", 256, 
-# 342 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
+# 324 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c" 3 4
                                                       0
-# 342 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
+# 324 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"
                                                           , 2, &arq_task)) {
             if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "vARQTask Creation Failed"); } }
-            do { app_error_handler((((0x0) + 4)), 344, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+            do { app_error_handler((((0x0) + 4)), 326, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
         }
         vTaskSuspend(arq_task);
 
@@ -12813,6 +12852,6 @@ int main(void) {
 
 
 
-        do { app_error_handler((((0x0) + 15)), 361, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
+        do { app_error_handler((((0x0) + 15)), 343, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\main.c"); } while (0);
     }
 }

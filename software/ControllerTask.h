@@ -10,9 +10,11 @@
 
 #include <stdint.h>
 
-void motorRegulator(int16_t lspeed, int16_t rspeed, encoderTicks ticks);
-void vMainPoseControllerTask(void *pvParameters);
 
+void vMainPoseControllerTask(void *pvParameters);
+void runThetaController(float thetaDiff);
+void runDistanceController(float distanceError, float thetaError);
+float getThetaTarget(void);
 
 
 

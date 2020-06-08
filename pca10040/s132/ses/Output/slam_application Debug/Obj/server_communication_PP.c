@@ -474,24 +474,27 @@ void vARQTask(void *pvParamters);
 void vFunc_Inf2pi(float *angle_in_radians);
 
 
-int16_t distObjectX(int16_t x, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectX(int16_t x, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectXlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectXlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectY(int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
+int16_t distObjectY(int16_t y, float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
-int16_t distObjectYlocal(int16_t theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
-
-
-
-void sendNewPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+int16_t distObjectYlocal(float theta, int8_t servoAngle, int16_t* sensorData, uint8_t sensorNumber);
 
 
 
-void sendOldPoseMessage(int16_t x, int16_t y, int16_t theta, int8_t servoAngle, int16_t* sensorData);
+void sendNewPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData);
+
+
+
+void sendOldPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData);
+
+
+void sendScanBorder();
 
 
 void increaseCollisionSector(int16_t angle, uint8_t sensor);
@@ -507,10 +510,17 @@ void printCollisionSectors(void);
 
 
 
-# 50 "../../../drivers/functions.h" 3 4
+# 53 "../../../drivers/functions.h" 3 4
 _Bool 
-# 50 "../../../drivers/functions.h"
+# 53 "../../../drivers/functions.h"
     validWaypoint(int16_t waypointAngle);
+
+
+
+# 56 "../../../drivers/functions.h" 3 4
+_Bool 
+# 56 "../../../drivers/functions.h"
+    checkForCollision();
 # 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 2
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.h" 1
 # 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.h"
@@ -5863,33 +5873,34 @@ void send_idle(void) {
   if(use_arq[3]) arq_send(server_connection, &status, 1);
   else simple_p_send(0, &status, 1);
 }
+
 void debug(const char *fmt, ...) {
         if(!USEBLUETOOTH){return;}
  uint8_t buf[100];
  va_list ap;
  buf[0] = 10;
  
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 __builtin_va_start((
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 ap
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 ),
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 fmt
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 )
-# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 115 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
                  ;
  uint8_t ret = vsprintf((char*)buf+1, fmt, ap);
  
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
+# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 __builtin_va_end(
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
 ap
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
+# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
 )
-# 116 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 117 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
           ;
  if (ret > 0) {
   if(use_arq[10]) arq_send(server_connection, buf, ret+1);
@@ -5906,17 +5917,17 @@ void send_ping_response(void) {
 
 void server_receiver(uint8_t *data, uint16_t len) {
   if(data == 
-# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
+# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
             0
-# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 132 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
                 ) {
       gHandshook = 0;
   }
   if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_1(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "GIVING command semaphore with len:%d", (uint32_t)(len)); } };
   memcpy(&message_in, data, len);
   xQueueGenericSend( ( QueueHandle_t ) ( xCommandReadyBSem ), 
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
+# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c" 3 4
  0
-# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
+# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\communication\\server_communication.c"
  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }

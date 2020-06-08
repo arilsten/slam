@@ -8,6 +8,7 @@
 #include "nrf_log.h"
 #include "string.h"
 #include "globals.h"
+#include "freeRTOS.h"
 
 // microSD
 #define SDC_SCK_PIN     20
@@ -19,12 +20,12 @@
  * @brief  SDC block device definition
  * */
 NRF_BLOCK_DEV_SDC_DEFINE(
-        m_block_dev_sdc,
-        NRF_BLOCK_DEV_SDC_CONFIG(
-                SDC_SECTOR_SIZE,
-                APP_SDCARD_CONFIG(SDC_MOSI_PIN, SDC_MISO_PIN, SDC_SCK_PIN, SDC_CS_PIN)
-         ),
-         NFR_BLOCK_DEV_INFO_CONFIG("Nordic", "SDC", "1.00")
+	m_block_dev_sdc,
+	NRF_BLOCK_DEV_SDC_CONFIG(
+		SDC_SECTOR_SIZE,
+		APP_SDCARD_CONFIG(SDC_MOSI_PIN, SDC_MISO_PIN, SDC_SCK_PIN, SDC_CS_PIN)
+	),
+	NFR_BLOCK_DEV_INFO_CONFIG("Nordic", "SDC", "1.00")
 );
 
 static FATFS fs;
@@ -105,18 +106,23 @@ void microsd_write(char* filename, char* data) {
 	disk_state = disk_uninitialize(0);
 }
 
+
 /**@brief Task for handling microSD operations.
  *
  * @details Initializes the microSD driver, and performs write requests.
  */
 void microsd_task(void *arg) {
-   microsd_write_operation_t write_operation;
-    for (;;) {
-       xQueueReceive(queue_microsd, &write_operation, portMAX_DELAY);
+	 
+	microsd_write_operation_t write_operation;
+    
+	for (;;) {
+		
+		xQueueReceive(queue_microsd, &write_operation, portMAX_DELAY);
         xSemaphoreTake(mutex_spi, portMAX_DELAY);
         //NRF_LOG_INFO("writing %s.", write_operation.content);
-         microsd_write(write_operation.filename, write_operation.content);
+        microsd_write(write_operation.filename, write_operation.content);
         xSemaphoreGive(mutex_spi);
+		
     }
 }
 

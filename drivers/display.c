@@ -129,55 +129,56 @@ void display_task(void *arg) {
     display_init();
 
     display_operation_t display_operation;
-    microsd_write_operation_t write = {
-        .filename = "DISP",
-        .content = "What did I just draw"};
 
     for (;;) {
         xQueueReceive(queue_display, &display_operation, portMAX_DELAY);
         xSemaphoreTake(mutex_spi, portMAX_DELAY);
+		
         switch (display_operation.operation) {
+			
         case DISPLAY_TEXT:
             APP_ERROR_CHECK(nrf_gfx_print(&m_nrf_lcd, &display_operation.element.text.text_position,
                 1, display_operation.element.text.p_string, &orkney_8ptFontInfo, false));
-            write.content = "Text drawn.";
             break;
+			
         case DISPLAY_POINT:
             nrf_gfx_point_draw(&m_nrf_lcd, &display_operation.element.point.point, 1);
-            write.content = "Point drawn.";
             break;
+			
         case DISPLAY_LINE:
             APP_ERROR_CHECK(nrf_gfx_line_draw(
                 &m_nrf_lcd, &display_operation.element.line.line, 1));
-            write.content = "Line drawn.";
             break;
+			
         case DISPLAY_CIRCLE:
             APP_ERROR_CHECK(nrf_gfx_circle_draw(
                 &m_nrf_lcd, &display_operation.element.circle.circle,
                 1, display_operation.element.circle.fill));
-            write.content = "Circle.";
             break;
+			
         case DISPLAY_RECTANGLE:
             APP_ERROR_CHECK(nrf_gfx_rect_draw(
                 &m_nrf_lcd, &display_operation.element.rectangle.rectangle,
                 display_operation.element.rectangle.thickness, display_operation.element.rectangle.color,
                 display_operation.element.rectangle.fill));
-            write.content = "Rectangle drawn.";
             break;
+			
         case DISPLAY_LOG:
             // print log buffer
             break; // not yet implemented
+			
         case DISPLAY_CLEAR:
             nrf_gfx_screen_fill(&m_nrf_lcd, 0);
             break;
 
         default:
             NRF_LOG_INFO("COMMAND WAS EMPTY");
-            ;
+            break;
         }
+		
         nrf_gfx_display(&m_nrf_lcd);
         xSemaphoreGive(mutex_spi);
-        //xQueueSendToBack(queue_microsd, &write, portMAX_DELAY); //REMOVED TO operate with no sd card inserted
+
     }
 }
 

@@ -14,7 +14,7 @@
 #define MOTOR_FORWARDS      1
 #define MOTOR_BACKWARDS    -1
 APP_PWM_INSTANCE(PWM1, 1);
-#define MAX_DUTY			50
+#define MAX_DUTY			50				// Set to 50% to avoid overvoltage to the motors.
 
 extern int RightMotorDirection;
 extern int LeftMotorDirection;

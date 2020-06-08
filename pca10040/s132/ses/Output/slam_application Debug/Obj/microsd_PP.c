@@ -6560,7 +6560,7 @@ extern SemaphoreHandle_t xTickMutex;
 extern SemaphoreHandle_t xControllerBSem;
 extern SemaphoreHandle_t xCommandReadyBSem;
 extern SemaphoreHandle_t mutex_spi;
-extern SemaphoreHandle_t xCollisionMutex;
+
 
 
 
@@ -6572,7 +6572,25 @@ extern QueueHandle_t queue_microsd;
 extern uint8_t gHandshook;
 extern uint8_t gPaused;
 
-extern uint8_t USEBLUETOOTH;
+
+
+extern 
+# 47 "../../../software/globals.h" 3 4
+      _Bool 
+# 47 "../../../software/globals.h"
+           USEBLUETOOTH;
+extern 
+# 48 "../../../software/globals.h" 3 4
+      _Bool 
+# 48 "../../../software/globals.h"
+           newServer;
+extern 
+# 49 "../../../software/globals.h" 3 4
+      _Bool 
+# 49 "../../../software/globals.h"
+           validateWP;
+
+
 
 
 extern float gTheta_hat;
@@ -6597,7 +6615,7 @@ struct sCartesian {
     float y;
 };
 # 11 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 2
-# 21 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
+# 22 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
 static nrf_block_dev_sdc_work_t m_block_dev_sdc_work; static const nrf_block_dev_sdc_t m_block_dev_sdc = { .block_dev = { .p_ops = &nrf_block_device_sdc_ops }, .info_strings = { .p_vendor = "Nordic", .p_product = "SDC", .p_revision = "1.00", }, .sdc_bdev_config = { .block_size = (512), .sdc_config = { .mosi_pin = 19, .miso_pin = 17, .sck_pin = 20, .cs_pin = 23 } }, .p_work = &m_block_dev_sdc_work, }
 
 
@@ -6625,13 +6643,13 @@ void microsd_write(char* filename, char* data) {
      static diskio_blkdev_t drives[] =
     {
             { .config = { .p_block_device = (&(m_block_dev_sdc).block_dev), .wait_func = (
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
            0
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
            ), }, .last_result = NRF_BLOCK_DEV_RESULT_SUCCESS, .state = 0x01, .busy = 
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
            0 
-# 47 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
+# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
            }
     };
 
@@ -6685,9 +6703,9 @@ void microsd_write(char* filename, char* data) {
     (void) f_close(&file);
 
  ff_result = f_mount(
-# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
+# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
                     0
-# 99 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
+# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
                         , "", 1);
     if (ff_result)
     {
@@ -6701,17 +6719,22 @@ void microsd_write(char* filename, char* data) {
 
 
 
+
 void microsd_task(void *arg) {
-   microsd_write_operation_t write_operation;
-    for (;;) {
-       xQueueReceive(queue_microsd, &write_operation, ( TickType_t ) 0xffffffffUL);
+
+ microsd_write_operation_t write_operation;
+
+ for (;;) {
+
+  xQueueReceive(queue_microsd, &write_operation, ( TickType_t ) 0xffffffffUL);
         xQueueSemaphoreTake( ( mutex_spi ), ( ( TickType_t ) 0xffffffffUL ) );
 
-         microsd_write(write_operation.filename, write_operation.content);
+        microsd_write(write_operation.filename, write_operation.content);
         xQueueGenericSend( ( QueueHandle_t ) ( mutex_spi ), 
-# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
+# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c" 3 4
        0
-# 119 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
+# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\microsd.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
+
     }
 }

@@ -44,25 +44,14 @@
 	.align	2
 .LC9:
 	.ascii	"message:case default No type %d\000"
-	.align	2
-.LC10:
-	.ascii	"xPoseMutex not available!\000"
 	.global	__aeabi_i2d
 	.global	__aeabi_dmul
 	.global	__aeabi_ddiv
+	.global	__aeabi_d2f
+	.align	2
+.LC10:
+	.ascii	"xPoseMutex not available!\000"
 	.global	__aeabi_d2iz
-	.align	2
-.LC11:
-	.ascii	"Discarded WP\000"
-	.align	2
-.LC12:
-	.ascii	"WP not valid\000"
-	.align	2
-.LC13:
-	.ascii	"\000"
-	.align	2
-.LC14:
-	.ascii	"WP valid\000"
 	.section	.text.vMainCommunicationTask,"ax",%progbits
 	.align	1
 	.global	vMainCommunicationTask
@@ -92,30 +81,30 @@ vMainCommunicationTask:
 	str	r3, [sp, #44]	@ float
 	.loc 1 34 5 is_stmt 1 view .LVU4
 	.loc 1 34 8 is_stmt 0 view .LVU5
-	ldr	r3, .L27+8
+	ldr	r3, .L35+8
 	ldrb	r3, [r3]	@ zero_extendqisi2
 	.loc 1 34 7 view .LVU6
-	cbnz	r3, .L25
+	cbnz	r3, .L28
 .LBB2:
 	.loc 1 115 3 is_stmt 1 view .LVU7
 	.loc 1 115 11 is_stmt 0 view .LVU8
 	movs	r3, #0
 	str	r3, [sp, #4]
-	strb	r3, [sp, #8]
+	str	r3, [sp, #8]
 	.loc 1 116 3 is_stmt 1 view .LVU9
 	.loc 1 117 3 view .LVU10
 	.loc 1 117 11 is_stmt 0 view .LVU11
 	str	r3, [sp]
-	b	.L23
-.L25:
+	b	.L25
+.L28:
 .LBE2:
-.LBB6:
+.LBB7:
 	.loc 1 35 3 is_stmt 1 view .LVU12
 	.loc 1 36 3 view .LVU13
 	bl	server_communication_init
 .LVL1:
 	.loc 1 37 3 view .LVU14
-	ldr	r3, .L27+12
+	ldr	r3, .L35+12
 	ldr	r0, [r3]
 	bl	vTaskResume
 .LVL2:
@@ -145,13 +134,13 @@ vMainCommunicationTask:
 	.loc 1 46 76 discriminator 3 view .LVU24
 	.loc 1 46 131 discriminator 3 view .LVU25
 	.loc 1 46 212 is_stmt 0 discriminator 3 view .LVU26
-	ldr	r5, .L27+16
+	ldr	r5, .L35+16
 	ldrh	r0, [r5]
 	.loc 1 46 223 discriminator 3 view .LVU27
 	lsls	r0, r0, #16
 	.loc 1 46 131 discriminator 3 view .LVU28
 	mov	r2, r4
-	ldr	r1, .L27+20
+	ldr	r1, .L35+20
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_1
 .LVL7:
@@ -171,7 +160,7 @@ vMainCommunicationTask:
 	.loc 1 49 223 discriminator 3 view .LVU36
 	lsls	r0, r0, #16
 	.loc 1 49 131 discriminator 3 view .LVU37
-	ldr	r1, .L27+24
+	ldr	r1, .L35+24
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL10:
@@ -182,19 +171,19 @@ vMainCommunicationTask:
 	.loc 1 62 79 discriminator 3 view .LVU39
 	.loc 1 62 134 discriminator 3 view .LVU40
 	.loc 1 62 215 is_stmt 0 discriminator 3 view .LVU41
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 62 226 discriminator 3 view .LVU42
 	lsls	r0, r0, #16
 	.loc 1 62 134 discriminator 3 view .LVU43
-	ldr	r1, .L27+28
+	ldr	r1, .L35+28
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL12:
 	.loc 1 62 267 is_stmt 1 discriminator 3 view .LVU44
 	.loc 1 64 6 discriminator 3 view .LVU45
 	.loc 1 64 17 is_stmt 0 discriminator 3 view .LVU46
-	ldr	r3, .L27+32
+	ldr	r3, .L35+32
 	movs	r2, #1
 	strb	r2, [r3]
 	.loc 1 67 6 is_stmt 1 discriminator 3 view .LVU47
@@ -204,7 +193,7 @@ vMainCommunicationTask:
 	.loc 1 52 4 discriminator 5 view .LVU50
 	.loc 1 52 8 is_stmt 0 discriminator 5 view .LVU51
 	mov	r1, #-1
-	ldr	r3, .L27+36
+	ldr	r3, .L35+36
 	ldr	r0, [r3]
 	bl	xQueueSemaphoreTake
 .LVL13:
@@ -215,12 +204,12 @@ vMainCommunicationTask:
 	.loc 1 53 78 discriminator 3 view .LVU54
 	.loc 1 53 133 discriminator 3 view .LVU55
 	.loc 1 53 214 is_stmt 0 discriminator 3 view .LVU56
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 53 225 discriminator 3 view .LVU57
 	lsls	r0, r0, #16
 	.loc 1 53 133 discriminator 3 view .LVU58
-	ldr	r1, .L27+40
+	ldr	r1, .L35+40
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL14:
@@ -228,7 +217,7 @@ vMainCommunicationTask:
 	.loc 1 57 5 discriminator 3 view .LVU60
 	.loc 1 57 16 is_stmt 0 discriminator 3 view .LVU61
 	add	r4, sp, #12
-	ldr	r5, .L27+44
+	ldr	r5, .L35+44
 	ldmia	r5!, {r0, r1, r2, r3}
 	stmia	r4!, {r0, r1, r2, r3}
 	ldm	r5, {r0, r1, r2}
@@ -257,12 +246,12 @@ vMainCommunicationTask:
 	.loc 1 70 79 discriminator 3 view .LVU65
 	.loc 1 70 134 discriminator 3 view .LVU66
 	.loc 1 70 215 is_stmt 0 discriminator 3 view .LVU67
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 70 226 discriminator 3 view .LVU68
 	lsls	r0, r0, #16
 	.loc 1 70 134 discriminator 3 view .LVU69
-	ldr	r1, .L27+48
+	ldr	r1, .L35+48
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL15:
@@ -277,7 +266,7 @@ vMainCommunicationTask:
 	.loc 1 75 79 discriminator 3 view .LVU74
 	.loc 1 75 134 discriminator 3 view .LVU75
 	.loc 1 75 215 is_stmt 0 discriminator 3 view .LVU76
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 75 226 discriminator 3 view .LVU77
 	lsls	r0, r0, #16
@@ -288,7 +277,7 @@ vMainCommunicationTask:
 	.loc 1 75 134 discriminator 3 view .LVU80
 	mov	r3, r4
 	mov	r2, r5
-	ldr	r1, .L27+52
+	ldr	r1, .L35+52
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_2
 .LVL17:
@@ -307,7 +296,7 @@ vMainCommunicationTask:
 	movs	r3, #0
 	movs	r2, #100
 	add	r1, sp, #40
-	ldr	r0, .L27+56
+	ldr	r0, .L35+56
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL18:
@@ -318,19 +307,19 @@ vMainCommunicationTask:
 	.loc 1 83 79 discriminator 3 view .LVU89
 	.loc 1 83 134 discriminator 3 view .LVU90
 	.loc 1 83 215 is_stmt 0 discriminator 3 view .LVU91
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 83 226 discriminator 3 view .LVU92
 	lsls	r0, r0, #16
 	.loc 1 83 134 discriminator 3 view .LVU93
-	ldr	r1, .L27+60
+	ldr	r1, .L35+60
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL19:
 	.loc 1 83 265 is_stmt 1 discriminator 3 view .LVU94
 	.loc 1 86 6 discriminator 3 view .LVU95
 	.loc 1 86 14 is_stmt 0 discriminator 3 view .LVU96
-	ldr	r3, .L27+64
+	ldr	r3, .L35+64
 	movs	r2, #1
 	strb	r2, [r3]
 	.loc 1 89 6 is_stmt 1 discriminator 3 view .LVU97
@@ -344,7 +333,7 @@ vMainCommunicationTask:
 	movs	r3, #0
 	movs	r2, #100
 	add	r1, sp, #40
-	ldr	r0, .L27+56
+	ldr	r0, .L35+56
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
 .LVL20:
@@ -355,19 +344,19 @@ vMainCommunicationTask:
 	.loc 1 95 79 discriminator 3 view .LVU104
 	.loc 1 95 134 discriminator 3 view .LVU105
 	.loc 1 95 215 is_stmt 0 discriminator 3 view .LVU106
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 95 226 discriminator 3 view .LVU107
 	lsls	r0, r0, #16
 	.loc 1 95 134 discriminator 3 view .LVU108
-	ldr	r1, .L27+68
+	ldr	r1, .L35+68
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL21:
 	.loc 1 95 267 is_stmt 1 discriminator 3 view .LVU109
 	.loc 1 97 6 discriminator 3 view .LVU110
 	.loc 1 97 14 is_stmt 0 discriminator 3 view .LVU111
-	ldr	r3, .L27+64
+	ldr	r3, .L35+64
 	movs	r2, #0
 	strb	r2, [r3]
 	.loc 1 99 6 is_stmt 1 discriminator 3 view .LVU112
@@ -377,19 +366,19 @@ vMainCommunicationTask:
 	.loc 1 102 79 discriminator 3 view .LVU114
 	.loc 1 102 134 discriminator 3 view .LVU115
 	.loc 1 102 215 is_stmt 0 discriminator 3 view .LVU116
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 102 226 discriminator 3 view .LVU117
 	lsls	r0, r0, #16
 	.loc 1 102 134 discriminator 3 view .LVU118
-	ldr	r1, .L27+72
+	ldr	r1, .L35+72
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL22:
 	.loc 1 102 266 is_stmt 1 discriminator 3 view .LVU119
 	.loc 1 104 6 discriminator 3 view .LVU120
 	.loc 1 104 17 is_stmt 0 discriminator 3 view .LVU121
-	ldr	r3, .L27+32
+	ldr	r3, .L35+32
 	movs	r2, #0
 	strb	r2, [r3]
 	.loc 1 106 6 is_stmt 1 discriminator 3 view .LVU122
@@ -399,230 +388,132 @@ vMainCommunicationTask:
 	.loc 1 109 79 discriminator 3 view .LVU124
 	.loc 1 109 134 discriminator 3 view .LVU125
 	.loc 1 109 215 is_stmt 0 discriminator 3 view .LVU126
-	ldr	r3, .L27+16
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
 	.loc 1 109 226 discriminator 3 view .LVU127
 	lsls	r0, r0, #16
 	.loc 1 109 134 discriminator 3 view .LVU128
-	ldr	r1, .L27+76
+	ldr	r1, .L35+76
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_1
 .LVL23:
 	b	.L6
-.L16:
+.L17:
 	.loc 1 109 134 discriminator 3 view .LVU129
-.LBE6:
-.LBB7:
-.LBB3:
-	.loc 1 125 6 is_stmt 1 view .LVU130
-	.loc 1 125 9 is_stmt 0 view .LVU131
+.LBE7:
+.LBB8:
+	.loc 1 128 7 is_stmt 1 view .LVU130
+	.loc 1 128 10 is_stmt 0 view .LVU131
 	movs	r1, #20
-	ldr	r3, .L27+80
+	ldr	r3, .L35+80
 	ldr	r0, [r3]
 	bl	xQueueSemaphoreTake
 .LVL24:
-	.loc 1 125 8 view .LVU132
+	.loc 1 128 9 view .LVU132
 	cmp	r0, #1
-	beq	.L26
-	.loc 1 131 7 is_stmt 1 discriminator 3 view .LVU133
-	.loc 1 131 80 discriminator 3 view .LVU134
-	.loc 1 131 135 discriminator 3 view .LVU135
-	.loc 1 131 216 is_stmt 0 discriminator 3 view .LVU136
-	ldr	r3, .L27+16
+	beq	.L29
+	.loc 1 135 8 is_stmt 1 discriminator 3 view .LVU133
+	.loc 1 135 81 discriminator 3 view .LVU134
+	.loc 1 135 136 discriminator 3 view .LVU135
+	.loc 1 135 217 is_stmt 0 discriminator 3 view .LVU136
+	ldr	r3, .L35+16
 	ldrh	r0, [r3]
-	.loc 1 131 227 discriminator 3 view .LVU137
+	.loc 1 135 228 discriminator 3 view .LVU137
 	lsls	r0, r0, #16
-	.loc 1 131 135 discriminator 3 view .LVU138
-	ldr	r1, .L27+84
+	.loc 1 135 136 discriminator 3 view .LVU138
+	ldr	r1, .L35+84
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL25:
-	b	.L18
-.L26:
-	.loc 1 126 7 is_stmt 1 view .LVU139
-	.loc 1 126 16 is_stmt 0 view .LVU140
-	ldrsh	r2, [sp, #5]	@ unaligned
-	.loc 1 126 14 view .LVU141
-	ldr	r3, .L27+88
+	b	.L19
+.L29:
+	.loc 1 129 8 is_stmt 1 view .LVU139
+	.loc 1 129 17 is_stmt 0 view .LVU140
+	ldrsh	r2, [sp, #6]
+	.loc 1 129 15 view .LVU141
+	ldr	r3, .L35+88
 	strh	r2, [r3]	@ movhi
-	.loc 1 127 7 is_stmt 1 view .LVU142
-	.loc 1 127 16 is_stmt 0 view .LVU143
-	ldrsh	r2, [sp, #7]	@ unaligned
-	.loc 1 127 14 view .LVU144
-	ldr	r3, .L27+92
+	.loc 1 130 8 is_stmt 1 view .LVU142
+	.loc 1 130 17 is_stmt 0 view .LVU143
+	ldrsh	r2, [sp, #8]
+	.loc 1 130 15 view .LVU144
+	ldr	r3, .L35+92
 	strh	r2, [r3]	@ movhi
-	.loc 1 129 7 is_stmt 1 view .LVU145
+	.loc 1 131 8 is_stmt 1 view .LVU145
+	.loc 1 131 45 is_stmt 0 view .LVU146
+	ldrsh	r0, [sp, #10]
+	bl	__aeabi_i2d
+.LVL26:
+	adr	r3, .L35
+	ldrd	r2, [r3]
+	bl	__aeabi_dmul
+.LVL27:
+	.loc 1 131 45 view .LVU147
+	movs	r2, #0
+	ldr	r3, .L35+96
+	bl	__aeabi_ddiv
+.LVL28:
+	bl	__aeabi_d2f
+.LVL29:
+	.loc 1 131 19 view .LVU148
+	ldr	r3, .L35+100
+	str	r0, [r3]	@ float
+	.loc 1 133 8 is_stmt 1 view .LVU149
 	movs	r3, #0
 	mov	r2, r3
 	mov	r1, r3
-	ldr	r0, .L27+80
+	ldr	r0, .L35+80
 	ldr	r0, [r0]
 	bl	xQueueGenericSend
-.LVL26:
-	b	.L18
-.LVL27:
-.L20:
-	.loc 1 148 7 view .LVU146
-	ldr	r1, .L27+96
-	movs	r0, #3
-.LVL28:
-	.loc 1 148 7 is_stmt 0 view .LVU147
-	bl	display_text_on_line
-.LVL29:
-	.loc 1 149 7 is_stmt 1 view .LVU148
-	.loc 1 149 80 view .LVU149
-	.loc 1 149 135 view .LVU150
-	.loc 1 149 216 is_stmt 0 view .LVU151
-	ldr	r3, .L27+16
-	ldrh	r0, [r3]
-	.loc 1 149 227 view .LVU152
-	lsls	r0, r0, #16
-	.loc 1 149 135 view .LVU153
-	ldr	r1, .L27+100
-	orr	r0, r0, #3
-	bl	nrf_log_frontend_std_0
 .LVL30:
-	b	.L21
-.L22:
-.LBB4:
-	.loc 1 154 7 is_stmt 1 view .LVU154
-	.loc 1 154 25 is_stmt 0 view .LVU155
-	ldr	r3, .L27+104
-	smull	r1, r2, r3, r4
-	asrs	r4, r4, #31
-	rsb	r4, r4, r2, asr #2
-	sxth	r4, r4
-	vmov	s15, r4	@ int
-	vcvt.f32.s32	s15, s15
-	vstr.32	s15, [sp, #12]
-	smull	r2, r3, r3, r5
-	asrs	r5, r5, #31
-	rsb	r5, r5, r3, asr #2
-	sxth	r5, r5
-	vmov	s15, r5	@ int
-	vcvt.f32.s32	s15, s15
-	vstr.32	s15, [sp, #16]
-	.loc 1 155 7 is_stmt 1 view .LVU156
-	movs	r3, #0
-	movs	r2, #100
-	add	r1, sp, #12
-	ldr	r0, .L27+56
-	ldr	r0, [r0]
-	bl	xQueueGenericSend
-.LVL31:
-.L18:
-	.loc 1 155 7 is_stmt 0 view .LVU157
-.LBE4:
-.LBE3:
-	.loc 1 163 4 is_stmt 1 view .LVU158
-	movs	r0, #100
-	bl	vTaskDelay
-.LVL32:
-	.loc 1 119 8 view .LVU159
-.L23:
-	.loc 1 119 3 view .LVU160
-	.loc 1 120 4 view .LVU161
-	movs	r2, #5
-	add	r1, sp, #4
-	movs	r0, #114
-	bl	i2cReciveNOADDR
-.LVL33:
-	.loc 1 122 4 view .LVU162
-	.loc 1 122 18 is_stmt 0 view .LVU163
-	ldrb	r3, [sp, #4]	@ zero_extendqisi2
-	.loc 1 122 4 view .LVU164
-	cmp	r3, #1
-	beq	.L16
-	cmp	r3, #114
-	bne	.L18
-.LBB5:
-	.loc 1 136 6 is_stmt 1 view .LVU165
-	.loc 1 136 31 is_stmt 0 view .LVU166
-	ldrsh	r6, [sp]
-	.loc 1 137 6 is_stmt 1 view .LVU167
-	.loc 1 137 31 is_stmt 0 view .LVU168
-	ldrsh	r7, [sp, #2]
-	.loc 1 138 6 is_stmt 1 view .LVU169
-	.loc 1 138 20 is_stmt 0 view .LVU170
-	ldrsh	r4, [sp, #5]	@ unaligned
-	.loc 1 138 18 view .LVU171
-	strh	r4, [sp]	@ movhi
-	.loc 1 139 6 is_stmt 1 view .LVU172
-	.loc 1 139 20 is_stmt 0 view .LVU173
-	ldrsh	r5, [sp, #7]	@ unaligned
-	.loc 1 139 18 view .LVU174
-	strh	r5, [sp, #2]	@ movhi
-	.loc 1 141 6 is_stmt 1 view .LVU175
-	.loc 1 141 24 is_stmt 0 view .LVU176
+	b	.L19
+.L33:
+.LBB3:
+	.loc 1 148 8 view .LVU150
+	.loc 1 148 26 is_stmt 0 view .LVU151
 	mov	r0, r4
 	bl	__aeabi_i2d
-.LVL34:
+.LVL31:
 	vmov	d8, r0, r1
 	mov	r0, r5
 	bl	__aeabi_i2d
-.LVL35:
+.LVL32:
 	vmov.f32	s2, s16
 	vmov.f32	s3, s17
 	vmov	d0, r0, r1
 	bl	atan2
-.LVL36:
+.LVL33:
 	vmov	r0, r1, d0
-	.loc 1 141 55 view .LVU177
+	.loc 1 148 57 view .LVU152
 	movs	r2, #0
-	ldr	r3, .L27+108
+	ldr	r3, .L35+96
 	bl	__aeabi_dmul
-.LVL37:
-	.loc 1 141 62 view .LVU178
-	adr	r3, .L27
+.LVL34:
+	.loc 1 148 64 view .LVU153
+	adr	r3, .L35
 	ldrd	r2, [r3]
 	bl	__aeabi_ddiv
-.LVL38:
-	.loc 1 141 14 view .LVU179
+.LVL35:
+	.loc 1 148 16 view .LVU154
 	bl	__aeabi_d2iz
-.LVL39:
-	.loc 1 142 5 is_stmt 1 view .LVU180
-	.loc 1 142 28 is_stmt 0 view .LVU181
+.LVL36:
+	.loc 1 149 8 is_stmt 1 view .LVU155
+	.loc 1 149 26 is_stmt 0 view .LVU156
 	sxth	r0, r0
-	.loc 1 142 28 view .LVU182
+	.loc 1 149 26 view .LVU157
 	bl	validWaypoint
-.LVL40:
-	.loc 1 144 6 is_stmt 1 view .LVU183
-	.loc 1 144 8 is_stmt 0 view .LVU184
-	cmp	r0, #0
-	bne	.L20
-	.loc 1 145 7 is_stmt 1 view .LVU185
-	ldr	r1, .L27+112
-	movs	r0, #3
-.LVL41:
-	.loc 1 145 7 is_stmt 0 view .LVU186
-	bl	display_text_on_line
-.LVL42:
-	.loc 1 146 7 is_stmt 1 view .LVU187
-	.loc 1 146 80 view .LVU188
-	.loc 1 146 135 view .LVU189
-	.loc 1 146 216 is_stmt 0 view .LVU190
-	ldr	r3, .L27+16
-	ldrh	r0, [r3]
-	.loc 1 146 227 view .LVU191
-	lsls	r0, r0, #16
-	.loc 1 146 135 view .LVU192
-	ldr	r1, .L27+116
-	orr	r0, r0, #3
-	bl	nrf_log_frontend_std_0
-.LVL43:
-.L21:
-	.loc 1 149 251 is_stmt 1 discriminator 5 view .LVU193
-	.loc 1 152 6 discriminator 5 view .LVU194
-	.loc 1 152 8 is_stmt 0 discriminator 5 view .LVU195
-	cmp	r6, r4
-	bne	.L22
-	.loc 1 152 40 discriminator 1 view .LVU196
+.LVL37:
+	.loc 1 149 26 view .LVU158
+.LBE3:
+	b	.L21
+.L34:
+	.loc 1 154 43 discriminator 2 view .LVU159
 	cmp	r7, r5
 	bne	.L22
-	b	.L18
-.L28:
+	b	.L19
+.L36:
 	.align	3
-.L27:
+.L35:
 	.word	1413754136
 	.word	1074340347
 	.word	USEBLUETOOTH
@@ -647,14 +538,228 @@ vMainCommunicationTask:
 	.word	.LC10
 	.word	gX_hat
 	.word	gY_hat
-	.word	.LC13
-	.word	.LC14
-	.word	1717986919
 	.word	1080459264
-	.word	.LC11
-	.word	.LC12
+	.word	gTheta_hat
+.LVL38:
+.L16:
+	.loc 1 166 5 is_stmt 1 view .LVU160
+	.loc 1 166 30 is_stmt 0 view .LVU161
+	ldrsh	r6, [sp]
+	.loc 1 167 5 is_stmt 1 view .LVU162
+	.loc 1 167 30 is_stmt 0 view .LVU163
+	ldrsh	r7, [sp, #2]
+	.loc 1 168 5 is_stmt 1 view .LVU164
+	.loc 1 168 19 is_stmt 0 view .LVU165
+	ldrsh	r4, [sp, #5]	@ unaligned
+	.loc 1 168 17 view .LVU166
+	strh	r4, [sp]	@ movhi
+	.loc 1 169 5 is_stmt 1 view .LVU167
+	.loc 1 169 19 is_stmt 0 view .LVU168
+	ldrsh	r5, [sp, #7]	@ unaligned
+	.loc 1 169 17 view .LVU169
+	strh	r5, [sp, #2]	@ movhi
+	.loc 1 171 5 is_stmt 1 view .LVU170
+	.loc 1 171 8 is_stmt 0 view .LVU171
+	ldr	r3, .L37+8
+	ldrb	r3, [r3]	@ zero_extendqisi2
+	.loc 1 171 7 view .LVU172
+	cmp	r3, #0
+	bne	.L30
+	.loc 1 175 22 view .LVU173
+	movs	r0, #1
+.L23:
+.LVL39:
+	.loc 1 178 5 is_stmt 1 view .LVU174
+	.loc 1 178 7 is_stmt 0 view .LVU175
+	cmp	r6, r4
+	beq	.L31
+.L24:
+	.loc 1 178 77 discriminator 3 view .LVU176
+	cmp	r0, #0
+	bne	.L32
+.LVL40:
+.L19:
+	.loc 1 185 4 is_stmt 1 view .LVU177
+	movs	r0, #100
+	bl	vTaskDelay
+.LVL41:
+	.loc 1 120 8 view .LVU178
+.L25:
+	.loc 1 118 2 view .LVU179
+	.loc 1 120 3 view .LVU180
+	.loc 1 121 4 view .LVU181
+	movs	r2, #8
+	add	r1, sp, #4
+	movs	r0, #114
+	bl	i2cReciveNOADDR
+.LVL42:
+	.loc 1 123 4 view .LVU182
+	.loc 1 123 7 is_stmt 0 view .LVU183
+	ldr	r3, .L37+12
+	ldrb	r0, [r3]	@ zero_extendqisi2
+	.loc 1 123 6 view .LVU184
+	cmp	r0, #0
+	beq	.L16
+	.loc 1 124 5 is_stmt 1 view .LVU185
+	.loc 1 124 19 is_stmt 0 view .LVU186
+	ldrb	r3, [sp, #5]	@ zero_extendqisi2
+	.loc 1 124 5 view .LVU187
+	cmp	r3, #1
+	beq	.L17
+	cmp	r3, #2
+	bne	.L19
+	.loc 1 142 7 is_stmt 1 view .LVU188
+	.loc 1 142 32 is_stmt 0 view .LVU189
+	ldrsh	r6, [sp]
+	.loc 1 143 7 is_stmt 1 view .LVU190
+	.loc 1 143 32 is_stmt 0 view .LVU191
+	ldrsh	r7, [sp, #2]
+	.loc 1 144 7 is_stmt 1 view .LVU192
+	.loc 1 144 21 is_stmt 0 view .LVU193
+	ldrsh	r4, [sp, #6]
+	.loc 1 144 19 view .LVU194
+	strh	r4, [sp]	@ movhi
+	.loc 1 145 7 is_stmt 1 view .LVU195
+	.loc 1 145 21 is_stmt 0 view .LVU196
+	ldrsh	r5, [sp, #8]
+	.loc 1 145 19 view .LVU197
+	strh	r5, [sp, #2]	@ movhi
+	.loc 1 147 7 is_stmt 1 view .LVU198
+	.loc 1 147 10 is_stmt 0 view .LVU199
+	ldr	r3, .L37+8
+	ldrb	r3, [r3]	@ zero_extendqisi2
+	.loc 1 147 9 view .LVU200
+	cmp	r3, #0
+	bne	.L33
+.L21:
+.LVL43:
+	.loc 1 154 7 is_stmt 1 view .LVU201
+	.loc 1 154 9 is_stmt 0 view .LVU202
+	cmp	r6, r4
+	beq	.L34
+.L22:
+	.loc 1 154 79 discriminator 3 view .LVU203
+	cmp	r0, #0
+	beq	.L19
+.LBB4:
+	.loc 1 155 8 is_stmt 1 view .LVU204
+	bl	sendScanBorder
+.LVL44:
+	.loc 1 156 8 view .LVU205
+	.loc 1 156 26 is_stmt 0 view .LVU206
+	ldr	r2, .L37+16
+	smull	r3, r1, r2, r4
+	asrs	r3, r4, #31
+	rsb	r3, r3, r1, asr #2
+	sxth	r3, r3
+	vmov	s15, r3	@ int
+	vcvt.f32.s32	s15, s15
+	vstr.32	s15, [sp, #12]
+	smull	r3, r2, r2, r5
+	asrs	r3, r5, #31
+	rsb	r3, r3, r2, asr #2
+	sxth	r3, r3
+	vmov	s15, r3	@ int
+	vcvt.f32.s32	s15, s15
+	vstr.32	s15, [sp, #16]
+	.loc 1 157 8 is_stmt 1 view .LVU207
+	movs	r3, #0
+	movs	r2, #100
+	add	r1, sp, #12
+	ldr	r0, .L37+20
+	ldr	r0, [r0]
+	bl	xQueueGenericSend
+.LVL45:
+	b	.L19
+.L30:
+	.loc 1 157 8 is_stmt 0 view .LVU208
+.LBE4:
+.LBB5:
+	.loc 1 172 6 is_stmt 1 view .LVU209
+	.loc 1 172 24 is_stmt 0 view .LVU210
+	mov	r0, r4
+	bl	__aeabi_i2d
+.LVL46:
+	vmov	d8, r0, r1
+	mov	r0, r5
+	bl	__aeabi_i2d
+.LVL47:
+	vmov.f32	s2, s16
+	vmov.f32	s3, s17
+	vmov	d0, r0, r1
+	bl	atan2
+.LVL48:
+	vmov	r0, r1, d0
+	.loc 1 172 55 view .LVU211
+	movs	r2, #0
+	ldr	r3, .L37+24
+	bl	__aeabi_dmul
+.LVL49:
+	.loc 1 172 62 view .LVU212
+	adr	r3, .L37
+	ldrd	r2, [r3]
+	bl	__aeabi_ddiv
+.LVL50:
+	.loc 1 172 14 view .LVU213
+	bl	__aeabi_d2iz
+.LVL51:
+	.loc 1 173 6 is_stmt 1 view .LVU214
+	.loc 1 173 24 is_stmt 0 view .LVU215
+	sxth	r0, r0
+	.loc 1 173 24 view .LVU216
+	bl	validWaypoint
+.LVL52:
+	.loc 1 173 24 view .LVU217
 .LBE5:
-.LBE7:
+	b	.L23
+.L31:
+	.loc 1 178 41 discriminator 2 view .LVU218
+	cmp	r7, r5
+	bne	.L24
+	b	.L19
+.L32:
+.LBB6:
+	.loc 1 179 6 is_stmt 1 view .LVU219
+	bl	sendScanBorder
+.LVL53:
+	.loc 1 180 6 view .LVU220
+	.loc 1 180 24 is_stmt 0 view .LVU221
+	ldr	r3, .L37+16
+	smull	r1, r2, r3, r4
+	asrs	r4, r4, #31
+	rsb	r4, r4, r2, asr #2
+	sxth	r4, r4
+	vmov	s15, r4	@ int
+	vcvt.f32.s32	s15, s15
+	vstr.32	s15, [sp, #12]
+	smull	r2, r3, r3, r5
+	asrs	r5, r5, #31
+	rsb	r5, r5, r3, asr #2
+	sxth	r5, r5
+	vmov	s15, r5	@ int
+	vcvt.f32.s32	s15, s15
+	vstr.32	s15, [sp, #16]
+	.loc 1 181 6 is_stmt 1 view .LVU222
+	movs	r3, #0
+	movs	r2, #100
+	add	r1, sp, #12
+	ldr	r0, .L37+20
+	ldr	r0, [r0]
+	bl	xQueueGenericSend
+.LVL54:
+	b	.L19
+.L38:
+	.align	3
+.L37:
+	.word	1413754136
+	.word	1074340347
+	.word	validateWP
+	.word	newServer
+	.word	1717986919
+	.word	poseControllerQ
+	.word	1080459264
+.LBE6:
+.LBE8:
 .LFE267:
 	.size	vMainCommunicationTask, .-vMainCommunicationTask
 	.global	counter
@@ -1382,20 +1487,20 @@ collisionAngles:
 	.4byte	.LASF47
 	.byte	0x8
 	.byte	0x8
-	.byte	0x41
+	.byte	0x47
 	.byte	0x8
 	.4byte	0x41
 	.uleb128 0x10
 	.ascii	"x\000"
 	.byte	0x8
-	.byte	0x42
+	.byte	0x48
 	.byte	0xb
 	.4byte	0x41
 	.byte	0
 	.uleb128 0x10
 	.ascii	"y\000"
 	.byte	0x8
-	.byte	0x43
+	.byte	0x49
 	.byte	0xb
 	.4byte	0x41
 	.byte	0x4
@@ -2642,32 +2747,31 @@ collisionAngles:
 	.4byte	.LASF101
 	.byte	0
 	.file 12 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/stdio.h"
-	.file 13 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h"
-	.file 14 "../../../../../../components/toolchain/cmsis/include/core_cm4.h"
-	.file 15 "../../../../../../modules/nrfx/mdk/system_nrf52.h"
-	.file 16 "../../../../../../components/libraries/util/app_util.h"
-	.file 17 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
-	.file 18 "../../../../../../external/freertos/source/include/task.h"
-	.file 19 "../../../../../../external/freertos/source/include/queue.h"
-	.file 20 "../../../../../../external/freertos/source/include/semphr.h"
-	.file 21 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
-	.file 22 "../../../../../../components/libraries/gfx/nrf_gfx.h"
-	.file 23 "../../../drivers/display.h"
-	.file 24 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h"
-	.file 25 "../../../drivers/functions.h"
-	.file 26 "../../../drivers/i2c.h"
+	.file 13 "../../../../../../components/toolchain/cmsis/include/core_cm4.h"
+	.file 14 "../../../../../../modules/nrfx/mdk/system_nrf52.h"
+	.file 15 "../../../../../../components/libraries/util/app_util.h"
+	.file 16 "../../../../../../external/freertos/portable/CMSIS/nrf52/portmacro_cmsis.h"
+	.file 17 "../../../../../../external/freertos/source/include/task.h"
+	.file 18 "../../../../../../external/freertos/source/include/queue.h"
+	.file 19 "../../../../../../external/freertos/source/include/semphr.h"
+	.file 20 "../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h"
+	.file 21 "../../../../../../components/libraries/gfx/nrf_gfx.h"
+	.file 22 "../../../drivers/display.h"
+	.file 23 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h"
+	.file 24 "../../../drivers/functions.h"
+	.file 25 "../../../drivers/i2c.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0xa16
+	.4byte	0xa4f
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1d
-	.4byte	.LASF244
-	.byte	0xc
 	.4byte	.LASF245
+	.byte	0xc
 	.4byte	.LASF246
-	.4byte	.Ldebug_ranges0+0x30
+	.4byte	.LASF247
+	.4byte	.Ldebug_ranges0+0x18
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.4byte	.Ldebug_macro0
@@ -2981,21 +3085,8 @@ collisionAngles:
 	.2byte	0x31d
 	.byte	0xe
 	.4byte	0x26a
-	.uleb128 0x12
-	.4byte	0x4f
-	.4byte	0x29a
-	.uleb128 0x13
-	.4byte	0x8d
-	.byte	0x3
-	.byte	0
-	.uleb128 0x24
-	.4byte	.LASF167
-	.byte	0xd
-	.byte	0xe
-	.byte	0x10
-	.4byte	0x28a
 	.uleb128 0x8
-	.4byte	.LASF168
+	.4byte	.LASF167
 	.byte	0xa
 	.byte	0x45
 	.byte	0x1b
@@ -3008,19 +3099,19 @@ collisionAngles:
 	.byte	0x58
 	.byte	0xc
 	.uleb128 0x20
-	.4byte	.LASF169
-	.byte	0xe
+	.4byte	.LASF168
+	.byte	0xd
 	.2byte	0x744
 	.byte	0x19
 	.4byte	0x75
 	.uleb128 0x24
-	.4byte	.LASF170
-	.byte	0xf
+	.4byte	.LASF169
+	.byte	0xe
 	.byte	0x21
 	.byte	0x11
 	.4byte	0x81
 	.uleb128 0x8
-	.4byte	.LASF171
+	.4byte	.LASF170
 	.byte	0x9
 	.byte	0x71
 	.byte	0x3
@@ -3033,204 +3124,214 @@ collisionAngles:
 	.byte	0x32
 	.byte	0x74
 	.uleb128 0x24
-	.4byte	.LASF172
+	.4byte	.LASF171
 	.byte	0x9
 	.byte	0x75
 	.byte	0x19
-	.4byte	0x2cf
+	.4byte	0x2b3
 	.uleb128 0x6
 	.byte	0x4
 	.byte	0x7
-	.4byte	.LASF173
+	.4byte	.LASF172
 	.uleb128 0x24
-	.4byte	.LASF174
-	.byte	0x10
+	.4byte	.LASF173
+	.byte	0xf
 	.byte	0x53
 	.byte	0x11
 	.4byte	0x81
 	.uleb128 0x24
-	.4byte	.LASF175
-	.byte	0x10
+	.4byte	.LASF174
+	.byte	0xf
 	.byte	0x54
 	.byte	0x11
 	.4byte	0x81
 	.uleb128 0x24
-	.4byte	.LASF176
-	.byte	0x10
+	.4byte	.LASF175
+	.byte	0xf
 	.byte	0x72
 	.byte	0x13
-	.4byte	0x316
+	.4byte	0x2fa
 	.uleb128 0x5
 	.byte	0x4
 	.4byte	0x81
 	.uleb128 0x24
-	.4byte	.LASF177
-	.byte	0x10
+	.4byte	.LASF176
+	.byte	0xf
 	.byte	0x73
 	.byte	0x11
 	.4byte	0x81
 	.uleb128 0x4
-	.4byte	.LASF178
-	.byte	0x11
+	.4byte	.LASF177
+	.byte	0x10
 	.byte	0x39
 	.byte	0xe
 	.4byte	0xa4
 	.uleb128 0x4
-	.4byte	.LASF179
-	.byte	0x11
+	.4byte	.LASF178
+	.byte	0x10
 	.byte	0x40
 	.byte	0x16
 	.4byte	0x81
 	.uleb128 0x4
+	.4byte	.LASF179
+	.byte	0x11
+	.byte	0x3e
+	.byte	0x10
+	.4byte	0xa2
+	.uleb128 0x4
 	.4byte	.LASF180
 	.byte	0x12
-	.byte	0x3e
+	.byte	0x2f
 	.byte	0x10
 	.4byte	0xa2
 	.uleb128 0x4
 	.4byte	.LASF181
 	.byte	0x13
-	.byte	0x2f
-	.byte	0x10
-	.4byte	0xa2
-	.uleb128 0x4
-	.4byte	.LASF182
-	.byte	0x14
 	.byte	0x26
 	.byte	0x17
-	.4byte	0x34c
+	.4byte	0x330
 	.uleb128 0x24
-	.4byte	.LASF183
+	.4byte	.LASF182
 	.byte	0x8
 	.byte	0x11
 	.byte	0x15
-	.4byte	0x340
+	.4byte	0x324
 	.uleb128 0x24
-	.4byte	.LASF184
+	.4byte	.LASF183
 	.byte	0x8
 	.byte	0x12
 	.byte	0x5
-	.4byte	0x340
+	.4byte	0x324
 	.uleb128 0x24
-	.4byte	.LASF185
+	.4byte	.LASF184
 	.byte	0x8
 	.byte	0x13
 	.byte	0x5
-	.4byte	0x340
+	.4byte	0x324
 	.uleb128 0x24
-	.4byte	.LASF186
+	.4byte	.LASF185
 	.byte	0x8
 	.byte	0x14
 	.byte	0x5
-	.4byte	0x340
+	.4byte	0x324
 	.uleb128 0x24
-	.4byte	.LASF187
+	.4byte	.LASF186
 	.byte	0x8
 	.byte	0x15
 	.byte	0x5
-	.4byte	0x340
+	.4byte	0x324
+	.uleb128 0x24
+	.4byte	.LASF187
+	.byte	0x8
+	.byte	0x16
+	.byte	0x5
+	.4byte	0x324
 	.uleb128 0x24
 	.4byte	.LASF188
 	.byte	0x8
-	.byte	0x16
+	.byte	0x17
 	.byte	0x5
-	.4byte	0x340
+	.4byte	0x324
 	.uleb128 0x24
 	.4byte	.LASF189
 	.byte	0x8
-	.byte	0x17
+	.byte	0x18
 	.byte	0x5
-	.4byte	0x340
+	.4byte	0x324
 	.uleb128 0x24
 	.4byte	.LASF190
 	.byte	0x8
-	.byte	0x18
-	.byte	0x5
-	.4byte	0x340
+	.byte	0x1b
+	.byte	0x1a
+	.4byte	0x33c
 	.uleb128 0x24
 	.4byte	.LASF191
 	.byte	0x8
-	.byte	0x1b
+	.byte	0x1c
 	.byte	0x1a
-	.4byte	0x358
+	.4byte	0x33c
 	.uleb128 0x24
 	.4byte	.LASF192
 	.byte	0x8
-	.byte	0x1c
+	.byte	0x1d
 	.byte	0x1a
-	.4byte	0x358
+	.4byte	0x33c
 	.uleb128 0x24
 	.4byte	.LASF193
 	.byte	0x8
-	.byte	0x1d
+	.byte	0x1e
 	.byte	0x1a
-	.4byte	0x358
+	.4byte	0x33c
 	.uleb128 0x24
 	.4byte	.LASF194
 	.byte	0x8
-	.byte	0x1e
+	.byte	0x1f
 	.byte	0x1a
-	.4byte	0x358
+	.4byte	0x33c
 	.uleb128 0x24
 	.4byte	.LASF195
 	.byte	0x8
-	.byte	0x1f
+	.byte	0x20
 	.byte	0x1a
-	.4byte	0x358
+	.4byte	0x33c
 	.uleb128 0x24
 	.4byte	.LASF196
 	.byte	0x8
-	.byte	0x20
-	.byte	0x1a
-	.4byte	0x358
+	.byte	0x25
+	.byte	0x16
+	.4byte	0x330
 	.uleb128 0x24
 	.4byte	.LASF197
 	.byte	0x8
-	.byte	0x21
-	.byte	0x1a
-	.4byte	0x358
+	.byte	0x26
+	.byte	0x16
+	.4byte	0x330
 	.uleb128 0x24
 	.4byte	.LASF198
 	.byte	0x8
-	.byte	0x25
-	.byte	0x16
-	.4byte	0x34c
-	.uleb128 0x24
-	.4byte	.LASF199
-	.byte	0x8
-	.byte	0x26
-	.byte	0x16
-	.4byte	0x34c
-	.uleb128 0x24
-	.4byte	.LASF200
-	.byte	0x8
 	.byte	0x27
 	.byte	0x16
-	.4byte	0x34c
+	.4byte	0x330
 	.uleb128 0x24
-	.4byte	.LASF201
+	.4byte	.LASF199
 	.byte	0x8
 	.byte	0x2a
 	.byte	0x10
 	.4byte	0x37
 	.uleb128 0x24
-	.4byte	.LASF202
+	.4byte	.LASF200
 	.byte	0x8
 	.byte	0x2b
 	.byte	0x10
 	.4byte	0x37
 	.uleb128 0x24
+	.4byte	.LASF201
+	.byte	0x8
+	.byte	0x2f
+	.byte	0xc
+	.4byte	0x438
+	.uleb128 0x6
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF25
+	.uleb128 0x24
+	.4byte	.LASF202
+	.byte	0x8
+	.byte	0x30
+	.byte	0xc
+	.4byte	0x438
+	.uleb128 0x24
 	.4byte	.LASF203
 	.byte	0x8
-	.byte	0x2d
-	.byte	0x10
-	.4byte	0x37
+	.byte	0x31
+	.byte	0xc
+	.4byte	0x438
 	.uleb128 0x24
 	.4byte	.LASF204
 	.byte	0x8
-	.byte	0x30
+	.byte	0x36
 	.byte	0xe
-	.4byte	0x46c
+	.4byte	0x463
 	.uleb128 0x6
 	.byte	0x4
 	.byte	0x4
@@ -3238,37 +3339,37 @@ collisionAngles:
 	.uleb128 0x24
 	.4byte	.LASF205
 	.byte	0x8
-	.byte	0x31
+	.byte	0x37
 	.byte	0x10
 	.4byte	0x4f
 	.uleb128 0x24
 	.4byte	.LASF206
 	.byte	0x8
-	.byte	0x32
+	.byte	0x38
 	.byte	0x10
 	.4byte	0x4f
 	.uleb128 0x24
 	.4byte	.LASF207
 	.byte	0x8
-	.byte	0x33
+	.byte	0x39
 	.byte	0xe
-	.4byte	0x46c
+	.4byte	0x463
 	.uleb128 0x24
 	.4byte	.LASF208
 	.byte	0x8
-	.byte	0x34
+	.byte	0x3a
 	.byte	0xe
-	.4byte	0x46c
+	.4byte	0x463
 	.uleb128 0x24
 	.4byte	.LASF209
 	.byte	0x8
-	.byte	0x37
+	.byte	0x3d
 	.byte	0x10
 	.4byte	0x4f
 	.uleb128 0x24
 	.4byte	.LASF210
 	.byte	0x8
-	.byte	0x38
+	.byte	0x3e
 	.byte	0x10
 	.4byte	0x4f
 	.uleb128 0x8
@@ -3286,14 +3387,10 @@ collisionAngles:
 	.byte	0xca
 	.uleb128 0x20
 	.4byte	.LASF212
-	.byte	0x15
+	.byte	0x14
 	.2byte	0x124
 	.byte	0x2e
-	.4byte	0x4bb
-	.uleb128 0x6
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF25
+	.4byte	0x4b2
 	.uleb128 0x8
 	.4byte	.LASF21
 	.byte	0x4
@@ -3321,7 +3418,7 @@ collisionAngles:
 	.byte	0x5d
 	.byte	0x3
 	.uleb128 0x7
-	.4byte	0x4ef
+	.4byte	0x4df
 	.uleb128 0x8
 	.4byte	.LASF214
 	.byte	0x2
@@ -3337,30 +3434,30 @@ collisionAngles:
 	.byte	0xc2
 	.uleb128 0x4
 	.4byte	.LASF215
-	.byte	0x16
+	.byte	0x15
 	.byte	0x92
 	.byte	0x13
-	.4byte	0x504
+	.4byte	0x4f4
 	.uleb128 0x7
-	.4byte	0x514
+	.4byte	0x504
 	.uleb128 0x24
 	.4byte	.LASF216
-	.byte	0x17
+	.byte	0x16
 	.byte	0x13
 	.byte	0x22
-	.4byte	0x520
+	.4byte	0x510
 	.uleb128 0x24
 	.4byte	.LASF217
-	.byte	0x17
+	.byte	0x16
 	.byte	0x14
 	.byte	0x16
-	.4byte	0x34c
+	.4byte	0x330
 	.uleb128 0x25
-	.4byte	.LASF221
-	.byte	0x17
+	.4byte	.LASF222
+	.byte	0x16
 	.byte	0x3a
 	.byte	0x11
-	.4byte	0x4df
+	.4byte	0x4cf
 	.byte	0x8
 	.byte	0
 	.byte	0
@@ -3372,29 +3469,37 @@ collisionAngles:
 	.byte	0
 	.uleb128 0x24
 	.4byte	.LASF218
-	.byte	0x17
+	.byte	0x16
 	.byte	0x42
 	.byte	0x18
-	.4byte	0x4ff
+	.4byte	0x4ef
+	.uleb128 0x12
+	.4byte	0x4f
+	.4byte	0x55e
+	.uleb128 0x13
+	.4byte	0x8d
+	.byte	0x3
+	.byte	0
 	.uleb128 0x26
-	.4byte	0x29a
+	.4byte	.LASF219
 	.byte	0x1
 	.byte	0x18
 	.byte	0x9
+	.4byte	0x54e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	collisionAngles
-	.uleb128 0x27
-	.4byte	.LASF219
+	.uleb128 0x26
+	.4byte	.LASF220
 	.byte	0x1
 	.byte	0x1a
 	.byte	0xb
-	.4byte	0x2a6
+	.4byte	0x28a
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	message_in
-	.uleb128 0x27
-	.4byte	.LASF220
+	.uleb128 0x26
+	.4byte	.LASF221
 	.byte	0x1
 	.byte	0x1c
 	.byte	0x9
@@ -3402,8 +3507,8 @@ collisionAngles:
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	counter
-	.uleb128 0x28
-	.4byte	.LASF247
+	.uleb128 0x27
+	.4byte	.LASF248
 	.byte	0x1
 	.byte	0x1f
 	.byte	0x6
@@ -3411,258 +3516,258 @@ collisionAngles:
 	.4byte	.LFE267-.LFB267
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x934
-	.uleb128 0x29
-	.4byte	.LASF248
+	.4byte	0x96d
+	.uleb128 0x28
+	.4byte	.LASF249
 	.byte	0x1
 	.byte	0x1f
 	.byte	0x23
 	.4byte	0xa2
 	.4byte	.LLST0
 	.4byte	.LVUS0
-	.uleb128 0x2a
-	.4byte	.LASF222
+	.uleb128 0x29
+	.4byte	.LASF223
 	.byte	0x1
 	.byte	0x20
 	.byte	0x17
-	.4byte	0xa10
+	.4byte	0xa49
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
-	.uleb128 0x2b
-	.4byte	.LBB6
-	.4byte	.LBE6-.LBB6
-	.4byte	0x797
 	.uleb128 0x2a
-	.4byte	.LASF223
+	.4byte	.LBB7
+	.4byte	.LBE7-.LBB7
+	.4byte	0x79b
+	.uleb128 0x29
+	.4byte	.LASF224
 	.byte	0x1
 	.byte	0x23
 	.byte	0xd
-	.4byte	0x2a6
+	.4byte	0x28a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -68
-	.uleb128 0x2c
-	.4byte	.LASF224
+	.uleb128 0x2b
+	.4byte	.LASF225
 	.byte	0x1
 	.byte	0x27
 	.byte	0xb
 	.4byte	0x37
-	.4byte	.LLST3
-	.4byte	.LVUS3
-	.uleb128 0x2d
+	.4byte	.LLST4
+	.4byte	.LVUS4
+	.uleb128 0x2c
 	.4byte	.LVL1
-	.4byte	0x954
-	.uleb128 0x2d
+	.4byte	0x98d
+	.uleb128 0x2c
 	.4byte	.LVL2
-	.4byte	0x960
-	.uleb128 0x2d
+	.4byte	0x999
+	.uleb128 0x2c
 	.4byte	.LVL4
-	.4byte	0x96d
-	.uleb128 0x2e
+	.4byte	0x9a6
+	.uleb128 0x2d
 	.4byte	.LVL6
-	.4byte	0x979
-	.4byte	0x62a
-	.uleb128 0x2f
+	.4byte	0x9b2
+	.4byte	0x62e
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x3
 	.byte	0xa
 	.2byte	0x3e8
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL7
-	.4byte	0x986
-	.4byte	0x647
-	.uleb128 0x2f
+	.4byte	0x9bf
+	.4byte	0x64b
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC0
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL8
-	.4byte	0x979
-	.4byte	0x65b
-	.uleb128 0x2f
+	.4byte	0x9b2
+	.4byte	0x65f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0xc8
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.4byte	.LVL9
-	.4byte	0x993
-	.uleb128 0x2e
+	.4byte	0x9cc
+	.uleb128 0x2d
 	.4byte	.LVL10
-	.4byte	0x99f
-	.4byte	0x67b
-	.uleb128 0x2f
+	.4byte	0x9d8
+	.4byte	0x67f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC1
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL12
-	.4byte	0x99f
-	.4byte	0x692
-	.uleb128 0x2f
+	.4byte	0x9d8
+	.4byte	0x696
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC3
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL13
-	.4byte	0x9ac
-	.4byte	0x6a6
-	.uleb128 0x2f
+	.4byte	0x9e5
+	.4byte	0x6aa
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x9
 	.byte	0xff
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL14
-	.4byte	0x99f
-	.4byte	0x6bd
-	.uleb128 0x2f
+	.4byte	0x9d8
+	.4byte	0x6c1
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC2
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL15
-	.4byte	0x99f
-	.4byte	0x6d4
-	.uleb128 0x2f
+	.4byte	0x9d8
+	.4byte	0x6d8
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC4
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.4byte	.LVL16
-	.4byte	0x9b9
-	.uleb128 0x2e
+	.4byte	0x9f2
+	.uleb128 0x2d
 	.4byte	.LVL17
-	.4byte	0x9c5
-	.4byte	0x700
-	.uleb128 0x2f
+	.4byte	0x9fe
+	.4byte	0x704
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC5
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x75
 	.sleb128 0
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL18
-	.4byte	0x9d2
-	.4byte	0x71f
-	.uleb128 0x2f
+	.4byte	0xa0b
+	.4byte	0x723
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x64
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1
 	.byte	0x30
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL19
-	.4byte	0x99f
-	.4byte	0x736
-	.uleb128 0x2f
+	.4byte	0x9d8
+	.4byte	0x73a
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC6
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL20
-	.4byte	0x9d2
-	.4byte	0x755
-	.uleb128 0x2f
+	.4byte	0xa0b
+	.4byte	0x759
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x64
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1
 	.byte	0x30
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL21
-	.4byte	0x99f
-	.4byte	0x76c
-	.uleb128 0x2f
+	.4byte	0x9d8
+	.4byte	0x770
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC7
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LVL22
-	.4byte	0x99f
-	.4byte	0x783
-	.uleb128 0x2f
+	.4byte	0x9d8
+	.4byte	0x787
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC8
 	.byte	0
-	.uleb128 0x30
-	.4byte	.LVL23
-	.4byte	0x986
 	.uleb128 0x2f
+	.4byte	.LVL23
+	.4byte	0x9bf
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
@@ -3670,159 +3775,57 @@ collisionAngles:
 	.4byte	.LC9
 	.byte	0
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x30
 	.4byte	.Ldebug_ranges0+0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.4byte	.LASF51
 	.byte	0x1
 	.byte	0x73
 	.byte	0xb
-	.4byte	0x934
+	.4byte	0x96d
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -76
-	.uleb128 0x32
-	.4byte	.LASF249
+	.uleb128 0x31
+	.4byte	.LASF250
 	.byte	0x1
 	.byte	0x74
 	.byte	0xb
-	.4byte	0x944
-	.uleb128 0x2a
-	.4byte	.LASF225
+	.4byte	0x97d
+	.uleb128 0x29
+	.4byte	.LASF226
 	.byte	0x1
 	.byte	0x75
 	.byte	0xb
-	.4byte	0x944
+	.4byte	0x97d
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
-	.uleb128 0x33
-	.4byte	.Ldebug_ranges0+0x18
-	.4byte	0x902
-	.uleb128 0x2c
-	.4byte	.LASF226
-	.byte	0x1
-	.byte	0x8d
-	.byte	0xe
-	.4byte	0x4f
-	.4byte	.LLST1
-	.4byte	.LVUS1
-	.uleb128 0x2c
+	.uleb128 0x2b
 	.4byte	.LASF227
 	.byte	0x1
-	.byte	0x8e
-	.byte	0xa
-	.4byte	0x4d8
-	.4byte	.LLST2
-	.4byte	.LVUS2
-	.uleb128 0x2b
-	.4byte	.LBB4
-	.4byte	.LBE4-.LBB4
-	.4byte	0x833
+	.byte	0x76
+	.byte	0x7
+	.4byte	0x438
+	.4byte	.LLST1
+	.4byte	.LVUS1
 	.uleb128 0x2a
+	.4byte	.LBB3
+	.4byte	.LBE3-.LBB3
+	.4byte	0x827
+	.uleb128 0x2b
 	.4byte	.LASF228
 	.byte	0x1
-	.byte	0x9a
-	.byte	0x19
-	.4byte	0xa10
-	.uleb128 0x3
-	.byte	0x91
-	.sleb128 -68
-	.uleb128 0x30
-	.4byte	.LVL31
-	.4byte	0x9d2
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x3
-	.byte	0x91
-	.sleb128 -68
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x2
-	.byte	0x8
-	.byte	0x64
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x53
-	.uleb128 0x1
-	.byte	0x30
-	.byte	0
-	.byte	0
+	.byte	0x94
+	.byte	0x10
+	.4byte	0x4f
+	.4byte	.LLST2
+	.4byte	.LVUS2
+	.uleb128 0x2d
+	.4byte	.LVL33
+	.4byte	0xa18
+	.4byte	0x81d
 	.uleb128 0x2e
-	.4byte	.LVL24
-	.4byte	0x9ac
-	.4byte	0x846
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x1
-	.byte	0x44
-	.byte	0
-	.uleb128 0x2e
-	.4byte	.LVL25
-	.4byte	0x99f
-	.4byte	0x85d
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC10
-	.byte	0
-	.uleb128 0x2e
-	.4byte	.LVL26
-	.4byte	0x9d2
-	.4byte	0x87a
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x1
-	.byte	0x30
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x1
-	.byte	0x30
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x53
-	.uleb128 0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x2e
-	.4byte	.LVL29
-	.4byte	0x9df
-	.4byte	0x896
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x50
-	.uleb128 0x1
-	.byte	0x33
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC13
-	.byte	0
-	.uleb128 0x2e
-	.4byte	.LVL30
-	.4byte	0x99f
-	.4byte	0x8ad
-	.uleb128 0x2f
-	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC14
-	.byte	0
-	.uleb128 0x2e
-	.4byte	.LVL36
-	.4byte	0x9eb
-	.4byte	0x8c9
-	.uleb128 0x2f
 	.uleb128 0x8
 	.byte	0x90
 	.uleb128 0x42
@@ -3837,175 +3840,301 @@ collisionAngles:
 	.uleb128 0x50
 	.uleb128 0x29
 	.byte	0
+	.uleb128 0x2c
+	.4byte	.LVL37
+	.4byte	0xa25
+	.byte	0
+	.uleb128 0x2a
+	.4byte	.LBB4
+	.4byte	.LBE4-.LBB4
+	.4byte	0x86a
+	.uleb128 0x29
+	.4byte	.LASF229
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1a
+	.4byte	0xa49
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -68
+	.uleb128 0x2c
+	.4byte	.LVL44
+	.4byte	0xa31
+	.uleb128 0x2f
+	.4byte	.LVL45
+	.4byte	0xa0b
+	.uleb128 0x2e
+	.uleb128 0x1
+	.byte	0x51
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -68
+	.uleb128 0x2e
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x64
+	.uleb128 0x2e
+	.uleb128 0x1
+	.byte	0x53
+	.uleb128 0x1
+	.byte	0x30
+	.byte	0
+	.byte	0
+	.uleb128 0x2a
+	.4byte	.LBB5
+	.4byte	.LBE5-.LBB5
+	.4byte	0x8b1
+	.uleb128 0x2b
+	.4byte	.LASF228
+	.byte	0x1
+	.byte	0xac
+	.byte	0xe
+	.4byte	0x4f
+	.4byte	.LLST3
+	.4byte	.LVUS3
 	.uleb128 0x2d
-	.4byte	.LVL40
-	.4byte	0x9f8
+	.4byte	.LVL48
+	.4byte	0xa18
+	.4byte	0x8a7
 	.uleb128 0x2e
-	.4byte	.LVL42
-	.4byte	0x9df
-	.4byte	0x8ee
+	.uleb128 0x8
+	.byte	0x90
+	.uleb128 0x42
+	.byte	0x93
+	.uleb128 0x4
+	.byte	0x90
+	.uleb128 0x43
+	.byte	0x93
+	.uleb128 0x4
+	.uleb128 0x3
+	.byte	0xf5
+	.uleb128 0x50
+	.uleb128 0x29
+	.byte	0
+	.uleb128 0x2c
+	.4byte	.LVL52
+	.4byte	0xa25
+	.byte	0
+	.uleb128 0x2a
+	.4byte	.LBB6
+	.4byte	.LBE6-.LBB6
+	.4byte	0x8f4
+	.uleb128 0x29
+	.4byte	.LASF229
+	.byte	0x1
+	.byte	0xb4
+	.byte	0x18
+	.4byte	0xa49
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -68
+	.uleb128 0x2c
+	.4byte	.LVL53
+	.4byte	0xa31
 	.uleb128 0x2f
+	.4byte	.LVL54
+	.4byte	0xa0b
+	.uleb128 0x2e
 	.uleb128 0x1
-	.byte	0x50
+	.byte	0x51
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -68
+	.uleb128 0x2e
 	.uleb128 0x1
-	.byte	0x33
-	.uleb128 0x2f
+	.byte	0x52
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x64
+	.uleb128 0x2e
+	.uleb128 0x1
+	.byte	0x53
+	.uleb128 0x1
+	.byte	0x30
+	.byte	0
+	.byte	0
+	.uleb128 0x2d
+	.4byte	.LVL24
+	.4byte	0x9e5
+	.4byte	0x907
+	.uleb128 0x2e
+	.uleb128 0x1
+	.byte	0x51
+	.uleb128 0x1
+	.byte	0x44
+	.byte	0
+	.uleb128 0x2d
+	.4byte	.LVL25
+	.4byte	0x9d8
+	.4byte	0x91e
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC11
+	.4byte	.LC10
 	.byte	0
-	.uleb128 0x30
-	.4byte	.LVL43
-	.4byte	0x99f
-	.uleb128 0x2f
+	.uleb128 0x2d
+	.4byte	.LVL30
+	.4byte	0xa0b
+	.4byte	0x93b
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC12
-	.byte	0
-	.byte	0
+	.uleb128 0x1
+	.byte	0x30
 	.uleb128 0x2e
-	.4byte	.LVL32
-	.4byte	0x979
-	.4byte	0x916
-	.uleb128 0x2f
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x1
+	.byte	0x30
+	.uleb128 0x2e
+	.uleb128 0x1
+	.byte	0x53
+	.uleb128 0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x2d
+	.4byte	.LVL41
+	.4byte	0x9b2
+	.4byte	0x94f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x64
 	.byte	0
-	.uleb128 0x30
-	.4byte	.LVL33
-	.4byte	0xa04
 	.uleb128 0x2f
+	.4byte	.LVL42
+	.4byte	0xa3d
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x72
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -76
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1
-	.byte	0x35
+	.byte	0x38
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x12
 	.4byte	0x37
-	.4byte	0x944
+	.4byte	0x97d
 	.uleb128 0x13
 	.4byte	0x8d
-	.byte	0x4
+	.byte	0x7
 	.byte	0
 	.uleb128 0x12
 	.4byte	0x4f
-	.4byte	0x954
+	.4byte	0x98d
 	.uleb128 0x13
 	.4byte	0x8d
 	.byte	0x1
 	.byte	0
-	.uleb128 0x34
-	.4byte	.LASF229
-	.4byte	.LASF229
+	.uleb128 0x32
+	.4byte	.LASF230
+	.4byte	.LASF230
 	.byte	0xa
 	.byte	0x47
 	.byte	0x6
-	.uleb128 0x35
-	.4byte	.LASF230
-	.4byte	.LASF230
-	.byte	0x12
+	.uleb128 0x33
+	.4byte	.LASF231
+	.4byte	.LASF231
+	.byte	0x11
 	.2byte	0x451
 	.byte	0x6
-	.uleb128 0x34
-	.4byte	.LASF231
-	.4byte	.LASF231
+	.uleb128 0x32
+	.4byte	.LASF232
+	.4byte	.LASF232
 	.byte	0xa
 	.byte	0x48
 	.byte	0x9
-	.uleb128 0x35
-	.4byte	.LASF232
-	.4byte	.LASF232
-	.byte	0x12
+	.uleb128 0x33
+	.4byte	.LASF233
+	.4byte	.LASF233
+	.byte	0x11
 	.2byte	0x2ee
 	.byte	0x6
-	.uleb128 0x35
-	.4byte	.LASF233
-	.4byte	.LASF233
-	.byte	0x15
+	.uleb128 0x33
+	.4byte	.LASF234
+	.4byte	.LASF234
+	.byte	0x14
 	.2byte	0x1b4
 	.byte	0x6
-	.uleb128 0x34
-	.4byte	.LASF234
-	.4byte	.LASF234
+	.uleb128 0x32
+	.4byte	.LASF235
+	.4byte	.LASF235
 	.byte	0xa
 	.byte	0x49
 	.byte	0x9
-	.uleb128 0x35
-	.4byte	.LASF235
-	.4byte	.LASF235
-	.byte	0x15
+	.uleb128 0x33
+	.4byte	.LASF236
+	.4byte	.LASF236
+	.byte	0x14
 	.2byte	0x1ab
 	.byte	0x6
-	.uleb128 0x35
-	.4byte	.LASF236
-	.4byte	.LASF236
-	.byte	0x13
+	.uleb128 0x33
+	.4byte	.LASF237
+	.4byte	.LASF237
+	.byte	0x12
 	.2byte	0x589
 	.byte	0xc
-	.uleb128 0x34
-	.4byte	.LASF237
-	.4byte	.LASF237
+	.uleb128 0x32
+	.4byte	.LASF238
+	.4byte	.LASF238
 	.byte	0xa
 	.byte	0x4c
 	.byte	0x6
-	.uleb128 0x35
-	.4byte	.LASF238
-	.4byte	.LASF238
-	.byte	0x15
+	.uleb128 0x33
+	.4byte	.LASF239
+	.4byte	.LASF239
+	.byte	0x14
 	.2byte	0x1bf
 	.byte	0x6
-	.uleb128 0x35
-	.4byte	.LASF239
-	.4byte	.LASF239
-	.byte	0x13
+	.uleb128 0x33
+	.4byte	.LASF240
+	.4byte	.LASF240
+	.byte	0x12
 	.2byte	0x289
 	.byte	0xc
-	.uleb128 0x34
-	.4byte	.LASF240
-	.4byte	.LASF240
+	.uleb128 0x33
+	.4byte	.LASF241
+	.4byte	.LASF241
 	.byte	0x17
-	.byte	0x66
-	.byte	0x6
-	.uleb128 0x35
-	.4byte	.LASF241
-	.4byte	.LASF241
-	.byte	0x18
 	.2byte	0x1f9
 	.byte	0x8
-	.uleb128 0x34
+	.uleb128 0x32
 	.4byte	.LASF242
 	.4byte	.LASF242
-	.byte	0x19
-	.byte	0x32
+	.byte	0x18
+	.byte	0x35
 	.byte	0x5
-	.uleb128 0x34
+	.uleb128 0x32
 	.4byte	.LASF243
 	.4byte	.LASF243
-	.byte	0x1a
+	.byte	0x18
+	.byte	0x26
+	.byte	0x6
+	.uleb128 0x32
+	.4byte	.LASF244
+	.4byte	.LASF244
+	.byte	0x19
 	.byte	0x11
 	.byte	0x6
-	.uleb128 0x36
+	.uleb128 0x34
 	.byte	0x98
 	.byte	0x37
 	.byte	0x16
@@ -4499,21 +4628,6 @@ collisionAngles:
 	.uleb128 0x26
 	.uleb128 0x34
 	.byte	0
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x27
-	.uleb128 0x34
-	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
@@ -4530,7 +4644,7 @@ collisionAngles:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x27
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -4557,7 +4671,7 @@ collisionAngles:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x28
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -4576,7 +4690,7 @@ collisionAngles:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -4593,7 +4707,7 @@ collisionAngles:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2a
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -4604,7 +4718,7 @@ collisionAngles:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x2b
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -4623,7 +4737,7 @@ collisionAngles:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -4632,7 +4746,7 @@ collisionAngles:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -4643,7 +4757,7 @@ collisionAngles:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -4652,7 +4766,7 @@ collisionAngles:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x2f
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -4661,14 +4775,14 @@ collisionAngles:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x30
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x55
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x32
+	.uleb128 0x31
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -4683,16 +4797,7 @@ collisionAngles:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x33
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x34
+	.uleb128 0x32
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -4711,7 +4816,7 @@ collisionAngles:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -4730,7 +4835,7 @@ collisionAngles:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x34
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x69
@@ -4759,12 +4864,12 @@ collisionAngles:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LVUS3:
+.LVUS4:
 	.uleb128 .LVU16
 	.uleb128 .LVU19
 	.uleb128 .LVU19
 	.uleb128 .LVU38
-.LLST3:
+.LLST4:
 	.4byte	.LVL2
 	.4byte	.LVL3
 	.2byte	0x2
@@ -4777,27 +4882,49 @@ collisionAngles:
 	.4byte	0
 	.4byte	0
 .LVUS1:
-	.uleb128 .LVU180
-	.uleb128 .LVU183
+	.uleb128 .LVU158
+	.uleb128 .LVU160
+	.uleb128 .LVU174
+	.uleb128 .LVU177
+	.uleb128 .LVU201
+	.uleb128 .LVU205
+	.uleb128 .LVU217
+	.uleb128 .LVU220
 .LLST1:
+	.4byte	.LVL37
+	.4byte	.LVL38
+	.2byte	0x1
+	.byte	0x50
 	.4byte	.LVL39
-	.4byte	.LVL40-1
+	.4byte	.LVL40
+	.2byte	0x1
+	.byte	0x50
+	.4byte	.LVL43
+	.4byte	.LVL44-1
+	.2byte	0x1
+	.byte	0x50
+	.4byte	.LVL52
+	.4byte	.LVL53-1
 	.2byte	0x1
 	.byte	0x50
 	.4byte	0
 	.4byte	0
 .LVUS2:
-	.uleb128 .LVU146
-	.uleb128 .LVU147
-	.uleb128 .LVU183
-	.uleb128 .LVU186
+	.uleb128 .LVU155
+	.uleb128 .LVU158
 .LLST2:
-	.4byte	.LVL27
-	.4byte	.LVL28
+	.4byte	.LVL36
+	.4byte	.LVL37-1
 	.2byte	0x1
 	.byte	0x50
-	.4byte	.LVL40
-	.4byte	.LVL41
+	.4byte	0
+	.4byte	0
+.LVUS3:
+	.uleb128 .LVU214
+	.uleb128 .LVU217
+.LLST3:
+	.4byte	.LVL51
+	.4byte	.LVL52-1
 	.2byte	0x1
 	.byte	0x50
 	.4byte	0
@@ -4806,7 +4933,7 @@ collisionAngles:
 	.4byte	0x119
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0xa1a
+	.4byte	0xa53
 	.4byte	0x2b
 	.ascii	"NRF_LOG_SEVERITY_NONE\000"
 	.4byte	0x31
@@ -4819,24 +4946,24 @@ collisionAngles:
 	.ascii	"NRF_LOG_SEVERITY_DEBUG\000"
 	.4byte	0x49
 	.ascii	"NRF_LOG_SEVERITY_INFO_RAW\000"
-	.4byte	0x53d
+	.4byte	0x52d
 	.ascii	"m_lcd_cb\000"
 	.4byte	0x55e
 	.ascii	"collisionAngles\000"
-	.4byte	0x56c
+	.4byte	0x570
 	.ascii	"message_in\000"
-	.4byte	0x57e
+	.4byte	0x582
 	.ascii	"counter\000"
-	.4byte	0x56c
+	.4byte	0x570
 	.ascii	"message_in\000"
-	.4byte	0x590
+	.4byte	0x594
 	.ascii	"vMainCommunicationTask\000"
 	.4byte	0
 	.section	.debug_pubtypes,"",%progbits
 	.4byte	0x2a1
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0xa1a
+	.4byte	0xa53
 	.4byte	0x30
 	.ascii	"signed char\000"
 	.4byte	0x43
@@ -4881,37 +5008,37 @@ collisionAngles:
 	.ascii	"FILE\000"
 	.4byte	0xb
 	.ascii	"Message\000"
-	.4byte	0x2a6
+	.4byte	0x28a
 	.ascii	"message_t\000"
-	.4byte	0x2cf
+	.4byte	0x2b3
 	.ascii	"nrf_nvic_state_t\000"
-	.4byte	0x2eb
+	.4byte	0x2cf
 	.ascii	"long unsigned int\000"
-	.4byte	0x328
+	.4byte	0x30c
 	.ascii	"BaseType_t\000"
-	.4byte	0x334
+	.4byte	0x318
 	.ascii	"TickType_t\000"
-	.4byte	0x340
+	.4byte	0x324
 	.ascii	"TaskHandle_t\000"
-	.4byte	0x34c
+	.4byte	0x330
 	.ascii	"QueueHandle_t\000"
-	.4byte	0x358
+	.4byte	0x33c
 	.ascii	"SemaphoreHandle_t\000"
-	.4byte	0x46c
+	.4byte	0x438
+	.ascii	"_Bool\000"
+	.4byte	0x463
 	.ascii	"float\000"
 	.4byte	0xb
 	.ascii	"sCartesian\000"
-	.4byte	0x4bb
+	.4byte	0x4b2
 	.ascii	"nrf_log_module_reduced_dynamic_data_t\000"
-	.4byte	0x4d8
-	.ascii	"_Bool\000"
-	.4byte	0x4df
+	.4byte	0x4cf
 	.ascii	"lcd_cb_t\000"
-	.4byte	0x4ef
+	.4byte	0x4df
 	.ascii	"nrf_lcd_t\000"
-	.4byte	0x504
+	.4byte	0x4f4
 	.ascii	"FONT_INFO\000"
-	.4byte	0x514
+	.4byte	0x504
 	.ascii	"nrf_gfx_font_desc_t\000"
 	.4byte	0x29
 	.ascii	"double\000"
@@ -4932,14 +5059,8 @@ collisionAngles:
 .Ldebug_ranges0:
 	.4byte	.LBB2
 	.4byte	.LBE2
-	.4byte	.LBB7
-	.4byte	.LBE7
-	.4byte	0
-	.4byte	0
-	.4byte	.LBB3
-	.4byte	.LBE3
-	.4byte	.LBB5
-	.4byte	.LBE5
+	.4byte	.LBB8
+	.4byte	.LBE8
 	.4byte	0
 	.4byte	0
 	.4byte	.LFB267
@@ -4966,9 +5087,10 @@ collisionAngles:
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0x4
+	.file 26 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.h"
 	.byte	0x3
 	.uleb128 0xc
-	.uleb128 0xd
+	.uleb128 0x1a
 	.file 27 "../../../drivers/defines.h"
 	.byte	0x3
 	.uleb128 0xc
@@ -5006,7 +5128,7 @@ collisionAngles:
 	.uleb128 0x21
 	.byte	0x3
 	.uleb128 0x92
-	.uleb128 0xe
+	.uleb128 0xd
 	.file 34 "../../../../../../components/toolchain/cmsis/include/core_cmInstr.h"
 	.byte	0x3
 	.uleb128 0xd2
@@ -5030,7 +5152,7 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x93
-	.uleb128 0xf
+	.uleb128 0xe
 	.byte	0x4
 	.byte	0x4
 	.file 38 "../../../../../../modules/nrfx/mdk/nrf52_bitfields.h"
@@ -5166,10 +5288,10 @@ collisionAngles:
 	.uleb128 0x3b
 	.byte	0x3
 	.uleb128 0x21
-	.uleb128 0x11
+	.uleb128 0x10
 	.byte	0x3
 	.uleb128 0x1f
-	.uleb128 0x10
+	.uleb128 0xf
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
@@ -5182,7 +5304,7 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xf
-	.uleb128 0x12
+	.uleb128 0x11
 	.file 61 "../../../../../../external/freertos/source/include/list.h"
 	.byte	0x3
 	.uleb128 0x25
@@ -5199,10 +5321,10 @@ collisionAngles:
 	.uleb128 0x8
 	.byte	0x3
 	.uleb128 0xf
-	.uleb128 0x14
+	.uleb128 0x13
 	.byte	0x3
 	.uleb128 0x24
-	.uleb128 0x13
+	.uleb128 0x12
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
@@ -5231,7 +5353,7 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x3d
-	.uleb128 0x10
+	.uleb128 0xf
 	.byte	0x4
 	.file 68 "../../../../../../components/libraries/util/sdk_macros.h"
 	.byte	0x3
@@ -5259,7 +5381,7 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x51
-	.uleb128 0x15
+	.uleb128 0x14
 	.file 71 "../../../../../../components/libraries/experimental_log/nrf_log_instance.h"
 	.byte	0x3
 	.uleb128 0x30
@@ -5277,7 +5399,7 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x13
-	.uleb128 0x1a
+	.uleb128 0x19
 	.file 72 "../../../../../../components/libraries/twi_mngr/nrf_twi_mngr.h"
 	.byte	0x3
 	.uleb128 0xb
@@ -5380,18 +5502,18 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x14
-	.uleb128 0x19
+	.uleb128 0x18
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x15
-	.uleb128 0x17
+	.uleb128 0x16
 	.byte	0x3
 	.uleb128 0xb
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xc
-	.uleb128 0x16
+	.uleb128 0x15
 	.byte	0x3
 	.uleb128 0x2f
 	.uleb128 0x4
@@ -5408,12 +5530,12 @@ collisionAngles:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xf
-	.uleb128 0x13
+	.uleb128 0x12
 	.byte	0x4
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0x16
-	.uleb128 0x18
+	.uleb128 0x17
 	.byte	0x4
 	.byte	0x4
 	.byte	0
@@ -5432,10 +5554,12 @@ collisionAngles:
 	.ascii	"sensor_offset1\000"
 .LASF74:
 	.ascii	"sensor_offset2\000"
-.LASF177:
+.LASF176:
 	.ascii	"__FLASH_segment_used_end__\000"
 .LASF153:
 	.ascii	"__RAL_data_utf8_space\000"
+.LASF96:
+	.ascii	"__iswctype\000"
 .LASF133:
 	.ascii	"date_time_format\000"
 .LASF148:
@@ -5456,19 +5580,19 @@ collisionAngles:
 	.ascii	"int_n_sep_by_space\000"
 .LASF114:
 	.ascii	"p_cs_precedes\000"
-.LASF184:
+.LASF183:
 	.ascii	"handle_user_task\000"
 .LASF155:
 	.ascii	"__RAL_data_utf8_minus\000"
-.LASF201:
+.LASF199:
 	.ascii	"gHandshook\000"
-.LASF223:
+.LASF224:
 	.ascii	"command_in\000"
-.LASF239:
+.LASF240:
 	.ascii	"xQueueGenericSend\000"
 .LASF141:
 	.ascii	"long long unsigned int\000"
-.LASF244:
+.LASF245:
 	.ascii	"GNU C99 9.2.1 20191025 (release) [ARM/arm-9-branch "
 	.ascii	"revision 277599] -fmessage-length=0 -mcpu=cortex-m4"
 	.ascii	" -mlittle-endian -mfloat-abi=hard -mfpu=fpv4-sp-d16"
@@ -5485,24 +5609,24 @@ collisionAngles:
 	.ascii	"__locale_s\000"
 .LASF158:
 	.ascii	"__user_get_time_of_day\000"
-.LASF176:
+.LASF175:
 	.ascii	"_vectors\000"
-.LASF181:
+.LASF180:
 	.ascii	"QueueHandle_t\000"
-.LASF169:
+.LASF168:
 	.ascii	"ITM_RxBuffer\000"
 .LASF131:
 	.ascii	"date_format\000"
 .LASF216:
 	.ascii	"orkney_8ptFontInfo\000"
-.LASF245:
+.LASF246:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
 	.ascii	"al\\slam\\software\\MainComTask.c\000"
 .LASF105:
 	.ascii	"int_curr_symbol\000"
 .LASF70:
 	.ascii	"tower_offset_x\000"
-.LASF221:
+.LASF222:
 	.ascii	"m_lcd_cb\000"
 .LASF129:
 	.ascii	"abbrev_month_names\000"
@@ -5520,19 +5644,19 @@ collisionAngles:
 	.ascii	"module_id\000"
 .LASF90:
 	.ascii	"codeset\000"
-.LASF232:
+.LASF233:
 	.ascii	"vTaskDelay\000"
 .LASF214:
 	.ascii	"FONT_INFO\000"
 .LASF97:
 	.ascii	"__towupper\000"
-.LASF225:
+.LASF226:
 	.ascii	"waypoint\000"
-.LASF189:
+.LASF188:
 	.ascii	"sensor_tower_task\000"
 .LASF112:
 	.ascii	"int_frac_digits\000"
-.LASF238:
+.LASF239:
 	.ascii	"nrf_log_frontend_std_2\000"
 .LASF27:
 	.ascii	"state\000"
@@ -5544,27 +5668,25 @@ collisionAngles:
 	.ascii	"__RAL_locale_data_t\000"
 .LASF152:
 	.ascii	"__RAL_data_utf8_comma\000"
-.LASF180:
+.LASF179:
 	.ascii	"TaskHandle_t\000"
 .LASF164:
 	.ascii	"stdin\000"
-.LASF226:
+.LASF228:
 	.ascii	"wpAngle\000"
-.LASF240:
-	.ascii	"display_text_on_line\000"
 .LASF42:
 	.ascii	"NRF_LOG_SEVERITY_WARNING\000"
 .LASF11:
 	.ascii	"uint16_t\000"
-.LASF198:
+.LASF196:
 	.ascii	"poseControllerQ\000"
-.LASF178:
+.LASF177:
 	.ascii	"BaseType_t\000"
 .LASF93:
 	.ascii	"__isctype\000"
 .LASF120:
 	.ascii	"int_p_cs_precedes\000"
-.LASF190:
+.LASF189:
 	.ascii	"arq_task\000"
 .LASF48:
 	.ascii	"__irq_masks\000"
@@ -5576,7 +5698,7 @@ collisionAngles:
 	.ascii	"__wchar\000"
 .LASF2:
 	.ascii	"endChar\000"
-.LASF203:
+.LASF201:
 	.ascii	"USEBLUETOOTH\000"
 .LASF71:
 	.ascii	"tower_offset_y\000"
@@ -5586,15 +5708,15 @@ collisionAngles:
 	.ascii	"thousands_sep\000"
 .LASF109:
 	.ascii	"mon_grouping\000"
-.LASF96:
-	.ascii	"__iswctype\000"
-.LASF100:
-	.ascii	"__mbtowc\000"
+.LASF227:
+	.ascii	"isValidWaypoint\000"
+.LASF119:
+	.ascii	"n_sign_posn\000"
 .LASF40:
 	.ascii	"NRF_LOG_SEVERITY_NONE\000"
 .LASF21:
 	.ascii	"lcd_cb_t\000"
-.LASF249:
+.LASF250:
 	.ascii	"oldwaypoint\000"
 .LASF3:
 	.ascii	"spacePixels\000"
@@ -5602,7 +5724,7 @@ collisionAngles:
 	.ascii	"unsigned int\000"
 .LASF122:
 	.ascii	"int_p_sep_by_space\000"
-.LASF170:
+.LASF169:
 	.ascii	"SystemCoreClock\000"
 .LASF130:
 	.ascii	"am_pm_indicator\000"
@@ -5610,7 +5732,7 @@ collisionAngles:
 	.ascii	"__RAL_data_utf8_period\000"
 .LASF104:
 	.ascii	"grouping\000"
-.LASF173:
+.LASF172:
 	.ascii	"long unsigned int\000"
 .LASF4:
 	.ascii	"charInfo\000"
@@ -5620,44 +5742,44 @@ collisionAngles:
 	.ascii	"gX_hat\000"
 .LASF156:
 	.ascii	"__RAL_data_empty_string\000"
-.LASF248:
+.LASF249:
 	.ascii	"pvParameters\000"
-.LASF187:
+.LASF186:
 	.ascii	"pose_controller_task\000"
 .LASF68:
 	.ascii	"name\000"
-.LASF199:
+.LASF197:
 	.ascii	"scanStatusQ\000"
 .LASF211:
 	.ascii	"nrf_log_module_reduced_dynamic_data_t\000"
-.LASF175:
+.LASF174:
 	.ascii	"__StackLimit\000"
 .LASF28:
 	.ascii	"width\000"
-.LASF171:
+.LASF170:
 	.ascii	"nrf_nvic_state_t\000"
-.LASF185:
+.LASF184:
 	.ascii	"handle_microsd_task\000"
-.LASF200:
+.LASF198:
 	.ascii	"queue_microsd\000"
-.LASF231:
+.LASF232:
 	.ascii	"server_connect\000"
 .LASF12:
 	.ascii	"short unsigned int\000"
-.LASF246:
+.LASF247:
 	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
 	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF7:
 	.ascii	"FONT_CHAR_INFO\000"
 .LASF50:
 	.ascii	"type\000"
-.LASF230:
+.LASF231:
 	.ascii	"vTaskResume\000"
 .LASF126:
 	.ascii	"day_names\000"
 .LASF75:
 	.ascii	"sensor_offset3\000"
-.LASF228:
+.LASF229:
 	.ascii	"target\000"
 .LASF31:
 	.ascii	"NRF_LCD_ROTATE_0\000"
@@ -5671,17 +5793,17 @@ collisionAngles:
 	.ascii	"NRFX_DRV_STATE_POWERED_ON\000"
 .LASF165:
 	.ascii	"stdout\000"
-.LASF243:
+.LASF244:
 	.ascii	"i2cReciveNOADDR\000"
 .LASF62:
 	.ascii	"tower_angle\000"
-.LASF188:
+.LASF187:
 	.ascii	"communication_task\000"
 .LASF89:
 	.ascii	"__RAL_locale_t\000"
 .LASF132:
 	.ascii	"time_format\000"
-.LASF193:
+.LASF192:
 	.ascii	"xTickMutex\000"
 .LASF94:
 	.ascii	"__toupper\000"
@@ -5695,21 +5817,21 @@ collisionAngles:
 	.ascii	"__RAL_ascii_ctype_map\000"
 .LASF67:
 	.ascii	"name_length\000"
-.LASF194:
+.LASF193:
 	.ascii	"xControllerBSem\000"
-.LASF247:
+.LASF248:
 	.ascii	"vMainCommunicationTask\000"
-.LASF179:
+.LASF178:
 	.ascii	"TickType_t\000"
 .LASF20:
 	.ascii	"p_lcd_cb\000"
-.LASF219:
+.LASF220:
 	.ascii	"message_in\000"
 .LASF34:
 	.ascii	"NRF_LCD_ROTATE_270\000"
-.LASF227:
-	.ascii	"isvalidWaypoint\000"
-.LASF172:
+.LASF100:
+	.ascii	"__mbtowc\000"
+.LASF171:
 	.ascii	"nrf_nvic_state\000"
 .LASF51:
 	.ascii	"message\000"
@@ -5719,7 +5841,7 @@ collisionAngles:
 	.ascii	"__tolower\000"
 .LASF53:
 	.ascii	"handshake\000"
-.LASF192:
+.LASF191:
 	.ascii	"xPoseMutex\000"
 .LASF157:
 	.ascii	"__user_set_time_of_day\000"
@@ -5733,6 +5855,8 @@ collisionAngles:
 	.ascii	"__category\000"
 .LASF52:
 	.ascii	"update\000"
+.LASF243:
+	.ascii	"sendScanBorder\000"
 .LASF135:
 	.ascii	"__state\000"
 .LASF14:
@@ -5745,9 +5869,9 @@ collisionAngles:
 	.ascii	"lcd_rect_draw\000"
 .LASF66:
 	.ascii	"sensor4\000"
-.LASF174:
+.LASF173:
 	.ascii	"__StackTop\000"
-.LASF191:
+.LASF190:
 	.ascii	"xScanLock\000"
 .LASF25:
 	.ascii	"_Bool\000"
@@ -5767,15 +5891,17 @@ collisionAngles:
 	.ascii	"NRF_LOG_SEVERITY_INFO_RAW\000"
 .LASF60:
 	.ascii	"short int\000"
-.LASF220:
+.LASF221:
 	.ascii	"counter\000"
+.LASF202:
+	.ascii	"newServer\000"
 .LASF57:
 	.ascii	"order_message_t\000"
 .LASF160:
 	.ascii	"__RAL_error_decoder_head\000"
-.LASF235:
+.LASF236:
 	.ascii	"nrf_log_frontend_std_0\000"
-.LASF233:
+.LASF234:
 	.ascii	"nrf_log_frontend_std_1\000"
 .LASF204:
 	.ascii	"gTheta_hat\000"
@@ -5783,9 +5909,9 @@ collisionAngles:
 	.ascii	"__mbstate_s\000"
 .LASF161:
 	.ascii	"FILE\000"
-.LASF222:
+.LASF223:
 	.ascii	"Setpoint\000"
-.LASF167:
+.LASF219:
 	.ascii	"collisionAngles\000"
 .LASF18:
 	.ascii	"lcd_rotation_set\000"
@@ -5795,15 +5921,13 @@ collisionAngles:
 	.ascii	"mon_thousands_sep\000"
 .LASF209:
 	.ascii	"gRightWheelTicks\000"
-.LASF119:
-	.ascii	"n_sign_posn\000"
 .LASF110:
 	.ascii	"positive_sign\000"
 .LASF23:
 	.ascii	"uint32_t\000"
-.LASF202:
+.LASF200:
 	.ascii	"gPaused\000"
-.LASF237:
+.LASF238:
 	.ascii	"send_ping_response\000"
 .LASF55:
 	.ascii	"update_message_t\000"
@@ -5811,7 +5935,7 @@ collisionAngles:
 	.ascii	"int_p_sign_posn\000"
 .LASF33:
 	.ascii	"NRF_LCD_ROTATE_180\000"
-.LASF182:
+.LASF181:
 	.ascii	"SemaphoreHandle_t\000"
 .LASF86:
 	.ascii	"char\000"
@@ -5819,7 +5943,7 @@ collisionAngles:
 	.ascii	"p_sep_by_space\000"
 .LASF58:
 	.ascii	"Message\000"
-.LASF234:
+.LASF235:
 	.ascii	"send_handshake\000"
 .LASF241:
 	.ascii	"atan2\000"
@@ -5827,8 +5951,6 @@ collisionAngles:
 	.ascii	"m_nrf_log_app_logs_data_dynamic\000"
 .LASF61:
 	.ascii	"heading\000"
-.LASF197:
-	.ascii	"xCollisionMutex\000"
 .LASF63:
 	.ascii	"sensor1\000"
 .LASF65:
@@ -5857,17 +5979,17 @@ collisionAngles:
 	.ascii	"sensor_offset4\000"
 .LASF210:
 	.ascii	"gLeftWheelTicks\000"
-.LASF168:
+.LASF167:
 	.ascii	"message_t\000"
 .LASF125:
 	.ascii	"int_n_sign_posn\000"
-.LASF186:
+.LASF185:
 	.ascii	"pose_estimator_task\000"
 .LASF166:
 	.ascii	"stderr\000"
 .LASF149:
 	.ascii	"__RAL_c_locale_month_names\000"
-.LASF183:
+.LASF182:
 	.ascii	"handle_display_task\000"
 .LASF19:
 	.ascii	"lcd_display_invert\000"
@@ -5881,15 +6003,17 @@ collisionAngles:
 	.ascii	"uint8_t\000"
 .LASF17:
 	.ascii	"lcd_display\000"
-.LASF236:
+.LASF237:
 	.ascii	"xQueueSemaphoreTake\000"
 .LASF46:
 	.ascii	"float\000"
+.LASF203:
+	.ascii	"validateWP\000"
 .LASF128:
 	.ascii	"month_names\000"
-.LASF195:
+.LASF194:
 	.ascii	"xCommandReadyBSem\000"
-.LASF196:
+.LASF195:
 	.ascii	"mutex_spi\000"
 .LASF36:
 	.ascii	"NRFX_DRV_STATE_INITIALIZED\000"
@@ -5921,11 +6045,11 @@ collisionAngles:
 	.ascii	"double\000"
 .LASF102:
 	.ascii	"decimal_point\000"
-.LASF229:
+.LASF230:
 	.ascii	"server_communication_init\000"
 .LASF206:
 	.ascii	"gY_hat\000"
-.LASF224:
+.LASF225:
 	.ascii	"success\000"
 .LASF56:
 	.ascii	"handshake_message_t\000"

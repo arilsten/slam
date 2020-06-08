@@ -7893,7 +7893,7 @@ extern SemaphoreHandle_t xTickMutex;
 extern SemaphoreHandle_t xControllerBSem;
 extern SemaphoreHandle_t xCommandReadyBSem;
 extern SemaphoreHandle_t mutex_spi;
-extern SemaphoreHandle_t xCollisionMutex;
+
 
 
 
@@ -7905,7 +7905,25 @@ extern QueueHandle_t queue_microsd;
 extern uint8_t gHandshook;
 extern uint8_t gPaused;
 
-extern uint8_t USEBLUETOOTH;
+
+
+extern 
+# 47 "../../../software/globals.h" 3 4
+      _Bool 
+# 47 "../../../software/globals.h"
+           USEBLUETOOTH;
+extern 
+# 48 "../../../software/globals.h" 3 4
+      _Bool 
+# 48 "../../../software/globals.h"
+           newServer;
+extern 
+# 49 "../../../software/globals.h" 3 4
+      _Bool 
+# 49 "../../../software/globals.h"
+           validateWP;
+
+
 
 
 extern float gTheta_hat;
@@ -8207,61 +8225,62 @@ void display_task(void *arg) {
     display_init();
 
     display_operation_t display_operation;
-    microsd_write_operation_t write = {
-        .filename = "DISP",
-        .content = "What did I just draw"};
 
     for (;;) {
         xQueueReceive(queue_display, &display_operation, ( TickType_t ) 0xffffffffUL);
         xQueueSemaphoreTake( ( mutex_spi ), ( ( TickType_t ) 0xffffffffUL ) );
+
         switch (display_operation.operation) {
+
         case DISPLAY_TEXT:
             do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_print(&m_nrf_lcd, &display_operation.element.text.text_position, 1, display_operation.element.text.p_string, &orkney_8ptFontInfo, 
-# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
+# 140 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
            0
-# 141 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
-           )); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 141, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
+# 140 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
+           )); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 140, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
                                                                                         ;
-            write.content = "Text drawn.";
             break;
+
         case DISPLAY_POINT:
             nrf_gfx_point_draw(&m_nrf_lcd, &display_operation.element.point.point, 1);
-            write.content = "Point drawn.";
             break;
+
         case DISPLAY_LINE:
-            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_line_draw( &m_nrf_lcd, &display_operation.element.line.line, 1)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 150, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
+            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_line_draw( &m_nrf_lcd, &display_operation.element.line.line, 1)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 149, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
                                                                      ;
-            write.content = "Line drawn.";
             break;
+
         case DISPLAY_CIRCLE:
-            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_circle_draw( &m_nrf_lcd, &display_operation.element.circle.circle, 1, display_operation.element.circle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 155, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
+            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_circle_draw( &m_nrf_lcd, &display_operation.element.circle.circle, 1, display_operation.element.circle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 154, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
 
                                                           ;
-            write.content = "Circle.";
             break;
+
         case DISPLAY_RECTANGLE:
-            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_rect_draw( &m_nrf_lcd, &display_operation.element.rectangle.rectangle, display_operation.element.rectangle.thickness, display_operation.element.rectangle.color, display_operation.element.rectangle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 161, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
+            do { const uint32_t LOCAL_ERR_CODE = (nrf_gfx_rect_draw( &m_nrf_lcd, &display_operation.element.rectangle.rectangle, display_operation.element.rectangle.thickness, display_operation.element.rectangle.color, display_operation.element.rectangle.fill)); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 160, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"); } while (0); } } while (0)
 
 
                                                           ;
-            write.content = "Rectangle drawn.";
             break;
+
         case DISPLAY_LOG:
 
             break;
+
         case DISPLAY_CLEAR:
             nrf_gfx_screen_fill(&m_nrf_lcd, 0);
             break;
 
         default:
             if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "COMMAND WAS EMPTY"); } };
-            ;
+            break;
         }
+
         nrf_gfx_display(&m_nrf_lcd);
         xQueueGenericSend( ( QueueHandle_t ) ( mutex_spi ), 
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
+# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c" 3 4
        0
-# 179 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
+# 180 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\display.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
     }

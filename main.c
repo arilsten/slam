@@ -3,7 +3,9 @@
  * Author:	Johan Korsnes
  * Date:	2018
  *
- * Heavily modiefied by: Endre leithe 2019 As part of the Lego Robot Project  
+ * Heavily modiefied by: Endre leithe 2019 As part of the Lego Robot Project
+ *
+ * Modified by Arild Stenset in 2020
  *
  * Credits: The drivers in the project folder "drivers" are developed as part of
  *			the SLAM project. The code and FreeRTOS set-up is based on Nordic
@@ -66,6 +68,13 @@
 //#include "JLINK_MONITOR.h"
 //#include "ble_cleanup.h"
 
+
+/* ________ SETUP VARIABLES ________ */
+bool USEBLUETOOTH = false;		// For switching between nRF51 bluetooth dongle and NRF52840 Thread dongle
+bool newServer = false;			// For switching between Grindvik and Mullins' server versions
+bool validateWP = true;			// If false, all waypoints are processed. If true, waypoints inside collision sectors are discarded.
+
+
 /* DEFINING GLOBAL AND SHARED FLAG VARIABLES */
 TaskHandle_t handle_display_task,
     handle_user_task,
@@ -83,7 +92,7 @@ SemaphoreHandle_t xTickMutex;
 SemaphoreHandle_t xControllerBSem;
 SemaphoreHandle_t xCommandReadyBSem;
 SemaphoreHandle_t mutex_spi;
-SemaphoreHandle_t xCollisionMutex;
+//SemaphoreHandle_t xCollisionMutex;
 
 
 /* Queues */
@@ -96,8 +105,8 @@ QueueHandle_t queue_microsd = 0;
 uint8_t gHandshook = false;
 uint8_t gPaused = false;
 
-/* ________ SETUP VARIABLES ________ */
-uint8_t USEBLUETOOTH = false; //for switching between bluetooth and NRF52840 dongle
+
+
 
 // Global robot pose
 float gTheta_hat = 0; 
@@ -143,17 +152,12 @@ volatile int LeftMotorDirection = 1;
  
 static void user_task(void *arg) {
 
-/*TEMPLATE FOR WRITING TO MICROSD Card
-     microsd_write_operation_t write;
-    write.filename = "USR";
-    write.content = "writeTEST";
-     xQueueSendToBack(queue_microsd, &write, portMAX_DELAY);
- */
- 
-    //microsd_write_operation_t write;
-    // write.filename = "USR";
-    //write.content = "Startup\n";
-    //xQueueSendToBack(queue_microsd, &write, portMAX_DELAY);
+/*	Template for writing to microsd card. If logging faster than 400ms to sd card it can slow the robot down considerably.  
+    microsd_write_operation_t write;
+    write.filename = "Log.txt";			// Filename can be anything
+    write.content = "Starting slam application \n";
+    xQueueSendToBack(queue_microsd, &write, portMAX_DELAY);
+*/
 
     //initialization of modules should be done after FreeRtos startup
     taskENTER_CRITICAL();
@@ -173,12 +177,12 @@ static void user_task(void *arg) {
     
     char str1[20];
     char str2[20];
-    //char str3[20];
+    char str3[20];
     //char str4[20];
 	//char str5[20];
 	
-	int targetX = 100;
-	int targetY = 0;
+	int targetX = 0;
+	int targetY = 100;
 	bool sent = false;
 	bool testWaypoint = false;
 	
@@ -188,40 +192,19 @@ static void user_task(void *arg) {
         display_text_on_line(1, str1);
         sprintf(str2,"HEADING: %i",(int) ((gTheta_hat)*RAD2DEG));
         display_text_on_line(2, str2);
-	
-        //NRF_LOG_INFO("HEADING_MAIN: %i",(int)(gTheta_hat)*RAD2DEG);     //Fails with programcounter at 0x26555 or something
-        //encoderTicks tick = encoder_get_all_ticks();
-        //sprintf(str4,"el:%d,er:%d",(int)tick.left,(int)tick.right); //stuff written to debug shows up in NETBEANS output
-        //display_text_on_line(5,str4);
 		
-		// Test-function, sends targetX and targetY 1 minute after initialization.
+		// Test-function, sends targetX and targetY to controller time after initialization, used to test waypoints without server running.
 		if(testWaypoint){
 			int time = (xTaskGetTickCount()/1000);
-			NRF_LOG_INFO("Time: %i", (int)time);
+			//NRF_LOG_INFO("Time: %i", (int)time);
 		
-			if ((time > 60) && (sent == false)){
+			if ((time > 25) && (sent == false)){
 				struct sCartesian target = {targetX, targetY};
 				xQueueSend(poseControllerQ, &target, 100); //Sends target to poseControllerQ, which is received and handled by ControllerTask
 				sent = true;
 				time = 0;
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
     }
 }
@@ -308,23 +291,22 @@ int main(void) {
 	xTickMutex = xSemaphoreCreateMutex();       // Global variable to hold robot tick values
 	xControllerBSem = xSemaphoreCreateBinary(); // Estimator to Controller synchronization
 	xCommandReadyBSem = xSemaphoreCreateBinary();
-	xCollisionMutex = xSemaphoreCreateMutex();
+	//xCollisionMutex = xSemaphoreCreateMutex();
 	
     /*
 	stack size is usStackDepth * stack width (4)
 	for 100 we allocate 400Bytes.
 	*/
-
+	
     if (pdPASS != xTaskCreate(display_task, "DISP", 128, NULL, 1, &handle_display_task))
         APP_ERROR_HANDLER(NRF_ERROR_NO_MEM);
-    //
+    
     if (pdPASS != xTaskCreate(user_task, "USER", 128, NULL, 4, &handle_user_task)) //needs elevated priority because init functions
         APP_ERROR_HANDLER(NRF_ERROR_NO_MEM);
 
-    //	//microsd_task causes errors
     if (pdPASS != xTaskCreate(microsd_task, "SD", 256, NULL, 1, &handle_microsd_task))
         APP_ERROR_HANDLER(NRF_ERROR_NO_MEM);
-    
+   	
     if (pdPASS != xTaskCreate(vMainPoseEstimatorTask, "POSE", 256, NULL, 3, &pose_estimator_task))
         APP_ERROR_HANDLER(NRF_ERROR_NO_MEM);
 	

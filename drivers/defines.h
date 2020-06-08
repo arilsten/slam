@@ -15,7 +15,7 @@
 Some of these will be sent to server during the start-up-handshake   
 */
 
-#define WHEELBASE_MM				172  // Updated 30.03.2020 /* Length between wheel centers  */
+#define WHEELBASE_MM				169  // Updated 30.03.2020 /* Length between wheel centers  */
 #define ROBOT_TOTAL_WIDTH_MM		197  // Updated 30.03.2020 /* From outer rim to outer rim   */
 #define ROBOT_TOTAL_LENGTH_MM		230  /* From front to aft, total	     */
 #define ROBOT_AXEL_OFFSET_MM		0    /* From center of square	     */
@@ -27,8 +27,11 @@ Some of these will be sent to server during the start-up-handshake
 #define SENSOR2_HEADING_DEG			90
 #define SENSOR3_HEADING_DEG			180
 #define SENSOR4_HEADING_DEG			270
-#define WHEEL_CIRCUMFERENCE			228  // [mm] Updated 30.03.2020
-#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE/320.0)       /* 320 is a number found from experiments */ 
+
+/****** Wheels ******/
+#define WHEEL_DIAMETER_MM			68
+#define WHEEL_CIRCUMFERENCE_MM			214  // [mm] Updated 30.03.2020
+#define WHEEL_FACTOR_MM				(WHEEL_CIRCUMFERENCE_MM/297.0)       /* 297 [encoderticks/wheelrotation] = 11 [encoderticks/motorRotation] * 27 [gearboxRatio] */ 
 
 
 /************************************************************************/
