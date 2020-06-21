@@ -21,11 +21,15 @@
 #include "display.h"
 #include "math.h"
 
-int16_t collisionAngles[NUM_DIST_SENSORS] = {200}; // Just to be above 180 degrees
 
 message_t message_in;
 
 uint8_t counter = 0;
+
+/* Current position variables */
+float thetahat = 0;
+int16_t xhat = 0;
+int16_t yhat = 0;
 
 
 void vMainCommunicationTask(void *pvParameters){
@@ -111,7 +115,7 @@ void vMainCommunicationTask(void *pvParameters){
 			} 
 		}
 	}
-	else{ // If NRF52840 Dongle used with thread and C++ server
+	else{ // If USEBLUETOOTH = false, uses NRF52840 Dongle with thread and C++ server
 		uint8_t message[8] = {0};
 		int16_t oldwaypoint[2] = {0};
 		int16_t waypoint[2] = {0};
@@ -121,14 +125,14 @@ void vMainCommunicationTask(void *pvParameters){
 			i2cReciveNOADDR(I2C_DEVICE_DONGLE, &message, 8);
 			
 			if(newServer){
-				switch(message[1]){ // message[0] is the adress of the dongle
+				switch(message[1]){ // message[0] is the adress of the dongle, 0x72, if the received data is new
 			
-					case START_POSITION: //TODO Add an extra message type, ____update position_____
+					case START_POSITION: 
 					
 						if(xSemaphoreTake(xPoseMutex, 20) == pdTRUE){
 							gX_hat = *((int16_t*)&message[2]);
 							gY_hat = *((int16_t*)&message[4]);
-							gTheta_hat = *((int16_t*)&message[6])*DEG2RAD;
+							gTheta_hat = *((int16_t*)&message[6])*DEG2RAD; // Will maybe be unnecessary to implement
 							//TODO This may need some condition variables so the scanning and stuff dont start before this is received.
 							xSemaphoreGive(xPoseMutex);
 						}else{
@@ -141,40 +145,56 @@ void vMainCommunicationTask(void *pvParameters){
 					case NEW_WAYPOINT_NEW_SERVER:  
 						oldwaypoint[0] = waypoint[0];
 						oldwaypoint[1] = waypoint[1];
-						waypoint[0] = *((int16_t*)&message[2]); // Has to be message[2] for new server
-						waypoint[1] = *((int16_t*)&message[4]);	// Has to be message[4] for new server
-					
+						waypoint[0] = *((int16_t*)&message[2]); //WP_X in message[2] for new server
+						waypoint[1] = *((int16_t*)&message[4]);	//WP_Y ins message[4] for new server
+						
+						xSemaphoreTake(xPoseMutex, 20);
+						thetahat = gTheta_hat;
+						xhat = gX_hat;
+						yhat = gY_hat;
+						xSemaphoreGive(xPoseMutex);
+						
 						if(validateWP){
-							int16_t wpAngle = atan2(waypoint[1], waypoint[0])*RAD2DEG;
+							int16_t wpAngle = (atan2(waypoint[1]-yhat, waypoint[0]-xhat) - thetahat)*RAD2DEG;	// WpAngle in robot-frame
 							isValidWaypoint = validWaypoint(wpAngle);
 						}else{
 							isValidWaypoint = true;
 						}
 					
-						if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){ //Add the line that discardes the waypoint.
+						if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){ 
 							sendScanBorder(); // used to signalize that the robot has a new waypoint to the server.
 							struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
 							xQueueSend(poseControllerQ, &target, 100);
 						}
 						break;
-			
+						
+					case UPDATE_POSITION:
+						break;
 					default:
 					
 						break;
 				}
-			}else{ // There is only one message coming from the old server, which is a new waypoint
+			}else{ // There is only one message coming from the old C++ server, which is a new waypoint
 				oldwaypoint[0] = waypoint[0];
 				oldwaypoint[1] = waypoint[1];
 				waypoint[0] = *((int16_t*)&message[1]);
 				waypoint[1] = *((int16_t*)&message[3]);
 				
+				xSemaphoreTake(xPoseMutex, 20);
+				thetahat = gTheta_hat;
+				xhat = gX_hat;
+				yhat = gY_hat;
+				xSemaphoreGive(xPoseMutex);
+				
 				if(validateWP){
-					int16_t wpAngle = atan2(waypoint[1], waypoint[0])*RAD2DEG;
+					int16_t wpAngle = (atan2(waypoint[1]-yhat, waypoint[0]-xhat) - thetahat)*RAD2DEG;
 					isValidWaypoint = validWaypoint(wpAngle);
 				}else{
 					isValidWaypoint = true;
 				}
 				
+				
+			
 				if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){ //Add the line that discardes the waypoint.
 					sendScanBorder(); // used to signalize that the robot has a new waypoint to the server.
 					struct sCartesian target = {waypoint[0]/10, waypoint[1]/10};
@@ -182,7 +202,7 @@ void vMainCommunicationTask(void *pvParameters){
 				}
 			
 			}
-			vTaskDelay(100);
+			vTaskDelay(500);
 		}
 	}
 }

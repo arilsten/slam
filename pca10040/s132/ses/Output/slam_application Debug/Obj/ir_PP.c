@@ -6539,13 +6539,11 @@ uint16_t ir_read_blocking(IR_Sensor_t sensor) {
  nrfx_err_t err;
  uint8_t channel = sensor;
 
-
-
  static nrf_saadc_value_t val[4];
  int acc = 0;
  for (int i = 0; i < 4; i++) {
   err = nrfx_saadc_sample_convert(channel, val+i);
-                do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 161, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
+                do { const uint32_t LOCAL_ERR_CODE = (err); if (LOCAL_ERR_CODE != ((0x0) + 0)) { do { app_error_handler((LOCAL_ERR_CODE), 159, (uint8_t*) "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"); } while (0); } } while (0);
   acc += val[i];
 
  }
@@ -6560,9 +6558,9 @@ void ir_calibrate() {
 
  while(!calibration_completed) ;;
  calibration_completed = 
-# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
+# 173 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c" 3 4
                         0
-# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
+# 173 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\ir.c"
                              ;
 }
 
@@ -6581,6 +6579,7 @@ uint8_t IrAnalogToCM(uint16_t reading){
 }
 
 
+
 int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor){
 
     int16_t result = 0;
@@ -6592,10 +6591,10 @@ int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor){
     result = (int16_t) ceil( (548401.0*pow(reading,-1.137)));
     }
     if(sensor == IR_SENSOR_3){
-    result = (int16_t) ceil((219347*pow(reading,-1)));
+    result = (int16_t) ceil((206247.0*pow(reading,-0.995)));
     }
     if (sensor == IR_SENSOR_4){
-    result = (int16_t) ceil((206247.0*pow(reading,-0.995)));
+    result = (int16_t) ceil((219247.0*pow(reading,-1)));
     }
     return ((result) < (1000) ? (result) : (1000));
 }

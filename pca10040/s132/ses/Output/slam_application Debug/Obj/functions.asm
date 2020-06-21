@@ -1441,64 +1441,36 @@ checkForCollision:
 	.loc 1 253 24 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, lr}
+	push	{r3, lr}
 .LCFI28:
 	.loc 1 254 2 view .LVU387
-.LVL169:
-	.loc 1 255 2 view .LVU388
 .LBB8:
-	.loc 1 255 6 view .LVU389
-	.loc 1 255 10 is_stmt 0 view .LVU390
-	movs	r4, #0
-.LVL170:
-.L90:
-	.loc 1 255 17 is_stmt 1 discriminator 1 view .LVU391
-	.loc 1 255 2 is_stmt 0 discriminator 1 view .LVU392
-	cmp	r4, #3
-	bgt	.L95
-.LBB9:
-	.loc 1 256 3 is_stmt 1 view .LVU393
-	.loc 1 256 19 is_stmt 0 view .LVU394
-	mov	r0, r4
-	bl	ir_read_blocking
-.LVL171:
-	mov	r1, r4
-	bl	IrAnalogToMM
-.LVL172:
-	.loc 1 257 3 is_stmt 1 view .LVU395
-	.loc 1 257 5 is_stmt 0 view .LVU396
-	cmp	r0, #199
-	ble	.L93
-.LBE9:
-	.loc 1 255 24 is_stmt 1 discriminator 2 view .LVU397
-	.loc 1 255 25 is_stmt 0 discriminator 2 view .LVU398
-	adds	r4, r4, #1
-.LVL173:
-	.loc 1 255 25 discriminator 2 view .LVU399
-	b	.L90
-.LVL174:
-.L95:
-	.loc 1 255 25 discriminator 2 view .LVU400
-.LBE8:
-	.loc 1 261 8 view .LVU401
+	.loc 1 254 5 is_stmt 0 view .LVU388
 	movs	r0, #0
+	bl	ir_read_blocking
+.LVL169:
+	movs	r1, #0
+	bl	IrAnalogToMM
+.LVL170:
+	.loc 1 254 4 view .LVU389
+	cmp	r0, #249
+	ble	.L91
+.LBE8:
+	.loc 1 257 8 view .LVU390
+	movs	r0, #0
+.L90:
+	.loc 1 258 1 view .LVU391
+	pop	{r3, pc}
 .L91:
-	.loc 1 262 1 view .LVU402
-	pop	{r4, pc}
-.LVL175:
-.L93:
-.LBB11:
-.LBB10:
-	.loc 1 258 10 view .LVU403
+.LBB9:
+	.loc 1 255 9 view .LVU392
 	movs	r0, #1
-.LVL176:
-	.loc 1 258 10 view .LVU404
-	b	.L91
-.LBE10:
-.LBE11:
+	b	.L90
+.LBE9:
 .LFE280:
 	.size	checkForCollision, .-checkForCollision
 	.global	collisionPrinter
+	.global	collisionSectors
 	.global	lastTheta
 	.global	lastY
 	.global	lastX
@@ -1949,7 +1921,7 @@ collisionSectors:
 	.4byte	.LCFI28-.LFB280
 	.byte	0xe
 	.uleb128 0x8
-	.byte	0x84
+	.byte	0x83
 	.uleb128 0x2
 	.byte	0x8e
 	.uleb128 0x1
@@ -2889,16 +2861,16 @@ collisionSectors:
 	.file 17 "C:/Program Files (x86)/SEGGER/SEGGER Embedded Studio for ARM 4.50/include/math.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0xe6d
+	.4byte	0xe3b
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x17
-	.4byte	.LASF202
+	.4byte	.LASF201
 	.byte	0xc
+	.4byte	.LASF202
 	.4byte	.LASF203
-	.4byte	.LASF204
-	.4byte	.Ldebug_ranges0+0x48
+	.4byte	.Ldebug_ranges0+0x30
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.4byte	.Ldebug_macro0
@@ -3542,17 +3514,17 @@ collisionSectors:
 	.4byte	0xa0
 	.byte	0x7
 	.byte	0
-	.uleb128 0x20
-	.4byte	.LASF176
+	.uleb128 0x1f
+	.4byte	.LASF158
 	.byte	0x1
 	.byte	0x94
-	.byte	0x10
+	.byte	0x9
 	.4byte	0x4fb
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	collisionSectors
 	.uleb128 0x1f
-	.4byte	.LASF158
+	.4byte	.LASF159
 	.byte	0x1
 	.byte	0x95
 	.byte	0x9
@@ -3560,7 +3532,7 @@ collisionSectors:
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	collisionPrinter
-	.uleb128 0x21
+	.uleb128 0x20
 	.4byte	.LASF165
 	.byte	0x1
 	.byte	0xfd
@@ -3570,70 +3542,49 @@ collisionSectors:
 	.4byte	.LFE280-.LFB280
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5c6
-	.uleb128 0x22
-	.4byte	.LASF159
-	.byte	0x1
-	.byte	0xfe
-	.byte	0x6
-	.4byte	0x8d
-	.4byte	.LLST63
-	.4byte	.LVUS63
-	.uleb128 0x23
+	.4byte	0x596
+	.uleb128 0x21
 	.4byte	.Ldebug_ranges0+0x18
-	.uleb128 0x24
-	.ascii	"i\000"
-	.byte	0x1
-	.byte	0xff
-	.byte	0xa
-	.4byte	0x8d
-	.4byte	.LLST64
-	.4byte	.LVUS64
-	.uleb128 0x23
-	.4byte	.Ldebug_ranges0+0x30
-	.uleb128 0x25
+	.uleb128 0x22
 	.4byte	.LASF160
 	.byte	0x1
-	.2byte	0x100
-	.byte	0x13
+	.byte	0xfe
+	.byte	0x5
 	.4byte	0x8d
-	.4byte	0x58c
-	.uleb128 0x26
+	.4byte	0x560
+	.uleb128 0x23
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x22
 	.4byte	.LASF161
 	.byte	0x1
-	.2byte	0x100
-	.byte	0x20
+	.byte	0xfe
+	.byte	0x12
 	.4byte	0x8d
-	.4byte	0x59f
-	.uleb128 0x26
+	.4byte	0x572
+	.uleb128 0x23
 	.byte	0
-	.uleb128 0x27
-	.4byte	.LVL171
-	.4byte	0xe16
-	.4byte	0x5b3
-	.uleb128 0x28
+	.uleb128 0x24
+	.4byte	.LVL169
+	.4byte	0xde6
+	.4byte	0x585
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
+	.uleb128 0x1
+	.byte	0x30
 	.byte	0
-	.uleb128 0x29
-	.4byte	.LVL172
-	.4byte	0xe23
-	.uleb128 0x28
+	.uleb128 0x26
+	.4byte	.LVL170
+	.4byte	0xdf2
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
+	.uleb128 0x1
+	.byte	0x30
 	.byte	0
 	.byte	0
 	.byte	0
-	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x27
 	.4byte	.LASF170
 	.byte	0x1
 	.byte	0xd8
@@ -3643,8 +3594,8 @@ collisionSectors:
 	.4byte	.LFE279-.LFB279
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x653
-	.uleb128 0x2b
+	.4byte	0x623
+	.uleb128 0x28
 	.4byte	.LASF168
 	.byte	0x1
 	.byte	0xd8
@@ -3652,7 +3603,7 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST58
 	.4byte	.LVUS58
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF162
 	.byte	0x1
 	.byte	0xd9
@@ -3660,9 +3611,9 @@ collisionSectors:
 	.4byte	0x4a
 	.4byte	.LLST59
 	.4byte	.LVUS59
-	.uleb128 0x23
+	.uleb128 0x21
 	.4byte	.Ldebug_ranges0+0
-	.uleb128 0x24
+	.uleb128 0x2a
 	.ascii	"i\000"
 	.byte	0x1
 	.byte	0xdb
@@ -3670,10 +3621,10 @@ collisionSectors:
 	.4byte	0x8d
 	.4byte	.LLST60
 	.4byte	.LVUS60
-	.uleb128 0x2c
+	.uleb128 0x2b
 	.4byte	.LBB6
 	.4byte	.LBE6-.LBB6
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF163
 	.byte	0x1
 	.byte	0xde
@@ -3681,7 +3632,7 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST61
 	.4byte	.LVUS61
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF164
 	.byte	0x1
 	.byte	0xdf
@@ -3692,7 +3643,7 @@ collisionSectors:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.4byte	.LASF166
 	.byte	0x1
 	.byte	0xcb
@@ -3701,11 +3652,11 @@ collisionSectors:
 	.4byte	.LFE278-.LFB278
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x6bc
-	.uleb128 0x2c
+	.4byte	0x68c
+	.uleb128 0x2b
 	.4byte	.LBB4
 	.4byte	.LBE4-.LBB4
-	.uleb128 0x24
+	.uleb128 0x2a
 	.ascii	"i\000"
 	.byte	0x1
 	.byte	0xce
@@ -3713,33 +3664,33 @@ collisionSectors:
 	.4byte	0x8d
 	.4byte	.LLST57
 	.4byte	.LVUS57
-	.uleb128 0x27
+	.uleb128 0x24
 	.4byte	.LVL146
-	.4byte	0xe30
-	.4byte	0x6a1
-	.uleb128 0x28
+	.4byte	0xdfe
+	.4byte	0x671
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x26
 	.4byte	.LVL147
-	.4byte	0xe30
-	.uleb128 0x28
+	.4byte	0xdfe
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC1
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
@@ -3748,7 +3699,7 @@ collisionSectors:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.4byte	.LASF167
 	.byte	0x1
 	.byte	0xb6
@@ -3757,8 +3708,8 @@ collisionSectors:
 	.4byte	.LFE277-.LFB277
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x71d
-	.uleb128 0x2e
+	.4byte	0x6ed
+	.uleb128 0x2d
 	.4byte	.LASF175
 	.byte	0x1
 	.byte	0xb6
@@ -3766,7 +3717,7 @@ collisionSectors:
 	.4byte	0x62
 	.uleb128 0x1
 	.byte	0x50
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF169
 	.byte	0x1
 	.byte	0xb6
@@ -3774,7 +3725,7 @@ collisionSectors:
 	.4byte	0x4a
 	.4byte	.LLST54
 	.4byte	.LVUS54
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF164
 	.byte	0x1
 	.byte	0xb8
@@ -3782,7 +3733,7 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST55
 	.4byte	.LVUS55
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF163
 	.byte	0x1
 	.byte	0xb9
@@ -3791,7 +3742,7 @@ collisionSectors:
 	.4byte	.LLST56
 	.4byte	.LVUS56
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x27
 	.4byte	.LASF171
 	.byte	0x1
 	.byte	0xac
@@ -3801,8 +3752,8 @@ collisionSectors:
 	.4byte	.LFE276-.LFB276
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x774
-	.uleb128 0x2b
+	.4byte	0x744
+	.uleb128 0x28
 	.4byte	.LASF172
 	.byte	0x1
 	.byte	0xac
@@ -3810,7 +3761,7 @@ collisionSectors:
 	.4byte	0x4a
 	.4byte	.LLST51
 	.4byte	.LVUS51
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF169
 	.byte	0x1
 	.byte	0xac
@@ -3818,7 +3769,7 @@ collisionSectors:
 	.4byte	0x4a
 	.4byte	.LLST52
 	.4byte	.LVUS52
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF173
 	.byte	0x1
 	.byte	0xad
@@ -3827,7 +3778,7 @@ collisionSectors:
 	.4byte	.LLST53
 	.4byte	.LVUS53
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.4byte	.LASF174
 	.byte	0x1
 	.byte	0x97
@@ -3836,8 +3787,8 @@ collisionSectors:
 	.4byte	.LFE275-.LFB275
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x7db
-	.uleb128 0x2b
+	.4byte	0x7ab
+	.uleb128 0x28
 	.4byte	.LASF175
 	.byte	0x1
 	.byte	0x97
@@ -3845,7 +3796,7 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST47
 	.4byte	.LVUS47
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF169
 	.byte	0x1
 	.byte	0x97
@@ -3853,7 +3804,7 @@ collisionSectors:
 	.4byte	0x4a
 	.4byte	.LLST48
 	.4byte	.LVUS48
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF164
 	.byte	0x1
 	.byte	0x99
@@ -3861,7 +3812,7 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST49
 	.4byte	.LVUS49
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF163
 	.byte	0x1
 	.byte	0x9a
@@ -3870,8 +3821,8 @@ collisionSectors:
 	.4byte	.LLST50
 	.4byte	.LVUS50
 	.byte	0
-	.uleb128 0x2f
-	.4byte	.LASF205
+	.uleb128 0x2e
+	.4byte	.LASF204
 	.byte	0x1
 	.byte	0x8c
 	.byte	0x6
@@ -3879,16 +3830,16 @@ collisionSectors:
 	.4byte	.LFE274-.LFB274
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x829
-	.uleb128 0x30
-	.4byte	.LASF177
+	.4byte	0x7f9
+	.uleb128 0x2f
+	.4byte	.LASF176
 	.byte	0x1
 	.byte	0x8d
 	.byte	0xa
 	.4byte	0x4a
 	.byte	0x1
-	.uleb128 0x20
-	.4byte	.LASF178
+	.uleb128 0x30
+	.4byte	.LASF177
 	.byte	0x1
 	.byte	0x8e
 	.byte	0xa
@@ -3896,30 +3847,30 @@ collisionSectors:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
-	.uleb128 0x29
+	.uleb128 0x26
 	.4byte	.LVL111
-	.4byte	0xe3d
-	.uleb128 0x28
+	.4byte	0xe0b
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x72
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1
 	.byte	0x31
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
-	.4byte	.LASF179
+	.uleb128 0x2c
+	.4byte	.LASF178
 	.byte	0x1
 	.byte	0x74
 	.byte	0x6
@@ -3927,7 +3878,7 @@ collisionSectors:
 	.4byte	.LFE273-.LFB273
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x97c
+	.4byte	0x94c
 	.uleb128 0x31
 	.ascii	"x\000"
 	.byte	0x1
@@ -3944,15 +3895,15 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST39
 	.4byte	.LVUS39
-	.uleb128 0x2b
-	.4byte	.LASF180
+	.uleb128 0x28
+	.4byte	.LASF179
 	.byte	0x1
 	.byte	0x74
 	.byte	0x35
 	.4byte	0x29
 	.4byte	.LLST40
 	.4byte	.LVUS40
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF172
 	.byte	0x1
 	.byte	0x74
@@ -3960,49 +3911,49 @@ collisionSectors:
 	.4byte	0x37
 	.4byte	.LLST41
 	.4byte	.LVUS41
-	.uleb128 0x2b
-	.4byte	.LASF181
+	.uleb128 0x28
+	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x74
 	.byte	0x58
-	.4byte	0x97c
+	.4byte	0x94c
 	.4byte	.LLST42
 	.4byte	.LVUS42
-	.uleb128 0x30
-	.4byte	.LASF177
+	.uleb128 0x2f
+	.4byte	.LASF176
 	.byte	0x1
 	.byte	0x75
 	.byte	0xa
 	.4byte	0x4a
 	.byte	0x8
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF27
 	.byte	0x1
 	.byte	0x76
 	.byte	0xc
-	.4byte	0x982
+	.4byte	0x952
 	.4byte	.LLST43
 	.4byte	.LVUS43
-	.uleb128 0x22
-	.4byte	.LASF182
+	.uleb128 0x29
+	.4byte	.LASF181
 	.byte	0x1
 	.byte	0x77
 	.byte	0xd
 	.4byte	0x62
 	.4byte	.LLST44
 	.4byte	.LVUS44
-	.uleb128 0x22
-	.4byte	.LASF183
+	.uleb128 0x29
+	.4byte	.LASF182
 	.byte	0x1
 	.byte	0x78
 	.byte	0xd
 	.4byte	0x62
 	.4byte	.LLST45
 	.4byte	.LVUS45
-	.uleb128 0x2c
+	.uleb128 0x2b
 	.4byte	.LBB3
 	.4byte	.LBE3-.LBB3
-	.uleb128 0x24
+	.uleb128 0x2a
 	.ascii	"i\000"
 	.byte	0x1
 	.byte	0x7f
@@ -4010,17 +3961,17 @@ collisionSectors:
 	.4byte	0x8d
 	.4byte	.LLST46
 	.4byte	.LVUS46
-	.uleb128 0x27
+	.uleb128 0x24
 	.4byte	.LVL101
-	.4byte	0xcfb
-	.4byte	0x931
-	.uleb128 0x28
+	.4byte	0xccb
+	.4byte	0x901
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x2
 	.byte	0x90
 	.uleb128 0x40
@@ -4028,36 +3979,36 @@ collisionSectors:
 	.byte	0xf5
 	.uleb128 0x50
 	.uleb128 0x29
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x78
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x75
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2
 	.byte	0x7a
 	.sleb128 0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x24
 	.4byte	.LVL103
-	.4byte	0xbbd
-	.4byte	0x95f
-	.uleb128 0x28
+	.4byte	0xb8d
+	.4byte	0x92f
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x2
 	.byte	0x90
 	.uleb128 0x40
@@ -4065,41 +4016,41 @@ collisionSectors:
 	.byte	0xf5
 	.uleb128 0x50
 	.uleb128 0x29
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x78
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x75
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2
 	.byte	0x7a
 	.sleb128 0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x26
 	.4byte	.LVL106
-	.4byte	0xe3d
-	.uleb128 0x28
+	.4byte	0xe0b
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x72
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x7d
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1
@@ -4112,14 +4063,14 @@ collisionSectors:
 	.4byte	0x62
 	.uleb128 0xa
 	.4byte	0x37
-	.4byte	0x993
+	.4byte	0x963
 	.uleb128 0x32
 	.4byte	0xa0
 	.uleb128 0x1
 	.byte	0x37
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF184
+	.4byte	.LASF183
 	.byte	0x1
 	.byte	0x43
 	.byte	0x6
@@ -4127,7 +4078,7 @@ collisionSectors:
 	.4byte	.LFE272-.LFB272
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb24
+	.4byte	0xaf4
 	.uleb128 0x31
 	.ascii	"x\000"
 	.byte	0x1
@@ -4144,15 +4095,15 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST26
 	.4byte	.LVUS26
-	.uleb128 0x2b
-	.4byte	.LASF180
+	.uleb128 0x28
+	.4byte	.LASF179
 	.byte	0x1
 	.byte	0x43
 	.byte	0x35
 	.4byte	0x29
 	.4byte	.LLST27
 	.4byte	.LVUS27
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF172
 	.byte	0x1
 	.byte	0x43
@@ -4160,70 +4111,70 @@ collisionSectors:
 	.4byte	0x37
 	.4byte	.LLST28
 	.4byte	.LVUS28
-	.uleb128 0x2b
-	.4byte	.LASF181
+	.uleb128 0x28
+	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x43
 	.byte	0x58
-	.4byte	0x97c
+	.4byte	0x94c
 	.4byte	.LLST29
 	.4byte	.LVUS29
-	.uleb128 0x30
-	.4byte	.LASF185
+	.uleb128 0x2f
+	.4byte	.LASF184
 	.byte	0x1
 	.byte	0x44
 	.byte	0xa
 	.4byte	0x4a
 	.byte	0x2
-	.uleb128 0x30
-	.4byte	.LASF177
+	.uleb128 0x2f
+	.4byte	.LASF176
 	.byte	0x1
 	.byte	0x45
 	.byte	0xa
 	.4byte	0x4a
 	.byte	0x18
-	.uleb128 0x22
+	.uleb128 0x29
 	.4byte	.LASF27
 	.byte	0x1
 	.byte	0x46
 	.byte	0xc
-	.4byte	0xb24
+	.4byte	0xaf4
 	.4byte	.LLST30
 	.4byte	.LVUS30
-	.uleb128 0x22
-	.4byte	.LASF182
+	.uleb128 0x29
+	.4byte	.LASF181
 	.byte	0x1
 	.byte	0x47
 	.byte	0xd
 	.4byte	0x62
 	.4byte	.LLST31
 	.4byte	.LVUS31
-	.uleb128 0x22
-	.4byte	.LASF183
+	.uleb128 0x29
+	.4byte	.LASF182
 	.byte	0x1
 	.byte	0x48
 	.byte	0xd
 	.4byte	0x62
 	.4byte	.LLST32
 	.4byte	.LVUS32
-	.uleb128 0x22
-	.4byte	.LASF186
+	.uleb128 0x29
+	.4byte	.LASF185
 	.byte	0x1
 	.byte	0x49
 	.byte	0xa
 	.4byte	0x62
 	.4byte	.LLST33
 	.4byte	.LVUS33
-	.uleb128 0x22
-	.4byte	.LASF187
+	.uleb128 0x29
+	.4byte	.LASF186
 	.byte	0x1
 	.byte	0x4a
 	.byte	0xa
 	.4byte	0x62
 	.4byte	.LLST34
 	.4byte	.LVUS34
-	.uleb128 0x22
-	.4byte	.LASF188
+	.uleb128 0x29
+	.4byte	.LASF187
 	.byte	0x1
 	.byte	0x4b
 	.byte	0xa
@@ -4233,8 +4184,8 @@ collisionSectors:
 	.uleb128 0x34
 	.4byte	.LBB2
 	.4byte	.LBE2-.LBB2
-	.4byte	0xb07
-	.uleb128 0x24
+	.4byte	0xad7
+	.uleb128 0x2a
 	.ascii	"i\000"
 	.byte	0x1
 	.byte	0x5a
@@ -4242,11 +4193,11 @@ collisionSectors:
 	.4byte	0x8d
 	.4byte	.LLST36
 	.4byte	.LVUS36
-	.uleb128 0x27
+	.uleb128 0x24
 	.4byte	.LVL87
-	.4byte	0xc73
-	.4byte	0xae2
-	.uleb128 0x28
+	.4byte	0xc43
+	.4byte	0xab2
+	.uleb128 0x25
 	.uleb128 0x2
 	.byte	0x90
 	.uleb128 0x40
@@ -4254,29 +4205,29 @@ collisionSectors:
 	.byte	0xf5
 	.uleb128 0x50
 	.uleb128 0x29
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x75
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
 	.byte	0x78
 	.sleb128 0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x26
 	.4byte	.LVL89
-	.4byte	0xb35
-	.uleb128 0x28
+	.4byte	0xb05
+	.uleb128 0x25
 	.uleb128 0x2
 	.byte	0x90
 	.uleb128 0x40
@@ -4284,19 +4235,19 @@ collisionSectors:
 	.byte	0xf5
 	.uleb128 0x50
 	.uleb128 0x29
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x75
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
@@ -4304,22 +4255,22 @@ collisionSectors:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x26
 	.4byte	.LVL93
-	.4byte	0xe3d
-	.uleb128 0x28
+	.4byte	0xe0b
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x50
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x72
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -72
-	.uleb128 0x28
+	.uleb128 0x25
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1
@@ -4328,14 +4279,14 @@ collisionSectors:
 	.byte	0
 	.uleb128 0xa
 	.4byte	0x37
-	.4byte	0xb35
+	.4byte	0xb05
 	.uleb128 0x32
 	.4byte	0xa0
 	.uleb128 0x1
 	.byte	0x47
 	.byte	0
 	.uleb128 0x35
-	.4byte	.LASF189
+	.4byte	.LASF188
 	.byte	0x1
 	.byte	0x38
 	.byte	0x9
@@ -4344,16 +4295,16 @@ collisionSectors:
 	.4byte	.LFE271-.LFB271
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbbd
-	.uleb128 0x2b
-	.4byte	.LASF180
+	.4byte	0xb8d
+	.uleb128 0x28
+	.4byte	.LASF179
 	.byte	0x1
 	.byte	0x38
 	.byte	0x20
 	.4byte	0x29
 	.4byte	.LLST19
 	.4byte	.LVUS19
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF172
 	.byte	0x1
 	.byte	0x38
@@ -4361,24 +4312,24 @@ collisionSectors:
 	.4byte	0x37
 	.4byte	.LLST20
 	.4byte	.LVUS20
-	.uleb128 0x2b
-	.4byte	.LASF181
+	.uleb128 0x28
+	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x38
 	.byte	0x43
-	.4byte	0x97c
+	.4byte	0x94c
 	.4byte	.LLST21
 	.4byte	.LVUS21
-	.uleb128 0x2b
-	.4byte	.LASF190
+	.uleb128 0x28
+	.4byte	.LASF189
 	.byte	0x1
 	.byte	0x38
 	.byte	0x57
 	.4byte	0x4a
 	.4byte	.LLST22
 	.4byte	.LVUS22
-	.uleb128 0x22
-	.4byte	.LASF191
+	.uleb128 0x29
+	.4byte	.LASF190
 	.byte	0x1
 	.byte	0x39
 	.byte	0xd
@@ -4387,10 +4338,10 @@ collisionSectors:
 	.4byte	.LVUS23
 	.uleb128 0x36
 	.4byte	.LVL65
-	.4byte	0xe49
+	.4byte	0xe17
 	.byte	0
 	.uleb128 0x35
-	.4byte	.LASF192
+	.4byte	.LASF191
 	.byte	0x1
 	.byte	0x31
 	.byte	0x9
@@ -4399,7 +4350,7 @@ collisionSectors:
 	.4byte	.LFE270-.LFB270
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc73
+	.4byte	0xc43
 	.uleb128 0x31
 	.ascii	"y\000"
 	.byte	0x1
@@ -4408,15 +4359,15 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST13
 	.4byte	.LVUS13
-	.uleb128 0x2b
-	.4byte	.LASF180
+	.uleb128 0x28
+	.4byte	.LASF179
 	.byte	0x1
 	.byte	0x31
 	.byte	0x26
 	.4byte	0x29
 	.4byte	.LLST14
 	.4byte	.LVUS14
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF172
 	.byte	0x1
 	.byte	0x31
@@ -4424,35 +4375,35 @@ collisionSectors:
 	.4byte	0x37
 	.4byte	.LLST15
 	.4byte	.LVUS15
-	.uleb128 0x2b
-	.4byte	.LASF181
+	.uleb128 0x28
+	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x31
 	.byte	0x49
-	.4byte	0x97c
+	.4byte	0x94c
 	.4byte	.LLST16
 	.4byte	.LVUS16
-	.uleb128 0x2b
-	.4byte	.LASF190
+	.uleb128 0x28
+	.4byte	.LASF189
 	.byte	0x1
 	.byte	0x31
 	.byte	0x5d
 	.4byte	0x4a
 	.4byte	.LLST17
 	.4byte	.LVUS17
-	.uleb128 0x22
-	.4byte	.LASF191
+	.uleb128 0x29
+	.4byte	.LASF190
 	.byte	0x1
 	.byte	0x32
 	.byte	0xd
 	.4byte	0x62
 	.4byte	.LLST18
 	.4byte	.LVUS18
-	.uleb128 0x27
+	.uleb128 0x24
 	.4byte	.LVL46
-	.4byte	0xe56
-	.4byte	0xc69
-	.uleb128 0x28
+	.4byte	0xe24
+	.4byte	0xc39
+	.uleb128 0x25
 	.uleb128 0x8
 	.byte	0x90
 	.uleb128 0x40
@@ -4469,10 +4420,10 @@ collisionSectors:
 	.byte	0
 	.uleb128 0x36
 	.4byte	.LVL54
-	.4byte	0xe49
+	.4byte	0xe17
 	.byte	0
 	.uleb128 0x35
-	.4byte	.LASF193
+	.4byte	.LASF192
 	.byte	0x1
 	.byte	0x29
 	.byte	0x9
@@ -4481,16 +4432,16 @@ collisionSectors:
 	.4byte	.LFE269-.LFB269
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xcfb
-	.uleb128 0x2b
-	.4byte	.LASF180
+	.4byte	0xccb
+	.uleb128 0x28
+	.4byte	.LASF179
 	.byte	0x1
 	.byte	0x29
 	.byte	0x20
 	.4byte	0x29
 	.4byte	.LLST8
 	.4byte	.LVUS8
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF172
 	.byte	0x1
 	.byte	0x29
@@ -4498,24 +4449,24 @@ collisionSectors:
 	.4byte	0x37
 	.4byte	.LLST9
 	.4byte	.LVUS9
-	.uleb128 0x2b
-	.4byte	.LASF181
+	.uleb128 0x28
+	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x29
 	.byte	0x43
-	.4byte	0x97c
+	.4byte	0x94c
 	.4byte	.LLST10
 	.4byte	.LVUS10
-	.uleb128 0x2b
-	.4byte	.LASF190
+	.uleb128 0x28
+	.4byte	.LASF189
 	.byte	0x1
 	.byte	0x29
 	.byte	0x57
 	.4byte	0x4a
 	.4byte	.LLST11
 	.4byte	.LVUS11
-	.uleb128 0x22
-	.4byte	.LASF194
+	.uleb128 0x29
+	.4byte	.LASF193
 	.byte	0x1
 	.byte	0x2a
 	.byte	0xd
@@ -4524,10 +4475,10 @@ collisionSectors:
 	.4byte	.LVUS12
 	.uleb128 0x36
 	.4byte	.LVL38
-	.4byte	0xe56
+	.4byte	0xe24
 	.byte	0
 	.uleb128 0x35
-	.4byte	.LASF195
+	.4byte	.LASF194
 	.byte	0x1
 	.byte	0x22
 	.byte	0x9
@@ -4536,7 +4487,7 @@ collisionSectors:
 	.4byte	.LFE268-.LFB268
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xdb1
+	.4byte	0xd81
 	.uleb128 0x31
 	.ascii	"x\000"
 	.byte	0x1
@@ -4545,15 +4496,15 @@ collisionSectors:
 	.4byte	0x62
 	.4byte	.LLST2
 	.4byte	.LVUS2
-	.uleb128 0x2b
-	.4byte	.LASF180
+	.uleb128 0x28
+	.4byte	.LASF179
 	.byte	0x1
 	.byte	0x22
 	.byte	0x26
 	.4byte	0x29
 	.4byte	.LLST3
 	.4byte	.LVUS3
-	.uleb128 0x2b
+	.uleb128 0x28
 	.4byte	.LASF172
 	.byte	0x1
 	.byte	0x22
@@ -4561,35 +4512,35 @@ collisionSectors:
 	.4byte	0x37
 	.4byte	.LLST4
 	.4byte	.LVUS4
-	.uleb128 0x2b
-	.4byte	.LASF181
+	.uleb128 0x28
+	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x22
 	.byte	0x49
-	.4byte	0x97c
+	.4byte	0x94c
 	.4byte	.LLST5
 	.4byte	.LVUS5
-	.uleb128 0x2b
-	.4byte	.LASF190
+	.uleb128 0x28
+	.4byte	.LASF189
 	.byte	0x1
 	.byte	0x22
 	.byte	0x5d
 	.4byte	0x4a
 	.4byte	.LLST6
 	.4byte	.LVUS6
-	.uleb128 0x22
-	.4byte	.LASF194
+	.uleb128 0x29
+	.4byte	.LASF193
 	.byte	0x1
 	.byte	0x23
 	.byte	0xd
 	.4byte	0x62
 	.4byte	.LLST7
 	.4byte	.LVUS7
-	.uleb128 0x27
+	.uleb128 0x24
 	.4byte	.LVL19
-	.4byte	0xe56
-	.4byte	0xda7
-	.uleb128 0x28
+	.4byte	0xe24
+	.4byte	0xd77
+	.uleb128 0x25
 	.uleb128 0x8
 	.byte	0x90
 	.uleb128 0x40
@@ -4606,10 +4557,10 @@ collisionSectors:
 	.byte	0
 	.uleb128 0x36
 	.4byte	.LVL27
-	.4byte	0xe56
+	.4byte	0xe24
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF196
+	.4byte	.LASF195
 	.byte	0x1
 	.byte	0x14
 	.byte	0x6
@@ -4617,27 +4568,27 @@ collisionSectors:
 	.4byte	.LFE267-.LFB267
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe10
-	.uleb128 0x2b
-	.4byte	.LASF197
+	.4byte	0xde0
+	.uleb128 0x28
+	.4byte	.LASF196
 	.byte	0x1
 	.byte	0x14
 	.byte	0x1a
-	.4byte	0xe10
+	.4byte	0xde0
 	.4byte	.LLST0
 	.4byte	.LVUS0
-	.uleb128 0x22
-	.4byte	.LASF198
+	.uleb128 0x29
+	.4byte	.LASF197
 	.byte	0x1
 	.byte	0x15
 	.byte	0x8
 	.4byte	0x29
 	.4byte	.LLST1
 	.4byte	.LVUS1
-	.uleb128 0x29
+	.uleb128 0x26
 	.4byte	.LVL3
-	.4byte	0xe63
-	.uleb128 0x28
+	.4byte	0xe31
+	.uleb128 0x25
 	.uleb128 0x8
 	.byte	0x90
 	.uleb128 0x42
@@ -4662,23 +4613,23 @@ collisionSectors:
 	.4byte	.LASF161
 	.4byte	.LASF161
 	.byte	0x1
-	.2byte	0x100
-	.byte	0x20
+	.byte	0xfe
+	.byte	0x12
 	.uleb128 0x37
 	.4byte	.LASF160
 	.4byte	.LASF160
 	.byte	0x1
-	.2byte	0x100
-	.byte	0x13
-	.uleb128 0x37
-	.4byte	.LASF199
-	.4byte	.LASF199
+	.byte	0xfe
+	.byte	0x5
+	.uleb128 0x38
+	.4byte	.LASF198
+	.4byte	.LASF198
 	.byte	0xf
 	.2byte	0x1bf
 	.byte	0x6
-	.uleb128 0x38
-	.4byte	.LASF200
-	.4byte	.LASF200
+	.uleb128 0x37
+	.4byte	.LASF199
+	.4byte	.LASF199
 	.byte	0x10
 	.byte	0x10
 	.byte	0x6
@@ -4694,9 +4645,9 @@ collisionSectors:
 	.byte	0x11
 	.2byte	0x125
 	.byte	0x8
-	.uleb128 0x37
-	.4byte	.LASF201
-	.4byte	.LASF201
+	.uleb128 0x38
+	.4byte	.LASF200
+	.4byte	.LASF200
 	.byte	0x11
 	.2byte	0x2f3
 	.byte	0x8
@@ -5103,23 +5054,6 @@ collisionSectors:
 	.byte	0
 	.byte	0
 	.uleb128 0x20
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x21
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -5146,7 +5080,117 @@ collisionSectors:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+	.uleb128 0x21
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x55
+	.uleb128 0x17
+	.byte	0
+	.byte	0
 	.uleb128 0x22
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x23
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x24
+	.uleb128 0x4109
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x25
+	.uleb128 0x410a
+	.byte	0
+	.uleb128 0x2
+	.uleb128 0x18
+	.uleb128 0x2111
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x26
+	.uleb128 0x4109
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x27
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x28
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.uleb128 0x2137
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x29
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -5165,14 +5209,7 @@ collisionSectors:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x23
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x24
+	.uleb128 0x2a
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -5191,119 +5228,16 @@ collisionSectors:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x25
-	.uleb128 0x2e
+	.uleb128 0x2b
+	.uleb128 0xb
 	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x26
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x27
-	.uleb128 0x4109
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x28
-	.uleb128 0x410a
-	.byte	0
-	.uleb128 0x2
-	.uleb128 0x18
-	.uleb128 0x2111
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x29
-	.uleb128 0x4109
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x2a
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
 	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x2b
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.uleb128 0x2137
-	.uleb128 0x17
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x2d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -5330,7 +5264,7 @@ collisionSectors:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -5347,7 +5281,7 @@ collisionSectors:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -5370,6 +5304,23 @@ collisionSectors:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2f
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1c
+	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x30
@@ -5385,8 +5336,8 @@ collisionSectors:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x1c
-	.uleb128 0xb
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x31
@@ -5507,7 +5458,7 @@ collisionSectors:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
 	.byte	0
@@ -5526,7 +5477,7 @@ collisionSectors:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x39
 	.uleb128 0xb
 	.byte	0
@@ -5553,47 +5504,6 @@ collisionSectors:
 	.byte	0
 	.section	.debug_loc,"",%progbits
 .Ldebug_loc0:
-.LVUS63:
-	.uleb128 .LVU388
-	.uleb128 .LVU391
-	.uleb128 .LVU395
-	.uleb128 .LVU400
-	.uleb128 .LVU403
-	.uleb128 .LVU404
-.LLST63:
-	.4byte	.LVL169
-	.4byte	.LVL170
-	.2byte	0x4
-	.byte	0xa
-	.2byte	0x3e8
-	.byte	0x9f
-	.4byte	.LVL172
-	.4byte	.LVL174
-	.2byte	0x1
-	.byte	0x50
-	.4byte	.LVL175
-	.4byte	.LVL176
-	.2byte	0x1
-	.byte	0x50
-	.4byte	0
-	.4byte	0
-.LVUS64:
-	.uleb128 .LVU390
-	.uleb128 .LVU391
-	.uleb128 .LVU391
-	.uleb128 0
-.LLST64:
-	.4byte	.LVL169
-	.4byte	.LVL170
-	.2byte	0x2
-	.byte	0x30
-	.byte	0x9f
-	.4byte	.LVL170
-	.4byte	.LFE280
-	.2byte	0x1
-	.byte	0x54
-	.4byte	0
-	.4byte	0
 .LVUS58:
 	.uleb128 0
 	.uleb128 .LVU364
@@ -6901,7 +6811,7 @@ collisionSectors:
 	.4byte	0x2bd
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0xe71
+	.4byte	0xe3f
 	.4byte	0x2b
 	.ascii	"NRF_TWI_FREQ_100K\000"
 	.4byte	0x34
@@ -6936,42 +6846,42 @@ collisionSectors:
 	.ascii	"collisionCounter\000"
 	.4byte	0x52f
 	.ascii	"checkForCollision\000"
-	.4byte	0x579
+	.4byte	0x54e
 	.ascii	"IrAnalogToMM\000"
-	.4byte	0x58c
+	.4byte	0x560
 	.ascii	"ir_read_blocking\000"
-	.4byte	0x5c6
+	.4byte	0x596
 	.ascii	"validWaypoint\000"
-	.4byte	0x653
+	.4byte	0x623
 	.ascii	"printCollisionSectors\000"
-	.4byte	0x6bc
+	.4byte	0x68c
 	.ascii	"decreaseCollisionSector\000"
-	.4byte	0x71d
+	.4byte	0x6ed
 	.ascii	"getDetectionAngle\000"
-	.4byte	0x774
+	.4byte	0x744
 	.ascii	"increaseCollisionSector\000"
-	.4byte	0x7db
+	.4byte	0x7ab
 	.ascii	"sendScanBorder\000"
-	.4byte	0x829
+	.4byte	0x7f9
 	.ascii	"sendOldPoseMessage\000"
-	.4byte	0x993
+	.4byte	0x963
 	.ascii	"sendNewPoseMessage\000"
-	.4byte	0xb35
+	.4byte	0xb05
 	.ascii	"distObjectYlocal\000"
-	.4byte	0xbbd
+	.4byte	0xb8d
 	.ascii	"distObjectY\000"
-	.4byte	0xc73
+	.4byte	0xc43
 	.ascii	"distObjectXlocal\000"
-	.4byte	0xcfb
+	.4byte	0xccb
 	.ascii	"distObjectX\000"
-	.4byte	0xdb1
+	.4byte	0xd81
 	.ascii	"vFunc_Inf2pi\000"
 	.4byte	0
 	.section	.debug_pubtypes,"",%progbits
 	.4byte	0x224
 	.2byte	0x2
 	.4byte	.Ldebug_info0
-	.4byte	0xe71
+	.4byte	0xe3f
 	.4byte	0x43
 	.ascii	"signed char\000"
 	.4byte	0x37
@@ -7083,14 +6993,8 @@ collisionSectors:
 	.4byte	0
 	.4byte	.LBB8
 	.4byte	.LBE8
-	.4byte	.LBB11
-	.4byte	.LBE11
-	.4byte	0
-	.4byte	0
 	.4byte	.LBB9
 	.4byte	.LBE9
-	.4byte	.LBB10
-	.4byte	.LBE10
 	.4byte	0
 	.4byte	0
 	.4byte	.LFB267
@@ -7594,7 +7498,7 @@ collisionSectors:
 	.ascii	"p_cs_precedes\000"
 .LASF125:
 	.ascii	"handle_user_task\000"
-.LASF194:
+.LASF193:
 	.ascii	"xDist\000"
 .LASF98:
 	.ascii	"__RAL_data_utf8_minus\000"
@@ -7602,7 +7506,7 @@ collisionSectors:
 	.ascii	"gHandshook\000"
 .LASF84:
 	.ascii	"long long unsigned int\000"
-.LASF202:
+.LASF201:
 	.ascii	"GNU C99 9.2.1 20191025 (release) [ARM/arm-9-branch "
 	.ascii	"revision 277599] -fmessage-length=0 -mcpu=cortex-m4"
 	.ascii	" -mlittle-endian -mfloat-abi=hard -mfpu=fpv4-sp-d16"
@@ -7639,7 +7543,7 @@ collisionSectors:
 	.ascii	"signed char\000"
 .LASF174:
 	.ascii	"increaseCollisionSector\000"
-.LASF178:
+.LASF177:
 	.ascii	"scanBorderID\000"
 .LASF85:
 	.ascii	"__RAL_global_locale\000"
@@ -7653,13 +7557,13 @@ collisionSectors:
 	.ascii	"getDetectionAngle\000"
 .LASF35:
 	.ascii	"__towupper\000"
-.LASF189:
+.LASF188:
 	.ascii	"distObjectYlocal\000"
 .LASF130:
 	.ascii	"sensor_tower_task\000"
-.LASF177:
+.LASF176:
 	.ascii	"msgLength\000"
-.LASF199:
+.LASF198:
 	.ascii	"nrf_log_frontend_std_2\000"
 .LASF39:
 	.ascii	"long int\000"
@@ -7715,15 +7619,15 @@ collisionSectors:
 	.ascii	"lastY\000"
 .LASF4:
 	.ascii	"NRF_LOG_SEVERITY_NONE\000"
-.LASF200:
+.LASF199:
 	.ascii	"i2cSendNOADDR\000"
-.LASF176:
+.LASF158:
 	.ascii	"collisionSectors\000"
-.LASF183:
+.LASF182:
 	.ascii	"yObject\000"
 .LASF14:
 	.ascii	"unsigned int\000"
-.LASF186:
+.LASF185:
 	.ascii	"xDiff\000"
 .LASF60:
 	.ascii	"int_p_sep_by_space\000"
@@ -7757,7 +7661,7 @@ collisionSectors:
 	.ascii	"nrf_log_module_reduced_dynamic_data_t\000"
 .LASF107:
 	.ascii	"__StackLimit\000"
-.LASF158:
+.LASF159:
 	.ascii	"collisionPrinter\000"
 .LASF110:
 	.ascii	"nrf_nvic_state_t\000"
@@ -7771,17 +7675,17 @@ collisionSectors:
 	.ascii	"name\000"
 .LASF160:
 	.ascii	"IrAnalogToMM\000"
-.LASF204:
+.LASF203:
 	.ascii	"C:\\\\nRF5_SDK_15.0.0_a53641a\\\\examples\\\\ble_pe"
 	.ascii	"ripheral\\\\slam\\\\pca10040\\\\s132\\\\ses\000"
 .LASF169:
 	.ascii	"sensor\000"
-.LASF180:
+.LASF179:
 	.ascii	"theta\000"
-.LASF203:
+.LASF202:
 	.ascii	"C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripher"
 	.ascii	"al\\slam\\drivers\\functions.c\000"
-.LASF179:
+.LASF178:
 	.ascii	"sendOldPoseMessage\000"
 .LASF16:
 	.ascii	"__cr_flag\000"
@@ -7791,7 +7695,7 @@ collisionSectors:
 	.ascii	"stdout\000"
 .LASF173:
 	.ascii	"sensorAngle\000"
-.LASF196:
+.LASF195:
 	.ascii	"vFunc_Inf2pi\000"
 .LASF129:
 	.ascii	"communication_task\000"
@@ -7839,7 +7743,7 @@ collisionSectors:
 	.ascii	"gRight\000"
 .LASF75:
 	.ascii	"float\000"
-.LASF205:
+.LASF204:
 	.ascii	"sendScanBorder\000"
 .LASF73:
 	.ascii	"__state\000"
@@ -7869,7 +7773,7 @@ collisionSectors:
 	.ascii	"gTheta_hat\000"
 .LASF72:
 	.ascii	"__mbstate_s\000"
-.LASF191:
+.LASF190:
 	.ascii	"yDist\000"
 .LASF112:
 	.ascii	"FILE\000"
@@ -7887,11 +7791,11 @@ collisionSectors:
 	.ascii	"uint32_t\000"
 .LASF142:
 	.ascii	"gPaused\000"
-.LASF190:
+.LASF189:
 	.ascii	"sensorNumber\000"
 .LASF62:
 	.ascii	"int_p_sign_posn\000"
-.LASF193:
+.LASF192:
 	.ascii	"distObjectXlocal\000"
 .LASF123:
 	.ascii	"SemaphoreHandle_t\000"
@@ -7901,13 +7805,13 @@ collisionSectors:
 	.ascii	"poseControllerQ\000"
 .LASF53:
 	.ascii	"p_sep_by_space\000"
-.LASF197:
+.LASF196:
 	.ascii	"angle_in_radians\000"
 .LASF153:
 	.ascii	"m_nrf_log_app_logs_data_dynamic\000"
 .LASF163:
 	.ascii	"upperLimit\000"
-.LASF182:
+.LASF181:
 	.ascii	"xObject\000"
 .LASF9:
 	.ascii	"NRF_LOG_SEVERITY_INFO_RAW\000"
@@ -7919,7 +7823,7 @@ collisionSectors:
 	.ascii	"int8_t\000"
 .LASF152:
 	.ascii	"gLeftWheelTicks\000"
-.LASF201:
+.LASF200:
 	.ascii	"fmod\000"
 .LASF12:
 	.ascii	"NRF_TWI_FREQ_250K\000"
@@ -7931,7 +7835,7 @@ collisionSectors:
 	.ascii	"stderr\000"
 .LASF11:
 	.ascii	"NRF_TWI_FREQ_100K\000"
-.LASF181:
+.LASF180:
 	.ascii	"sensorData\000"
 .LASF92:
 	.ascii	"__RAL_c_locale_month_names\000"
@@ -7953,7 +7857,7 @@ collisionSectors:
 	.ascii	"validateWP\000"
 .LASF66:
 	.ascii	"month_names\000"
-.LASF188:
+.LASF187:
 	.ascii	"thetaDiff\000"
 .LASF136:
 	.ascii	"xCommandReadyBSem\000"
@@ -7961,13 +7865,11 @@ collisionSectors:
 	.ascii	"mutex_spi\000"
 .LASF61:
 	.ascii	"int_n_sep_by_space\000"
-.LASF159:
-	.ascii	"sensorReading\000"
 .LASF55:
 	.ascii	"n_sep_by_space\000"
 .LASF114:
 	.ascii	"__RAL_FILE\000"
-.LASF187:
+.LASF186:
 	.ascii	"yDiff\000"
 .LASF97:
 	.ascii	"__RAL_data_utf8_plus\000"
@@ -7975,18 +7877,18 @@ collisionSectors:
 	.ascii	"__RAL_c_locale_abbrev_month_names\000"
 .LASF45:
 	.ascii	"mon_decimal_point\000"
-.LASF184:
+.LASF183:
 	.ascii	"sendNewPoseMessage\000"
-.LASF195:
+.LASF194:
 	.ascii	"distObjectX\000"
-.LASF185:
+.LASF184:
 	.ascii	"scanMessageID\000"
-.LASF198:
+.LASF197:
 	.ascii	"result\000"
 .LASF40:
 	.ascii	"decimal_point\000"
 .LASF148:
 	.ascii	"gY_hat\000"
-.LASF192:
+.LASF191:
 	.ascii	"distObjectY\000"
 	.ident	"GCC: (GNU) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]"

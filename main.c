@@ -5,7 +5,7 @@
  *
  * Heavily modiefied by: Endre leithe 2019 As part of the Lego Robot Project
  *
- * Modified by Arild Stenset in 2020
+ * Modified by Arild Stenset spring 2020
  *
  * Credits: The drivers in the project folder "drivers" are developed as part of
  *			the SLAM project. The code and FreeRTOS set-up is based on Nordic
@@ -69,10 +69,10 @@
 //#include "ble_cleanup.h"
 
 
-/* ________ SETUP VARIABLES ________ */
+/* ________ Configuration Variables ________ */
 bool USEBLUETOOTH = false;		// For switching between nRF51 bluetooth dongle and NRF52840 Thread dongle
 bool newServer = false;			// For switching between Grindvik and Mullins' server versions
-bool validateWP = true;			// If false, all waypoints are processed. If true, waypoints inside collision sectors are discarded.
+bool validateWP = false;		// If false, all waypoints are processed. If true, waypoints inside collision sectors are discarded.
 
 
 /* DEFINING GLOBAL AND SHARED FLAG VARIABLES */
@@ -181,8 +181,8 @@ static void user_task(void *arg) {
     //char str4[20];
 	//char str5[20];
 	
-	int targetX = 0;
-	int targetY = 100;
+	int targetX = 50;
+	int targetY = 0;
 	bool sent = false;
 	bool testWaypoint = false;
 	
@@ -193,12 +193,17 @@ static void user_task(void *arg) {
         sprintf(str2,"HEADING: %i",(int) ((gTheta_hat)*RAD2DEG));
         display_text_on_line(2, str2);
 		
-		// Test-function, sends targetX and targetY to controller time after initialization, used to test waypoints without server running.
+		
+		
+		
+		
+		
+		// Test-function, sends targetX and targetY to controller some time after initialization, used to test waypoints without server running.
 		if(testWaypoint){
 			int time = (xTaskGetTickCount()/1000);
 			//NRF_LOG_INFO("Time: %i", (int)time);
 		
-			if ((time > 25) && (sent == false)){
+			if ((time > 40) && (sent == false)){
 				struct sCartesian target = {targetX, targetY};
 				xQueueSend(poseControllerQ, &target, 100); //Sends target to poseControllerQ, which is received and handled by ControllerTask
 				sent = true;
@@ -291,12 +296,12 @@ int main(void) {
 	xTickMutex = xSemaphoreCreateMutex();       // Global variable to hold robot tick values
 	xControllerBSem = xSemaphoreCreateBinary(); // Estimator to Controller synchronization
 	xCommandReadyBSem = xSemaphoreCreateBinary();
-	//xCollisionMutex = xSemaphoreCreateMutex();
 	
     /*
 	stack size is usStackDepth * stack width (4)
 	for 100 we allocate 400Bytes.
 	*/
+	
 	
     if (pdPASS != xTaskCreate(display_task, "DISP", 128, NULL, 1, &handle_display_task))
         APP_ERROR_HANDLER(NRF_ERROR_NO_MEM);

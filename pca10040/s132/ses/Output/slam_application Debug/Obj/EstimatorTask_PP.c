@@ -7303,9 +7303,9 @@ struct sCartesian {
 # 1 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.h" 1
 # 14 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\ControllerTask.h"
 void vMainPoseControllerTask(void *pvParameters);
-void runThetaController(float thetaDiff);
-void runDistanceController(float distanceError, float thetaError);
 float getThetaTarget(void);
+void runDistanceController(float distanceErr, float thetaErr, float thetaDer);
+void runThetaController(float thetaDiff);
 # 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 2
 
 int8_t gyroBiasGuard = 1;
@@ -7359,7 +7359,7 @@ _Bool
  float Z[7];
  kf_init(7,8);
 
- float gyroIntegral = 0;
+ float gyroSum = 0;
  float gyroLimit = 0.1;
 
  while (
@@ -7377,30 +7377,17 @@ _Bool
    int16_t rightWheelTicks = 0;
    float dRobot = 0;
    float dTheta = 0;
-# 92 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
-   if (xQueueReceive(scanStatusQ, &robotMovement, 15) == ( ( BaseType_t ) 1 )) {
-    switch (robotMovement) {
-    case 0:
-    case 1:
-    case 2:
-     xQueueSemaphoreTake( ( xTickMutex ), ( 15 ) );
-     leftWheelTicks = gLeftWheelTicks;
-     rightWheelTicks = gRightWheelTicks;
-     xQueueGenericSend( ( QueueHandle_t ) ( xTickMutex ), 
-# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
-    0
-# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
-    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
-     break;
-    case 3:
-    case 4:
-     leftWheelTicks = 0;
-     rightWheelTicks = 0;
-     break;
-    default:
-     break;
-    }
-   }
+
+
+
+   xQueueSemaphoreTake( ( xTickMutex ), ( 15 ) );
+   leftWheelTicks = gLeftWheelTicks;
+   rightWheelTicks = gRightWheelTicks;
+   xQueueGenericSend( ( QueueHandle_t ) ( xTickMutex ), 
+# 89 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
+  0
+# 89 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+  , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 
 
@@ -7424,17 +7411,17 @@ _Bool
      gyrZ = 0.0;
     }
    } else {
-    if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "No new data from IMU"); } };
+
     gyrZ = 0.0;
    }
 
 
-   gyroIntegral += gyrZ*
-# 139 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
-                       3.14159265358979323846 
-# 139 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
-                       / 180.0*(float)(40.0/1000.0);
-# 157 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+   gyroSum += gyrZ*
+# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
+                  3.14159265358979323846 
+# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+                  / 180.0*(float)(40.0/1000.0);
+# 136 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
    float cosTheta = cos(gTheta_hat);
    float sinTheta = sin(gTheta_hat);
 
@@ -7447,9 +7434,9 @@ _Bool
 
    Z[4]=dTheta*25.0;
    Z[5]=gyrZ*
-# 168 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
+# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
             3.14159265358979323846 
-# 168 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+# 147 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
             / 180.0;
    Z[6]=0;
 
@@ -7458,6 +7445,7 @@ _Bool
     Z[1]=0.0;
     Z[3]=0.0;
     accelXoffset += (accel.x/1000);
+
    }else{
 
     if(fabs(Z[5]-Z[4])>0.2*Z[5]){ kf_setEncoderVar(1);}
@@ -7471,43 +7459,26 @@ _Bool
 
 
    vFunc_Inf2pi(&(kf_state.heading));
-   vFunc_Inf2pi(&(gyroIntegral));
-
-   if(count > 40){
-
-    headingTime = (xTaskGetTickCount());
-    sprintf(str2, "%d, %d, %d", (int)(kf_state.heading*180.0 / 
-# 194 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
-                                                      3.14159265358979323846
-# 194 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
-                                                             ), (int)(gyroIntegral*180.0 / 
-# 194 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
-                                                                                   3.14159265358979323846
-# 194 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
-                                                                                          ), (int)(headingTime));
-    if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_1(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "%s", (uint32_t)(str2)); } };
-
-    count = 0;
-   }
-
+   vFunc_Inf2pi(&(gyroSum));
+# 182 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
    xQueueSemaphoreTake( ( xPoseMutex ), ( 15 ) );
-   gTheta_hat = gyroIntegral;
+   gTheta_hat = gyroSum;
    gX_hat = (int)(kf_state.x*1000);
    gY_hat = (int)(kf_state.y*1000);
    gLeft = dLeft;
    gRight = dRight;
    xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 206 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
+# 188 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
   0
-# 206 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+# 188 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
   , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
 
 
    xQueueGenericSend( ( QueueHandle_t ) ( xControllerBSem ), 
-# 210 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
+# 192 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
   0
-# 210 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+# 192 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
   , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 
   }else{
@@ -7556,9 +7527,9 @@ _Bool
 
     if(!USEBLUETOOTH){
      gHandshook = 
-# 257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
+# 239 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c" 3 4
                  1
-# 257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
+# 239 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\EstimatorTask.c"
                      ;
     }
    }

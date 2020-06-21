@@ -63,11 +63,11 @@ int16_t lastX = 0;
 int16_t lastY = 0;
 float lastTheta = 0;
 
-/* Arranges the message with robot positons, object positions and returns an array. Used from February 2020*/
+/* Arranges the message with robot positons, object positions and sends it. Used from February 2020*/
 void sendNewPoseMessage(int16_t x, int16_t y, float theta, int8_t servoAngle, int16_t* sensorData){
 	uint8_t scanMessageID = 2;
 	uint8_t msgLength = 24;
-    int8_t data[msgLength];  //TODO ADD the functionality that makes the robot send changes, not its position
+    int8_t data[msgLength];  
     int16_t xObject;
     int16_t yObject;
 	int16_t xDiff = x - lastX;
@@ -145,7 +145,7 @@ void sendScanBorder(){
 
 
 
-static int16_t collisionSectors[2*NUM_DIST_SENSORS] = {360, 360, 360, 360, 360, 360, 360, 360};
+int16_t collisionSectors[2*NUM_DIST_SENSORS] = {360, 360, 360, 360, 360, 360, 360, 360}; // 360 is chosen randomly, any number above 180 will probably work
 uint8_t collisionPrinter = 0;
 
 void increaseCollisionSector(int16_t angle, uint8_t sensor){
@@ -249,7 +249,16 @@ bool validWaypoint(int16_t waypointAngle){
 	return false;
 }
 
-/* Returns true if a collision is detected */
+/* Returns true if a collision at sensor 1 is detected */
+bool checkForCollision(){
+	if(IrAnalogToMM(ir_read_blocking(0), 0) < COLLISION_THRESHOLD_MM){
+		return true;
+	}
+	return false;
+}
+
+/* Same purpose as above, but checks all ir-sensors */
+/*
 bool checkForCollision(){
 	int sensorReading = 1000;
 	for(int i = 0; i < NUM_DIST_SENSORS; i++){
@@ -259,4 +268,4 @@ bool checkForCollision(){
 		}
 	}
 	return false;
-}
+}*/

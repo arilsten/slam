@@ -152,8 +152,6 @@ uint16_t ir_read_blocking(IR_Sensor_t sensor) {
 	nrfx_err_t err;
 	uint8_t channel = sensor;
 
-
-
 	static nrf_saadc_value_t val[N_SAMPLES];
 	int acc = 0;
 	for (int i = 0; i < N_SAMPLES; i++) {
@@ -190,6 +188,7 @@ uint8_t IrAnalogToCM(uint16_t reading){
 }
 
 //this is the best calibration
+// The calibration data for IR3 and IR4 has been switched compared to the data presented in Leithes Thesis.
 int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor){
     
     int16_t result = 0;
@@ -201,10 +200,27 @@ int16_t IrAnalogToMM(uint16_t reading, IR_Sensor_t sensor){
     result = (int16_t) ceil( (548401.0*pow(reading,-1.137)));
     }
     if(sensor == IR_SENSOR_3){
-    result = (int16_t) ceil((219347*pow(reading,-1)));
+    result = (int16_t) ceil((206247.0*pow(reading,-0.995)));
     }
     if (sensor == IR_SENSOR_4){
-    result = (int16_t) ceil((206247.0*pow(reading,-0.995)));
+    result = (int16_t) ceil((219247.0*pow(reading,-1)));
     }
     return MIN(result,1000);
 }
+
+/**/
+
+/*
+if(sensor == IR_SENSOR_1){
+    result = (int16_t) ceil((327138.0*pow(reading,-1.062)));
+    }
+    if (sensor == IR_SENSOR_2){
+    result = (int16_t) ceil( (444818.0*pow(reading,-1.1)));
+    }
+    if(sensor == IR_SENSOR_3){
+    result = (int16_t) ceil((313397.0*pow(reading,-1.046)));
+    }
+    if (sensor == IR_SENSOR_4){
+    result = (int16_t) ceil((649282.0*pow(reading,-1.154)));
+    }
+	*/

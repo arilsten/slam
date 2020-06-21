@@ -8586,7 +8586,7 @@ void sendScanBorder(){
 
 
 
-static int16_t collisionSectors[2*4] = {360, 360, 360, 360, 360, 360, 360, 360};
+int16_t collisionSectors[2*4] = {360, 360, 360, 360, 360, 360, 360, 360};
 uint8_t collisionPrinter = 0;
 
 void increaseCollisionSector(int16_t angle, uint8_t sensor){
@@ -8720,20 +8720,16 @@ _Bool
 _Bool 
 # 253 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
     checkForCollision(){
- int sensorReading = 1000;
- for(int i = 0; i < 4; i++){
-  sensorReading = IrAnalogToMM(ir_read_blocking(i), i);
-  if(sensorReading < 200){
-   return 
-# 258 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
-         1
-# 258 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
-             ;
-  }
+ if(IrAnalogToMM(ir_read_blocking(0), 0) < 250){
+  return 
+# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+        1
+# 255 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+            ;
  }
  return 
-# 261 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
+# 257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c" 3 4
        0
-# 261 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
+# 257 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\drivers\\functions.c"
             ;
 }

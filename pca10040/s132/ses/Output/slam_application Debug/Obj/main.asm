@@ -133,7 +133,7 @@ user_task:
 	movs	r0, #2
 	bl	display_text_on_line
 .LVL19:
-	.loc 1 197 3 view .LVU28
+	.loc 1 202 3 view .LVU28
 	b	.L2
 .L5:
 	.align	3
@@ -163,42 +163,42 @@ user_task:
 	.type	log_init, %function
 log_init:
 .LFB412:
-	.loc 1 221 28 view -0
+	.loc 1 226 28 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, lr}
 .LCFI2:
-	.loc 1 222 5 view .LVU30
-	.loc 1 222 27 is_stmt 0 view .LVU31
+	.loc 1 227 5 view .LVU30
+	.loc 1 227 27 is_stmt 0 view .LVU31
 	mov	r1, #32768
 	movs	r0, #0
 	bl	nrf_log_init
 .LVL20:
-	.loc 1 223 5 is_stmt 1 view .LVU32
+	.loc 1 228 5 is_stmt 1 view .LVU32
 .LBB2:
-	.loc 1 223 10 view .LVU33
-	.loc 1 223 54 view .LVU34
-	.loc 1 223 57 is_stmt 0 view .LVU35
+	.loc 1 228 10 view .LVU33
+	.loc 1 228 54 view .LVU34
+	.loc 1 228 57 is_stmt 0 view .LVU35
 	cbnz	r0, .L9
 .LVL21:
 .L6:
-	.loc 1 223 57 view .LVU36
+	.loc 1 228 57 view .LVU36
 .LBE2:
-	.loc 1 226 1 view .LVU37
+	.loc 1 231 1 view .LVU37
 	pop	{r3, pc}
 .LVL22:
 .L9:
 .LBB3:
-	.loc 1 223 91 is_stmt 1 discriminator 1 view .LVU38
-	.loc 1 223 96 discriminator 1 view .LVU39
+	.loc 1 228 91 is_stmt 1 discriminator 1 view .LVU38
+	.loc 1 228 96 discriminator 1 view .LVU39
 	ldr	r2, .L10
-	movs	r1, #223
+	movs	r1, #228
 	bl	app_error_handler
 .LVL23:
-	.loc 1 223 228 discriminator 1 view .LVU40
+	.loc 1 228 228 discriminator 1 view .LVU40
 .LBE3:
-	.loc 1 223 243 discriminator 1 view .LVU41
-	.loc 1 226 1 is_stmt 0 discriminator 1 view .LVU42
+	.loc 1 228 243 discriminator 1 view .LVU41
+	.loc 1 231 1 is_stmt 0 discriminator 1 view .LVU42
 	b	.L6
 .L11:
 	.align	2
@@ -316,7 +316,7 @@ vApplicationIdleHook:
 	.type	main, %function
 main:
 .LFB413:
-	.loc 1 228 16 view -0
+	.loc 1 233 16 view -0
 	@ Volatile: function does not return.
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
@@ -324,108 +324,108 @@ main:
 .LCFI4:
 	sub	sp, sp, #20
 .LCFI5:
-	.loc 1 230 4 view .LVU60
-	.loc 1 231 5 view .LVU61
+	.loc 1 235 4 view .LVU60
+	.loc 1 236 5 view .LVU61
 	bl	log_init
 .LVL28:
-	.loc 1 232 5 view .LVU62
+	.loc 1 237 5 view .LVU62
 	bl	clock_init
 .LVL29:
-	.loc 1 234 5 view .LVU63
+	.loc 1 239 5 view .LVU63
 	bl	ir_init
 .LVL30:
-	.loc 1 279 5 view .LVU64
+	.loc 1 284 5 view .LVU64
 	bl	BLE_init
 .LVL31:
-	.loc 1 280 5 view .LVU65
+	.loc 1 285 5 view .LVU65
 	bl	arq_init
 .LVL32:
-	.loc 1 283 2 view .LVU66
-	.loc 1 283 18 is_stmt 0 view .LVU67
+	.loc 1 288 2 view .LVU66
+	.loc 1 288 18 is_stmt 0 view .LVU67
 	movs	r2, #0
 	movs	r1, #20
 	movs	r0, #5
 	bl	xQueueGenericCreate
 .LVL33:
-	.loc 1 283 16 view .LVU68
+	.loc 1 288 16 view .LVU68
 	ldr	r3, .L40
 	str	r0, [r3]
-	.loc 1 284 2 is_stmt 1 view .LVU69
-	.loc 1 284 18 is_stmt 0 view .LVU70
+	.loc 1 289 2 is_stmt 1 view .LVU69
+	.loc 1 289 18 is_stmt 0 view .LVU70
 	movs	r2, #0
 	movs	r1, #8
 	movs	r0, #5
 	bl	xQueueGenericCreate
 .LVL34:
-	.loc 1 284 16 view .LVU71
+	.loc 1 289 16 view .LVU71
 	ldr	r3, .L40+4
 	str	r0, [r3]
-	.loc 1 285 2 is_stmt 1 view .LVU72
-	.loc 1 285 20 is_stmt 0 view .LVU73
+	.loc 1 290 2 is_stmt 1 view .LVU72
+	.loc 1 290 20 is_stmt 0 view .LVU73
 	movs	r2, #0
 	movs	r1, #8
 	movs	r0, #1
 	bl	xQueueGenericCreate
 .LVL35:
-	.loc 1 285 18 view .LVU74
+	.loc 1 290 18 view .LVU74
 	ldr	r3, .L40+8
 	str	r0, [r3]
-	.loc 1 286 2 is_stmt 1 view .LVU75
-	.loc 1 286 16 is_stmt 0 view .LVU76
+	.loc 1 291 2 is_stmt 1 view .LVU75
+	.loc 1 291 16 is_stmt 0 view .LVU76
 	movs	r2, #0
 	movs	r1, #1
 	mov	r0, r1
 	bl	xQueueGenericCreate
 .LVL36:
-	.loc 1 286 14 view .LVU77
+	.loc 1 291 14 view .LVU77
 	ldr	r3, .L40+12
 	str	r0, [r3]
-	.loc 1 289 2 is_stmt 1 view .LVU78
-	.loc 1 289 14 is_stmt 0 view .LVU79
+	.loc 1 294 2 is_stmt 1 view .LVU78
+	.loc 1 294 14 is_stmt 0 view .LVU79
 	movs	r0, #1
 	bl	xQueueCreateMutex
 .LVL37:
-	.loc 1 289 12 view .LVU80
+	.loc 1 294 12 view .LVU80
 	ldr	r3, .L40+16
 	str	r0, [r3]
-	.loc 1 290 2 is_stmt 1 view .LVU81
-	.loc 1 290 15 is_stmt 0 view .LVU82
+	.loc 1 295 2 is_stmt 1 view .LVU81
+	.loc 1 295 15 is_stmt 0 view .LVU82
 	movs	r0, #1
 	bl	xQueueCreateMutex
 .LVL38:
-	.loc 1 290 13 view .LVU83
+	.loc 1 295 13 view .LVU83
 	ldr	r3, .L40+20
 	str	r0, [r3]
-	.loc 1 291 2 is_stmt 1 view .LVU84
-	.loc 1 291 15 is_stmt 0 view .LVU85
+	.loc 1 296 2 is_stmt 1 view .LVU84
+	.loc 1 296 15 is_stmt 0 view .LVU85
 	movs	r0, #1
 	bl	xQueueCreateMutex
 .LVL39:
-	.loc 1 291 13 view .LVU86
+	.loc 1 296 13 view .LVU86
 	ldr	r3, .L40+24
 	str	r0, [r3]
-	.loc 1 292 2 is_stmt 1 view .LVU87
-	.loc 1 292 20 is_stmt 0 view .LVU88
+	.loc 1 297 2 is_stmt 1 view .LVU87
+	.loc 1 297 20 is_stmt 0 view .LVU88
 	movs	r2, #3
 	movs	r1, #0
 	movs	r0, #1
 	bl	xQueueGenericCreate
 .LVL40:
-	.loc 1 292 18 view .LVU89
+	.loc 1 297 18 view .LVU89
 	ldr	r3, .L40+28
 	str	r0, [r3]
-	.loc 1 293 2 is_stmt 1 view .LVU90
-	.loc 1 293 22 is_stmt 0 view .LVU91
+	.loc 1 298 2 is_stmt 1 view .LVU90
+	.loc 1 298 22 is_stmt 0 view .LVU91
 	movs	r2, #3
 	movs	r1, #0
 	movs	r0, #1
 	bl	xQueueGenericCreate
 .LVL41:
-	.loc 1 293 20 view .LVU92
+	.loc 1 298 20 view .LVU92
 	ldr	r3, .L40+32
 	str	r0, [r3]
-	.loc 1 301 5 is_stmt 1 view .LVU93
-	.loc 1 301 37 is_stmt 0 view .LVU94
+	.loc 1 306 5 is_stmt 1 view .LVU93
+	.loc 1 306 37 is_stmt 0 view .LVU94
 	ldr	r3, .L40+36
 	str	r3, [sp, #4]
 	movs	r3, #1
@@ -436,13 +436,13 @@ main:
 	ldr	r0, .L40+44
 	bl	xTaskCreate
 .LVL42:
-	.loc 1 301 8 view .LVU95
+	.loc 1 306 8 view .LVU95
 	cmp	r0, #1
 	bne	.L31
 .L20:
-	.loc 1 302 143 is_stmt 1 discriminator 1 view .LVU96
-	.loc 1 304 5 discriminator 1 view .LVU97
-	.loc 1 304 37 is_stmt 0 discriminator 1 view .LVU98
+	.loc 1 307 143 is_stmt 1 discriminator 1 view .LVU96
+	.loc 1 309 5 discriminator 1 view .LVU97
+	.loc 1 309 37 is_stmt 0 discriminator 1 view .LVU98
 	ldr	r3, .L40+48
 	str	r3, [sp, #4]
 	movs	r3, #4
@@ -453,13 +453,13 @@ main:
 	ldr	r0, .L40+56
 	bl	xTaskCreate
 .LVL43:
-	.loc 1 304 8 discriminator 1 view .LVU99
+	.loc 1 309 8 discriminator 1 view .LVU99
 	cmp	r0, #1
 	bne	.L32
 .L21:
-	.loc 1 305 143 is_stmt 1 discriminator 1 view .LVU100
-	.loc 1 307 5 discriminator 1 view .LVU101
-	.loc 1 307 37 is_stmt 0 discriminator 1 view .LVU102
+	.loc 1 310 143 is_stmt 1 discriminator 1 view .LVU100
+	.loc 1 312 5 discriminator 1 view .LVU101
+	.loc 1 312 37 is_stmt 0 discriminator 1 view .LVU102
 	ldr	r3, .L40+60
 	str	r3, [sp, #4]
 	movs	r3, #1
@@ -470,13 +470,13 @@ main:
 	ldr	r0, .L40+68
 	bl	xTaskCreate
 .LVL44:
-	.loc 1 307 8 discriminator 1 view .LVU103
+	.loc 1 312 8 discriminator 1 view .LVU103
 	cmp	r0, #1
 	bne	.L33
 .L22:
-	.loc 1 308 143 is_stmt 1 discriminator 1 view .LVU104
-	.loc 1 310 5 discriminator 1 view .LVU105
-	.loc 1 310 37 is_stmt 0 discriminator 1 view .LVU106
+	.loc 1 313 143 is_stmt 1 discriminator 1 view .LVU104
+	.loc 1 315 5 discriminator 1 view .LVU105
+	.loc 1 315 37 is_stmt 0 discriminator 1 view .LVU106
 	ldr	r3, .L40+72
 	str	r3, [sp, #4]
 	movs	r3, #3
@@ -487,13 +487,13 @@ main:
 	ldr	r0, .L40+80
 	bl	xTaskCreate
 .LVL45:
-	.loc 1 310 8 discriminator 1 view .LVU107
+	.loc 1 315 8 discriminator 1 view .LVU107
 	cmp	r0, #1
 	bne	.L34
 .L23:
-	.loc 1 311 143 is_stmt 1 discriminator 1 view .LVU108
-	.loc 1 313 5 discriminator 1 view .LVU109
-	.loc 1 313 37 is_stmt 0 discriminator 1 view .LVU110
+	.loc 1 316 143 is_stmt 1 discriminator 1 view .LVU108
+	.loc 1 318 5 discriminator 1 view .LVU109
+	.loc 1 318 37 is_stmt 0 discriminator 1 view .LVU110
 	ldr	r3, .L40+84
 	str	r3, [sp, #4]
 	movs	r3, #1
@@ -504,13 +504,13 @@ main:
 	ldr	r0, .L40+92
 	bl	xTaskCreate
 .LVL46:
-	.loc 1 313 8 discriminator 1 view .LVU111
+	.loc 1 318 8 discriminator 1 view .LVU111
 	cmp	r0, #1
 	bne	.L35
 .L24:
-	.loc 1 314 143 is_stmt 1 discriminator 1 view .LVU112
-	.loc 1 316 5 discriminator 1 view .LVU113
-	.loc 1 316 37 is_stmt 0 discriminator 1 view .LVU114
+	.loc 1 319 143 is_stmt 1 discriminator 1 view .LVU112
+	.loc 1 321 5 discriminator 1 view .LVU113
+	.loc 1 321 37 is_stmt 0 discriminator 1 view .LVU114
 	ldr	r3, .L40+96
 	str	r3, [sp, #4]
 	movs	r3, #1
@@ -521,13 +521,13 @@ main:
 	ldr	r0, .L40+104
 	bl	xTaskCreate
 .LVL47:
-	.loc 1 316 8 discriminator 1 view .LVU115
+	.loc 1 321 8 discriminator 1 view .LVU115
 	cmp	r0, #1
 	bne	.L36
 .L25:
-	.loc 1 317 137 is_stmt 1 discriminator 1 view .LVU116
-	.loc 1 319 2 discriminator 1 view .LVU117
-	.loc 1 319 34 is_stmt 0 discriminator 1 view .LVU118
+	.loc 1 322 137 is_stmt 1 discriminator 1 view .LVU116
+	.loc 1 324 2 discriminator 1 view .LVU117
+	.loc 1 324 34 is_stmt 0 discriminator 1 view .LVU118
 	ldr	r3, .L40+108
 	str	r3, [sp, #4]
 	movs	r3, #1
@@ -538,114 +538,114 @@ main:
 	ldr	r0, .L40+116
 	bl	xTaskCreate
 .LVL48:
-	.loc 1 319 5 discriminator 1 view .LVU119
+	.loc 1 324 5 discriminator 1 view .LVU119
 	cmp	r0, #1
 	bne	.L37
 .L26:
-	.loc 1 320 147 is_stmt 1 discriminator 1 view .LVU120
-	.loc 1 323 5 discriminator 1 view .LVU121
-	.loc 1 323 9 is_stmt 0 discriminator 1 view .LVU122
+	.loc 1 325 147 is_stmt 1 discriminator 1 view .LVU120
+	.loc 1 328 5 discriminator 1 view .LVU121
+	.loc 1 328 9 is_stmt 0 discriminator 1 view .LVU122
 	ldr	r3, .L40+120
 	ldrb	r3, [r3]	@ zero_extendqisi2
-	.loc 1 323 8 discriminator 1 view .LVU123
+	.loc 1 328 8 discriminator 1 view .LVU123
 	cmp	r3, #0
 	bne	.L38
 .L27:
-	.loc 1 333 5 is_stmt 1 discriminator 3 view .LVU124
-	.loc 1 333 78 discriminator 3 view .LVU125
-	.loc 1 333 133 discriminator 3 view .LVU126
-	.loc 1 333 214 is_stmt 0 discriminator 3 view .LVU127
+	.loc 1 338 5 is_stmt 1 discriminator 3 view .LVU124
+	.loc 1 338 78 discriminator 3 view .LVU125
+	.loc 1 338 133 discriminator 3 view .LVU126
+	.loc 1 338 214 is_stmt 0 discriminator 3 view .LVU127
 	ldr	r3, .L40+124
 	ldrh	r0, [r3]
-	.loc 1 333 225 discriminator 3 view .LVU128
+	.loc 1 338 225 discriminator 3 view .LVU128
 	lsls	r0, r0, #16
-	.loc 1 333 133 discriminator 3 view .LVU129
+	.loc 1 338 133 discriminator 3 view .LVU129
 	ldr	r1, .L40+128
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL49:
-	.loc 1 333 297 is_stmt 1 discriminator 3 view .LVU130
-	.loc 1 335 5 discriminator 3 view .LVU131
+	.loc 1 338 297 is_stmt 1 discriminator 3 view .LVU130
+	.loc 1 340 5 discriminator 3 view .LVU131
 	bl	vTaskStartScheduler
 .LVL50:
 .L29:
-	.loc 1 337 5 discriminator 1 view .LVU132
-	.loc 1 343 9 discriminator 1 view .LVU133
-	.loc 1 343 14 discriminator 1 view .LVU134
+	.loc 1 342 5 discriminator 1 view .LVU132
+	.loc 1 348 9 discriminator 1 view .LVU133
+	.loc 1 348 14 discriminator 1 view .LVU134
 	ldr	r2, .L40+132
-	movw	r1, #343
+	mov	r1, #348
 	movs	r0, #15
 	bl	app_error_handler
 .LVL51:
-	.loc 1 343 144 discriminator 1 view .LVU135
-	.loc 1 337 11 discriminator 1 view .LVU136
+	.loc 1 348 144 discriminator 1 view .LVU135
+	.loc 1 342 11 discriminator 1 view .LVU136
 	b	.L29
 .L31:
-	.loc 1 302 9 view .LVU137
-	.loc 1 302 14 view .LVU138
+	.loc 1 307 9 view .LVU137
+	.loc 1 307 14 view .LVU138
 	ldr	r2, .L40+132
-	mov	r1, #302
+	movw	r1, #307
 	movs	r0, #4
 	bl	app_error_handler
 .LVL52:
 	b	.L20
 .L32:
-	.loc 1 305 9 view .LVU139
-	.loc 1 305 14 view .LVU140
+	.loc 1 310 9 view .LVU139
+	.loc 1 310 14 view .LVU140
 	ldr	r2, .L40+132
-	movw	r1, #305
+	mov	r1, #310
 	movs	r0, #4
 	bl	app_error_handler
 .LVL53:
 	b	.L21
 .L33:
-	.loc 1 308 9 view .LVU141
-	.loc 1 308 14 view .LVU142
+	.loc 1 313 9 view .LVU141
+	.loc 1 313 14 view .LVU142
 	ldr	r2, .L40+132
-	mov	r1, #308
+	movw	r1, #313
 	movs	r0, #4
 	bl	app_error_handler
 .LVL54:
 	b	.L22
 .L34:
-	.loc 1 311 9 view .LVU143
-	.loc 1 311 14 view .LVU144
+	.loc 1 316 9 view .LVU143
+	.loc 1 316 14 view .LVU144
 	ldr	r2, .L40+132
-	movw	r1, #311
+	mov	r1, #316
 	movs	r0, #4
 	bl	app_error_handler
 .LVL55:
 	b	.L23
 .L35:
-	.loc 1 314 9 view .LVU145
-	.loc 1 314 14 view .LVU146
+	.loc 1 319 9 view .LVU145
+	.loc 1 319 14 view .LVU146
 	ldr	r2, .L40+132
-	mov	r1, #314
+	movw	r1, #319
 	movs	r0, #4
 	bl	app_error_handler
 .LVL56:
 	b	.L24
 .L36:
-	.loc 1 317 3 view .LVU147
-	.loc 1 317 8 view .LVU148
+	.loc 1 322 3 view .LVU147
+	.loc 1 322 8 view .LVU148
 	ldr	r2, .L40+132
-	movw	r1, #317
+	mov	r1, #322
 	movs	r0, #4
 	bl	app_error_handler
 .LVL57:
 	b	.L25
 .L37:
-	.loc 1 320 13 view .LVU149
-	.loc 1 320 18 view .LVU150
+	.loc 1 325 13 view .LVU149
+	.loc 1 325 18 view .LVU150
 	ldr	r2, .L40+132
-	mov	r1, #320
+	movw	r1, #325
 	movs	r0, #4
 	bl	app_error_handler
 .LVL58:
 	b	.L26
 .L38:
-	.loc 1 324 9 view .LVU151
-	.loc 1 324 40 is_stmt 0 view .LVU152
+	.loc 1 329 9 view .LVU151
+	.loc 1 329 40 is_stmt 0 view .LVU152
 	ldr	r3, .L40+136
 	str	r3, [sp, #4]
 	movs	r3, #2
@@ -656,40 +656,40 @@ main:
 	ldr	r0, .L40+144
 	bl	xTaskCreate
 .LVL59:
-	.loc 1 324 11 view .LVU153
+	.loc 1 329 11 view .LVU153
 	cmp	r0, #1
 	bne	.L39
 .L28:
-	.loc 1 326 147 is_stmt 1 discriminator 1 view .LVU154
-	.loc 1 328 9 discriminator 1 view .LVU155
+	.loc 1 331 147 is_stmt 1 discriminator 1 view .LVU154
+	.loc 1 333 9 discriminator 1 view .LVU155
 	ldr	r3, .L40+136
 	ldr	r0, [r3]
 	bl	vTaskSuspend
 .LVL60:
-	.loc 1 331 9 discriminator 1 view .LVU156
+	.loc 1 336 9 discriminator 1 view .LVU156
 	add	r1, sp, #15
 	ldr	r0, .L40+148
 	bl	nrf_sdh_freertos_init
 .LVL61:
 	b	.L27
 .L39:
-	.loc 1 325 13 discriminator 2 view .LVU157
-	.loc 1 325 86 discriminator 2 view .LVU158
-	.loc 1 325 141 discriminator 2 view .LVU159
-	.loc 1 325 222 is_stmt 0 discriminator 2 view .LVU160
+	.loc 1 330 13 discriminator 2 view .LVU157
+	.loc 1 330 86 discriminator 2 view .LVU158
+	.loc 1 330 141 discriminator 2 view .LVU159
+	.loc 1 330 222 is_stmt 0 discriminator 2 view .LVU160
 	ldr	r3, .L40+124
 	ldrh	r0, [r3]
-	.loc 1 325 233 discriminator 2 view .LVU161
+	.loc 1 330 233 discriminator 2 view .LVU161
 	lsls	r0, r0, #16
-	.loc 1 325 141 discriminator 2 view .LVU162
+	.loc 1 330 141 discriminator 2 view .LVU162
 	ldr	r1, .L40+152
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL62:
-	.loc 1 326 13 is_stmt 1 discriminator 2 view .LVU163
-	.loc 1 326 18 discriminator 2 view .LVU164
+	.loc 1 331 13 is_stmt 1 discriminator 2 view .LVU163
+	.loc 1 331 18 discriminator 2 view .LVU164
 	ldr	r2, .L40+132
-	mov	r1, #326
+	movw	r1, #331
 	movs	r0, #4
 	bl	app_error_handler
 .LVL63:
@@ -925,6 +925,11 @@ sensor_tower_task:
 	.size	shared_SPI_init, 1
 shared_SPI_init:
 	.space	1
+	.section	.bss.validateWP,"aw",%nobits
+	.type	validateWP, %object
+	.size	validateWP, 1
+validateWP:
+	.space	1
 	.section	.bss.xCommandReadyBSem,"aw",%nobits
 	.align	2
 	.set	.LANCHOR11,. + 0
@@ -971,11 +976,6 @@ LeftMotorDirection:
 	.size	RightMotorDirection, 4
 RightMotorDirection:
 	.word	1
-	.section	.data.validateWP,"aw"
-	.type	validateWP, %object
-	.size	validateWP, 1
-validateWP:
-	.byte	1
 	.section	.debug_frame,"",%progbits
 .Lframe0:
 	.4byte	.LECIE0-.LSCIE0
@@ -3522,7 +3522,7 @@ validateWP:
 	.uleb128 0x26
 	.4byte	.LASF236
 	.byte	0x1
-	.byte	0xe4
+	.byte	0xe9
 	.byte	0x5
 	.4byte	0x2b
 	.4byte	.LFB413
@@ -3533,7 +3533,7 @@ validateWP:
 	.uleb128 0x27
 	.4byte	.LASF194
 	.byte	0x1
-	.byte	0xe6
+	.byte	0xeb
 	.byte	0x9
 	.4byte	0x334
 	.uleb128 0x2
@@ -3983,7 +3983,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x157
+	.2byte	0x15c
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4005,7 +4005,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x12e
+	.2byte	0x133
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4027,7 +4027,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x131
+	.2byte	0x136
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4049,7 +4049,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x134
+	.2byte	0x139
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4071,7 +4071,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x137
+	.2byte	0x13c
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4093,7 +4093,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x13a
+	.2byte	0x13f
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4115,7 +4115,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x13d
+	.2byte	0x142
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4137,7 +4137,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x140
+	.2byte	0x145
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4218,7 +4218,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x146
+	.2byte	0x14b
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4230,7 +4230,7 @@ validateWP:
 	.uleb128 0x2c
 	.4byte	.LASF197
 	.byte	0x1
-	.byte	0xdd
+	.byte	0xe2
 	.byte	0xd
 	.4byte	.LFB412
 	.4byte	.LFE412-.LFB412
@@ -4240,7 +4240,7 @@ validateWP:
 	.uleb128 0x2d
 	.4byte	.LASF195
 	.byte	0x1
-	.byte	0xde
+	.byte	0xe3
 	.byte	0x10
 	.4byte	0x2c2
 	.4byte	.LLST1
@@ -4251,7 +4251,7 @@ validateWP:
 	.uleb128 0x2d
 	.4byte	.LASF196
 	.byte	0x1
-	.byte	0xdf
+	.byte	0xe4
 	.byte	0x19
 	.4byte	0x23b
 	.4byte	.LLST2
@@ -4264,7 +4264,7 @@ validateWP:
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x8
-	.byte	0xdf
+	.byte	0xe4
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52
@@ -4337,14 +4337,14 @@ validateWP:
 	.byte	0xb8
 	.byte	0x6
 	.4byte	0x2b
-	.byte	0
+	.byte	0x32
 	.uleb128 0x32
 	.4byte	.LASF202
 	.byte	0x1
 	.byte	0xb9
 	.byte	0x6
 	.4byte	0x2b
-	.byte	0x64
+	.byte	0
 	.uleb128 0x32
 	.4byte	.LASF203
 	.byte	0x1
@@ -4364,14 +4364,14 @@ validateWP:
 	.uleb128 0x31
 	.4byte	.LASF206
 	.byte	0x1
-	.byte	0xc6
+	.byte	0xcb
 	.byte	0x8
 	.4byte	0x2b
 	.uleb128 0x34
 	.uleb128 0x35
 	.4byte	.LASF207
 	.byte	0x1
-	.byte	0xca
+	.byte	0xcf
 	.byte	0x17
 	.byte	0x98
 	.byte	0x37

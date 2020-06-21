@@ -8855,12 +8855,16 @@ double trunc(double __x);
 # 23 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 2
 
 
-# 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
-int16_t collisionAngles[4] = {200};
 
+# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
 message_t message_in;
 
 uint8_t counter = 0;
+
+
+float thetahat = 0;
+int16_t xhat = 0;
+int16_t yhat = 0;
 
 
 void vMainCommunicationTask(void *pvParameters){
@@ -8897,9 +8901,9 @@ void vMainCommunicationTask(void *pvParameters){
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "MESSAGE WAS: TYPE_CONFIRM"); } };
 
      gHandshook = 
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                  1
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 68 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                      ;
 
 
@@ -8923,9 +8927,9 @@ void vMainCommunicationTask(void *pvParameters){
 
 
      gPaused = 
-# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 90 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
               1
-# 86 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 90 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                   ;
 
 
@@ -8938,9 +8942,9 @@ void vMainCommunicationTask(void *pvParameters){
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "MESSAGE WAS: TYPE_UNPAUSE"); } };
 
      gPaused = 
-# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
               0
-# 97 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 101 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                    ;
 
      break;
@@ -8949,9 +8953,9 @@ void vMainCommunicationTask(void *pvParameters){
      if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "MESSAGE WAS: TYPE_FINISH"); } };
 
      gHandshook = 
-# 104 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                  0
-# 104 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 108 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                       ;
 
      break;
@@ -8967,15 +8971,15 @@ void vMainCommunicationTask(void *pvParameters){
   int16_t oldwaypoint[2] = {0};
   int16_t waypoint[2] = {0};
   
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 122 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
  _Bool 
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 122 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
       isValidWaypoint;
 
   while(
-# 120 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
        1
-# 120 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 124 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
            ){
    i2cReciveNOADDR(0x72, &message, 8);
 
@@ -8988,15 +8992,15 @@ void vMainCommunicationTask(void *pvParameters){
        gX_hat = *((int16_t*)&message[2]);
        gY_hat = *((int16_t*)&message[4]);
        gTheta_hat = *((int16_t*)&message[6])*
-# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 135 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                                             3.14159265358979323846 
-# 131 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 135 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                                             / 180.0;
 
        xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 133 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
       0
-# 133 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 137 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
       , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
       }else{
        if (1 && (3 >= NRF_LOG_SEVERITY_INFO) && (NRF_LOG_SEVERITY_INFO <= 3)) { if (NRF_LOG_SEVERITY_DEBUG >= NRF_LOG_SEVERITY_INFO) { nrf_log_frontend_std_0(((NRF_LOG_SEVERITY_INFO) | m_nrf_log_app_logs_data_dynamic.module_id << 16), "xPoseMutex not available!"); } };
@@ -9011,18 +9015,28 @@ void vMainCommunicationTask(void *pvParameters){
       waypoint[0] = *((int16_t*)&message[2]);
       waypoint[1] = *((int16_t*)&message[4]);
 
+      xQueueSemaphoreTake( ( xPoseMutex ), ( 20 ) );
+      thetahat = gTheta_hat;
+      xhat = gX_hat;
+      yhat = gY_hat;
+      xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
+# 155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+     0
+# 155 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+     , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
+
       if(validateWP){
-       int16_t wpAngle = atan2(waypoint[1], waypoint[0])*180.0 / 
-# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
-                                                        3.14159265358979323846
-# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
-                                                               ;
+       int16_t wpAngle = (atan2(waypoint[1]-yhat, waypoint[0]-xhat) - thetahat)*180.0 / 
+# 158 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                                                                               3.14159265358979323846
+# 158 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                                                                                      ;
        isValidWaypoint = validWaypoint(wpAngle);
       }else{
        isValidWaypoint = 
-# 151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 161 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                         1
-# 151 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 161 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                             ;
       }
 
@@ -9033,6 +9047,8 @@ void vMainCommunicationTask(void *pvParameters){
       }
       break;
 
+     case 3:
+      break;
      default:
 
       break;
@@ -9043,20 +9059,32 @@ void vMainCommunicationTask(void *pvParameters){
     waypoint[0] = *((int16_t*)&message[1]);
     waypoint[1] = *((int16_t*)&message[3]);
 
+    xQueueSemaphoreTake( ( xPoseMutex ), ( 20 ) );
+    thetahat = gTheta_hat;
+    xhat = gX_hat;
+    yhat = gY_hat;
+    xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
+# 187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+   0
+# 187 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+   , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
+
     if(validateWP){
-     int16_t wpAngle = atan2(waypoint[1], waypoint[0])*180.0 / 
-# 172 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
-                                                      3.14159265358979323846
-# 172 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
-                                                             ;
+     int16_t wpAngle = (atan2(waypoint[1]-yhat, waypoint[0]-xhat) - thetahat)*180.0 / 
+# 190 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+                                                                             3.14159265358979323846
+# 190 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+                                                                                    ;
      isValidWaypoint = validWaypoint(wpAngle);
     }else{
      isValidWaypoint = 
-# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
+# 193 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c" 3 4
                       1
-# 175 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
+# 193 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\MainComTask.c"
                           ;
     }
+
+
 
     if(((oldwaypoint[0] != waypoint[0]) || (oldwaypoint[1] != waypoint[1])) && isValidWaypoint){
      sendScanBorder();
@@ -9065,7 +9093,7 @@ void vMainCommunicationTask(void *pvParameters){
     }
 
    }
-   vTaskDelay(100);
+   vTaskDelay(500);
   }
  }
 }

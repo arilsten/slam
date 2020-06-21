@@ -12,10 +12,9 @@
 
 
 void vMainPoseControllerTask(void *pvParameters);
-void runThetaController(float thetaDiff);
-void runDistanceController(float distanceError, float thetaError);
 float getThetaTarget(void);
-
+void runDistanceController(float distanceErr, float thetaErr, float thetaDer);
+void runThetaController(float thetaDiff);
 
 
 

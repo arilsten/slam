@@ -21,16 +21,29 @@
 #include "globals.h"
 #include "MainComTask.h"
 #include <stdlib.h>
+#include "microsd.h"
 
 
 ///* _________ SETUP VARIABLES __________ */
 //bool newServer = false;          // Changes between old and new message-style, when false it supports Grindviks server from 2019. Difference is MQTT message-format.
 
+
+
+char pos[30];
+int posCounter = 0;
+
 bool scan = false;
 
+int time = 0;
+int oldTime = 0;
+char irAnalogReading[20];
+int calibrationCounter = 0;
+int distance = 125;
 
 void vMainSensorTowerTask(void *pvParameters) {
-    
+    //microsd_write_operation_t write;
+	//write.filename = "Pos.txt";			// Filename can be anything
+	
     /* Task init */
     float thetahat = 0;
     int16_t xhat = 0;
@@ -46,7 +59,7 @@ void vMainSensorTowerTask(void *pvParameters) {
     TickType_t xLastWakeTime;
 	
     while (true){
-		
+		calibrationCounter++;
 		
         if ((gHandshook == true) && (gPaused == false)) {
             
@@ -85,7 +98,17 @@ void vMainSensorTowerTask(void *pvParameters) {
             xhat = gX_hat;
             yhat = gY_hat;
             xSemaphoreGive(xPoseMutex);
-
+			
+			/* Read position and time to microSD
+			posCounter++;
+			if(posCounter >= 1){
+				int time = xTaskGetTickCount()/100;
+				sprintf(pos, "x: %d, y: %d , t; %d\n", (int)xhat, (int)yhat, (int)time);
+				write.content = pos;
+				xQueueSendToBack(queue_microsd, &write, portMAX_DELAY);
+				posCounter = 0;
+			}*/
+			
              
 			/* Collect sensor values and adjust collision sectors when necessary */
             for(uint8_t i = 0; i < NUM_DIST_SENSORS; i++){
@@ -111,21 +134,30 @@ void vMainSensorTowerTask(void *pvParameters) {
 			
 			
 			
+			/*
+			if(calibrationCounter >= 10){
+				sprintf(irAnalogReading, "A1: %d", (int)(ir_read_blocking(3)));
+				NRF_LOG_INFO("%s", irAnalogReading);
+				
+				calibrationCounter = 0;
+			}
+			*/
+			
 			/*  Send update to server  */
             // Java server message
             if(USEBLUETOOTH){
-				if(scan){
-					send_update(xhat/10, yhat/10, thetahat * RAD2DEG, servoAngle, sensorDataCM[0], sensorDataCM[1],  sensorDataCM[2], sensorDataCM[3]);
-				}
+				
+				send_update(xhat/10, yhat/10, thetahat * RAD2DEG, servoAngle, sensorDataCM[0], sensorDataCM[1],  sensorDataCM[2], sensorDataCM[3]);
+				
             }else{ // C++ server message
 				if(newServer){
 					if(scan){
 						sendNewPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM); // New  message-format from spring 2020.
 					}
 				}else{
-					if(scan){
-						sendOldPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM); // Old message format which supports Grindviks server from 2019.
-					}
+					
+					sendOldPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM); // Old message format which supports Grindviks server from 2019.
+					
 				}
 			}
 			

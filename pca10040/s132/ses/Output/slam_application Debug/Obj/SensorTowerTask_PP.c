@@ -8723,21 +8723,49 @@ int wctomb_l(char *__s, wchar_t __wc, struct __locale_s *__loc);
 size_t wcstombs(char *__s, const wchar_t *__pwcs, size_t __n);
 size_t wcstombs_l(char *__s, const wchar_t *__pwcs, size_t __n, struct __locale_s *__loc);
 # 24 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
+# 1 "../../../drivers/microsd.h" 1
+
+
+
+
+# 4 "../../../drivers/microsd.h"
+typedef struct {
+ char* filename;
+ char* content;
+} microsd_write_operation_t;
+# 18 "../../../drivers/microsd.h"
+void microsd_write(char* filename, char* data);
+void microsd_task();
+# 25 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 2
 
 
 
 
 
+
+
+char pos[30];
+int posCounter = 0;
+
+
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
 _Bool 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
     scan = 
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
            0
-# 29 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 35 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                 ;
 
+int time = 0;
+int oldTime = 0;
+char irAnalogReading[20];
+int calibrationCounter = 0;
+int distance = 125;
 
 void vMainSensorTowerTask(void *pvParameters) {
+
+
 
 
     float thetahat = 0;
@@ -8754,20 +8782,20 @@ void vMainSensorTowerTask(void *pvParameters) {
     TickType_t xLastWakeTime;
 
     while (
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
           1
-# 48 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 61 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
               ){
-
+  calibrationCounter++;
 
         if ((gHandshook == 
-# 51 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
                           1
-# 51 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                               ) && (gPaused == 
-# 51 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
                                                0
-# 51 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                                                     )) {
 
    xLastWakeTime = xTaskGetTickCount();
@@ -8777,18 +8805,18 @@ void vMainSensorTowerTask(void *pvParameters) {
                 switch (robotMovement) {
                 case 0:
      scan = 
-# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
            1
-# 59 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 72 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                ;
                     idleCounter = 1;
                     break;
                 case 1:
                 case 2:
      scan = 
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
            0
-# 64 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 77 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
                 ;
      servoAngle = 0;
                     idleCounter = 0;
@@ -8813,19 +8841,17 @@ void vMainSensorTowerTask(void *pvParameters) {
             xhat = gX_hat;
             yhat = gY_hat;
             xQueueGenericSend( ( QueueHandle_t ) ( xPoseMutex ), 
-# 87 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
            0
-# 87 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+# 100 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
            , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
-
-
-
+# 114 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
             for(uint8_t i = 0; i < 4; i++){
     int16_t detectionAngle_DEG = getDetectionAngle(servoAngle, i);
 
     if(USEBLUETOOTH){
      sensorDataCM[i] = (IrAnalogToMM(ir_read_blocking(i), i)/10);
-     if(sensorDataCM[i] <= (200/10) && sensorDataCM[i] > 0){
+     if(sensorDataCM[i] <= (250/10) && sensorDataCM[i] > 0){
       increaseCollisionSector(detectionAngle_DEG, i);
      }else{
       decreaseCollisionSector(detectionAngle_DEG, i);
@@ -8833,35 +8859,31 @@ void vMainSensorTowerTask(void *pvParameters) {
     }
     else{
      sensorDataMM[i] = IrAnalogToMM(ir_read_blocking(i), i);
-     if(sensorDataMM[i] <= 200 && sensorDataMM[i] > 0){
+     if(sensorDataMM[i] <= 250 && sensorDataMM[i] > 0){
       increaseCollisionSector(detectionAngle_DEG, i);
      }else{
       decreaseCollisionSector(detectionAngle_DEG, i);
      }
     }
    }
-
-
-
-
-
+# 148 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
             if(USEBLUETOOTH){
-    if(scan){
-     send_update(xhat/10, yhat/10, thetahat * 180.0 / 
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
-                                             3.14159265358979323846
-# 118 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
-                                                    , servoAngle, sensorDataCM[0], sensorDataCM[1], sensorDataCM[2], sensorDataCM[3]);
-    }
+
+    send_update(xhat/10, yhat/10, thetahat * 180.0 / 
+# 150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c" 3 4
+                                            3.14159265358979323846
+# 150 "C:\\nRF5_SDK_15.0.0_a53641a\\examples\\ble_peripheral\\slam\\software\\SensorTowerTask.c"
+                                                   , servoAngle, sensorDataCM[0], sensorDataCM[1], sensorDataCM[2], sensorDataCM[3]);
+
             }else{
     if(newServer){
      if(scan){
       sendNewPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM);
      }
     }else{
-     if(scan){
-      sendOldPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM);
-     }
+
+     sendOldPoseMessage(xhat, yhat, thetahat, servoAngle, sensorDataMM);
+
     }
    }
 

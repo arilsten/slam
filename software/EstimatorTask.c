@@ -66,7 +66,7 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 	float Z[7];
 	kf_init(7,8);
 
-	float gyroIntegral = 0;
+	float gyroSum = 0;
 	float gyroLimit = 0.1;
 
 	while (true) {
@@ -83,32 +83,11 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 		
 			/* DATA COLLECTION*/
 			// Get encoder data, protect the global tick variables
-			//xSemaphoreTake(xTickMutex, 15);
-			//leftWheelTicks = gLeftWheelTicks;
-			//rightWheelTicks = gRightWheelTicks;
-			//xSemaphoreGive(xTickMutex);
-		
-			/* This was added to reduce the position update during turns */
-			if (xQueueReceive(scanStatusQ, &robotMovement, 15) == pdTRUE) {
-				switch (robotMovement) {
-				case moveStop:
-				case moveForward:
-				case moveBackward:
-					xSemaphoreTake(xTickMutex, 15);
-					leftWheelTicks = gLeftWheelTicks;
-					rightWheelTicks = gRightWheelTicks;
-					xSemaphoreGive(xTickMutex);
-					break;
-				case moveClockwise:
-				case moveCounterClockwise:
-					leftWheelTicks = 0;
-					rightWheelTicks = 0;
-					break;
-				default:
-					break;
-				}
-			}
-		
+			xSemaphoreTake(xTickMutex, 15);
+			leftWheelTicks = gLeftWheelTicks;
+			rightWheelTicks = gRightWheelTicks;
+			xSemaphoreGive(xTickMutex);
+			
 		
 
 			float dLeft = (float)(leftWheelTicks * WHEEL_FACTOR_MM);	// Distance left wheel has traveled since last sample
@@ -131,12 +110,12 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 					gyrZ = 0.0;
 				}
 			} else {
-				NRF_LOG_INFO("No new data from IMU");
+				//NRF_LOG_INFO("No new data from IMU");
 				gyrZ = 0.0;
 			}
 		
-			/* Alternative to Kalman Filter. */
-			gyroIntegral += gyrZ*DEG2RAD*(float)(40.0/1000.0);
+			/* Alternative to Kalman Filter for heading. */
+			gyroSum += gyrZ*DEG2RAD*(float)(40.0/1000.0);
 		
 			
 			
@@ -173,6 +152,7 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 				Z[1]=0.0;	//if wheels arent turning dont trust accelerometer  
 				Z[3]=0.0;
 				accelXoffset += (accel.x/1000);		//try to correct sensor offset drifting
+				
 			}else{
 				//kf_setGyroVar(0.0134);
 				if(fabs(Z[5]-Z[4])>0.2*Z[5]){ kf_setEncoderVar(1);}		// if gyro and encoders mismatch (stuck?) trust gyro
@@ -185,9 +165,10 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 
 
 			// Update global pose
-			vFunc_Inf2pi(&(kf_state.heading));
-			vFunc_Inf2pi(&(gyroIntegral));
+			vFunc_Inf2pi(&(kf_state.heading)); // Places angles inside -pi to pi
+			vFunc_Inf2pi(&(gyroSum));
 			
+			/*
 			if(count > 40){
 				
 				headingTime = (xTaskGetTickCount());
@@ -197,8 +178,9 @@ void vMainPoseEstimatorTask(void *pvParameters) {
 				count = 0;
 			}
 			
+			*/
 			xSemaphoreTake(xPoseMutex, 15);
-			gTheta_hat = gyroIntegral;				// kf_state.heading is replaced with gyroIntegral
+			gTheta_hat = gyroSum;					// previously: gTheta_hat = kf_state.heading;  replaced with: gTheta_hat = gyroSum;
 			gX_hat = (int)(kf_state.x*1000);		//convert from m to mm
 			gY_hat = (int)(kf_state.y*1000);
 			gLeft = dLeft;

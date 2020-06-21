@@ -44,6 +44,8 @@ char controllerdata[20];
 
 float thetaTargt = 0;
 
+bool executingOrder = false;
+
 /*  Calculates new settings for the movement task */
 void vMainPoseControllerTask(void *pvParameters) {
     int count = 0;
@@ -76,6 +78,7 @@ void vMainPoseControllerTask(void *pvParameters) {
     
 	
     uint8_t doneTurning = false;
+	uint8_t doneDriving = false;
     uint8_t idleSendt = false;
 
     /* TESTING VARIABLES */
@@ -110,12 +113,13 @@ void vMainPoseControllerTask(void *pvParameters) {
 		
         if (gHandshook) {
 			controllerPrint++;
-            xSemaphoreTake(xTickMutex, 1);
-            //read in encoder values and update ticks since last reading
-            encoderTicks ticks = encoder_get_ticks();
-            gLeftWheelTicks = ticks.left;
-            gRightWheelTicks = ticks.right;
-            xSemaphoreGive(xTickMutex);
+			
+			xSemaphoreTake(xTickMutex, 1);
+			//read in encoder values and update ticks since last reading
+			encoderTicks ticks = encoder_get_ticks();
+			gLeftWheelTicks = ticks.left;
+			gRightWheelTicks = ticks.right;
+			xSemaphoreGive(xTickMutex);
 			
             if (xSemaphoreTake(xControllerBSem, portMAX_DELAY) == pdTRUE) { // Wait for synchronization from estimator
                 
@@ -140,7 +144,8 @@ void vMainPoseControllerTask(void *pvParameters) {
                     newOrder = true;
                     controllerStop = false;
                     doneTurning = false;
-                    
+                    collisionDetected = false;
+					
                     sprintf(str4,"Tx:%i Ty:%i",((int)xTargt),((int)yTargt));
                     display_text_on_line(4,str4); 
                 }
@@ -165,20 +170,23 @@ void vMainPoseControllerTask(void *pvParameters) {
 				
 				
                 
-				
-				// Check for collision only when controller is running
-				if(controllerStop == false){ 
+				// Check for collision only when turning is complete 
+				if(doneTurning){ 
 					collisionDetected = checkForCollision();
 				}else{
 					collisionDetected = false;
 				}
 				
 				
-				if((distanceError < radiusEpsilon) || (distanceDriven > distanceToTarget)){
+				
+				if((distanceError < radiusEpsilon) || (distanceDriven > distanceToTarget) || (collisionDetected)){
 					controllerStop = true;
 					motor_brake();
 					vMotorMovementSwitch(0,0);
-					
+					rightIntError = 0.0;
+					thetaErrorInt = 0.0;
+					lastMovement = moveStop;
+					xQueueSend(scanStatusQ, &lastMovement, 0); // Send the current movement to the scan task
 				}
 				
                 // Run controllers
@@ -189,9 +197,10 @@ void vMainPoseControllerTask(void *pvParameters) {
 					
                     if(doneTurning){ //Start forward movement
                         
+						//NRF_LOG_INFO("BfCont: %d", (int)(1000*distanceError));
                         //float distanceTraveled = distanceStart - distanceError;
-                        runDistanceController(distanceError, thetaError);
-
+                        runDistanceController(distanceError, thetaError, thetaDerivative);
+						//collisionDetected = checkForCollision();
 						lastMovement = moveForward;
 						xQueueSend(scanStatusQ, &lastMovement, 0); // Send the current movement to the scan task
 						
@@ -221,7 +230,7 @@ void vMainPoseControllerTask(void *pvParameters) {
                     motor_brake();
                     lastMovement = moveStop;
 					xQueueSend(scanStatusQ, &lastMovement, 0); // Send the current movement to the scan task
-					//display_text_on_line(4,"Reached target");
+					display_text_on_line(4,"Reached target");
                 }
                 //xQueueSend(scanStatusQ, &lastMovement, 0); // Send the current movement to the scan task
 				
@@ -243,24 +252,27 @@ float getThetaTarget(){
 
 
 
-void runDistanceController(float distanceError, float thetaError){
+void runDistanceController(float distanceErr, float thetaErr, float thetaDer){
 	
-	float kp = 0.02; //0.009 //Was 0.02
+	float kp = 0.03; //0.009 //Was 0.02
 	float ki = 0.0;
 	float kd = 0.0;
-	float driveFwd = kp*distanceError;
+	
+	float driveFwd = kp*distanceErr;
 	
 	//leftIntError += thetaError;
-	rightIntError += thetaError;
+	rightIntError += thetaErr;
 	
-	float driveKp = 120.0;      //120              // Proportional gain for theta control during drive
-	float driveKi = 0.0;							// Integral gain for theta during drive
+	float thetaKp = 60.0;      //120              // Proportional gain for theta control during drive
+	float thetaKi = 5.0;			// Integral gain for theta during drive
+	//float thetaKd = 10.0;		//120/3/5 not enough, 200/10/10, not .pic 19, only P 120
+	
 	
 	if(driveFwd > maxU){
 		driveFwd = maxU;
 		
 	}else if(driveFwd < minU && driveFwd > stopU){
-		driveFwd = 17;   //Was minU
+		driveFwd = minU;   //Was minU
 		
 	}else{
 		//driveFwd = 0;
@@ -268,8 +280,16 @@ void runDistanceController(float distanceError, float thetaError){
 		//vMotorMovementSwitch(0,0);
 	}
 	
-	int LeftFwd = (int)(driveFwd);  
-	int RightFwd = (int)(driveFwd + driveKp*thetaError); // - driveKi*rightIntError); 
+	//NRF_LOG_INFO("dCont: %d", (int)(1000*distanceErr));
+	//NRF_LOG_INFO("dFWD: %d", (int)(1000*driveFwd));
+	
+	float u = thetaKp*thetaErr + thetaKi*rightIntError; //heading control during driving
+	
+	int LeftFwd = (int)(driveFwd - u); // - driveKd*thetaDer - driveKi*rightIntError);  
+	int RightFwd = (int)(driveFwd + u); // + driveKd*thetaDer + driveKi*rightIntError); 
+	
+	//NRF_LOG_INFO("dCont: %d", (int)(1000*distanceErr));
+	//NRF_LOG_INFO("dFWD: %d", (int)(1000*driveFwd));
 	
 	vMotorMovementSwitch(LeftFwd, RightFwd);
 	//vMotorMovementSwitch(0, 0); // Used to test heading controller
@@ -283,7 +303,7 @@ void runThetaController(float thetaDiff){
 	if(integrateTheta){
 		thetaErrorInt += thetaDiff;
 	}
-	float ki = 0.0;      //10/10/10 ok, 0/25/0 ok, 0/23/0 ok+, 0/30/2 very good (PD regulator)
+	float ki = 0.0;      // 0/30/2 very good
 	float kp = 30.0;
 	float kd = 2.0;
 	float U = (kp*thetaDiff + ki*thetaErrorInt + kd*thetaDerivative);
@@ -293,7 +313,7 @@ void runThetaController(float thetaDiff){
 		integrateTheta = false;
 		
 	}else if(fabs(U) < minU && fabs(U) > stopU){
-		U = (float)((U/fabs(U))*minU);
+		U = (float)((U/fabs(U))*minU); 
 		integrateTheta = true;
 		
 	}else{
@@ -302,6 +322,7 @@ void runThetaController(float thetaDiff){
 	
 	int LeftSpeed = (int)-U;
 	int RightSpeed = (int)U;
+	
 	vMotorMovementSwitch(LeftSpeed, RightSpeed);
 	
 }

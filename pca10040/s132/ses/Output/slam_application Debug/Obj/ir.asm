@@ -367,83 +367,83 @@ ir_read_blocking:
 	.loc 1 152 2 is_stmt 1 view .LVU121
 	.loc 1 153 2 view .LVU122
 .LVL23:
-	.loc 1 157 2 view .LVU123
-	.loc 1 158 2 view .LVU124
-	.loc 1 159 2 view .LVU125
+	.loc 1 155 2 view .LVU123
+	.loc 1 156 2 view .LVU124
+	.loc 1 157 2 view .LVU125
 .LBB14:
-	.loc 1 159 7 view .LVU126
-	.loc 1 159 11 is_stmt 0 view .LVU127
+	.loc 1 157 7 view .LVU126
+	.loc 1 157 11 is_stmt 0 view .LVU127
 	movs	r4, #0
 .LBE14:
-	.loc 1 158 6 view .LVU128
+	.loc 1 156 6 view .LVU128
 	mov	r5, r4
 .LBB17:
-	.loc 1 159 2 view .LVU129
+	.loc 1 157 2 view .LVU129
 	b	.L32
 .LVL24:
 .L38:
 .LBB15:
-	.loc 1 161 98 is_stmt 1 discriminator 1 view .LVU130
-	.loc 1 161 103 discriminator 1 view .LVU131
+	.loc 1 159 98 is_stmt 1 discriminator 1 view .LVU130
+	.loc 1 159 103 discriminator 1 view .LVU131
 	ldr	r2, .L40
-	movs	r1, #161
+	movs	r1, #159
 	bl	app_error_handler
 .LVL25:
 .L33:
-	.loc 1 161 242 discriminator 3 view .LVU132
+	.loc 1 159 242 discriminator 3 view .LVU132
 .LBE15:
-	.loc 1 161 257 discriminator 3 view .LVU133
-	.loc 1 162 3 discriminator 3 view .LVU134
-	.loc 1 162 13 is_stmt 0 discriminator 3 view .LVU135
+	.loc 1 159 257 discriminator 3 view .LVU133
+	.loc 1 160 3 discriminator 3 view .LVU134
+	.loc 1 160 13 is_stmt 0 discriminator 3 view .LVU135
 	ldr	r3, .L40+4
 	ldrsh	r3, [r3, r4, lsl #1]
-	.loc 1 162 7 discriminator 3 view .LVU136
+	.loc 1 160 7 discriminator 3 view .LVU136
 	add	r5, r5, r3
 .LVL26:
-	.loc 1 159 25 is_stmt 1 discriminator 3 view .LVU137
-	.loc 1 159 26 is_stmt 0 discriminator 3 view .LVU138
+	.loc 1 157 25 is_stmt 1 discriminator 3 view .LVU137
+	.loc 1 157 26 is_stmt 0 discriminator 3 view .LVU138
 	adds	r4, r4, #1
 .LVL27:
 .L32:
-	.loc 1 159 18 is_stmt 1 discriminator 2 view .LVU139
-	.loc 1 159 2 is_stmt 0 discriminator 2 view .LVU140
+	.loc 1 157 18 is_stmt 1 discriminator 2 view .LVU139
+	.loc 1 157 2 is_stmt 0 discriminator 2 view .LVU140
 	cmp	r4, #3
 	bgt	.L37
-	.loc 1 160 3 is_stmt 1 view .LVU141
-	.loc 1 160 9 is_stmt 0 view .LVU142
+	.loc 1 158 3 is_stmt 1 view .LVU141
+	.loc 1 158 9 is_stmt 0 view .LVU142
 	ldr	r1, .L40+4
 	add	r1, r1, r4, lsl #1
 	mov	r0, r6
 	bl	nrfx_saadc_sample_convert
 .LVL28:
-	.loc 1 161 17 is_stmt 1 view .LVU143
+	.loc 1 159 17 is_stmt 1 view .LVU143
 .LBB16:
-	.loc 1 161 22 view .LVU144
-	.loc 1 161 61 view .LVU145
-	.loc 1 161 64 is_stmt 0 view .LVU146
+	.loc 1 159 22 view .LVU144
+	.loc 1 159 61 view .LVU145
+	.loc 1 159 64 is_stmt 0 view .LVU146
 	cmp	r0, #0
 	beq	.L33
 	b	.L38
 .LVL29:
 .L37:
-	.loc 1 161 64 view .LVU147
+	.loc 1 159 64 view .LVU147
 .LBE16:
 .LBE17:
-	.loc 1 165 2 is_stmt 1 view .LVU148
-	.loc 1 165 24 is_stmt 0 view .LVU149
+	.loc 1 163 2 is_stmt 1 view .LVU148
+	.loc 1 163 24 is_stmt 0 view .LVU149
 	mov	r0, r5
 	cmp	r5, #0
 	blt	.L39
 .L35:
-	.loc 1 166 1 view .LVU150
+	.loc 1 164 1 view .LVU150
 	ubfx	r0, r0, #2, #16
 	pop	{r4, r5, r6, pc}
 .LVL30:
 .L39:
-	.loc 1 165 24 view .LVU151
+	.loc 1 163 24 view .LVU151
 	adds	r0, r5, #3
 .LVL31:
-	.loc 1 165 24 view .LVU152
+	.loc 1 163 24 view .LVU152
 	b	.L35
 .L41:
 	.align	2
@@ -466,51 +466,51 @@ ir_read_blocking:
 	.type	ir_calibrate, %function
 ir_calibrate:
 .LFB239:
-	.loc 1 168 21 is_stmt 1 view -0
+	.loc 1 166 21 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, lr}
 .LCFI5:
-	.loc 1 169 2 view .LVU154
-	.loc 1 169 6 is_stmt 0 view .LVU155
+	.loc 1 167 2 view .LVU154
+	.loc 1 167 6 is_stmt 0 view .LVU155
 	bl	nrfx_saadc_calibrate_offset
 .LVL32:
-	.loc 1 169 5 view .LVU156
+	.loc 1 167 5 view .LVU156
 	cbnz	r0, .L46
 .L43:
-	.loc 1 174 32 is_stmt 1 discriminator 1 view .LVU157
-	.loc 1 174 7 discriminator 1 view .LVU158
-	.loc 1 174 8 is_stmt 0 discriminator 1 view .LVU159
+	.loc 1 172 32 is_stmt 1 discriminator 1 view .LVU157
+	.loc 1 172 7 discriminator 1 view .LVU158
+	.loc 1 172 8 is_stmt 0 discriminator 1 view .LVU159
 	ldr	r3, .L47
 	ldrb	r3, [r3]	@ zero_extendqisi2
-	.loc 1 174 7 discriminator 1 view .LVU160
+	.loc 1 172 7 discriminator 1 view .LVU160
 	cmp	r3, #0
 	beq	.L43
-	.loc 1 174 33 is_stmt 1 discriminator 2 view .LVU161
-	.loc 1 175 2 discriminator 2 view .LVU162
-	.loc 1 175 24 is_stmt 0 discriminator 2 view .LVU163
+	.loc 1 172 33 is_stmt 1 discriminator 2 view .LVU161
+	.loc 1 173 2 discriminator 2 view .LVU162
+	.loc 1 173 24 is_stmt 0 discriminator 2 view .LVU163
 	ldr	r3, .L47
 	movs	r2, #0
 	strb	r2, [r3]
 .L42:
-	.loc 1 176 1 view .LVU164
+	.loc 1 174 1 view .LVU164
 	pop	{r3, pc}
 .L46:
-	.loc 1 170 3 is_stmt 1 discriminator 3 view .LVU165
-	.loc 1 170 76 discriminator 3 view .LVU166
-	.loc 1 170 131 discriminator 3 view .LVU167
-	.loc 1 170 212 is_stmt 0 discriminator 3 view .LVU168
+	.loc 1 168 3 is_stmt 1 discriminator 3 view .LVU165
+	.loc 1 168 76 discriminator 3 view .LVU166
+	.loc 1 168 131 discriminator 3 view .LVU167
+	.loc 1 168 212 is_stmt 0 discriminator 3 view .LVU168
 	ldr	r3, .L47+4
 	ldrh	r0, [r3]
-	.loc 1 170 223 discriminator 3 view .LVU169
+	.loc 1 168 223 discriminator 3 view .LVU169
 	lsls	r0, r0, #16
-	.loc 1 170 131 discriminator 3 view .LVU170
+	.loc 1 168 131 discriminator 3 view .LVU170
 	ldr	r1, .L47+8
 	orr	r0, r0, #3
 	bl	nrf_log_frontend_std_0
 .LVL33:
-	.loc 1 170 278 is_stmt 1 discriminator 3 view .LVU171
-	.loc 1 171 3 discriminator 3 view .LVU172
+	.loc 1 168 278 is_stmt 1 discriminator 3 view .LVU171
+	.loc 1 169 3 discriminator 3 view .LVU172
 	b	.L42
 .L48:
 	.align	2
@@ -535,23 +535,23 @@ ir_calibrate:
 ui8DistSens_readCM:
 .LVL34:
 .LFB240:
-	.loc 1 178 47 view -0
+	.loc 1 176 47 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 178 47 is_stmt 0 view .LVU174
+	.loc 1 176 47 is_stmt 0 view .LVU174
 	push	{r3, lr}
 .LCFI6:
 	vpush.64	{d8}
 .LCFI7:
-	.loc 1 179 7 is_stmt 1 view .LVU175
-	.loc 1 179 30 is_stmt 0 view .LVU176
+	.loc 1 177 7 is_stmt 1 view .LVU175
+	.loc 1 177 30 is_stmt 0 view .LVU176
 	bl	ir_read_blocking
 .LVL35:
-	.loc 1 180 7 is_stmt 1 view .LVU177
-	.loc 1 180 26 is_stmt 0 view .LVU178
+	.loc 1 178 7 is_stmt 1 view .LVU177
+	.loc 1 178 26 is_stmt 0 view .LVU178
 	bl	__aeabi_i2d
 .LVL36:
-	.loc 1 180 26 view .LVU179
+	.loc 1 178 26 view .LVU179
 	adr	r3, .L57+12
 	ldrd	r2, [r3]
 	bl	__aeabi_ddiv
@@ -564,7 +564,7 @@ ui8DistSens_readCM:
 	bl	ceil
 .LVL39:
 	vmov	r0, r1, d0
-	.loc 1 180 14 view .LVU180
+	.loc 1 178 14 view .LVU180
 	movs	r2, #0
 	ldr	r3, .L57+8
 	bl	__aeabi_dcmplt
@@ -572,13 +572,13 @@ ui8DistSens_readCM:
 	cbnz	r0, .L56
 	movs	r0, #80
 .L50:
-	.loc 1 181 1 discriminator 4 view .LVU181
+	.loc 1 179 1 discriminator 4 view .LVU181
 	vldm	sp!, {d8}
 .LCFI8:
 	pop	{r3, pc}
 .L56:
 .LCFI9:
-	.loc 1 180 74 discriminator 1 view .LVU182
+	.loc 1 178 74 discriminator 1 view .LVU182
 	vldr.64	d1, .L57
 	vmov.f32	s0, s16
 	vmov.f32	s1, s17
@@ -587,7 +587,7 @@ ui8DistSens_readCM:
 	bl	ceil
 .LVL42:
 	vmov	r0, r1, d0
-	.loc 1 180 14 discriminator 1 view .LVU183
+	.loc 1 178 14 discriminator 1 view .LVU183
 	bl	__aeabi_d2uiz
 .LVL43:
 	uxtb	r0, r0
@@ -615,23 +615,23 @@ ui8DistSens_readCM:
 i16DistSens_readMM:
 .LVL44:
 .LFB241:
-	.loc 1 183 47 is_stmt 1 view -0
+	.loc 1 181 47 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 183 47 is_stmt 0 view .LVU185
+	.loc 1 181 47 is_stmt 0 view .LVU185
 	push	{r3, lr}
 .LCFI10:
 	vpush.64	{d8}
 .LCFI11:
-	.loc 1 184 7 is_stmt 1 view .LVU186
-	.loc 1 184 30 is_stmt 0 view .LVU187
+	.loc 1 182 7 is_stmt 1 view .LVU186
+	.loc 1 182 30 is_stmt 0 view .LVU187
 	bl	ir_read_blocking
 .LVL45:
-	.loc 1 185 7 is_stmt 1 view .LVU188
-	.loc 1 185 26 is_stmt 0 view .LVU189
+	.loc 1 183 7 is_stmt 1 view .LVU188
+	.loc 1 183 26 is_stmt 0 view .LVU189
 	bl	__aeabi_i2d
 .LVL46:
-	.loc 1 185 26 view .LVU190
+	.loc 1 183 26 view .LVU190
 	adr	r3, .L67+16
 	ldrd	r2, [r3]
 	bl	__aeabi_ddiv
@@ -644,12 +644,12 @@ i16DistSens_readMM:
 	bl	ceil
 .LVL49:
 	vmov	r0, r1, d0
-	.loc 1 185 62 view .LVU191
+	.loc 1 183 62 view .LVU191
 	movs	r2, #0
 	ldr	r3, .L67+8
 	bl	__aeabi_dmul
 .LVL50:
-	.loc 1 185 14 view .LVU192
+	.loc 1 183 14 view .LVU192
 	movs	r2, #0
 	ldr	r3, .L67+12
 	bl	__aeabi_dcmplt
@@ -657,13 +657,13 @@ i16DistSens_readMM:
 	cbnz	r0, .L66
 	mov	r0, #800
 .L60:
-	.loc 1 186 1 discriminator 4 view .LVU193
+	.loc 1 184 1 discriminator 4 view .LVU193
 	vldm	sp!, {d8}
 .LCFI12:
 	pop	{r3, pc}
 .L66:
 .LCFI13:
-	.loc 1 185 78 discriminator 1 view .LVU194
+	.loc 1 183 78 discriminator 1 view .LVU194
 	vldr.64	d1, .L67
 	vmov.f32	s0, s16
 	vmov.f32	s1, s17
@@ -672,12 +672,12 @@ i16DistSens_readMM:
 	bl	ceil
 .LVL53:
 	vmov	r0, r1, d0
-	.loc 1 185 114 discriminator 1 view .LVU195
+	.loc 1 183 114 discriminator 1 view .LVU195
 	movs	r2, #0
 	ldr	r3, .L67+8
 	bl	__aeabi_dmul
 .LVL54:
-	.loc 1 185 14 discriminator 1 view .LVU196
+	.loc 1 183 14 discriminator 1 view .LVU196
 	bl	__aeabi_d2iz
 .LVL55:
 	sxth	r0, r0
@@ -704,17 +704,17 @@ i16DistSens_readMM:
 IrAnalogToCM:
 .LVL56:
 .LFB242:
-	.loc 1 188 39 is_stmt 1 view -0
+	.loc 1 186 39 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 188 39 is_stmt 0 view .LVU198
+	.loc 1 186 39 is_stmt 0 view .LVU198
 	push	{r3, lr}
 .LCFI14:
-	.loc 1 189 3 is_stmt 1 view .LVU199
-	.loc 1 189 20 is_stmt 0 view .LVU200
+	.loc 1 187 3 is_stmt 1 view .LVU199
+	.loc 1 187 20 is_stmt 0 view .LVU200
 	bl	__aeabi_i2d
 .LVL57:
-	.loc 1 189 20 view .LVU201
+	.loc 1 187 20 view .LVU201
 	adr	r3, .L71+8
 	ldrd	r2, [r3]
 	bl	__aeabi_ddiv
@@ -726,10 +726,10 @@ IrAnalogToCM:
 	bl	ceil
 .LVL60:
 	vmov	r0, r1, d0
-	.loc 1 189 10 view .LVU202
+	.loc 1 187 10 view .LVU202
 	bl	__aeabi_d2uiz
 .LVL61:
-	.loc 1 190 1 view .LVU203
+	.loc 1 188 1 view .LVU203
 	uxtb	r0, r0
 	pop	{r3, pc}
 .L72:
@@ -753,59 +753,59 @@ IrAnalogToCM:
 IrAnalogToMM:
 .LVL62:
 .LFB243:
-	.loc 1 193 59 is_stmt 1 view -0
+	.loc 1 192 59 is_stmt 1 view -0
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	.loc 1 193 59 is_stmt 0 view .LVU205
+	.loc 1 192 59 is_stmt 0 view .LVU205
 	push	{r3, r4, r5, lr}
 .LCFI15:
 	mov	r5, r0
-	.loc 1 195 5 is_stmt 1 view .LVU206
+	.loc 1 194 5 is_stmt 1 view .LVU206
 .LVL63:
-	.loc 1 197 5 view .LVU207
-	.loc 1 197 7 is_stmt 0 view .LVU208
+	.loc 1 196 5 view .LVU207
+	.loc 1 196 7 is_stmt 0 view .LVU208
 	mov	r4, r1
 	cbz	r1, .L80
-	.loc 1 195 13 view .LVU209
+	.loc 1 194 13 view .LVU209
 	movs	r0, #0
 .LVL64:
 .L74:
-	.loc 1 200 5 is_stmt 1 view .LVU210
-	.loc 1 200 8 is_stmt 0 view .LVU211
+	.loc 1 199 5 is_stmt 1 view .LVU210
+	.loc 1 199 8 is_stmt 0 view .LVU211
 	cmp	r4, #1
 	beq	.L81
 .L75:
-	.loc 1 203 5 is_stmt 1 view .LVU212
-	.loc 1 203 7 is_stmt 0 view .LVU213
+	.loc 1 202 5 is_stmt 1 view .LVU212
+	.loc 1 202 7 is_stmt 0 view .LVU213
 	cmp	r4, #2
 	beq	.L82
 .L76:
-	.loc 1 206 5 is_stmt 1 view .LVU214
-	.loc 1 206 8 is_stmt 0 view .LVU215
+	.loc 1 205 5 is_stmt 1 view .LVU214
+	.loc 1 205 8 is_stmt 0 view .LVU215
 	cmp	r4, #3
 	beq	.L83
 .L77:
-	.loc 1 209 5 is_stmt 1 view .LVU216
-	.loc 1 210 1 is_stmt 0 view .LVU217
+	.loc 1 208 5 is_stmt 1 view .LVU216
+	.loc 1 209 1 is_stmt 0 view .LVU217
 	cmp	r0, #1000
 	it	ge
 	movge	r0, #1000
 .LVL65:
-	.loc 1 210 1 view .LVU218
+	.loc 1 209 1 view .LVU218
 	pop	{r3, r4, r5, pc}
 .LVL66:
 .L80:
-	.loc 1 198 5 is_stmt 1 view .LVU219
-	.loc 1 198 39 is_stmt 0 view .LVU220
+	.loc 1 197 5 is_stmt 1 view .LVU219
+	.loc 1 197 39 is_stmt 0 view .LVU220
 	bl	__aeabi_ui2d
 .LVL67:
-	.loc 1 198 39 view .LVU221
+	.loc 1 197 39 view .LVU221
 	vldr.64	d1, .L84
 	vmov	d0, r0, r1
 	bl	pow
 .LVL68:
 	vmov	r0, r1, d0
-	.loc 1 198 24 view .LVU222
+	.loc 1 197 24 view .LVU222
 	adr	r3, .L84+32
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
@@ -814,19 +814,19 @@ IrAnalogToMM:
 	bl	ceil
 .LVL70:
 	vmov	r0, r1, d0
-	.loc 1 198 12 view .LVU223
+	.loc 1 197 12 view .LVU223
 	bl	__aeabi_d2iz
 .LVL71:
 	sxth	r0, r0
 .LVL72:
-	.loc 1 198 12 view .LVU224
+	.loc 1 197 12 view .LVU224
 	b	.L74
 .L81:
-	.loc 1 201 5 is_stmt 1 view .LVU225
-	.loc 1 201 40 is_stmt 0 view .LVU226
+	.loc 1 200 5 is_stmt 1 view .LVU225
+	.loc 1 200 40 is_stmt 0 view .LVU226
 	mov	r0, r5
 .LVL73:
-	.loc 1 201 40 view .LVU227
+	.loc 1 200 40 view .LVU227
 	bl	__aeabi_ui2d
 .LVL74:
 	vldr.64	d1, .L84+8
@@ -834,7 +834,7 @@ IrAnalogToMM:
 	bl	pow
 .LVL75:
 	vmov	r0, r1, d0
-	.loc 1 201 24 view .LVU228
+	.loc 1 200 24 view .LVU228
 	adr	r3, .L84+40
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
@@ -843,19 +843,19 @@ IrAnalogToMM:
 	bl	ceil
 .LVL77:
 	vmov	r0, r1, d0
-	.loc 1 201 12 view .LVU229
+	.loc 1 200 12 view .LVU229
 	bl	__aeabi_d2iz
 .LVL78:
 	sxth	r0, r0
 .LVL79:
-	.loc 1 201 12 view .LVU230
+	.loc 1 200 12 view .LVU230
 	b	.L75
 .L82:
-	.loc 1 204 5 is_stmt 1 view .LVU231
-	.loc 1 204 37 is_stmt 0 view .LVU232
+	.loc 1 203 5 is_stmt 1 view .LVU231
+	.loc 1 203 39 is_stmt 0 view .LVU232
 	mov	r0, r5
 .LVL80:
-	.loc 1 204 37 view .LVU233
+	.loc 1 203 39 view .LVU233
 	bl	__aeabi_ui2d
 .LVL81:
 	vldr.64	d1, .L84+16
@@ -863,7 +863,7 @@ IrAnalogToMM:
 	bl	pow
 .LVL82:
 	vmov	r0, r1, d0
-	.loc 1 204 24 view .LVU234
+	.loc 1 203 24 view .LVU234
 	adr	r3, .L84+48
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
@@ -872,19 +872,19 @@ IrAnalogToMM:
 	bl	ceil
 .LVL84:
 	vmov	r0, r1, d0
-	.loc 1 204 12 view .LVU235
+	.loc 1 203 12 view .LVU235
 	bl	__aeabi_d2iz
 .LVL85:
 	sxth	r0, r0
 .LVL86:
-	.loc 1 204 12 view .LVU236
+	.loc 1 203 12 view .LVU236
 	b	.L76
 .L83:
-	.loc 1 207 5 is_stmt 1 view .LVU237
-	.loc 1 207 39 is_stmt 0 view .LVU238
+	.loc 1 206 5 is_stmt 1 view .LVU237
+	.loc 1 206 39 is_stmt 0 view .LVU238
 	mov	r0, r5
 .LVL87:
-	.loc 1 207 39 view .LVU239
+	.loc 1 206 39 view .LVU239
 	bl	__aeabi_ui2d
 .LVL88:
 	vldr.64	d1, .L84+24
@@ -892,7 +892,7 @@ IrAnalogToMM:
 	bl	pow
 .LVL89:
 	vmov	r0, r1, d0
-	.loc 1 207 24 view .LVU240
+	.loc 1 206 24 view .LVU240
 	adr	r3, .L84+56
 	ldrd	r2, [r3]
 	bl	__aeabi_dmul
@@ -901,12 +901,12 @@ IrAnalogToMM:
 	bl	ceil
 .LVL91:
 	vmov	r0, r1, d0
-	.loc 1 207 12 view .LVU241
+	.loc 1 206 12 view .LVU241
 	bl	__aeabi_d2iz
 .LVL92:
 	sxth	r0, r0
 .LVL93:
-	.loc 1 207 12 view .LVU242
+	.loc 1 206 12 view .LVU242
 	b	.L77
 .L85:
 	.align	3
@@ -915,18 +915,18 @@ IrAnalogToMM:
 	.word	-1074979144
 	.word	-377957122
 	.word	-1074646746
-	.word	0
-	.word	-1074790400
 	.word	1030792151
 	.word	-1074800886
+	.word	0
+	.word	-1074790400
 	.word	0
 	.word	1090296576
 	.word	0
 	.word	1092664418
 	.word	0
-	.word	1091225240
-	.word	0
 	.word	1091120440
+	.word	0
+	.word	1091224440
 .LFE243:
 	.size	IrAnalogToMM, .-IrAnalogToMM
 	.global	conversion_buffer
@@ -3799,7 +3799,7 @@ saadc_config:
 	.uleb128 0x26
 	.4byte	.LASF222
 	.byte	0x1
-	.byte	0xc1
+	.byte	0xc0
 	.byte	0x9
 	.4byte	0x4f
 	.4byte	.LFB243
@@ -3810,7 +3810,7 @@ saadc_config:
 	.uleb128 0x27
 	.4byte	.LASF219
 	.byte	0x1
-	.byte	0xc1
+	.byte	0xc0
 	.byte	0x1f
 	.4byte	0x62
 	.4byte	.LLST21
@@ -3818,7 +3818,7 @@ saadc_config:
 	.uleb128 0x27
 	.4byte	.LASF220
 	.byte	0x1
-	.byte	0xc1
+	.byte	0xc0
 	.byte	0x34
 	.4byte	0xb3
 	.4byte	.LLST22
@@ -3826,7 +3826,7 @@ saadc_config:
 	.uleb128 0x28
 	.4byte	.LASF221
 	.byte	0x1
-	.byte	0xc3
+	.byte	0xc2
 	.byte	0xd
 	.4byte	0x4f
 	.4byte	.LLST23
@@ -3897,8 +3897,8 @@ saadc_config:
 	.byte	0xf4
 	.uleb128 0x29
 	.byte	0x8
-	.4byte	0
-	.4byte	0xbff00000
+	.4byte	0x3d70a3d7
+	.4byte	0xbfefd70a
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL84
@@ -3921,8 +3921,8 @@ saadc_config:
 	.byte	0xf4
 	.uleb128 0x29
 	.byte	0x8
-	.4byte	0x3d70a3d7
-	.4byte	0xbfefd70a
+	.4byte	0
+	.4byte	0xbff00000
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL91
@@ -3931,7 +3931,7 @@ saadc_config:
 	.uleb128 0x26
 	.4byte	.LASF223
 	.byte	0x1
-	.byte	0xbc
+	.byte	0xba
 	.byte	0x9
 	.4byte	0x37
 	.4byte	.LFB242
@@ -3942,7 +3942,7 @@ saadc_config:
 	.uleb128 0x27
 	.4byte	.LASF219
 	.byte	0x1
-	.byte	0xbc
+	.byte	0xba
 	.byte	0x1f
 	.4byte	0x62
 	.4byte	.LLST20
@@ -3975,7 +3975,7 @@ saadc_config:
 	.uleb128 0x26
 	.4byte	.LASF224
 	.byte	0x1
-	.byte	0xb7
+	.byte	0xb5
 	.byte	0x9
 	.4byte	0x4f
 	.4byte	.LFB241
@@ -3986,7 +3986,7 @@ saadc_config:
 	.uleb128 0x27
 	.4byte	.LASF220
 	.byte	0x1
-	.byte	0xb7
+	.byte	0xb5
 	.byte	0x28
 	.4byte	0xb3
 	.4byte	.LLST18
@@ -3994,7 +3994,7 @@ saadc_config:
 	.uleb128 0x28
 	.4byte	.LASF225
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xb6
 	.byte	0x10
 	.4byte	0x62
 	.4byte	.LLST19
@@ -4082,7 +4082,7 @@ saadc_config:
 	.uleb128 0x26
 	.4byte	.LASF226
 	.byte	0x1
-	.byte	0xb2
+	.byte	0xb0
 	.byte	0x9
 	.4byte	0x37
 	.4byte	.LFB240
@@ -4093,7 +4093,7 @@ saadc_config:
 	.uleb128 0x27
 	.4byte	.LASF220
 	.byte	0x1
-	.byte	0xb2
+	.byte	0xb0
 	.byte	0x28
 	.4byte	0xb3
 	.4byte	.LLST16
@@ -4101,7 +4101,7 @@ saadc_config:
 	.uleb128 0x28
 	.4byte	.LASF225
 	.byte	0x1
-	.byte	0xb3
+	.byte	0xb1
 	.byte	0x10
 	.4byte	0x62
 	.4byte	.LLST17
@@ -4189,7 +4189,7 @@ saadc_config:
 	.uleb128 0x2c
 	.4byte	.LASF230
 	.byte	0x1
-	.byte	0xa8
+	.byte	0xa6
 	.byte	0x6
 	.4byte	.LFB239
 	.4byte	.LFE239-.LFB239
@@ -4248,7 +4248,7 @@ saadc_config:
 	.uleb128 0x30
 	.ascii	"val\000"
 	.byte	0x1
-	.byte	0x9d
+	.byte	0x9b
 	.byte	0x1b
 	.4byte	0x42f
 	.uleb128 0x5
@@ -4257,7 +4257,7 @@ saadc_config:
 	.uleb128 0x2f
 	.ascii	"acc\000"
 	.byte	0x1
-	.byte	0x9e
+	.byte	0x9c
 	.byte	0x6
 	.4byte	0x86
 	.4byte	.LLST13
@@ -4267,7 +4267,7 @@ saadc_config:
 	.uleb128 0x2f
 	.ascii	"i\000"
 	.byte	0x1
-	.byte	0x9f
+	.byte	0x9d
 	.byte	0xb
 	.4byte	0x86
 	.4byte	.LLST14
@@ -4278,7 +4278,7 @@ saadc_config:
 	.uleb128 0x28
 	.4byte	.LASF228
 	.byte	0x1
-	.byte	0xa1
+	.byte	0x9f
 	.byte	0x25
 	.4byte	0x99
 	.4byte	.LLST15
@@ -4291,7 +4291,7 @@ saadc_config:
 	.byte	0x51
 	.uleb128 0x2
 	.byte	0x8
-	.byte	0xa1
+	.byte	0x9f
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x52

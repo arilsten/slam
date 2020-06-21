@@ -63,7 +63,7 @@ Some of these will be sent to server during the start-up-handshake
 #define IR_4						3
 #define NUM_DIST_SENSORS			4
 #define DETECTION_THRESHOLD_MM		800
-#define COLLISION_THRESHOLD_MM		200
+#define COLLISION_THRESHOLD_MM		250
 #define COLLISION_THRESHOLD_CM		(COLLISION_THRESHOLD_MM/10)
 #define COLLISION_SECTOR_OFFSET		60		//[degrees] (to each side)
 
